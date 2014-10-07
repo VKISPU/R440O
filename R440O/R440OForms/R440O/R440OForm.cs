@@ -3,6 +3,8 @@ using System.Linq;
 using System.Windows.Forms;
 using R440O.R440OForms.A205M_1;
 using R440O.R440OForms.A205M_2;
+using R440O.R440OForms.A1;
+using R440O.R440OForms.A304;
 
 namespace R440O.R440OForms.R440O
 {
@@ -35,6 +37,32 @@ namespace R440O.R440OForms.R440O
             else
             {
                 Form thisForm = new A205M_2Form();
+                thisForm.Show(this);
+            }
+        }
+
+        private void R440OButtonA1_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<A1Form>().Any())
+            {
+                this.OwnedForms.OfType<A1Form>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new A1Form();
+                thisForm.Show(this);
+            }
+        }
+
+        private void R440OButtonA304_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<A304Form>().Any())
+            {
+                this.OwnedForms.OfType<A304Form>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new A304Form();
                 thisForm.Show(this);
             }
         }
