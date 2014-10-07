@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.R440OPanel = new System.Windows.Forms.Panel();
+            this.R440OButtonB1_1 = new System.Windows.Forms.Button();
             this.R440OButtonA304 = new System.Windows.Forms.Button();
             this.R440OButtonA1 = new System.Windows.Forms.Button();
             this.R440OButtonA205M_2 = new System.Windows.Forms.Button();
             this.R440OButtonA205M_1 = new System.Windows.Forms.Button();
-            this.R440ButtonWattmeter = new System.Windows.Forms.Button();
+            this.R440OButtonWattmeter = new System.Windows.Forms.Button();
             this.R440OPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +42,8 @@
             // 
             this.R440OPanel.BackgroundImage = global::R440O.BackgroundImages.R440O;
             this.R440OPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.R440OPanel.Controls.Add(this.R440ButtonWattmeter);
+            this.R440OPanel.Controls.Add(this.R440OButtonWattmeter);
+            this.R440OPanel.Controls.Add(this.R440OButtonB1_1);
             this.R440OPanel.Controls.Add(this.R440OButtonA304);
             this.R440OPanel.Controls.Add(this.R440OButtonA1);
             this.R440OPanel.Controls.Add(this.R440OButtonA205M_2);
@@ -50,6 +52,20 @@
             this.R440OPanel.Name = "R440OPanel";
             this.R440OPanel.Size = new System.Drawing.Size(1101, 391);
             this.R440OPanel.TabIndex = 0;
+            // 
+            // R440OButtonB1_1
+            // 
+            this.R440OButtonB1_1.BackColor = System.Drawing.Color.Transparent;
+            this.R440OButtonB1_1.FlatAppearance.BorderSize = 0;
+            this.R440OButtonB1_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.R440OButtonB1_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.R440OButtonB1_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.R440OButtonB1_1.Location = new System.Drawing.Point(104, 208);
+            this.R440OButtonB1_1.Name = "R440OButtonB1_1";
+            this.R440OButtonB1_1.Size = new System.Drawing.Size(129, 46);
+            this.R440OButtonB1_1.TabIndex = 4;
+            this.R440OButtonB1_1.UseVisualStyleBackColor = false;
+            this.R440OButtonB1_1.Click += new System.EventHandler(this.R440OButtonB1_1_Click);
             // 
             // R440OButtonA304
             // 
@@ -107,19 +123,19 @@
             this.R440OButtonA205M_1.UseVisualStyleBackColor = false;
             this.R440OButtonA205M_1.Click += new System.EventHandler(this.R440OButtonA205M_1_Click);
             // 
-            // R440ButtonWattmeter
+            // R440OButtonWattmeter
             // 
-            this.R440ButtonWattmeter.BackColor = System.Drawing.Color.Transparent;
-            this.R440ButtonWattmeter.FlatAppearance.BorderSize = 0;
-            this.R440ButtonWattmeter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.R440ButtonWattmeter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.R440ButtonWattmeter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.R440ButtonWattmeter.Location = new System.Drawing.Point(459, 21);
-            this.R440ButtonWattmeter.Name = "R440ButtonWattmeter";
-            this.R440ButtonWattmeter.Size = new System.Drawing.Size(48, 36);
-            this.R440ButtonWattmeter.TabIndex = 4;
-            this.R440ButtonWattmeter.UseVisualStyleBackColor = false;
-            this.R440ButtonWattmeter.Click += new System.EventHandler(this.R440ButtonWattmeter_Click);
+            this.R440OButtonWattmeter.BackColor = System.Drawing.Color.Transparent;
+            this.R440OButtonWattmeter.FlatAppearance.BorderSize = 0;
+            this.R440OButtonWattmeter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.R440OButtonWattmeter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.R440OButtonWattmeter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.R440OButtonWattmeter.Location = new System.Drawing.Point(459, 21);
+            this.R440OButtonWattmeter.Name = "R440OButtonWattmeter";
+            this.R440OButtonWattmeter.Size = new System.Drawing.Size(49, 33);
+            this.R440OButtonWattmeter.TabIndex = 5;
+            this.R440OButtonWattmeter.UseVisualStyleBackColor = false;
+            this.R440OButtonWattmeter.Click += new System.EventHandler(this.R440OButtonWattmeter_Click);
             // 
             // R440OForm
             // 
@@ -143,7 +159,8 @@
         private System.Windows.Forms.Button R440OButtonA205M_2;
         private System.Windows.Forms.Button R440OButtonA1;
         private System.Windows.Forms.Button R440OButtonA304;
-        private System.Windows.Forms.Button R440ButtonWattmeter;
+        private System.Windows.Forms.Button R440OButtonB1_1;
+        private System.Windows.Forms.Button R440OButtonWattmeter;
     }
 }
 
