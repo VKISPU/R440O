@@ -1,6 +1,6 @@
-﻿namespace R440O.R440OForms.A205M_1
+﻿namespace R440O.R440OForms.Wattmeter
 {
-    partial class A205M_1Form
+    partial class WattmeterForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.A205M_1Panel = new System.Windows.Forms.Panel();
+            this.WattmeterPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // A205M_1Panel
+            // WattmeterPanel
             // 
-            this.A205M_1Panel.BackgroundImage = global::R440O.BackgroundImages.A205M;
-            this.A205M_1Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.A205M_1Panel.Location = new System.Drawing.Point(0, 0);
-            this.A205M_1Panel.Name = "A205M_1Panel";
-            this.A205M_1Panel.Size = new System.Drawing.Size(1099, 428);
-            this.A205M_1Panel.TabIndex = 0;
+            this.WattmeterPanel.BackgroundImage = global::R440O.BackgroundImages.Wattmeter;
+            this.WattmeterPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.WattmeterPanel.Location = new System.Drawing.Point(0, 0);
+            this.WattmeterPanel.Name = "WattmeterPanel";
+            this.WattmeterPanel.Size = new System.Drawing.Size(707, 544);
+            this.WattmeterPanel.TabIndex = 0;
             // 
-            // A205M_1Form
+            // WattmeterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1094, 429);
-            this.Controls.Add(this.A205M_1Panel);
+            this.ClientSize = new System.Drawing.Size(707, 542);
+            this.Controls.Add(this.WattmeterPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "A205M_1Form";
-            this.Text = "A-205M_1";
+            this.Name = "WattmeterForm";
+            this.Text = "БЛОК ВАТТМЕТРА ИЗМЕРИТЕЛЬНЫЙ Я2М-66";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel A205M_1Panel;
+        private System.Windows.Forms.Panel WattmeterPanel;
     }
 }
