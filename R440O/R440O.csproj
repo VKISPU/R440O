@@ -70,6 +70,12 @@
     <Compile Include="R440OForms\A205M_1\A205M_1Form.Designer.cs">
       <DependentUpon>A205M_1Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="R440OForms\A205M_2\A205M_2Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\A205M_2\A205M_2Form.Designer.cs">
+      <DependentUpon>A205M_2Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="R440OForms\R440O\R440OForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     </Compile>
     <EmbeddedResource Include="R440OForms\A205M_1\A205M_1Form.resx">
       <DependentUpon>A205M_1Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\A205M_2\A205M_2Form.resx">
+      <DependentUpon>A205M_2Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\R440O\R440OForm.resx">
       <DependentUpon>R440OForm.cs</DependentUpon>
