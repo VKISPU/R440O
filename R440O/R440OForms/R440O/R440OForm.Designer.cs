@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.R440OPanel = new System.Windows.Forms.Panel();
-            this.R440ObuttonA205M_1 = new System.Windows.Forms.Button();
+            this.R440OButtonA205M_2 = new System.Windows.Forms.Button();
+            this.R440OButtonA205M_1 = new System.Windows.Forms.Button();
             this.R440OPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -37,25 +38,40 @@
             // 
             this.R440OPanel.BackgroundImage = global::R440O.BackgroundImages.R440O;
             this.R440OPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.R440OPanel.Controls.Add(this.R440ObuttonA205M_1);
+            this.R440OPanel.Controls.Add(this.R440OButtonA205M_2);
+            this.R440OPanel.Controls.Add(this.R440OButtonA205M_1);
             this.R440OPanel.Location = new System.Drawing.Point(0, 0);
             this.R440OPanel.Name = "R440OPanel";
             this.R440OPanel.Size = new System.Drawing.Size(1101, 391);
             this.R440OPanel.TabIndex = 0;
             // 
-            // R440ObuttonA205M_1
+            // R440OButtonA205M_2
             // 
-            this.R440ObuttonA205M_1.BackColor = System.Drawing.Color.Transparent;
-            this.R440ObuttonA205M_1.FlatAppearance.BorderSize = 0;
-            this.R440ObuttonA205M_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.R440ObuttonA205M_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.R440ObuttonA205M_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.R440ObuttonA205M_1.Location = new System.Drawing.Point(391, 112);
-            this.R440ObuttonA205M_1.Name = "R440ObuttonA205M_1";
-            this.R440ObuttonA205M_1.Size = new System.Drawing.Size(137, 55);
-            this.R440ObuttonA205M_1.TabIndex = 0;
-            this.R440ObuttonA205M_1.UseVisualStyleBackColor = false;
-            this.R440ObuttonA205M_1.Click += new System.EventHandler(this.buttonA205M_1_Click);
+            this.R440OButtonA205M_2.BackColor = System.Drawing.Color.Transparent;
+            this.R440OButtonA205M_2.FlatAppearance.BorderSize = 0;
+            this.R440OButtonA205M_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.R440OButtonA205M_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.R440OButtonA205M_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.R440OButtonA205M_2.Location = new System.Drawing.Point(528, 114);
+            this.R440OButtonA205M_2.Name = "R440OButtonA205M_2";
+            this.R440OButtonA205M_2.Size = new System.Drawing.Size(132, 53);
+            this.R440OButtonA205M_2.TabIndex = 1;
+            this.R440OButtonA205M_2.UseVisualStyleBackColor = false;
+            this.R440OButtonA205M_2.Click += new System.EventHandler(this.R440OButtonA205M_2_Click);
+            // 
+            // R440OButtonA205M_1
+            // 
+            this.R440OButtonA205M_1.BackColor = System.Drawing.Color.Transparent;
+            this.R440OButtonA205M_1.FlatAppearance.BorderSize = 0;
+            this.R440OButtonA205M_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.R440OButtonA205M_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.R440OButtonA205M_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.R440OButtonA205M_1.Location = new System.Drawing.Point(391, 112);
+            this.R440OButtonA205M_1.Name = "R440OButtonA205M_1";
+            this.R440OButtonA205M_1.Size = new System.Drawing.Size(137, 55);
+            this.R440OButtonA205M_1.TabIndex = 0;
+            this.R440OButtonA205M_1.UseVisualStyleBackColor = false;
+            this.R440OButtonA205M_1.Click += new System.EventHandler(this.R440OButtonA205M_1_Click);
             // 
             // R440OForm
             // 
@@ -75,7 +91,8 @@
         #endregion
 
         private System.Windows.Forms.Panel R440OPanel;
-        private System.Windows.Forms.Button R440ObuttonA205M_1;
+        private System.Windows.Forms.Button R440OButtonA205M_1;
+        private System.Windows.Forms.Button R440OButtonA205M_2;
     }
 }
 

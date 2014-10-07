@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 using R440O.R440OForms.A205M_1;
+using R440O.R440OForms.A205M_2;
 
 namespace R440O.R440OForms.R440O
 {
@@ -12,8 +13,7 @@ namespace R440O.R440OForms.R440O
             InitializeComponent();
         }
         
-        #region A205
-        private void buttonA205M_1_Click(object sender, EventArgs e)
+        private void R440OButtonA205M_1_Click(object sender, EventArgs e)
         {
             if (this.OwnedForms.OfType<A205M_1Form>().Any())
             {
@@ -21,10 +21,22 @@ namespace R440O.R440OForms.R440O
             }
             else
             {
-                Form a205Form = new A205M_1Form();
-                a205Form.Show(this);
+                Form thisForm = new A205M_1Form();
+                thisForm.Show(this);
             }
         }
-        #endregion
+
+        private void R440OButtonA205M_2_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<A205M_2Form>().Any())
+            {
+                this.OwnedForms.OfType<A205M_2Form>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new A205M_2Form();
+                thisForm.Show(this);
+            }
+        }
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace R440O.R440OForms.A205M_1
+﻿namespace R440O.R440OForms.A205M_2
 {
-    partial class A205M_1Form
+    partial class A205M_2Form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,33 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.A205M_1Panel = new System.Windows.Forms.Panel();
+            this.A205M_2Panel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // A205M_1Panel
+            // A205M_2Panel
             // 
-            this.A205M_1Panel.BackgroundImage = global::R440O.BackgroundImages.A205M;
-            this.A205M_1Panel.Location = new System.Drawing.Point(0, 0);
-            this.A205M_1Panel.Name = "A205M_1Panel";
-            this.A205M_1Panel.Size = new System.Drawing.Size(1099, 428);
-            this.A205M_1Panel.TabIndex = 0;
+            this.A205M_2Panel.BackgroundImage = global::R440O.BackgroundImages.A205M;
+            this.A205M_2Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A205M_2Panel.Location = new System.Drawing.Point(0, 0);
+            this.A205M_2Panel.Name = "A205M_2Panel";
+            this.A205M_2Panel.Size = new System.Drawing.Size(1102, 431);
+            this.A205M_2Panel.TabIndex = 0;
             // 
-            // A205M_1Form
+            // A205M_2Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1094, 429);
-            this.Controls.Add(this.A205M_1Panel);
+            this.ClientSize = new System.Drawing.Size(1099, 427);
+            this.Controls.Add(this.A205M_2Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "A205M_1Form";
-            this.Text = "A-205M_1";
+            this.Name = "A205M_2Form";
+            this.Text = "А-205М_2";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel A205M_1Panel;
+        private System.Windows.Forms.Panel A205M_2Panel;
     }
 }
