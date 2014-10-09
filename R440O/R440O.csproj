@@ -88,11 +88,155 @@
     <Compile Include="R440OForms\A304\A304Form.Designer.cs">
       <DependentUpon>A304Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="R440OForms\A403_1\A403_1Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\A403_1\A403_1Form.Designer.cs">
+      <DependentUpon>A403_1Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\A403_3\A403_3Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\A403_3\A403_3Form.Designer.cs">
+      <DependentUpon>A403_3Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\Astra\AstraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\Astra\AstraForm.Designer.cs">
+      <DependentUpon>AstraForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="R440OForms\B1_1\B1_1Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="R440OForms\B1_1\B1_1Form.Designer.cs">
       <DependentUpon>B1_1Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\BMA_M_1\BMA_M_1Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\BMA_M_1\BMA_M_1Form.Designer.cs">
+      <DependentUpon>BMA_M_1Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\BMA_M_2\BMA_M_2Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\BMA_M_2\BMA_M_2Form.Designer.cs">
+      <DependentUpon>BMA_M_2Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\BMB\BMBForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\BMB\BMBForm.Designer.cs">
+      <DependentUpon>BMBForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\C1_67\C1_67Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\C1_67\C1_67Form.Designer.cs">
+      <DependentUpon>C1_67Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\C300M_4\C300M_4Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\C300M_4\C300M_4Form.Designer.cs">
+      <DependentUpon>C300M_4Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\C300M_3\C300M_3Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\C300M_3\C300M_3Form.Designer.cs">
+      <DependentUpon>C300M_3Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\C300M_2\C300M_2Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\C300M_2\C300M_2Form.Designer.cs">
+      <DependentUpon>C300M_2Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\C300M_1\C300M_1Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\C300M_1\C300M_1Form.Designer.cs">
+      <DependentUpon>C300M_1Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\C300PM_2\C300PM_2Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\C300PM_2\C300PM_2Form.Designer.cs">
+      <DependentUpon>C300PM_2Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\C300PM_3\C300PM_3Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\C300PM_3\C300PM_3Form.Designer.cs">
+      <DependentUpon>C300PM_3Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\CabelEnter\CabelEnterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\CabelEnter\CabelEnterForm.Designer.cs">
+      <DependentUpon>CabelEnterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\DAB_5\DAB_5Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\DAB_5\DAB_5Form.Designer.cs">
+      <DependentUpon>DAB_5Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\Kontur_P3\Kontur_P3Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\Kontur_P3\Kontur_P3Form.Designer.cs">
+      <DependentUpon>Kontur_P3Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\N12S\N12SForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\N12S\N12SForm.Designer.cs">
+      <DependentUpon>N12SForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\N15\N15Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\N15\N15Form.Designer.cs">
+      <DependentUpon>N15Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\N502B\N502BForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\N502B\N502BForm.Designer.cs">
+      <DependentUpon>N502BForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\NO\NOForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\NO\NOForm.Designer.cs">
+      <DependentUpon>NOForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\P220_27G_3\P220_27G_3Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\P220_27G_3\P220_27G_3Form.Designer.cs">
+      <DependentUpon>P220_27G_3Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\P220_27G_2\P220_27G_2Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\P220_27G_2\P220_27G_2Form.Designer.cs">
+      <DependentUpon>P220_27G_2Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\PU_K1_1\PU_K1_1Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\PU_K1_1\PU_K1_1Form.Designer.cs">
+      <DependentUpon>PU_K1_1Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\PU_K1_2\PU_K1_2Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\PU_K1_2\PU_K1_2Form.Designer.cs">
+      <DependentUpon>PU_K1_2Form.cs</DependentUpon>
     </Compile>
     <Compile Include="R440OForms\R440O\R440OForm.cs">
       <SubType>Form</SubType>
@@ -102,11 +246,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="R440OForms\Rubin_N\Rubin_NForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\Rubin_N\Rubin_NForm.Designer.cs">
+      <DependentUpon>Rubin_NForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\Stabilizator\StabilizatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\Stabilizator\StabilizatorForm.Designer.cs">
+      <DependentUpon>StabilizatorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="R440OForms\Wattmeter\WattmeterForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="R440OForms\Wattmeter\WattmeterForm.Designer.cs">
       <DependentUpon>WattmeterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\C300PM_1\C300PM_1Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\C300PM_1\C300PM_1Form.Designer.cs">
+      <DependentUpon>C300PM_1Form.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BackgroundImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -134,14 +296,95 @@
     <EmbeddedResource Include="R440OForms\A304\A304Form.resx">
       <DependentUpon>A304Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\A403_1\A403_1Form.resx">
+      <DependentUpon>A403_1Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\A403_3\A403_3Form.resx">
+      <DependentUpon>A403_3Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\Astra\AstraForm.resx">
+      <DependentUpon>AstraForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\B1_1\B1_1Form.resx">
       <DependentUpon>B1_1Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\BMA_M_1\BMA_M_1Form.resx">
+      <DependentUpon>BMA_M_1Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\BMA_M_2\BMA_M_2Form.resx">
+      <DependentUpon>BMA_M_2Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\BMB\BMBForm.resx">
+      <DependentUpon>BMBForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\C1_67\C1_67Form.resx">
+      <DependentUpon>C1_67Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\C300M_4\C300M_4Form.resx">
+      <DependentUpon>C300M_4Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\C300M_3\C300M_3Form.resx">
+      <DependentUpon>C300M_3Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\C300M_2\C300M_2Form.resx">
+      <DependentUpon>C300M_2Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\C300M_1\C300M_1Form.resx">
+      <DependentUpon>C300M_1Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\C300PM_2\C300PM_2Form.resx">
+      <DependentUpon>C300PM_2Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\C300PM_3\C300PM_3Form.resx">
+      <DependentUpon>C300PM_3Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\CabelEnter\CabelEnterForm.resx">
+      <DependentUpon>CabelEnterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\DAB_5\DAB_5Form.resx">
+      <DependentUpon>DAB_5Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\Kontur_P3\Kontur_P3Form.resx">
+      <DependentUpon>Kontur_P3Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\N12S\N12SForm.resx">
+      <DependentUpon>N12SForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\N15\N15Form.resx">
+      <DependentUpon>N15Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\N502B\N502BForm.resx">
+      <DependentUpon>N502BForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\NO\NOForm.resx">
+      <DependentUpon>NOForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\P220_27G_3\P220_27G_3Form.resx">
+      <DependentUpon>P220_27G_3Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\P220_27G_2\P220_27G_2Form.resx">
+      <DependentUpon>P220_27G_2Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\PU_K1_1\PU_K1_1Form.resx">
+      <DependentUpon>PU_K1_1Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\PU_K1_2\PU_K1_2Form.resx">
+      <DependentUpon>PU_K1_2Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\R440O\R440OForm.resx">
       <DependentUpon>R440OForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\Rubin_N\Rubin_NForm.resx">
+      <DependentUpon>Rubin_NForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\Stabilizator\StabilizatorForm.resx">
+      <DependentUpon>StabilizatorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\Wattmeter\WattmeterForm.resx">
       <DependentUpon>WattmeterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\C300PM_1\C300PM_1Form.resx">
+      <DependentUpon>C300PM_1Form.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -183,13 +426,70 @@
     <None Include="Resources\A1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Wattmeter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\N502B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\N15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\N12S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Astra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BMA_M.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BMB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P220_27_G.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\A304.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A403_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A403_3.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\B1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Wattmeter.png" />
+    <None Include="Resources\C300M.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CabelEnter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DAB_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kontur_P.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PU_K1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RUBIN_N.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stabilizator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\C1_67.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\C300PM.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

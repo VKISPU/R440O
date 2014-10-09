@@ -49,7 +49,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "A205M_2Form";
-            this.Text = "А-205М_2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "А-205М-2";
             this.ResumeLayout(false);
 
         }

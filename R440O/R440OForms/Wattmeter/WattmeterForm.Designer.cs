@@ -49,6 +49,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "WattmeterForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "БЛОК ВАТТМЕТРА ИЗМЕРИТЕЛЬНЫЙ Я2М-66";
             this.ResumeLayout(false);
 

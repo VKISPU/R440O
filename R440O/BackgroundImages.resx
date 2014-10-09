@@ -127,11 +127,68 @@
   <data name="A304" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\A304.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="A403_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\A403_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A403_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\A403_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Astra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Astra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="B1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\B1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BMA_M" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\BMA_M.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BMB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\BMB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="C1_67" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\C1_67.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="C300M" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\C300M.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="C300PM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\C300PM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CabelEnter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\CabelEnter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DAB_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\DAB_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kontur_P3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Kontur_P.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="N12S" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\N12S.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="N15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\N15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="N502B" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\N502B.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\NO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="P220_27G" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\P220_27_G.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PU_K1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\PU_K1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="R440O" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\R440O2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RUBIN_N" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\RUBIN_N.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stabilizator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Stabilizator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Wattmeter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Wattmeter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

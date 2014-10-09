@@ -49,6 +49,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MinimizeBox = false;
             this.Name = "A1Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "A1";
             this.ResumeLayout(false);
 

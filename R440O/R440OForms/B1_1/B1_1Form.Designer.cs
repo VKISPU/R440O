@@ -49,7 +49,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "B1_1Form";
-            this.Text = "Б1_1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Б1-1";
             this.ResumeLayout(false);
 
         }
