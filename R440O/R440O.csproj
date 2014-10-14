@@ -172,6 +172,24 @@
     <Compile Include="R440OForms\C300PM_3\C300PM_3Form.Designer.cs">
       <DependentUpon>C300PM_3Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="R440OForms\N16\N16Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\N16\N16Form.Designer.cs">
+      <DependentUpon>N16Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\N13_2\N13_2Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\N13_2\N13_2Form.Designer.cs">
+      <DependentUpon>N13_2Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\N13_1\N13_1Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\N13_1\N13_1Form.Designer.cs">
+      <DependentUpon>N13_1Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="R440OForms\PowerCabel\PowerCabelForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -338,6 +356,15 @@
     <EmbeddedResource Include="R440OForms\C300PM_3\C300PM_3Form.resx">
       <DependentUpon>C300PM_3Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\N16\N16Form.resx">
+      <DependentUpon>N16Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\N13_2\N13_2Form.resx">
+      <DependentUpon>N13_2Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\N13_1\N13_1Form.resx">
+      <DependentUpon>N13_1Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\PowerCabel\PowerCabelForm.resx">
       <DependentUpon>PowerCabelForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -490,6 +517,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\C300PM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\N13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\N16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -21,7 +21,10 @@ using R440O.R440OForms.C300PM_3;
 using R440O.R440OForms.DAB_5;
 using R440O.R440OForms.Kontur_P3;
 using R440O.R440OForms.N12S;
+using R440O.R440OForms.N13_1;
+using R440O.R440OForms.N13_2;
 using R440O.R440OForms.N15;
+using R440O.R440OForms.N16;
 using R440O.R440OForms.N502B;
 using R440O.R440OForms.P220_27G_2;
 using R440O.R440OForms.P220_27G_3;
@@ -471,6 +474,46 @@ namespace R440O.R440OForms.R440O
                 Form thisForm = new A403_3Form();
                 thisForm.Show(this);
             }
+        }
+
+        private void R440ButtonN13_1_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<N13_1Form>().Any())
+            {
+                this.OwnedForms.OfType<N13_1Form>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new N13_1Form();
+                thisForm.Show(this);
+            }
+        }
+
+        private void R440ButtonN13_2_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<N13_2Form>().Any())
+            {
+                this.OwnedForms.OfType<N13_2Form>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new N13_2Form();
+                thisForm.Show(this);
+            }
+        }
+
+        private void R440OButtonN16_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<N16Form>().Any())
+            {
+                this.OwnedForms.OfType<N16Form>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new N16Form();
+                thisForm.Show(this);
+            }
+
         }
     }
 }

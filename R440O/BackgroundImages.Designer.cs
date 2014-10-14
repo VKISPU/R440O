@@ -223,9 +223,29 @@ namespace R440O {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap N13 {
+            get {
+                object obj = ResourceManager.GetObject("N13", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap N15 {
             get {
                 object obj = ResourceManager.GetObject("N15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap N16 {
+            get {
+                object obj = ResourceManager.GetObject("N16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
