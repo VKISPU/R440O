@@ -272,8 +272,8 @@
     </Compile>
     <EmbeddedResource Include="BackgroundImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>BackgroundImages.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>BackgroundImages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -417,7 +417,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\R440O2.png" />
+    <None Include="Resources\R440O.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\A205M.png" />
@@ -438,7 +438,7 @@
     <None Include="Resources\N12S.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\NO.png" />
+    <None Include="Resources\A306.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Astra.png" />
@@ -468,7 +468,7 @@
     <None Include="Resources\C300M.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\CabelEnter.png" />
+    <None Include="Resources\PowerCabel.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\DAB_5.png" />
@@ -483,7 +483,7 @@
     <None Include="Resources\RUBIN_N.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Stabilizator.png" />
+    <None Include="Resources\VoltageStabilizer.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\C1_67.png" />
