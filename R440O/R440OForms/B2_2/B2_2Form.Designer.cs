@@ -1,6 +1,6 @@
-﻿namespace R440O.R440OForms.N18_M
+﻿namespace R440O.R440OForms.B2_2
 {
-    partial class N18_MForm
+    partial class B2_2Form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.N18_MPanel = new System.Windows.Forms.Panel();
+            this.B2_2Panel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // N18_MPanel
+            // B2_2Panel
             // 
-            this.N18_MPanel.BackgroundImage = global::R440O.BackgroundImages.N18_M;
-            this.N18_MPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N18_MPanel.Location = new System.Drawing.Point(0, 0);
-            this.N18_MPanel.Name = "N18_MPanel";
-            this.N18_MPanel.Size = new System.Drawing.Size(484, 710);
-            this.N18_MPanel.TabIndex = 0;
+            this.B2_2Panel.BackgroundImage = global::R440O.BackgroundImages.B2;
+            this.B2_2Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_2Panel.Location = new System.Drawing.Point(0, 0);
+            this.B2_2Panel.Name = "B2_2Panel";
+            this.B2_2Panel.Size = new System.Drawing.Size(1104, 354);
+            this.B2_2Panel.TabIndex = 0;
             // 
-            // N18_MForm
+            // B2_2Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(485, 715);
-            this.Controls.Add(this.N18_MPanel);
+            this.ClientSize = new System.Drawing.Size(1100, 351);
+            this.Controls.Add(this.B2_2Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "N18_MForm";
-            this.Text = "Н18-М";
+            this.Name = "B2_2Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Б2-2";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel N18_MPanel;
+        private System.Windows.Forms.Panel B2_2Panel;
     }
 }

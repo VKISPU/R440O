@@ -111,6 +111,36 @@
     <Compile Include="R440OForms\Astra\AstraForm.Designer.cs">
       <DependentUpon>AstraForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="R440OForms\B2_2\B2_2Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\B2_2\B2_2Form.Designer.cs">
+      <DependentUpon>B2_2Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\B2_1\B2_1Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\B2_1\B2_1Form.Designer.cs">
+      <DependentUpon>B2_1Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\B3_2\B3_2Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\B3_2\B3_2Form.Designer.cs">
+      <DependentUpon>B3_2Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\B3_1\B3_1Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\B3_1\B3_1Form.Designer.cs">
+      <DependentUpon>B3_1Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\B1_2\B1_2Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\B1_2\B1_2Form.Designer.cs">
+      <DependentUpon>B1_2Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="R440OForms\B1_1\B1_1Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -356,6 +386,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\Astra\AstraForm.resx">
       <DependentUpon>AstraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\B2_2\B2_2Form.resx">
+      <DependentUpon>B2_2Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\B2_1\B2_1Form.resx">
+      <DependentUpon>B2_1Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\B3_2\B3_2Form.resx">
+      <DependentUpon>B3_2Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\B3_1\B3_1Form.resx">
+      <DependentUpon>B3_1Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\B1_2\B1_2Form.resx">
+      <DependentUpon>B1_2Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\B1_1\B1_1Form.resx">
       <DependentUpon>B1_1Form.cs</DependentUpon>
@@ -716,6 +761,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\orderSchemeIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

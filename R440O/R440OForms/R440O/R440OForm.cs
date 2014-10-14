@@ -10,6 +10,11 @@ using R440O.R440OForms.A403_1;
 using R440O.R440OForms.A403_3;
 using R440O.R440OForms.Astra;
 using R440O.R440OForms.B1_1;
+using R440O.R440OForms.B1_2;
+using R440O.R440OForms.B2_1;
+using R440O.R440OForms.B2_2;
+using R440O.R440OForms.B3_1;
+using R440O.R440OForms.B3_2;
 using R440O.R440OForms.BMA_M_1;
 using R440O.R440OForms.C1_67;
 using R440O.R440OForms.C300M_1;
@@ -569,6 +574,73 @@ namespace R440O.R440OForms.R440O
                 Form thisForm = new PowerShieldForm();
                 thisForm.Show(this);
             }
+        }
+
+        private void R440OButtonB1_2_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<B1_2Form>().Any())
+            {
+                this.OwnedForms.OfType<B1_2Form>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new B1_2Form();
+                thisForm.Show(this);
+            }
+        }
+
+        private void R440ButtonB2_1_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<B2_1Form>().Any())
+            {
+                this.OwnedForms.OfType<B2_1Form>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new B2_1Form();
+                thisForm.Show(this);
+            }
+        }
+
+        private void R440ButtonB2_2_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<B2_2Form>().Any())
+            {
+                this.OwnedForms.OfType<B2_2Form>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new B2_2Form();
+                thisForm.Show(this);
+            }
+        }
+
+        private void R440OButtonB3_1_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<B3_1Form>().Any())
+            {
+                this.OwnedForms.OfType<B3_1Form>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new B3_1Form();
+                thisForm.Show(this);
+            }
+
+        }
+
+        private void R440OButtonB3_2_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<B3_2Form>().Any())
+            {
+                this.OwnedForms.OfType<B3_2Form>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new B3_2Form();
+                thisForm.Show(this);
+            }
+
         }
     }
 }
