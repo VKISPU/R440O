@@ -1,6 +1,6 @@
-﻿namespace R440O.R440OForms.CabelEnter
+﻿namespace R440O.R440OForms.VoltageStabilizer
 {
-    partial class CabelEnterForm
+    partial class VoltageStabilizerForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CabelEnterPanel = new System.Windows.Forms.Panel();
+            this.VoltageStabilizerPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // CabelEnterPanel
+            // VoltageStabilizerPanel
             // 
-            this.CabelEnterPanel.BackgroundImage = global::R440O.BackgroundImages.CabelEnter;
-            this.CabelEnterPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.CabelEnterPanel.Location = new System.Drawing.Point(0, 0);
-            this.CabelEnterPanel.Name = "CabelEnterPanel";
-            this.CabelEnterPanel.Size = new System.Drawing.Size(862, 648);
-            this.CabelEnterPanel.TabIndex = 4;
+            this.VoltageStabilizerPanel.BackgroundImage = global::R440O.BackgroundImages.VoltageStabilizer;
+            this.VoltageStabilizerPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.VoltageStabilizerPanel.Location = new System.Drawing.Point(0, 0);
+            this.VoltageStabilizerPanel.Name = "VoltageStabilizerPanel";
+            this.VoltageStabilizerPanel.Size = new System.Drawing.Size(1092, 773);
+            this.VoltageStabilizerPanel.TabIndex = 0;
             // 
-            // CabelEnterForm
+            // VoltageStabilizerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(862, 648);
-            this.Controls.Add(this.CabelEnterPanel);
+            this.ClientSize = new System.Drawing.Size(1093, 741);
+            this.Controls.Add(this.VoltageStabilizerPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "CabelEnterForm";
+            this.Name = "VoltageStabilizerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ЩИТ ЭЛЕКТРОПИТАНИЯ";
+            this.Text = "СТАБИЛИЗАТОР НАПРЯЖЕНИЯ";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel CabelEnterPanel;
+        private System.Windows.Forms.Panel VoltageStabilizerPanel;
     }
 }

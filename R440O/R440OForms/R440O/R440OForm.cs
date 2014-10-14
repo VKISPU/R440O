@@ -5,6 +5,7 @@ using R440O.R440OForms.A205M_1;
 using R440O.R440OForms.A205M_2;
 using R440O.R440OForms.A1;
 using R440O.R440OForms.A304;
+using R440O.R440OForms.A306;
 using R440O.R440OForms.A403_1;
 using R440O.R440OForms.A403_3;
 using R440O.R440OForms.Astra;
@@ -17,19 +18,18 @@ using R440O.R440OForms.C300M_3;
 using R440O.R440OForms.C300M_4;
 using R440O.R440OForms.C300PM_2;
 using R440O.R440OForms.C300PM_3;
-using R440O.R440OForms.CabelEnter;
 using R440O.R440OForms.DAB_5;
 using R440O.R440OForms.Kontur_P3;
 using R440O.R440OForms.N12S;
 using R440O.R440OForms.N15;
 using R440O.R440OForms.N502B;
-using R440O.R440OForms.NO;
 using R440O.R440OForms.P220_27G_2;
 using R440O.R440OForms.P220_27G_3;
+using R440O.R440OForms.PowerCabel;
 using R440O.R440OForms.PU_K1_1;
 using R440O.R440OForms.PU_K1_2;
 using R440O.R440OForms.Rubin_N;
-using R440O.R440OForms.Stabilizator;
+using R440O.R440OForms.VoltageStabilizer;
 using R440O.R440OForms.Wattmeter;
 using R440O.R440OForms.С300PM_1;
 
@@ -161,15 +161,15 @@ namespace R440O.R440OForms.R440O
             }
         }
 
-        private void R440OButtonCabelEnter_Click(object sender, EventArgs e)
+        private void R440OButtonPowerCabel_Click(object sender, EventArgs e)
         {
-            if (this.OwnedForms.OfType<CabelEnterForm>().Any())
+            if (this.OwnedForms.OfType<PowerCabelForm>().Any())
             {
-                this.OwnedForms.OfType<CabelEnterForm>().First().Activate();
+                this.OwnedForms.OfType<PowerCabelForm>().First().Activate();
             }
             else
             {
-                Form thisForm = new CabelEnterForm();
+                Form thisForm = new PowerCabelForm();
                 thisForm.Show(this);
             }
         }
@@ -187,15 +187,15 @@ namespace R440O.R440OForms.R440O
             }
         }
 
-        private void R440OButtonNO_Click(object sender, EventArgs e)
+        private void R440OButtonA306_Click(object sender, EventArgs e)
         {
-            if (this.OwnedForms.OfType<NOForm>().Any())
+            if (this.OwnedForms.OfType<A306Form>().Any())
             {
-                this.OwnedForms.OfType<NOForm>().First().Activate();
+                this.OwnedForms.OfType<A306Form>().First().Activate();
             }
             else
             {
-                Form thisForm = new NOForm();
+                Form thisForm = new A306Form();
                 thisForm.Show(this);
             }
         }
@@ -356,15 +356,15 @@ namespace R440O.R440OForms.R440O
             }
         }
 
-        private void R440OButtonStabilizator_Click(object sender, EventArgs e)
+        private void R440OButtonVoltageStabilizer_Click(object sender, EventArgs e)
         {
-            if (this.OwnedForms.OfType<StabilizatorForm>().Any())
+            if (this.OwnedForms.OfType<VoltageStabilizerForm>().Any())
             {
-                this.OwnedForms.OfType<StabilizatorForm>().First().Activate();
+                this.OwnedForms.OfType<VoltageStabilizerForm>().First().Activate();
             }
             else
             {
-                Form thisForm = new StabilizatorForm();
+                Form thisForm = new VoltageStabilizerForm();
                 thisForm.Show(this);
             }
         }

@@ -50,7 +50,7 @@
             this.MaximizeBox = false;
             this.Name = "N502BForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Н502B";
+            this.Text = "Н502Б";
             this.ResumeLayout(false);
 
         }

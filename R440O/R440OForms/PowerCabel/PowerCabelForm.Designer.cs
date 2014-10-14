@@ -1,6 +1,6 @@
-﻿namespace R440O.R440OForms.Stabilizator
+﻿namespace R440O.R440OForms.PowerCabel
 {
-    partial class StabilizatorForm
+    partial class PowerCabelForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.StabilizatorPanel = new System.Windows.Forms.Panel();
+            this.PowerCabelPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // StabilizatorPanel
+            // PowerCabelPanel
             // 
-            this.StabilizatorPanel.BackgroundImage = global::R440O.BackgroundImages.Stabilizator;
-            this.StabilizatorPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.StabilizatorPanel.Location = new System.Drawing.Point(0, 0);
-            this.StabilizatorPanel.Name = "StabilizatorPanel";
-            this.StabilizatorPanel.Size = new System.Drawing.Size(1092, 773);
-            this.StabilizatorPanel.TabIndex = 0;
+            this.PowerCabelPanel.BackgroundImage = global::R440O.BackgroundImages.PowerCabel;
+            this.PowerCabelPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.PowerCabelPanel.Location = new System.Drawing.Point(0, 0);
+            this.PowerCabelPanel.Name = "PowerCabelPanel";
+            this.PowerCabelPanel.Size = new System.Drawing.Size(862, 648);
+            this.PowerCabelPanel.TabIndex = 4;
             // 
-            // StabilizatorForm
+            // PowerCabelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1093, 741);
-            this.Controls.Add(this.StabilizatorPanel);
+            this.ClientSize = new System.Drawing.Size(862, 648);
+            this.Controls.Add(this.PowerCabelPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "StabilizatorForm";
+            this.Name = "PowerCabelForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "СТАБИЛИЗАТОР НАПРЯЖЕНИЯ";
+            this.Text = "ЩИТ ЭЛЕКТРОПИТАНИЯ";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel StabilizatorPanel;
+        private System.Windows.Forms.Panel PowerCabelPanel;
     }
 }

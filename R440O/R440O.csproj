@@ -172,11 +172,11 @@
     <Compile Include="R440OForms\C300PM_3\C300PM_3Form.Designer.cs">
       <DependentUpon>C300PM_3Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="R440OForms\CabelEnter\CabelEnterForm.cs">
+    <Compile Include="R440OForms\PowerCabel\PowerCabelForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="R440OForms\CabelEnter\CabelEnterForm.Designer.cs">
-      <DependentUpon>CabelEnterForm.cs</DependentUpon>
+    <Compile Include="R440OForms\PowerCabel\PowerCabelForm.Designer.cs">
+      <DependentUpon>PowerCabelForm.cs</DependentUpon>
     </Compile>
     <Compile Include="R440OForms\DAB_5\DAB_5Form.cs">
       <SubType>Form</SubType>
@@ -208,11 +208,11 @@
     <Compile Include="R440OForms\N502B\N502BForm.Designer.cs">
       <DependentUpon>N502BForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="R440OForms\NO\NOForm.cs">
+    <Compile Include="R440OForms\A306\A306Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="R440OForms\NO\NOForm.Designer.cs">
-      <DependentUpon>NOForm.cs</DependentUpon>
+    <Compile Include="R440OForms\A306\A306Form.Designer.cs">
+      <DependentUpon>A306Form.cs</DependentUpon>
     </Compile>
     <Compile Include="R440OForms\P220_27G_3\P220_27G_3Form.cs">
       <SubType>Form</SubType>
@@ -252,11 +252,11 @@
     <Compile Include="R440OForms\Rubin_N\Rubin_NForm.Designer.cs">
       <DependentUpon>Rubin_NForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="R440OForms\Stabilizator\StabilizatorForm.cs">
+    <Compile Include="R440OForms\VoltageStabilizer\VoltageStabilizerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="R440OForms\Stabilizator\StabilizatorForm.Designer.cs">
-      <DependentUpon>StabilizatorForm.cs</DependentUpon>
+    <Compile Include="R440OForms\VoltageStabilizer\VoltageStabilizerForm.Designer.cs">
+      <DependentUpon>VoltageStabilizerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="R440OForms\Wattmeter\WattmeterForm.cs">
       <SubType>Form</SubType>
@@ -338,8 +338,8 @@
     <EmbeddedResource Include="R440OForms\C300PM_3\C300PM_3Form.resx">
       <DependentUpon>C300PM_3Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="R440OForms\CabelEnter\CabelEnterForm.resx">
-      <DependentUpon>CabelEnterForm.cs</DependentUpon>
+    <EmbeddedResource Include="R440OForms\PowerCabel\PowerCabelForm.resx">
+      <DependentUpon>PowerCabelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\DAB_5\DAB_5Form.resx">
       <DependentUpon>DAB_5Form.cs</DependentUpon>
@@ -356,8 +356,8 @@
     <EmbeddedResource Include="R440OForms\N502B\N502BForm.resx">
       <DependentUpon>N502BForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="R440OForms\NO\NOForm.resx">
-      <DependentUpon>NOForm.cs</DependentUpon>
+    <EmbeddedResource Include="R440OForms\A306\A306Form.resx">
+      <DependentUpon>A306Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\P220_27G_3\P220_27G_3Form.resx">
       <DependentUpon>P220_27G_3Form.cs</DependentUpon>
@@ -377,8 +377,8 @@
     <EmbeddedResource Include="R440OForms\Rubin_N\Rubin_NForm.resx">
       <DependentUpon>Rubin_NForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="R440OForms\Stabilizator\StabilizatorForm.resx">
-      <DependentUpon>StabilizatorForm.cs</DependentUpon>
+    <EmbeddedResource Include="R440OForms\VoltageStabilizer\VoltageStabilizerForm.resx">
+      <DependentUpon>VoltageStabilizerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\Wattmeter\WattmeterForm.resx">
       <DependentUpon>WattmeterForm.cs</DependentUpon>

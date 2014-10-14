@@ -93,6 +93,16 @@ namespace R440O {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap A306 {
+            get {
+                object obj = ResourceManager.GetObject("A306", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap A403_1 {
             get {
                 object obj = ResourceManager.GetObject("A403_1", resourceCulture);
@@ -183,16 +193,6 @@ namespace R440O {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap CabelEnter {
-            get {
-                object obj = ResourceManager.GetObject("CabelEnter", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap DAB_5 {
             get {
                 object obj = ResourceManager.GetObject("DAB_5", resourceCulture);
@@ -243,9 +243,9 @@ namespace R440O {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap NO {
+        internal static System.Drawing.Bitmap P220_27G {
             get {
-                object obj = ResourceManager.GetObject("NO", resourceCulture);
+                object obj = ResourceManager.GetObject("P220_27G", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,9 +253,9 @@ namespace R440O {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap P220_27G {
+        internal static System.Drawing.Bitmap PowerCabel {
             get {
-                object obj = ResourceManager.GetObject("P220_27G", resourceCulture);
+                object obj = ResourceManager.GetObject("PowerCabel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,9 +293,9 @@ namespace R440O {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Stabilizator {
+        internal static System.Drawing.Bitmap VoltageStabilizer {
             get {
-                object obj = ResourceManager.GetObject("Stabilizator", resourceCulture);
+                object obj = ResourceManager.GetObject("VoltageStabilizer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

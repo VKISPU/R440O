@@ -37,7 +37,7 @@
             this.R440OButtonPU_K1_2 = new System.Windows.Forms.Button();
             this.R440OButtonPU_K1_1 = new System.Windows.Forms.Button();
             this.R440OButtonRubin_N = new System.Windows.Forms.Button();
-            this.R440OButtonStabilizator = new System.Windows.Forms.Button();
+            this.R440OButtonVoltageStabilizer = new System.Windows.Forms.Button();
             this.R440ButtonP220_27G_3 = new System.Windows.Forms.Button();
             this.R440OButtonP220_27G_2 = new System.Windows.Forms.Button();
             this.R440ButtonBMB = new System.Windows.Forms.Button();
@@ -50,9 +50,9 @@
             this.R440OButtonC300M_2 = new System.Windows.Forms.Button();
             this.R440OButtonC300M_1 = new System.Windows.Forms.Button();
             this.R440OKontur_P3 = new System.Windows.Forms.Button();
-            this.R440OButtonNO = new System.Windows.Forms.Button();
+            this.R440OButtonA306 = new System.Windows.Forms.Button();
             this.R440OButtonDAB_5 = new System.Windows.Forms.Button();
-            this.R440OButtonCabelEnter = new System.Windows.Forms.Button();
+            this.R440OButtonPowerCabel = new System.Windows.Forms.Button();
             this.R440OButtonN12S = new System.Windows.Forms.Button();
             this.R440OButtonN15 = new System.Windows.Forms.Button();
             this.R440OButtonN502B = new System.Windows.Forms.Button();
@@ -77,7 +77,7 @@
             this.R440OPanel.Controls.Add(this.R440OButtonPU_K1_2);
             this.R440OPanel.Controls.Add(this.R440OButtonPU_K1_1);
             this.R440OPanel.Controls.Add(this.R440OButtonRubin_N);
-            this.R440OPanel.Controls.Add(this.R440OButtonStabilizator);
+            this.R440OPanel.Controls.Add(this.R440OButtonVoltageStabilizer);
             this.R440OPanel.Controls.Add(this.R440ButtonP220_27G_3);
             this.R440OPanel.Controls.Add(this.R440OButtonP220_27G_2);
             this.R440OPanel.Controls.Add(this.R440ButtonBMB);
@@ -90,9 +90,9 @@
             this.R440OPanel.Controls.Add(this.R440OButtonC300M_2);
             this.R440OPanel.Controls.Add(this.R440OButtonC300M_1);
             this.R440OPanel.Controls.Add(this.R440OKontur_P3);
-            this.R440OPanel.Controls.Add(this.R440OButtonNO);
+            this.R440OPanel.Controls.Add(this.R440OButtonA306);
             this.R440OPanel.Controls.Add(this.R440OButtonDAB_5);
-            this.R440OPanel.Controls.Add(this.R440OButtonCabelEnter);
+            this.R440OPanel.Controls.Add(this.R440OButtonPowerCabel);
             this.R440OPanel.Controls.Add(this.R440OButtonN12S);
             this.R440OPanel.Controls.Add(this.R440OButtonN15);
             this.R440OPanel.Controls.Add(this.R440OButtonN502B);
@@ -219,19 +219,19 @@
             this.R440OButtonRubin_N.UseVisualStyleBackColor = false;
             this.R440OButtonRubin_N.Click += new System.EventHandler(this.R440OButtonRubin_N_Click);
             // 
-            // R440OButtonStabilizator
+            // R440OButtonVoltageStabilizer
             // 
-            this.R440OButtonStabilizator.BackColor = System.Drawing.Color.Transparent;
-            this.R440OButtonStabilizator.FlatAppearance.BorderSize = 0;
-            this.R440OButtonStabilizator.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.R440OButtonStabilizator.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.R440OButtonStabilizator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.R440OButtonStabilizator.Location = new System.Drawing.Point(959, 229);
-            this.R440OButtonStabilizator.Name = "R440OButtonStabilizator";
-            this.R440OButtonStabilizator.Size = new System.Drawing.Size(138, 105);
-            this.R440OButtonStabilizator.TabIndex = 24;
-            this.R440OButtonStabilizator.UseVisualStyleBackColor = false;
-            this.R440OButtonStabilizator.Click += new System.EventHandler(this.R440OButtonStabilizator_Click);
+            this.R440OButtonVoltageStabilizer.BackColor = System.Drawing.Color.Transparent;
+            this.R440OButtonVoltageStabilizer.FlatAppearance.BorderSize = 0;
+            this.R440OButtonVoltageStabilizer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.R440OButtonVoltageStabilizer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.R440OButtonVoltageStabilizer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.R440OButtonVoltageStabilizer.Location = new System.Drawing.Point(959, 229);
+            this.R440OButtonVoltageStabilizer.Name = "R440OButtonVoltageStabilizer";
+            this.R440OButtonVoltageStabilizer.Size = new System.Drawing.Size(138, 105);
+            this.R440OButtonVoltageStabilizer.TabIndex = 24;
+            this.R440OButtonVoltageStabilizer.UseVisualStyleBackColor = false;
+            this.R440OButtonVoltageStabilizer.Click += new System.EventHandler(this.R440OButtonVoltageStabilizer_Click);
             // 
             // R440ButtonP220_27G_3
             // 
@@ -401,19 +401,19 @@
             this.R440OKontur_P3.UseVisualStyleBackColor = false;
             this.R440OKontur_P3.Click += new System.EventHandler(this.R440OKontur_P3_Click);
             // 
-            // R440OButtonNO
+            // R440OButtonA306
             // 
-            this.R440OButtonNO.BackColor = System.Drawing.Color.Transparent;
-            this.R440OButtonNO.FlatAppearance.BorderSize = 0;
-            this.R440OButtonNO.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.R440OButtonNO.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.R440OButtonNO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.R440OButtonNO.Location = new System.Drawing.Point(816, 12);
-            this.R440OButtonNO.Name = "R440OButtonNO";
-            this.R440OButtonNO.Size = new System.Drawing.Size(95, 58);
-            this.R440OButtonNO.TabIndex = 11;
-            this.R440OButtonNO.UseVisualStyleBackColor = false;
-            this.R440OButtonNO.Click += new System.EventHandler(this.R440OButtonNO_Click);
+            this.R440OButtonA306.BackColor = System.Drawing.Color.Transparent;
+            this.R440OButtonA306.FlatAppearance.BorderSize = 0;
+            this.R440OButtonA306.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.R440OButtonA306.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.R440OButtonA306.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.R440OButtonA306.Location = new System.Drawing.Point(816, 12);
+            this.R440OButtonA306.Name = "R440OButtonA306";
+            this.R440OButtonA306.Size = new System.Drawing.Size(95, 58);
+            this.R440OButtonA306.TabIndex = 11;
+            this.R440OButtonA306.UseVisualStyleBackColor = false;
+            this.R440OButtonA306.Click += new System.EventHandler(this.R440OButtonA306_Click);
             // 
             // R440OButtonDAB_5
             // 
@@ -429,19 +429,19 @@
             this.R440OButtonDAB_5.UseVisualStyleBackColor = false;
             this.R440OButtonDAB_5.Click += new System.EventHandler(this.R440OButtonDAB_5_Click);
             // 
-            // R440OButtonCabelEnter
+            // R440OButtonPowerCabel
             // 
-            this.R440OButtonCabelEnter.BackColor = System.Drawing.Color.Transparent;
-            this.R440OButtonCabelEnter.FlatAppearance.BorderSize = 0;
-            this.R440OButtonCabelEnter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.R440OButtonCabelEnter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.R440OButtonCabelEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.R440OButtonCabelEnter.Location = new System.Drawing.Point(262, 252);
-            this.R440OButtonCabelEnter.Name = "R440OButtonCabelEnter";
-            this.R440OButtonCabelEnter.Size = new System.Drawing.Size(99, 79);
-            this.R440OButtonCabelEnter.TabIndex = 9;
-            this.R440OButtonCabelEnter.UseVisualStyleBackColor = false;
-            this.R440OButtonCabelEnter.Click += new System.EventHandler(this.R440OButtonCabelEnter_Click);
+            this.R440OButtonPowerCabel.BackColor = System.Drawing.Color.Transparent;
+            this.R440OButtonPowerCabel.FlatAppearance.BorderSize = 0;
+            this.R440OButtonPowerCabel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.R440OButtonPowerCabel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.R440OButtonPowerCabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.R440OButtonPowerCabel.Location = new System.Drawing.Point(262, 252);
+            this.R440OButtonPowerCabel.Name = "R440OButtonPowerCabel";
+            this.R440OButtonPowerCabel.Size = new System.Drawing.Size(99, 79);
+            this.R440OButtonPowerCabel.TabIndex = 9;
+            this.R440OButtonPowerCabel.UseVisualStyleBackColor = false;
+            this.R440OButtonPowerCabel.Click += new System.EventHandler(this.R440OButtonPowerCabel_Click);
             // 
             // R440OButtonN12S
             // 
@@ -597,9 +597,9 @@
         private System.Windows.Forms.Button R440OButtonN502B;
         private System.Windows.Forms.Button R440OButtonN15;
         private System.Windows.Forms.Button R440OButtonN12S;
-        private System.Windows.Forms.Button R440OButtonCabelEnter;
+        private System.Windows.Forms.Button R440OButtonPowerCabel;
         private System.Windows.Forms.Button R440OButtonDAB_5;
-        private System.Windows.Forms.Button R440OButtonNO;
+        private System.Windows.Forms.Button R440OButtonA306;
         private System.Windows.Forms.Button R440OKontur_P3;
         private System.Windows.Forms.Button R440OButtonC300M_1;
         private System.Windows.Forms.Button R440OButtonC300M_2;
@@ -612,7 +612,7 @@
         private System.Windows.Forms.Button R440ButtonBMB;
         private System.Windows.Forms.Button R440OButtonP220_27G_2;
         private System.Windows.Forms.Button R440ButtonP220_27G_3;
-        private System.Windows.Forms.Button R440OButtonStabilizator;
+        private System.Windows.Forms.Button R440OButtonVoltageStabilizer;
         private System.Windows.Forms.Button R440OButtonRubin_N;
         private System.Windows.Forms.Button R440OButtonPU_K1_1;
         private System.Windows.Forms.Button R440OButtonPU_K1_2;

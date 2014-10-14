@@ -1,6 +1,6 @@
-﻿namespace R440O.R440OForms.NO
+﻿namespace R440O.R440OForms.A306
 {
-    partial class NOForm
+    partial class A306Form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.NOPanel = new System.Windows.Forms.Panel();
+            this.A306Panel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // NOPanel
+            // A306Panel
             // 
-            this.NOPanel.BackgroundImage = global::R440O.BackgroundImages.NO;
-            this.NOPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.NOPanel.Location = new System.Drawing.Point(0, 0);
-            this.NOPanel.Name = "NOPanel";
-            this.NOPanel.Size = new System.Drawing.Size(989, 745);
-            this.NOPanel.TabIndex = 2;
+            this.A306Panel.BackgroundImage = global::R440O.BackgroundImages.A306;
+            this.A306Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A306Panel.Location = new System.Drawing.Point(0, 0);
+            this.A306Panel.Name = "A306Panel";
+            this.A306Panel.Size = new System.Drawing.Size(989, 745);
+            this.A306Panel.TabIndex = 2;
             // 
-            // NOForm
+            // A306Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(988, 741);
-            this.Controls.Add(this.NOPanel);
+            this.Controls.Add(this.A306Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "NOForm";
+            this.Name = "A306Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "НО";
+            this.Text = "А306";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel NOPanel;
+        private System.Windows.Forms.Panel A306Panel;
     }
 }
