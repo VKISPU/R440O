@@ -253,9 +253,29 @@ namespace R440O {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap N18_M {
+            get {
+                object obj = ResourceManager.GetObject("N18_M", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap N502B {
             get {
                 object obj = ResourceManager.GetObject("N502B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NKN {
+            get {
+                object obj = ResourceManager.GetObject("NKN", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -276,6 +296,16 @@ namespace R440O {
         internal static System.Drawing.Bitmap PowerCabel {
             get {
                 object obj = ResourceManager.GetObject("PowerCabel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PowerShield {
+            get {
+                object obj = ResourceManager.GetObject("PowerShield", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

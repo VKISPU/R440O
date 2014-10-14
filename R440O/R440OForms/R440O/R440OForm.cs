@@ -25,10 +25,14 @@ using R440O.R440OForms.N13_1;
 using R440O.R440OForms.N13_2;
 using R440O.R440OForms.N15;
 using R440O.R440OForms.N16;
+using R440O.R440OForms.N18_M;
+using R440O.R440OForms.NKN_1;
+using R440O.R440OForms.NKN_2;
 using R440O.R440OForms.N502B;
 using R440O.R440OForms.P220_27G_2;
 using R440O.R440OForms.P220_27G_3;
 using R440O.R440OForms.PowerCabel;
+using R440O.R440OForms.PowerShield;
 using R440O.R440OForms.PU_K1_1;
 using R440O.R440OForms.PU_K1_2;
 using R440O.R440OForms.Rubin_N;
@@ -203,7 +207,7 @@ namespace R440O.R440OForms.R440O
             }
         }
 
-        private void R440OKontur_P3_Click(object sender, EventArgs e)
+        private void R440OButtonKontur_P3_Click(object sender, EventArgs e)
         {
             if (this.OwnedForms.OfType<Kontur_P3Form>().Any())
             {
@@ -513,7 +517,58 @@ namespace R440O.R440OForms.R440O
                 Form thisForm = new N16Form();
                 thisForm.Show(this);
             }
+        }
 
+        private void R440ButtonN18_M_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<N18_MForm>().Any())
+            {
+                this.OwnedForms.OfType<N18_MForm>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new N18_MForm();
+                thisForm.Show(this);
+            }
+        }
+
+        private void R440ButtonNKN_1_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<NKN_1Form>().Any())
+            {
+                this.OwnedForms.OfType<NKN_1Form>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new NKN_1Form();
+                thisForm.Show(this);
+            }
+        }
+
+        private void R440ButtonNKN_2_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<NKN_2Form>().Any())
+            {
+                this.OwnedForms.OfType<NKN_2Form>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new NKN_2Form();
+                thisForm.Show(this);
+            }
+        }
+
+        private void R440ButtonPowerShield_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<PowerShieldForm>().Any())
+            {
+                this.OwnedForms.OfType<PowerShieldForm>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new PowerShieldForm();
+                thisForm.Show(this);
+            }
         }
     }
 }

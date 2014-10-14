@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -177,6 +177,24 @@
     <Compile Include="R440OForms\C300PM_3\C300PM_3Form.Designer.cs">
       <DependentUpon>C300PM_3Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="R440OForms\NKN_2\NKN_2Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\NKN_2\NKN_2Form.Designer.cs">
+      <DependentUpon>NKN_2Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\NKN_1\NKN_1Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\NKN_1\NKN_1Form.Designer.cs">
+      <DependentUpon>NKN_1Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\N18_M\N18_MForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\N18_M\N18_MForm.Designer.cs">
+      <DependentUpon>N18_MForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="R440OForms\N16\N16Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +212,12 @@
     </Compile>
     <Compile Include="R440OForms\N13_1\N13_1Form.Designer.cs">
       <DependentUpon>N13_1Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\PowerShield\PowerShieldForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\PowerShield\PowerShieldForm.Designer.cs">
+      <DependentUpon>PowerShieldForm.cs</DependentUpon>
     </Compile>
     <Compile Include="R440OForms\PowerCabel\PowerCabelForm.cs">
       <SubType>Form</SubType>
@@ -366,6 +390,15 @@
     <EmbeddedResource Include="R440OForms\C300PM_3\C300PM_3Form.resx">
       <DependentUpon>C300PM_3Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\NKN_2\NKN_2Form.resx">
+      <DependentUpon>NKN_2Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\NKN_1\NKN_1Form.resx">
+      <DependentUpon>NKN_1Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\N18_M\N18_MForm.resx">
+      <DependentUpon>N18_MForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\N16\N16Form.resx">
       <DependentUpon>N16Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -374,6 +407,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\N13_1\N13_1Form.resx">
       <DependentUpon>N13_1Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\PowerShield\PowerShieldForm.resx">
+      <DependentUpon>PowerShieldForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\PowerCabel\PowerCabelForm.resx">
       <DependentUpon>PowerCabelForm.cs</DependentUpon>
@@ -533,6 +569,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\N16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\N18_M.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NKN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PowerShield.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\buttonOffUpRed.png" />

@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.R440OPanel = new System.Windows.Forms.Panel();
+            this.R440ButtonPowerShield = new System.Windows.Forms.Button();
+            this.R440ButtonNKN_2 = new System.Windows.Forms.Button();
+            this.R440ButtonNKN_1 = new System.Windows.Forms.Button();
+            this.R440ButtonN18_M = new System.Windows.Forms.Button();
+            this.R440OButtonN16 = new System.Windows.Forms.Button();
             this.R440ButtonN13_2 = new System.Windows.Forms.Button();
             this.R440ButtonN13_1 = new System.Windows.Forms.Button();
             this.R440OButtonA403_3 = new System.Windows.Forms.Button();
@@ -51,7 +56,7 @@
             this.R440OButtonC300M_3 = new System.Windows.Forms.Button();
             this.R440OButtonC300M_2 = new System.Windows.Forms.Button();
             this.R440OButtonC300M_1 = new System.Windows.Forms.Button();
-            this.R440OKontur_P3 = new System.Windows.Forms.Button();
+            this.R440OButtonKontur_P3 = new System.Windows.Forms.Button();
             this.R440OButtonA306 = new System.Windows.Forms.Button();
             this.R440OButtonDAB_5 = new System.Windows.Forms.Button();
             this.R440OButtonPowerCabel = new System.Windows.Forms.Button();
@@ -64,7 +69,6 @@
             this.R440OButtonA1 = new System.Windows.Forms.Button();
             this.R440OButtonA205M_2 = new System.Windows.Forms.Button();
             this.R440OButtonA205M_1 = new System.Windows.Forms.Button();
-            this.R440OButtonN16 = new System.Windows.Forms.Button();
             this.R440OPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +76,10 @@
             // 
             this.R440OPanel.BackgroundImage = global::R440O.BackgroundImages.R440O;
             this.R440OPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.R440OPanel.Controls.Add(this.R440ButtonPowerShield);
+            this.R440OPanel.Controls.Add(this.R440ButtonNKN_2);
+            this.R440OPanel.Controls.Add(this.R440ButtonNKN_1);
+            this.R440OPanel.Controls.Add(this.R440ButtonN18_M);
             this.R440OPanel.Controls.Add(this.R440OButtonN16);
             this.R440OPanel.Controls.Add(this.R440ButtonN13_2);
             this.R440OPanel.Controls.Add(this.R440ButtonN13_1);
@@ -95,7 +103,7 @@
             this.R440OPanel.Controls.Add(this.R440OButtonC300M_3);
             this.R440OPanel.Controls.Add(this.R440OButtonC300M_2);
             this.R440OPanel.Controls.Add(this.R440OButtonC300M_1);
-            this.R440OPanel.Controls.Add(this.R440OKontur_P3);
+            this.R440OPanel.Controls.Add(this.R440OButtonKontur_P3);
             this.R440OPanel.Controls.Add(this.R440OButtonA306);
             this.R440OPanel.Controls.Add(this.R440OButtonDAB_5);
             this.R440OPanel.Controls.Add(this.R440OButtonPowerCabel);
@@ -112,6 +120,76 @@
             this.R440OPanel.Name = "R440OPanel";
             this.R440OPanel.Size = new System.Drawing.Size(1101, 391);
             this.R440OPanel.TabIndex = 0;
+            // 
+            // R440ButtonPowerShield
+            // 
+            this.R440ButtonPowerShield.BackColor = System.Drawing.Color.Transparent;
+            this.R440ButtonPowerShield.FlatAppearance.BorderSize = 0;
+            this.R440ButtonPowerShield.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.R440ButtonPowerShield.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.R440ButtonPowerShield.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.R440ButtonPowerShield.Location = new System.Drawing.Point(262, 175);
+            this.R440ButtonPowerShield.Name = "R440ButtonPowerShield";
+            this.R440ButtonPowerShield.Size = new System.Drawing.Size(99, 79);
+            this.R440ButtonPowerShield.TabIndex = 39;
+            this.R440ButtonPowerShield.UseVisualStyleBackColor = false;
+            this.R440ButtonPowerShield.Click += new System.EventHandler(this.R440ButtonPowerShield_Click);
+            // 
+            // R440ButtonNKN_2
+            // 
+            this.R440ButtonNKN_2.BackColor = System.Drawing.Color.Transparent;
+            this.R440ButtonNKN_2.FlatAppearance.BorderSize = 0;
+            this.R440ButtonNKN_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.R440ButtonNKN_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.R440ButtonNKN_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.R440ButtonNKN_2.Location = new System.Drawing.Point(530, 60);
+            this.R440ButtonNKN_2.Name = "R440ButtonNKN_2";
+            this.R440ButtonNKN_2.Size = new System.Drawing.Size(69, 54);
+            this.R440ButtonNKN_2.TabIndex = 38;
+            this.R440ButtonNKN_2.UseVisualStyleBackColor = false;
+            this.R440ButtonNKN_2.Click += new System.EventHandler(this.R440ButtonNKN_2_Click);
+            // 
+            // R440ButtonNKN_1
+            // 
+            this.R440ButtonNKN_1.BackColor = System.Drawing.Color.Transparent;
+            this.R440ButtonNKN_1.FlatAppearance.BorderSize = 0;
+            this.R440ButtonNKN_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.R440ButtonNKN_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.R440ButtonNKN_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.R440ButtonNKN_1.Location = new System.Drawing.Point(391, 59);
+            this.R440ButtonNKN_1.Name = "R440ButtonNKN_1";
+            this.R440ButtonNKN_1.Size = new System.Drawing.Size(69, 55);
+            this.R440ButtonNKN_1.TabIndex = 37;
+            this.R440ButtonNKN_1.UseVisualStyleBackColor = false;
+            this.R440ButtonNKN_1.Click += new System.EventHandler(this.R440ButtonNKN_1_Click);
+            // 
+            // R440ButtonN18_M
+            // 
+            this.R440ButtonN18_M.BackColor = System.Drawing.Color.Transparent;
+            this.R440ButtonN18_M.FlatAppearance.BorderSize = 0;
+            this.R440ButtonN18_M.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.R440ButtonN18_M.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.R440ButtonN18_M.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.R440ButtonN18_M.Location = new System.Drawing.Point(262, 51);
+            this.R440ButtonN18_M.Name = "R440ButtonN18_M";
+            this.R440ButtonN18_M.Size = new System.Drawing.Size(99, 114);
+            this.R440ButtonN18_M.TabIndex = 36;
+            this.R440ButtonN18_M.UseVisualStyleBackColor = false;
+            this.R440ButtonN18_M.Click += new System.EventHandler(this.R440ButtonN18_M_Click);
+            // 
+            // R440OButtonN16
+            // 
+            this.R440OButtonN16.BackColor = System.Drawing.Color.Transparent;
+            this.R440OButtonN16.FlatAppearance.BorderSize = 0;
+            this.R440OButtonN16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.R440OButtonN16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.R440OButtonN16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.R440OButtonN16.Location = new System.Drawing.Point(391, 225);
+            this.R440OButtonN16.Name = "R440OButtonN16";
+            this.R440OButtonN16.Size = new System.Drawing.Size(137, 55);
+            this.R440OButtonN16.TabIndex = 35;
+            this.R440OButtonN16.UseVisualStyleBackColor = false;
+            this.R440OButtonN16.Click += new System.EventHandler(this.R440OButtonN16_Click);
             // 
             // R440ButtonN13_2
             // 
@@ -421,19 +499,19 @@
             this.R440OButtonC300M_1.UseVisualStyleBackColor = false;
             this.R440OButtonC300M_1.Click += new System.EventHandler(this.R440OButtonC300M_1_Click);
             // 
-            // R440OKontur_P3
+            // R440OButtonKontur_P3
             // 
-            this.R440OKontur_P3.BackColor = System.Drawing.Color.Transparent;
-            this.R440OKontur_P3.FlatAppearance.BorderSize = 0;
-            this.R440OKontur_P3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.R440OKontur_P3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.R440OKontur_P3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.R440OKontur_P3.Location = new System.Drawing.Point(792, 92);
-            this.R440OKontur_P3.Name = "R440OKontur_P3";
-            this.R440OKontur_P3.Size = new System.Drawing.Size(142, 58);
-            this.R440OKontur_P3.TabIndex = 12;
-            this.R440OKontur_P3.UseVisualStyleBackColor = false;
-            this.R440OKontur_P3.Click += new System.EventHandler(this.R440OKontur_P3_Click);
+            this.R440OButtonKontur_P3.BackColor = System.Drawing.Color.Transparent;
+            this.R440OButtonKontur_P3.FlatAppearance.BorderSize = 0;
+            this.R440OButtonKontur_P3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.R440OButtonKontur_P3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.R440OButtonKontur_P3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.R440OButtonKontur_P3.Location = new System.Drawing.Point(792, 92);
+            this.R440OButtonKontur_P3.Name = "R440OButtonKontur_P3";
+            this.R440OButtonKontur_P3.Size = new System.Drawing.Size(142, 58);
+            this.R440OButtonKontur_P3.TabIndex = 12;
+            this.R440OButtonKontur_P3.UseVisualStyleBackColor = false;
+            this.R440OButtonKontur_P3.Click += new System.EventHandler(this.R440OButtonKontur_P3_Click);
             // 
             // R440OButtonA306
             // 
@@ -603,20 +681,6 @@
             this.R440OButtonA205M_1.UseVisualStyleBackColor = false;
             this.R440OButtonA205M_1.Click += new System.EventHandler(this.R440OButtonA205M_1_Click);
             // 
-            // R440OButtonN16
-            // 
-            this.R440OButtonN16.BackColor = System.Drawing.Color.Transparent;
-            this.R440OButtonN16.FlatAppearance.BorderSize = 0;
-            this.R440OButtonN16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.R440OButtonN16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.R440OButtonN16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.R440OButtonN16.Location = new System.Drawing.Point(391, 225);
-            this.R440OButtonN16.Name = "R440OButtonN16";
-            this.R440OButtonN16.Size = new System.Drawing.Size(137, 55);
-            this.R440OButtonN16.TabIndex = 35;
-            this.R440OButtonN16.UseVisualStyleBackColor = false;
-            this.R440OButtonN16.Click += new System.EventHandler(this.R440OButtonN16_Click);
-            // 
             // R440OForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -624,10 +688,9 @@
             this.ClientSize = new System.Drawing.Size(1101, 389);
             this.Controls.Add(this.R440OPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
             this.Name = "R440OForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "P-440-O";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.R440OPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -648,7 +711,7 @@
         private System.Windows.Forms.Button R440OButtonPowerCabel;
         private System.Windows.Forms.Button R440OButtonDAB_5;
         private System.Windows.Forms.Button R440OButtonA306;
-        private System.Windows.Forms.Button R440OKontur_P3;
+        private System.Windows.Forms.Button R440OButtonKontur_P3;
         private System.Windows.Forms.Button R440OButtonC300M_1;
         private System.Windows.Forms.Button R440OButtonC300M_2;
         private System.Windows.Forms.Button R440OButtonC300M_3;
@@ -672,6 +735,10 @@
         private System.Windows.Forms.Button R440ButtonN13_2;
         private System.Windows.Forms.Button R440ButtonN13_1;
         private System.Windows.Forms.Button R440OButtonN16;
+        private System.Windows.Forms.Button R440ButtonN18_M;
+        private System.Windows.Forms.Button R440ButtonNKN_1;
+        private System.Windows.Forms.Button R440ButtonNKN_2;
+        private System.Windows.Forms.Button R440ButtonPowerShield;
     }
 }
 
