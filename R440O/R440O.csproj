@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -63,6 +63,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BackgroundImages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlElementImages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ControlElementImages.resx</DependentUpon>
     </Compile>
     <Compile Include="R440OForms\A1\A1Form.cs">
       <SubType>Form</SubType>
@@ -292,6 +297,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>BackgroundImages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlElementImages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>ControlElementImages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -523,6 +533,144 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\N16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonOffUpRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonOnUpBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerHorizontalType1Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerHorizontalType1Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerVerticalType1Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerVerticalType1Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerVerticalType2Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerVerticalType2Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerVerticalType3Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerVerticalType3Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerVerticalType4Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerVerticalType4Middle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerVerticalType4Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerVerticalType5Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerVerticalType5Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerSideVerticalType1Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerSideVerticalType1Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerSideHorizontalType1Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerSideHorizontalType1Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerSideVerticalType2Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerSideVerticalType2Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonRoundType1UpBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonSquareType1UpBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonSquareType1UpGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonSquareType1UpWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonSquareType1UpYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lampType1OnRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lampType2OnRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lampType3OnRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lampType4OnRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lampType5OnRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lampType6OnRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lampType7OnRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lampType8OnRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lampType9OnGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lampType10OnRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lampType11OnYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toggleType1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toggleType2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toggleType3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toggleType4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toggleType5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowRound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orderSchemeIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
