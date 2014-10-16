@@ -207,6 +207,108 @@
     <Compile Include="R440OForms\C300PM_3\C300PM_3Form.Designer.cs">
       <DependentUpon>C300PM_3Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="R440OForms\K02M_01Inside\K02M_01Inside.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\K02M_01Inside\K02M_01Inside.Designer.cs">
+      <DependentUpon>K02M_01Inside.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\K02M_02Inside\K02M_02Inside.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\K02M_02Inside\K02M_02Inside.Designer.cs">
+      <DependentUpon>K02M_02Inside.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\K03M_01Inside\K03M_01Inside.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\K03M_01Inside\K03M_01Inside.Designer.cs">
+      <DependentUpon>K03M_01Inside.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\K03M_02Inside\K03M_02Inside.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\K03M_02Inside\K03M_02Inside.Designer.cs">
+      <DependentUpon>K03M_02Inside.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\K05M_01Inside\K05M_01Inside.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\K05M_01Inside\K05M_01Inside.Designer.cs">
+      <DependentUpon>K05M_01Inside.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\K05M_02Inside\K05M_02Inside.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\K05M_02Inside\K05M_02Inside.Designer.cs">
+      <DependentUpon>K05M_02Inside.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\K06M_02\K06M_02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\K06M_02\K06M_02.Designer.cs">
+      <DependentUpon>K06M_02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\K06M_01\K06M_01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\K06M_01\K06M_01.Designer.cs">
+      <DependentUpon>K06M_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\K05M_02\K05M_02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\K05M_02\K05M_02.Designer.cs">
+      <DependentUpon>K05M_02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\K05M_01\K05M_01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\K05M_01\K05M_01.Designer.cs">
+      <DependentUpon>K05M_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\K04M_02\K04M_02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\K04M_02\K04M_02.Designer.cs">
+      <DependentUpon>K04M_02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\K04M_01\K04M_01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\K04M_01\K04M_01.Designer.cs">
+      <DependentUpon>K04M_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\K03M_02\K03M_02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\K03M_02\K03M_02.Designer.cs">
+      <DependentUpon>K03M_02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\K03M_01\K03M_01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\K03M_01\K03M_01.Designer.cs">
+      <DependentUpon>K03M_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\K02M_02\K02M_02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\K02M_02\K02M_02.Designer.cs">
+      <DependentUpon>K02M_02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\K02M_01\K02M_01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\K02M_01\K02M_01.Designer.cs">
+      <DependentUpon>K02M_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\K01M_02\K01M_02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\K01M_02\K01M_02.Designer.cs">
+      <DependentUpon>K01M_02.cs</DependentUpon>
+    </Compile>
     <Compile Include="R440OForms\NKN_2\NKN_2Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -329,6 +431,12 @@
     <Compile Include="R440OForms\Rubin_N\Rubin_NForm.Designer.cs">
       <DependentUpon>Rubin_NForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="R440OForms\K01M_01\K01M_01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\K01M_01\K01M_01.Designer.cs">
+      <DependentUpon>K01M_01.cs</DependentUpon>
+    </Compile>
     <Compile Include="R440OForms\VoltageStabilizer\VoltageStabilizerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -435,6 +543,57 @@
     <EmbeddedResource Include="R440OForms\C300PM_3\C300PM_3Form.resx">
       <DependentUpon>C300PM_3Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\K02M_01Inside\K02M_01Inside.resx">
+      <DependentUpon>K02M_01Inside.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\K02M_02Inside\K02M_02Inside.resx">
+      <DependentUpon>K02M_02Inside.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\K03M_01Inside\K03M_01Inside.resx">
+      <DependentUpon>K03M_01Inside.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\K03M_02Inside\K03M_02Inside.resx">
+      <DependentUpon>K03M_02Inside.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\K05M_01Inside\K05M_01Inside.resx">
+      <DependentUpon>K05M_01Inside.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\K05M_02Inside\K05M_02Inside.resx">
+      <DependentUpon>K05M_02Inside.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\K06M_02\K06M_02.resx">
+      <DependentUpon>K06M_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\K06M_01\K06M_01.resx">
+      <DependentUpon>K06M_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\K05M_02\K05M_02.resx">
+      <DependentUpon>K05M_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\K05M_01\K05M_01.resx">
+      <DependentUpon>K05M_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\K04M_02\K04M_02.resx">
+      <DependentUpon>K04M_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\K04M_01\K04M_01.resx">
+      <DependentUpon>K04M_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\K03M_02\K03M_02.resx">
+      <DependentUpon>K03M_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\K03M_01\K03M_01.resx">
+      <DependentUpon>K03M_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\K02M_02\K02M_02.resx">
+      <DependentUpon>K02M_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\K02M_01\K02M_01.resx">
+      <DependentUpon>K02M_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\K01M_02\K01M_02.resx">
+      <DependentUpon>K01M_02.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\NKN_2\NKN_2Form.resx">
       <DependentUpon>NKN_2Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -494,6 +653,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\Rubin_N\Rubin_NForm.resx">
       <DependentUpon>Rubin_NForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\K01M_01\K01M_01.resx">
+      <DependentUpon>K01M_01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\VoltageStabilizer\VoltageStabilizerForm.resx">
       <DependentUpon>VoltageStabilizerForm.cs</DependentUpon>
@@ -767,6 +929,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\B3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\K01M_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\K02M_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\K03M_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\K04M_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\K05M_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\K06M_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\K05M_01_inside.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\K02M_01_inside.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\K03M_01_inside.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

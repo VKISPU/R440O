@@ -214,4 +214,31 @@
   <data name="B3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\B3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="K01M_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\K01M_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="K02M_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\K02M_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="K03M_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\K03M_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="K04M_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\K04M_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="K05M_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\K05M_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="K06M_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\K06M_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="K02M_01_inside" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\K02M_01_inside.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="K03M_01_inside" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\K03M_01_inside.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="K05M_01_inside" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\K05M_01_inside.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

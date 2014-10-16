@@ -24,6 +24,18 @@ using R440O.R440OForms.C300M_4;
 using R440O.R440OForms.C300PM_2;
 using R440O.R440OForms.C300PM_3;
 using R440O.R440OForms.DAB_5;
+using R440O.R440OForms.K01M_01;
+using R440O.R440OForms.K01M_02;
+using R440O.R440OForms.K02M_01;
+using R440O.R440OForms.K02M_02;
+using R440O.R440OForms.K03M_01;
+using R440O.R440OForms.K03M_02;
+using R440O.R440OForms.K04M_01;
+using R440O.R440OForms.K04M_02;
+using R440O.R440OForms.K05M_01;
+using R440O.R440OForms.K05M_02;
+using R440O.R440OForms.K06M_01;
+using R440O.R440OForms.K06M_02;
 using R440O.R440OForms.Kontur_P3;
 using R440O.R440OForms.N12S;
 using R440O.R440OForms.N13_1;
@@ -641,6 +653,164 @@ namespace R440O.R440OForms.R440O
                 thisForm.Show(this);
             }
 
+        }
+
+        private void R440OButtonK01M_01_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<K01M_01Form>().Any())
+            {
+                this.OwnedForms.OfType<K01M_01Form>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new K01M_01Form();
+                thisForm.Show(this);
+            }
+        }
+
+        private void R440OButtonK01M_02_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<K01M_02Form>().Any())
+            {
+                this.OwnedForms.OfType<K01M_02Form>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new K01M_02Form();
+                thisForm.Show(this);
+            }
+        }
+
+        private void R440OButtonK02M_01_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<K02M_01Form>().Any())
+            {
+                this.OwnedForms.OfType<K02M_01Form>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new K02M_01Form();
+                thisForm.Show(this);
+            }
+        }
+
+        private void R440OButtonK02M_02_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<K02M_02Form>().Any())
+            {
+                this.OwnedForms.OfType<K02M_02Form>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new K02M_02Form();
+                thisForm.Show(this);
+            }
+        }
+
+        private void R440OButtonK03M_01_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<K03M_01Form>().Any())
+            {
+                this.OwnedForms.OfType<K03M_01Form>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new K03M_01Form();
+                thisForm.Show(this);
+            }
+        }
+
+        private void R440OButtonK03M_02_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<K03M_02Form>().Any())
+            {
+                this.OwnedForms.OfType<K03M_02Form>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new K03M_02Form();
+                thisForm.Show(this);
+            }
+        }
+
+        private void R440OButtonK04M_01_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<K04M_01Form>().Any())
+            {
+                this.OwnedForms.OfType<K04M_01Form>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new K04M_01Form();
+                thisForm.Show(this);
+            }
+        }
+
+        private void R440OButtonK04M_02_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<K04M_02Form>().Any())
+            {
+                this.OwnedForms.OfType<K04M_02Form>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new K04M_02Form();
+                thisForm.Show(this);
+            }
+        }
+
+        private void R440OButtonK05M_01_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<K05M_01Form>().Any())
+            {
+                this.OwnedForms.OfType<K05M_01Form>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new K05M_01Form();
+                thisForm.Show(this);
+            }
+        }
+
+        private void R440OButtonK05M_02_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<K05M_02Form>().Any())
+            {
+                this.OwnedForms.OfType<K05M_02Form>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new K05M_02Form();
+                thisForm.Show(this);
+            }
+
+        }
+
+        private void R440OButtonK06M_01_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<K06M_01Form>().Any())
+            {
+                this.OwnedForms.OfType<K06M_01Form>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new K06M_01Form();
+                thisForm.Show(this);
+            }
+
+        }
+
+        private void R440OButtonK06M_02_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.OfType<K06M_02Form>().Any())
+            {
+                this.OwnedForms.OfType<K06M_02Form>().First().Activate();
+            }
+            else
+            {
+                Form thisForm = new K06M_02Form();
+                thisForm.Show(this);
+            }
         }
     }
 }
