@@ -1,4 +1,4 @@
-﻿namespace R440O.R440OForms.BMA_M_1
+﻿namespace R440O.R440OForms.BMB
 {
     partial class BMBForm
     {

@@ -1,4 +1,4 @@
-﻿namespace R440O.R440OForms.BMA_M_1
+﻿namespace R440O.R440OForms.BMA_M_2
 {
     partial class BMA_M_2Form
     {

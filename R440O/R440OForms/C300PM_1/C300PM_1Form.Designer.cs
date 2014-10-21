@@ -1,4 +1,4 @@
-﻿namespace R440O.R440OForms.С300PM_1
+﻿namespace R440O.R440OForms.C300PM_1
 {
     partial class C300PM_1Form
     {

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace R440O.R440OForms.BMA_M_1
+namespace R440O.R440OForms.BMB
 {
     public partial class BMBForm : Form
     {
