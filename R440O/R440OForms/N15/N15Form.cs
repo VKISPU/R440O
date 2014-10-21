@@ -1,48 +1,77 @@
-п»їusing System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using R440O.ThirdParty;
-using R440O.Parameters;
+//-----------------------------------------------------------------------
+// <copyright file="N15Form.cs" company="VKISPU">
+//      R440O station.
+// </copyright>
+//-----------------------------------------------------------------------
 
 namespace R440O.R440OForms.N15
 {
+    using System;
+    using System.Windows.Forms;
+    using Parameters;
+
+    /// <summary>
+    /// Форма блока Н-15
+    /// </summary>
     public partial class N15Form : Form
     {
+        /// <summary>
+        /// Инициализирует новый экземпляр класса <see cref="N15Form"/>
+        /// </summary>
         public N15Form()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
-        private void Рќ15РљРЅРѕРїРєР°РЎС‚Р°РЅС†РёСЏР’РєР»_MouseDown(object sender, MouseEventArgs e)
+        /// <summary>
+        /// Нажатие кнопки
+        /// </summary>
+        /// <param name="sender">Объкт вызвавший событие</param>
+        /// <param name="e">Делегат для события</param>
+        private void Н15КнопкаСтанцияВкл_MouseDown(object sender, MouseEventArgs e)
         {
-            this.Рќ15РљРЅРѕРїРєР°РЎС‚Р°РЅС†РёСЏР’РєР».BackgroundImage = null;
+            this.Н15КнопкаСтанцияВкл.BackgroundImage = null;
         }
 
-        private void Рќ15РљРЅРѕРїРєР°РЎС‚Р°РЅС†РёСЏР’РєР»_MouseUp(object sender, MouseEventArgs e)
+        /// <summary>
+        /// Отжатие кнопки
+        /// </summary>
+        /// <param name="sender">Объкт вызвавший событие</param>
+        /// <param name="e">Делегат для события</param>
+        private void Н15КнопкаСтанцияВкл_MouseUp(object sender, MouseEventArgs e)
         {
-            this.Рќ15РљРЅРѕРїРєР°РЎС‚Р°РЅС†РёСЏР’РєР».BackgroundImage = ControlElementImages.buttonOnUpBlack;
-            N15Parameters.Рќ15РљРЅРѕРїРєР°РЎС‚Р°РЅС†РёСЏР’РєР» = "true";
+            this.Н15КнопкаСтанцияВкл.BackgroundImage = ControlElementImages.buttonOnUpBlack;
+            N15Parameters.Н15КнопкаСтанцияВкл = "true";
         }
 
-        private void Рќ15РљРЅРѕРїРєР°РЎС‚Р°РЅС†РёСЏР’С‹РєР»_MouseDown(object sender, MouseEventArgs e)
+        /// <summary>
+        /// Нажатие кнопки
+        /// </summary>
+        /// <param name="sender">Объкт вызвавший событие</param>
+        /// <param name="e">Делегат для события</param>
+        private void Н15КнопкаСтанцияВыкл_MouseDown(object sender, MouseEventArgs e)
         {
-            this.Рќ15РљРЅРѕРїРєР°РЎС‚Р°РЅС†РёСЏР’С‹РєР».BackgroundImage = null;
+            this.Н15КнопкаСтанцияВыкл.BackgroundImage = null;
         }
 
-        private void Рќ15РљРЅРѕРїРєР°РЎС‚Р°РЅС†РёСЏР’С‹РєР»_MouseUp(object sender, MouseEventArgs e)
+        /// <summary>
+        /// Отжатие кнопки
+        /// </summary>
+        /// <param name="sender">Объкт вызвавший событие</param>
+        /// <param name="e">Делегат для события</param>
+        private void Н15КнопкаСтанцияВыкл_MouseUp(object sender, MouseEventArgs e)
         {
-            this.Рќ15РљРЅРѕРїРєР°РЎС‚Р°РЅС†РёСЏР’С‹РєР».BackgroundImage = ControlElementImages.buttonOffUpRed;
-            N15Parameters.Рќ15РљРЅРѕРїРєР°РЎС‚Р°РЅС†РёСЏР’С‹РєР» = "true";
+            this.Н15КнопкаСтанцияВыкл.BackgroundImage = ControlElementImages.buttonOffUpRed;
+            N15Parameters.Н15КнопкаСтанцияВыкл = "true";
         }
 
+        /// <summary>
+        /// Загрузка формы
+        /// </summary>
+        /// <param name="sender">Объкт вызвавший событие</param>
+        /// <param name="e">Делегат для события</param>
         private void N15Form_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

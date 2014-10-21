@@ -1,19 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿//-----------------------------------------------------------------------
+// <copyright file="AstraForm.cs" company="VKISPU">
+//      R440O station.
+// </copyright>
+//-----------------------------------------------------------------------
 
 namespace R440O.R440OForms.Astra
 {
+    using System.Windows.Forms;
+    
+    /// <summary>
+    /// Форма блока Астра
+    /// </summary>
     public partial class AstraForm : Form
     {
+        /// <summary>
+        /// Инициализирует новый экземпляр класса <see cref="AstraForm"/>.
+        /// </summary>
         public AstraForm()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
     }
 }

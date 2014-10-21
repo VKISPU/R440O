@@ -2,4 +2,11 @@
   <GlobalSettings>
     <StringProperty Name="Culture">ru-RU</StringProperty>
   </GlobalSettings>
+  <Parsers>
+    <Parser ParserId="StyleCop.CSharp.CsParser">
+      <ParserSettings>
+        <BooleanProperty Name="AnalyzeDesignerFiles">False</BooleanProperty>
+      </ParserSettings>
+    </Parser>
+  </Parsers>
 </StyleCopSettings>

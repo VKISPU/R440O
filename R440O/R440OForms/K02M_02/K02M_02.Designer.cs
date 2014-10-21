@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.K02M_02Panel = new System.Windows.Forms.Panel();
-            this.K02M_01ButtonInside = new System.Windows.Forms.Button();
+            this.K02M_02ButtonInside = new System.Windows.Forms.Button();
             this.K02M_02Panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -37,7 +37,7 @@
             // 
             this.K02M_02Panel.BackgroundImage = global::R440O.BackgroundImages.K02M_01;
             this.K02M_02Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.K02M_02Panel.Controls.Add(this.K02M_01ButtonInside);
+            this.K02M_02Panel.Controls.Add(this.K02M_02ButtonInside);
             this.K02M_02Panel.Location = new System.Drawing.Point(0, 0);
             this.K02M_02Panel.Name = "K02M_02Panel";
             this.K02M_02Panel.Size = new System.Drawing.Size(496, 707);
@@ -45,17 +45,17 @@
             // 
             // K02M_01ButtonInside
             // 
-            this.K02M_01ButtonInside.BackColor = System.Drawing.Color.Transparent;
-            this.K02M_01ButtonInside.FlatAppearance.BorderSize = 0;
-            this.K02M_01ButtonInside.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.K02M_01ButtonInside.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.K02M_01ButtonInside.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.K02M_01ButtonInside.Location = new System.Drawing.Point(37, 265);
-            this.K02M_01ButtonInside.Name = "K02M_01ButtonInside";
-            this.K02M_01ButtonInside.Size = new System.Drawing.Size(105, 140);
-            this.K02M_01ButtonInside.TabIndex = 9;
-            this.K02M_01ButtonInside.UseVisualStyleBackColor = false;
-            this.K02M_01ButtonInside.Click += new System.EventHandler(this.K02M_01ButtonInside_Click);
+            this.K02M_02ButtonInside.BackColor = System.Drawing.Color.Transparent;
+            this.K02M_02ButtonInside.FlatAppearance.BorderSize = 0;
+            this.K02M_02ButtonInside.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.K02M_02ButtonInside.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.K02M_02ButtonInside.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.K02M_02ButtonInside.Location = new System.Drawing.Point(37, 265);
+            this.K02M_02ButtonInside.Name = "K02M_02ButtonInside";
+            this.K02M_02ButtonInside.Size = new System.Drawing.Size(105, 140);
+            this.K02M_02ButtonInside.TabIndex = 9;
+            this.K02M_02ButtonInside.UseVisualStyleBackColor = false;
+            this.K02M_02ButtonInside.Click += new System.EventHandler(this.K02M_02ButtonInside_Click);
             // 
             // K02M_02Form
             // 
@@ -76,6 +76,6 @@
         #endregion
 
         private System.Windows.Forms.Panel K02M_02Panel;
-        private System.Windows.Forms.Button K02M_01ButtonInside;
+        private System.Windows.Forms.Button K02M_02ButtonInside;
     }
 }
