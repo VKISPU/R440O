@@ -2,7 +2,7 @@
 
 namespace R440O.R440OForms.K04M_01
 {
-    public partial class K04M_01Form: Form
+    public partial class K04M_01Form : Form
     {
         public K04M_01Form()
         {

@@ -2,7 +2,7 @@
 
 namespace R440O.R440OForms.K05M_02Inside
 {
-    public partial class K05M_02InsideForm: Form
+    public partial class K05M_02InsideForm : Form
     {
         public K05M_02InsideForm()
         {

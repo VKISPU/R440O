@@ -3,7 +3,7 @@ using R440O.R440OForms.K05M_01Inside;
 
 namespace R440O.R440OForms.K05M_01
 {
-    public partial class K05M_01Form: Form
+    public partial class K05M_01Form : Form
     {
         public K05M_01Form()
         {

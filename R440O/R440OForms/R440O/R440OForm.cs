@@ -15,7 +15,8 @@ namespace R440O.R440OForms.R440O
         {
             var button = (Button) sender;
             const string buttonString = "Button";
-            var blockName = button.Name.Substring(button.Name.IndexOf(buttonString, System.StringComparison.Ordinal) + buttonString.Length);
+            var blockName =
+                button.Name.Substring(button.Name.IndexOf(buttonString, StringComparison.Ordinal) + buttonString.Length);
             var formName = blockName + "Form";
             foreach (Form form in OwnedForms.Where(form => form.Name == formName))
             {
