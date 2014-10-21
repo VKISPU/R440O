@@ -69,6 +69,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ControlElementImages.resx</DependentUpon>
     </Compile>
+    <Compile Include="Parameters\N15Parameters.cs" />
     <Compile Include="R440OForms\A1\A1Form.cs">
       <SubType>Form</SubType>
     </Compile>
