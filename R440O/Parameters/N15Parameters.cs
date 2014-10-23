@@ -115,6 +115,8 @@ namespace R440O.Parameters
         public static string Н15ЛампочкаА503Б { get; set; }
         public static string Н15ЛампочкаАнт { get; set; }
         public static string Н15ЛампочкаЭкв { get; set; }
+
+        //Индикаторы
         
         
     }

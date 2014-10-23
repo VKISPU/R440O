@@ -63,7 +63,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ControlElementImages.resx</DependentUpon>
     </Compile>
+    <Compile Include="Parameters\A205M_1Parameters.cs" />
+    <Compile Include="Parameters\A205M_2Parameters.cs" />
+    <Compile Include="Parameters\A304Parameters.cs" />
+    <Compile Include="Parameters\A306Parameters.cs" />
+    <Compile Include="Parameters\A403_1Parameters.cs" />
+    <Compile Include="Parameters\A403_3Parameters.cs" />
+    <Compile Include="Parameters\AstraParameters.cs" />
     <Compile Include="Parameters\N15Parameters.cs" />
+    <Compile Include="Parameters\A1Parameters.cs" />
+    <Compile Include="Parameters\N502BParameters.cs" />
+    <Compile Include="Parameters\VoltageStabilizerParameters.cs" />
     <Compile Include="R440OForms\A1\A1Form.cs">
       <SubType>Form</SubType>
     </Compile>
