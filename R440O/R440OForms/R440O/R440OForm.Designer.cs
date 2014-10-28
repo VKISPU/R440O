@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.R440OPanel = new System.Windows.Forms.Panel();
+            this.R440OButtonWattmeter = new System.Windows.Forms.Button();
             this.R440OButtonK06M_02 = new System.Windows.Forms.Button();
             this.R440OButtonK06M_01 = new System.Windows.Forms.Button();
             this.R440OButtonK05M_01 = new System.Windows.Forms.Button();
@@ -85,7 +86,6 @@
             this.R440OButtonA1 = new System.Windows.Forms.Button();
             this.R440OButtonA205M_2 = new System.Windows.Forms.Button();
             this.R440OButtonA205M_1 = new System.Windows.Forms.Button();
-            this.R440OButtonWattmeter = new System.Windows.Forms.Button();
             this.R440OPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -154,6 +154,20 @@
             this.R440OPanel.Name = "R440OPanel";
             this.R440OPanel.Size = new System.Drawing.Size(1101, 391);
             this.R440OPanel.TabIndex = 0;
+            // 
+            // R440OButtonWattmeter
+            // 
+            this.R440OButtonWattmeter.BackColor = System.Drawing.Color.Transparent;
+            this.R440OButtonWattmeter.FlatAppearance.BorderSize = 0;
+            this.R440OButtonWattmeter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.R440OButtonWattmeter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.R440OButtonWattmeter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.R440OButtonWattmeter.Location = new System.Drawing.Point(459, 19);
+            this.R440OButtonWattmeter.Name = "R440OButtonWattmeter";
+            this.R440OButtonWattmeter.Size = new System.Drawing.Size(50, 39);
+            this.R440OButtonWattmeter.TabIndex = 57;
+            this.R440OButtonWattmeter.UseVisualStyleBackColor = false;
+            this.R440OButtonWattmeter.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
             // R440OButtonK06M_02
             // 
@@ -939,20 +953,6 @@
             this.R440OButtonA205M_1.UseVisualStyleBackColor = false;
             this.R440OButtonA205M_1.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
-            // R440OButtonWattmeter
-            // 
-            this.R440OButtonWattmeter.BackColor = System.Drawing.Color.Transparent;
-            this.R440OButtonWattmeter.FlatAppearance.BorderSize = 0;
-            this.R440OButtonWattmeter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.R440OButtonWattmeter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.R440OButtonWattmeter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.R440OButtonWattmeter.Location = new System.Drawing.Point(459, 19);
-            this.R440OButtonWattmeter.Name = "R440OButtonWattmeter";
-            this.R440OButtonWattmeter.Size = new System.Drawing.Size(50, 39);
-            this.R440OButtonWattmeter.TabIndex = 57;
-            this.R440OButtonWattmeter.UseVisualStyleBackColor = false;
-            this.R440OButtonWattmeter.Click += new System.EventHandler(this.R440OButtonCommon_Click);
-            // 
             // R440OForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -962,6 +962,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "R440OForm";
             this.Text = "P-440-O";
+            this.Load += new System.EventHandler(this.R440OForm_Load);
             this.R440OPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
