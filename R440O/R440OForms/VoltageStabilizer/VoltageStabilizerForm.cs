@@ -4,6 +4,8 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+using R440O.Parameters;
+
 namespace R440O.R440OForms.VoltageStabilizer
 {
     using System.Windows.Forms;
@@ -19,6 +21,27 @@ namespace R440O.R440OForms.VoltageStabilizer
         public VoltageStabilizerForm()
         {
             this.InitializeComponent();
+            VoltageStabilizerParameters.VoltageStabilizerКабельВход = "220";
+        }
+
+        private void VoltageStabilizerКабельВход1_Click(object sender, System.EventArgs e)
+        {
+            if (VoltageStabilizerParameters.VoltageStabilizerКабельВход == "380")
+            {
+                this.VoltageStabilizerКабельВход2.BackgroundImage = null;
+                this.VoltageStabilizerКабельВход1.BackgroundImage = ControlElementImages.voltageStabilizerInput;
+                VoltageStabilizerParameters.VoltageStabilizerКабельВход = "220";
+            }
+        }
+
+        private void VoltageStabilizerКабельВход2_Click(object sender, System.EventArgs e)
+        {
+            if (VoltageStabilizerParameters.VoltageStabilizerКабельВход == "220")
+            {
+                this.VoltageStabilizerКабельВход1.BackgroundImage = null;
+                this.VoltageStabilizerКабельВход2.BackgroundImage = ControlElementImages.voltageStabilizerInput;
+                VoltageStabilizerParameters.VoltageStabilizerКабельВход = "380";
+            }
         }
     }
 }

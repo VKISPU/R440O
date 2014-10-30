@@ -83,6 +83,16 @@ namespace R440O {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ButtonGreyUp {
+            get {
+                object obj = ResourceManager.GetObject("ButtonGreyUp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap buttonOffUpRed {
             get {
                 object obj = ResourceManager.GetObject("buttonOffUpRed", resourceCulture);
@@ -103,9 +113,29 @@ namespace R440O {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap buttonRoundSmall {
+            get {
+                object obj = ResourceManager.GetObject("buttonRoundSmall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap buttonRoundType1UpBlack {
             get {
                 object obj = ResourceManager.GetObject("buttonRoundType1UpBlack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buttonSmall {
+            get {
+                object obj = ResourceManager.GetObject("buttonSmall", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -516,6 +546,16 @@ namespace R440O {
         internal static System.Drawing.Bitmap tumblerVerticalType5Up {
             get {
                 object obj = ResourceManager.GetObject("tumblerVerticalType5Up", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap voltageStabilizerInput {
+            get {
+                object obj = ResourceManager.GetObject("voltageStabilizerInput", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

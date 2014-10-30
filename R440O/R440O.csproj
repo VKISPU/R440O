@@ -965,6 +965,27 @@
   <ItemGroup>
     <None Include="Resources\K03M_01_inside.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_round_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stabillizator_input.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonType2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerHorizontalType2DownRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonSquareType1UpDarkGrey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonGreyUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerHorizontalType2Left.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

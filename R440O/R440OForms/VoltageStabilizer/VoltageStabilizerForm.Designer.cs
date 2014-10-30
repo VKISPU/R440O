@@ -29,16 +29,52 @@
         private void InitializeComponent()
         {
             this.VoltageStabilizerPanel = new System.Windows.Forms.Panel();
+            this.VoltageStabilizerКабельВход1 = new System.Windows.Forms.Button();
+            this.VoltageStabilizerКабельВход2 = new System.Windows.Forms.Button();
+            this.VoltageStabilizerPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // VoltageStabilizerPanel
             // 
             this.VoltageStabilizerPanel.BackgroundImage = global::R440O.BackgroundImages.VoltageStabilizer;
             this.VoltageStabilizerPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.VoltageStabilizerPanel.Controls.Add(this.VoltageStabilizerКабельВход2);
+            this.VoltageStabilizerPanel.Controls.Add(this.VoltageStabilizerКабельВход1);
             this.VoltageStabilizerPanel.Location = new System.Drawing.Point(0, 0);
             this.VoltageStabilizerPanel.Name = "VoltageStabilizerPanel";
             this.VoltageStabilizerPanel.Size = new System.Drawing.Size(1092, 773);
             this.VoltageStabilizerPanel.TabIndex = 0;
+            // 
+            // VoltageStabilizerКабельВход1
+            // 
+            this.VoltageStabilizerКабельВход1.BackColor = System.Drawing.Color.Transparent;
+            this.VoltageStabilizerКабельВход1.BackgroundImage = global::R440O.ControlElementImages.voltageStabilizerInput;
+            this.VoltageStabilizerКабельВход1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.VoltageStabilizerКабельВход1.FlatAppearance.BorderSize = 0;
+            this.VoltageStabilizerКабельВход1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.VoltageStabilizerКабельВход1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.VoltageStabilizerКабельВход1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.VoltageStabilizerКабельВход1.Location = new System.Drawing.Point(-12, 306);
+            this.VoltageStabilizerКабельВход1.Name = "VoltageStabilizerКабельВход1";
+            this.VoltageStabilizerКабельВход1.Size = new System.Drawing.Size(107, 99);
+            this.VoltageStabilizerКабельВход1.TabIndex = 32;
+            this.VoltageStabilizerКабельВход1.UseVisualStyleBackColor = false;
+            this.VoltageStabilizerКабельВход1.Click += new System.EventHandler(this.VoltageStabilizerКабельВход1_Click);
+            // 
+            // VoltageStabilizerКабельВход2
+            // 
+            this.VoltageStabilizerКабельВход2.BackColor = System.Drawing.Color.Transparent;
+            this.VoltageStabilizerКабельВход2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.VoltageStabilizerКабельВход2.FlatAppearance.BorderSize = 0;
+            this.VoltageStabilizerКабельВход2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.VoltageStabilizerКабельВход2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.VoltageStabilizerКабельВход2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.VoltageStabilizerКабельВход2.Location = new System.Drawing.Point(-12, 410);
+            this.VoltageStabilizerКабельВход2.Name = "VoltageStabilizerКабельВход2";
+            this.VoltageStabilizerКабельВход2.Size = new System.Drawing.Size(107, 99);
+            this.VoltageStabilizerКабельВход2.TabIndex = 33;
+            this.VoltageStabilizerКабельВход2.UseVisualStyleBackColor = false;
+            this.VoltageStabilizerКабельВход2.Click += new System.EventHandler(this.VoltageStabilizerКабельВход2_Click);
             // 
             // VoltageStabilizerForm
             // 
@@ -51,6 +87,7 @@
             this.Name = "VoltageStabilizerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "СТАБИЛИЗАТОР НАПРЯЖЕНИЯ";
+            this.VoltageStabilizerPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -58,5 +95,7 @@
         #endregion
 
         private System.Windows.Forms.Panel VoltageStabilizerPanel;
+        private System.Windows.Forms.Button VoltageStabilizerКабельВход2;
+        private System.Windows.Forms.Button VoltageStabilizerКабельВход1;
     }
 }
