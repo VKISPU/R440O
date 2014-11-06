@@ -4,6 +4,8 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+using R440O.Parameters;
+
 namespace R440O.R440OForms.P220_27G_3
 {
     using System.Windows.Forms;
@@ -19,6 +21,34 @@ namespace R440O.R440OForms.P220_27G_3
         public P220_27G_3Form()
         {
             this.InitializeComponent();
+        }
+
+        private void P220_27G_3ТумблерСеть_Click(object sender, System.EventArgs e)
+        {
+            if (P220_27G_3Parameters.P220_27G_3ТумблерСеть == "сеть")
+            {
+                this.P220_27G_3ТумблерСеть.BackgroundImage = ControlElementImages.tumblerVerticalType3Down;
+                P220_27G_3Parameters.P220_27G_3ТумблерСеть = "откл";
+            }
+            else
+            {
+                this.P220_27G_3ТумблерСеть.BackgroundImage = ControlElementImages.tumblerVerticalType3Up;
+                P220_27G_3Parameters.P220_27G_3ТумблерСеть = "сеть";
+            }
+        }
+
+        private void P220_27G_3ТумблерМуДу_Click(object sender, System.EventArgs e)
+        {
+            if (P220_27G_3Parameters.P220_27G_3ТумблерМуДу == "Му")
+            {
+                this.P220_27G_3ТумблерМуДу.BackgroundImage = ControlElementImages.tumblerVerticalType1Down;
+                P220_27G_3Parameters.P220_27G_3ТумблерМуДу = "Ду";
+            }
+            else
+            {
+                this.P220_27G_3ТумблерМуДу.BackgroundImage = ControlElementImages.tumblerVerticalType1Up;
+                P220_27G_3Parameters.P220_27G_3ТумблерМуДу = "Му";
+            }
         }
     }
 }

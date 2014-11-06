@@ -21,7 +21,7 @@ namespace R440O.Parameters
         public static string A403_1ТумблерГруппа { get; set; }
         public static string A403_1ТумблерКомплект { get; set; }
         public static string A403_1ТумблерАвтКоррекция { get; set; }
-        
+
         //Переключатели
         public static string A403_1ПереключательПроверка { get; set; }
         public static string A403_1ПереключательРежимРаботы { get; set; }
@@ -42,5 +42,16 @@ namespace R440O.Parameters
         public static string A403_1КнопкаМинус { get; set; }
         public static string A403_1КнопкаСброс { get; set; }
 
+        public static string A403_1КнопкаАlpha_Lambda { get; set; }
+        public static string A403_1КнопкаEpsilon_Phi { get; set; }
+        public static string A403_1КнопкаI_H { get; set; }
+        public static string A403_1КнопкаOmega_N { get; set; }
+        public static string A403_1КнопкаLambda0_f { get; set; }
+        public static string A403_1Кнопкаt0_K { get; set; }
+        public static string A403_1КнопкаT_Kbeta { get; set; }
+        public static string A403_1Кнопкаtсв_Yalpha { get; set; }
+        public static string A403_1Кнопкаtуст_Ybeta { get; set; }
+
+        //Индикаторы
     }
 }

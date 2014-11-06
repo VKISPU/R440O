@@ -63,16 +63,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ControlElementImages.resx</DependentUpon>
     </Compile>
+    <Compile Include="Parameters\A403_1Parameters.cs" />
+    <Compile Include="Parameters\N18_MParameters.cs" />
     <Compile Include="Parameters\A205M_1Parameters.cs" />
     <Compile Include="Parameters\A205M_2Parameters.cs" />
     <Compile Include="Parameters\A304Parameters.cs" />
     <Compile Include="Parameters\A306Parameters.cs" />
-    <Compile Include="Parameters\A403_1Parameters.cs" />
     <Compile Include="Parameters\A403_3Parameters.cs" />
     <Compile Include="Parameters\AstraParameters.cs" />
     <Compile Include="Parameters\N15Parameters.cs" />
     <Compile Include="Parameters\A1Parameters.cs" />
     <Compile Include="Parameters\N502BParameters.cs" />
+    <Compile Include="Parameters\P220_27G_2Parameters.cs" />
+    <Compile Include="Parameters\P220_27G_3Parameters.cs" />
     <Compile Include="Parameters\VoltageStabilizerParameters.cs" />
     <Compile Include="R440OForms\A1\A1Form.cs">
       <SubType>Form</SubType>
@@ -867,9 +870,6 @@
     <None Include="Resources\buttonSquareType1UpGreen.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\buttonSquareType1UpWhite.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\buttonSquareType1UpYellow.png" />
   </ItemGroup>
   <ItemGroup>
@@ -985,6 +985,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tumblerHorizontalType2Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerHorizontalType2Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerHorizontalType3Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerHorizontalType3Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerHorizontalType4Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerHorizontalType4Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerHorizontalType5Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerHorizontalType5Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonSquareType1_1UpWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonSquareType1UpWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonBlueUp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

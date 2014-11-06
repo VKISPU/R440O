@@ -4,6 +4,7 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+using System;
 using R440O.Parameters;
 
 namespace R440O.R440OForms.N502B
@@ -33,7 +34,7 @@ namespace R440O.R440OForms.N502B
             if (N502BParameters.N502BТумблерЭлектрооборуд == "true")
             {
                 this.N502BТумблерЭлектрооборуд.BackgroundImage = ControlElementImages.tumblerVerticalType2Down;
-                N502BParameters.N502BТумблерЭлектрооборуд = "false";
+                N502BParameters.N502BТумблерЭлектрооборуд = "false"; 
             }
             else
             {

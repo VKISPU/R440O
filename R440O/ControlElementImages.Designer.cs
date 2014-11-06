@@ -83,6 +83,16 @@ namespace R440O {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ButtonBlueUp {
+            get {
+                object obj = ResourceManager.GetObject("ButtonBlueUp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ButtonGreyUp {
             get {
                 object obj = ResourceManager.GetObject("ButtonGreyUp", resourceCulture);
@@ -376,6 +386,86 @@ namespace R440O {
         internal static System.Drawing.Bitmap tumblerHorizontalType1Right {
             get {
                 object obj = ResourceManager.GetObject("tumblerHorizontalType1Right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tumblerHorizontalType2Left {
+            get {
+                object obj = ResourceManager.GetObject("tumblerHorizontalType2Left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tumblerHorizontalType2Right {
+            get {
+                object obj = ResourceManager.GetObject("tumblerHorizontalType2Right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tumblerHorizontalType3Left {
+            get {
+                object obj = ResourceManager.GetObject("tumblerHorizontalType3Left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tumblerHorizontalType3Right {
+            get {
+                object obj = ResourceManager.GetObject("tumblerHorizontalType3Right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tumblerHorizontalType4Left {
+            get {
+                object obj = ResourceManager.GetObject("tumblerHorizontalType4Left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tumblerHorizontalType4Right {
+            get {
+                object obj = ResourceManager.GetObject("tumblerHorizontalType4Right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tumblerHorizontalType5Left {
+            get {
+                object obj = ResourceManager.GetObject("tumblerHorizontalType5Left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tumblerHorizontalType5Right {
+            get {
+                object obj = ResourceManager.GetObject("tumblerHorizontalType5Right", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

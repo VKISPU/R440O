@@ -9,6 +9,7 @@ using R440O.Parameters;
 namespace R440O.R440OForms.VoltageStabilizer
 {
     using System.Windows.Forms;
+    using System.Drawing;
 
     /// <summary>
     /// Форма блока стабилизатор напряжения
@@ -23,6 +24,8 @@ namespace R440O.R440OForms.VoltageStabilizer
             this.InitializeComponent();
             VoltageStabilizerParameters.VoltageStabilizerКабельВход = "220";
         }
+
+        public float angle = 15;
 
         private void VoltageStabilizerКабельВход1_Click(object sender, System.EventArgs e)
         {
@@ -42,6 +45,21 @@ namespace R440O.R440OForms.VoltageStabilizer
                 this.VoltageStabilizerКабельВход2.BackgroundImage = ControlElementImages.voltageStabilizerInput;
                 VoltageStabilizerParameters.VoltageStabilizerКабельВход = "380";
             }
+        }
+
+        private void VoltageStabilizerПереключательКонтрольНапр_Paint(object sender, PaintEventArgs e)
+        {
+            Image im = ControlElementImages.toggleType3;
+            e.Graphics.TranslateTransform(im.Width / 2, VoltageStabilizerПереключательКонтрольНапр.Height / 2);
+            e.Graphics.RotateTransform(angle);
+            e.Graphics.DrawImage(im, -im.Width / 2, -im.Height / 2);
+            e.Graphics.RotateTransform(-angle);
+        }
+
+        private void VoltageStabilizerПереключательКонтрольНапр_Click(object sender, System.EventArgs e)
+        {
+            angle += 30f;
+            VoltageStabilizerПереключательКонтрольНапр.Invalidate();
         }
     }
 }
