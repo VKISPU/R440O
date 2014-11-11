@@ -466,6 +466,7 @@
       <DependentUpon>C300PM_1Form.cs</DependentUpon>
     </Compile>
     <Compile Include="ThirdParty\EasyTimer.cs" />
+    <Compile Include="ThirdParty\TransformImageHelper.cs" />
     <EmbeddedResource Include="BackgroundImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>

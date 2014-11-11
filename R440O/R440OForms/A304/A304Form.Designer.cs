@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.A304Panel = new System.Windows.Forms.Panel();
+            this.A304ПереключательВыборСтвола = new System.Windows.Forms.Button();
+            this.A304ПереключательКонтрольButton = new System.Windows.Forms.Button();
+            this.A304Лампочка2К = new System.Windows.Forms.PictureBox();
+            this.A304Лампочка1К = new System.Windows.Forms.PictureBox();
             this.A304Тумблер1К2К = new System.Windows.Forms.Button();
             this.A304Кнопка1КОткл = new System.Windows.Forms.Button();
             this.A304Кнопка1КВкл = new System.Windows.Forms.Button();
@@ -37,12 +41,18 @@
             this.A304ТумблерМестноеДистанц_2 = new System.Windows.Forms.Button();
             this.A304ТумблерМестноеДистанц_1 = new System.Windows.Forms.Button();
             this.A304Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.A304Лампочка2К)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A304Лампочка1К)).BeginInit();
             this.SuspendLayout();
             // 
             // A304Panel
             // 
             this.A304Panel.BackgroundImage = global::R440O.BackgroundImages.A304;
             this.A304Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A304Panel.Controls.Add(this.A304ПереключательВыборСтвола);
+            this.A304Panel.Controls.Add(this.A304ПереключательКонтрольButton);
+            this.A304Panel.Controls.Add(this.A304Лампочка2К);
+            this.A304Panel.Controls.Add(this.A304Лампочка1К);
             this.A304Panel.Controls.Add(this.A304Тумблер1К2К);
             this.A304Panel.Controls.Add(this.A304Кнопка1КОткл);
             this.A304Panel.Controls.Add(this.A304Кнопка1КВкл);
@@ -54,6 +64,58 @@
             this.A304Panel.Name = "A304Panel";
             this.A304Panel.Size = new System.Drawing.Size(906, 626);
             this.A304Panel.TabIndex = 0;
+            // 
+            // A304ПереключательВыборСтвола
+            // 
+            this.A304ПереключательВыборСтвола.BackColor = System.Drawing.Color.Transparent;
+            this.A304ПереключательВыборСтвола.BackgroundImage = global::R440O.ControlElementImages.toggleType3;
+            this.A304ПереключательВыборСтвола.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A304ПереключательВыборСтвола.FlatAppearance.BorderSize = 0;
+            this.A304ПереключательВыборСтвола.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.A304ПереключательВыборСтвола.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.A304ПереключательВыборСтвола.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.A304ПереключательВыборСтвола.Location = new System.Drawing.Point(249, 136);
+            this.A304ПереключательВыборСтвола.Name = "A304ПереключательВыборСтвола";
+            this.A304ПереключательВыборСтвола.Size = new System.Drawing.Size(109, 102);
+            this.A304ПереключательВыборСтвола.TabIndex = 32;
+            this.A304ПереключательВыборСтвола.UseVisualStyleBackColor = false;
+            this.A304ПереключательВыборСтвола.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A304ПереключательВыборСтвола_MouseUp);
+            // 
+            // A304ПереключательКонтрольButton
+            // 
+            this.A304ПереключательКонтрольButton.BackColor = System.Drawing.Color.Transparent;
+            this.A304ПереключательКонтрольButton.BackgroundImage = global::R440O.ControlElementImages.toggleType3;
+            this.A304ПереключательКонтрольButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A304ПереключательКонтрольButton.FlatAppearance.BorderSize = 0;
+            this.A304ПереключательКонтрольButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.A304ПереключательКонтрольButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.A304ПереключательКонтрольButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.A304ПереключательКонтрольButton.Location = new System.Drawing.Point(588, 358);
+            this.A304ПереключательКонтрольButton.Name = "A304ПереключательКонтрольButton";
+            this.A304ПереключательКонтрольButton.Size = new System.Drawing.Size(95, 92);
+            this.A304ПереключательКонтрольButton.TabIndex = 31;
+            this.A304ПереключательКонтрольButton.UseVisualStyleBackColor = false;
+            this.A304ПереключательКонтрольButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A304ПереключательКонтрольButton_MouseUp);
+            // 
+            // A304Лампочка2К
+            // 
+            this.A304Лампочка2К.BackColor = System.Drawing.Color.Transparent;
+            this.A304Лампочка2К.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A304Лампочка2К.Location = new System.Drawing.Point(332, 260);
+            this.A304Лампочка2К.Name = "A304Лампочка2К";
+            this.A304Лампочка2К.Size = new System.Drawing.Size(53, 49);
+            this.A304Лампочка2К.TabIndex = 30;
+            this.A304Лампочка2К.TabStop = false;
+            // 
+            // A304Лампочка1К
+            // 
+            this.A304Лампочка1К.BackColor = System.Drawing.Color.Transparent;
+            this.A304Лампочка1К.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A304Лампочка1К.Location = new System.Drawing.Point(207, 260);
+            this.A304Лампочка1К.Name = "A304Лампочка1К";
+            this.A304Лампочка1К.Size = new System.Drawing.Size(55, 49);
+            this.A304Лампочка1К.TabIndex = 29;
+            this.A304Лампочка1К.TabStop = false;
             // 
             // A304Тумблер1К2К
             // 
@@ -195,6 +257,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "A304";
             this.A304Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.A304Лампочка2К)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A304Лампочка1К)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -209,5 +273,9 @@
         private System.Windows.Forms.Button A304Кнопка1КВкл;
         private System.Windows.Forms.Button A304Кнопка1КОткл;
         private System.Windows.Forms.Button A304Тумблер1К2К;
+        private System.Windows.Forms.PictureBox A304Лампочка1К;
+        private System.Windows.Forms.PictureBox A304Лампочка2К;
+        private System.Windows.Forms.Button A304ПереключательКонтрольButton;
+        private System.Windows.Forms.Button A304ПереключательВыборСтвола;
     }
 }

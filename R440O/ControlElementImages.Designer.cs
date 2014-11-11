@@ -203,9 +203,9 @@ namespace R440O {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap lampType10OnRed {
+        internal static System.Drawing.Bitmap lampType10OnGreen {
             get {
-                object obj = ResourceManager.GetObject("lampType10OnRed", resourceCulture);
+                object obj = ResourceManager.GetObject("lampType10OnGreen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
