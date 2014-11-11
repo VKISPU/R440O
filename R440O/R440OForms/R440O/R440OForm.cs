@@ -63,18 +63,6 @@ namespace R440O.R440OForms.R440O
 
         private void R440OForm_Load(object sender, EventArgs e)
         {
-            // N15
-            var fieldList = typeof(N15Parameters).GetProperties().Where(property => property.Name.Contains("Кнопка"));
-            foreach (var str in fieldList)
-            {
-                str.SetValue(str, "false");
-            }
-            fieldList = typeof(N15Parameters).GetProperties().Where(property => property.Name.Contains("Тумблер"));
-            foreach (var str in fieldList)
-            {
-                str.SetValue(str, "false");
-            }
-
         }
     }
 }

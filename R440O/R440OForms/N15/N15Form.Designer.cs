@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.N15Panel = new System.Windows.Forms.Panel();
+            this.Н15ТумблерА20512 = new System.Windows.Forms.Button();
             this.Н15ТумблерР_Н = new System.Windows.Forms.Button();
             this.Н15ТумблерДАБ_5 = new System.Windows.Forms.Button();
             this.Н15ТумблерБ3_2 = new System.Windows.Forms.Button();
@@ -64,6 +65,7 @@
             this.Н15КнопкаПРМНаведениеЦ300М1 = new System.Windows.Forms.Button();
             this.Н15КнопкаСтанцияВыкл = new System.Windows.Forms.Button();
             this.Н15КнопкаСтанцияВкл = new System.Windows.Forms.Button();
+            this.Н15ТумблерА30412 = new System.Windows.Forms.Button();
             this.N15Panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +73,8 @@
             // 
             this.N15Panel.BackgroundImage = global::R440O.BackgroundImages.N15;
             this.N15Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.N15Panel.Controls.Add(this.Н15ТумблерА30412);
+            this.N15Panel.Controls.Add(this.Н15ТумблерА20512);
             this.N15Panel.Controls.Add(this.Н15ТумблерР_Н);
             this.N15Panel.Controls.Add(this.Н15ТумблерДАБ_5);
             this.N15Panel.Controls.Add(this.Н15ТумблерБ3_2);
@@ -110,6 +114,22 @@
             this.N15Panel.Name = "N15Panel";
             this.N15Panel.Size = new System.Drawing.Size(1042, 503);
             this.N15Panel.TabIndex = 2;
+            // 
+            // Н15ТумблерА20512
+            // 
+            this.Н15ТумблерА20512.BackColor = System.Drawing.Color.Transparent;
+            this.Н15ТумблерА20512.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType1Down;
+            this.Н15ТумблерА20512.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Н15ТумблерА20512.FlatAppearance.BorderSize = 0;
+            this.Н15ТумблерА20512.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Н15ТумблерА20512.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Н15ТумблерА20512.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Н15ТумблерА20512.Location = new System.Drawing.Point(407, 313);
+            this.Н15ТумблерА20512.Name = "Н15ТумблерА20512";
+            this.Н15ТумблерА20512.Size = new System.Drawing.Size(34, 51);
+            this.Н15ТумблерА20512.TabIndex = 35;
+            this.Н15ТумблерА20512.UseVisualStyleBackColor = false;
+            this.Н15ТумблерА20512.Click += new System.EventHandler(this.Н15ТумблерА20512_Click);
             // 
             // Н15ТумблерР_Н
             // 
@@ -698,6 +718,22 @@
             this.Н15КнопкаСтанцияВкл.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Н15КнопкаСтанцияВкл_MouseDown);
             this.Н15КнопкаСтанцияВкл.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Н15КнопкаСтанцияВкл_MouseUp);
             // 
+            // Н15ТумблерА30412
+            // 
+            this.Н15ТумблерА30412.BackColor = System.Drawing.Color.Transparent;
+            this.Н15ТумблерА30412.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType5Down;
+            this.Н15ТумблерА30412.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Н15ТумблерА30412.FlatAppearance.BorderSize = 0;
+            this.Н15ТумблерА30412.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Н15ТумблерА30412.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Н15ТумблерА30412.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Н15ТумблерА30412.Location = new System.Drawing.Point(452, 355);
+            this.Н15ТумблерА30412.Name = "Н15ТумблерА30412";
+            this.Н15ТумблерА30412.Size = new System.Drawing.Size(24, 29);
+            this.Н15ТумблерА30412.TabIndex = 36;
+            this.Н15ТумблерА30412.UseVisualStyleBackColor = false;
+            this.Н15ТумблерА30412.Click += new System.EventHandler(this.Н15ТумблерА30412_Click);
+            // 
             // N15Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -753,5 +789,7 @@
         private System.Windows.Forms.Button Н15ТумблерБ3_2;
         private System.Windows.Forms.Button Н15ТумблерДАБ_5;
         private System.Windows.Forms.Button Н15ТумблерР_Н;
+        private System.Windows.Forms.Button Н15ТумблерА20512;
+        private System.Windows.Forms.Button Н15ТумблерА30412;
     }
 }

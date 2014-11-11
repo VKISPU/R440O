@@ -15,11 +15,34 @@ namespace R440O.R440OForms.N15
     /// </summary>
     public partial class N15Form : Form
     {
+        //Тумблеры
+        private static string локН15ТумблерЦ300М1 { get; set; }
+        private static string локН15ТумблерЦ300М2 { get; set; }
+        private static string локН15ТумблерЦ300М3 { get; set; }
+        private static string локН15ТумблерЦ300М4 { get; set; }
+        private static string локН15ТумблерН12С { get; set; }
+        private static string локН15ТумблерМШУ { get; set; }
+        private static string локН15ТумблерБМА_1 { get; set; }
+        private static string локН15ТумблерБМА_2 { get; set; }
+        private static string локН15ТумблерА205 { get; set; }
+        private static string локН15ТумблерАФСС { get; set; }
+        private static string локН15ТумблерА1 { get; set; }
+        private static string локН15ТумблерА403 { get; set; }
+        private static string локН15ТумблерК1_1 { get; set; }
+        private static string локН15ТумблерК1_2 { get; set; }
+        private static string локН15ТумблерБ1_1 { get; set; }
+        private static string локН15ТумблерБ1_2 { get; set; }
+        private static string локН15ТумблерБ2_1 { get; set; }
+        private static string локН15ТумблерБ2_2 { get; set; }
+        private static string локН15ТумблерБ3_1 { get; set; }
+        private static string локН15ТумблерБ3_2 { get; set; }
+        private static string локН15ТумблерДАБ_5 { get; set; }
+        private static string локН15ТумблерР_Н { get; set; }
+
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="N15Form"/>
         /// </summary>
 
-        #region Кнопки
         public N15Form()
         {
             this.InitializeComponent();
@@ -33,9 +56,31 @@ namespace R440O.R440OForms.N15
         private void Н15КнопкаСтанцияВкл_MouseUp(object sender, MouseEventArgs e)
         {
             this.Н15КнопкаСтанцияВкл.BackgroundImage = ControlElementImages.buttonOnUpBlack;
-            N15Parameters.Н15КнопкаСтанцияВкл = "true";
+            N15Parameters.Н15ТумблерЦ300М1 = локН15ТумблерЦ300М1;
+            N15Parameters.Н15ТумблерЦ300М2 = локН15ТумблерЦ300М2;
+            N15Parameters.Н15ТумблерЦ300М3 = локН15ТумблерЦ300М3;
+            N15Parameters.Н15ТумблерЦ300М4 = локН15ТумблерЦ300М4;
+            N15Parameters.Н15ТумблерН12С = локН15ТумблерН12С;
+            N15Parameters.Н15ТумблерМШУ = локН15ТумблерМШУ;
+            N15Parameters.Н15ТумблерБМА_1 = локН15ТумблерБМА_1;
+            N15Parameters.Н15ТумблерБМА_2 = локН15ТумблерБМА_2;
+            N15Parameters.Н15ТумблерА205 = локН15ТумблерА205;
+            N15Parameters.Н15ТумблерАФСС = локН15ТумблерАФСС;
+            N15Parameters.Н15ТумблерА1 = локН15ТумблерА1;
+            N15Parameters.Н15ТумблерА403 = локН15ТумблерА403;
+            N15Parameters.Н15ТумблерК1_1 = локН15ТумблерК1_1;
+            N15Parameters.Н15ТумблерК1_2 = локН15ТумблерК1_2;
+            N15Parameters.Н15ТумблерБ1_1 = локН15ТумблерБ1_1;
+            N15Parameters.Н15ТумблерБ1_2 = локН15ТумблерБ1_2;
+            N15Parameters.Н15ТумблерБ2_1 = локН15ТумблерБ2_1;
+            N15Parameters.Н15ТумблерБ2_2 = локН15ТумблерБ2_2;
+            N15Parameters.Н15ТумблерБ3_1 = локН15ТумблерБ3_1;
+            N15Parameters.Н15ТумблерБ3_2 = локН15ТумблерБ3_2;
+            N15Parameters.Н15ТумблерДАБ_5 = локН15ТумблерДАБ_5;
+            N15Parameters.Н15ТумблерР_Н = локН15ТумблерР_Н;
         }
 
+        #region Кнопка Выкл
         private void Н15КнопкаСтанцияВыкл_MouseDown(object sender, MouseEventArgs e)
         {
             this.Н15КнопкаСтанцияВыкл.BackgroundImage = null;
@@ -46,7 +91,9 @@ namespace R440O.R440OForms.N15
             this.Н15КнопкаСтанцияВыкл.BackgroundImage = ControlElementImages.buttonOffUpRed;
             N15Parameters.Н15КнопкаСтанцияВыкл = "true";
         }
+        #endregion
 
+        #region Кнопки ПРМ НАВЕДЕНИЕ/Ц300М 1 2 3 4 и МОЩНОСТЬ Н16 АНТ Сброс
         private void Н15КнопкаПРМНаведениеЦ300М1_Click(object sender, EventArgs e)
         {
             this.Н15КнопкаПРМНаведениеЦ300М1.Visible = false;
@@ -62,7 +109,6 @@ namespace R440O.R440OForms.N15
             N15Parameters.Н15КнопкаМощностьН16 = "false";
             this.Н15КнопкаМощностьАнт.Visible = true;
             N15Parameters.Н15КнопкаМощностьАнт = "false";
-            N15Parameters.Н15КнопкаМощностьСброс = "false";
         }
 
         private void Н15КнопкаПРМНаведениеЦ300М2_Click(object sender, EventArgs e)
@@ -80,7 +126,6 @@ namespace R440O.R440OForms.N15
             N15Parameters.Н15КнопкаМощностьН16 = "false";
             this.Н15КнопкаМощностьАнт.Visible = true;
             N15Parameters.Н15КнопкаМощностьАнт = "false";
-            N15Parameters.Н15КнопкаМощностьСброс = "false";
         }
 
         private void Н15КнопкаПРМНаведениеЦ300М3_Click(object sender, EventArgs e)
@@ -98,7 +143,6 @@ namespace R440O.R440OForms.N15
             N15Parameters.Н15КнопкаМощностьН16 = "false";
             this.Н15КнопкаМощностьАнт.Visible = true;
             N15Parameters.Н15КнопкаМощностьАнт = "false";
-            N15Parameters.Н15КнопкаМощностьСброс = "false";
         }
 
         private void Н15КнопкаПРМНаведениеЦ300М4_Click(object sender, EventArgs e)
@@ -116,7 +160,6 @@ namespace R440O.R440OForms.N15
             N15Parameters.Н15КнопкаМощностьН16 = "false";
             this.Н15КнопкаМощностьАнт.Visible = true;
             N15Parameters.Н15КнопкаМощностьАнт = "false";
-            N15Parameters.Н15КнопкаМощностьСброс = "false";
         }
 
         private void Н15КнопкаМощностьН16_Click(object sender, EventArgs e)
@@ -134,7 +177,6 @@ namespace R440O.R440OForms.N15
             N15Parameters.Н15КнопкаПРМНаведениеЦ300М4 = "false";
             this.Н15КнопкаМощностьАнт.Visible = true;
             N15Parameters.Н15КнопкаМощностьАнт = "false";
-            N15Parameters.Н15КнопкаМощностьСброс = "false";
         }
 
         private void Н15КнопкаМощностьАнт_Click(object sender, EventArgs e)
@@ -152,14 +194,18 @@ namespace R440O.R440OForms.N15
             N15Parameters.Н15КнопкаПРМНаведениеЦ300М4 = "false";
             this.Н15КнопкаМощностьН16.Visible = true;
             N15Parameters.Н15КнопкаМощностьН16 = "false";
-            N15Parameters.Н15КнопкаМощностьСброс = "false";
+        }
+
+        private void Н15КнопкаМощностьСброс_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.Н15КнопкаМощностьСброс.BackgroundImage = null;
+            this.Н15КнопкаМощностьСброс.Text = "";
         }
 
         private void Н15КнопкаМощностьСброс_MouseUp(object sender, MouseEventArgs e)
         {
             this.Н15КнопкаМощностьСброс.BackgroundImage = ControlElementImages.buttonSquareType1UpWhite;
             this.Н15КнопкаМощностьСброс.Text = "СБРОС";
-            N15Parameters.Н15КнопкаМощностьСброс = "true";
 
             this.Н15КнопкаПРМНаведениеЦ300М1.Visible = true;
             N15Parameters.Н15КнопкаПРМНаведениеЦ300М1 = "false";
@@ -174,13 +220,9 @@ namespace R440O.R440OForms.N15
             this.Н15КнопкаМощностьАнт.Visible = true;
             N15Parameters.Н15КнопкаМощностьАнт = "false";
         }
+        #endregion
 
-        private void Н15КнопкаМощностьСброс_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.Н15КнопкаМощностьСброс.BackgroundImage = null;
-            this.Н15КнопкаМощностьСброс.Text = "";
-        }
-        
+        #region Кнопки Н13-1 Н13-2 Н13-1,2 СБРОС
         private void Н15КнопкаН13_1_Click(object sender, EventArgs e)
         {
             this.Н15КнопкаН13_1.Visible = false;
@@ -190,7 +232,6 @@ namespace R440O.R440OForms.N15
             N15Parameters.Н15КнопкаН13_2 = "false";
             this.Н15КнопкаН13_12.Visible = true;
             N15Parameters.Н15КнопкаН13_12 = "false";
-            N15Parameters.Н15КнопкаСброс = "false";
         }
 
         private void Н15КнопкаН13_2_Click(object sender, EventArgs e)
@@ -202,7 +243,6 @@ namespace R440O.R440OForms.N15
             N15Parameters.Н15КнопкаН13_1 = "false";
             this.Н15КнопкаН13_12.Visible = true;
             N15Parameters.Н15КнопкаН13_12 = "false";
-            N15Parameters.Н15КнопкаСброс = "false";
         }
 
         private void Н15КнопкаН13_12_Click(object sender, EventArgs e)
@@ -214,14 +254,12 @@ namespace R440O.R440OForms.N15
             N15Parameters.Н15КнопкаН13_1 = "false";
             this.Н15КнопкаН13_2.Visible = true;
             N15Parameters.Н15КнопкаН13_2 = "false";
-            N15Parameters.Н15КнопкаСброс = "false";
         }
 
         private void Н15КнопкаСброс_MouseUp(object sender, MouseEventArgs e)
-        {            
+        {
             this.Н15КнопкаСброс.BackgroundImage = ControlElementImages.buttonSquareType1UpWhite;
             this.Н15КнопкаСброс.Text = "СБРОС";
-            N15Parameters.Н15КнопкаСброс = "true";
 
             this.Н15КнопкаН13_1.Visible = true;
             N15Parameters.Н15КнопкаН13_1 = "false";
@@ -240,314 +278,363 @@ namespace R440O.R440OForms.N15
 
         private void N15Form_Load(object sender, EventArgs e)
         {
-
+            локН15ТумблерЦ300М1 = N15Parameters.Н15ТумблерЦ300М1;
+            локН15ТумблерЦ300М2 = N15Parameters.Н15ТумблерЦ300М2;
+            локН15ТумблерЦ300М3 = N15Parameters.Н15ТумблерЦ300М3;
+            локН15ТумблерЦ300М4 = N15Parameters.Н15ТумблерЦ300М4;
+            локН15ТумблерН12С = N15Parameters.Н15ТумблерН12С;
+            локН15ТумблерМШУ = N15Parameters.Н15ТумблерМШУ;
+            локН15ТумблерБМА_1 = N15Parameters.Н15ТумблерБМА_1;
+            локН15ТумблерБМА_2 = N15Parameters.Н15ТумблерБМА_2;
+            локН15ТумблерА205 = N15Parameters.Н15ТумблерА205;
+            локН15ТумблерАФСС = N15Parameters.Н15ТумблерАФСС;
+            локН15ТумблерА1 = N15Parameters.Н15ТумблерА1;
+            локН15ТумблерА403 = N15Parameters.Н15ТумблерА403;
+            локН15ТумблерК1_1 = N15Parameters.Н15ТумблерК1_1;
+            локН15ТумблерК1_2 = N15Parameters.Н15ТумблерК1_2;
+            локН15ТумблерБ1_1 = N15Parameters.Н15ТумблерБ1_1;
+            локН15ТумблерБ1_2 = N15Parameters.Н15ТумблерБ1_2;
+            локН15ТумблерБ2_1 = N15Parameters.Н15ТумблерБ2_1;
+            локН15ТумблерБ2_2 = N15Parameters.Н15ТумблерБ2_2;
+            локН15ТумблерБ3_1 = N15Parameters.Н15ТумблерБ3_1;
+            локН15ТумблерБ3_2 = N15Parameters.Н15ТумблерБ3_2;
+            локН15ТумблерДАБ_5 = N15Parameters.Н15ТумблерДАБ_5;
+            локН15ТумблерР_Н = N15Parameters.Н15ТумблерР_Н;
         }
 
         private void Н15ТумблерЦ300М1_Click(object sender, EventArgs e)
         {
-            if (N15Parameters.Н15ТумблерЦ300М1 == "true")
+            if (локН15ТумблерЦ300М1 == "true")
             {
                 this.Н15ТумблерЦ300М1.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
-                N15Parameters.Н15ТумблерЦ300М1 = "false";
+                локН15ТумблерЦ300М1 = "false";
             }
             else
             {
                 this.Н15ТумблерЦ300М1.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
-                N15Parameters.Н15ТумблерЦ300М1 = "true";
+                локН15ТумблерЦ300М1 = "true";
             }
         }
 
         private void Н15ТумблерЦ300М2_Click(object sender, EventArgs e)
         {
-            if (N15Parameters.Н15ТумблерЦ300М2 == "true")
+            if (локН15ТумблерЦ300М2 == "true")
             {
                 this.Н15ТумблерЦ300М2.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
-                N15Parameters.Н15ТумблерЦ300М2 = "false";
+                локН15ТумблерЦ300М2 = "false";
             }
             else
             {
                 this.Н15ТумблерЦ300М2.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
-                N15Parameters.Н15ТумблерЦ300М2 = "true";
+                локН15ТумблерЦ300М2 = "true";
             }
         }
 
         private void Н15ТумблерЦ300М3_Click(object sender, EventArgs e)
         {
-            if (N15Parameters.Н15ТумблерЦ300М3 == "true")
+            if (локН15ТумблерЦ300М3 == "true")
             {
                 this.Н15ТумблерЦ300М3.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
-                N15Parameters.Н15ТумблерЦ300М3 = "false";
+                локН15ТумблерЦ300М3 = "false";
             }
             else
             {
                 this.Н15ТумблерЦ300М3.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
-                N15Parameters.Н15ТумблерЦ300М3 = "true";
+                локН15ТумблерЦ300М3 = "true";
             }
         }
 
         private void Н15ТумблерЦ300М4_Click(object sender, EventArgs e)
         {
-            if (N15Parameters.Н15ТумблерЦ300М4 == "true")
+            if (локН15ТумблерЦ300М4 == "true")
             {
                 this.Н15ТумблерЦ300М4.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
-                N15Parameters.Н15ТумблерЦ300М4 = "false";
+                локН15ТумблерЦ300М4 = "false";
             }
             else
             {
                 this.Н15ТумблерЦ300М4.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
-                N15Parameters.Н15ТумблерЦ300М4 = "true";
+                локН15ТумблерЦ300М4 = "true";
             }
         }
 
         private void Н15ТумблерН12С_Click(object sender, EventArgs e)
         {
-            if (N15Parameters.Н15ТумблерН12С == "true")
+            if (локН15ТумблерН12С == "true")
             {
                 this.Н15ТумблерН12С.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
-                N15Parameters.Н15ТумблерН12С = "false";
+                локН15ТумблерН12С = "false";
             }
             else
             {
                 this.Н15ТумблерН12С.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
-                N15Parameters.Н15ТумблерН12С = "true";
+                локН15ТумблерН12С = "true";
             }
         }
 
         private void Н15ТумблерМШУ_Click(object sender, EventArgs e)
         {
-            if (N15Parameters.Н15ТумблерМШУ == "true")
+            if (локН15ТумблерМШУ == "true")
             {
                 this.Н15ТумблерМШУ.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
-                N15Parameters.Н15ТумблерМШУ = "false";
+                локН15ТумблерМШУ = "false";
             }
             else
             {
                 this.Н15ТумблерМШУ.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
-                N15Parameters.Н15ТумблерМШУ = "true";
+                локН15ТумблерМШУ = "true";
             }
         }
 
         private void Н15ТумблерБМА_1_Click(object sender, EventArgs e)
         {
-            if (N15Parameters.Н15ТумблерБМА_1 == "true")
+            if (локН15ТумблерБМА_1 == "true")
             {
                 this.Н15ТумблерБМА_1.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
-                N15Parameters.Н15ТумблерБМА_1 = "false";
+                локН15ТумблерБМА_1 = "false";
             }
             else
             {
                 this.Н15ТумблерБМА_1.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
-                N15Parameters.Н15ТумблерБМА_1 = "true";
+                локН15ТумблерБМА_1 = "true";
             }
         }
 
         private void Н15ТумблерБМА_2_Click(object sender, EventArgs e)
         {
-            if (N15Parameters.Н15ТумблерБМА_2 == "true")
+            if (локН15ТумблерБМА_2 == "true")
             {
                 this.Н15ТумблерБМА_2.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
-                N15Parameters.Н15ТумблерБМА_2 = "false";
+                локН15ТумблерБМА_2 = "false";
             }
             else
             {
                 this.Н15ТумблерБМА_2.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
-                N15Parameters.Н15ТумблерБМА_2 = "true";
+                локН15ТумблерБМА_2 = "true";
             }
         }
 
         private void Н15ТумблерА205_Click(object sender, EventArgs e)
         {
-            if (N15Parameters.Н15ТумблерА205 == "true")
+            if (локН15ТумблерА205 == "true")
             {
                 this.Н15ТумблерА205.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
-                N15Parameters.Н15ТумблерА205 = "false";
+                локН15ТумблерА205 = "false";
             }
             else
             {
                 this.Н15ТумблерА205.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
-                N15Parameters.Н15ТумблерА205 = "true";
+                локН15ТумблерА205 = "true";
             }
         }
 
         private void Н15ТумблерК1_1_Click(object sender, EventArgs e)
         {
-            if (N15Parameters.Н15ТумблерК1_1 == "true")
+            if (локН15ТумблерК1_1 == "true")
             {
                 this.Н15ТумблерК1_1.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
-                N15Parameters.Н15ТумблерК1_1 = "false";
+                локН15ТумблерК1_1 = "false";
             }
             else
             {
                 this.Н15ТумблерК1_1.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
-                N15Parameters.Н15ТумблерК1_1 = "true";
+                локН15ТумблерК1_1 = "true";
             }
         }
 
         private void Н15ТумблерК1_2_Click(object sender, EventArgs e)
         {
-            if (N15Parameters.Н15ТумблерК1_2 == "true")
+            if (локН15ТумблерК1_2 == "true")
             {
                 this.Н15ТумблерК1_2.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
-                N15Parameters.Н15ТумблерК1_2 = "false";
+                локН15ТумблерК1_2 = "false";
             }
             else
             {
                 this.Н15ТумблерК1_2.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
-                N15Parameters.Н15ТумблерК1_2 = "true";
+                локН15ТумблерК1_2 = "true";
             }
         }
 
         private void Н15ТумблерАФСС_Click(object sender, EventArgs e)
         {
-            if (N15Parameters.Н15ТумблерАФСС == "true")
+            if (локН15ТумблерАФСС == "true")
             {
                 this.Н15ТумблерАФСС.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
-                N15Parameters.Н15ТумблерАФСС = "false";
+                локН15ТумблерАФСС = "false";
             }
             else
             {
                 this.Н15ТумблерАФСС.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
-                N15Parameters.Н15ТумблерАФСС = "true";
+                локН15ТумблерАФСС = "true";
             }
         }
 
         private void Н15ТумблерА1_Click(object sender, EventArgs e)
         {
-            if (N15Parameters.Н15ТумблерА1 == "true")
+            if (локН15ТумблерА1 == "true")
             {
                 this.Н15ТумблерА1.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
-                N15Parameters.Н15ТумблерА1 = "false";
+                локН15ТумблерА1 = "false";
             }
             else
             {
                 this.Н15ТумблерА1.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
-                N15Parameters.Н15ТумблерА1 = "true";
+                локН15ТумблерА1 = "true";
             }
         }
 
         private void Н15ТумблерА403_Click(object sender, EventArgs e)
         {
-            if (N15Parameters.Н15ТумблерА403 == "true")
+            if (локН15ТумблерА403 == "true")
             {
                 this.Н15ТумблерА403.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
-                N15Parameters.Н15ТумблерА403 = "false";
+                локН15ТумблерА403 = "false";
             }
             else
             {
                 this.Н15ТумблерА403.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
-                N15Parameters.Н15ТумблерА403 = "true";
+                локН15ТумблерА403 = "true";
             }
         }
 
         private void Н15ТумблерБ1_1_Click(object sender, EventArgs e)
         {
-            if (N15Parameters.Н15ТумблерБ1_1 == "true")
+            if (локН15ТумблерБ1_1 == "true")
             {
                 this.Н15ТумблерБ1_1.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
-                N15Parameters.Н15ТумблерБ1_1 = "false";
+                локН15ТумблерБ1_1 = "false";
             }
             else
             {
                 this.Н15ТумблерБ1_1.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
-                N15Parameters.Н15ТумблерБ1_1 = "true";
+                локН15ТумблерБ1_1 = "true";
             }
         }
 
         private void Н15ТумблерБ1_2_Click(object sender, EventArgs e)
         {
-            if (N15Parameters.Н15ТумблерБ1_2 == "true")
+            if (локН15ТумблерБ1_2 == "true")
             {
                 this.Н15ТумблерБ1_2.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
-                N15Parameters.Н15ТумблерБ1_2 = "false";
+                локН15ТумблерБ1_2 = "false";
             }
             else
             {
                 this.Н15ТумблерБ1_2.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
-                N15Parameters.Н15ТумблерБ1_2 = "true";
+                локН15ТумблерБ1_2 = "true";
             }
         }
 
         private void Н15ТумблерБ2_1_Click(object sender, EventArgs e)
         {
-            if (N15Parameters.Н15ТумблерБ2_1 == "true")
+            if (локН15ТумблерБ2_1 == "true")
             {
                 this.Н15ТумблерБ2_1.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
-                N15Parameters.Н15ТумблерБ2_1 = "false";
+                локН15ТумблерБ2_1 = "false";
             }
             else
             {
                 this.Н15ТумблерБ2_1.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
-                N15Parameters.Н15ТумблерБ2_1 = "true";
+                локН15ТумблерБ2_1 = "true";
             }
         }
 
         private void Н15ТумблерБ2_2_Click(object sender, EventArgs e)
         {
-            if (N15Parameters.Н15ТумблерБ2_2 == "true")
+            if (локН15ТумблерБ2_2 == "true")
             {
                 this.Н15ТумблерБ2_2.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
-                N15Parameters.Н15ТумблерБ2_2 = "false";
+                локН15ТумблерБ2_2 = "false";
             }
             else
             {
                 this.Н15ТумблерБ2_2.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
-                N15Parameters.Н15ТумблерБ2_2 = "true";
+                локН15ТумблерБ2_2 = "true";
             }
         }
 
         private void Н15ТумблерБ3_1_Click(object sender, EventArgs e)
         {
-            if (N15Parameters.Н15ТумблерБ3_1 == "true")
+            if (локН15ТумблерБ3_1 == "true")
             {
                 this.Н15ТумблерБ3_1.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
-                N15Parameters.Н15ТумблерБ3_1 = "false";
+                локН15ТумблерБ3_1 = "false";
             }
             else
             {
                 this.Н15ТумблерБ3_1.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
-                N15Parameters.Н15ТумблерБ3_1 = "true";
+                локН15ТумблерБ3_1 = "true";
             }
         }
 
         private void Н15ТумблерБ3_2_Click(object sender, EventArgs e)
         {
-            if (N15Parameters.Н15ТумблерБ3_2 == "true")
+            if (локН15ТумблерБ3_2 == "true")
             {
                 this.Н15ТумблерБ3_2.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
-                N15Parameters.Н15ТумблерБ3_2 = "false";
+                локН15ТумблерБ3_2 = "false";
             }
             else
             {
                 this.Н15ТумблерБ3_2.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
-                N15Parameters.Н15ТумблерБ3_2 = "true";
+                локН15ТумблерБ3_2 = "true";
             }
         }
 
         private void Н15ТумблерДАБ_5_Click(object sender, EventArgs e)
         {
-            if (N15Parameters.Н15ТумблерДАБ_5 == "true")
+            if (локН15ТумблерДАБ_5 == "true")
             {
                 this.Н15ТумблерДАБ_5.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
-                N15Parameters.Н15ТумблерДАБ_5 = "false";
+                локН15ТумблерДАБ_5 = "false";
             }
             else
             {
                 this.Н15ТумблерДАБ_5.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
-                N15Parameters.Н15ТумблерДАБ_5 = "true";
+                локН15ТумблерДАБ_5 = "true";
             }
         }
 
         private void Н15ТумблерР_Н_Click(object sender, EventArgs e)
         {
-            if (N15Parameters.Н15ТумблерР_Н == "true")
+            if (локН15ТумблерР_Н == "true")
             {
                 this.Н15ТумблерР_Н.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
-                N15Parameters.Н15ТумблерР_Н = "false";
+                локН15ТумблерР_Н = "false";
             }
             else
             {
                 this.Н15ТумблерР_Н.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
-                N15Parameters.Н15ТумблерР_Н = "true";
+                локН15ТумблерР_Н = "true";
+            }
+        }
+
+        private void Н15ТумблерА20512_Click(object sender, EventArgs e)
+        {
+            if (N15Parameters.Н15ТумблерА20512 == "1")
+            {
+                this.Н15ТумблерА20512.BackgroundImage = ControlElementImages.tumblerVerticalType1Down;
+                N15Parameters.Н15ТумблерА20512 = "2";
+            }
+            else
+            {
+                this.Н15ТумблерА20512.BackgroundImage = ControlElementImages.tumblerVerticalType1Up;
+                N15Parameters.Н15ТумблерА20512 = "1";
+            }
+        }
+
+        private void Н15ТумблерА30412_Click(object sender, EventArgs e)
+        {
+            if (N15Parameters.Н15ТумблерА30412 == "1")
+            {
+                this.Н15ТумблерА30412.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
+                N15Parameters.Н15ТумблерА30412 = "2";
+            }
+            else
+            {
+                this.Н15ТумблерА30412.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
+                N15Parameters.Н15ТумблерА30412 = "1";
             }
         }
     }
