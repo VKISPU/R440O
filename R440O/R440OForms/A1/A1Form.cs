@@ -23,9 +23,12 @@ namespace R440O.R440OForms.A1
             this.InitializeComponent();
             A1Parameters.A1КнопкаСкоростьАБ_1ТЛФ_К = "false";
             A1Parameters.A1КнопкаСкоростьГР = "false";
-
+            A1Parameters.A1ТумблерМуДу = "Ду";
         }
 
+        /// <summary>
+        /// Переключение кнопки скорость В АБ 1ТЛФК
+        /// </summary>
         private void A1КнопкаСкоростьАБ_1ТЛФ_К_Click(object sender, System.EventArgs e)
         {
             if (A1Parameters.A1КнопкаСкоростьАБ_1ТЛФ_К == "false")
@@ -40,6 +43,9 @@ namespace R440O.R440OForms.A1
             }
         }
 
+        /// <summary>
+        /// Переключение кнопки скорость В ГР
+        /// </summary>
         private void A1КнопкаСкоростьГР_Click(object sender, System.EventArgs e)
         {
             if (A1Parameters.A1КнопкаСкоростьГР == "false")
@@ -54,6 +60,9 @@ namespace R440O.R440OForms.A1
             }
         }
 
+        /// <summary>
+        /// Переключение тумблера управления питанием блока
+        /// </summary>
         private void A1ТумблерМуДу_Click(object sender, System.EventArgs e)
         {
             if (A1Parameters.A1ТумблерМуДу == "Му")
@@ -67,6 +76,5 @@ namespace R440O.R440OForms.A1
                 A1Parameters.A1ТумблерМуДу = "Му";
             }
         }
-
     }
 }

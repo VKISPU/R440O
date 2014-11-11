@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace R440O.Parameters
+﻿namespace R440O.Parameters
 {
     class A1Parameters
     {
@@ -25,10 +19,20 @@ namespace R440O.Parameters
         public static string A1BЛампочкаПитание { get; set; }
 
         //Тумблер
+        /// <summary>
+        /// Возможные состояния: Му - местное управление, Ду - дистанционное управление
+        /// </summary>
         public static string A1ТумблерМуДу { get; set; }
 
         //Кнопки
+        /// <summary>
+        /// Возможные состояния: true, false
+        /// </summary>
         public static string A1КнопкаСкоростьГР { get; set; }
+
+        /// <summary>
+        /// Возможные состояния: true, false
+        /// </summary>
         public static string A1КнопкаСкоростьАБ_1ТЛФ_К { get; set; }
 
     }

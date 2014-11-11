@@ -60,8 +60,8 @@
             this.VoltageStabilizerПереключательКонтрольНапр.Size = new System.Drawing.Size(81, 82);
             this.VoltageStabilizerПереключательКонтрольНапр.TabIndex = 34;
             this.VoltageStabilizerПереключательКонтрольНапр.UseVisualStyleBackColor = false;
-            this.VoltageStabilizerПереключательКонтрольНапр.Click += new System.EventHandler(this.VoltageStabilizerПереключательКонтрольНапр_Click);
             this.VoltageStabilizerПереключательКонтрольНапр.Paint += new System.Windows.Forms.PaintEventHandler(this.VoltageStabilizerПереключательКонтрольНапр_Paint);
+            this.VoltageStabilizerПереключательКонтрольНапр.MouseUp += new System.Windows.Forms.MouseEventHandler(this.VoltageStabilizerПереключательКонтрольНапр_MouseUp);
             // 
             // VoltageStabilizerКабельВход2
             // 
