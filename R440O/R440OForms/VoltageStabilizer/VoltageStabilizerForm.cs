@@ -5,6 +5,7 @@
 //-----------------------------------------------------------------------
 
 using R440O.Parameters;
+using R440O.ThirdParty;
 
 namespace R440O.R440OForms.VoltageStabilizer
 {
@@ -15,17 +16,14 @@ namespace R440O.R440OForms.VoltageStabilizer
     /// Форма блока стабилизатор напряжения
     /// </summary>
     public partial class VoltageStabilizerForm : Form
-    {
-        private int _angleКонтрольНапряжения = 15;
-        
+    {      
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="VoltageStabilizerForm"/>
         /// </summary>
         public VoltageStabilizerForm()
         {
             this.InitializeComponent();
-            VoltageStabilizerParameters.VoltageStabilizerКабельВход = "220";
-            _angleКонтрольНапряжения = 15;
+            InitializeTogglePosition();
         }
         
         /// <summary>
@@ -55,35 +53,46 @@ namespace R440O.R440OForms.VoltageStabilizer
                 VoltageStabilizerParameters.VoltageStabilizerКабельВход = "380";
             }
         }
-
-        /// <summary>
-        /// Перерисовка переключателя контроля напряжения для нового положения
         /// </summary>
-        private void VoltageStabilizerПереключательКонтрольНапр_Paint(object sender, PaintEventArgs e)
-        {
-            Image im = ControlElementImages.toggleType3;
-            e.Graphics.TranslateTransform(im.Width / 2, VoltageStabilizerПереключательКонтрольНапр.Height / 2);
-            e.Graphics.RotateTransform(_angleКонтрольНапряжения);
-            e.Graphics.DrawImage(im, -im.Width / 2, -im.Height / 2);
-            e.Graphics.RotateTransform(-_angleКонтрольНапряжения);
-        }
-
-        /// <summary>
-        /// Вызывает перерисовку переключателя контроля напряжения в соответствии с новым значением угла.
+        /// Переключатель КонтрольНапряжения
         /// </summary>
         private void VoltageStabilizerПереключательКонтрольНапр_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                _angleКонтрольНапряжения += 30;
+                VoltageStabilizerParameters.VoltageStabilizerПереключательКонтрольНапр += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                _angleКонтрольНапряжения -= 30;
+                VoltageStabilizerParameters.VoltageStabilizerПереключательКонтрольНапр -= 1;
             }
 
-            VoltageStabilizerПереключательКонтрольНапр.Invalidate();
+            var angle = VoltageStabilizerParameters.VoltageStabilizerПереключательКонтрольНапр * 30 - 195;
+            VoltageStabilizerПереключательКонтрольНапр.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
+        }
+
+        /// <summary>
+        /// Инициализация начальных положений переключателей, а также
+        /// восстановление положений при повторном открытии формы
+        /// </summary>
+        private void InitializeTogglePosition()
+        {
+            if (VoltageStabilizerParameters.VoltageStabilizerКабельВход == "220")
+            {
+                this.VoltageStabilizerКабельВход1.BackgroundImage = ControlElementImages.voltageStabilizerInput;
+                this.VoltageStabilizerКабельВход2.BackgroundImage = null;
+            }
+            else
+            {
+                this.VoltageStabilizerКабельВход1.BackgroundImage = null;
+                this.VoltageStabilizerКабельВход2.BackgroundImage = ControlElementImages.voltageStabilizerInput;
+            }
+
+            var angle = VoltageStabilizerParameters.VoltageStabilizerПереключательКонтрольНапр * 30 - 195;
+            VoltageStabilizerПереключательКонтрольНапр.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);      
         }
     }
 }

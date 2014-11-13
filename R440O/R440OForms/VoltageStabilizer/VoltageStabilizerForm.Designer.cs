@@ -50,17 +50,17 @@
             // VoltageStabilizerПереключательКонтрольНапр
             // 
             this.VoltageStabilizerПереключательКонтрольНапр.BackColor = System.Drawing.Color.Transparent;
+            this.VoltageStabilizerПереключательКонтрольНапр.BackgroundImage = global::R440O.ControlElementImages.toggleType3;
             this.VoltageStabilizerПереключательКонтрольНапр.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.VoltageStabilizerПереключательКонтрольНапр.FlatAppearance.BorderSize = 0;
             this.VoltageStabilizerПереключательКонтрольНапр.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.VoltageStabilizerПереключательКонтрольНапр.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.VoltageStabilizerПереключательКонтрольНапр.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.VoltageStabilizerПереключательКонтрольНапр.Location = new System.Drawing.Point(797, 63);
+            this.VoltageStabilizerПереключательКонтрольНапр.Location = new System.Drawing.Point(796, 63);
             this.VoltageStabilizerПереключательКонтрольНапр.Name = "VoltageStabilizerПереключательКонтрольНапр";
             this.VoltageStabilizerПереключательКонтрольНапр.Size = new System.Drawing.Size(81, 82);
             this.VoltageStabilizerПереключательКонтрольНапр.TabIndex = 34;
             this.VoltageStabilizerПереключательКонтрольНапр.UseVisualStyleBackColor = false;
-            this.VoltageStabilizerПереключательКонтрольНапр.Paint += new System.Windows.Forms.PaintEventHandler(this.VoltageStabilizerПереключательКонтрольНапр_Paint);
             this.VoltageStabilizerПереключательКонтрольНапр.MouseUp += new System.Windows.Forms.MouseEventHandler(this.VoltageStabilizerПереключательКонтрольНапр_MouseUp);
             // 
             // VoltageStabilizerКабельВход2

@@ -907,9 +907,6 @@
     <None Include="Resources\lampType11OnYellow.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\toggleType1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\toggleType2.png" />
   </ItemGroup>
   <ItemGroup>
@@ -917,9 +914,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\toggleType4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\toggleType5.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\arrowNormal.png" />
@@ -1016,6 +1010,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ButtonBlueUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toggleType5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toggleType1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

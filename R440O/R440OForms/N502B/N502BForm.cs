@@ -6,6 +6,7 @@
 
 using System;
 using R440O.Parameters;
+using R440O.ThirdParty;
 
 namespace R440O.R440OForms.N502B
 {
@@ -21,7 +22,8 @@ namespace R440O.R440OForms.N502B
         /// </summary>
         public N502BForm()
         {
-            this.InitializeComponent(); 
+            this.InitializeComponent();
+            InitializeTogglePosition();
             N502BParameters.N502BТумблерОсвещение1 = "откл";
             N502BParameters.N502BТумблерОсвещение2 = "откл";
             N502BParameters.N502BКнопкаРБПСброс = "false";
@@ -224,6 +226,7 @@ namespace R440O.R440OForms.N502B
         }
         #endregion
 
+        #region Переключатели
         private void N502BПереключательСеть_Click(object sender, System.EventArgs e)
         {
             if (N502BParameters.N502BПереключательСеть == "true")
@@ -236,6 +239,103 @@ namespace R440O.R440OForms.N502B
                 this.N502BПереключательСеть.BackgroundImage = ControlElementImages.tumblerSideVerticalType2Up;
                 N502BParameters.N502BПереключательСеть = "true";
             }
+        }
+
+        private void N502BПереключательНапряжениеButton_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                N502BParameters.N502BПереключательНапряжение += 1; 
+            }
+            if (e.Button == MouseButtons.Right)
+            {
+                N502BParameters.N502BПереключательНапряжение -= 1;
+            }
+
+            var angle = N502BParameters.N502BПереключательНапряжение * 36 - 150;
+            if (N502BParameters.N502BПереключательНапряжение >= 4) angle += 48; //Смещение
+            N502BПереключательНапряжение.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
+        }
+
+        private void N502BПереключательФазировка_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                N502BParameters.N502BПереключательФазировка += 1;
+                if (N502BParameters.N502BПереключательФазировка == 5) N502BParameters.N502BПереключательФазировка = 1;           
+            }
+            if (e.Button == MouseButtons.Right)
+            {
+                N502BParameters.N502BПереключательФазировка -= 1;
+                if (N502BParameters.N502BПереключательФазировка == 0) N502BParameters.N502BПереключательФазировка = 4;
+            }
+            var angle = N502BParameters.N502BПереключательФазировка * 90 - 180;
+            N502BПереключательФазировка.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType5, angle);
+        }
+
+
+        private void N502BПереключательКонтрольНапряжения_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                N502BParameters.N502BПереключательКонтрольНапряжения += 1;
+            }
+            if (e.Button == MouseButtons.Right)
+            {
+                N502BParameters.N502BПереключательКонтрольНапряжения -= 1;
+            }
+
+            var angle = N502BParameters.N502BПереключательКонтрольНапряжения * 45 - 90;
+            N502BПереключательКонтрольНапряжения.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType1, angle);
+        }
+
+        private void N502BПереключательТокНагрузкиИЗаряда_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                N502BParameters.N502BПереключательТокНагрузкиИЗаряда += 1;
+            }
+            if (e.Button == MouseButtons.Right)
+            {
+                N502BParameters.N502BПереключательТокНагрузкиИЗаряда -= 1;
+            }
+
+            var angle = N502BParameters.N502BПереключательТокНагрузкиИЗаряда * 40 - 180;
+            N502BПереключательТокНагрузкиИЗаряда.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType4, angle);
+        }
+        #endregion
+
+        /// <summary>
+        /// Инициализация начальных положений переключателей, а также
+        /// восстановление положений при повторном открытии формы
+        /// </summary>
+        private void InitializeTogglePosition()
+        {
+            if(N502BParameters.N502BПереключательСеть=="true")
+                N502BПереключательСеть.BackgroundImage = ControlElementImages.tumblerSideVerticalType2Up;
+            else
+                N502BПереключательСеть.BackgroundImage = ControlElementImages.tumblerSideVerticalType2Down;
+
+            var angle = N502BParameters.N502BПереключательНапряжение * 36 - 150;
+            if (N502BParameters.N502BПереключательНапряжение >= 4) angle += 48;
+            N502BПереключательНапряжение.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
+
+            angle = N502BParameters.N502BПереключательФазировка * 90 - 180;
+            N502BПереключательФазировка.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType5, angle);
+
+            angle = N502BParameters.N502BПереключательКонтрольНапряжения * 45 - 90;
+            N502BПереключательКонтрольНапряжения.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType1, angle);
+
+            angle = N502BParameters.N502BПереключательТокНагрузкиИЗаряда * 40 - 180;
+            N502BПереключательТокНагрузкиИЗаряда.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType4, angle);
         }
     }
 }

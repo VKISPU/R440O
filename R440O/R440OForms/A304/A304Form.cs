@@ -254,7 +254,7 @@ namespace R440O.R440OForms.A304
             A304ПереключательВыборСтвола.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
 
-            angle = A304Parameters.A304ПереключательКонтроль * 26 - 145;
+            angle = A304Parameters.A304ПереключательКонтроль * 30 - 150;
             A304ПереключательКонтрольButton.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
         } 

@@ -101,7 +101,7 @@
             // 
             this.A304Лампочка2К.BackColor = System.Drawing.Color.Transparent;
             this.A304Лампочка2К.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.A304Лампочка2К.Location = new System.Drawing.Point(332, 260);
+            this.A304Лампочка2К.Location = new System.Drawing.Point(332, 265);
             this.A304Лампочка2К.Name = "A304Лампочка2К";
             this.A304Лампочка2К.Size = new System.Drawing.Size(53, 49);
             this.A304Лампочка2К.TabIndex = 30;
@@ -111,7 +111,7 @@
             // 
             this.A304Лампочка1К.BackColor = System.Drawing.Color.Transparent;
             this.A304Лампочка1К.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.A304Лампочка1К.Location = new System.Drawing.Point(207, 260);
+            this.A304Лампочка1К.Location = new System.Drawing.Point(210, 263);
             this.A304Лампочка1К.Name = "A304Лампочка1К";
             this.A304Лампочка1К.Size = new System.Drawing.Size(55, 49);
             this.A304Лампочка1К.TabIndex = 29;
