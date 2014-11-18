@@ -902,6 +902,12 @@ namespace R440O.R440OForms.N15
                     this.Н15ЛампочкаА3042.BackgroundImage = null;
                 }
             }
+            if (OnA30412Click != null)
+            {
+                OnA30412Click();
+            }
         }
+        public delegate void VoidVoidSignature();
+        public event VoidVoidSignature OnA30412Click;
     }
 }

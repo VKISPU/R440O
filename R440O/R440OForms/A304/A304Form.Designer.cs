@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.A304Panel = new System.Windows.Forms.Panel();
+            this.A304СтрелкаКонтроляНапряжения = new System.Windows.Forms.PictureBox();
             this.A304ПереключательВыборСтвола = new System.Windows.Forms.Button();
             this.A304ПереключательКонтрольButton = new System.Windows.Forms.Button();
             this.A304Лампочка2К = new System.Windows.Forms.PictureBox();
@@ -41,6 +42,7 @@
             this.A304ТумблерМестноеДистанц_2 = new System.Windows.Forms.Button();
             this.A304ТумблерМестноеДистанц_1 = new System.Windows.Forms.Button();
             this.A304Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.A304СтрелкаКонтроляНапряжения)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.A304Лампочка2К)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.A304Лампочка1К)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +51,7 @@
             // 
             this.A304Panel.BackgroundImage = global::R440O.BackgroundImages.A304;
             this.A304Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A304Panel.Controls.Add(this.A304СтрелкаКонтроляНапряжения);
             this.A304Panel.Controls.Add(this.A304ПереключательВыборСтвола);
             this.A304Panel.Controls.Add(this.A304ПереключательКонтрольButton);
             this.A304Panel.Controls.Add(this.A304Лампочка2К);
@@ -64,6 +67,17 @@
             this.A304Panel.Name = "A304Panel";
             this.A304Panel.Size = new System.Drawing.Size(906, 626);
             this.A304Panel.TabIndex = 0;
+            // 
+            // A304СтрелкаКонтроляНапряжения
+            // 
+            this.A304СтрелкаКонтроляНапряжения.BackColor = System.Drawing.Color.Transparent;
+            this.A304СтрелкаКонтроляНапряжения.BackgroundImage = global::R440O.ControlElementImages.arrowNormal;
+            this.A304СтрелкаКонтроляНапряжения.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.A304СтрелкаКонтроляНапряжения.Location = new System.Drawing.Point(575, 123);
+            this.A304СтрелкаКонтроляНапряжения.Name = "A304СтрелкаКонтроляНапряжения";
+            this.A304СтрелкаКонтроляНапряжения.Size = new System.Drawing.Size(108, 99);
+            this.A304СтрелкаКонтроляНапряжения.TabIndex = 33;
+            this.A304СтрелкаКонтроляНапряжения.TabStop = false;
             // 
             // A304ПереключательВыборСтвола
             // 
@@ -95,6 +109,7 @@
             this.A304ПереключательКонтрольButton.Size = new System.Drawing.Size(95, 92);
             this.A304ПереключательКонтрольButton.TabIndex = 31;
             this.A304ПереключательКонтрольButton.UseVisualStyleBackColor = false;
+            this.A304ПереключательКонтрольButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A304ПереключательКонтрольButton_MouseDown);
             this.A304ПереключательКонтрольButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A304ПереключательКонтрольButton_MouseUp);
             // 
             // A304Лампочка2К
@@ -257,6 +272,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "A304";
             this.A304Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.A304СтрелкаКонтроляНапряжения)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.A304Лампочка2К)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.A304Лампочка1К)).EndInit();
             this.ResumeLayout(false);
@@ -277,5 +293,6 @@
         private System.Windows.Forms.PictureBox A304Лампочка2К;
         private System.Windows.Forms.Button A304ПереключательКонтрольButton;
         private System.Windows.Forms.Button A304ПереключательВыборСтвола;
+        private System.Windows.Forms.PictureBox A304СтрелкаКонтроляНапряжения;
     }
 }

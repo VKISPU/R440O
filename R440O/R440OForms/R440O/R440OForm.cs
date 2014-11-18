@@ -4,6 +4,9 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+using R440O.R440OForms.A304;
+using R440O.R440OForms.N15;
+
 namespace R440O.R440OForms.R440O
 {
     using System;
@@ -53,6 +56,34 @@ namespace R440O.R440OForms.R440O
                 // ReSharper disable once AssignNullToNotNullAttribute by trycatch
                 var thisForm = Activator.CreateInstance(type: Type.GetType(typeName));
                 var newForm = (Form)thisForm;
+                
+                //Подписка на события
+                switch (newForm.Name)
+                {
+                    case "A304Form":
+                    {
+                        var newA304Form = new A304Form();
+                        var n15Form = (N15Form)this.getSpecificForm("N15Form");
+                        if (n15Form != null)
+                        {
+                            n15Form.OnA30412Click += newA304Form.TurnLampsEvent;
+                        }
+                        newForm = newA304Form;
+                    }
+                    break;
+
+                    case "N15Form":
+                    {
+                        var n15Form = new N15Form();
+                        var newA304Form = (A304Form)this.getSpecificForm("A304Form");
+                        if (newA304Form != null)
+                        {
+                            n15Form.OnA30412Click += newA304Form.TurnLampsEvent;
+                        }
+                        newForm = n15Form;
+                    }
+                    break;
+                }
                 newForm.Show(this);
             }
             catch
@@ -61,6 +92,16 @@ namespace R440O.R440OForms.R440O
             }
         }
 
+        private Form getSpecificForm(string formName)
+        {
+            foreach (Form form in OwnedForms.Where(form => form.Name == formName))
+            {
+                var specificForm = new Form();
+                specificForm = form;
+                return specificForm;
+            }
+            return null;
+        }
         private void R440OForm_Load(object sender, EventArgs e)
         {
         }
