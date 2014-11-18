@@ -146,7 +146,7 @@ namespace R440O.Parameters
         /// Возможные состояния: 1, 2
         /// </summary>
         public static string Н15ТумблерА30412 { get { return _Н15ТумблерА30412; } set { _Н15ТумблерА30412 = value; } }
-        private static string _Н15ТумблерА30412 = "false";
+        private static string _Н15ТумблерА30412 = "2";
 
         /// <summary>
         /// Возможные состояния: true, false
