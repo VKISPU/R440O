@@ -81,7 +81,7 @@ namespace R440O.Parameters
         public static string Н15КнопкаСброс { get { return _Н15КнопкаСброс; } set { _Н15КнопкаСброс = value; } }
         private static string _Н15КнопкаСброс = "false";
 
-        // Тумблеры
+        #region Тумблеры
         /// <summary>
         /// Возможные состояния: true, false
         /// </summary>
@@ -105,6 +105,7 @@ namespace R440O.Parameters
         /// </summary>
         public static string Н15ТумблерЦ300М4 { get { return _Н15ТумблерЦ300М4; } set { _Н15ТумблерЦ300М4 = value; } }
         private static string _Н15ТумблерЦ300М4 = "false";
+        #endregion
 
         /// <summary>
         /// Возможные состояния: true, false
@@ -258,14 +259,29 @@ namespace R440O.Parameters
         public static string Н15ЛампочкаА205Неиспр2 { get; set; }
         public static string Н15ЛампочкаУМ1Работа1 { get; set; }
         public static string Н15ЛампочкаУМ1Работа2 { get; set; }
-        public static string Н15ЛампочкаН12С { get; set; }
+
+        /// <summary>
+        /// Возможные состояния: true, false
+        /// </summary>
+        public static string Н15ЛампочкаН12С { get { return _Н15ЛампочкаН12С; } set { _Н15ЛампочкаН12С = value; } }
+        private static string _Н15ЛампочкаН12С = "false";
+
         public static string Н15ЛампочкаМШУ { get; set; }
         public static string Н15ЛампочкаБМА_1 { get; set; }
         public static string Н15ЛампочкаБМА_2 { get; set; }
         public static string Н15Лампочка27В { get; set; }
         public static string Н15ЛампочкаН15БП { get; set; }
+
+        /// <summary>
+        /// Возможные состояния: true, false
+        /// </summary>
         public static string Н15ЛампочкаАФСС { get; set; }
+
+        /// <summary>
+        /// Возможные состояния: true, false
+        /// </summary>
         public static string Н15ЛампочкаА1 { get; set; }
+
         public static string Н15ЛампочкаА403Вкл { get; set; }
         public static string Н15ЛампочкаА403Неиспр { get; set; }
         public static string Н15ЛампочкаП220272 { get; set; }
@@ -273,6 +289,7 @@ namespace R440O.Parameters
         public static string Н15ЛампочкаА306 { get; set; }
         public static string Н15ЛампочкаА3041 { get; set; }
         public static string Н15ЛампочкаА3042 { get; set; }
+
         public static string Н15ЛампочкаБ1_1 { get; set; }
         public static string Н15ЛампочкаБ1_2 { get; set; }
         public static string Н15ЛампочкаБ2_1 { get; set; }

@@ -20,6 +20,7 @@ namespace R440O.R440OForms.N15
         private static string локН15ТумблерЦ300М2 { get; set; }
         private static string локН15ТумблерЦ300М3 { get; set; }
         private static string локН15ТумблерЦ300М4 { get; set; }
+
         private static string локН15ТумблерН12С { get; set; }
         private static string локН15ТумблерМШУ { get; set; }
         private static string локН15ТумблерБМА_1 { get; set; }
@@ -56,28 +57,277 @@ namespace R440O.R440OForms.N15
         private void Н15КнопкаСтанцияВкл_MouseUp(object sender, MouseEventArgs e)
         {
             this.Н15КнопкаСтанцияВкл.BackgroundImage = ControlElementImages.buttonOnUpBlack;
+
+            #region Н15ТумблерЦ300М1
             N15Parameters.Н15ТумблерЦ300М1 = локН15ТумблерЦ300М1;
+            if (N15Parameters.Н15ТумблерЦ300М1 == "true")
+            {
+                N15Parameters.Н15ЛампочкаЦ300МВкл1 = "true";
+                this.Н15ЛампочкаЦ300МВкл1.BackgroundImage = ControlElementImages.lampType8OnRed;
+            }
+            else
+            {
+                N15Parameters.Н15ЛампочкаЦ300МВкл1 = "false";
+                this.Н15ЛампочкаЦ300МВкл1.BackgroundImage = null;
+            }
+            #endregion
+
+            #region Н15ТумблерЦ300М2
             N15Parameters.Н15ТумблерЦ300М2 = локН15ТумблерЦ300М2;
+            if (N15Parameters.Н15ТумблерЦ300М2 == "true")
+            {
+                N15Parameters.Н15ЛампочкаЦ300МВкл2 = "true";
+                this.Н15ЛампочкаЦ300МВкл2.BackgroundImage = ControlElementImages.lampType8OnRed;
+            }
+            else
+            {
+                N15Parameters.Н15ЛампочкаЦ300МВкл2 = "false";
+                this.Н15ЛампочкаЦ300МВкл2.BackgroundImage = null;
+            }
+            #endregion
+
+            #region Н15ТумблерЦ300М3
             N15Parameters.Н15ТумблерЦ300М3 = локН15ТумблерЦ300М3;
+            if (N15Parameters.Н15ТумблерЦ300М3 == "true")
+            {
+                N15Parameters.Н15ЛампочкаЦ300МВкл3 = "true";
+                this.Н15ЛампочкаЦ300МВкл3.BackgroundImage = ControlElementImages.lampType8OnRed;
+            }
+            else
+            {
+                N15Parameters.Н15ЛампочкаЦ300МВкл3 = "false";
+                this.Н15ЛампочкаЦ300МВкл3.BackgroundImage = null;
+            }
+            #endregion
+
+            #region Н15ТумблерЦ300М4
             N15Parameters.Н15ТумблерЦ300М4 = локН15ТумблерЦ300М4;
+            if (N15Parameters.Н15ТумблерЦ300М4 == "true")
+            {
+                N15Parameters.Н15ЛампочкаЦ300МВкл4 = "true";
+                this.Н15ЛампочкаЦ300МВкл4.BackgroundImage = ControlElementImages.lampType8OnRed;
+            }
+            else
+            {
+                N15Parameters.Н15ЛампочкаЦ300МВкл4 = "false";
+                this.Н15ЛампочкаЦ300МВкл4.BackgroundImage = null;
+            }
+            #endregion
+
+            #region Н15ТумблерН12С
             N15Parameters.Н15ТумблерН12С = локН15ТумблерН12С;
+            if (N15Parameters.Н15ТумблерН12С == "true")
+            {
+                N15Parameters.Н15ЛампочкаН12С = "true";
+                this.Н15ЛампочкаН12С.BackgroundImage = ControlElementImages.lampType5OnRed;
+            }
+            else
+            {
+                N15Parameters.Н15ЛампочкаН12С = "false";
+                this.Н15ЛампочкаН12С.BackgroundImage = null;
+            }
+            #endregion
+
+            #region Н15ТумблерМШУ
             N15Parameters.Н15ТумблерМШУ = локН15ТумблерМШУ;
+            if (N15Parameters.Н15ТумблерМШУ == "true")
+            {
+                N15Parameters.Н15ЛампочкаМШУ = "true";
+                this.Н15ЛампочкаМШУ.BackgroundImage = ControlElementImages.lampType5OnRed;
+
+                if (N15Parameters.Н15ТумблерА30412 == "1")
+                {
+                    N15Parameters.Н15ЛампочкаА3041 = "true";
+                    this.Н15ЛампочкаА3041.BackgroundImage = ControlElementImages.lampType5OnRed;
+                }
+                else
+                    if (N15Parameters.Н15ТумблерА30412 == "2")
+                    {
+                        N15Parameters.Н15ЛампочкаА3042 = "true";
+                        this.Н15ЛампочкаА3042.BackgroundImage = ControlElementImages.lampType5OnRed;
+                    }
+            }
+            else
+            {
+                N15Parameters.Н15ЛампочкаМШУ = "false";
+                this.Н15ЛампочкаМШУ.BackgroundImage = null;
+
+                if (N15Parameters.Н15ЛампочкаА3041 == "true")
+                {
+                    N15Parameters.Н15ЛампочкаА3041 = "false";
+                    this.Н15ЛампочкаА3041.BackgroundImage = null;
+                }
+                else
+                    if (N15Parameters.Н15ЛампочкаА3042 == "true")
+                    {
+                        N15Parameters.Н15ЛампочкаА3042 = "false";
+                        this.Н15ЛампочкаА3042.BackgroundImage = null;
+                    }
+            }
+            #endregion
+
+            #region Н15ТумблерБМА_1
             N15Parameters.Н15ТумблерБМА_1 = локН15ТумблерБМА_1;
+            if (N15Parameters.Н15ТумблерБМА_1 == "true")
+            {
+                N15Parameters.Н15ЛампочкаБМА_1 = "true";
+                this.Н15ЛампочкаБМА_1.BackgroundImage = ControlElementImages.lampType5OnRed;
+            }
+            else
+            {
+                N15Parameters.Н15ЛампочкаБМА_1 = "false";
+                this.Н15ЛампочкаБМА_1.BackgroundImage = null;
+            }
+            #endregion
+
+            #region Н15ТумблерБМА_2
             N15Parameters.Н15ТумблерБМА_2 = локН15ТумблерБМА_2;
+            if (N15Parameters.Н15ТумблерБМА_2 == "true")
+            {
+                N15Parameters.Н15ЛампочкаБМА_2 = "true";
+                this.Н15ЛампочкаБМА_2.BackgroundImage = ControlElementImages.lampType5OnRed;
+            }
+            else
+            {
+                N15Parameters.Н15ЛампочкаБМА_2 = "false";
+                this.Н15ЛампочкаБМА_2.BackgroundImage = null;
+            }
+            #endregion
+
+
             N15Parameters.Н15ТумблерА205 = локН15ТумблерА205;
+
+            #region Н15ТумблерАФСС
             N15Parameters.Н15ТумблерАФСС = локН15ТумблерАФСС;
+            if (N15Parameters.Н15ТумблерАФСС == "true")
+            {
+                N15Parameters.Н15ЛампочкаАФСС = "true";
+                this.Н15ЛампочкаАФСС.BackgroundImage = ControlElementImages.lampType5OnRed;
+            }
+            else
+            {
+                N15Parameters.Н15ЛампочкаАФСС = "false";
+                this.Н15ЛампочкаАФСС.BackgroundImage = null;
+            }
+            #endregion
+
+            #region Н15ТумблерА1
             N15Parameters.Н15ТумблерА1 = локН15ТумблерА1;
+            if (N15Parameters.Н15ТумблерА1 == "true")
+            {
+                N15Parameters.Н15ЛампочкаА1 = "true";
+                this.Н15ЛампочкаА1.BackgroundImage = ControlElementImages.lampType5OnRed;
+            }
+            else
+            {
+                N15Parameters.Н15ЛампочкаА1 = "false";
+                this.Н15ЛампочкаА1.BackgroundImage = null;
+            }
+            #endregion
+
             N15Parameters.Н15ТумблерА403 = локН15ТумблерА403;
             N15Parameters.Н15ТумблерК1_1 = локН15ТумблерК1_1;
             N15Parameters.Н15ТумблерК1_2 = локН15ТумблерК1_2;
+
+            #region Н15ТумблерБ1_1
             N15Parameters.Н15ТумблерБ1_1 = локН15ТумблерБ1_1;
+            if (N15Parameters.Н15ТумблерБ1_1 == "true")
+            {
+                N15Parameters.Н15ЛампочкаБ1_1 = "true";
+                this.Н15ЛампочкаБ1_1.BackgroundImage = ControlElementImages.lampType5OnRed;
+            }
+            else
+            {
+                N15Parameters.Н15ЛампочкаБ1_1 = "false";
+                this.Н15ЛампочкаБ1_1.BackgroundImage = null;
+            }
+            #endregion
+
+            #region Н15ТумблерБ1_2
             N15Parameters.Н15ТумблерБ1_2 = локН15ТумблерБ1_2;
+            if (N15Parameters.Н15ТумблерБ1_2 == "true")
+            {
+                N15Parameters.Н15ЛампочкаБ1_2 = "true";
+                this.Н15ЛампочкаБ1_2.BackgroundImage = ControlElementImages.lampType5OnRed;
+            }
+            else
+            {
+                N15Parameters.Н15ЛампочкаБ1_2 = "false";
+                this.Н15ЛампочкаБ1_2.BackgroundImage = null;
+            }
+            #endregion
+
+            #region Н15ТумблерБ2_1
             N15Parameters.Н15ТумблерБ2_1 = локН15ТумблерБ2_1;
+            if (N15Parameters.Н15ТумблерБ2_1 == "true")
+            {
+                N15Parameters.Н15ЛампочкаБ2_1 = "true";
+                this.Н15ЛампочкаБ2_1.BackgroundImage = ControlElementImages.lampType5OnRed;
+            }
+            else
+            {
+                N15Parameters.Н15ЛампочкаБ2_1 = "false";
+                this.Н15ЛампочкаБ2_1.BackgroundImage = null;
+            }
+            #endregion
+
+            #region Н15ТумблерБ2_2
             N15Parameters.Н15ТумблерБ2_2 = локН15ТумблерБ2_2;
+            if (N15Parameters.Н15ТумблерБ2_2 == "true")
+            {
+                N15Parameters.Н15ЛампочкаБ2_2 = "true";
+                this.Н15ЛампочкаБ2_2.BackgroundImage = ControlElementImages.lampType5OnRed;
+            }
+            else
+            {
+                N15Parameters.Н15ЛампочкаБ2_2 = "false";
+                this.Н15ЛампочкаБ2_2.BackgroundImage = null;
+            }
+            #endregion
+
+            #region Н15ТумблерБ3_1
             N15Parameters.Н15ТумблерБ3_1 = локН15ТумблерБ3_1;
+            if (N15Parameters.Н15ТумблерБ3_1 == "true")
+            {
+                N15Parameters.Н15ЛампочкаБ3_1 = "true";
+                this.Н15ЛампочкаБ3_1.BackgroundImage = ControlElementImages.lampType5OnRed;
+            }
+            else
+            {
+                N15Parameters.Н15ЛампочкаБ3_1 = "false";
+                this.Н15ЛампочкаБ3_1.BackgroundImage = null;
+            }
+            #endregion
+
+            #region Н15ТумблерБ3_2
             N15Parameters.Н15ТумблерБ3_2 = локН15ТумблерБ3_2;
+            if (N15Parameters.Н15ТумблерБ3_2 == "true")
+            {
+                N15Parameters.Н15ЛампочкаБ3_2 = "true";
+                this.Н15ЛампочкаБ3_2.BackgroundImage = ControlElementImages.lampType5OnRed;
+            }
+            else
+            {
+                N15Parameters.Н15ЛампочкаБ3_2 = "false";
+                this.Н15ЛампочкаБ3_2.BackgroundImage = null;
+            }
+            #endregion
+
             N15Parameters.Н15ТумблерДАБ_5 = локН15ТумблерДАБ_5;
+
+            #region Н15ТумблерР_Н
             N15Parameters.Н15ТумблерР_Н = локН15ТумблерР_Н;
+            if (N15Parameters.Н15ТумблерР_Н == "true")
+            {
+                N15Parameters.Н15ЛампочкаР_Н = "true";
+                this.Н15ЛампочкаР_Н.BackgroundImage = ControlElementImages.lampType5OnRed;
+            }
+            else
+            {
+                N15Parameters.Н15ЛампочкаР_Н = "false";
+                this.Н15ЛампочкаР_Н.BackgroundImage = null;
+            }
+            #endregion
         }
 
         #region Кнопка Выкл
@@ -630,11 +880,27 @@ namespace R440O.R440OForms.N15
             {
                 this.Н15ТумблерА30412.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
                 N15Parameters.Н15ТумблерА30412 = "2";
+                if (N15Parameters.Н15ЛампочкаМШУ == "true")
+                {
+                    N15Parameters.Н15ЛампочкаА3042 = "true";
+                    this.Н15ЛампочкаА3042.BackgroundImage = ControlElementImages.lampType5OnRed;
+
+                    N15Parameters.Н15ЛампочкаА3041 = "false";
+                    this.Н15ЛампочкаА3041.BackgroundImage = null;
+                }
             }
             else
             {
                 this.Н15ТумблерА30412.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
                 N15Parameters.Н15ТумблерА30412 = "1";
+                if (N15Parameters.Н15ЛампочкаМШУ == "true")
+                {
+                    N15Parameters.Н15ЛампочкаА3041 = "true";
+                    this.Н15ЛампочкаА3041.BackgroundImage = ControlElementImages.lampType5OnRed;
+
+                    N15Parameters.Н15ЛампочкаА3042 = "false";
+                    this.Н15ЛампочкаА3042.BackgroundImage = null;
+                }
             }
         }
     }
