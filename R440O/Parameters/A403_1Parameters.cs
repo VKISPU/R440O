@@ -8,25 +8,92 @@ namespace R440O.Parameters
 {
     class A403_1Parameters
     {
+        #region Лампочки
         //Лампочки
         public static string A403_1ЛампочкаНеисправностьАПН { get; set; }
         public static string A403_1ЛампочкаНеисправностьФС { get; set; }
         public static string A403_1ЛампочкаНеисправностьРИ { get; set; }
         public static string A403_1ЛампочкаКомплект1 { get; set; }
         public static string A403_1ЛампочкаКомплект2 { get; set; }
+        #endregion
 
+        #region Тумблеры
         //Тумблеры
-        public static string A403_1ТумблерСеть { get; set; }
-        public static string A403_1ТумблерГотов { get; set; }
-        public static string A403_1ТумблерГруппа { get; set; }
-        public static string A403_1ТумблерКомплект { get; set; }
-        public static string A403_1ТумблерАвтКоррекция { get; set; }
+        public static string A403_1ТумблерСеть = "откл";
+        public static string A403_1ТумблерГотов = "откл";
+        public static string A403_1ТумблерГруппа = "2группа";
+        public static string A403_1ТумблерКомплект = "1";
+        public static string A403_1ТумблерАвтКоррекция = "откл";
+        #endregion
 
+        #region Переключатели
         //Переключатели
-        public static string A403_1ПереключательПроверка { get; set; }
-        public static string A403_1ПереключательРежимРаботы { get; set; }
-        public static string A403_1ПереключательНеисправность { get; set; }
 
+        #region Переключатель проверка
+        /// <summary>
+        /// Положение переключателя режима работы
+        /// </summary>
+        private static int _A403_1ПереключательПроверка = 1;
+
+        public static int A403_1ПереключательПроверка
+        {
+            get { return _A403_1ПереключательПроверка; }
+            set
+            {
+                if (value > 0 && value < 10) _A403_1ПереключательПроверка = value;
+            }
+        }
+
+        /// <summary>
+        /// Названия положений переключателя режима работы
+        /// </summary>
+        private static string[] A403_1ПоложенияПереключательПроверка = {
+            "0",
+            "t",
+            "альфар",
+            "бетар",
+            "дельтаF",
+            "альфаФи",
+            "бетаФи",
+            "Д",
+            "Ш",
+            "К"
+        };
+        #endregion
+
+        #region ПереключательРежимРаботы
+        /// <summary>
+        /// Положение переключателя режима работы
+        /// </summary>
+        private static int _A403_1ПереключательРежимРаботы = 1;
+
+        public static int A403_1ПереключательРежимРаботы
+        {
+            get { return _A403_1ПереключательРежимРаботы; }
+            set
+            {
+                if (value > 0 && value < 9) _A403_1ПереключательРежимРаботы = value;
+            }
+        }
+
+        /// <summary>
+        /// Названия положений переключателя режима работы
+        /// </summary>
+        private static string[] A403_1ПоложенияПереключательРежимРаботы = {
+            "0",
+            "раб1",
+            "раб2",
+            "прогн",
+            "рн",
+            "пу",
+            "увв",
+            "бпр"
+        };
+        #endregion
+
+        #endregion
+
+        #region Кнопки
         //Кнопки
         public static string A403_1КнопкаУстВремени { get; set; }
         public static string A403_1Кнопка0 { get; set; }
@@ -51,6 +118,7 @@ namespace R440O.Parameters
         public static string A403_1КнопкаT_Kbeta { get; set; }
         public static string A403_1Кнопкаtсв_Yalpha { get; set; }
         public static string A403_1Кнопкаtуст_Ybeta { get; set; }
+        #endregion
 
         //Индикаторы
     }

@@ -33,6 +33,8 @@
             this.N18_MТумблерПРД_СС = new System.Windows.Forms.Button();
             this.N18_MТумблерКАУ_ПРМ = new System.Windows.Forms.Button();
             this.N18_MТумблерДАБ5 = new System.Windows.Forms.Button();
+            this.N18_MПереключательПРМ1 = new System.Windows.Forms.Button();
+            this.N18_MПереключательПРМ2 = new System.Windows.Forms.Button();
             this.N18_MPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,11 +42,13 @@
             // 
             this.N18_MPanel.BackgroundImage = global::R440O.BackgroundImages.N18_M;
             this.N18_MPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.N18_MPanel.Controls.Add(this.N18_MПереключательПРМ2);
+            this.N18_MPanel.Controls.Add(this.N18_MПереключательПРМ1);
             this.N18_MPanel.Controls.Add(this.N18_MТумблерТЛФ_ПРМ);
             this.N18_MPanel.Controls.Add(this.N18_MТумблерПРД_СС);
             this.N18_MPanel.Controls.Add(this.N18_MТумблерКАУ_ПРМ);
             this.N18_MPanel.Controls.Add(this.N18_MТумблерДАБ5);
-            this.N18_MPanel.Location = new System.Drawing.Point(0, 0);
+            this.N18_MPanel.Location = new System.Drawing.Point(1, 0);
             this.N18_MPanel.Name = "N18_MPanel";
             this.N18_MPanel.Size = new System.Drawing.Size(484, 710);
             this.N18_MPanel.TabIndex = 0;
@@ -113,6 +117,38 @@
             this.N18_MТумблерДАБ5.UseVisualStyleBackColor = false;
             this.N18_MТумблерДАБ5.Click += new System.EventHandler(this.N18_MТумблерДАБ5_Click);
             // 
+            // N18_MПереключательПРМ1
+            // 
+            this.N18_MПереключательПРМ1.BackColor = System.Drawing.Color.Transparent;
+            this.N18_MПереключательПРМ1.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.N18_MПереключательПРМ1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.N18_MПереключательПРМ1.FlatAppearance.BorderSize = 0;
+            this.N18_MПереключательПРМ1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.N18_MПереключательПРМ1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.N18_MПереключательПРМ1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.N18_MПереключательПРМ1.Location = new System.Drawing.Point(50, 596);
+            this.N18_MПереключательПРМ1.Name = "N18_MПереключательПРМ1";
+            this.N18_MПереключательПРМ1.Size = new System.Drawing.Size(88, 78);
+            this.N18_MПереключательПРМ1.TabIndex = 33;
+            this.N18_MПереключательПРМ1.UseVisualStyleBackColor = false;
+            this.N18_MПереключательПРМ1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.N18_MПереключательПРМ1_MouseUp);
+            // 
+            // N18_MПереключательПРМ2
+            // 
+            this.N18_MПереключательПРМ2.BackColor = System.Drawing.Color.Transparent;
+            this.N18_MПереключательПРМ2.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.N18_MПереключательПРМ2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.N18_MПереключательПРМ2.FlatAppearance.BorderSize = 0;
+            this.N18_MПереключательПРМ2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.N18_MПереключательПРМ2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.N18_MПереключательПРМ2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.N18_MПереключательПРМ2.Location = new System.Drawing.Point(208, 596);
+            this.N18_MПереключательПРМ2.Name = "N18_MПереключательПРМ2";
+            this.N18_MПереключательПРМ2.Size = new System.Drawing.Size(88, 78);
+            this.N18_MПереключательПРМ2.TabIndex = 34;
+            this.N18_MПереключательПРМ2.UseVisualStyleBackColor = false;
+            this.N18_MПереключательПРМ2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.N18_MПереключательПРМ2_MouseUp);
+            // 
             // N18_MForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -135,5 +171,7 @@
         private System.Windows.Forms.Button N18_MТумблерКАУ_ПРМ;
         private System.Windows.Forms.Button N18_MТумблерПРД_СС;
         private System.Windows.Forms.Button N18_MТумблерТЛФ_ПРМ;
+        private System.Windows.Forms.Button N18_MПереключательПРМ1;
+        private System.Windows.Forms.Button N18_MПереключательПРМ2;
     }
 }

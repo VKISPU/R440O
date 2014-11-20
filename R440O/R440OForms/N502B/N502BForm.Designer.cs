@@ -124,7 +124,7 @@
             // N502BПереключательНапряжение
             // 
             this.N502BПереключательНапряжение.BackColor = System.Drawing.Color.Transparent;
-            this.N502BПереключательНапряжение.BackgroundImage = global::R440O.ControlElementImages.toggleType3;
+            this.N502BПереключательНапряжение.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
             this.N502BПереключательНапряжение.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.N502BПереключательНапряжение.FlatAppearance.BorderSize = 0;
             this.N502BПереключательНапряжение.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -336,7 +336,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(744, 741);
+            this.ClientSize = new System.Drawing.Size(744, 733);
             this.Controls.Add(this.N502BPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;

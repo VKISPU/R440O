@@ -5,6 +5,7 @@
 //-----------------------------------------------------------------------
 
 using R440O.Parameters;
+using R440O.ThirdParty;
 
 namespace R440O.R440OForms.A403_1
 {
@@ -21,11 +22,8 @@ namespace R440O.R440OForms.A403_1
         public A403_1Form()
         {
             this.InitializeComponent();
-            A403_1Parameters.A403_1ТумблерСеть = "откл";
-            A403_1Parameters.A403_1ТумблерСеть = "1";
-            A403_1Parameters.A403_1ТумблерГотов = "откл";
-            A403_1Parameters.A403_1ТумблерГруппа = "2группа";
-            A403_1Parameters.A403_1ТумблерАвтКоррекция = "откл";
+            InitializeTumblersPosition();
+            InitializeTogglesPosition();
         }
 
         #region Тумблеры
@@ -533,8 +531,87 @@ namespace R440O.R440OForms.A403_1
             A403_1Parameters.A403_1Кнопкаtуст_Ybeta = "false";
 
         }
+ 
 
+        private void A403_1КнопкаУстВремени_Click(object sender, System.EventArgs e)
+        {
+            if (A403_1Parameters.A403_1КнопкаУстВремени == "false")
+            {
+                this.A403_1КнопкаУстВремени.BackgroundImage = null;
+                A403_1Parameters.A403_1КнопкаУстВремени = "true";
+            }
+            else
+            {
+                this.A403_1КнопкаУстВремени.BackgroundImage = ControlElementImages.ButtonBlueUp;
+                A403_1Parameters.A403_1КнопкаУстВремени = "false";
+            }
+        }
         #endregion
 
+        #region Переключатели
+        private void A403_1ПереключательРежимРаботы_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                A403_1Parameters.A403_1ПереключательРежимРаботы += 1;
+            }
+            if (e.Button == MouseButtons.Right)
+            {
+                A403_1Parameters.A403_1ПереключательРежимРаботы -= 1;
+            }
+            var angle = A403_1Parameters.A403_1ПереключательРежимРаботы * 34 - 165;
+            A403_1ПереключательРежимРаботы.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+        }
+
+        private void A403_1ПереключательПроверка_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                A403_1Parameters.A403_1ПереключательПроверка += 1;
+            }
+            if (e.Button == MouseButtons.Right)
+            {
+                A403_1Parameters.A403_1ПереключательПроверка -= 1;
+            }
+            var angle = A403_1Parameters.A403_1ПереключательПроверка * 32 - 185;
+            //Смещение т.к форма не хорошо нарисована
+            if (A403_1Parameters.A403_1ПереключательПроверка <= 6) angle -= 6;
+            if (A403_1Parameters.A403_1ПереключательПроверка == 4 || A403_1Parameters.A403_1ПереключательПроверка == 5) angle -= 6;
+            A403_1ПереключательПроверка.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+        }
+        #endregion
+
+        #region Инициализация
+        private void InitializeTumblersPosition()
+        {
+            this.A403_1ТумблерСеть.BackgroundImage = A403_1Parameters.A403_1ТумблерСеть == "откл"
+                ? ControlElementImages.tumblerVerticalType3Down : ControlElementImages.tumblerVerticalType3Up;
+
+            this.A403_1ТумблерГотов.BackgroundImage = A403_1Parameters.A403_1ТумблерГотов == "откл"
+                ? ControlElementImages.tumblerVerticalType1Down : ControlElementImages.tumblerVerticalType1Up;
+
+            this.A403_1ТумблерКомплект.BackgroundImage = A403_1Parameters.A403_1ТумблерКомплект == "1"
+                ? ControlElementImages.tumblerHorizontalType2Left : ControlElementImages.tumblerHorizontalType2Right;
+
+            this.A403_1ТумблерГруппа.BackgroundImage = A403_1Parameters.A403_1ТумблерГруппа == "2группа"
+                ? ControlElementImages.tumblerVerticalType1Down : ControlElementImages.tumblerVerticalType1Up;
+
+            this.A403_1ТумблерАвтКоррекция.BackgroundImage = A403_1Parameters.A403_1ТумблерАвтКоррекция == "откл"
+                ? ControlElementImages.tumblerVerticalType1Down : ControlElementImages.tumblerVerticalType1Up;
+        }
+
+        private void InitializeTogglesPosition()
+        {
+            var angle = A403_1Parameters.A403_1ПереключательРежимРаботы * 34 - 165;
+            A403_1ПереключательРежимРаботы.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+
+            angle = A403_1Parameters.A403_1ПереключательПроверка * 32 - 185;
+            A403_1ПереключательПроверка.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+        }
+        #endregion
     }
 }

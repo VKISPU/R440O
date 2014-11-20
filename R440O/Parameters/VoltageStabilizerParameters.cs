@@ -4,9 +4,9 @@
     {
         //Лампочки
         public static string VoltageStabilizerЛампочкаСетьВкл { get; set; }
-        public static string VoltageStabilizerЛампочкаАвария { get; set; }        
+        public static string VoltageStabilizerЛампочкаАвария { get; set; }
 
-        //Переключатели
+        #region Переключатель КонтрольНапряжения
         /// <summary>
         /// Положение переключателя Контроль напряжения
         /// </summary>
@@ -38,7 +38,8 @@
             "фазное_0b",
             "фазное_0a"
         };
- 
+        #endregion
+
         //Кабель
         /// <summary>
         /// Возможные состояния: 220, 380

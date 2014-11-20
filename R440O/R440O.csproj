@@ -76,6 +76,7 @@
     <Compile Include="Parameters\N502BParameters.cs" />
     <Compile Include="Parameters\P220_27G_2Parameters.cs" />
     <Compile Include="Parameters\P220_27G_3Parameters.cs" />
+    <Compile Include="Parameters\PowerCabelParameters.cs" />
     <Compile Include="Parameters\VoltageStabilizerParameters.cs" />
     <Compile Include="R440OForms\A1\A1Form.cs">
       <SubType>Form</SubType>
@@ -317,6 +318,12 @@
     <Compile Include="R440OForms\K01M_02\K01M_02.Designer.cs">
       <DependentUpon>K01M_02.cs</DependentUpon>
     </Compile>
+    <Compile Include="R440OForms\N15Inside\N15Inside.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\N15Inside\N15Inside.Designer.cs">
+      <DependentUpon>N15Inside.cs</DependentUpon>
+    </Compile>
     <Compile Include="R440OForms\NKN_2\NKN_2Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -474,7 +481,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ControlElementImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
       <LastGenOutput>ControlElementImages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -606,6 +612,9 @@
     <EmbeddedResource Include="R440OForms\K01M_02\K01M_02.resx">
       <DependentUpon>K01M_02.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\N15Inside\N15Inside.resx">
+      <DependentUpon>N15Inside.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\NKN_2\NKN_2Form.resx">
       <DependentUpon>NKN_2Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -731,9 +740,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\A306.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Astra.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BMA_M.png" />
@@ -967,9 +973,6 @@
     <None Include="Resources\stabillizator_input.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ButtonType2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\tumblerHorizontalType2DownRight.png" />
   </ItemGroup>
   <ItemGroup>
@@ -1022,6 +1025,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\arrowRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonType2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PowerCabelEnter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toggleType6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonRoundType1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonRoundType2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonRoundType1K.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\N15_inside.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Astra.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

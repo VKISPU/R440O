@@ -118,11 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="arrowLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\arrowLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="arrowNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\arrowNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="arrowRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\arrowRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="arrowRound" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\arrowRound.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ButtonBlueUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ButtonBlueUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ButtonGreyUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ButtonGreyUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="buttonOffUpRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\buttonOffUpRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,11 +142,20 @@
   <data name="buttonOnUpBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\buttonOnUpBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="buttonRoundSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\button_round_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="buttonRoundType1UpBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\buttonRoundType1UpBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="buttonSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\buttonSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="buttonSquareType1UpBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\buttonSquareType1UpBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttonSquareType1UpDarkGrey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\buttonSquareType1UpDarkGrey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="buttonSquareType1UpGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\buttonSquareType1UpGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,8 +166,11 @@
   <data name="buttonSquareType1UpYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\buttonSquareType1UpYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttonRoundSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\button_round_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonSquareType1_1UpWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\buttonSquareType1_1UpWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ButtonType2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ButtonType2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\cover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,6 +211,12 @@
   <data name="orderSchemeIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\orderSchemeIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="powerCabelEnter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\PowerCabelEnter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="toggleType1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\toggleType1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="toggleType2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\toggleType2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -204,6 +234,33 @@
   </data>
   <data name="tumblerHorizontalType1Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\tumblerHorizontalType1Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerHorizontalType2DownRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerHorizontalType2DownRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerHorizontalType2Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerHorizontalType2Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerHorizontalType2Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerHorizontalType2Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerHorizontalType3Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerHorizontalType3Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerHorizontalType3Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerHorizontalType3Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerHorizontalType4Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerHorizontalType4Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerHorizontalType4Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerHorizontalType4Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerHorizontalType5Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerHorizontalType5Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerHorizontalType5Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerHorizontalType5Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tumblerSideHorizontalType1Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\tumblerSideHorizontalType1Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,46 +316,16 @@
   <data name="voltageStabilizerInput" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\stabillizator_input.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttonSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\ButtonType2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="toggleType6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\toggleType6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ButtonGreyUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\ButtonGreyUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonRoundType1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\buttonRoundType1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tumblerHorizontalType2Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerHorizontalType2Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonRoundType1K" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\buttonRoundType1K.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tumblerHorizontalType2Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerHorizontalType2Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerHorizontalType3Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerHorizontalType3Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerHorizontalType3Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerHorizontalType3Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerHorizontalType4Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerHorizontalType4Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerHorizontalType4Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerHorizontalType4Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerHorizontalType5Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerHorizontalType5Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerHorizontalType5Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerHorizontalType5Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ButtonBlueUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\ButtonBlueUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="toggleType1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\toggleType1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrowLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\arrowLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrowRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\arrowRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonRoundType2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\buttonRoundType2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

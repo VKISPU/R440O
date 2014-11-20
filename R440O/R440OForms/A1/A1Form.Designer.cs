@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.A1Panel = new System.Windows.Forms.Panel();
+            this.A1ТумблерМуДу = new System.Windows.Forms.Button();
             this.A1КнопкаСкоростьГР = new System.Windows.Forms.Button();
             this.A1КнопкаСкоростьАБ_1ТЛФ_К = new System.Windows.Forms.Button();
-            this.A1ТумблерМуДу = new System.Windows.Forms.Button();
             this.A1Panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +47,22 @@
             this.A1Panel.Size = new System.Drawing.Size(1104, 354);
             this.A1Panel.TabIndex = 0;
             // 
+            // A1ТумблерМуДу
+            // 
+            this.A1ТумблерМуДу.BackColor = System.Drawing.Color.Transparent;
+            this.A1ТумблерМуДу.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType1Down;
+            this.A1ТумблерМуДу.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A1ТумблерМуДу.FlatAppearance.BorderSize = 0;
+            this.A1ТумблерМуДу.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.A1ТумблерМуДу.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.A1ТумблерМуДу.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.A1ТумблерМуДу.Location = new System.Drawing.Point(720, 142);
+            this.A1ТумблерМуДу.Name = "A1ТумблерМуДу";
+            this.A1ТумблерМуДу.Size = new System.Drawing.Size(38, 58);
+            this.A1ТумблерМуДу.TabIndex = 22;
+            this.A1ТумблерМуДу.UseVisualStyleBackColor = false;
+            this.A1ТумблерМуДу.Click += new System.EventHandler(this.A1ТумблерМуДу_Click);
+            // 
             // A1КнопкаСкоростьГР
             // 
             this.A1КнопкаСкоростьГР.BackColor = System.Drawing.Color.Transparent;
@@ -56,7 +72,7 @@
             this.A1КнопкаСкоростьГР.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.A1КнопкаСкоростьГР.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.A1КнопкаСкоростьГР.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.A1КнопкаСкоростьГР.Location = new System.Drawing.Point(188, 113);
+            this.A1КнопкаСкоростьГР.Location = new System.Drawing.Point(189, 113);
             this.A1КнопкаСкоростьГР.Name = "A1КнопкаСкоростьГР";
             this.A1КнопкаСкоростьГР.Size = new System.Drawing.Size(17, 22);
             this.A1КнопкаСкоростьГР.TabIndex = 9;
@@ -78,22 +94,6 @@
             this.A1КнопкаСкоростьАБ_1ТЛФ_К.TabIndex = 8;
             this.A1КнопкаСкоростьАБ_1ТЛФ_К.UseVisualStyleBackColor = false;
             this.A1КнопкаСкоростьАБ_1ТЛФ_К.Click += new System.EventHandler(this.A1КнопкаСкоростьАБ_1ТЛФ_К_Click);
-            // 
-            // A1ТумблерМуДу
-            // 
-            this.A1ТумблерМуДу.BackColor = System.Drawing.Color.Transparent;
-            this.A1ТумблерМуДу.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType1Down;
-            this.A1ТумблерМуДу.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.A1ТумблерМуДу.FlatAppearance.BorderSize = 0;
-            this.A1ТумблерМуДу.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.A1ТумблерМуДу.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.A1ТумблерМуДу.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.A1ТумблерМуДу.Location = new System.Drawing.Point(720, 142);
-            this.A1ТумблерМуДу.Name = "A1ТумблерМуДу";
-            this.A1ТумблерМуДу.Size = new System.Drawing.Size(38, 58);
-            this.A1ТумблерМуДу.TabIndex = 22;
-            this.A1ТумблерМуДу.UseVisualStyleBackColor = false;
-            this.A1ТумблерМуДу.Click += new System.EventHandler(this.A1ТумблерМуДу_Click);
             // 
             // A1Form
             // 

@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.A403_1Panel = new System.Windows.Forms.Panel();
+            this.A403_1ПереключательПроверка = new System.Windows.Forms.Button();
+            this.A403_1ПереключательРежимРаботы = new System.Windows.Forms.Button();
+            this.A403_1КнопкаУстВремени = new System.Windows.Forms.Button();
+            this.A403_1КнопкаСброс = new System.Windows.Forms.Button();
             this.A403_1Кнопкаtуст_Ybeta = new System.Windows.Forms.Button();
             this.A403_1Кнопкаtсв_Yalpha = new System.Windows.Forms.Button();
             this.A403_1КнопкаT_Kbeta = new System.Windows.Forms.Button();
@@ -54,7 +58,6 @@
             this.A403_1ТумблерГотов = new System.Windows.Forms.Button();
             this.A403_1ТумблерКомплект = new System.Windows.Forms.Button();
             this.A403_1ТумблерСеть = new System.Windows.Forms.Button();
-            this.A403_1КнопкаСброс = new System.Windows.Forms.Button();
             this.A403_1Panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,6 +65,9 @@
             // 
             this.A403_1Panel.BackgroundImage = global::R440O.BackgroundImages.A403_1;
             this.A403_1Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A403_1Panel.Controls.Add(this.A403_1ПереключательПроверка);
+            this.A403_1Panel.Controls.Add(this.A403_1ПереключательРежимРаботы);
+            this.A403_1Panel.Controls.Add(this.A403_1КнопкаУстВремени);
             this.A403_1Panel.Controls.Add(this.A403_1КнопкаСброс);
             this.A403_1Panel.Controls.Add(this.A403_1Кнопкаtуст_Ybeta);
             this.A403_1Panel.Controls.Add(this.A403_1Кнопкаtсв_Yalpha);
@@ -92,6 +98,75 @@
             this.A403_1Panel.Name = "A403_1Panel";
             this.A403_1Panel.Size = new System.Drawing.Size(684, 578);
             this.A403_1Panel.TabIndex = 0;
+            // 
+            // A403_1ПереключательПроверка
+            // 
+            this.A403_1ПереключательПроверка.BackColor = System.Drawing.Color.Transparent;
+            this.A403_1ПереключательПроверка.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.A403_1ПереключательПроверка.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A403_1ПереключательПроверка.FlatAppearance.BorderSize = 0;
+            this.A403_1ПереключательПроверка.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.A403_1ПереключательПроверка.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.A403_1ПереключательПроверка.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.A403_1ПереключательПроверка.Location = new System.Drawing.Point(536, 245);
+            this.A403_1ПереключательПроверка.Name = "A403_1ПереключательПроверка";
+            this.A403_1ПереключательПроверка.Size = new System.Drawing.Size(88, 78);
+            this.A403_1ПереключательПроверка.TabIndex = 51;
+            this.A403_1ПереключательПроверка.UseVisualStyleBackColor = false;
+            this.A403_1ПереключательПроверка.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1ПереключательПроверка_MouseUp);
+            // 
+            // A403_1ПереключательРежимРаботы
+            // 
+            this.A403_1ПереключательРежимРаботы.BackColor = System.Drawing.Color.Transparent;
+            this.A403_1ПереключательРежимРаботы.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.A403_1ПереключательРежимРаботы.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A403_1ПереключательРежимРаботы.FlatAppearance.BorderSize = 0;
+            this.A403_1ПереключательРежимРаботы.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.A403_1ПереключательРежимРаботы.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.A403_1ПереключательРежимРаботы.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.A403_1ПереключательРежимРаботы.Location = new System.Drawing.Point(534, 112);
+            this.A403_1ПереключательРежимРаботы.Name = "A403_1ПереключательРежимРаботы";
+            this.A403_1ПереключательРежимРаботы.Size = new System.Drawing.Size(88, 78);
+            this.A403_1ПереключательРежимРаботы.TabIndex = 50;
+            this.A403_1ПереключательРежимРаботы.UseVisualStyleBackColor = false;
+            this.A403_1ПереключательРежимРаботы.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1ПереключательРежимРаботы_MouseUp);
+            // 
+            // A403_1КнопкаУстВремени
+            // 
+            this.A403_1КнопкаУстВремени.BackColor = System.Drawing.Color.Transparent;
+            this.A403_1КнопкаУстВремени.BackgroundImage = global::R440O.ControlElementImages.ButtonBlueUp;
+            this.A403_1КнопкаУстВремени.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A403_1КнопкаУстВремени.FlatAppearance.BorderSize = 0;
+            this.A403_1КнопкаУстВремени.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.A403_1КнопкаУстВремени.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.A403_1КнопкаУстВремени.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.A403_1КнопкаУстВремени.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.A403_1КнопкаУстВремени.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.A403_1КнопкаУстВремени.Location = new System.Drawing.Point(570, 388);
+            this.A403_1КнопкаУстВремени.Name = "A403_1КнопкаУстВремени";
+            this.A403_1КнопкаУстВремени.Size = new System.Drawing.Size(38, 37);
+            this.A403_1КнопкаУстВремени.TabIndex = 49;
+            this.A403_1КнопкаУстВремени.UseVisualStyleBackColor = false;
+            this.A403_1КнопкаУстВремени.Click += new System.EventHandler(this.A403_1КнопкаУстВремени_Click);
+            // 
+            // A403_1КнопкаСброс
+            // 
+            this.A403_1КнопкаСброс.BackColor = System.Drawing.Color.Transparent;
+            this.A403_1КнопкаСброс.BackgroundImage = global::R440O.ControlElementImages.ButtonBlueUp;
+            this.A403_1КнопкаСброс.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A403_1КнопкаСброс.FlatAppearance.BorderSize = 0;
+            this.A403_1КнопкаСброс.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.A403_1КнопкаСброс.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.A403_1КнопкаСброс.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.A403_1КнопкаСброс.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.A403_1КнопкаСброс.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.A403_1КнопкаСброс.Location = new System.Drawing.Point(411, 386);
+            this.A403_1КнопкаСброс.Name = "A403_1КнопкаСброс";
+            this.A403_1КнопкаСброс.Size = new System.Drawing.Size(38, 37);
+            this.A403_1КнопкаСброс.TabIndex = 48;
+            this.A403_1КнопкаСброс.UseVisualStyleBackColor = false;
+            this.A403_1КнопкаСброс.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаСброс_MouseDown);
+            this.A403_1КнопкаСброс.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаСброс_MouseUp);
             // 
             // A403_1Кнопкаtуст_Ybeta
             // 
@@ -555,25 +630,6 @@
             this.A403_1ТумблерСеть.UseVisualStyleBackColor = false;
             this.A403_1ТумблерСеть.Click += new System.EventHandler(this.A403_1ТумблерСеть_Click);
             // 
-            // A403_1КнопкаСброс
-            // 
-            this.A403_1КнопкаСброс.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1КнопкаСброс.BackgroundImage = global::R440O.ControlElementImages.ButtonBlueUp;
-            this.A403_1КнопкаСброс.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.A403_1КнопкаСброс.FlatAppearance.BorderSize = 0;
-            this.A403_1КнопкаСброс.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.A403_1КнопкаСброс.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.A403_1КнопкаСброс.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.A403_1КнопкаСброс.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.A403_1КнопкаСброс.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.A403_1КнопкаСброс.Location = new System.Drawing.Point(411, 386);
-            this.A403_1КнопкаСброс.Name = "A403_1КнопкаСброс";
-            this.A403_1КнопкаСброс.Size = new System.Drawing.Size(38, 37);
-            this.A403_1КнопкаСброс.TabIndex = 48;
-            this.A403_1КнопкаСброс.UseVisualStyleBackColor = false;
-            this.A403_1КнопкаСброс.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаСброс_MouseDown);
-            this.A403_1КнопкаСброс.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаСброс_MouseUp);
-            // 
             // A403_1Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -618,5 +674,8 @@
         private System.Windows.Forms.Button A403_1Кнопкаtсв_Yalpha;
         private System.Windows.Forms.Button A403_1Кнопкаtуст_Ybeta;
         private System.Windows.Forms.Button A403_1КнопкаСброс;
+        private System.Windows.Forms.Button A403_1КнопкаУстВремени;
+        private System.Windows.Forms.Button A403_1ПереключательРежимРаботы;
+        private System.Windows.Forms.Button A403_1ПереключательПроверка;
     }
 }

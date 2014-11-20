@@ -20,20 +20,23 @@ namespace R440O.Parameters
         public static string N502BКнопкаРБППроверка { get; set; }
         public static string N502BКнопкаРБПСброс { get; set; }
 
+        #region Тумблеры
         //Тумблеры
-        public static string N502BТумблерЭлектрооборуд { get; set; }
-        public static string N502BТумблерВыпрямитель27В { get; set; }
-        public static string N502BТумблерОсвещение { get; set; }
-        public static string N502BТумблерН13_1 { get; set; }
-        public static string N502BТумблерН13_2 { get; set; }
-        public static string N502BТумблерН15 { get; set; }
-        public static string N502BТумблерОсвещение1 { get; set; }
-        public static string N502BТумблерОсвещение2 { get; set; }
+        public static string N502BТумблерЭлектрооборуд = "false";
+        public static string N502BТумблерВыпрямитель27В = "false";
+        public static string N502BТумблерОсвещение = "false";
+        public static string N502BТумблерН13_1 = "false";
+        public static string N502BТумблерН13_2 = "false";
+        public static string N502BТумблерН15 = "false";
+        public static string N502BТумблерОсвещение1 = "откл";
+        public static string N502BТумблерОсвещение2 = "откл";
+        #endregion
 
+        #region Переключатели
         //Переключатели
         public static string N502BПереключательСеть = "false";
 
-
+        #region ПереключательНапряжение
         /// <summary>
         /// Положение переключателя напряжения
         /// </summary>
@@ -59,8 +62,9 @@ namespace R440O.Parameters
             "нагрузка1-3",
             "нагрузка2-3"
         };
+        #endregion
 
-
+        #region ПереключательФазировка
         /// <summary>
         /// Положение переключателя Фазировка
         /// </summary>
@@ -76,7 +80,7 @@ namespace R440O.Parameters
         }
 
         /// <summary>
-        /// Названия положений переключателя напряжения
+        /// Названия положений переключателя фазировка
         /// </summary>
         private static string[] N502BПоложенияПереключательФазировка = {
             "откл",
@@ -84,7 +88,12 @@ namespace R440O.Parameters
             "откл",
             "2-1-3"
         };
+        #endregion
 
+        #region ПереключательКонтрольНапряжения
+        /// <summary>
+        /// Положение переключателя контроль напряжения
+        /// </summary>
         private static int _N502BПереключательКонтрольНапряжения = 2;
 
         public static int N502BПереключательКонтрольНапряжения
@@ -97,14 +106,19 @@ namespace R440O.Parameters
         }
 
         /// <summary>
-        /// Названия положений переключателя напряжения
+        /// Названия положений переключателя  контроля напряжения
         /// </summary>
         private static string[] N502BПоложенияКонтрольНапряжения = {
             "+27B",
             "откл",
             "+12B"     
         };
+        #endregion
 
+        #region ПереключательТокНагрузкиИЗаряда
+        /// <summary>
+        /// Положение переключателя тока нагрузки и заряда
+        /// </summary>
         private static int _N502BПереключательТокНагрузкиИЗаряда = 1;
 
         public static int N502BПереключательТокНагрузкиИЗаряда
@@ -117,7 +131,7 @@ namespace R440O.Parameters
         }
 
         /// <summary>
-        /// Названия положений переключателя напряжения
+        /// Названия положений переключателя тока нагрузки и заряда
         /// </summary>
         private static string[] N502BПоложенияПереключательТокНагрузкиИЗаряда = {
             "откл",
@@ -129,6 +143,9 @@ namespace R440O.Parameters
             "+Ток4", 
             "+Ток5"
         };
+        #endregion
+
+        #endregion
 
         //Индикаторы
     }

@@ -153,9 +153,39 @@ namespace R440O {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap buttonRoundType1 {
+            get {
+                object obj = ResourceManager.GetObject("buttonRoundType1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buttonRoundType1K {
+            get {
+                object obj = ResourceManager.GetObject("buttonRoundType1K", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap buttonRoundType1UpBlack {
             get {
                 object obj = ResourceManager.GetObject("buttonRoundType1UpBlack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buttonRoundType2 {
+            get {
+                object obj = ResourceManager.GetObject("buttonRoundType2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +203,29 @@ namespace R440O {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap buttonSquareType1_1UpWhite {
+            get {
+                object obj = ResourceManager.GetObject("buttonSquareType1_1UpWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap buttonSquareType1UpBlue {
             get {
                 object obj = ResourceManager.GetObject("buttonSquareType1UpBlue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buttonSquareType1UpDarkGrey {
+            get {
+                object obj = ResourceManager.GetObject("buttonSquareType1UpDarkGrey", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -206,6 +256,16 @@ namespace R440O {
         internal static System.Drawing.Bitmap buttonSquareType1UpYellow {
             get {
                 object obj = ResourceManager.GetObject("buttonSquareType1UpYellow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ButtonType2 {
+            get {
+                object obj = ResourceManager.GetObject("ButtonType2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -343,6 +403,16 @@ namespace R440O {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap powerCabelEnter {
+            get {
+                object obj = ResourceManager.GetObject("powerCabelEnter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap toggleType1 {
             get {
                 object obj = ResourceManager.GetObject("toggleType1", resourceCulture);
@@ -393,6 +463,16 @@ namespace R440O {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap toggleType6 {
+            get {
+                object obj = ResourceManager.GetObject("toggleType6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tumblerHorizontalType1Left {
             get {
                 object obj = ResourceManager.GetObject("tumblerHorizontalType1Left", resourceCulture);
@@ -406,6 +486,16 @@ namespace R440O {
         internal static System.Drawing.Bitmap tumblerHorizontalType1Right {
             get {
                 object obj = ResourceManager.GetObject("tumblerHorizontalType1Right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tumblerHorizontalType2DownRight {
+            get {
+                object obj = ResourceManager.GetObject("tumblerHorizontalType2DownRight", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
