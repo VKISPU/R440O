@@ -6,12 +6,12 @@
         /// <summary>
         /// Параметр для лампочки. Возможные состояния: true, false
         /// </summary>
-        public static string A304Комплект1 = "false";
+        public static bool A304Комплект1 = false;
 
         /// <summary>
         /// Параметр для лампочки. Возможные состояния: true, false
         /// </summary>
-        public static string A304Комплект2 = "false";
+        public static bool A304Комплект2 = false;
         
         //Лампочки
         public static string A304ЛампочкаПерегрев1К { get; set; }

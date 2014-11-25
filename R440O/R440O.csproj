@@ -491,6 +491,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="R440OForms\A1\A1Form.resx">
       <DependentUpon>A1Form.cs</DependentUpon>
