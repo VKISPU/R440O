@@ -9,6 +9,7 @@ namespace R440O.R440OForms.N15
     using System;
     using System.Windows.Forms;
     using Parameters;
+    using System.Threading;
 
     /// <summary>
     /// Форма блока Н-15
@@ -20,12 +21,12 @@ namespace R440O.R440OForms.N15
         private static string локН15ТумблерЦ300М2 { get; set; }
         private static string локН15ТумблерЦ300М3 { get; set; }
         private static string локН15ТумблерЦ300М4 { get; set; }
-
         private static string локН15ТумблерН12С { get; set; }
         private static string локН15ТумблерМШУ { get; set; }
         private static string локН15ТумблерБМА_1 { get; set; }
         private static string локН15ТумблерБМА_2 { get; set; }
         private static string локН15ТумблерА205 { get; set; }
+        private static string локН15ТумблерА20512 { get; set; }
         private static string локН15ТумблерАФСС { get; set; }
         private static string локН15ТумблерА1 { get; set; }
         private static string локН15ТумблерА403 { get; set; }
@@ -39,6 +40,11 @@ namespace R440O.R440OForms.N15
         private static string локН15ТумблерБ3_2 { get; set; }
         private static string локН15ТумблерДАБ_5 { get; set; }
         private static string локН15ТумблерР_Н { get; set; }
+
+        //Кнопки
+        private static string локН15КнопкаН13_1 { get; set; }
+        private static string локН15КнопкаН13_2 { get; set; }
+        private static string локН15КнопкаН13_12 { get; set; }
 
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="N15Form"/>
@@ -130,8 +136,12 @@ namespace R440O.R440OForms.N15
 
             #region Н15ТумблерМШУ
             N15Parameters.Н15ТумблерМШУ = локН15ТумблерМШУ;
+            
             if (N15Parameters.Н15ТумблерМШУ == "true")
             {
+                N15Parameters.Н15ЛампочкаА306 = "true";
+                this.Н15ЛампочкаА306.BackgroundImage = ControlElementImages.lampType5OnRed;
+
                 N15Parameters.Н15ЛампочкаМШУ = "true";
                 this.Н15ЛампочкаМШУ.BackgroundImage = ControlElementImages.lampType5OnRed;
 
@@ -151,6 +161,9 @@ namespace R440O.R440OForms.N15
             {
                 N15Parameters.Н15ЛампочкаМШУ = "false";
                 this.Н15ЛампочкаМШУ.BackgroundImage = null;
+
+                N15Parameters.Н15ЛампочкаА306 = "false";
+                this.Н15ЛампочкаА306.BackgroundImage = null;
 
                 if (N15Parameters.Н15ЛампочкаА3041 == "true")
                 {
@@ -198,8 +211,61 @@ namespace R440O.R440OForms.N15
             }
             #endregion
 
-
+            #region Н15ТумблерА205 and Н15ТумблерА20512
             N15Parameters.Н15ТумблерА205 = локН15ТумблерА205;
+            N15Parameters.Н15ТумблерА20512 = локН15ТумблерА20512;
+            if (N15Parameters.Н15ТумблерА205 == "true")
+            {
+                if (N15Parameters.Н15ТумблерА20512 == "1")
+                {
+                    N15Parameters.Н15ЛампочкаППВВкл1 = "true";
+                    this.Н15ЛампочкаППВВкл1.BackgroundImage = ControlElementImages.lampType8OnRed;
+                    N15Parameters.Н15ЛампочкаППВРабота1 = "true";
+                    this.Н15ЛампочкаППВРабота1.BackgroundImage = ControlElementImages.lampType8OnRed;
+                    N15Parameters.Н15ЛампочкаУМ1Работа1 = "true";
+                    this.Н15ЛампочкаУМ1Работа1.BackgroundImage = ControlElementImages.lampType8OnRed;
+
+                    N15Parameters.Н15ЛампочкаППВВкл2 = "false";
+                    this.Н15ЛампочкаППВВкл2.BackgroundImage = null;
+                    N15Parameters.Н15ЛампочкаППВРабота2 = "false";
+                    this.Н15ЛампочкаППВРабота2.BackgroundImage = null;
+                    N15Parameters.Н15ЛампочкаУМ1Работа2 = "false";
+                    this.Н15ЛампочкаУМ1Работа2.BackgroundImage = null;
+                }
+                else
+                {
+                    N15Parameters.Н15ЛампочкаППВВкл2 = "true";
+                    this.Н15ЛампочкаППВВкл2.BackgroundImage = ControlElementImages.lampType8OnRed;
+                    N15Parameters.Н15ЛампочкаППВРабота2 = "true";
+                    this.Н15ЛампочкаППВРабота2.BackgroundImage = ControlElementImages.lampType8OnRed;
+                    N15Parameters.Н15ЛампочкаУМ1Работа2 = "true";
+                    this.Н15ЛампочкаУМ1Работа2.BackgroundImage = ControlElementImages.lampType8OnRed;
+
+                    N15Parameters.Н15ЛампочкаППВВкл1 = "false";
+                    this.Н15ЛампочкаППВВкл1.BackgroundImage = null;
+                    N15Parameters.Н15ЛампочкаППВРабота1 = "false";
+                    this.Н15ЛампочкаППВРабота1.BackgroundImage = null;
+                    N15Parameters.Н15ЛампочкаУМ1Работа1 = "false";
+                    this.Н15ЛампочкаУМ1Работа1.BackgroundImage = null;
+                }
+            }
+            else
+            {
+                N15Parameters.Н15ЛампочкаППВВкл2 = "false";
+                this.Н15ЛампочкаППВВкл2.BackgroundImage = null;
+                N15Parameters.Н15ЛампочкаППВРабота2 = "false";
+                this.Н15ЛампочкаППВРабота2.BackgroundImage = null;
+                N15Parameters.Н15ЛампочкаУМ1Работа2 = "false";
+                this.Н15ЛампочкаУМ1Работа2.BackgroundImage = null;
+
+                N15Parameters.Н15ЛампочкаППВВкл1 = "false";
+                this.Н15ЛампочкаППВВкл1.BackgroundImage = null;
+                N15Parameters.Н15ЛампочкаППВРабота1 = "false";
+                this.Н15ЛампочкаППВРабота1.BackgroundImage = null;
+                N15Parameters.Н15ЛампочкаУМ1Работа1 = "false";
+                this.Н15ЛампочкаУМ1Работа1.BackgroundImage = null;
+            }
+            #endregion
 
             #region Н15ТумблерАФСС
             N15Parameters.Н15ТумблерАФСС = локН15ТумблерАФСС;
@@ -332,6 +398,10 @@ namespace R440O.R440OForms.N15
                 this.Н15ЛампочкаР_Н.BackgroundImage = null;
             }
             #endregion
+
+            N15Parameters.Н15КнопкаН13_1 = локН15КнопкаН13_1;
+            N15Parameters.Н15КнопкаН13_2 = локН15КнопкаН13_2;
+            N15Parameters.Н15КнопкаН13_12 = локН15КнопкаН13_12;
         }
 
         #region Кнопка Выкл
@@ -480,34 +550,103 @@ namespace R440O.R440OForms.N15
         private void Н15КнопкаН13_1_Click(object sender, EventArgs e)
         {
             this.Н15КнопкаН13_1.Visible = false;
-            N15Parameters.Н15КнопкаН13_1 = "true";
-
             this.Н15КнопкаН13_2.Visible = true;
-            N15Parameters.Н15КнопкаН13_2 = "false";
             this.Н15КнопкаН13_12.Visible = true;
-            N15Parameters.Н15КнопкаН13_12 = "false";
+
+            if (локН15КнопкаН13_2 == "false" && локН15КнопкаН13_12 == "false")
+            {
+                Application.DoEvents();
+                Thread.Sleep(2000);
+                this.Н15ЛампочкаН16Н13_1.BackgroundImage = ControlElementImages.lampType5OnRed;
+            }
+            else
+            {
+                Application.DoEvents();
+                Thread.Sleep(2000);
+                this.Н15ЛампочкаН16Н13_12.BackgroundImage = ControlElementImages.lampType5OnRed;
+                this.Н15ЛампочкаН16Н13_2.BackgroundImage = null;
+
+                Application.DoEvents();
+                Thread.Sleep(2000);
+                this.Н15ЛампочкаН16Н13_1.BackgroundImage = ControlElementImages.lampType5OnRed;
+                this.Н15ЛампочкаН16Н13_12.BackgroundImage = null;
+            }
+
+            локН15КнопкаН13_1 = "true";            
+            локН15КнопкаН13_2 = "false";            
+            локН15КнопкаН13_12 = "false";
+
+            N15Parameters.Н15ЛампочкаН16Н13_1 = "true";
+            N15Parameters.Н15ЛампочкаН16Н13_2 = "false";
+            N15Parameters.Н15ЛампочкаН16Н13_12 = "false";
         }
 
         private void Н15КнопкаН13_2_Click(object sender, EventArgs e)
         {
             this.Н15КнопкаН13_2.Visible = false;
-            N15Parameters.Н15КнопкаН13_2 = "true";
-
             this.Н15КнопкаН13_1.Visible = true;
-            N15Parameters.Н15КнопкаН13_1 = "false";
             this.Н15КнопкаН13_12.Visible = true;
-            N15Parameters.Н15КнопкаН13_12 = "false";
+
+            if (локН15КнопкаН13_1 == "false" && локН15КнопкаН13_12 == "false")
+            {
+                Application.DoEvents();
+                Thread.Sleep(2000);
+                this.Н15ЛампочкаН16Н13_2.BackgroundImage = ControlElementImages.lampType5OnRed;
+            }
+            else
+            {
+                Application.DoEvents();
+                Thread.Sleep(2000);
+                this.Н15ЛампочкаН16Н13_1.BackgroundImage = ControlElementImages.lampType5OnRed;
+                this.Н15ЛампочкаН16Н13_12.BackgroundImage = null;
+
+                Application.DoEvents();
+                Thread.Sleep(2000);
+                this.Н15ЛампочкаН16Н13_2.BackgroundImage = ControlElementImages.lampType5OnRed;
+                this.Н15ЛампочкаН16Н13_1.BackgroundImage = null;
+            }            
+            локН15КнопкаН13_2 = "true";            
+            локН15КнопкаН13_1 = "false";            
+            локН15КнопкаН13_12 = "false";
+            N15Parameters.Н15ЛампочкаН16Н13_1 = "false";
+            N15Parameters.Н15ЛампочкаН16Н13_2 = "true";
+            N15Parameters.Н15ЛампочкаН16Н13_12 = "false";
+
+           
         }
 
         private void Н15КнопкаН13_12_Click(object sender, EventArgs e)
         {
             this.Н15КнопкаН13_12.Visible = false;
-            N15Parameters.Н15КнопкаН13_12 = "true";
-
             this.Н15КнопкаН13_1.Visible = true;
-            N15Parameters.Н15КнопкаН13_1 = "false";
             this.Н15КнопкаН13_2.Visible = true;
-            N15Parameters.Н15КнопкаН13_2 = "false";
+
+            if (локН15КнопкаН13_1 == "false" && локН15КнопкаН13_2 == "false")
+            {
+                Application.DoEvents();
+                Thread.Sleep(2000);
+                this.Н15ЛампочкаН16Н13_12.BackgroundImage = ControlElementImages.lampType5OnRed;
+            }
+            else
+            {
+                Application.DoEvents();
+                Thread.Sleep(2000);
+                this.Н15ЛампочкаН16Н13_2.BackgroundImage = ControlElementImages.lampType5OnRed;
+                this.Н15ЛампочкаН16Н13_1.BackgroundImage = null;
+
+                Application.DoEvents();
+                Thread.Sleep(2000);
+                this.Н15ЛампочкаН16Н13_12.BackgroundImage = ControlElementImages.lampType5OnRed;
+                this.Н15ЛампочкаН16Н13_2.BackgroundImage = null;
+            }
+            
+            локН15КнопкаН13_12 = "true";            
+            локН15КнопкаН13_1 = "false";            
+            локН15КнопкаН13_2 = "false";
+
+            N15Parameters.Н15ЛампочкаН16Н13_1 = "false";
+            N15Parameters.Н15ЛампочкаН16Н13_2 = "false";
+            N15Parameters.Н15ЛампочкаН16Н13_12 = "true";        
         }
 
         private void Н15КнопкаСброс_MouseUp(object sender, MouseEventArgs e)
@@ -516,11 +655,11 @@ namespace R440O.R440OForms.N15
             this.Н15КнопкаСброс.Text = "СБРОС";
 
             this.Н15КнопкаН13_1.Visible = true;
-            N15Parameters.Н15КнопкаН13_1 = "false";
+            //локН15КнопкаН13_1 = "false";
             this.Н15КнопкаН13_2.Visible = true;
-            N15Parameters.Н15КнопкаН13_2 = "false";
+            //локН15КнопкаН13_2 = "false";
             this.Н15КнопкаН13_12.Visible = true;
-            N15Parameters.Н15КнопкаН13_12 = "false";
+            //локН15КнопкаН13_12 = "false";
         }
 
         private void Н15КнопкаСброс_MouseDown(object sender, MouseEventArgs e)
@@ -541,6 +680,7 @@ namespace R440O.R440OForms.N15
             локН15ТумблерБМА_1 = N15Parameters.Н15ТумблерБМА_1;
             локН15ТумблерБМА_2 = N15Parameters.Н15ТумблерБМА_2;
             локН15ТумблерА205 = N15Parameters.Н15ТумблерА205;
+            локН15ТумблерА20512 = N15Parameters.Н15ТумблерА20512;
             локН15ТумблерАФСС = N15Parameters.Н15ТумблерАФСС;
             локН15ТумблерА1 = N15Parameters.Н15ТумблерА1;
             локН15ТумблерА403 = N15Parameters.Н15ТумблерА403;
@@ -554,6 +694,10 @@ namespace R440O.R440OForms.N15
             локН15ТумблерБ3_2 = N15Parameters.Н15ТумблерБ3_2;
             локН15ТумблерДАБ_5 = N15Parameters.Н15ТумблерДАБ_5;
             локН15ТумблерР_Н = N15Parameters.Н15ТумблерР_Н;
+
+            локН15КнопкаН13_1 = N15Parameters.Н15КнопкаН13_1;
+            локН15КнопкаН13_2 = N15Parameters.Н15КнопкаН13_2;
+            локН15КнопкаН13_12 = N15Parameters.Н15КнопкаН13_12;
         }
 
         private void Н15ТумблерЦ300М1_Click(object sender, EventArgs e)
@@ -866,15 +1010,15 @@ namespace R440O.R440OForms.N15
 
         private void Н15ТумблерА20512_Click(object sender, EventArgs e)
         {
-            if (N15Parameters.Н15ТумблерА20512 == "1")
+            if (локН15ТумблерА20512 == "1")
             {
                 this.Н15ТумблерА20512.BackgroundImage = ControlElementImages.tumblerVerticalType1Down;
-                N15Parameters.Н15ТумблерА20512 = "2";
+                локН15ТумблерА20512 = "2";
             }
             else
             {
                 this.Н15ТумблерА20512.BackgroundImage = ControlElementImages.tumblerVerticalType1Up;
-                N15Parameters.Н15ТумблерА20512 = "1";
+                локН15ТумблерА20512 = "1";
             }
         }
 
