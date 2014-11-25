@@ -4,15 +4,16 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-using R440O.R440OForms.A304;
-using R440O.R440OForms.N15;
-
 namespace R440O.R440OForms.R440O
 {
     using System;
     using System.Linq;
     using System.Windows.Forms;
-    using Parameters;
+    using A304;
+    using N15;
+    using N502B;
+    using NKN_1;
+    using NKN_2;
 
     /// <summary>
     /// Форма станции Р440-О
@@ -54,7 +55,7 @@ namespace R440O.R440OForms.R440O
                 const string R440_O_FORMS_STRING = "R440O.R440OForms.";
                 var typeName = R440_O_FORMS_STRING + blockName + "." + formName;
                 // ReSharper disable once AssignNullToNotNullAttribute by trycatch
-                var thisForm = Activator.CreateInstance(type: Type.GetType(typeName));
+                var thisForm = Activator.CreateInstance(Type.GetType(typeName));
                 var newForm = (Form)thisForm;
                 
                 //Подписка на события
@@ -63,7 +64,7 @@ namespace R440O.R440OForms.R440O
                     case "A304Form":
                     {
                         var newA304Form = new A304Form();
-                        var n15Form = (N15Form)this.getSpecificForm("N15Form");
+                        var n15Form = (N15Form)this.GetSpecificForm("N15Form");
                         if (n15Form != null)
                         {
                             n15Form.A30412StateChange += newA304Form.TurnLampsEvent;
@@ -75,12 +76,48 @@ namespace R440O.R440OForms.R440O
                     case "N15Form":
                     {
                         var n15Form = new N15Form();
-                        var newA304Form = (A304Form)this.getSpecificForm("A304Form");
+                        var newA304Form = (A304Form)this.GetSpecificForm("A304Form");
                         if (newA304Form != null)
                         {
                             n15Form.A30412StateChange += newA304Form.TurnLampsEvent;
                         }
                         newForm = n15Form;
+                    }
+                    break;
+                    case "N502BForm":
+                    {
+                        var newN502BForm = new N502BForm();
+                        var nkn1Form = (NKN_1Form)this.GetSpecificForm("NKN_1Form");
+                        if (nkn1Form != null) newN502BForm.PowerTumblersChanged += nkn1Form.TurnLamps;
+
+                        var nkn2Form = (NKN_2Form)this.GetSpecificForm("NKN_2Form");
+                        if (nkn2Form != null) newN502BForm.PowerTumblersChanged += nkn2Form.TurnLamps;
+
+                        newForm = newN502BForm;
+                    }
+                    break;
+
+                    case "NKN_1Form":
+                    {
+                        var newNkn1Form = new NKN_1Form();
+                        var n502BForm = (N502BForm)this.GetSpecificForm("N502BForm");
+                        if (n502BForm != null)
+                        {
+                            n502BForm.PowerTumblersChanged += newNkn1Form.TurnLamps;
+                        }
+                        newForm = newNkn1Form;
+                    }
+                    break;
+
+                    case "NKN_2Form":
+                    {
+                        var newNkn2Form = new NKN_2Form();
+                        var n502BForm = (N502BForm)this.GetSpecificForm("N502BForm");
+                        if (n502BForm != null)
+                        {
+                            n502BForm.PowerTumblersChanged += newNkn2Form.TurnLamps;
+                        }
+                        newForm = newNkn2Form;
                     }
                     break;
                 }
@@ -92,16 +129,12 @@ namespace R440O.R440OForms.R440O
             }
         }
 
-        private Form getSpecificForm(string formName)
+        private Form GetSpecificForm(string formName)
         {
-            foreach (Form form in OwnedForms.Where(form => form.Name == formName))
-            {
-                var specificForm = new Form();
-                specificForm = form;
-                return specificForm;
-            }
-            return null;
+            return (from form in OwnedForms.Where(form => form.Name == formName) 
+                    let specificForm = new Form() select form).FirstOrDefault();
         }
+
         private void R440OForm_Load(object sender, EventArgs e)
         {
         }

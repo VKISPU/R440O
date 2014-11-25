@@ -74,6 +74,8 @@
     <Compile Include="Parameters\N15Parameters.cs" />
     <Compile Include="Parameters\A1Parameters.cs" />
     <Compile Include="Parameters\N502BParameters.cs" />
+    <Compile Include="Parameters\NKN_2Parameters.cs" />
+    <Compile Include="Parameters\NKN_1Parameters.cs" />
     <Compile Include="Parameters\P220_27G_2Parameters.cs" />
     <Compile Include="Parameters\P220_27G_3Parameters.cs" />
     <Compile Include="Parameters\PowerCabelParameters.cs" />
@@ -1053,6 +1055,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Astra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonRoundWhite.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

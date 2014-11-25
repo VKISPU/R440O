@@ -4,7 +4,6 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-using System;
 using R440O.Parameters;
 using R440O.ThirdParty;
 
@@ -26,33 +25,24 @@ namespace R440O.R440OForms.N502B
             InitializeTogglesPosition();
             InitializeTumblersPosition();
         }
+
         #region Тумблеры
         private void N502BТумблерЭлектрооборуд_Click(object sender, System.EventArgs e)
         {
-            if (N502BParameters.N502BТумблерЭлектрооборуд == "true")
-            {
-                this.N502BТумблерЭлектрооборуд.BackgroundImage = ControlElementImages.tumblerVerticalType2Down;
-                N502BParameters.N502BТумблерЭлектрооборуд = "false"; 
-            }
-            else
-            {
-                this.N502BТумблерЭлектрооборуд.BackgroundImage = ControlElementImages.tumblerVerticalType2Up;
-                N502BParameters.N502BТумблерЭлектрооборуд = "true";
-            }
+            N502BParameters.N502BТумблерЭлектрооборуд = !N502BParameters.N502BТумблерЭлектрооборуд;
+            this.N502BТумблерЭлектрооборуд.BackgroundImage = N502BParameters.N502BТумблерЭлектрооборуд 
+                ? ControlElementImages.tumblerVerticalType2Up 
+                : ControlElementImages.tumblerVerticalType2Down;
+            if (PowerTumblersChanged != null) PowerTumblersChanged();
         }
 
         private void N502BТумблерВыпрямитель27В_Click(object sender, System.EventArgs e)
         {
-            if (N502BParameters.N502BТумблерВыпрямитель27В == "true")
-            {
-                this.N502BТумблерВыпрямитель27В.BackgroundImage = ControlElementImages.tumblerVerticalType2Down;
-                N502BParameters.N502BТумблерВыпрямитель27В = "false";
-            }
-            else
-            {
-                this.N502BТумблерВыпрямитель27В.BackgroundImage = ControlElementImages.tumblerVerticalType2Up;
-                N502BParameters.N502BТумблерВыпрямитель27В = "true";
-            }
+            N502BParameters.N502BТумблерВыпрямитель27В = !N502BParameters.N502BТумблерВыпрямитель27В;
+            this.N502BТумблерВыпрямитель27В.BackgroundImage = N502BParameters.N502BТумблерВыпрямитель27В 
+                ? ControlElementImages.tumblerVerticalType2Up
+                : ControlElementImages.tumblerVerticalType2Down;
+            if (PowerTumblersChanged != null) PowerTumblersChanged();
         }
 
         private void N502BТумблерОсвещение_Click(object sender, System.EventArgs e)
@@ -312,11 +302,11 @@ namespace R440O.R440OForms.N502B
         /// </summary>
         private void InitializeTumblersPosition()
         {
-            this.N502BТумблерЭлектрооборуд.BackgroundImage = N502BParameters.N502BТумблерЭлектрооборуд == "false" ? 
-                ControlElementImages.tumblerVerticalType2Down : ControlElementImages.tumblerVerticalType2Up;
+            this.N502BТумблерЭлектрооборуд.BackgroundImage = N502BParameters.N502BТумблерЭлектрооборуд ? 
+                ControlElementImages.tumblerVerticalType2Up : ControlElementImages.tumblerVerticalType2Down;
 
-            this.N502BТумблерВыпрямитель27В.BackgroundImage = N502BParameters.N502BТумблерВыпрямитель27В == "false" ?
-                ControlElementImages.tumblerVerticalType2Down : ControlElementImages.tumblerVerticalType2Up;
+            this.N502BТумблерВыпрямитель27В.BackgroundImage = N502BParameters.N502BТумблерВыпрямитель27В ?
+                ControlElementImages.tumblerVerticalType2Up : ControlElementImages.tumblerVerticalType2Down;
 
             this.N502BТумблерОсвещение.BackgroundImage = N502BParameters.N502BТумблерОсвещение == "false" ?
                 ControlElementImages.tumblerVerticalType2Down : ControlElementImages.tumblerVerticalType2Up;
@@ -373,6 +363,14 @@ namespace R440O.R440OForms.N502B
             N502BПереключательТокНагрузкиИЗаряда.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType4, angle);
         }
+        #endregion
+
+        #region События
+        public delegate void VoidVoidSignature();
+        /// <summary>
+        /// Событие переключения тумблеров управления питанием
+        /// </summary>
+        public event VoidVoidSignature PowerTumblersChanged;
         #endregion
     }
 }

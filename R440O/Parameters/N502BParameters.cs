@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace R440O.Parameters
+﻿namespace R440O.Parameters
 {
     class N502BParameters
     {
@@ -22,8 +16,14 @@ namespace R440O.Parameters
 
         #region Тумблеры
         //Тумблеры
-        public static string N502BТумблерЭлектрооборуд = "false";
-        public static string N502BТумблерВыпрямитель27В = "false";
+        /// <summary>
+        /// true - вкл, false - выкл
+        /// </summary>
+        public static bool N502BТумблерЭлектрооборуд = false;
+        /// <summary>
+        /// true - вкл, false - выкл
+        /// </summary>
+        public static bool N502BТумблерВыпрямитель27В = false;
         public static string N502BТумблерОсвещение = "false";
         public static string N502BТумблерН13_1 = "false";
         public static string N502BТумблерН13_2 = "false";

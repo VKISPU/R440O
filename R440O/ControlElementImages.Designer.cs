@@ -193,6 +193,16 @@ namespace R440O {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap buttonRoundWhite {
+            get {
+                object obj = ResourceManager.GetObject("buttonRoundWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap buttonSmall {
             get {
                 object obj = ResourceManager.GetObject("buttonSmall", resourceCulture);
