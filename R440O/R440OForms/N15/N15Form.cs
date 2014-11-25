@@ -164,6 +164,10 @@ namespace R440O.R440OForms.N15
                         this.Н15ЛампочкаА3042.BackgroundImage = null;
                     }
             }
+            if (A30412StateChange != null)
+            {
+                A30412StateChange();
+            }
             #endregion
 
             #region Н15ТумблерБМА_1
@@ -887,6 +891,10 @@ namespace R440O.R440OForms.N15
 
                     N15Parameters.Н15ЛампочкаА3041 = "false";
                     this.Н15ЛампочкаА3041.BackgroundImage = null;
+                    if (A30412StateChange != null)
+                    {
+                        A30412StateChange();
+                    }
                 }
             }
             else
@@ -900,14 +908,20 @@ namespace R440O.R440OForms.N15
 
                     N15Parameters.Н15ЛампочкаА3042 = "false";
                     this.Н15ЛампочкаА3042.BackgroundImage = null;
+                    if (A30412StateChange != null)
+                    {
+                        A30412StateChange();
+                    }
                 }
             }
-            if (OnA30412Click != null)
-            {
-                OnA30412Click();
-            }
         }
+
+        #region События
         public delegate void VoidVoidSignature();
-        public event VoidVoidSignature OnA30412Click;
+        /// <summary>
+        /// Изменилось состояние блока A304
+        /// </summary>
+        public event VoidVoidSignature A30412StateChange; 
+        #endregion
     }
 }

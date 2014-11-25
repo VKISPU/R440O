@@ -266,7 +266,12 @@ namespace R440O.Parameters
         public static string Н15ЛампочкаН12С { get { return _Н15ЛампочкаН12С; } set { _Н15ЛампочкаН12С = value; } }
         private static string _Н15ЛампочкаН12С = "false";
 
+        /// <summary>
+        /// Возможные состояния: true, false
+        /// </summary>
+        private static string _Н15ЛампочкаМШУ = "false";
         public static string Н15ЛампочкаМШУ { get; set; }
+
         public static string Н15ЛампочкаБМА_1 { get; set; }
         public static string Н15ЛампочкаБМА_2 { get; set; }
         public static string Н15Лампочка27В { get; set; }

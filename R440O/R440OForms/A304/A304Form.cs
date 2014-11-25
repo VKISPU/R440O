@@ -29,14 +29,21 @@ namespace R440O.R440OForms.A304
         }
 
         #region Инициализация состояний элементов управления
+
         /// <summary>
         /// Инициализировать положения тумблеров
         /// </summary>
         private void InitializeTumblers()
         {
-            this.A304ТумблерМестноеДистанц_1.BackgroundImage = A304Parameters.A304ТумблерМестноеДистанц_1 == "местное" ? ControlElementImages.tumblerVerticalType3Down : ControlElementImages.tumblerVerticalType3Up;
-            this.A304ТумблерМестноеДистанц_2.BackgroundImage = A304Parameters.A304ТумблерМестноеДистанц_2 == "местное" ? ControlElementImages.tumblerVerticalType3Down : ControlElementImages.tumblerVerticalType3Up;
-            this.A304Тумблер1К2К.BackgroundImage = A304Parameters.A304Тумблер1К2К == 1 ? ControlElementImages.tumblerHorizontalType1Left : ControlElementImages.tumblerHorizontalType1Right;
+            this.A304ТумблерМестноеДистанц_1.BackgroundImage = A304Parameters.A304ТумблерМестноеДистанц_1 == "местное"
+                ? ControlElementImages.tumblerVerticalType3Down
+                : ControlElementImages.tumblerVerticalType3Up;
+            this.A304ТумблерМестноеДистанц_2.BackgroundImage = A304Parameters.A304ТумблерМестноеДистанц_2 == "местное"
+                ? ControlElementImages.tumblerVerticalType3Down
+                : ControlElementImages.tumblerVerticalType3Up;
+            this.A304Тумблер1К2К.BackgroundImage = A304Parameters.A304Тумблер1К2К == 1
+                ? ControlElementImages.tumblerHorizontalType1Left
+                : ControlElementImages.tumblerHorizontalType1Right;
         }
 
         /// <summary>
@@ -52,14 +59,11 @@ namespace R440O.R440OForms.A304
             }
             else
             {
-                if (isEnablePowerOfМШУ())
-                {
-                    A304Parameters.A304Комплект1 = N15Parameters.Н15ТумблерА30412 == "1";
+                A304Parameters.A304Комплект1 = N15Parameters.Н15ТумблерА30412 == "1";
 
-                    A304Лампочка1К.BackgroundImage = N15Parameters.Н15ТумблерА30412 == "1"
-                        ? ControlElementImages.lampType10OnGreen
-                        : null;
-                }
+                A304Лампочка1К.BackgroundImage = N15Parameters.Н15ТумблерА30412 == "1"
+                    ? ControlElementImages.lampType10OnGreen
+                    : null;
             }
 
             if (A304Parameters.A304ТумблерМестноеДистанц_2 == "местное")
@@ -70,13 +74,10 @@ namespace R440O.R440OForms.A304
             }
             else
             {
-                if (isEnablePowerOfМШУ())
-                {
-                    A304Parameters.A304Комплект2 = N15Parameters.Н15ТумблерА30412 == "2";
-                    A304Лампочка2К.BackgroundImage = N15Parameters.Н15ТумблерА30412 == "2"
-                        ? ControlElementImages.lampType10OnGreen
-                        : null;
-                }
+                A304Parameters.A304Комплект2 = N15Parameters.Н15ТумблерА30412 == "2";
+                A304Лампочка2К.BackgroundImage = N15Parameters.Н15ТумблерА30412 == "2"
+                    ? ControlElementImages.lampType10OnGreen
+                    : null;
             }
         }
 
@@ -85,11 +86,11 @@ namespace R440O.R440OForms.A304
         /// </summary>
         private void InitializeTogglePosition()
         {
-            var angle = A304Parameters.A304ПереключательВыборСтвола * 26 - 145;
+            var angle = A304Parameters.A304ПереключательВыборСтвола*26 - 145;
             A304ПереключательВыборСтвола.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
 
-            angle = A304Parameters.A304ПереключательКонтроль * 30 - 150;
+            angle = A304Parameters.A304ПереключательКонтроль*30 - 150;
             A304ПереключательКонтрольButton.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
         }
@@ -101,7 +102,7 @@ namespace R440O.R440OForms.A304
         {
             int isEnableKit;
             if ((A304Parameters.A304Тумблер1К2К == 1 && A304Parameters.A304Комплект1) ||
-                (A304Parameters.A304Тумблер1К2К == 2 && A304Parameters.A304Комплект2) && isEnablePowerOfМШУ())
+                (A304Parameters.A304Тумблер1К2К == 2 && A304Parameters.A304Комплект2))
             {
                 isEnableKit = 1;
             }
@@ -110,28 +111,32 @@ namespace R440O.R440OForms.A304
                 isEnableKit = 2;
             }
 
-            switch (A304Parameters.A304ЗначенияПереключательКонтроль[A304Parameters.A304ПереключательКонтроль - 1, isEnableKit])
+            switch (
+                A304Parameters.A304ЗначенияПереключательКонтроль[
+                    A304Parameters.A304ПереключательКонтроль - 1, isEnableKit])
             {
                 case "-1":
-                    {
-                        A304СтрелкаКонтроляНапряжения.BackgroundImage = ControlElementImages.arrowLeft;
-                    }
+                {
+                    A304СтрелкаКонтроляНапряжения.BackgroundImage = ControlElementImages.arrowLeft;
+                }
                     break;
                 case "0":
-                    {
-                        A304СтрелкаКонтроляНапряжения.BackgroundImage = ControlElementImages.arrowNormal;
-                    }
+                {
+                    A304СтрелкаКонтроляНапряжения.BackgroundImage = ControlElementImages.arrowNormal;
+                }
                     break;
                 case "1":
-                    {
-                        A304СтрелкаКонтроляНапряжения.BackgroundImage = ControlElementImages.arrowRight;
-                    }
+                {
+                    A304СтрелкаКонтроляНапряжения.BackgroundImage = ControlElementImages.arrowRight;
+                }
                     break;
             }
         }
+
         #endregion
 
         #region Тумблеры управления типом подачи питания
+
         /// <summary>
         /// Перключение типа подачи питания для первого комплекта оборудования
         /// </summary>
@@ -147,7 +152,7 @@ namespace R440O.R440OForms.A304
                 this.A304ТумблерМестноеДистанц_1.BackgroundImage = ControlElementImages.tumblerVerticalType3Up;
                 A304Parameters.A304ТумблерМестноеДистанц_1 = "дистанц";
             }
-            TurnLamps(1, A304Parameters.A304ТумблерМестноеДистанц_1);
+            TurnLamps(1);
         }
 
         /// <summary>
@@ -165,7 +170,7 @@ namespace R440O.R440OForms.A304
                 this.A304ТумблерМестноеДистанц_2.BackgroundImage = ControlElementImages.tumblerVerticalType3Up;
                 A304Parameters.A304ТумблерМестноеДистанц_2 = "дистанц";
             }
-            TurnLamps(2, A304Parameters.A304ТумблерМестноеДистанц_2);
+            TurnLamps(2);
         }
 
         /// <summary>
@@ -184,9 +189,11 @@ namespace R440O.R440OForms.A304
                 A304Parameters.A304Тумблер1К2К = 1;
             }
         }
+
         #endregion
 
         #region Кнопки включения питания
+
         //// Включение местного питания 1 комплекта
         private void A304Кнопка1КВкл_MouseDown(object sender, MouseEventArgs e)
         {
@@ -212,6 +219,7 @@ namespace R440O.R440OForms.A304
             this.A304Кнопка2КВкл.Text = "";
 
         }
+
         private void A304Кнопка2КВкл_MouseUp(object sender, MouseEventArgs e)
         {
             this.A304Кнопка2КВкл.BackgroundImage = ControlElementImages.ButtonGreyUp;
@@ -247,7 +255,7 @@ namespace R440O.R440OForms.A304
             this.A304Кнопка2КОткл.BackgroundImage = null;
             this.A304Кнопка2КОткл.Text = "";
         }
-        
+
         private void A304Кнопка2КОткл_MouseUp(object sender, MouseEventArgs e)
         {
             this.A304Кнопка2КОткл.BackgroundImage = ControlElementImages.ButtonGreyUp;
@@ -258,6 +266,7 @@ namespace R440O.R440OForms.A304
                 TurnLamps();
             }
         }
+
         #endregion
 
         #region Контроль за включенным комплектом оборудования(Лампочки)
@@ -268,9 +277,9 @@ namespace R440O.R440OForms.A304
         public void TurnLampsEvent()
         {
             if (A304Parameters.A304ТумблерМестноеДистанц_1 == "дистанц")
-                TurnLamps(1, A304Parameters.A304ТумблерМестноеДистанц_1);
+                TurnLamps(1);
             if (A304Parameters.A304ТумблерМестноеДистанц_2 == "дистанц")
-                TurnLamps(2, A304Parameters.A304ТумблерМестноеДистанц_2);
+                TurnLamps(2);
         }
 
         /// <summary>
@@ -278,8 +287,12 @@ namespace R440O.R440OForms.A304
         /// </summary>
         private void TurnLamps()
         {
-            A304Лампочка1К.BackgroundImage = A304Parameters.A304Комплект1 ? ControlElementImages.lampType10OnGreen : null;
-            A304Лампочка2К.BackgroundImage = A304Parameters.A304Комплект2 ? ControlElementImages.lampType10OnGreen : null;
+            A304Лампочка1К.BackgroundImage = A304Parameters.A304Комплект1
+                ? ControlElementImages.lampType10OnGreen
+                : null;
+            A304Лампочка2К.BackgroundImage = A304Parameters.A304Комплект2
+                ? ControlElementImages.lampType10OnGreen
+                : null;
         }
 
         /// <summary>
@@ -287,41 +300,33 @@ namespace R440O.R440OForms.A304
         /// Если тип управления питанием - дистанционный, комплекты(лампочки) включаются в соответствии с выбранным на блоке Н-15
         /// </summary>
         /// <param name="numberOfKit">Номер комплекта в котором для которого переключается тумблер управления питанием</param>
-        /// <param name="type">Тип на который переключилось питание</param>
-        private void TurnLamps(int numberOfKit, string type)
+        private void TurnLamps(int numberOfKit)
         {
             switch (numberOfKit)
             {
                 case 1:
-                    {
-                        A304Parameters.A304Комплект1 = N15Parameters.Н15ТумблерА30412 == "1";
-                        if (type == "местное")
-                        {
-                            A304Лампочка1К.BackgroundImage = A304Parameters.A304Комплект1
-                                ? ControlElementImages.lampType10OnGreen
-                                : null;
-                        }
-                        else A304Лампочка1К.BackgroundImage = N15Parameters.Н15ТумблерА30412 == "1" ? ControlElementImages.lampType10OnGreen : null;
-                    }
+                {
+                    A304Parameters.A304Комплект1 = N15Parameters.Н15ТумблерА30412 == "1" && N15Parameters.Н15ЛампочкаМШУ == "true";
+                    A304Лампочка1К.BackgroundImage = A304Parameters.A304Комплект1
+                        ? ControlElementImages.lampType10OnGreen
+                        : null;
+                }
                     break;
                 case 2:
-                    {
-                        A304Parameters.A304Комплект2 = N15Parameters.Н15ТумблерА30412 == "2";
-                        if (type == "местное")
-                        {
-                            A304Лампочка2К.BackgroundImage = A304Parameters.A304Комплект2
-                                ? ControlElementImages.lampType10OnGreen
-                                : null;
-                        }
-                        else
-                            A304Лампочка2К.BackgroundImage = N15Parameters.Н15ТумблерА30412 == "2" ? ControlElementImages.lampType10OnGreen : null;
-                    }
+                {
+                    A304Parameters.A304Комплект2 = N15Parameters.Н15ТумблерА30412 == "2" && N15Parameters.Н15ЛампочкаМШУ == "true";
+                    A304Лампочка2К.BackgroundImage = A304Parameters.A304Комплект2
+                        ? ControlElementImages.lampType10OnGreen
+                        : null;
+                }
                     break;
             }
         }
+
         #endregion
 
         #region Изменение положения переключателей выбора ствола и контроля
+
         /// <summary>
         /// Выбор ствола
         /// </summary>
@@ -337,7 +342,7 @@ namespace R440O.R440OForms.A304
                 A304Parameters.A304ПереключательВыборСтвола -= 1;
             }
 
-            var angle = A304Parameters.A304ПереключательВыборСтвола * 26 - 145;
+            var angle = A304Parameters.A304ПереключательВыборСтвола*26 - 145;
             A304ПереключательВыборСтвола.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
         }
@@ -361,7 +366,7 @@ namespace R440O.R440OForms.A304
             A304ПереключательКонтрольButton.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
 
-           this.InitializeControl();
+            this.InitializeControl();
         }
 
         /// <summary>
@@ -379,11 +384,7 @@ namespace R440O.R440OForms.A304
                 A304СтрелкаКонтроляНапряжения.BackgroundImage = ControlElementImages.arrowNormal;
             }
         }
-        #endregion
 
-        private bool isEnablePowerOfМШУ()
-        {
-            return N15Parameters.Н15ТумблерМШУ == "true";
-        }
+        #endregion
     }
 }

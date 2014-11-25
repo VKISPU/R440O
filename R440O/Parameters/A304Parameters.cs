@@ -6,13 +6,36 @@
         /// <summary>
         /// Параметр для лампочки. Возможные состояния: true, false
         /// </summary>
-        public static bool A304Комплект1 = false;
+        private static bool _a304Комплект1 = false;
 
         /// <summary>
         /// Параметр для лампочки. Возможные состояния: true, false
         /// </summary>
-        public static bool A304Комплект2 = false;
-        
+        private static bool _a304Комплект2 = false;
+
+        /// <summary>
+        /// Параметр для лампочки. Возможные состояния: true, false
+        /// </summary>
+        public static bool A304Комплект1
+        {
+            get { return _a304Комплект1; }
+            set
+            {
+                _a304Комплект1 = value;
+            }
+        }
+
+        /// <summary>
+        /// Параметр для лампочки. Возможные состояния: true, false
+        /// </summary>
+        public static bool A304Комплект2
+        {
+            get { return _a304Комплект2; }
+            set
+            {
+                _a304Комплект2 = value;
+            }
+        }
         //Лампочки
         public static string A304ЛампочкаПерегрев1К { get; set; }
         public static string A304ЛампочкаПерегрев2К { get; set; }

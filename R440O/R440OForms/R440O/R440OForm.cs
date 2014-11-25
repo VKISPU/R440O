@@ -66,7 +66,7 @@ namespace R440O.R440OForms.R440O
                         var n15Form = (N15Form)this.getSpecificForm("N15Form");
                         if (n15Form != null)
                         {
-                            n15Form.OnA30412Click += newA304Form.TurnLampsEvent;
+                            n15Form.A30412StateChange += newA304Form.TurnLampsEvent;
                         }
                         newForm = newA304Form;
                     }
@@ -78,7 +78,7 @@ namespace R440O.R440OForms.R440O
                         var newA304Form = (A304Form)this.getSpecificForm("A304Form");
                         if (newA304Form != null)
                         {
-                            n15Form.OnA30412Click += newA304Form.TurnLampsEvent;
+                            n15Form.A30412StateChange += newA304Form.TurnLampsEvent;
                         }
                         newForm = n15Form;
                     }
