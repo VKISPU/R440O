@@ -188,6 +188,7 @@ namespace R440O.R440OForms.A304
                 this.A304Тумблер1К2К.BackgroundImage = ControlElementImages.tumblerHorizontalType1Left;
                 A304Parameters.A304Тумблер1К2К = 1;
             }
+            this.InitializeControl();
         }
 
         #endregion
@@ -280,6 +281,7 @@ namespace R440O.R440OForms.A304
                 TurnLamps(1);
             if (A304Parameters.A304ТумблерМестноеДистанц_2 == "дистанц")
                 TurnLamps(2);
+            this.InitializeControl();
         }
 
         /// <summary>
@@ -293,6 +295,7 @@ namespace R440O.R440OForms.A304
             A304Лампочка2К.BackgroundImage = A304Parameters.A304Комплект2
                 ? ControlElementImages.lampType10OnGreen
                 : null;
+            this.InitializeControl();
         }
 
         /// <summary>
@@ -321,6 +324,7 @@ namespace R440O.R440OForms.A304
                 }
                     break;
             }
+            this.InitializeControl();
         }
 
         #endregion
