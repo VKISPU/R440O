@@ -31,7 +31,7 @@
             this.B3_1Panel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // B3_2Panel
+            // B3_1Panel
             // 
             this.B3_1Panel.BackgroundImage = global::R440O.BackgroundImages.B3;
             this.B3_1Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -40,7 +40,7 @@
             this.B3_1Panel.Size = new System.Drawing.Size(1104, 354);
             this.B3_1Panel.TabIndex = 0;
             // 
-            // B3_2Form
+            // B3_1Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -120,6 +121,15 @@ namespace R440O.Parameters
         public static string A403_1Кнопкаtуст_Ybeta { get; set; }
         #endregion
 
-        //Индикаторы
+        #region Табло
+        public static string A403_1ТаблоПоле0 { get; set; }
+        public static string A403_1ТаблоПолe1 { get; set; }
+        public static string A403_1ТаблоПоле2 { get; set; }
+        public static string A403_1ТаблоПоле3 { get; set; }
+        public static string A403_1ТаблоПоле4 { get; set; }
+        public static string A403_1ТаблоПоле5 { get; set; }
+        public static string A403_1ТаблоПоле6 { get; set; }
+
+        #endregion
     }
 }

@@ -23,6 +23,7 @@ namespace R440O.R440OForms.N18_M
         {
             this.InitializeComponent();
             InitializeTogglesPosition();
+            InitializeTumblersPosition();
         }
 
         #region Тумблеры
@@ -30,12 +31,12 @@ namespace R440O.R440OForms.N18_M
         {
             if (N18_MParameters.N18_MТумблерДАБ5 == "прм-1")
             {
-                this.N18_MТумблерДАБ5.BackgroundImage = ControlElementImages.tumblerHorizontalType5Right;
+                this.N18_MТумблерДАБ5.BackgroundImage = ControlElementImages.tumblerType5Right;
                 N18_MParameters.N18_MТумблерДАБ5 = "прм-2";
             }
             else
             {
-                this.N18_MТумблерДАБ5.BackgroundImage = ControlElementImages.tumblerHorizontalType5Left;
+                this.N18_MТумблерДАБ5.BackgroundImage = ControlElementImages.tumblerType5Left;
                 N18_MParameters.N18_MТумблерДАБ5 = "прм-1";
             }
         }
@@ -44,12 +45,12 @@ namespace R440O.R440OForms.N18_M
         {
             if (N18_MParameters.N18_MТумблерКАУ_ПРМ == "б1-1")
             {
-                this.N18_MТумблерКАУ_ПРМ.BackgroundImage = ControlElementImages.tumblerHorizontalType5Right;
+                this.N18_MТумблерКАУ_ПРМ.BackgroundImage = ControlElementImages.tumblerType5Right;
                 N18_MParameters.N18_MТумблерКАУ_ПРМ = "б3-1";
             }
             else
             {
-                this.N18_MТумблерКАУ_ПРМ.BackgroundImage = ControlElementImages.tumblerHorizontalType5Left;
+                this.N18_MТумблерКАУ_ПРМ.BackgroundImage = ControlElementImages.tumblerType5Left;
                 N18_MParameters.N18_MТумблерКАУ_ПРМ = "б1-1";
             }
         }
@@ -58,12 +59,12 @@ namespace R440O.R440OForms.N18_M
         {
             if (N18_MParameters.N18_MТумблерПРД_СС == "контур-П")
             {
-                this.N18_MТумблерПРД_СС.BackgroundImage = ControlElementImages.tumblerHorizontalType5Right;
-                N18_MParameters.N18_MТумблерПРД_СС = "ЩВ";
+                this.N18_MТумблерПРД_СС.BackgroundImage = ControlElementImages.tumblerType5Right;
+                N18_MParameters.N18_MТумблерПРД_СС = "щв";
             }
             else
             {
-                this.N18_MТумблерПРД_СС.BackgroundImage = ControlElementImages.tumblerHorizontalType5Left;
+                this.N18_MТумблерПРД_СС.BackgroundImage = ControlElementImages.tumblerType5Left;
                 N18_MParameters.N18_MТумблерПРД_СС = "контур-П";
             }
         }
@@ -72,12 +73,12 @@ namespace R440O.R440OForms.N18_M
         {
             if (N18_MParameters.N18_MТумблерТЛФ_ПРМ == "осн")
             {
-                this.N18_MТумблерТЛФ_ПРМ.BackgroundImage = ControlElementImages.tumblerHorizontalType5Right;
+                this.N18_MТумблерТЛФ_ПРМ.BackgroundImage = ControlElementImages.tumblerType5Right;
                 N18_MParameters.N18_MТумблерТЛФ_ПРМ = "резерв";
             }
             else
             {
-                this.N18_MТумблерТЛФ_ПРМ.BackgroundImage = ControlElementImages.tumblerHorizontalType5Left;
+                this.N18_MТумблерТЛФ_ПРМ.BackgroundImage = ControlElementImages.tumblerType5Left;
                 N18_MParameters.N18_MТумблерТЛФ_ПРМ = "осн";
             }
         }
@@ -115,6 +116,153 @@ namespace R440O.R440OForms.N18_M
             N18_MПереключательПРМ2.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
+
+
+        private void N18_MПереключательВходК1_2_1_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                N18_MParameters.N18_MПереключательВходК1_2_1 += 1;
+            }
+            if (e.Button == MouseButtons.Right)
+            {
+                N18_MParameters.N18_MПереключательВходК1_2_1 -= 1;
+            }
+
+            var angle = N18_MParameters.N18_MПереключательВходК1_2_1 * 40 - 120;
+            N18_MПереключательВходК1_2_1.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+        }
+
+        private void N18_MПереключательПРД_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                N18_MParameters.N18_MПереключательПРД += 1;
+            }
+            if (e.Button == MouseButtons.Right)
+            {
+                N18_MParameters.N18_MПереключательПРД -= 1;
+            }
+
+            var angle = N18_MParameters.N18_MПереключательПРД * 40 - 120;
+            N18_MПереключательПРД.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+        }
+
+        private void N18_MПереключательПРДБМА12_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                N18_MParameters.N18_MПереключательПРДБМА12 += 1;
+            }
+            if (e.Button == MouseButtons.Right)
+            {
+                N18_MParameters.N18_MПереключательПРДБМА12 -= 1;
+            }
+
+            var angle = N18_MParameters.N18_MПереключательПРДБМА12 * 28 - 180;
+            if (N18_MParameters.N18_MПереключательПРДБМА12 == 6) angle += 12;
+            else if (N18_MParameters.N18_MПереключательПРДБМА12 > 6) angle += 28;   //Смещение
+            N18_MПереключательПРДБМА12.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+        }
+
+        private void N18_MПереключательПРМСС1_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                N18_MParameters.N18_MПереключательПРМСС1 += 1;
+            }
+            if (e.Button == MouseButtons.Right)
+            {
+                N18_MParameters.N18_MПереключательПРМСС1 -= 1;
+            }
+
+            var angle = N18_MParameters.N18_MПереключательПРМСС1 * 40 - 120;
+            N18_MПереключательПРМСС1.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+        }
+
+        private void N18_MПереключательПРМСС2_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                N18_MParameters.N18_MПереключательПРМСС2 += 1;
+            }
+            if (e.Button == MouseButtons.Right)
+            {
+                N18_MParameters.N18_MПереключательПРМСС2 -= 1;
+            }
+
+            var angle = N18_MParameters.N18_MПереключательПРМСС2 * 40 - 120;
+            N18_MПереключательПРМСС2.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+        }
+
+        private void N18_MПереключатель48ПРМЩВ_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                N18_MParameters.N18_MПереключатель48ПРМЩВ += 1;
+            }
+            if (e.Button == MouseButtons.Right)
+            {
+                N18_MParameters.N18_MПереключатель48ПРМЩВ -= 1;
+            }
+
+            var angle = N18_MParameters.N18_MПереключатель48ПРМЩВ * 50 - 75;
+            N18_MПереключатель48ПРМЩВ.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+        }
+
+        private void N18_MПереключательВыход2РН_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                N18_MParameters.N18_MПереключательВыход2РН += 1;
+            }
+            if (e.Button == MouseButtons.Right)
+            {
+                N18_MParameters.N18_MПереключательВыход2РН -= 1;
+            }
+
+            var angle = N18_MParameters.N18_MПереключательВыход2РН * 50 - 75;
+            N18_MПереключательВыход2РН.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+        }
+
+        private void N18_MПереключательВыход1РН_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                N18_MParameters.N18_MПереключательВыход1РН += 1;
+            }
+            if (e.Button == MouseButtons.Right)
+            {
+                N18_MParameters.N18_MПереключательВыход1РН -= 1;
+            }
+
+            var angle = N18_MParameters.N18_MПереключательВыход1РН * 50 - 75;
+            N18_MПереключательВыход1РН.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+        }
+
+        private void N18_MПереключательВходБ22_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                N18_MParameters.N18_MПереключательВходБ22 += 1;
+            }
+            if (e.Button == MouseButtons.Right)
+            {
+                N18_MParameters.N18_MПереключательВходБ22 -= 1;
+            }
+
+            var angle = N18_MParameters.N18_MПереключательВходБ22 * 50 - 75;
+            N18_MПереключательВходБ22.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+        }
         #endregion
 
         #region Инициализация
@@ -127,6 +275,59 @@ namespace R440O.R440OForms.N18_M
             angle = N18_MParameters.N18_MПереключательПРМ2 * 40 - 120;
             N18_MПереключательПРМ2.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+
+            angle = N18_MParameters.N18_MПереключательВходК1_2_1 * 40 - 120;
+            N18_MПереключательВходК1_2_1.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+
+            angle = N18_MParameters.N18_MПереключательПРД * 40 - 120;
+            N18_MПереключательПРД.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+
+            angle = N18_MParameters.N18_MПереключательПРДБМА12 * 28 - 180;
+            if (N18_MParameters.N18_MПереключательПРДБМА12 == 6) angle += 12;
+            else if (N18_MParameters.N18_MПереключательПРДБМА12 > 6) angle += 28;   //Смещение
+            N18_MПереключательПРДБМА12.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+
+            angle = N18_MParameters.N18_MПереключательПРМСС1 * 40 - 120;
+            N18_MПереключательПРД.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+
+            angle = N18_MParameters.N18_MПереключатель48ПРМЩВ * 50 - 75;
+            N18_MПереключатель48ПРМЩВ.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+
+            angle = N18_MParameters.N18_MПереключательВыход2РН * 50 - 75;
+            N18_MПереключательВыход2РН.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+
+            angle = N18_MParameters.N18_MПереключательВыход1РН * 50 - 75;
+            N18_MПереключательВыход1РН.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+
+            angle = N18_MParameters.N18_MПереключательВходБ22 * 50 - 75;
+            N18_MПереключательВходБ22.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+        }
+
+        private void InitializeTumblersPosition()
+        {
+            this.N18_MТумблерДАБ5.BackgroundImage = N18_MParameters.N18_MТумблерДАБ5 == "прм-1"
+                ? ControlElementImages.tumblerType5Left
+                : ControlElementImages.tumblerType5Right;
+
+            this.N18_MТумблерКАУ_ПРМ.BackgroundImage = N18_MParameters.N18_MТумблерКАУ_ПРМ == "б1-1"
+                ? ControlElementImages.tumblerType5Left
+                : ControlElementImages.tumblerType5Right;
+
+            this.N18_MТумблерПРД_СС.BackgroundImage = N18_MParameters.N18_MТумблерПРД_СС == "контур-П"
+                ? ControlElementImages.tumblerType5Left
+                : ControlElementImages.tumblerType5Right;
+
+            this.N18_MТумблерТЛФ_ПРМ.BackgroundImage = N18_MParameters.N18_MТумблерТЛФ_ПРМ == "осн"
+                ? ControlElementImages.tumblerType5Left
+                : ControlElementImages.tumblerType5Right;
         }
         #endregion
     }

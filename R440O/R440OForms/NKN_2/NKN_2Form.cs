@@ -80,7 +80,7 @@ namespace R440O.R440OForms.NKN_2
         #region Кнопки местного включения блока
         private void NKN_2Кнопка220Вкл_MouseDown(object sender, MouseEventArgs e)
         {
-            NKN_2Кнопка220Вкл.BackgroundImage = ControlElementImages.buttonRoundWhite;
+            NKN_2Кнопка220Вкл.BackgroundImage = ControlElementImages.buttonRoundType4;
         }
 
         private void NKN_2Кнопка220Вкл_MouseUp(object sender, MouseEventArgs e)
@@ -91,7 +91,7 @@ namespace R440O.R440OForms.NKN_2
 
         private void NKN_2Кнопка220Откл_MouseDown(object sender, MouseEventArgs e)
         {
-            NKN_2Кнопка220Откл.BackgroundImage = ControlElementImages.buttonRoundWhite;
+            NKN_2Кнопка220Откл.BackgroundImage = ControlElementImages.buttonRoundType4;
         }
 
         private void NKN_2Кнопка220Откл_MouseUp(object sender, MouseEventArgs e)

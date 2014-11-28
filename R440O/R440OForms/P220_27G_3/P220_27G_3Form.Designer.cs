@@ -49,7 +49,7 @@
             // P220_27G_3ТумблерСеть
             // 
             this.P220_27G_3ТумблерСеть.BackColor = System.Drawing.Color.Transparent;
-            this.P220_27G_3ТумблерСеть.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType3Down;
+            this.P220_27G_3ТумблерСеть.BackgroundImage = global::R440O.ControlElementImages.tumblerType6Down;
             this.P220_27G_3ТумблерСеть.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.P220_27G_3ТумблерСеть.FlatAppearance.BorderSize = 0;
             this.P220_27G_3ТумблерСеть.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -65,7 +65,7 @@
             // P220_27G_3ТумблерМуДу
             // 
             this.P220_27G_3ТумблерМуДу.BackColor = System.Drawing.Color.Transparent;
-            this.P220_27G_3ТумблерМуДу.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType1Down;
+            this.P220_27G_3ТумблерМуДу.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
             this.P220_27G_3ТумблерМуДу.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.P220_27G_3ТумблерМуДу.FlatAppearance.BorderSize = 0;
             this.P220_27G_3ТумблерМуДу.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;

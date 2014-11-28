@@ -38,7 +38,7 @@ namespace R440O.R440OForms.A1
             }
             else
             {
-                this.A1КнопкаСкоростьАБ_1ТЛФ_К.BackgroundImage = ControlElementImages.buttonSmall;
+                this.A1КнопкаСкоростьАБ_1ТЛФ_К.BackgroundImage = ControlElementImages.buttonRectType1;
                 A1Parameters.A1КнопкаСкоростьАБ_1ТЛФ_К = "false";
             }
         }
@@ -55,7 +55,7 @@ namespace R440O.R440OForms.A1
             }
             else
             {
-                this.A1КнопкаСкоростьГР.BackgroundImage = ControlElementImages.buttonSmall;
+                this.A1КнопкаСкоростьГР.BackgroundImage = ControlElementImages.buttonRectType1;
                 A1Parameters.A1КнопкаСкоростьГР = "false";
             }
         }
@@ -67,12 +67,12 @@ namespace R440O.R440OForms.A1
         {
             if (A1Parameters.A1ТумблерМуДу == "Му")
             {
-                this.A1ТумблерМуДу.BackgroundImage = ControlElementImages.tumblerVerticalType1Down;
+                this.A1ТумблерМуДу.BackgroundImage = ControlElementImages.tumblerType4Down;
                 A1Parameters.A1ТумблерМуДу = "Ду";
             }
             else
             {
-                this.A1ТумблерМуДу.BackgroundImage = ControlElementImages.tumblerVerticalType1Up;
+                this.A1ТумблерМуДу.BackgroundImage = ControlElementImages.tumblerType4Up;
                 A1Parameters.A1ТумблерМуДу = "Му";
             }
         }

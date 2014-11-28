@@ -130,6 +130,9 @@ namespace R440O.Parameters
         public static string AstraКнопка860_1500 { get; set; }
         public static string AstraКнопкаЧастота { get; set; }
 
+        //Регуляторы
+
+
         //Индикаторы
     }
 }

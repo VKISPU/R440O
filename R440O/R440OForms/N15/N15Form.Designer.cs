@@ -465,7 +465,7 @@
             // Н15ТумблерА30412
             // 
             this.Н15ТумблерА30412.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерА30412.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType5Down;
+            this.Н15ТумблерА30412.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
             this.Н15ТумблерА30412.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15ТумблерА30412.FlatAppearance.BorderSize = 0;
             this.Н15ТумблерА30412.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -481,7 +481,7 @@
             // Н15ТумблерА20512
             // 
             this.Н15ТумблерА20512.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерА20512.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType1Down;
+            this.Н15ТумблерА20512.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
             this.Н15ТумблерА20512.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15ТумблерА20512.FlatAppearance.BorderSize = 0;
             this.Н15ТумблерА20512.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -497,7 +497,7 @@
             // Н15ТумблерР_Н
             // 
             this.Н15ТумблерР_Н.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерР_Н.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType5Down;
+            this.Н15ТумблерР_Н.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
             this.Н15ТумблерР_Н.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15ТумблерР_Н.FlatAppearance.BorderSize = 0;
             this.Н15ТумблерР_Н.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -513,7 +513,7 @@
             // Н15ТумблерДАБ_5
             // 
             this.Н15ТумблерДАБ_5.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерДАБ_5.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType5Down;
+            this.Н15ТумблерДАБ_5.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
             this.Н15ТумблерДАБ_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15ТумблерДАБ_5.FlatAppearance.BorderSize = 0;
             this.Н15ТумблерДАБ_5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -529,7 +529,7 @@
             // Н15ТумблерБ3_2
             // 
             this.Н15ТумблерБ3_2.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерБ3_2.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType5Down;
+            this.Н15ТумблерБ3_2.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
             this.Н15ТумблерБ3_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15ТумблерБ3_2.FlatAppearance.BorderSize = 0;
             this.Н15ТумблерБ3_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -545,7 +545,7 @@
             // Н15ТумблерБ3_1
             // 
             this.Н15ТумблерБ3_1.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерБ3_1.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType5Down;
+            this.Н15ТумблерБ3_1.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
             this.Н15ТумблерБ3_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15ТумблерБ3_1.FlatAppearance.BorderSize = 0;
             this.Н15ТумблерБ3_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -561,7 +561,7 @@
             // Н15ТумблерБ2_2
             // 
             this.Н15ТумблерБ2_2.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерБ2_2.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType5Down;
+            this.Н15ТумблерБ2_2.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
             this.Н15ТумблерБ2_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15ТумблерБ2_2.FlatAppearance.BorderSize = 0;
             this.Н15ТумблерБ2_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -577,7 +577,7 @@
             // Н15ТумблерБ2_1
             // 
             this.Н15ТумблерБ2_1.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерБ2_1.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType5Down;
+            this.Н15ТумблерБ2_1.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
             this.Н15ТумблерБ2_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15ТумблерБ2_1.FlatAppearance.BorderSize = 0;
             this.Н15ТумблерБ2_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -593,7 +593,7 @@
             // Н15ТумблерБ1_2
             // 
             this.Н15ТумблерБ1_2.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерБ1_2.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType5Down;
+            this.Н15ТумблерБ1_2.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
             this.Н15ТумблерБ1_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15ТумблерБ1_2.FlatAppearance.BorderSize = 0;
             this.Н15ТумблерБ1_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -609,7 +609,7 @@
             // Н15ТумблерБ1_1
             // 
             this.Н15ТумблерБ1_1.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерБ1_1.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType5Down;
+            this.Н15ТумблерБ1_1.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
             this.Н15ТумблерБ1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15ТумблерБ1_1.FlatAppearance.BorderSize = 0;
             this.Н15ТумблерБ1_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -625,7 +625,7 @@
             // Н15ТумблерА403
             // 
             this.Н15ТумблерА403.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерА403.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType5Down;
+            this.Н15ТумблерА403.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
             this.Н15ТумблерА403.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15ТумблерА403.FlatAppearance.BorderSize = 0;
             this.Н15ТумблерА403.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -641,7 +641,7 @@
             // Н15ТумблерА1
             // 
             this.Н15ТумблерА1.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерА1.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType5Down;
+            this.Н15ТумблерА1.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
             this.Н15ТумблерА1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15ТумблерА1.FlatAppearance.BorderSize = 0;
             this.Н15ТумблерА1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -657,7 +657,7 @@
             // Н15ТумблерАФСС
             // 
             this.Н15ТумблерАФСС.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерАФСС.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType5Down;
+            this.Н15ТумблерАФСС.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
             this.Н15ТумблерАФСС.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15ТумблерАФСС.FlatAppearance.BorderSize = 0;
             this.Н15ТумблерАФСС.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -673,7 +673,7 @@
             // Н15ТумблерК1_2
             // 
             this.Н15ТумблерК1_2.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерК1_2.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType5Down;
+            this.Н15ТумблерК1_2.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
             this.Н15ТумблерК1_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15ТумблерК1_2.FlatAppearance.BorderSize = 0;
             this.Н15ТумблерК1_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -689,7 +689,7 @@
             // Н15ТумблерК1_1
             // 
             this.Н15ТумблерК1_1.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерК1_1.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType5Down;
+            this.Н15ТумблерК1_1.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
             this.Н15ТумблерК1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15ТумблерК1_1.FlatAppearance.BorderSize = 0;
             this.Н15ТумблерК1_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -705,7 +705,7 @@
             // Н15ТумблерА205
             // 
             this.Н15ТумблерА205.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерА205.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType5Down;
+            this.Н15ТумблерА205.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
             this.Н15ТумблерА205.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15ТумблерА205.FlatAppearance.BorderSize = 0;
             this.Н15ТумблерА205.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -721,7 +721,7 @@
             // Н15ТумблерБМА_2
             // 
             this.Н15ТумблерБМА_2.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерБМА_2.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType5Down;
+            this.Н15ТумблерБМА_2.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
             this.Н15ТумблерБМА_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15ТумблерБМА_2.FlatAppearance.BorderSize = 0;
             this.Н15ТумблерБМА_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -737,7 +737,7 @@
             // Н15ТумблерБМА_1
             // 
             this.Н15ТумблерБМА_1.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерБМА_1.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType5Down;
+            this.Н15ТумблерБМА_1.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
             this.Н15ТумблерБМА_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15ТумблерБМА_1.FlatAppearance.BorderSize = 0;
             this.Н15ТумблерБМА_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -753,7 +753,7 @@
             // Н15ТумблерМШУ
             // 
             this.Н15ТумблерМШУ.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерМШУ.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType5Down;
+            this.Н15ТумблерМШУ.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
             this.Н15ТумблерМШУ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15ТумблерМШУ.FlatAppearance.BorderSize = 0;
             this.Н15ТумблерМШУ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -769,7 +769,7 @@
             // Н15ТумблерН12С
             // 
             this.Н15ТумблерН12С.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерН12С.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType5Down;
+            this.Н15ТумблерН12С.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
             this.Н15ТумблерН12С.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15ТумблерН12С.FlatAppearance.BorderSize = 0;
             this.Н15ТумблерН12С.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -785,7 +785,7 @@
             // Н15ТумблерЦ300М4
             // 
             this.Н15ТумблерЦ300М4.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерЦ300М4.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType5Down;
+            this.Н15ТумблерЦ300М4.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
             this.Н15ТумблерЦ300М4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15ТумблерЦ300М4.FlatAppearance.BorderSize = 0;
             this.Н15ТумблерЦ300М4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -801,7 +801,7 @@
             // Н15ТумблерЦ300М3
             // 
             this.Н15ТумблерЦ300М3.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерЦ300М3.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType5Down;
+            this.Н15ТумблерЦ300М3.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
             this.Н15ТумблерЦ300М3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15ТумблерЦ300М3.FlatAppearance.BorderSize = 0;
             this.Н15ТумблерЦ300М3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -817,7 +817,7 @@
             // Н15ТумблерЦ300М2
             // 
             this.Н15ТумблерЦ300М2.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерЦ300М2.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType5Down;
+            this.Н15ТумблерЦ300М2.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
             this.Н15ТумблерЦ300М2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15ТумблерЦ300М2.FlatAppearance.BorderSize = 0;
             this.Н15ТумблерЦ300М2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -833,7 +833,7 @@
             // Н15ТумблерЦ300М1
             // 
             this.Н15ТумблерЦ300М1.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерЦ300М1.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType5Down;
+            this.Н15ТумблерЦ300М1.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
             this.Н15ТумблерЦ300М1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15ТумблерЦ300М1.FlatAppearance.BorderSize = 0;
             this.Н15ТумблерЦ300М1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -849,7 +849,7 @@
             // Н15КнопкаСброс
             // 
             this.Н15КнопкаСброс.BackColor = System.Drawing.Color.Transparent;
-            this.Н15КнопкаСброс.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.Н15КнопкаСброс.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.Н15КнопкаСброс.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15КнопкаСброс.FlatAppearance.BorderSize = 0;
             this.Н15КнопкаСброс.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -868,7 +868,7 @@
             // Н15КнопкаН13_12
             // 
             this.Н15КнопкаН13_12.BackColor = System.Drawing.Color.Transparent;
-            this.Н15КнопкаН13_12.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.Н15КнопкаН13_12.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.Н15КнопкаН13_12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15КнопкаН13_12.FlatAppearance.BorderSize = 0;
             this.Н15КнопкаН13_12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -886,7 +886,7 @@
             // Н15КнопкаН13_2
             // 
             this.Н15КнопкаН13_2.BackColor = System.Drawing.Color.Transparent;
-            this.Н15КнопкаН13_2.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.Н15КнопкаН13_2.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.Н15КнопкаН13_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15КнопкаН13_2.FlatAppearance.BorderSize = 0;
             this.Н15КнопкаН13_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -904,7 +904,7 @@
             // Н15КнопкаН13_1
             // 
             this.Н15КнопкаН13_1.BackColor = System.Drawing.Color.Transparent;
-            this.Н15КнопкаН13_1.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.Н15КнопкаН13_1.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.Н15КнопкаН13_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15КнопкаН13_1.FlatAppearance.BorderSize = 0;
             this.Н15КнопкаН13_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -922,7 +922,7 @@
             // Н15КнопкаМощностьСброс
             // 
             this.Н15КнопкаМощностьСброс.BackColor = System.Drawing.Color.Transparent;
-            this.Н15КнопкаМощностьСброс.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.Н15КнопкаМощностьСброс.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.Н15КнопкаМощностьСброс.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15КнопкаМощностьСброс.FlatAppearance.BorderSize = 0;
             this.Н15КнопкаМощностьСброс.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -941,7 +941,7 @@
             // Н15КнопкаМощностьАнт
             // 
             this.Н15КнопкаМощностьАнт.BackColor = System.Drawing.Color.Transparent;
-            this.Н15КнопкаМощностьАнт.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.Н15КнопкаМощностьАнт.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.Н15КнопкаМощностьАнт.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15КнопкаМощностьАнт.FlatAppearance.BorderSize = 0;
             this.Н15КнопкаМощностьАнт.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -959,7 +959,7 @@
             // Н15КнопкаМощностьН16
             // 
             this.Н15КнопкаМощностьН16.BackColor = System.Drawing.Color.Transparent;
-            this.Н15КнопкаМощностьН16.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.Н15КнопкаМощностьН16.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.Н15КнопкаМощностьН16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15КнопкаМощностьН16.FlatAppearance.BorderSize = 0;
             this.Н15КнопкаМощностьН16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -977,7 +977,7 @@
             // Н15КнопкаПРМНаведениеЦ300М4
             // 
             this.Н15КнопкаПРМНаведениеЦ300М4.BackColor = System.Drawing.Color.Transparent;
-            this.Н15КнопкаПРМНаведениеЦ300М4.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.Н15КнопкаПРМНаведениеЦ300М4.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.Н15КнопкаПРМНаведениеЦ300М4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15КнопкаПРМНаведениеЦ300М4.FlatAppearance.BorderSize = 0;
             this.Н15КнопкаПРМНаведениеЦ300М4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -995,7 +995,7 @@
             // Н15КнопкаПРМНаведениеЦ300М3
             // 
             this.Н15КнопкаПРМНаведениеЦ300М3.BackColor = System.Drawing.Color.Transparent;
-            this.Н15КнопкаПРМНаведениеЦ300М3.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.Н15КнопкаПРМНаведениеЦ300М3.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.Н15КнопкаПРМНаведениеЦ300М3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15КнопкаПРМНаведениеЦ300М3.FlatAppearance.BorderSize = 0;
             this.Н15КнопкаПРМНаведениеЦ300М3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -1013,7 +1013,7 @@
             // Н15КнопкаПРМНаведениеЦ300М2
             // 
             this.Н15КнопкаПРМНаведениеЦ300М2.BackColor = System.Drawing.Color.Transparent;
-            this.Н15КнопкаПРМНаведениеЦ300М2.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.Н15КнопкаПРМНаведениеЦ300М2.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.Н15КнопкаПРМНаведениеЦ300М2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15КнопкаПРМНаведениеЦ300М2.FlatAppearance.BorderSize = 0;
             this.Н15КнопкаПРМНаведениеЦ300М2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -1031,7 +1031,7 @@
             // Н15КнопкаПРМНаведениеЦ300М1
             // 
             this.Н15КнопкаПРМНаведениеЦ300М1.BackColor = System.Drawing.Color.Transparent;
-            this.Н15КнопкаПРМНаведениеЦ300М1.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.Н15КнопкаПРМНаведениеЦ300М1.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.Н15КнопкаПРМНаведениеЦ300М1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15КнопкаПРМНаведениеЦ300М1.FlatAppearance.BorderSize = 0;
             this.Н15КнопкаПРМНаведениеЦ300М1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -1050,7 +1050,7 @@
             // Н15КнопкаСтанцияВыкл
             // 
             this.Н15КнопкаСтанцияВыкл.BackColor = System.Drawing.Color.Transparent;
-            this.Н15КнопкаСтанцияВыкл.BackgroundImage = global::R440O.ControlElementImages.buttonOffUpRed;
+            this.Н15КнопкаСтанцияВыкл.BackgroundImage = global::R440O.ControlElementImages.buttonN15Off;
             this.Н15КнопкаСтанцияВыкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15КнопкаСтанцияВыкл.FlatAppearance.BorderSize = 0;
             this.Н15КнопкаСтанцияВыкл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -1067,7 +1067,7 @@
             // Н15КнопкаСтанцияВкл
             // 
             this.Н15КнопкаСтанцияВкл.BackColor = System.Drawing.Color.Transparent;
-            this.Н15КнопкаСтанцияВкл.BackgroundImage = global::R440O.ControlElementImages.buttonOnUpBlack;
+            this.Н15КнопкаСтанцияВкл.BackgroundImage = global::R440O.ControlElementImages.buttonN15On;
             this.Н15КнопкаСтанцияВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Н15КнопкаСтанцияВкл.FlatAppearance.BorderSize = 0;
             this.Н15КнопкаСтанцияВкл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;

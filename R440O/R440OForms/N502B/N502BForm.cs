@@ -31,8 +31,8 @@ namespace R440O.R440OForms.N502B
         {
             N502BParameters.N502BТумблерЭлектрооборуд = !N502BParameters.N502BТумблерЭлектрооборуд;
             this.N502BТумблерЭлектрооборуд.BackgroundImage = N502BParameters.N502BТумблерЭлектрооборуд 
-                ? ControlElementImages.tumblerVerticalType2Up 
-                : ControlElementImages.tumblerVerticalType2Down;
+                ? ControlElementImages.tumblerType2Up 
+                : ControlElementImages.tumblerType2Down;
             if (PowerTumblersChanged != null) PowerTumblersChanged();
         }
 
@@ -40,8 +40,8 @@ namespace R440O.R440OForms.N502B
         {
             N502BParameters.N502BТумблерВыпрямитель27В = !N502BParameters.N502BТумблерВыпрямитель27В;
             this.N502BТумблерВыпрямитель27В.BackgroundImage = N502BParameters.N502BТумблерВыпрямитель27В 
-                ? ControlElementImages.tumblerVerticalType2Up
-                : ControlElementImages.tumblerVerticalType2Down;
+                ? ControlElementImages.tumblerType2Up
+                : ControlElementImages.tumblerType2Down;
             if (PowerTumblersChanged != null) PowerTumblersChanged();
         }
 
@@ -49,12 +49,12 @@ namespace R440O.R440OForms.N502B
         {
             if (N502BParameters.N502BТумблерОсвещение == "true")
             {
-                this.N502BТумблерОсвещение.BackgroundImage = ControlElementImages.tumblerVerticalType2Down;
+                this.N502BТумблерОсвещение.BackgroundImage = ControlElementImages.tumblerType2Down;
                 N502BParameters.N502BТумблерОсвещение = "false";
             }
             else
             {
-                this.N502BТумблерОсвещение.BackgroundImage = ControlElementImages.tumblerVerticalType2Up;
+                this.N502BТумблерОсвещение.BackgroundImage = ControlElementImages.tumblerType2Up;
                 N502BParameters.N502BТумблерОсвещение = "true";
             }
         }
@@ -63,12 +63,12 @@ namespace R440O.R440OForms.N502B
         {
             if (N502BParameters.N502BТумблерН13_1 == "true")
             {
-                this.N502BТумблерН13_1.BackgroundImage = ControlElementImages.tumblerVerticalType2Down;
+                this.N502BТумблерН13_1.BackgroundImage = ControlElementImages.tumblerType2Down;
                 N502BParameters.N502BТумблерН13_1 = "false";
             }
             else
             {
-                this.N502BТумблерН13_1.BackgroundImage = ControlElementImages.tumblerVerticalType2Up;
+                this.N502BТумблерН13_1.BackgroundImage = ControlElementImages.tumblerType2Up;
                 N502BParameters.N502BТумблерН13_1 = "true";
             }
         }
@@ -77,12 +77,12 @@ namespace R440O.R440OForms.N502B
         {
             if (N502BParameters.N502BТумблерН13_2 == "true")
             {
-                this.N502BТумблерН13_2.BackgroundImage = ControlElementImages.tumblerVerticalType2Down;
+                this.N502BТумблерН13_2.BackgroundImage = ControlElementImages.tumblerType2Down;
                 N502BParameters.N502BТумблерН13_2 = "false";
             }
             else
             {
-                this.N502BТумблерН13_2.BackgroundImage = ControlElementImages.tumblerVerticalType2Up;
+                this.N502BТумблерН13_2.BackgroundImage = ControlElementImages.tumblerType2Up;
                 N502BParameters.N502BТумблерН13_2 = "true";
             }
         }
@@ -91,12 +91,12 @@ namespace R440O.R440OForms.N502B
         {
             if (N502BParameters.N502BТумблерН15 == "true")
             {
-                this.N502BТумблерН15.BackgroundImage = ControlElementImages.tumblerVerticalType2Down;
+                this.N502BТумблерН15.BackgroundImage = ControlElementImages.tumblerType2Down;
                 N502BParameters.N502BТумблерН15 = "false";
             }
             else
             {
-                this.N502BТумблерН15.BackgroundImage = ControlElementImages.tumblerVerticalType2Up;
+                this.N502BТумблерН15.BackgroundImage = ControlElementImages.tumblerType2Up;
                 N502BParameters.N502BТумблерН15 = "true";
             }
         }
@@ -107,13 +107,13 @@ namespace R440O.R440OForms.N502B
             {
                 if (N502BParameters.N502BТумблерОсвещение1 == "полное")
                 {
-                    this.N502BТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerVerticalType4Middle;
+                    this.N502BТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerType5Middle;
                     N502BParameters.N502BТумблерОсвещение1 = "откл";
                 }
                 else
                     if (N502BParameters.N502BТумблерОсвещение1 == "откл")
                     {
-                        this.N502BТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerVerticalType4Down;
+                        this.N502BТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerType5Down;
                         N502BParameters.N502BТумблерОсвещение1 = "дежурное";
                     }
             }
@@ -122,13 +122,13 @@ namespace R440O.R440OForms.N502B
                 {
                     if (N502BParameters.N502BТумблерОсвещение1 == "дежурное")
                     {
-                        this.N502BТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerVerticalType4Middle;
+                        this.N502BТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerType5Middle;
                         N502BParameters.N502BТумблерОсвещение1 = "откл";
                     }
                     else
                         if (N502BParameters.N502BТумблерОсвещение1 == "откл")
                         {
-                            this.N502BТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerVerticalType4Up;
+                            this.N502BТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerType5Up;
                             N502BParameters.N502BТумблерОсвещение1 = "полное";
                         }
                 }
@@ -140,13 +140,13 @@ namespace R440O.R440OForms.N502B
             {
                 if (N502BParameters.N502BТумблерОсвещение2 == "полное")
                 {
-                    this.N502BТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerVerticalType4Middle;
+                    this.N502BТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerType5Middle;
                     N502BParameters.N502BТумблерОсвещение2 = "откл";
                 }
                 else
                     if (N502BParameters.N502BТумблерОсвещение2 == "откл")
                     {
-                        this.N502BТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerVerticalType4Down;
+                        this.N502BТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerType5Down;
                         N502BParameters.N502BТумблерОсвещение2 = "частичное";
                     }
             }
@@ -155,13 +155,13 @@ namespace R440O.R440OForms.N502B
                 {
                     if (N502BParameters.N502BТумблерОсвещение2 == "частичное")
                     {
-                        this.N502BТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerVerticalType4Middle;
+                        this.N502BТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerType5Middle;
                         N502BParameters.N502BТумблерОсвещение2 = "откл";
                     }
                     else
                         if (N502BParameters.N502BТумблерОсвещение2 == "откл")
                         {
-                            this.N502BТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerVerticalType4Up;
+                            this.N502BТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerType5Up;
                             N502BParameters.N502BТумблерОсвещение2 = "полное";
                         }
                 }
@@ -171,7 +171,7 @@ namespace R440O.R440OForms.N502B
         #region Кнопки
         private void N502BКнопкаРБПСброс_MouseUp(object sender, MouseEventArgs e)
         {
-                this.N502BКнопкаРБПСброс.BackgroundImage = ControlElementImages.buttonRoundSmall;
+                this.N502BКнопкаРБПСброс.BackgroundImage = ControlElementImages.buttonRoundType3;
                 /*if (N502BParameters.N502BКнопкаРБПСброс == "true")
                     N502BParameters.N502BКнопкаРБПСброс = "false";
                 else
@@ -185,7 +185,7 @@ namespace R440O.R440OForms.N502B
 
         private void N502BКнопкаРБППроверка_MouseUp(object sender, MouseEventArgs e)
         {
-            this.N502BКнопкаРБППроверка.BackgroundImage = ControlElementImages.buttonRoundSmall;
+            this.N502BКнопкаРБППроверка.BackgroundImage = ControlElementImages.buttonRoundType3;
             /*if (N502BParameters.N502BКнопкаРБППроверка == "true")
                 N502BParameters.N502BКнопкаРБППроверка = "false";
             else
@@ -199,7 +199,7 @@ namespace R440O.R440OForms.N502B
 
         private void N502BКнопкаВклНагрузки_MouseUp(object sender, MouseEventArgs e)
         {
-            this.N502BКнопкаВклНагрузки.BackgroundImage = ControlElementImages.buttonRoundSmall;
+            this.N502BКнопкаВклНагрузки.BackgroundImage = ControlElementImages.buttonRoundType3;
             /*if (N502BParameters.N502BКнопкаВклНагрузки == "true")
                 N502BParameters.N502BКнопкаВклНагрузки = "false";
             else
@@ -217,12 +217,12 @@ namespace R440O.R440OForms.N502B
         {
             if (N502BParameters.N502BПереключательСеть == "true")
             {
-                this.N502BПереключательСеть.BackgroundImage = ControlElementImages.tumblerSideVerticalType2Down;
+                this.N502BПереключательСеть.BackgroundImage = ControlElementImages.tumblerN502BPowerDown;
                 N502BParameters.N502BПереключательСеть = "false";
             }
             else
             {
-                this.N502BПереключательСеть.BackgroundImage = ControlElementImages.tumblerSideVerticalType2Up;
+                this.N502BПереключательСеть.BackgroundImage = ControlElementImages.tumblerN502BPowerUp;
                 N502BParameters.N502BПереключательСеть = "true";
             }
         }
@@ -303,36 +303,36 @@ namespace R440O.R440OForms.N502B
         private void InitializeTumblersPosition()
         {
             this.N502BТумблерЭлектрооборуд.BackgroundImage = N502BParameters.N502BТумблерЭлектрооборуд ? 
-                ControlElementImages.tumblerVerticalType2Up : ControlElementImages.tumblerVerticalType2Down;
+                ControlElementImages.tumblerType2Up : ControlElementImages.tumblerType2Down;
 
             this.N502BТумблерВыпрямитель27В.BackgroundImage = N502BParameters.N502BТумблерВыпрямитель27В ?
-                ControlElementImages.tumblerVerticalType2Up : ControlElementImages.tumblerVerticalType2Down;
+                ControlElementImages.tumblerType2Up : ControlElementImages.tumblerType2Down;
 
             this.N502BТумблерОсвещение.BackgroundImage = N502BParameters.N502BТумблерОсвещение == "false" ?
-                ControlElementImages.tumblerVerticalType2Down : ControlElementImages.tumblerVerticalType2Up;
+                ControlElementImages.tumblerType2Down : ControlElementImages.tumblerType2Up;
 
             this.N502BТумблерН13_1.BackgroundImage = N502BParameters.N502BТумблерН13_1 == "false" ?
-                ControlElementImages.tumblerVerticalType2Down : ControlElementImages.tumblerVerticalType2Up;
+                ControlElementImages.tumblerType2Down : ControlElementImages.tumblerType2Up;
 
             this.N502BТумблерН13_2.BackgroundImage = N502BParameters.N502BТумблерН13_2 == "false" ?
-                ControlElementImages.tumblerVerticalType2Down : ControlElementImages.tumblerVerticalType2Up;
+                ControlElementImages.tumblerType2Down : ControlElementImages.tumblerType2Up;
 
             this.N502BТумблерН15.BackgroundImage = N502BParameters.N502BТумблерН15 == "false" ?
-                ControlElementImages.tumblerVerticalType2Down : ControlElementImages.tumblerVerticalType2Up;
+                ControlElementImages.tumblerType2Down : ControlElementImages.tumblerType2Up;
 
             if (N502BParameters.N502BТумблерОсвещение1 == "откл")
-                this.N502BТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerVerticalType4Middle;
+                this.N502BТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerType5Middle;
             else if (N502BParameters.N502BТумблерОсвещение1 == "полное")
-                this.N502BТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerVerticalType4Up;
+                this.N502BТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerType5Up;
             else
-                this.N502BТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerVerticalType4Down;
+                this.N502BТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerType5Down;
 
             if (N502BParameters.N502BТумблерОсвещение2 == "откл")
-                this.N502BТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerVerticalType4Middle;
+                this.N502BТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerType5Middle;
             else if (N502BParameters.N502BТумблерОсвещение2 == "полное")
-                this.N502BТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerVerticalType4Up;
+                this.N502BТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerType5Up;
             else
-                this.N502BТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerVerticalType4Down;
+                this.N502BТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerType5Down;
         }
 
         /// <summary>
@@ -342,9 +342,9 @@ namespace R440O.R440OForms.N502B
         private void InitializeTogglesPosition()
         {
             if(N502BParameters.N502BПереключательСеть=="true")
-                N502BПереключательСеть.BackgroundImage = ControlElementImages.tumblerSideVerticalType2Up;
+                N502BПереключательСеть.BackgroundImage = ControlElementImages.tumblerN502BPowerUp;
             else
-                N502BПереключательСеть.BackgroundImage = ControlElementImages.tumblerSideVerticalType2Down;
+                N502BПереключательСеть.BackgroundImage = ControlElementImages.tumblerN502BPowerDown;
 
             var angle = N502BParameters.N502BПереключательНапряжение * 36 - 150;
             if (N502BParameters.N502BПереключательНапряжение >= 4) angle += 48;

@@ -36,14 +36,14 @@ namespace R440O.R440OForms.A304
         private void InitializeTumblers()
         {
             this.A304ТумблерМестноеДистанц_1.BackgroundImage = A304Parameters.A304ТумблерМестноеДистанц_1 == "местное"
-                ? ControlElementImages.tumblerVerticalType3Down
-                : ControlElementImages.tumblerVerticalType3Up;
+                ? ControlElementImages.tumblerType6Down
+                : ControlElementImages.tumblerType6Up;
             this.A304ТумблерМестноеДистанц_2.BackgroundImage = A304Parameters.A304ТумблерМестноеДистанц_2 == "местное"
-                ? ControlElementImages.tumblerVerticalType3Down
-                : ControlElementImages.tumblerVerticalType3Up;
+                ? ControlElementImages.tumblerType6Down
+                : ControlElementImages.tumblerType6Up;
             this.A304Тумблер1К2К.BackgroundImage = A304Parameters.A304Тумблер1К2К == 1
-                ? ControlElementImages.tumblerHorizontalType1Left
-                : ControlElementImages.tumblerHorizontalType1Right;
+                ? ControlElementImages.tumblerType1Left
+                : ControlElementImages.tumblerType1Right;
         }
 
         /// <summary>
@@ -144,12 +144,12 @@ namespace R440O.R440OForms.A304
         {
             if (A304Parameters.A304ТумблерМестноеДистанц_1 == "дистанц")
             {
-                this.A304ТумблерМестноеДистанц_1.BackgroundImage = ControlElementImages.tumblerVerticalType3Down;
+                this.A304ТумблерМестноеДистанц_1.BackgroundImage = ControlElementImages.tumblerType6Down;
                 A304Parameters.A304ТумблерМестноеДистанц_1 = "местное";
             }
             else
             {
-                this.A304ТумблерМестноеДистанц_1.BackgroundImage = ControlElementImages.tumblerVerticalType3Up;
+                this.A304ТумблерМестноеДистанц_1.BackgroundImage = ControlElementImages.tumblerType6Up;
                 A304Parameters.A304ТумблерМестноеДистанц_1 = "дистанц";
             }
             TurnLamps(1);
@@ -162,12 +162,12 @@ namespace R440O.R440OForms.A304
         {
             if (A304Parameters.A304ТумблерМестноеДистанц_2 == "дистанц")
             {
-                this.A304ТумблерМестноеДистанц_2.BackgroundImage = ControlElementImages.tumblerVerticalType3Down;
+                this.A304ТумблерМестноеДистанц_2.BackgroundImage = ControlElementImages.tumblerType6Down;
                 A304Parameters.A304ТумблерМестноеДистанц_2 = "местное";
             }
             else
             {
-                this.A304ТумблерМестноеДистанц_2.BackgroundImage = ControlElementImages.tumblerVerticalType3Up;
+                this.A304ТумблерМестноеДистанц_2.BackgroundImage = ControlElementImages.tumblerType6Up;
                 A304Parameters.A304ТумблерМестноеДистанц_2 = "дистанц";
             }
             TurnLamps(2);
@@ -180,12 +180,12 @@ namespace R440O.R440OForms.A304
         {
             if (A304Parameters.A304Тумблер1К2К == 1)
             {
-                this.A304Тумблер1К2К.BackgroundImage = ControlElementImages.tumblerHorizontalType1Right;
+                this.A304Тумблер1К2К.BackgroundImage = ControlElementImages.tumblerType1Right;
                 A304Parameters.A304Тумблер1К2К = 2;
             }
             else
             {
-                this.A304Тумблер1К2К.BackgroundImage = ControlElementImages.tumblerHorizontalType1Left;
+                this.A304Тумблер1К2К.BackgroundImage = ControlElementImages.tumblerType1Left;
                 A304Parameters.A304Тумблер1К2К = 1;
             }
             this.InitializeControl();
@@ -204,7 +204,7 @@ namespace R440O.R440OForms.A304
 
         private void A304Кнопка1КВкл_MouseUp(object sender, MouseEventArgs e)
         {
-            this.A304Кнопка1КВкл.BackgroundImage = ControlElementImages.ButtonGreyUp;
+            this.A304Кнопка1КВкл.BackgroundImage = ControlElementImages.buttonSquareGrey;
             this.A304Кнопка1КВкл.Text = Resources.stringВКЛ;
             if (A304Parameters.A304ТумблерМестноеДистанц_1 == "местное")
             {
@@ -223,7 +223,7 @@ namespace R440O.R440OForms.A304
 
         private void A304Кнопка2КВкл_MouseUp(object sender, MouseEventArgs e)
         {
-            this.A304Кнопка2КВкл.BackgroundImage = ControlElementImages.ButtonGreyUp;
+            this.A304Кнопка2КВкл.BackgroundImage = ControlElementImages.buttonSquareGrey;
             this.A304Кнопка2КВкл.Text = Resources.stringВКЛ;
             if (A304Parameters.A304ТумблерМестноеДистанц_2 == "местное")
             {
@@ -241,7 +241,7 @@ namespace R440O.R440OForms.A304
 
         private void A304Кнопка1КОткл_MouseUp(object sender, MouseEventArgs e)
         {
-            this.A304Кнопка1КОткл.BackgroundImage = ControlElementImages.ButtonGreyUp;
+            this.A304Кнопка1КОткл.BackgroundImage = ControlElementImages.buttonSquareGrey;
             this.A304Кнопка1КОткл.Text = Resources.stringОТКЛ;
             if (A304Parameters.A304ТумблерМестноеДистанц_1 == "местное")
             {
@@ -259,7 +259,7 @@ namespace R440O.R440OForms.A304
 
         private void A304Кнопка2КОткл_MouseUp(object sender, MouseEventArgs e)
         {
-            this.A304Кнопка2КОткл.BackgroundImage = ControlElementImages.ButtonGreyUp;
+            this.A304Кнопка2КОткл.BackgroundImage = ControlElementImages.buttonSquareGrey;
             this.A304Кнопка2КОткл.Text = Resources.stringОТКЛ;
             if (A304Parameters.A304ТумблерМестноеДистанц_2 == "местное")
             {

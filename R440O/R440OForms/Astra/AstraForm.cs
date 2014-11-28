@@ -170,5 +170,19 @@ namespace R440O.R440OForms.Astra
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
         #endregion
+
+        private void AstraТумблерШпУп_Click(object sender, System.EventArgs e)
+        {
+            if (AstraParameters.AstraТумблерШпУп == "шп")
+            {
+                this.AstraТумблерШпУп.BackgroundImage = ControlElementImages.tumblerType2Right;
+                AstraParameters.AstraТумблерШпУп = "уп";
+            }
+            else
+            {
+                this.AstraТумблерШпУп.BackgroundImage = ControlElementImages.tumblerType2Left;
+                AstraParameters.AstraТумблерШпУп = "шп";
+            }
+        }
     }
 }

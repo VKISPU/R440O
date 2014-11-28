@@ -47,7 +47,7 @@
             // K04M_02Cover
             // 
             this.K04M_02Cover.BackColor = System.Drawing.Color.Transparent;
-            this.K04M_02Cover.BackgroundImage = global::R440O.ControlElementImages.cover;
+            this.K04M_02Cover.BackgroundImage = global::R440O.ControlElementImages.kulonCover;
             this.K04M_02Cover.Location = new System.Drawing.Point(125, 95);
             this.K04M_02Cover.Name = "K04M_02Cover";
             this.K04M_02Cover.Size = new System.Drawing.Size(356, 559);

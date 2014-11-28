@@ -64,6 +64,10 @@
       <DependentUpon>ControlElementImages.resx</DependentUpon>
     </Compile>
     <Compile Include="Parameters\A403_1Parameters.cs" />
+    <Compile Include="Parameters\B1_1Parameters.cs" />
+    <Compile Include="Parameters\B1_2Parameters.cs" />
+    <Compile Include="Parameters\B2_1Parameters.cs" />
+    <Compile Include="Parameters\B2_2Parameters.cs" />
     <Compile Include="Parameters\N18_MParameters.cs" />
     <Compile Include="Parameters\A205M_1Parameters.cs" />
     <Compile Include="Parameters\A205M_2Parameters.cs" />
@@ -808,135 +812,6 @@
     <None Include="Resources\PowerShield.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\buttonOffUpRed.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\buttonOnUpBlack.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerHorizontalType1Left.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerHorizontalType1Right.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerVerticalType1Down.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerVerticalType1Up.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerVerticalType2Down.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerVerticalType2Up.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerVerticalType3Down.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerVerticalType3Up.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerVerticalType4Down.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerVerticalType4Middle.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerVerticalType4Up.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerVerticalType5Down.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerVerticalType5Up.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerSideVerticalType1Down.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerSideVerticalType1Up.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerSideHorizontalType1Left.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerSideHorizontalType1Right.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerSideVerticalType2Down.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerSideVerticalType2Up.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\buttonRoundType1UpBlack.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\buttonSquareType1UpBlue.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\buttonSquareType1UpGreen.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\buttonSquareType1UpYellow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lampType1OnRed.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lampType2OnRed.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lampType3OnRed.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lampType4OnRed.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lampType5OnRed.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lampType6OnRed.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lampType7OnRed.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lampType8OnRed.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lampType9OnGreen.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lampType10OnRed.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lampType11OnYellow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\toggleType2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\toggleType3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\toggleType4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\arrowNormal.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\arrowRound.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cover.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\orderSchemeIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\B2.png" />
   </ItemGroup>
   <ItemGroup>
@@ -970,94 +845,220 @@
     <None Include="Resources\K03M_01_inside.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\button_round_small.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\stabillizator_input.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerHorizontalType2DownRight.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\buttonSquareType1UpDarkGrey.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ButtonGreyUp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerHorizontalType2Left.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerHorizontalType2Right.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerHorizontalType3Left.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerHorizontalType3Right.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerHorizontalType4Left.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerHorizontalType4Right.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerHorizontalType5Right.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerHorizontalType5Left.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\buttonSquareType1_1UpWhite.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\buttonSquareType1UpWhite.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ButtonBlueUp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\toggleType5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\toggleType1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\arrowLeft.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\arrowRight.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\buttonSmall.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ButtonType2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\PowerCabelEnter.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\toggleType6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\buttonRoundType1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\buttonRoundType2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\buttonRoundType1K.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\N15_inside.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Astra.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\buttonRoundWhite.png" />
+    <None Include="Resources\toggleType5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toggleType6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerN502BPowerDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerN502BPowerUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerType1Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerType1Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerType2Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerType2Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerType2Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerType2Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerType3Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerType3Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerType3Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerType3Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerType4Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerType4Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerType4Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerType4Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerType5Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerType5Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerType5Middle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerType5Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerType5Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerType6Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerType6Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerType7Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerType7Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerType7Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerType7Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\voltageStabilizerInput.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowRound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonN15Off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonN15On.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonRectType1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonRoundType1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonRoundType1_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonRoundType2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonRoundType3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonRoundType4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonRoundType5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonSquareBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonSquareGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonSquareGrey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonSquareLightBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonSquareWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonSquareYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jumperType1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jumperType2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kulonCover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lampType1OnRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lampType2OnRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lampType3OnRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lampType4OnRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lampType5OnRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lampType6OnRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lampType7OnRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lampType8OnRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lampType9OnGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lampType10OnGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lampType11OnYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lampType12OnRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orderSchemeIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\powerCabelEnter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toggleType1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toggleType2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toggleType3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toggleType4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

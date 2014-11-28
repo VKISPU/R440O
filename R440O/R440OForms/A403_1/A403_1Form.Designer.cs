@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.A403_1Panel = new System.Windows.Forms.Panel();
+            this.A403_1ТаблоПоле0 = new System.Windows.Forms.Label();
             this.A403_1ПереключательПроверка = new System.Windows.Forms.Button();
             this.A403_1ПереключательРежимРаботы = new System.Windows.Forms.Button();
             this.A403_1КнопкаУстВремени = new System.Windows.Forms.Button();
@@ -58,6 +59,12 @@
             this.A403_1ТумблерГотов = new System.Windows.Forms.Button();
             this.A403_1ТумблерКомплект = new System.Windows.Forms.Button();
             this.A403_1ТумблерСеть = new System.Windows.Forms.Button();
+            this.A403_1ТаблоПоле2 = new System.Windows.Forms.Label();
+            this.A403_1ТаблоПоле4 = new System.Windows.Forms.Label();
+            this.A403_1ТаблоПоле3 = new System.Windows.Forms.Label();
+            this.A403_1ТаблоПоле5 = new System.Windows.Forms.Label();
+            this.A403_1ТаблоПоле6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.A403_1Panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +72,13 @@
             // 
             this.A403_1Panel.BackgroundImage = global::R440O.BackgroundImages.A403_1;
             this.A403_1Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A403_1Panel.Controls.Add(this.label7);
+            this.A403_1Panel.Controls.Add(this.A403_1ТаблоПоле6);
+            this.A403_1Panel.Controls.Add(this.A403_1ТаблоПоле5);
+            this.A403_1Panel.Controls.Add(this.A403_1ТаблоПоле3);
+            this.A403_1Panel.Controls.Add(this.A403_1ТаблоПоле4);
+            this.A403_1Panel.Controls.Add(this.A403_1ТаблоПоле2);
+            this.A403_1Panel.Controls.Add(this.A403_1ТаблоПоле0);
             this.A403_1Panel.Controls.Add(this.A403_1ПереключательПроверка);
             this.A403_1Panel.Controls.Add(this.A403_1ПереключательРежимРаботы);
             this.A403_1Panel.Controls.Add(this.A403_1КнопкаУстВремени);
@@ -98,6 +112,18 @@
             this.A403_1Panel.Name = "A403_1Panel";
             this.A403_1Panel.Size = new System.Drawing.Size(684, 578);
             this.A403_1Panel.TabIndex = 0;
+            // 
+            // A403_1ТаблоПоле0
+            // 
+            this.A403_1ТаблоПоле0.AutoSize = true;
+            this.A403_1ТаблоПоле0.BackColor = System.Drawing.Color.Transparent;
+            this.A403_1ТаблоПоле0.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.A403_1ТаблоПоле0.ForeColor = System.Drawing.Color.Red;
+            this.A403_1ТаблоПоле0.Location = new System.Drawing.Point(265, 318);
+            this.A403_1ТаблоПоле0.Name = "A403_1ТаблоПоле0";
+            this.A403_1ТаблоПоле0.Size = new System.Drawing.Size(18, 19);
+            this.A403_1ТаблоПоле0.TabIndex = 52;
+            this.A403_1ТаблоПоле0.Text = "0";
             // 
             // A403_1ПереключательПроверка
             // 
@@ -134,7 +160,7 @@
             // A403_1КнопкаУстВремени
             // 
             this.A403_1КнопкаУстВремени.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1КнопкаУстВремени.BackgroundImage = global::R440O.ControlElementImages.ButtonBlueUp;
+            this.A403_1КнопкаУстВремени.BackgroundImage = global::R440O.ControlElementImages.buttonSquareLightBlue;
             this.A403_1КнопкаУстВремени.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1КнопкаУстВремени.FlatAppearance.BorderSize = 0;
             this.A403_1КнопкаУстВремени.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -152,7 +178,7 @@
             // A403_1КнопкаСброс
             // 
             this.A403_1КнопкаСброс.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1КнопкаСброс.BackgroundImage = global::R440O.ControlElementImages.ButtonBlueUp;
+            this.A403_1КнопкаСброс.BackgroundImage = global::R440O.ControlElementImages.buttonSquareLightBlue;
             this.A403_1КнопкаСброс.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1КнопкаСброс.FlatAppearance.BorderSize = 0;
             this.A403_1КнопкаСброс.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -171,7 +197,7 @@
             // A403_1Кнопкаtуст_Ybeta
             // 
             this.A403_1Кнопкаtуст_Ybeta.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1Кнопкаtуст_Ybeta.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1Кнопкаtуст_Ybeta.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.A403_1Кнопкаtуст_Ybeta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1Кнопкаtуст_Ybeta.FlatAppearance.BorderSize = 0;
             this.A403_1Кнопкаtуст_Ybeta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -189,7 +215,7 @@
             // A403_1Кнопкаtсв_Yalpha
             // 
             this.A403_1Кнопкаtсв_Yalpha.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1Кнопкаtсв_Yalpha.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1Кнопкаtсв_Yalpha.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.A403_1Кнопкаtсв_Yalpha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1Кнопкаtсв_Yalpha.FlatAppearance.BorderSize = 0;
             this.A403_1Кнопкаtсв_Yalpha.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -207,7 +233,7 @@
             // A403_1КнопкаT_Kbeta
             // 
             this.A403_1КнопкаT_Kbeta.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1КнопкаT_Kbeta.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1КнопкаT_Kbeta.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.A403_1КнопкаT_Kbeta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1КнопкаT_Kbeta.FlatAppearance.BorderSize = 0;
             this.A403_1КнопкаT_Kbeta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -225,7 +251,7 @@
             // A403_1Кнопкаt0_K
             // 
             this.A403_1Кнопкаt0_K.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1Кнопкаt0_K.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1Кнопкаt0_K.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.A403_1Кнопкаt0_K.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1Кнопкаt0_K.FlatAppearance.BorderSize = 0;
             this.A403_1Кнопкаt0_K.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -243,7 +269,7 @@
             // A403_1КнопкаLambda0_f
             // 
             this.A403_1КнопкаLambda0_f.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1КнопкаLambda0_f.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1КнопкаLambda0_f.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.A403_1КнопкаLambda0_f.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1КнопкаLambda0_f.FlatAppearance.BorderSize = 0;
             this.A403_1КнопкаLambda0_f.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -261,7 +287,7 @@
             // A403_1КнопкаOmega_N
             // 
             this.A403_1КнопкаOmega_N.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1КнопкаOmega_N.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1КнопкаOmega_N.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.A403_1КнопкаOmega_N.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1КнопкаOmega_N.FlatAppearance.BorderSize = 0;
             this.A403_1КнопкаOmega_N.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -279,7 +305,7 @@
             // A403_1КнопкаI_H
             // 
             this.A403_1КнопкаI_H.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1КнопкаI_H.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1КнопкаI_H.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.A403_1КнопкаI_H.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1КнопкаI_H.FlatAppearance.BorderSize = 0;
             this.A403_1КнопкаI_H.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -297,7 +323,7 @@
             // A403_1КнопкаEpsilon_Phi
             // 
             this.A403_1КнопкаEpsilon_Phi.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1КнопкаEpsilon_Phi.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1КнопкаEpsilon_Phi.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.A403_1КнопкаEpsilon_Phi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1КнопкаEpsilon_Phi.FlatAppearance.BorderSize = 0;
             this.A403_1КнопкаEpsilon_Phi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -315,7 +341,7 @@
             // A403_1КнопкаАlpha_Lambda
             // 
             this.A403_1КнопкаАlpha_Lambda.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1КнопкаАlpha_Lambda.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1КнопкаАlpha_Lambda.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.A403_1КнопкаАlpha_Lambda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1КнопкаАlpha_Lambda.FlatAppearance.BorderSize = 0;
             this.A403_1КнопкаАlpha_Lambda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -333,7 +359,7 @@
             // A403_1КнопкаМинус
             // 
             this.A403_1КнопкаМинус.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1КнопкаМинус.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1КнопкаМинус.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.A403_1КнопкаМинус.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1КнопкаМинус.FlatAppearance.BorderSize = 0;
             this.A403_1КнопкаМинус.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -353,7 +379,7 @@
             // A403_1Кнопка0
             // 
             this.A403_1Кнопка0.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1Кнопка0.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1Кнопка0.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.A403_1Кнопка0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1Кнопка0.FlatAppearance.BorderSize = 0;
             this.A403_1Кнопка0.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -373,7 +399,7 @@
             // A403_1Кнопка9
             // 
             this.A403_1Кнопка9.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1Кнопка9.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1Кнопка9.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.A403_1Кнопка9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1Кнопка9.FlatAppearance.BorderSize = 0;
             this.A403_1Кнопка9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -393,7 +419,7 @@
             // A403_1Кнопка8
             // 
             this.A403_1Кнопка8.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1Кнопка8.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1Кнопка8.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.A403_1Кнопка8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1Кнопка8.FlatAppearance.BorderSize = 0;
             this.A403_1Кнопка8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -413,7 +439,7 @@
             // A403_1Кнопка7
             // 
             this.A403_1Кнопка7.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1Кнопка7.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1Кнопка7.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.A403_1Кнопка7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1Кнопка7.FlatAppearance.BorderSize = 0;
             this.A403_1Кнопка7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -433,7 +459,7 @@
             // A403_1Кнопка6
             // 
             this.A403_1Кнопка6.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1Кнопка6.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1Кнопка6.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.A403_1Кнопка6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1Кнопка6.FlatAppearance.BorderSize = 0;
             this.A403_1Кнопка6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -453,7 +479,7 @@
             // A403_1Кнопка5
             // 
             this.A403_1Кнопка5.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1Кнопка5.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1Кнопка5.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.A403_1Кнопка5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1Кнопка5.FlatAppearance.BorderSize = 0;
             this.A403_1Кнопка5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -473,7 +499,7 @@
             // A403_1Кнопка4
             // 
             this.A403_1Кнопка4.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1Кнопка4.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1Кнопка4.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.A403_1Кнопка4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1Кнопка4.FlatAppearance.BorderSize = 0;
             this.A403_1Кнопка4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -493,7 +519,7 @@
             // A403_1Кнопка3
             // 
             this.A403_1Кнопка3.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1Кнопка3.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1Кнопка3.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.A403_1Кнопка3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1Кнопка3.FlatAppearance.BorderSize = 0;
             this.A403_1Кнопка3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -513,7 +539,7 @@
             // A403_1Кнопка2
             // 
             this.A403_1Кнопка2.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1Кнопка2.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1Кнопка2.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.A403_1Кнопка2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1Кнопка2.FlatAppearance.BorderSize = 0;
             this.A403_1Кнопка2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -533,7 +559,7 @@
             // A403_1Кнопка1
             // 
             this.A403_1Кнопка1.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1Кнопка1.BackgroundImage = global::R440O.ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1Кнопка1.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
             this.A403_1Кнопка1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1Кнопка1.FlatAppearance.BorderSize = 0;
             this.A403_1Кнопка1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -553,7 +579,7 @@
             // A403_1ТумблерАвтКоррекция
             // 
             this.A403_1ТумблерАвтКоррекция.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1ТумблерАвтКоррекция.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType1Down;
+            this.A403_1ТумблерАвтКоррекция.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
             this.A403_1ТумблерАвтКоррекция.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1ТумблерАвтКоррекция.FlatAppearance.BorderSize = 0;
             this.A403_1ТумблерАвтКоррекция.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -569,7 +595,7 @@
             // A403_1ТумблерГруппа
             // 
             this.A403_1ТумблерГруппа.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1ТумблерГруппа.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType1Down;
+            this.A403_1ТумблерГруппа.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
             this.A403_1ТумблерГруппа.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1ТумблерГруппа.FlatAppearance.BorderSize = 0;
             this.A403_1ТумблерГруппа.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -585,7 +611,7 @@
             // A403_1ТумблерГотов
             // 
             this.A403_1ТумблерГотов.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1ТумблерГотов.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType1Down;
+            this.A403_1ТумблерГотов.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
             this.A403_1ТумблерГотов.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1ТумблерГотов.FlatAppearance.BorderSize = 0;
             this.A403_1ТумблерГотов.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -601,7 +627,7 @@
             // A403_1ТумблерКомплект
             // 
             this.A403_1ТумблерКомплект.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1ТумблерКомплект.BackgroundImage = global::R440O.ControlElementImages.tumblerHorizontalType2Right;
+            this.A403_1ТумблерКомплект.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Right;
             this.A403_1ТумблерКомплект.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1ТумблерКомплект.FlatAppearance.BorderSize = 0;
             this.A403_1ТумблерКомплект.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -617,7 +643,7 @@
             // A403_1ТумблерСеть
             // 
             this.A403_1ТумблерСеть.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1ТумблерСеть.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType3Down;
+            this.A403_1ТумблерСеть.BackgroundImage = global::R440O.ControlElementImages.tumblerType6Down;
             this.A403_1ТумблерСеть.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1ТумблерСеть.FlatAppearance.BorderSize = 0;
             this.A403_1ТумблерСеть.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -630,6 +656,78 @@
             this.A403_1ТумблерСеть.UseVisualStyleBackColor = false;
             this.A403_1ТумблерСеть.Click += new System.EventHandler(this.A403_1ТумблерСеть_Click);
             // 
+            // A403_1ТаблоПоле2
+            // 
+            this.A403_1ТаблоПоле2.AutoSize = true;
+            this.A403_1ТаблоПоле2.BackColor = System.Drawing.Color.Transparent;
+            this.A403_1ТаблоПоле2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.A403_1ТаблоПоле2.ForeColor = System.Drawing.Color.Red;
+            this.A403_1ТаблоПоле2.Location = new System.Drawing.Point(284, 318);
+            this.A403_1ТаблоПоле2.Name = "A403_1ТаблоПоле2";
+            this.A403_1ТаблоПоле2.Size = new System.Drawing.Size(18, 19);
+            this.A403_1ТаблоПоле2.TabIndex = 53;
+            this.A403_1ТаблоПоле2.Text = "0";
+            // 
+            // A403_1ТаблоПоле4
+            // 
+            this.A403_1ТаблоПоле4.AutoSize = true;
+            this.A403_1ТаблоПоле4.BackColor = System.Drawing.Color.Transparent;
+            this.A403_1ТаблоПоле4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.A403_1ТаблоПоле4.ForeColor = System.Drawing.Color.Red;
+            this.A403_1ТаблоПоле4.Location = new System.Drawing.Point(323, 318);
+            this.A403_1ТаблоПоле4.Name = "A403_1ТаблоПоле4";
+            this.A403_1ТаблоПоле4.Size = new System.Drawing.Size(18, 19);
+            this.A403_1ТаблоПоле4.TabIndex = 54;
+            this.A403_1ТаблоПоле4.Text = "0";
+            // 
+            // A403_1ТаблоПоле3
+            // 
+            this.A403_1ТаблоПоле3.AutoSize = true;
+            this.A403_1ТаблоПоле3.BackColor = System.Drawing.Color.Transparent;
+            this.A403_1ТаблоПоле3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.A403_1ТаблоПоле3.ForeColor = System.Drawing.Color.Red;
+            this.A403_1ТаблоПоле3.Location = new System.Drawing.Point(303, 318);
+            this.A403_1ТаблоПоле3.Name = "A403_1ТаблоПоле3";
+            this.A403_1ТаблоПоле3.Size = new System.Drawing.Size(18, 19);
+            this.A403_1ТаблоПоле3.TabIndex = 55;
+            this.A403_1ТаблоПоле3.Text = "0";
+            // 
+            // A403_1ТаблоПоле5
+            // 
+            this.A403_1ТаблоПоле5.AutoSize = true;
+            this.A403_1ТаблоПоле5.BackColor = System.Drawing.Color.Transparent;
+            this.A403_1ТаблоПоле5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.A403_1ТаблоПоле5.ForeColor = System.Drawing.Color.Red;
+            this.A403_1ТаблоПоле5.Location = new System.Drawing.Point(343, 318);
+            this.A403_1ТаблоПоле5.Name = "A403_1ТаблоПоле5";
+            this.A403_1ТаблоПоле5.Size = new System.Drawing.Size(18, 19);
+            this.A403_1ТаблоПоле5.TabIndex = 56;
+            this.A403_1ТаблоПоле5.Text = "0";
+            // 
+            // A403_1ТаблоПоле6
+            // 
+            this.A403_1ТаблоПоле6.AutoSize = true;
+            this.A403_1ТаблоПоле6.BackColor = System.Drawing.Color.Transparent;
+            this.A403_1ТаблоПоле6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.A403_1ТаблоПоле6.ForeColor = System.Drawing.Color.Red;
+            this.A403_1ТаблоПоле6.Location = new System.Drawing.Point(363, 318);
+            this.A403_1ТаблоПоле6.Name = "A403_1ТаблоПоле6";
+            this.A403_1ТаблоПоле6.Size = new System.Drawing.Size(18, 19);
+            this.A403_1ТаблоПоле6.TabIndex = 57;
+            this.A403_1ТаблоПоле6.Text = "0";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(250, 318);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(16, 19);
+            this.label7.TabIndex = 58;
+            this.label7.Text = "*";
+            // 
             // A403_1Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -641,6 +739,7 @@
             this.Name = "A403_1Form";
             this.Text = "A403-1";
             this.A403_1Panel.ResumeLayout(false);
+            this.A403_1Panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -677,5 +776,12 @@
         private System.Windows.Forms.Button A403_1КнопкаУстВремени;
         private System.Windows.Forms.Button A403_1ПереключательРежимРаботы;
         private System.Windows.Forms.Button A403_1ПереключательПроверка;
+        private System.Windows.Forms.Label A403_1ТаблоПоле0;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label A403_1ТаблоПоле6;
+        private System.Windows.Forms.Label A403_1ТаблоПоле5;
+        private System.Windows.Forms.Label A403_1ТаблоПоле3;
+        private System.Windows.Forms.Label A403_1ТаблоПоле4;
+        private System.Windows.Forms.Label A403_1ТаблоПоле2;
     }
 }

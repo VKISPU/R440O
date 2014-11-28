@@ -27,12 +27,12 @@ namespace R440O.R440OForms.PowerCabel
         {
             if (PowerCabelParameters.PowerCabelТумблерОсвещение == "true")
             {
-                this.PowerCabelТумблерОсвещение.BackgroundImage = ControlElementImages.tumblerHorizontalType4Left;
+                this.PowerCabelТумблерОсвещение.BackgroundImage = ControlElementImages.tumblerType4Left;
                 PowerCabelParameters.PowerCabelТумблерОсвещение = "false";
             }
             else
             {
-                this.PowerCabelТумблерОсвещение.BackgroundImage = ControlElementImages.tumblerHorizontalType4Right;
+                this.PowerCabelТумблерОсвещение.BackgroundImage = ControlElementImages.tumblerType4Right;
                 PowerCabelParameters.PowerCabelТумблерОсвещение = "true";
             }
         }

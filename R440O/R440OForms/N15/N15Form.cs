@@ -62,7 +62,7 @@ namespace R440O.R440OForms.N15
 
         private void Н15КнопкаСтанцияВкл_MouseUp(object sender, MouseEventArgs e)
         {
-            this.Н15КнопкаСтанцияВкл.BackgroundImage = ControlElementImages.buttonOnUpBlack;
+            this.Н15КнопкаСтанцияВкл.BackgroundImage = ControlElementImages.buttonN15On;
 
             #region Н15ТумблерЦ300М1
             N15Parameters.Н15ТумблерЦ300М1 = локН15ТумблерЦ300М1;
@@ -412,7 +412,7 @@ namespace R440O.R440OForms.N15
 
         private void Н15КнопкаСтанцияВыкл_MouseUp(object sender, MouseEventArgs e)
         {
-            this.Н15КнопкаСтанцияВыкл.BackgroundImage = ControlElementImages.buttonOffUpRed;
+            this.Н15КнопкаСтанцияВыкл.BackgroundImage = ControlElementImages.buttonN15Off;
             N15Parameters.Н15КнопкаСтанцияВыкл = "true";
         }
         #endregion
@@ -528,7 +528,7 @@ namespace R440O.R440OForms.N15
 
         private void Н15КнопкаМощностьСброс_MouseUp(object sender, MouseEventArgs e)
         {
-            this.Н15КнопкаМощностьСброс.BackgroundImage = ControlElementImages.buttonSquareType1UpWhite;
+            this.Н15КнопкаМощностьСброс.BackgroundImage = ControlElementImages.buttonSquareWhite;
             this.Н15КнопкаМощностьСброс.Text = "СБРОС";
 
             this.Н15КнопкаПРМНаведениеЦ300М1.Visible = true;
@@ -651,7 +651,7 @@ namespace R440O.R440OForms.N15
 
         private void Н15КнопкаСброс_MouseUp(object sender, MouseEventArgs e)
         {
-            this.Н15КнопкаСброс.BackgroundImage = ControlElementImages.buttonSquareType1UpWhite;
+            this.Н15КнопкаСброс.BackgroundImage = ControlElementImages.buttonSquareWhite;
             this.Н15КнопкаСброс.Text = "СБРОС";
 
             this.Н15КнопкаН13_1.Visible = true;
@@ -704,12 +704,12 @@ namespace R440O.R440OForms.N15
         {
             if (локН15ТумблерЦ300М1 == "true")
             {
-                this.Н15ТумблерЦ300М1.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
+                this.Н15ТумблерЦ300М1.BackgroundImage = ControlElementImages.tumblerType3Down;
                 локН15ТумблерЦ300М1 = "false";
             }
             else
             {
-                this.Н15ТумблерЦ300М1.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
+                this.Н15ТумблерЦ300М1.BackgroundImage = ControlElementImages.tumblerType3Up;
                 локН15ТумблерЦ300М1 = "true";
             }
         }
@@ -718,12 +718,12 @@ namespace R440O.R440OForms.N15
         {
             if (локН15ТумблерЦ300М2 == "true")
             {
-                this.Н15ТумблерЦ300М2.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
+                this.Н15ТумблерЦ300М2.BackgroundImage = ControlElementImages.tumblerType3Down;
                 локН15ТумблерЦ300М2 = "false";
             }
             else
             {
-                this.Н15ТумблерЦ300М2.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
+                this.Н15ТумблерЦ300М2.BackgroundImage = ControlElementImages.tumblerType3Up;
                 локН15ТумблерЦ300М2 = "true";
             }
         }
@@ -732,12 +732,12 @@ namespace R440O.R440OForms.N15
         {
             if (локН15ТумблерЦ300М3 == "true")
             {
-                this.Н15ТумблерЦ300М3.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
+                this.Н15ТумблерЦ300М3.BackgroundImage = ControlElementImages.tumblerType3Down;
                 локН15ТумблерЦ300М3 = "false";
             }
             else
             {
-                this.Н15ТумблерЦ300М3.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
+                this.Н15ТумблерЦ300М3.BackgroundImage = ControlElementImages.tumblerType3Up;
                 локН15ТумблерЦ300М3 = "true";
             }
         }
@@ -746,12 +746,12 @@ namespace R440O.R440OForms.N15
         {
             if (локН15ТумблерЦ300М4 == "true")
             {
-                this.Н15ТумблерЦ300М4.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
+                this.Н15ТумблерЦ300М4.BackgroundImage = ControlElementImages.tumblerType3Down;
                 локН15ТумблерЦ300М4 = "false";
             }
             else
             {
-                this.Н15ТумблерЦ300М4.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
+                this.Н15ТумблерЦ300М4.BackgroundImage = ControlElementImages.tumblerType3Up;
                 локН15ТумблерЦ300М4 = "true";
             }
         }
@@ -760,12 +760,12 @@ namespace R440O.R440OForms.N15
         {
             if (локН15ТумблерН12С == "true")
             {
-                this.Н15ТумблерН12С.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
+                this.Н15ТумблерН12С.BackgroundImage = ControlElementImages.tumblerType3Down;
                 локН15ТумблерН12С = "false";
             }
             else
             {
-                this.Н15ТумблерН12С.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
+                this.Н15ТумблерН12С.BackgroundImage = ControlElementImages.tumblerType3Up;
                 локН15ТумблерН12С = "true";
             }
         }
@@ -774,12 +774,12 @@ namespace R440O.R440OForms.N15
         {
             if (локН15ТумблерМШУ == "true")
             {
-                this.Н15ТумблерМШУ.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
+                this.Н15ТумблерМШУ.BackgroundImage = ControlElementImages.tumblerType3Down;
                 локН15ТумблерМШУ = "false";
             }
             else
             {
-                this.Н15ТумблерМШУ.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
+                this.Н15ТумблерМШУ.BackgroundImage = ControlElementImages.tumblerType3Up;
                 локН15ТумблерМШУ = "true";
             }
         }
@@ -788,12 +788,12 @@ namespace R440O.R440OForms.N15
         {
             if (локН15ТумблерБМА_1 == "true")
             {
-                this.Н15ТумблерБМА_1.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
+                this.Н15ТумблерБМА_1.BackgroundImage = ControlElementImages.tumblerType3Down;
                 локН15ТумблерБМА_1 = "false";
             }
             else
             {
-                this.Н15ТумблерБМА_1.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
+                this.Н15ТумблерБМА_1.BackgroundImage = ControlElementImages.tumblerType3Up;
                 локН15ТумблерБМА_1 = "true";
             }
         }
@@ -802,12 +802,12 @@ namespace R440O.R440OForms.N15
         {
             if (локН15ТумблерБМА_2 == "true")
             {
-                this.Н15ТумблерБМА_2.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
+                this.Н15ТумблерБМА_2.BackgroundImage = ControlElementImages.tumblerType3Down;
                 локН15ТумблерБМА_2 = "false";
             }
             else
             {
-                this.Н15ТумблерБМА_2.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
+                this.Н15ТумблерБМА_2.BackgroundImage = ControlElementImages.tumblerType3Up;
                 локН15ТумблерБМА_2 = "true";
             }
         }
@@ -816,12 +816,12 @@ namespace R440O.R440OForms.N15
         {
             if (локН15ТумблерА205 == "true")
             {
-                this.Н15ТумблерА205.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
+                this.Н15ТумблерА205.BackgroundImage = ControlElementImages.tumblerType3Down;
                 локН15ТумблерА205 = "false";
             }
             else
             {
-                this.Н15ТумблерА205.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
+                this.Н15ТумблерА205.BackgroundImage = ControlElementImages.tumblerType3Up;
                 локН15ТумблерА205 = "true";
             }
         }
@@ -830,12 +830,12 @@ namespace R440O.R440OForms.N15
         {
             if (локН15ТумблерК1_1 == "true")
             {
-                this.Н15ТумблерК1_1.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
+                this.Н15ТумблерК1_1.BackgroundImage = ControlElementImages.tumblerType3Down;
                 локН15ТумблерК1_1 = "false";
             }
             else
             {
-                this.Н15ТумблерК1_1.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
+                this.Н15ТумблерК1_1.BackgroundImage = ControlElementImages.tumblerType3Up;
                 локН15ТумблерК1_1 = "true";
             }
         }
@@ -844,12 +844,12 @@ namespace R440O.R440OForms.N15
         {
             if (локН15ТумблерК1_2 == "true")
             {
-                this.Н15ТумблерК1_2.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
+                this.Н15ТумблерК1_2.BackgroundImage = ControlElementImages.tumblerType3Down;
                 локН15ТумблерК1_2 = "false";
             }
             else
             {
-                this.Н15ТумблерК1_2.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
+                this.Н15ТумблерК1_2.BackgroundImage = ControlElementImages.tumblerType3Up;
                 локН15ТумблерК1_2 = "true";
             }
         }
@@ -858,12 +858,12 @@ namespace R440O.R440OForms.N15
         {
             if (локН15ТумблерАФСС == "true")
             {
-                this.Н15ТумблерАФСС.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
+                this.Н15ТумблерАФСС.BackgroundImage = ControlElementImages.tumblerType3Down;
                 локН15ТумблерАФСС = "false";
             }
             else
             {
-                this.Н15ТумблерАФСС.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
+                this.Н15ТумблерАФСС.BackgroundImage = ControlElementImages.tumblerType3Up;
                 локН15ТумблерАФСС = "true";
             }
         }
@@ -872,12 +872,12 @@ namespace R440O.R440OForms.N15
         {
             if (локН15ТумблерА1 == "true")
             {
-                this.Н15ТумблерА1.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
+                this.Н15ТумблерА1.BackgroundImage = ControlElementImages.tumblerType3Down;
                 локН15ТумблерА1 = "false";
             }
             else
             {
-                this.Н15ТумблерА1.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
+                this.Н15ТумблерА1.BackgroundImage = ControlElementImages.tumblerType3Up;
                 локН15ТумблерА1 = "true";
             }
         }
@@ -886,12 +886,12 @@ namespace R440O.R440OForms.N15
         {
             if (локН15ТумблерА403 == "true")
             {
-                this.Н15ТумблерА403.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
+                this.Н15ТумблерА403.BackgroundImage = ControlElementImages.tumblerType3Down;
                 локН15ТумблерА403 = "false";
             }
             else
             {
-                this.Н15ТумблерА403.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
+                this.Н15ТумблерА403.BackgroundImage = ControlElementImages.tumblerType3Up;
                 локН15ТумблерА403 = "true";
             }
         }
@@ -900,12 +900,12 @@ namespace R440O.R440OForms.N15
         {
             if (локН15ТумблерБ1_1 == "true")
             {
-                this.Н15ТумблерБ1_1.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
+                this.Н15ТумблерБ1_1.BackgroundImage = ControlElementImages.tumblerType3Down;
                 локН15ТумблерБ1_1 = "false";
             }
             else
             {
-                this.Н15ТумблерБ1_1.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
+                this.Н15ТумблерБ1_1.BackgroundImage = ControlElementImages.tumblerType3Up;
                 локН15ТумблерБ1_1 = "true";
             }
         }
@@ -914,12 +914,12 @@ namespace R440O.R440OForms.N15
         {
             if (локН15ТумблерБ1_2 == "true")
             {
-                this.Н15ТумблерБ1_2.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
+                this.Н15ТумблерБ1_2.BackgroundImage = ControlElementImages.tumblerType3Down;
                 локН15ТумблерБ1_2 = "false";
             }
             else
             {
-                this.Н15ТумблерБ1_2.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
+                this.Н15ТумблерБ1_2.BackgroundImage = ControlElementImages.tumblerType3Up;
                 локН15ТумблерБ1_2 = "true";
             }
         }
@@ -928,12 +928,12 @@ namespace R440O.R440OForms.N15
         {
             if (локН15ТумблерБ2_1 == "true")
             {
-                this.Н15ТумблерБ2_1.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
+                this.Н15ТумблерБ2_1.BackgroundImage = ControlElementImages.tumblerType3Down;
                 локН15ТумблерБ2_1 = "false";
             }
             else
             {
-                this.Н15ТумблерБ2_1.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
+                this.Н15ТумблерБ2_1.BackgroundImage = ControlElementImages.tumblerType3Up;
                 локН15ТумблерБ2_1 = "true";
             }
         }
@@ -942,12 +942,12 @@ namespace R440O.R440OForms.N15
         {
             if (локН15ТумблерБ2_2 == "true")
             {
-                this.Н15ТумблерБ2_2.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
+                this.Н15ТумблерБ2_2.BackgroundImage = ControlElementImages.tumblerType3Down;
                 локН15ТумблерБ2_2 = "false";
             }
             else
             {
-                this.Н15ТумблерБ2_2.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
+                this.Н15ТумблерБ2_2.BackgroundImage = ControlElementImages.tumblerType3Up;
                 локН15ТумблерБ2_2 = "true";
             }
         }
@@ -956,12 +956,12 @@ namespace R440O.R440OForms.N15
         {
             if (локН15ТумблерБ3_1 == "true")
             {
-                this.Н15ТумблерБ3_1.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
+                this.Н15ТумблерБ3_1.BackgroundImage = ControlElementImages.tumblerType3Down;
                 локН15ТумблерБ3_1 = "false";
             }
             else
             {
-                this.Н15ТумблерБ3_1.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
+                this.Н15ТумблерБ3_1.BackgroundImage = ControlElementImages.tumblerType3Up;
                 локН15ТумблерБ3_1 = "true";
             }
         }
@@ -970,12 +970,12 @@ namespace R440O.R440OForms.N15
         {
             if (локН15ТумблерБ3_2 == "true")
             {
-                this.Н15ТумблерБ3_2.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
+                this.Н15ТумблерБ3_2.BackgroundImage = ControlElementImages.tumblerType3Down;
                 локН15ТумблерБ3_2 = "false";
             }
             else
             {
-                this.Н15ТумблерБ3_2.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
+                this.Н15ТумблерБ3_2.BackgroundImage = ControlElementImages.tumblerType3Up;
                 локН15ТумблерБ3_2 = "true";
             }
         }
@@ -984,12 +984,12 @@ namespace R440O.R440OForms.N15
         {
             if (локН15ТумблерДАБ_5 == "true")
             {
-                this.Н15ТумблерДАБ_5.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
+                this.Н15ТумблерДАБ_5.BackgroundImage = ControlElementImages.tumblerType3Down;
                 локН15ТумблерДАБ_5 = "false";
             }
             else
             {
-                this.Н15ТумблерДАБ_5.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
+                this.Н15ТумблерДАБ_5.BackgroundImage = ControlElementImages.tumblerType3Up;
                 локН15ТумблерДАБ_5 = "true";
             }
         }
@@ -998,12 +998,12 @@ namespace R440O.R440OForms.N15
         {
             if (локН15ТумблерР_Н == "true")
             {
-                this.Н15ТумблерР_Н.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
+                this.Н15ТумблерР_Н.BackgroundImage = ControlElementImages.tumblerType3Down;
                 локН15ТумблерР_Н = "false";
             }
             else
             {
-                this.Н15ТумблерР_Н.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
+                this.Н15ТумблерР_Н.BackgroundImage = ControlElementImages.tumblerType3Up;
                 локН15ТумблерР_Н = "true";
             }
         }
@@ -1012,12 +1012,12 @@ namespace R440O.R440OForms.N15
         {
             if (локН15ТумблерА20512 == "1")
             {
-                this.Н15ТумблерА20512.BackgroundImage = ControlElementImages.tumblerVerticalType1Down;
+                this.Н15ТумблерА20512.BackgroundImage = ControlElementImages.tumblerType4Down;
                 локН15ТумблерА20512 = "2";
             }
             else
             {
-                this.Н15ТумблерА20512.BackgroundImage = ControlElementImages.tumblerVerticalType1Up;
+                this.Н15ТумблерА20512.BackgroundImage = ControlElementImages.tumblerType4Up;
                 локН15ТумблерА20512 = "1";
             }
         }
@@ -1026,7 +1026,7 @@ namespace R440O.R440OForms.N15
         {
             if (N15Parameters.Н15ТумблерА30412 == "1")
             {
-                this.Н15ТумблерА30412.BackgroundImage = ControlElementImages.tumblerVerticalType5Down;
+                this.Н15ТумблерА30412.BackgroundImage = ControlElementImages.tumblerType3Down;
                 N15Parameters.Н15ТумблерА30412 = "2";
                 if (N15Parameters.Н15ЛампочкаМШУ == "true")
                 {
@@ -1043,7 +1043,7 @@ namespace R440O.R440OForms.N15
             }
             else
             {
-                this.Н15ТумблерА30412.BackgroundImage = ControlElementImages.tumblerVerticalType5Up;
+                this.Н15ТумблерА30412.BackgroundImage = ControlElementImages.tumblerType3Up;
                 N15Parameters.Н15ТумблерА30412 = "1";
                 if (N15Parameters.Н15ЛампочкаМШУ == "true")
                 {

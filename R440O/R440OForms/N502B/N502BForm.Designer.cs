@@ -140,7 +140,7 @@
             // N502BПереключательСеть
             // 
             this.N502BПереключательСеть.BackColor = System.Drawing.Color.Transparent;
-            this.N502BПереключательСеть.BackgroundImage = global::R440O.ControlElementImages.tumblerSideVerticalType2Down;
+            this.N502BПереключательСеть.BackgroundImage = global::R440O.ControlElementImages.tumblerN502BPowerDown;
             this.N502BПереключательСеть.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.N502BПереключательСеть.FlatAppearance.BorderSize = 0;
             this.N502BПереключательСеть.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -156,7 +156,7 @@
             // N502BКнопкаВклНагрузки
             // 
             this.N502BКнопкаВклНагрузки.BackColor = System.Drawing.Color.Transparent;
-            this.N502BКнопкаВклНагрузки.BackgroundImage = global::R440O.ControlElementImages.buttonRoundSmall;
+            this.N502BКнопкаВклНагрузки.BackgroundImage = global::R440O.ControlElementImages.buttonRoundType3;
             this.N502BКнопкаВклНагрузки.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.N502BКнопкаВклНагрузки.FlatAppearance.BorderSize = 0;
             this.N502BКнопкаВклНагрузки.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -173,7 +173,7 @@
             // N502BКнопкаРБППроверка
             // 
             this.N502BКнопкаРБППроверка.BackColor = System.Drawing.Color.Transparent;
-            this.N502BКнопкаРБППроверка.BackgroundImage = global::R440O.ControlElementImages.buttonRoundSmall;
+            this.N502BКнопкаРБППроверка.BackgroundImage = global::R440O.ControlElementImages.buttonRoundType3;
             this.N502BКнопкаРБППроверка.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.N502BКнопкаРБППроверка.FlatAppearance.BorderSize = 0;
             this.N502BКнопкаРБППроверка.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -190,7 +190,7 @@
             // N502BКнопкаРБПСброс
             // 
             this.N502BКнопкаРБПСброс.BackColor = System.Drawing.Color.Transparent;
-            this.N502BКнопкаРБПСброс.BackgroundImage = global::R440O.ControlElementImages.buttonRoundSmall;
+            this.N502BКнопкаРБПСброс.BackgroundImage = global::R440O.ControlElementImages.buttonRoundType3;
             this.N502BКнопкаРБПСброс.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.N502BКнопкаРБПСброс.FlatAppearance.BorderSize = 0;
             this.N502BКнопкаРБПСброс.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -207,7 +207,7 @@
             // N502BТумблерОсвещение2
             // 
             this.N502BТумблерОсвещение2.BackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерОсвещение2.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType4Middle;
+            this.N502BТумблерОсвещение2.BackgroundImage = global::R440O.ControlElementImages.tumblerType5Middle;
             this.N502BТумблерОсвещение2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.N502BТумблерОсвещение2.FlatAppearance.BorderSize = 0;
             this.N502BТумблерОсвещение2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -223,7 +223,7 @@
             // N502BТумблерОсвещение1
             // 
             this.N502BТумблерОсвещение1.BackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерОсвещение1.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType4Middle;
+            this.N502BТумблерОсвещение1.BackgroundImage = global::R440O.ControlElementImages.tumblerType5Middle;
             this.N502BТумблерОсвещение1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.N502BТумблерОсвещение1.FlatAppearance.BorderSize = 0;
             this.N502BТумблерОсвещение1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -239,7 +239,7 @@
             // N502BТумблерН15
             // 
             this.N502BТумблерН15.BackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерН15.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType2Down;
+            this.N502BТумблерН15.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Down;
             this.N502BТумблерН15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.N502BТумблерН15.FlatAppearance.BorderSize = 0;
             this.N502BТумблерН15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -255,7 +255,7 @@
             // N502BТумблерН13_2
             // 
             this.N502BТумблерН13_2.BackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерН13_2.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType2Down;
+            this.N502BТумблерН13_2.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Down;
             this.N502BТумблерН13_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.N502BТумблерН13_2.FlatAppearance.BorderSize = 0;
             this.N502BТумблерН13_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -271,7 +271,7 @@
             // N502BТумблерН13_1
             // 
             this.N502BТумблерН13_1.BackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерН13_1.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType2Down;
+            this.N502BТумблерН13_1.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Down;
             this.N502BТумблерН13_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.N502BТумблерН13_1.FlatAppearance.BorderSize = 0;
             this.N502BТумблерН13_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -287,7 +287,7 @@
             // N502BТумблерОсвещение
             // 
             this.N502BТумблерОсвещение.BackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерОсвещение.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType2Down;
+            this.N502BТумблерОсвещение.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Down;
             this.N502BТумблерОсвещение.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.N502BТумблерОсвещение.FlatAppearance.BorderSize = 0;
             this.N502BТумблерОсвещение.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -303,7 +303,7 @@
             // N502BТумблерВыпрямитель27В
             // 
             this.N502BТумблерВыпрямитель27В.BackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерВыпрямитель27В.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType2Down;
+            this.N502BТумблерВыпрямитель27В.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Down;
             this.N502BТумблерВыпрямитель27В.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.N502BТумблерВыпрямитель27В.FlatAppearance.BorderSize = 0;
             this.N502BТумблерВыпрямитель27В.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -319,7 +319,7 @@
             // N502BТумблерЭлектрооборуд
             // 
             this.N502BТумблерЭлектрооборуд.BackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерЭлектрооборуд.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType2Down;
+            this.N502BТумблерЭлектрооборуд.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Down;
             this.N502BТумблерЭлектрооборуд.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.N502BТумблерЭлектрооборуд.FlatAppearance.BorderSize = 0;
             this.N502BТумблерЭлектрооборуд.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;

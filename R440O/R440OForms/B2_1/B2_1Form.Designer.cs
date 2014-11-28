@@ -29,16 +29,535 @@
         private void InitializeComponent()
         {
             this.B2_1Panel = new System.Windows.Forms.Panel();
+            this.B2_1ЛампочкаТКСпр2 = new System.Windows.Forms.PictureBox();
+            this.B2_1ЛампочкаТЛГпр = new System.Windows.Forms.PictureBox();
+            this.B2_1ЛампочкаВУП_Неиспр = new System.Windows.Forms.PictureBox();
+            this.B2_1ЛампочкаПрРПрС_2 = new System.Windows.Forms.PictureBox();
+            this.B2_1ЛампочкаПрТС1_2 = new System.Windows.Forms.PictureBox();
+            this.B2_1ЛампочкаПрТС2_2 = new System.Windows.Forms.PictureBox();
+            this.B2_1ЛампочкаПрТС2_1 = new System.Windows.Forms.PictureBox();
+            this.B2_1ЛампочкаДФАПЧ22 = new System.Windows.Forms.PictureBox();
+            this.B2_1ЛампочкаПрТС1_1 = new System.Windows.Forms.PictureBox();
+            this.B2_1ЛампочкаДФАПЧ21 = new System.Windows.Forms.PictureBox();
+            this.B2_1ЛампочкаПрРПрС_Авар = new System.Windows.Forms.PictureBox();
+            this.B2_1ЛампочкаБОЧ = new System.Windows.Forms.PictureBox();
+            this.B2_1ЛампочкаПУЛ_2 = new System.Windows.Forms.PictureBox();
+            this.B2_1ЛампочкаПУЛ_1 = new System.Windows.Forms.PictureBox();
+            this.B2_1ЛампочкаПрРПрС_1 = new System.Windows.Forms.PictureBox();
+            this.B2_1ТумблерМуДу = new System.Windows.Forms.Button();
+            this.B2_1КнопкаБК2_9 = new System.Windows.Forms.Button();
+            this.B2_1КнопкаБК2_8 = new System.Windows.Forms.Button();
+            this.B2_1КнопкаБК2_7 = new System.Windows.Forms.Button();
+            this.B2_1КнопкаБК2_6 = new System.Windows.Forms.Button();
+            this.B2_1КнопкаБК2_5 = new System.Windows.Forms.Button();
+            this.B2_1КнопкаБК2_4 = new System.Windows.Forms.Button();
+            this.B2_1КнопкаБК2_3 = new System.Windows.Forms.Button();
+            this.B2_1КнопкаБК2_2 = new System.Windows.Forms.Button();
+            this.B2_1КнопкаБК2_1 = new System.Windows.Forms.Button();
+            this.B2_1КнопкаБК1_9 = new System.Windows.Forms.Button();
+            this.B2_1КнопкаБК1_8 = new System.Windows.Forms.Button();
+            this.B2_1КнопкаБК1_7 = new System.Windows.Forms.Button();
+            this.B2_1КнопкаБК1_6 = new System.Windows.Forms.Button();
+            this.B2_1КнопкаБК1_5 = new System.Windows.Forms.Button();
+            this.B2_1КнопкаБК1_4 = new System.Windows.Forms.Button();
+            this.B2_1КнопкаБК1_3 = new System.Windows.Forms.Button();
+            this.B2_1КнопкаБК1_2 = new System.Windows.Forms.Button();
+            this.B2_1КнопкаБК1_1 = new System.Windows.Forms.Button();
+            this.B2_1ЛампочкаВУП_1 = new System.Windows.Forms.PictureBox();
+            this.B2_1Panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // B2_1Panel
             // 
             this.B2_1Panel.BackgroundImage = global::R440O.BackgroundImages.B2;
             this.B2_1Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1Panel.Controls.Add(this.B2_1ЛампочкаВУП_1);
+            this.B2_1Panel.Controls.Add(this.B2_1ЛампочкаТКСпр2);
+            this.B2_1Panel.Controls.Add(this.B2_1ЛампочкаТЛГпр);
+            this.B2_1Panel.Controls.Add(this.B2_1ЛампочкаВУП_Неиспр);
+            this.B2_1Panel.Controls.Add(this.B2_1ЛампочкаПрРПрС_2);
+            this.B2_1Panel.Controls.Add(this.B2_1ЛампочкаПрТС1_2);
+            this.B2_1Panel.Controls.Add(this.B2_1ЛампочкаПрТС2_2);
+            this.B2_1Panel.Controls.Add(this.B2_1ЛампочкаПрТС2_1);
+            this.B2_1Panel.Controls.Add(this.B2_1ЛампочкаДФАПЧ22);
+            this.B2_1Panel.Controls.Add(this.B2_1ЛампочкаПрТС1_1);
+            this.B2_1Panel.Controls.Add(this.B2_1ЛампочкаДФАПЧ21);
+            this.B2_1Panel.Controls.Add(this.B2_1ЛампочкаПрРПрС_Авар);
+            this.B2_1Panel.Controls.Add(this.B2_1ЛампочкаБОЧ);
+            this.B2_1Panel.Controls.Add(this.B2_1ЛампочкаПУЛ_2);
+            this.B2_1Panel.Controls.Add(this.B2_1ЛампочкаПУЛ_1);
+            this.B2_1Panel.Controls.Add(this.B2_1ЛампочкаПрРПрС_1);
+            this.B2_1Panel.Controls.Add(this.B2_1ТумблерМуДу);
+            this.B2_1Panel.Controls.Add(this.B2_1КнопкаБК2_9);
+            this.B2_1Panel.Controls.Add(this.B2_1КнопкаБК2_8);
+            this.B2_1Panel.Controls.Add(this.B2_1КнопкаБК2_7);
+            this.B2_1Panel.Controls.Add(this.B2_1КнопкаБК2_6);
+            this.B2_1Panel.Controls.Add(this.B2_1КнопкаБК2_5);
+            this.B2_1Panel.Controls.Add(this.B2_1КнопкаБК2_4);
+            this.B2_1Panel.Controls.Add(this.B2_1КнопкаБК2_3);
+            this.B2_1Panel.Controls.Add(this.B2_1КнопкаБК2_2);
+            this.B2_1Panel.Controls.Add(this.B2_1КнопкаБК2_1);
+            this.B2_1Panel.Controls.Add(this.B2_1КнопкаБК1_9);
+            this.B2_1Panel.Controls.Add(this.B2_1КнопкаБК1_8);
+            this.B2_1Panel.Controls.Add(this.B2_1КнопкаБК1_7);
+            this.B2_1Panel.Controls.Add(this.B2_1КнопкаБК1_6);
+            this.B2_1Panel.Controls.Add(this.B2_1КнопкаБК1_5);
+            this.B2_1Panel.Controls.Add(this.B2_1КнопкаБК1_4);
+            this.B2_1Panel.Controls.Add(this.B2_1КнопкаБК1_3);
+            this.B2_1Panel.Controls.Add(this.B2_1КнопкаБК1_2);
+            this.B2_1Panel.Controls.Add(this.B2_1КнопкаБК1_1);
             this.B2_1Panel.Location = new System.Drawing.Point(0, 0);
             this.B2_1Panel.Name = "B2_1Panel";
             this.B2_1Panel.Size = new System.Drawing.Size(1104, 354);
             this.B2_1Panel.TabIndex = 0;
+            // 
+            // B2_1ЛампочкаТКСпр2
+            // 
+            this.B2_1ЛампочкаТКСпр2.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1ЛампочкаТКСпр2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1ЛампочкаТКСпр2.Location = new System.Drawing.Point(304, 78);
+            this.B2_1ЛампочкаТКСпр2.Name = "B2_1ЛампочкаТКСпр2";
+            this.B2_1ЛампочкаТКСпр2.Size = new System.Drawing.Size(35, 35);
+            this.B2_1ЛампочкаТКСпр2.TabIndex = 43;
+            // 
+            // B2_1ЛампочкаТЛГпр
+            // 
+            this.B2_1ЛампочкаТЛГпр.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1ЛампочкаТЛГпр.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1ЛампочкаТЛГпр.Location = new System.Drawing.Point(275, 80);
+            this.B2_1ЛампочкаТЛГпр.Name = "B2_1ЛампочкаТЛГпр";
+            this.B2_1ЛампочкаТЛГпр.Size = new System.Drawing.Size(28, 31);
+            this.B2_1ЛампочкаТЛГпр.TabIndex = 42;
+            // 
+            // B2_1ЛампочкаВУП_Неиспр
+            // 
+            this.B2_1ЛампочкаВУП_Неиспр.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1ЛампочкаВУП_Неиспр.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1ЛампочкаВУП_Неиспр.Location = new System.Drawing.Point(980, 82);
+            this.B2_1ЛампочкаВУП_Неиспр.Name = "B2_1ЛампочкаВУП_Неиспр";
+            this.B2_1ЛампочкаВУП_Неиспр.Size = new System.Drawing.Size(25, 21);
+            this.B2_1ЛампочкаВУП_Неиспр.TabIndex = 41;
+            // 
+            // B2_1ЛампочкаПрРПрС_2
+            // 
+            this.B2_1ЛампочкаПрРПрС_2.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1ЛампочкаПрРПрС_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1ЛампочкаПрРПрС_2.Location = new System.Drawing.Point(153, 84);
+            this.B2_1ЛампочкаПрРПрС_2.Name = "B2_1ЛампочкаПрРПрС_2";
+            this.B2_1ЛампочкаПрРПрС_2.Size = new System.Drawing.Size(25, 21);
+            this.B2_1ЛампочкаПрРПрС_2.TabIndex = 40;
+            // 
+            // B2_1ЛампочкаПрТС1_2
+            // 
+            this.B2_1ЛампочкаПрТС1_2.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1ЛампочкаПрТС1_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1ЛампочкаПрТС1_2.Location = new System.Drawing.Point(432, 87);
+            this.B2_1ЛампочкаПрТС1_2.Name = "B2_1ЛампочкаПрТС1_2";
+            this.B2_1ЛампочкаПрТС1_2.Size = new System.Drawing.Size(25, 21);
+            this.B2_1ЛампочкаПрТС1_2.TabIndex = 39;
+            // 
+            // B2_1ЛампочкаПрТС2_2
+            // 
+            this.B2_1ЛампочкаПрТС2_2.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1ЛампочкаПрТС2_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1ЛампочкаПрТС2_2.Location = new System.Drawing.Point(555, 87);
+            this.B2_1ЛампочкаПрТС2_2.Name = "B2_1ЛампочкаПрТС2_2";
+            this.B2_1ЛампочкаПрТС2_2.Size = new System.Drawing.Size(25, 21);
+            this.B2_1ЛампочкаПрТС2_2.TabIndex = 38;
+            // 
+            // B2_1ЛампочкаПрТС2_1
+            // 
+            this.B2_1ЛампочкаПрТС2_1.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1ЛампочкаПрТС2_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1ЛампочкаПрТС2_1.Location = new System.Drawing.Point(555, 69);
+            this.B2_1ЛампочкаПрТС2_1.Name = "B2_1ЛампочкаПрТС2_1";
+            this.B2_1ЛампочкаПрТС2_1.Size = new System.Drawing.Size(25, 21);
+            this.B2_1ЛампочкаПрТС2_1.TabIndex = 37;
+            // 
+            // B2_1ЛампочкаДФАПЧ22
+            // 
+            this.B2_1ЛампочкаДФАПЧ22.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1ЛампочкаДФАПЧ22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1ЛампочкаДФАПЧ22.Location = new System.Drawing.Point(525, 69);
+            this.B2_1ЛампочкаДФАПЧ22.Name = "B2_1ЛампочкаДФАПЧ22";
+            this.B2_1ЛампочкаДФАПЧ22.Size = new System.Drawing.Size(25, 21);
+            this.B2_1ЛампочкаДФАПЧ22.TabIndex = 36;
+            // 
+            // B2_1ЛампочкаПрТС1_1
+            // 
+            this.B2_1ЛампочкаПрТС1_1.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1ЛампочкаПрТС1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1ЛампочкаПрТС1_1.Location = new System.Drawing.Point(432, 69);
+            this.B2_1ЛампочкаПрТС1_1.Name = "B2_1ЛампочкаПрТС1_1";
+            this.B2_1ЛампочкаПрТС1_1.Size = new System.Drawing.Size(25, 21);
+            this.B2_1ЛампочкаПрТС1_1.TabIndex = 35;
+            // 
+            // B2_1ЛампочкаДФАПЧ21
+            // 
+            this.B2_1ЛампочкаДФАПЧ21.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1ЛампочкаДФАПЧ21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1ЛампочкаДФАПЧ21.Location = new System.Drawing.Point(401, 69);
+            this.B2_1ЛампочкаДФАПЧ21.Name = "B2_1ЛампочкаДФАПЧ21";
+            this.B2_1ЛампочкаДФАПЧ21.Size = new System.Drawing.Size(25, 21);
+            this.B2_1ЛампочкаДФАПЧ21.TabIndex = 34;
+            // 
+            // B2_1ЛампочкаПрРПрС_Авар
+            // 
+            this.B2_1ЛампочкаПрРПрС_Авар.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1ЛампочкаПрРПрС_Авар.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1ЛампочкаПрРПрС_Авар.Location = new System.Drawing.Point(153, 140);
+            this.B2_1ЛампочкаПрРПрС_Авар.Name = "B2_1ЛампочкаПрРПрС_Авар";
+            this.B2_1ЛампочкаПрРПрС_Авар.Size = new System.Drawing.Size(25, 21);
+            this.B2_1ЛампочкаПрРПрС_Авар.TabIndex = 33;
+            // 
+            // B2_1ЛампочкаБОЧ
+            // 
+            this.B2_1ЛампочкаБОЧ.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1ЛампочкаБОЧ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1ЛампочкаБОЧ.Location = new System.Drawing.Point(91, 66);
+            this.B2_1ЛампочкаБОЧ.Name = "B2_1ЛампочкаБОЧ";
+            this.B2_1ЛампочкаБОЧ.Size = new System.Drawing.Size(25, 21);
+            this.B2_1ЛампочкаБОЧ.TabIndex = 32;
+            // 
+            // B2_1ЛампочкаПУЛ_2
+            // 
+            this.B2_1ЛампочкаПУЛ_2.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1ЛампочкаПУЛ_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1ЛампочкаПУЛ_2.Location = new System.Drawing.Point(124, 82);
+            this.B2_1ЛампочкаПУЛ_2.Name = "B2_1ЛампочкаПУЛ_2";
+            this.B2_1ЛампочкаПУЛ_2.Size = new System.Drawing.Size(20, 24);
+            this.B2_1ЛампочкаПУЛ_2.TabIndex = 31;
+            // 
+            // B2_1ЛампочкаПУЛ_1
+            // 
+            this.B2_1ЛампочкаПУЛ_1.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1ЛампочкаПУЛ_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1ЛампочкаПУЛ_1.Location = new System.Drawing.Point(126, 65);
+            this.B2_1ЛампочкаПУЛ_1.Name = "B2_1ЛампочкаПУЛ_1";
+            this.B2_1ЛампочкаПУЛ_1.Size = new System.Drawing.Size(17, 23);
+            this.B2_1ЛампочкаПУЛ_1.TabIndex = 30;
+            // 
+            // B2_1ЛампочкаПрРПрС_1
+            // 
+            this.B2_1ЛампочкаПрРПрС_1.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1ЛампочкаПрРПрС_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1ЛампочкаПрРПрС_1.Location = new System.Drawing.Point(153, 66);
+            this.B2_1ЛампочкаПрРПрС_1.Name = "B2_1ЛампочкаПрРПрС_1";
+            this.B2_1ЛампочкаПрРПрС_1.Size = new System.Drawing.Size(25, 21);
+            this.B2_1ЛампочкаПрРПрС_1.TabIndex = 29;
+            // 
+            // B2_1ТумблерМуДу
+            // 
+            this.B2_1ТумблерМуДу.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1ТумблерМуДу.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
+            this.B2_1ТумблерМуДу.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1ТумблерМуДу.FlatAppearance.BorderSize = 0;
+            this.B2_1ТумблерМуДу.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.B2_1ТумблерМуДу.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.B2_1ТумблерМуДу.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B2_1ТумблерМуДу.Location = new System.Drawing.Point(719, 144);
+            this.B2_1ТумблерМуДу.Name = "B2_1ТумблерМуДу";
+            this.B2_1ТумблерМуДу.Size = new System.Drawing.Size(36, 56);
+            this.B2_1ТумблерМуДу.TabIndex = 28;
+            this.B2_1ТумблерМуДу.UseVisualStyleBackColor = false;
+            this.B2_1ТумблерМуДу.Click += new System.EventHandler(this.B2_1ТумблерМуДу_Click);
+            // 
+            // B2_1КнопкаБК2_9
+            // 
+            this.B2_1КнопкаБК2_9.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_9.BackgroundImage = global::R440O.ControlElementImages.buttonRectType1;
+            this.B2_1КнопкаБК2_9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1КнопкаБК2_9.FlatAppearance.BorderSize = 0;
+            this.B2_1КнопкаБК2_9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B2_1КнопкаБК2_9.Location = new System.Drawing.Point(471, 240);
+            this.B2_1КнопкаБК2_9.Name = "B2_1КнопкаБК2_9";
+            this.B2_1КнопкаБК2_9.Size = new System.Drawing.Size(17, 22);
+            this.B2_1КнопкаБК2_9.TabIndex = 27;
+            this.B2_1КнопкаБК2_9.UseVisualStyleBackColor = false;
+            this.B2_1КнопкаБК2_9.Click += new System.EventHandler(this.B2_1КнопкаБК2_9_Click);
+            // 
+            // B2_1КнопкаБК2_8
+            // 
+            this.B2_1КнопкаБК2_8.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_8.BackgroundImage = global::R440O.ControlElementImages.buttonRectType1;
+            this.B2_1КнопкаБК2_8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1КнопкаБК2_8.FlatAppearance.BorderSize = 0;
+            this.B2_1КнопкаБК2_8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B2_1КнопкаБК2_8.Location = new System.Drawing.Point(471, 220);
+            this.B2_1КнопкаБК2_8.Name = "B2_1КнопкаБК2_8";
+            this.B2_1КнопкаБК2_8.Size = new System.Drawing.Size(17, 22);
+            this.B2_1КнопкаБК2_8.TabIndex = 26;
+            this.B2_1КнопкаБК2_8.UseVisualStyleBackColor = false;
+            this.B2_1КнопкаБК2_8.Click += new System.EventHandler(this.B2_1КнопкаБК2_8_Click);
+            // 
+            // B2_1КнопкаБК2_7
+            // 
+            this.B2_1КнопкаБК2_7.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_7.BackgroundImage = global::R440O.ControlElementImages.buttonRectType1;
+            this.B2_1КнопкаБК2_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1КнопкаБК2_7.FlatAppearance.BorderSize = 0;
+            this.B2_1КнопкаБК2_7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B2_1КнопкаБК2_7.Location = new System.Drawing.Point(471, 199);
+            this.B2_1КнопкаБК2_7.Name = "B2_1КнопкаБК2_7";
+            this.B2_1КнопкаБК2_7.Size = new System.Drawing.Size(17, 22);
+            this.B2_1КнопкаБК2_7.TabIndex = 25;
+            this.B2_1КнопкаБК2_7.UseVisualStyleBackColor = false;
+            this.B2_1КнопкаБК2_7.Click += new System.EventHandler(this.B2_1КнопкаБК2_7_Click);
+            // 
+            // B2_1КнопкаБК2_6
+            // 
+            this.B2_1КнопкаБК2_6.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_6.BackgroundImage = global::R440O.ControlElementImages.buttonRectType1;
+            this.B2_1КнопкаБК2_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1КнопкаБК2_6.FlatAppearance.BorderSize = 0;
+            this.B2_1КнопкаБК2_6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B2_1КнопкаБК2_6.Location = new System.Drawing.Point(471, 178);
+            this.B2_1КнопкаБК2_6.Name = "B2_1КнопкаБК2_6";
+            this.B2_1КнопкаБК2_6.Size = new System.Drawing.Size(17, 22);
+            this.B2_1КнопкаБК2_6.TabIndex = 24;
+            this.B2_1КнопкаБК2_6.UseVisualStyleBackColor = false;
+            this.B2_1КнопкаБК2_6.Click += new System.EventHandler(this.B2_1КнопкаБК2_6_Click);
+            // 
+            // B2_1КнопкаБК2_5
+            // 
+            this.B2_1КнопкаБК2_5.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_5.BackgroundImage = global::R440O.ControlElementImages.buttonRectType1;
+            this.B2_1КнопкаБК2_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1КнопкаБК2_5.FlatAppearance.BorderSize = 0;
+            this.B2_1КнопкаБК2_5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B2_1КнопкаБК2_5.Location = new System.Drawing.Point(471, 157);
+            this.B2_1КнопкаБК2_5.Name = "B2_1КнопкаБК2_5";
+            this.B2_1КнопкаБК2_5.Size = new System.Drawing.Size(17, 22);
+            this.B2_1КнопкаБК2_5.TabIndex = 23;
+            this.B2_1КнопкаБК2_5.UseVisualStyleBackColor = false;
+            this.B2_1КнопкаБК2_5.Click += new System.EventHandler(this.B2_1КнопкаБК2_5_Click);
+            // 
+            // B2_1КнопкаБК2_4
+            // 
+            this.B2_1КнопкаБК2_4.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_4.BackgroundImage = global::R440O.ControlElementImages.buttonRectType1;
+            this.B2_1КнопкаБК2_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1КнопкаБК2_4.FlatAppearance.BorderSize = 0;
+            this.B2_1КнопкаБК2_4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B2_1КнопкаБК2_4.Location = new System.Drawing.Point(471, 136);
+            this.B2_1КнопкаБК2_4.Name = "B2_1КнопкаБК2_4";
+            this.B2_1КнопкаБК2_4.Size = new System.Drawing.Size(17, 22);
+            this.B2_1КнопкаБК2_4.TabIndex = 22;
+            this.B2_1КнопкаБК2_4.UseVisualStyleBackColor = false;
+            this.B2_1КнопкаБК2_4.Click += new System.EventHandler(this.B2_1КнопкаБК2_4_Click);
+            // 
+            // B2_1КнопкаБК2_3
+            // 
+            this.B2_1КнопкаБК2_3.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_3.BackgroundImage = global::R440O.ControlElementImages.buttonRectType1;
+            this.B2_1КнопкаБК2_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1КнопкаБК2_3.FlatAppearance.BorderSize = 0;
+            this.B2_1КнопкаБК2_3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B2_1КнопкаБК2_3.Location = new System.Drawing.Point(471, 115);
+            this.B2_1КнопкаБК2_3.Name = "B2_1КнопкаБК2_3";
+            this.B2_1КнопкаБК2_3.Size = new System.Drawing.Size(17, 22);
+            this.B2_1КнопкаБК2_3.TabIndex = 21;
+            this.B2_1КнопкаБК2_3.UseVisualStyleBackColor = false;
+            this.B2_1КнопкаБК2_3.Click += new System.EventHandler(this.B2_1КнопкаБК2_3_Click);
+            // 
+            // B2_1КнопкаБК2_2
+            // 
+            this.B2_1КнопкаБК2_2.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_2.BackgroundImage = global::R440O.ControlElementImages.buttonRectType1;
+            this.B2_1КнопкаБК2_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1КнопкаБК2_2.FlatAppearance.BorderSize = 0;
+            this.B2_1КнопкаБК2_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B2_1КнопкаБК2_2.Location = new System.Drawing.Point(471, 94);
+            this.B2_1КнопкаБК2_2.Name = "B2_1КнопкаБК2_2";
+            this.B2_1КнопкаБК2_2.Size = new System.Drawing.Size(17, 22);
+            this.B2_1КнопкаБК2_2.TabIndex = 20;
+            this.B2_1КнопкаБК2_2.UseVisualStyleBackColor = false;
+            this.B2_1КнопкаБК2_2.Click += new System.EventHandler(this.B2_1КнопкаБК2_2_Click);
+            // 
+            // B2_1КнопкаБК2_1
+            // 
+            this.B2_1КнопкаБК2_1.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_1.BackgroundImage = global::R440O.ControlElementImages.buttonRectType1;
+            this.B2_1КнопкаБК2_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1КнопкаБК2_1.FlatAppearance.BorderSize = 0;
+            this.B2_1КнопкаБК2_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК2_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B2_1КнопкаБК2_1.Location = new System.Drawing.Point(471, 74);
+            this.B2_1КнопкаБК2_1.Name = "B2_1КнопкаБК2_1";
+            this.B2_1КнопкаБК2_1.Size = new System.Drawing.Size(17, 22);
+            this.B2_1КнопкаБК2_1.TabIndex = 19;
+            this.B2_1КнопкаБК2_1.UseVisualStyleBackColor = false;
+            this.B2_1КнопкаБК2_1.Click += new System.EventHandler(this.B2_1КнопкаБК2_1_Click);
+            // 
+            // B2_1КнопкаБК1_9
+            // 
+            this.B2_1КнопкаБК1_9.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_9.BackgroundImage = global::R440O.ControlElementImages.buttonRectType1;
+            this.B2_1КнопкаБК1_9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1КнопкаБК1_9.FlatAppearance.BorderSize = 0;
+            this.B2_1КнопкаБК1_9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B2_1КнопкаБК1_9.Location = new System.Drawing.Point(347, 240);
+            this.B2_1КнопкаБК1_9.Name = "B2_1КнопкаБК1_9";
+            this.B2_1КнопкаБК1_9.Size = new System.Drawing.Size(17, 22);
+            this.B2_1КнопкаБК1_9.TabIndex = 18;
+            this.B2_1КнопкаБК1_9.UseVisualStyleBackColor = false;
+            this.B2_1КнопкаБК1_9.Click += new System.EventHandler(this.B2_1КнопкаБК1_9_Click);
+            // 
+            // B2_1КнопкаБК1_8
+            // 
+            this.B2_1КнопкаБК1_8.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_8.BackgroundImage = global::R440O.ControlElementImages.buttonRectType1;
+            this.B2_1КнопкаБК1_8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1КнопкаБК1_8.FlatAppearance.BorderSize = 0;
+            this.B2_1КнопкаБК1_8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B2_1КнопкаБК1_8.Location = new System.Drawing.Point(347, 220);
+            this.B2_1КнопкаБК1_8.Name = "B2_1КнопкаБК1_8";
+            this.B2_1КнопкаБК1_8.Size = new System.Drawing.Size(17, 22);
+            this.B2_1КнопкаБК1_8.TabIndex = 17;
+            this.B2_1КнопкаБК1_8.UseVisualStyleBackColor = false;
+            this.B2_1КнопкаБК1_8.Click += new System.EventHandler(this.B2_1КнопкаБК1_8_Click);
+            // 
+            // B2_1КнопкаБК1_7
+            // 
+            this.B2_1КнопкаБК1_7.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_7.BackgroundImage = global::R440O.ControlElementImages.buttonRectType1;
+            this.B2_1КнопкаБК1_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1КнопкаБК1_7.FlatAppearance.BorderSize = 0;
+            this.B2_1КнопкаБК1_7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B2_1КнопкаБК1_7.Location = new System.Drawing.Point(347, 199);
+            this.B2_1КнопкаБК1_7.Name = "B2_1КнопкаБК1_7";
+            this.B2_1КнопкаБК1_7.Size = new System.Drawing.Size(17, 22);
+            this.B2_1КнопкаБК1_7.TabIndex = 16;
+            this.B2_1КнопкаБК1_7.UseVisualStyleBackColor = false;
+            this.B2_1КнопкаБК1_7.Click += new System.EventHandler(this.B2_1КнопкаБК1_7_Click);
+            // 
+            // B2_1КнопкаБК1_6
+            // 
+            this.B2_1КнопкаБК1_6.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_6.BackgroundImage = global::R440O.ControlElementImages.buttonRectType1;
+            this.B2_1КнопкаБК1_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1КнопкаБК1_6.FlatAppearance.BorderSize = 0;
+            this.B2_1КнопкаБК1_6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B2_1КнопкаБК1_6.Location = new System.Drawing.Point(347, 178);
+            this.B2_1КнопкаБК1_6.Name = "B2_1КнопкаБК1_6";
+            this.B2_1КнопкаБК1_6.Size = new System.Drawing.Size(17, 22);
+            this.B2_1КнопкаБК1_6.TabIndex = 15;
+            this.B2_1КнопкаБК1_6.UseVisualStyleBackColor = false;
+            this.B2_1КнопкаБК1_6.Click += new System.EventHandler(this.B2_1КнопкаБК1_6_Click);
+            // 
+            // B2_1КнопкаБК1_5
+            // 
+            this.B2_1КнопкаБК1_5.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_5.BackgroundImage = global::R440O.ControlElementImages.buttonRectType1;
+            this.B2_1КнопкаБК1_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1КнопкаБК1_5.FlatAppearance.BorderSize = 0;
+            this.B2_1КнопкаБК1_5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B2_1КнопкаБК1_5.Location = new System.Drawing.Point(347, 157);
+            this.B2_1КнопкаБК1_5.Name = "B2_1КнопкаБК1_5";
+            this.B2_1КнопкаБК1_5.Size = new System.Drawing.Size(17, 22);
+            this.B2_1КнопкаБК1_5.TabIndex = 14;
+            this.B2_1КнопкаБК1_5.UseVisualStyleBackColor = false;
+            this.B2_1КнопкаБК1_5.Click += new System.EventHandler(this.B2_1КнопкаБК1_5_Click);
+            // 
+            // B2_1КнопкаБК1_4
+            // 
+            this.B2_1КнопкаБК1_4.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_4.BackgroundImage = global::R440O.ControlElementImages.buttonRectType1;
+            this.B2_1КнопкаБК1_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1КнопкаБК1_4.FlatAppearance.BorderSize = 0;
+            this.B2_1КнопкаБК1_4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B2_1КнопкаБК1_4.Location = new System.Drawing.Point(347, 136);
+            this.B2_1КнопкаБК1_4.Name = "B2_1КнопкаБК1_4";
+            this.B2_1КнопкаБК1_4.Size = new System.Drawing.Size(17, 22);
+            this.B2_1КнопкаБК1_4.TabIndex = 13;
+            this.B2_1КнопкаБК1_4.UseVisualStyleBackColor = false;
+            this.B2_1КнопкаБК1_4.Click += new System.EventHandler(this.B2_1КнопкаБК1_4_Click);
+            // 
+            // B2_1КнопкаБК1_3
+            // 
+            this.B2_1КнопкаБК1_3.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_3.BackgroundImage = global::R440O.ControlElementImages.buttonRectType1;
+            this.B2_1КнопкаБК1_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1КнопкаБК1_3.FlatAppearance.BorderSize = 0;
+            this.B2_1КнопкаБК1_3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B2_1КнопкаБК1_3.Location = new System.Drawing.Point(347, 115);
+            this.B2_1КнопкаБК1_3.Name = "B2_1КнопкаБК1_3";
+            this.B2_1КнопкаБК1_3.Size = new System.Drawing.Size(17, 22);
+            this.B2_1КнопкаБК1_3.TabIndex = 12;
+            this.B2_1КнопкаБК1_3.UseVisualStyleBackColor = false;
+            this.B2_1КнопкаБК1_3.Click += new System.EventHandler(this.B2_1КнопкаБК1_3_Click);
+            // 
+            // B2_1КнопкаБК1_2
+            // 
+            this.B2_1КнопкаБК1_2.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_2.BackgroundImage = global::R440O.ControlElementImages.buttonRectType1;
+            this.B2_1КнопкаБК1_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1КнопкаБК1_2.FlatAppearance.BorderSize = 0;
+            this.B2_1КнопкаБК1_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B2_1КнопкаБК1_2.Location = new System.Drawing.Point(347, 94);
+            this.B2_1КнопкаБК1_2.Name = "B2_1КнопкаБК1_2";
+            this.B2_1КнопкаБК1_2.Size = new System.Drawing.Size(17, 22);
+            this.B2_1КнопкаБК1_2.TabIndex = 11;
+            this.B2_1КнопкаБК1_2.UseVisualStyleBackColor = false;
+            this.B2_1КнопкаБК1_2.Click += new System.EventHandler(this.B2_1КнопкаБК1_2_Click);
+            // 
+            // B2_1КнопкаБК1_1
+            // 
+            this.B2_1КнопкаБК1_1.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_1.BackgroundImage = global::R440O.ControlElementImages.buttonRectType1;
+            this.B2_1КнопкаБК1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1КнопкаБК1_1.FlatAppearance.BorderSize = 0;
+            this.B2_1КнопкаБК1_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.B2_1КнопкаБК1_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B2_1КнопкаБК1_1.Location = new System.Drawing.Point(347, 74);
+            this.B2_1КнопкаБК1_1.Name = "B2_1КнопкаБК1_1";
+            this.B2_1КнопкаБК1_1.Size = new System.Drawing.Size(17, 22);
+            this.B2_1КнопкаБК1_1.TabIndex = 10;
+            this.B2_1КнопкаБК1_1.UseVisualStyleBackColor = false;
+            this.B2_1КнопкаБК1_1.Click += new System.EventHandler(this.B2_1КнопкаБК1_1_Click);
+            // 
+            // B2_1ЛампочкаВУП_1
+            // 
+            this.B2_1ЛампочкаВУП_1.BackColor = System.Drawing.Color.Transparent;
+            this.B2_1ЛампочкаВУП_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B2_1ЛампочкаВУП_1.Location = new System.Drawing.Point(724, 87);
+            this.B2_1ЛампочкаВУП_1.Name = "B2_1ЛампочкаВУП_1";
+            this.B2_1ЛампочкаВУП_1.Size = new System.Drawing.Size(25, 21);
+            this.B2_1ЛампочкаВУП_1.TabIndex = 44;
             // 
             // B2_1Form
             // 
@@ -51,6 +570,7 @@
             this.Name = "B2_1Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Б2-1";
+            this.B2_1Panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -58,5 +578,40 @@
         #endregion
 
         private System.Windows.Forms.Panel B2_1Panel;
+        private System.Windows.Forms.Button B2_1КнопкаБК1_1;
+        private System.Windows.Forms.Button B2_1КнопкаБК2_9;
+        private System.Windows.Forms.Button B2_1КнопкаБК2_8;
+        private System.Windows.Forms.Button B2_1КнопкаБК2_7;
+        private System.Windows.Forms.Button B2_1КнопкаБК2_6;
+        private System.Windows.Forms.Button B2_1КнопкаБК2_5;
+        private System.Windows.Forms.Button B2_1КнопкаБК2_4;
+        private System.Windows.Forms.Button B2_1КнопкаБК2_3;
+        private System.Windows.Forms.Button B2_1КнопкаБК2_2;
+        private System.Windows.Forms.Button B2_1КнопкаБК2_1;
+        private System.Windows.Forms.Button B2_1КнопкаБК1_9;
+        private System.Windows.Forms.Button B2_1КнопкаБК1_8;
+        private System.Windows.Forms.Button B2_1КнопкаБК1_7;
+        private System.Windows.Forms.Button B2_1КнопкаБК1_6;
+        private System.Windows.Forms.Button B2_1КнопкаБК1_5;
+        private System.Windows.Forms.Button B2_1КнопкаБК1_4;
+        private System.Windows.Forms.Button B2_1КнопкаБК1_3;
+        private System.Windows.Forms.Button B2_1КнопкаБК1_2;
+        private System.Windows.Forms.Button B2_1ТумблерМуДу;
+        private System.Windows.Forms.PictureBox B2_1ЛампочкаПрРПрС_1;
+        private System.Windows.Forms.PictureBox B2_1ЛампочкаПУЛ_2;
+        private System.Windows.Forms.PictureBox B2_1ЛампочкаПУЛ_1;
+        private System.Windows.Forms.PictureBox B2_1ЛампочкаТКСпр2;
+        private System.Windows.Forms.PictureBox B2_1ЛампочкаТЛГпр;
+        private System.Windows.Forms.PictureBox B2_1ЛампочкаВУП_Неиспр;
+        private System.Windows.Forms.PictureBox B2_1ЛампочкаПрРПрС_2;
+        private System.Windows.Forms.PictureBox B2_1ЛампочкаПрТС1_2;
+        private System.Windows.Forms.PictureBox B2_1ЛампочкаПрТС2_2;
+        private System.Windows.Forms.PictureBox B2_1ЛампочкаПрТС2_1;
+        private System.Windows.Forms.PictureBox B2_1ЛампочкаДФАПЧ22;
+        private System.Windows.Forms.PictureBox B2_1ЛампочкаПрТС1_1;
+        private System.Windows.Forms.PictureBox B2_1ЛампочкаДФАПЧ21;
+        private System.Windows.Forms.PictureBox B2_1ЛампочкаПрРПрС_Авар;
+        private System.Windows.Forms.PictureBox B2_1ЛампочкаБОЧ;
+        private System.Windows.Forms.PictureBox B2_1ЛампочкаВУП_1;
     }
 }

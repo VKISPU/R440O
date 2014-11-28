@@ -63,7 +63,7 @@
             // PowerCabelТумблерОсвещение
             // 
             this.PowerCabelТумблерОсвещение.BackColor = System.Drawing.Color.Transparent;
-            this.PowerCabelТумблерОсвещение.BackgroundImage = global::R440O.ControlElementImages.tumblerHorizontalType4Left;
+            this.PowerCabelТумблерОсвещение.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Left;
             this.PowerCabelТумблерОсвещение.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.PowerCabelТумблерОсвещение.FlatAppearance.BorderSize = 0;
             this.PowerCabelТумблерОсвещение.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;

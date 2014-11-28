@@ -31,12 +31,12 @@ namespace R440O.R440OForms.A403_1
         {
             if (A403_1Parameters.A403_1ТумблерСеть == "сеть")
             {
-                this.A403_1ТумблерСеть.BackgroundImage = ControlElementImages.tumblerVerticalType3Down;
+                this.A403_1ТумблерСеть.BackgroundImage = ControlElementImages.tumblerType6Down;
                 A403_1Parameters.A403_1ТумблерСеть = "откл";
             }
             else
             {
-                this.A403_1ТумблерСеть.BackgroundImage = ControlElementImages.tumblerVerticalType3Up;
+                this.A403_1ТумблерСеть.BackgroundImage = ControlElementImages.tumblerType6Up;
                 A403_1Parameters.A403_1ТумблерСеть = "сеть";
             }
         }
@@ -45,12 +45,12 @@ namespace R440O.R440OForms.A403_1
         {
             if (A403_1Parameters.A403_1ТумблерКомплект == "1")
             {
-                this.A403_1ТумблерКомплект.BackgroundImage = ControlElementImages.tumblerHorizontalType2Right;
+                this.A403_1ТумблерКомплект.BackgroundImage = ControlElementImages.tumblerType2Right;
                 A403_1Parameters.A403_1ТумблерКомплект = "2";
             }
             else
             {
-                this.A403_1ТумблерКомплект.BackgroundImage = ControlElementImages.tumblerHorizontalType2Left;
+                this.A403_1ТумблерКомплект.BackgroundImage = ControlElementImages.tumblerType2Left;
                 A403_1Parameters.A403_1ТумблерКомплект = "1";
             }
         }
@@ -59,12 +59,12 @@ namespace R440O.R440OForms.A403_1
         {
             if (A403_1Parameters.A403_1ТумблерГотов == "готов")
             {
-                this.A403_1ТумблерГотов.BackgroundImage = ControlElementImages.tumblerVerticalType1Down;
+                this.A403_1ТумблерГотов.BackgroundImage = ControlElementImages.tumblerType4Down;
                 A403_1Parameters.A403_1ТумблерГотов = "откл";
             }
             else
             {
-                this.A403_1ТумблерГотов.BackgroundImage = ControlElementImages.tumblerVerticalType1Up;
+                this.A403_1ТумблерГотов.BackgroundImage = ControlElementImages.tumblerType4Up;
                 A403_1Parameters.A403_1ТумблерГотов = "готов";
             }
         }
@@ -73,12 +73,12 @@ namespace R440O.R440OForms.A403_1
         {
             if (A403_1Parameters.A403_1ТумблерГруппа == "1группа")
             {
-                this.A403_1ТумблерГруппа.BackgroundImage = ControlElementImages.tumblerVerticalType1Down;
+                this.A403_1ТумблерГруппа.BackgroundImage = ControlElementImages.tumblerType4Down;
                 A403_1Parameters.A403_1ТумблерГруппа = "2группа";
             }
             else
             {
-                this.A403_1ТумблерГруппа.BackgroundImage = ControlElementImages.tumblerVerticalType1Up;
+                this.A403_1ТумблерГруппа.BackgroundImage = ControlElementImages.tumblerType4Up;
                 A403_1Parameters.A403_1ТумблерГруппа = "1группа";
             }
         }
@@ -87,12 +87,12 @@ namespace R440O.R440OForms.A403_1
         {
             if (A403_1Parameters.A403_1ТумблерАвтКоррекция == "автКоррекция")
             {
-                this.A403_1ТумблерАвтКоррекция.BackgroundImage = ControlElementImages.tumblerVerticalType1Down;
+                this.A403_1ТумблерАвтКоррекция.BackgroundImage = ControlElementImages.tumblerType4Down;
                 A403_1Parameters.A403_1ТумблерАвтКоррекция = "откл";
             }
             else
             {
-                this.A403_1ТумблерАвтКоррекция.BackgroundImage = ControlElementImages.tumblerVerticalType1Up;
+                this.A403_1ТумблерАвтКоррекция.BackgroundImage = ControlElementImages.tumblerType4Up;
                 A403_1Parameters.A403_1ТумблерАвтКоррекция = "автКоррекция";
             }
         }
@@ -107,7 +107,7 @@ namespace R440O.R440OForms.A403_1
 
         private void A403_1Кнопка1_MouseUp(object sender, MouseEventArgs e)
         {
-            this.A403_1Кнопка1.BackgroundImage = ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1Кнопка1.BackgroundImage = ControlElementImages.buttonSquareWhite;
             this.A403_1Кнопка1.Text = "1";
         }
 
@@ -119,7 +119,7 @@ namespace R440O.R440OForms.A403_1
 
         private void A403_1Кнопка2_MouseUp(object sender, MouseEventArgs e)
         {
-            this.A403_1Кнопка2.BackgroundImage = ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1Кнопка2.BackgroundImage = ControlElementImages.buttonSquareWhite;
             this.A403_1Кнопка2.Text = "2";
         }
 
@@ -131,7 +131,7 @@ namespace R440O.R440OForms.A403_1
 
         private void A403_1Кнопка3_MouseUp(object sender, MouseEventArgs e)
         {
-            this.A403_1Кнопка3.BackgroundImage = ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1Кнопка3.BackgroundImage = ControlElementImages.buttonSquareWhite;
             this.A403_1Кнопка3.Text = "3";
         }
 
@@ -143,7 +143,7 @@ namespace R440O.R440OForms.A403_1
 
         private void A403_1Кнопка4_MouseUp(object sender, MouseEventArgs e)
         {
-            this.A403_1Кнопка4.BackgroundImage = ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1Кнопка4.BackgroundImage = ControlElementImages.buttonSquareWhite;
             this.A403_1Кнопка4.Text = "4";
         }
 
@@ -155,7 +155,7 @@ namespace R440O.R440OForms.A403_1
 
         private void A403_1Кнопка5_MouseUp(object sender, MouseEventArgs e)
         {
-            this.A403_1Кнопка5.BackgroundImage = ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1Кнопка5.BackgroundImage = ControlElementImages.buttonSquareWhite;
             this.A403_1Кнопка5.Text = "5";
         }
 
@@ -167,7 +167,7 @@ namespace R440O.R440OForms.A403_1
 
         private void A403_1Кнопка6_MouseUp(object sender, MouseEventArgs e)
         {
-            this.A403_1Кнопка6.BackgroundImage = ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1Кнопка6.BackgroundImage = ControlElementImages.buttonSquareWhite;
             this.A403_1Кнопка6.Text = "6";
         }
 
@@ -179,7 +179,7 @@ namespace R440O.R440OForms.A403_1
 
         private void A403_1Кнопка7_MouseUp(object sender, MouseEventArgs e)
         {
-            this.A403_1Кнопка7.BackgroundImage = ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1Кнопка7.BackgroundImage = ControlElementImages.buttonSquareWhite;
             this.A403_1Кнопка7.Text = "7";
         }
 
@@ -191,7 +191,7 @@ namespace R440O.R440OForms.A403_1
 
         private void A403_1Кнопка8_MouseUp(object sender, MouseEventArgs e)
         {
-            this.A403_1Кнопка8.BackgroundImage = ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1Кнопка8.BackgroundImage = ControlElementImages.buttonSquareWhite;
             this.A403_1Кнопка8.Text = "8";
         }
 
@@ -203,7 +203,7 @@ namespace R440O.R440OForms.A403_1
 
         private void A403_1Кнопка9_MouseUp(object sender, MouseEventArgs e)
         {
-            this.A403_1Кнопка9.BackgroundImage = ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1Кнопка9.BackgroundImage = ControlElementImages.buttonSquareWhite;
             this.A403_1Кнопка9.Text = "9";
         }
 
@@ -215,7 +215,7 @@ namespace R440O.R440OForms.A403_1
 
         private void A403_1Кнопка0_MouseUp(object sender, MouseEventArgs e)
         {
-            this.A403_1Кнопка0.BackgroundImage = ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1Кнопка0.BackgroundImage = ControlElementImages.buttonSquareWhite;
             this.A403_1Кнопка0.Text = "0";
         }
 
@@ -227,7 +227,7 @@ namespace R440O.R440OForms.A403_1
 
         private void A403_1КнопкаМинус_MouseUp(object sender, MouseEventArgs e)
         {
-            this.A403_1КнопкаМинус.BackgroundImage = ControlElementImages.buttonSquareType1UpWhite;
+            this.A403_1КнопкаМинус.BackgroundImage = ControlElementImages.buttonSquareWhite;
             this.A403_1КнопкаМинус.Text = "–";
         }
 
@@ -508,7 +508,7 @@ namespace R440O.R440OForms.A403_1
 
         private void A403_1КнопкаСброс_MouseUp(object sender, MouseEventArgs e)
         {
-            this.A403_1КнопкаСброс.BackgroundImage = ControlElementImages.ButtonBlueUp;
+            this.A403_1КнопкаСброс.BackgroundImage = ControlElementImages.buttonSquareLightBlue;
             N15Parameters.Н15КнопкаСброс = "true";
 
             this.A403_1КнопкаАlpha_Lambda.Visible = true;
@@ -542,7 +542,7 @@ namespace R440O.R440OForms.A403_1
             }
             else
             {
-                this.A403_1КнопкаУстВремени.BackgroundImage = ControlElementImages.ButtonBlueUp;
+                this.A403_1КнопкаУстВремени.BackgroundImage = ControlElementImages.buttonSquareLightBlue;
                 A403_1Parameters.A403_1КнопкаУстВремени = "false";
             }
         }
@@ -587,19 +587,19 @@ namespace R440O.R440OForms.A403_1
         private void InitializeTumblersPosition()
         {
             this.A403_1ТумблерСеть.BackgroundImage = A403_1Parameters.A403_1ТумблерСеть == "откл"
-                ? ControlElementImages.tumblerVerticalType3Down : ControlElementImages.tumblerVerticalType3Up;
+                ? ControlElementImages.tumblerType6Down : ControlElementImages.tumblerType6Up;
 
             this.A403_1ТумблерГотов.BackgroundImage = A403_1Parameters.A403_1ТумблерГотов == "откл"
-                ? ControlElementImages.tumblerVerticalType1Down : ControlElementImages.tumblerVerticalType1Up;
+                ? ControlElementImages.tumblerType4Down : ControlElementImages.tumblerType4Up;
 
             this.A403_1ТумблерКомплект.BackgroundImage = A403_1Parameters.A403_1ТумблерКомплект == "1"
-                ? ControlElementImages.tumblerHorizontalType2Left : ControlElementImages.tumblerHorizontalType2Right;
+                ? ControlElementImages.tumblerType2Left : ControlElementImages.tumblerType2Right;
 
             this.A403_1ТумблерГруппа.BackgroundImage = A403_1Parameters.A403_1ТумблерГруппа == "2группа"
-                ? ControlElementImages.tumblerVerticalType1Down : ControlElementImages.tumblerVerticalType1Up;
+                ? ControlElementImages.tumblerType4Down : ControlElementImages.tumblerType4Up;
 
             this.A403_1ТумблерАвтКоррекция.BackgroundImage = A403_1Parameters.A403_1ТумблерАвтКоррекция == "откл"
-                ? ControlElementImages.tumblerVerticalType1Down : ControlElementImages.tumblerVerticalType1Up;
+                ? ControlElementImages.tumblerType4Down : ControlElementImages.tumblerType4Up;
         }
 
         private void InitializeTogglesPosition()

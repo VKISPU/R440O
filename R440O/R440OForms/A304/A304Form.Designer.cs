@@ -135,7 +135,7 @@
             // A304Тумблер1К2К
             // 
             this.A304Тумблер1К2К.BackColor = System.Drawing.Color.Transparent;
-            this.A304Тумблер1К2К.BackgroundImage = global::R440O.ControlElementImages.tumblerHorizontalType1Left;
+            this.A304Тумблер1К2К.BackgroundImage = global::R440O.ControlElementImages.tumblerType1Left;
             this.A304Тумблер1К2К.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A304Тумблер1К2К.FlatAppearance.BorderSize = 0;
             this.A304Тумблер1К2К.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -151,7 +151,7 @@
             // A304Кнопка1КОткл
             // 
             this.A304Кнопка1КОткл.BackColor = System.Drawing.Color.Transparent;
-            this.A304Кнопка1КОткл.BackgroundImage = global::R440O.ControlElementImages.ButtonGreyUp;
+            this.A304Кнопка1КОткл.BackgroundImage = global::R440O.ControlElementImages.buttonSquareGrey;
             this.A304Кнопка1КОткл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A304Кнопка1КОткл.FlatAppearance.BorderSize = 0;
             this.A304Кнопка1КОткл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -171,7 +171,7 @@
             // A304Кнопка1КВкл
             // 
             this.A304Кнопка1КВкл.BackColor = System.Drawing.Color.Transparent;
-            this.A304Кнопка1КВкл.BackgroundImage = global::R440O.ControlElementImages.ButtonGreyUp;
+            this.A304Кнопка1КВкл.BackgroundImage = global::R440O.ControlElementImages.buttonSquareGrey;
             this.A304Кнопка1КВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A304Кнопка1КВкл.FlatAppearance.BorderSize = 0;
             this.A304Кнопка1КВкл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -191,7 +191,7 @@
             // A304Кнопка2КВкл
             // 
             this.A304Кнопка2КВкл.BackColor = System.Drawing.Color.Transparent;
-            this.A304Кнопка2КВкл.BackgroundImage = global::R440O.ControlElementImages.ButtonGreyUp;
+            this.A304Кнопка2КВкл.BackgroundImage = global::R440O.ControlElementImages.buttonSquareGrey;
             this.A304Кнопка2КВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A304Кнопка2КВкл.FlatAppearance.BorderSize = 0;
             this.A304Кнопка2КВкл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -211,7 +211,7 @@
             // A304Кнопка2КОткл
             // 
             this.A304Кнопка2КОткл.BackColor = System.Drawing.Color.Transparent;
-            this.A304Кнопка2КОткл.BackgroundImage = global::R440O.ControlElementImages.ButtonGreyUp;
+            this.A304Кнопка2КОткл.BackgroundImage = global::R440O.ControlElementImages.buttonSquareGrey;
             this.A304Кнопка2КОткл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A304Кнопка2КОткл.FlatAppearance.BorderSize = 0;
             this.A304Кнопка2КОткл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -231,7 +231,7 @@
             // A304ТумблерМестноеДистанц_2
             // 
             this.A304ТумблерМестноеДистанц_2.BackColor = System.Drawing.Color.Transparent;
-            this.A304ТумблерМестноеДистанц_2.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType3Down;
+            this.A304ТумблерМестноеДистанц_2.BackgroundImage = global::R440O.ControlElementImages.tumblerType6Down;
             this.A304ТумблерМестноеДистанц_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A304ТумблерМестноеДистанц_2.FlatAppearance.BorderSize = 0;
             this.A304ТумблерМестноеДистанц_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -247,7 +247,7 @@
             // A304ТумблерМестноеДистанц_1
             // 
             this.A304ТумблерМестноеДистанц_1.BackColor = System.Drawing.Color.Transparent;
-            this.A304ТумблерМестноеДистанц_1.BackgroundImage = global::R440O.ControlElementImages.tumblerVerticalType3Down;
+            this.A304ТумблерМестноеДистанц_1.BackgroundImage = global::R440O.ControlElementImages.tumblerType6Down;
             this.A304ТумблерМестноеДистанц_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A304ТумблерМестноеДистанц_1.FlatAppearance.BorderSize = 0;
             this.A304ТумблерМестноеДистанц_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;

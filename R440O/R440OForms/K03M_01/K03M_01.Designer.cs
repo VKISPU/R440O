@@ -49,7 +49,7 @@
             // K03M_01Cover
             // 
             this.K03M_01Cover.BackColor = System.Drawing.Color.Transparent;
-            this.K03M_01Cover.BackgroundImage = global::R440O.ControlElementImages.cover;
+            this.K03M_01Cover.BackgroundImage = global::R440O.ControlElementImages.kulonCover;
             this.K03M_01Cover.Location = new System.Drawing.Point(125, 95);
             this.K03M_01Cover.Name = "K03M_01Cover";
             this.K03M_01Cover.Size = new System.Drawing.Size(356, 559);

@@ -27,12 +27,12 @@ namespace R440O.R440OForms.P220_27G_3
         {
             if (P220_27G_3Parameters.P220_27G_3ТумблерСеть == "сеть")
             {
-                this.P220_27G_3ТумблерСеть.BackgroundImage = ControlElementImages.tumblerVerticalType3Down;
+                this.P220_27G_3ТумблерСеть.BackgroundImage = ControlElementImages.tumblerType6Down;
                 P220_27G_3Parameters.P220_27G_3ТумблерСеть = "откл";
             }
             else
             {
-                this.P220_27G_3ТумблерСеть.BackgroundImage = ControlElementImages.tumblerVerticalType3Up;
+                this.P220_27G_3ТумблерСеть.BackgroundImage = ControlElementImages.tumblerType6Up;
                 P220_27G_3Parameters.P220_27G_3ТумблерСеть = "сеть";
             }
         }
@@ -41,12 +41,12 @@ namespace R440O.R440OForms.P220_27G_3
         {
             if (P220_27G_3Parameters.P220_27G_3ТумблерМуДу == "Му")
             {
-                this.P220_27G_3ТумблерМуДу.BackgroundImage = ControlElementImages.tumblerVerticalType1Down;
+                this.P220_27G_3ТумблерМуДу.BackgroundImage = ControlElementImages.tumblerType4Down;
                 P220_27G_3Parameters.P220_27G_3ТумблерМуДу = "Ду";
             }
             else
             {
-                this.P220_27G_3ТумблерМуДу.BackgroundImage = ControlElementImages.tumblerVerticalType1Up;
+                this.P220_27G_3ТумблерМуДу.BackgroundImage = ControlElementImages.tumblerType4Up;
                 P220_27G_3Parameters.P220_27G_3ТумблерМуДу = "Му";
             }
         }

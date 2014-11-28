@@ -130,56 +130,68 @@
   <data name="arrowRound" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\arrowRound.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ButtonBlueUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\ButtonBlueUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonN15Off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\buttonN15Off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ButtonGreyUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\ButtonGreyUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonN15On" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\buttonN15On.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttonOffUpRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\buttonOffUpRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonRectType1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\buttonRectType1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttonOnUpBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\buttonOnUpBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonRoundType1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\buttonRoundType1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttonRoundSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\button_round_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonRoundType1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\buttonRoundType1_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttonRoundType1UpBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\buttonRoundType1UpBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonRoundType2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\buttonRoundType2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttonSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\buttonSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonRoundType3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\buttonRoundType3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttonSquareType1UpBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\buttonSquareType1UpBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonRoundType4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\buttonRoundType4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttonSquareType1UpDarkGrey" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\buttonSquareType1UpDarkGrey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonRoundType5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\buttonRoundType5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttonSquareType1UpGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\buttonSquareType1UpGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonSquareBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\buttonSquareBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttonSquareType1UpWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\buttonSquareType1UpWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonSquareGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\buttonSquareGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttonSquareType1UpYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\buttonSquareType1UpYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonSquareGrey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\buttonSquareGrey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttonSquareType1_1UpWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\buttonSquareType1_1UpWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonSquareLightBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\buttonSquareLightBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ButtonType2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\ButtonType2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonSquareWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\buttonSquareWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\cover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonSquareYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\buttonSquareYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jumperType1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\jumperType1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jumperType2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\jumperType2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kulonCover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\kulonCover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lampType10OnGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\lampType10OnRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>Resources\lampType10OnGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lampType11OnYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\lampType11OnYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lampType12OnRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\lampType12OnRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lampType1OnRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\lampType1OnRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -212,7 +224,7 @@
     <value>Resources\orderSchemeIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="powerCabelEnter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\PowerCabelEnter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>Resources\powerCabelEnter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="toggleType1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\toggleType1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,106 +241,91 @@
   <data name="toggleType5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\toggleType5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tumblerHorizontalType1Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerHorizontalType1Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerHorizontalType1Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerHorizontalType1Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerHorizontalType2DownRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerHorizontalType2DownRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerHorizontalType2Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerHorizontalType2Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerHorizontalType2Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerHorizontalType2Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerHorizontalType3Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerHorizontalType3Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerHorizontalType3Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerHorizontalType3Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerHorizontalType4Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerHorizontalType4Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerHorizontalType4Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerHorizontalType4Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerHorizontalType5Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerHorizontalType5Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerHorizontalType5Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerHorizontalType5Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerSideHorizontalType1Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerSideHorizontalType1Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerSideHorizontalType1Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerSideHorizontalType1Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerSideVerticalType1Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerSideVerticalType1Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerSideVerticalType1Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerSideVerticalType1Up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerSideVerticalType2Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerSideVerticalType2Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerSideVerticalType2Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerSideVerticalType2Up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerVerticalType1Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerVerticalType1Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerVerticalType1Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerVerticalType1Up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerVerticalType2Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerVerticalType2Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerVerticalType2Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerVerticalType2Up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerVerticalType3Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerVerticalType3Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerVerticalType3Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerVerticalType3Up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerVerticalType4Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerVerticalType4Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerVerticalType4Middle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerVerticalType4Middle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerVerticalType4Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerVerticalType4Up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerVerticalType5Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerVerticalType5Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tumblerVerticalType5Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\tumblerVerticalType5Up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="voltageStabilizerInput" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\stabillizator_input.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="toggleType6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\toggleType6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttonRoundType1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\buttonRoundType1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tumblerN502BPowerDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerN502BPowerDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttonRoundType1K" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\buttonRoundType1K.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tumblerN502BPowerUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerN502BPowerUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttonRoundType2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\buttonRoundType2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tumblerType1Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType1Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttonRoundWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\buttonRoundWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tumblerType1Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType1Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType2Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType2Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType2Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType2Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType2Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType2Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType2Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType2Up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType3Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType3Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType3Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType3Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType3Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType3Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType3Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType3Up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType4Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType4Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType4Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType4Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType4Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType4Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType4Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType4Up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType5Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType5Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType5Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType5Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType5Middle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType5Middle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType5Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType5Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType5Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType5Up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType6Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType6Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType6Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType6Up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType7Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType7Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType7Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType7Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType7Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType7Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType7Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType7Up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="voltageStabilizerInput" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\voltageStabilizerInput.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
