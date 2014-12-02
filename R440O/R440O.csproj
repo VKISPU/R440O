@@ -68,6 +68,7 @@
     <Compile Include="Parameters\B1_2Parameters.cs" />
     <Compile Include="Parameters\B2_1Parameters.cs" />
     <Compile Include="Parameters\B2_2Parameters.cs" />
+    <Compile Include="Parameters\C300M_1Parameters.cs" />
     <Compile Include="Parameters\N18_MParameters.cs" />
     <Compile Include="Parameters\A205M_1Parameters.cs" />
     <Compile Include="Parameters\A205M_2Parameters.cs" />
