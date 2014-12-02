@@ -26,6 +26,10 @@ namespace R440O.R440OForms.A205M_2
 
         private void InitializeToggles()
         {
+            A205M_2ТумблерКЭД.BackgroundImage = A205M_2Parameters.A205M_2ТумблерКЭД
+                ? ControlElementImages.tumblerType6Up
+                : ControlElementImages.tumblerType6Down;
+
             var angle = A205M_2Parameters.A205M_2ПереключательВолнаX10000 * 35 - 90;
             A205M_2ПереключательВолнаX10000.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
