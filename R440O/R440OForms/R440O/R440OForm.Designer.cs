@@ -962,7 +962,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "R440OForm";
             this.Text = "P-440-O";
-            this.Load += new System.EventHandler(this.R440OForm_Load);
             this.R440OPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
