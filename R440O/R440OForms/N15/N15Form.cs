@@ -49,6 +49,10 @@ namespace R440O.R440OForms.N15
         private static string локН15ТумблерДАБ_5 { get; set; }
         private static string локН15ТумблерР_Н { get; set; }
 
+        private static string локН15ТумблерАнтЭкв { get; set; }
+        private static string локН15ТумблерТлфТлгПрм { get; set; }
+        private static string локН15ТумблерТлфТлгПрд { get; set; }
+
         ////Кнопки
         private static string локН15КнопкаН13_1 { get; set; }
         private static string локН15КнопкаН13_2 { get; set; }
@@ -295,7 +299,20 @@ namespace R440O.R440OForms.N15
             }
             #endregion
 
+            #region Н15ТумблерА403
             N15Parameters.Н15ТумблерА403 = локН15ТумблерА403;
+            if (N15Parameters.Н15ТумблерА403 == "true")
+            {
+                N15Parameters.Н15ЛампочкаА403Вкл = "true";
+                this.Н15ЛампочкаА403Вкл.BackgroundImage = ControlElementImages.lampType5OnRed;
+            }
+            else
+            {
+                N15Parameters.Н15ЛампочкаА403Вкл = "false";
+                this.Н15ЛампочкаА403Вкл.BackgroundImage = null;
+            }
+            #endregion
+
             N15Parameters.Н15ТумблерК1_1 = локН15ТумблерК1_1;
             N15Parameters.Н15ТумблерК1_2 = локН15ТумблерК1_2;
 
@@ -383,7 +400,19 @@ namespace R440O.R440OForms.N15
             }
             #endregion
 
+            #region Н15ТумблерДАБ_5
             N15Parameters.Н15ТумблерДАБ_5 = локН15ТумблерДАБ_5;
+            if (N15Parameters.Н15ТумблерДАБ_5 == "true")
+            {
+                N15Parameters.Н15ЛампочкаДАБ_5 = "true";
+                this.Н15ЛампочкаДАБ_5.BackgroundImage = ControlElementImages.lampType5OnRed;
+            }
+            else
+            {
+                N15Parameters.Н15ЛампочкаДАБ_5 = "false";
+                this.Н15ЛампочкаДАБ_5.BackgroundImage = null;
+            }
+            #endregion
 
             #region Н15ТумблерР_Н
             N15Parameters.Н15ТумблерР_Н = локН15ТумблерР_Н;
@@ -399,6 +428,10 @@ namespace R440O.R440OForms.N15
             }
             #endregion
 
+            N15Parameters.Н15ТумблерАнтЭкв = локН15ТумблерАнтЭкв;
+            N15Parameters.Н15ТумблерТлфТлгПрм = локН15ТумблерТлфТлгПрм;
+            N15Parameters.Н15ТумблерТлфТлгПрд = локН15ТумблерТлфТлгПрд;
+            
             N15Parameters.Н15КнопкаН13_1 = локН15КнопкаН13_1;
             N15Parameters.Н15КнопкаН13_2 = локН15КнопкаН13_2;
             N15Parameters.Н15КнопкаН13_12 = локН15КнопкаН13_12;
@@ -693,6 +726,10 @@ namespace R440O.R440OForms.N15
             локН15ТумблерБ3_2 = N15Parameters.Н15ТумблерБ3_2;
             локН15ТумблерДАБ_5 = N15Parameters.Н15ТумблерДАБ_5;
             локН15ТумблерР_Н = N15Parameters.Н15ТумблерР_Н;
+
+            локН15ТумблерАнтЭкв = N15Parameters.Н15ТумблерАнтЭкв;
+            локН15ТумблерТлфТлгПрм = N15Parameters.Н15ТумблерТлфТлгПрм;
+            локН15ТумблерТлфТлгПрд = N15Parameters.Н15ТумблерТлфТлгПрд;
 
             локН15КнопкаН13_1 = N15Parameters.Н15КнопкаН13_1;
             локН15КнопкаН13_2 = N15Parameters.Н15КнопкаН13_2;
@@ -1059,6 +1096,20 @@ namespace R440O.R440OForms.N15
             }
         }
 
+        private void Н15ТумблерАнтЭкв_Click(object sender, EventArgs e)
+        {
+            if (локН15ТумблерАнтЭкв == "АНТ")
+            {
+                this.Н15ТумблерАнтЭкв.BackgroundImage = ControlElementImages.tumblerType4Down;
+                локН15ТумблерАнтЭкв = "ЭКВ";
+            }
+            else
+            {
+                this.Н15ТумблерАнтЭкв.BackgroundImage = ControlElementImages.tumblerType4Up;
+                локН15ТумблерАнтЭкв = "АНТ";
+            }
+        }
+
         #region События
         /// <summary>
         /// Сигнатура void(void) для событий данной формы
@@ -1070,5 +1121,36 @@ namespace R440O.R440OForms.N15
         /// </summary>
         public event VoidVoidSignature A30412StateChange; 
         #endregion
+
+        private void Н15ТумблерТлфТлгПрм_Click(object sender, EventArgs e)
+        {
+            if (локН15ТумблерТлфТлгПрм == "АНТ")
+            {
+                this.Н15ТумблерТлфТлгПрм.BackgroundImage = ControlElementImages.tumblerType4Down;
+                локН15ТумблерТлфТлгПрм = "ЭКВ";
+            }
+            else
+            {
+                this.Н15ТумблерТлфТлгПрм.BackgroundImage = ControlElementImages.tumblerType4Up;
+                локН15ТумблерТлфТлгПрм = "АНТ";
+            }
+        }
+
+        private void Н15ТумблерТлфТлгПрд_Click(object sender, EventArgs e)
+        {
+            if (локН15ТумблерТлфТлгПрд == "АНТ")
+            {
+                this.Н15ТумблерТлфТлгПрд.BackgroundImage = ControlElementImages.tumblerType4Down;
+                локН15ТумблерТлфТлгПрд = "ЭКВ";
+            }
+            else
+            {
+                this.Н15ТумблерТлфТлгПрд.BackgroundImage = ControlElementImages.tumblerType4Up;
+                локН15ТумблерТлфТлгПрд = "АНТ";
+            }
+        }
+
+        
+
     }
 }

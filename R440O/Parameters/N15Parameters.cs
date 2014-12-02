@@ -233,9 +233,25 @@ namespace R440O.Parameters
         public static string Н15ТумблерФаза { get; set; }
         public static string Н15ТумблерУров1 { get; set; }
         public static string Н15ТумблерУров2 { get; set; }
-        public static string Н15ТумблерАнтЭкв { get; set; }
-        public static string Н15ТумблерТлфТлгПрм { get; set; }
-        public static string Н15ТумблерТлфТлгПрд { get; set; }
+
+        /// <summary>
+        /// Возможные состояния: АНТ, ЭКВ
+        /// </summary>
+        public static string Н15ТумблерАнтЭкв { get { return _Н15ТумблерАнтЭкв; } set { _Н15ТумблерАнтЭкв = value; } }
+        private static string _Н15ТумблерАнтЭкв = "ЭКВ";
+
+        /// <summary>
+        /// Возможные состояния: ТЛГ, ТЛФ
+        /// </summary>
+        public static string Н15ТумблерТлфТлгПрм { get { return _Н15ТумблерТлфТлгПрм; } set { _Н15ТумблерТлфТлгПрм = value; } }
+        private static string _Н15ТумблерТлфТлгПрм = "ТЛГ";
+
+        /// <summary>
+        /// Возможные состояния: ТЛГ, ТЛФ
+        /// </summary>
+        public static string Н15ТумблерТлфТлгПрд { get { return _Н15ТумблерТлфТлгПрд; } set { _Н15ТумблерТлфТлгПрд = value; } }
+        private static string _Н15ТумблерТлфТлгПрд = "ТЛГ";
+
         public static string Н15Тумблер5мГц25мГц3 { get; set; }
 
         // Лампочки
