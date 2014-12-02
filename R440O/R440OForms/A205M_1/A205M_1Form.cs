@@ -4,12 +4,11 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-using R440O.ThirdParty;
-
 namespace R440O.R440OForms.A205M_1
 {
     using System.Windows.Forms;
     using Parameters;
+    using ThirdParty;
 
     /// <summary>
     /// Форма блока А205М-1
@@ -174,6 +173,7 @@ namespace R440O.R440OForms.A205M_1
         } 
         #endregion
 
+        #region Переключатели контроля, вида работы, входы чт
         private void A205M_1ПереключательКонтроль_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -223,6 +223,7 @@ namespace R440O.R440OForms.A205M_1
             var angle = A205M_1Parameters.A205M_1ПереключательВходЧТ * 30 - 60;
             A205M_1ПереключательВходЧТ.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
-        }
+        } 
+        #endregion
     }
 }
