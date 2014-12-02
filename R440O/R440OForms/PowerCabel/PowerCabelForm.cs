@@ -4,11 +4,10 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-using R440O.Parameters;
-
 namespace R440O.R440OForms.PowerCabel
 {
     using System.Windows.Forms;
+    using Parameters;
 
     /// <summary>
     /// Форма блока кабель питания
@@ -50,7 +49,5 @@ namespace R440O.R440OForms.PowerCabel
                 PowerCabelParameters.PowerCabelВход = "true";
             }
         }
-
-
     }
 }

@@ -86,7 +86,7 @@ namespace R440O.R440OForms.NKN_1
         private void NKN_1Кнопка220Вкл_MouseUp(object sender, MouseEventArgs e)
         {
             NKN_1Кнопка220Вкл.BackgroundImage = null;
-            TurnLamps(true);
+            this.TurnLamps(true);
         }
 
         private void NKN_1Кнопка220Откл_MouseDown(object sender, MouseEventArgs e)
@@ -97,7 +97,7 @@ namespace R440O.R440OForms.NKN_1
         private void NKN_1Кнопка220Откл_MouseUp(object sender, MouseEventArgs e)
         {
             NKN_1Кнопка220Откл.BackgroundImage = null;
-            TurnLamps(false);
+            this.TurnLamps(false);
         } 
         #endregion
     }

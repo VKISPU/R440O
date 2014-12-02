@@ -4,11 +4,10 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-using R440O.Parameters;
-
 namespace R440O.R440OForms.B2_2
 {
     using System.Windows.Forms;
+    using Parameters;
 
     /// <summary>
     /// Форма блока Б2-2
@@ -432,8 +431,5 @@ namespace R440O.R440OForms.B2_2
                 B2_2Parameters.B2_2ТумблерМуДу = "Му";
             }
         }
-
-
-
     }
 }

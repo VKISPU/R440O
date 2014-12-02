@@ -4,11 +4,10 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-using R440O.Parameters;
-
 namespace R440O.R440OForms.P220_27G_2
 {
     using System.Windows.Forms;
+    using Parameters;
 
     /// <summary>
     /// Форма блока П220-27Г-2

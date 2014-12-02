@@ -7,16 +7,24 @@
 namespace R440O.R440OForms.N15
 {
     using System;
+    using System.Threading;
     using System.Windows.Forms;
     using Parameters;
-    using System.Threading;
 
     /// <summary>
     /// Форма блока Н-15
     /// </summary>
     public partial class N15Form : Form
     {
-        //Тумблеры
+        /// <summary>
+        /// Инициализирует новый экземпляр класса <see cref="N15Form"/>
+        /// </summary>
+        public N15Form()
+        {
+            this.InitializeComponent();
+        }
+
+        ////Тумблеры
         private static string локН15ТумблерЦ300М1 { get; set; }
         private static string локН15ТумблерЦ300М2 { get; set; }
         private static string локН15ТумблерЦ300М3 { get; set; }
@@ -41,19 +49,10 @@ namespace R440O.R440OForms.N15
         private static string локН15ТумблерДАБ_5 { get; set; }
         private static string локН15ТумблерР_Н { get; set; }
 
-        //Кнопки
+        ////Кнопки
         private static string локН15КнопкаН13_1 { get; set; }
         private static string локН15КнопкаН13_2 { get; set; }
         private static string локН15КнопкаН13_12 { get; set; }
-
-        /// <summary>
-        /// Инициализирует новый экземпляр класса <see cref="N15Form"/>
-        /// </summary>
-
-        public N15Form()
-        {
-            this.InitializeComponent();
-        }
 
         private void Н15КнопкаСтанцияВкл_MouseDown(object sender, MouseEventArgs e)
         {
@@ -177,9 +176,10 @@ namespace R440O.R440OForms.N15
                         this.Н15ЛампочкаА3042.BackgroundImage = null;
                     }
             }
-            if (A30412StateChange != null)
+
+            if (this.A30412StateChange != null)
             {
-                A30412StateChange();
+                this.A30412StateChange();
             }
             #endregion
 
@@ -523,7 +523,7 @@ namespace R440O.R440OForms.N15
         private void Н15КнопкаМощностьСброс_MouseDown(object sender, MouseEventArgs e)
         {
             this.Н15КнопкаМощностьСброс.BackgroundImage = null;
-            this.Н15КнопкаМощностьСброс.Text = "";
+            this.Н15КнопкаМощностьСброс.Text = string.Empty;
         }
 
         private void Н15КнопкаМощностьСброс_MouseUp(object sender, MouseEventArgs e)
@@ -604,15 +604,14 @@ namespace R440O.R440OForms.N15
                 Thread.Sleep(2000);
                 this.Н15ЛампочкаН16Н13_2.BackgroundImage = ControlElementImages.lampType5OnRed;
                 this.Н15ЛампочкаН16Н13_1.BackgroundImage = null;
-            }            
+            }      
+      
             локН15КнопкаН13_2 = "true";            
             локН15КнопкаН13_1 = "false";            
             локН15КнопкаН13_12 = "false";
             N15Parameters.Н15ЛампочкаН16Н13_1 = "false";
             N15Parameters.Н15ЛампочкаН16Н13_2 = "true";
             N15Parameters.Н15ЛампочкаН16Н13_12 = "false";
-
-           
         }
 
         private void Н15КнопкаН13_12_Click(object sender, EventArgs e)
@@ -655,17 +654,17 @@ namespace R440O.R440OForms.N15
             this.Н15КнопкаСброс.Text = "СБРОС";
 
             this.Н15КнопкаН13_1.Visible = true;
-            //локН15КнопкаН13_1 = "false";
+            ////локН15КнопкаН13_1 = "false";
             this.Н15КнопкаН13_2.Visible = true;
-            //локН15КнопкаН13_2 = "false";
+            ////локН15КнопкаН13_2 = "false";
             this.Н15КнопкаН13_12.Visible = true;
-            //локН15КнопкаН13_12 = "false";
+            ////локН15КнопкаН13_12 = "false";
         }
 
         private void Н15КнопкаСброс_MouseDown(object sender, MouseEventArgs e)
         {
             this.Н15КнопкаСброс.BackgroundImage = null;
-            this.Н15КнопкаСброс.Text = "";
+            this.Н15КнопкаСброс.Text = string.Empty;
         }
         #endregion
 
@@ -1035,9 +1034,9 @@ namespace R440O.R440OForms.N15
 
                     N15Parameters.Н15ЛампочкаА3041 = "false";
                     this.Н15ЛампочкаА3041.BackgroundImage = null;
-                    if (A30412StateChange != null)
+                    if (this.A30412StateChange != null)
                     {
-                        A30412StateChange();
+                        this.A30412StateChange();
                     }
                 }
             }
@@ -1052,16 +1051,20 @@ namespace R440O.R440OForms.N15
 
                     N15Parameters.Н15ЛампочкаА3042 = "false";
                     this.Н15ЛампочкаА3042.BackgroundImage = null;
-                    if (A30412StateChange != null)
+                    if (this.A30412StateChange != null)
                     {
-                        A30412StateChange();
+                        this.A30412StateChange();
                     }
                 }
             }
         }
 
         #region События
+        /// <summary>
+        /// Сигнатура void(void) для событий данной формы
+        /// </summary>
         public delegate void VoidVoidSignature();
+
         /// <summary>
         /// Изменилось состояние блока A304
         /// </summary>

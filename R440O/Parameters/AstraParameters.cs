@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace R440O.Parameters
+﻿namespace R440O.Parameters
 {
     internal class AstraParameters
     {
         #region Переключатели
-        //Переключатели 
         #region ПереключательТлгТлф
 
         private static int _AstraПереключательТлгТлф = 1;
@@ -120,19 +112,17 @@ namespace R440O.Parameters
         #endregion
         #endregion
 
-        //Тумблеры
+        ////Тумблеры
         public static string AstraТумблерШпУп { get; set; }
 
-        //Кнопки
+        ////Кнопки
         public static string AstraКнопка150_270 { get; set; }
         public static string AstraКнопка270_480 { get; set; }
         public static string AstraКнопка480_860 { get; set; }
         public static string AstraКнопка860_1500 { get; set; }
         public static string AstraКнопкаЧастота { get; set; }
 
-        //Регуляторы
-
-
-        //Индикаторы
+        ////Регуляторы
+        ////Индикаторы
     }
 }

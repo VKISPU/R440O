@@ -22,8 +22,8 @@ namespace R440O.R440OForms.N502B
         public N502BForm()
         {
             this.InitializeComponent();
-            InitializeTogglesPosition();
-            InitializeTumblersPosition();
+            this.InitializeTogglesPosition();
+            this.InitializeTumblersPosition();
         }
 
         #region Тумблеры
@@ -33,7 +33,10 @@ namespace R440O.R440OForms.N502B
             this.N502BТумблерЭлектрооборуд.BackgroundImage = N502BParameters.N502BТумблерЭлектрооборуд 
                 ? ControlElementImages.tumblerType2Up 
                 : ControlElementImages.tumblerType2Down;
-            if (PowerTumblersChanged != null) PowerTumblersChanged();
+            if (this.PowerTumblersChanged != null)
+            {
+                this.PowerTumblersChanged();
+            }
         }
 
         private void N502BТумблерВыпрямитель27В_Click(object sender, System.EventArgs e)
@@ -42,7 +45,10 @@ namespace R440O.R440OForms.N502B
             this.N502BТумблерВыпрямитель27В.BackgroundImage = N502BParameters.N502BТумблерВыпрямитель27В 
                 ? ControlElementImages.tumblerType2Up
                 : ControlElementImages.tumblerType2Down;
-            if (PowerTumblersChanged != null) PowerTumblersChanged();
+            if (this.PowerTumblersChanged != null)
+            {
+                this.PowerTumblersChanged();
+            }
         }
 
         private void N502BТумблерОсвещение_Click(object sender, System.EventArgs e)
@@ -233,13 +239,14 @@ namespace R440O.R440OForms.N502B
             {
                 N502BParameters.N502BПереключательНапряжение += 1; 
             }
+
             if (e.Button == MouseButtons.Right)
             {
                 N502BParameters.N502BПереключательНапряжение -= 1;
             }
 
             var angle = N502BParameters.N502BПереключательНапряжение * 36 - 150;
-            if (N502BParameters.N502BПереключательНапряжение >= 4) angle += 48; //Смещение
+            if (N502BParameters.N502BПереключательНапряжение >= 4) angle += 48; ////Смещение
             N502BПереключательНапряжение.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
@@ -260,7 +267,6 @@ namespace R440O.R440OForms.N502B
             N502BПереключательФазировка.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType5, angle);
         }
-
 
         private void N502BПереключательКонтрольНапряжения_MouseUp(object sender, MouseEventArgs e)
         {
@@ -341,10 +347,9 @@ namespace R440O.R440OForms.N502B
         /// </summary>
         private void InitializeTogglesPosition()
         {
-            if(N502BParameters.N502BПереключательСеть=="true")
-                N502BПереключательСеть.BackgroundImage = ControlElementImages.tumblerN502BPowerUp;
-            else
-                N502BПереключательСеть.BackgroundImage = ControlElementImages.tumblerN502BPowerDown;
+            N502BПереключательСеть.BackgroundImage = N502BParameters.N502BПереключательСеть == "true" 
+                ? ControlElementImages.tumblerN502BPowerUp 
+                : ControlElementImages.tumblerN502BPowerDown;
 
             var angle = N502BParameters.N502BПереключательНапряжение * 36 - 150;
             if (N502BParameters.N502BПереключательНапряжение >= 4) angle += 48;

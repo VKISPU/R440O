@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace R440O.Parameters
+﻿namespace R440O.Parameters
 {
-    class A403_1Parameters
+    public class A403_1Parameters
     {
         #region Лампочки
-        //Лампочки
+        ////Лампочки
         public static string A403_1ЛампочкаНеисправностьАПН { get; set; }
         public static string A403_1ЛампочкаНеисправностьФС { get; set; }
         public static string A403_1ЛампочкаНеисправностьРИ { get; set; }
@@ -19,7 +12,7 @@ namespace R440O.Parameters
         #endregion
 
         #region Тумблеры
-        //Тумблеры
+        ////Тумблеры
         public static string A403_1ТумблерСеть = "откл";
         public static string A403_1ТумблерГотов = "откл";
         public static string A403_1ТумблерГруппа = "2группа";
@@ -28,7 +21,7 @@ namespace R440O.Parameters
         #endregion
 
         #region Переключатели
-        //Переключатели
+        ////Переключатели
 
         #region Переключатель проверка
         /// <summary>
@@ -95,7 +88,7 @@ namespace R440O.Parameters
         #endregion
 
         #region Кнопки
-        //Кнопки
+        ////Кнопки
         public static string A403_1КнопкаУстВремени { get; set; }
         public static string A403_1Кнопка0 { get; set; }
         public static string A403_1Кнопка1 { get; set; }

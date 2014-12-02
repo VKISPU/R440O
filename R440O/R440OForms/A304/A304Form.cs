@@ -6,8 +6,8 @@
 
 namespace R440O.R440OForms.A304
 {
-    using Parameters;
     using System.Windows.Forms;
+    using Parameters;
     using Properties;
     using ThirdParty;
 
@@ -86,11 +86,11 @@ namespace R440O.R440OForms.A304
         /// </summary>
         private void InitializeTogglePosition()
         {
-            var angle = A304Parameters.A304ПереключательВыборСтвола*26 - 145;
+            var angle = A304Parameters.A304ПереключательВыборСтвола * 26 - 145;
             A304ПереключательВыборСтвола.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
 
-            angle = A304Parameters.A304ПереключательКонтроль*30 - 150;
+            angle = A304Parameters.A304ПереключательКонтроль * 30 - 150;
             A304ПереключательКонтрольButton.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
         }
@@ -111,9 +111,7 @@ namespace R440O.R440OForms.A304
                 isEnableKit = 2;
             }
 
-            switch (
-                A304Parameters.A304ЗначенияПереключательКонтроль[
-                    A304Parameters.A304ПереключательКонтроль - 1, isEnableKit])
+            switch (A304Parameters.A304ЗначенияПереключательКонтроль[A304Parameters.A304ПереключательКонтроль - 1, isEnableKit])
             {
                 case "-1":
                 {
@@ -152,7 +150,7 @@ namespace R440O.R440OForms.A304
                 this.A304ТумблерМестноеДистанц_1.BackgroundImage = ControlElementImages.tumblerType6Up;
                 A304Parameters.A304ТумблерМестноеДистанц_1 = "дистанц";
             }
-            TurnLamps(1);
+            this.TurnLamps(1);
         }
 
         /// <summary>
@@ -170,7 +168,7 @@ namespace R440O.R440OForms.A304
                 this.A304ТумблерМестноеДистанц_2.BackgroundImage = ControlElementImages.tumblerType6Up;
                 A304Parameters.A304ТумблерМестноеДистанц_2 = "дистанц";
             }
-            TurnLamps(2);
+            this.TurnLamps(2);
         }
 
         /// <summary>
@@ -199,7 +197,7 @@ namespace R440O.R440OForms.A304
         private void A304Кнопка1КВкл_MouseDown(object sender, MouseEventArgs e)
         {
             this.A304Кнопка1КВкл.BackgroundImage = null;
-            this.A304Кнопка1КВкл.Text = "";
+            this.A304Кнопка1КВкл.Text = string.Empty;
         }
 
         private void A304Кнопка1КВкл_MouseUp(object sender, MouseEventArgs e)
@@ -209,7 +207,7 @@ namespace R440O.R440OForms.A304
             if (A304Parameters.A304ТумблерМестноеДистанц_1 == "местное")
             {
                 A304Parameters.A304Комплект1 = true;
-                TurnLamps();
+                this.TurnLamps();
             }
         }
 
@@ -217,8 +215,7 @@ namespace R440O.R440OForms.A304
         private void A304Кнопка2КВкл_MouseDown(object sender, MouseEventArgs e)
         {
             this.A304Кнопка2КВкл.BackgroundImage = null;
-            this.A304Кнопка2КВкл.Text = "";
-
+            this.A304Кнопка2КВкл.Text = string.Empty;
         }
 
         private void A304Кнопка2КВкл_MouseUp(object sender, MouseEventArgs e)
@@ -228,7 +225,7 @@ namespace R440O.R440OForms.A304
             if (A304Parameters.A304ТумблерМестноеДистанц_2 == "местное")
             {
                 A304Parameters.A304Комплект2 = true;
-                TurnLamps();
+                this.TurnLamps();
             }
         }
 
@@ -236,7 +233,7 @@ namespace R440O.R440OForms.A304
         private void A304Кнопка1КОткл_MouseDown(object sender, MouseEventArgs e)
         {
             this.A304Кнопка1КОткл.BackgroundImage = null;
-            this.A304Кнопка1КОткл.Text = "";
+            this.A304Кнопка1КОткл.Text = string.Empty;
         }
 
         private void A304Кнопка1КОткл_MouseUp(object sender, MouseEventArgs e)
@@ -246,7 +243,7 @@ namespace R440O.R440OForms.A304
             if (A304Parameters.A304ТумблерМестноеДистанц_1 == "местное")
             {
                 A304Parameters.A304Комплект1 = false;
-                TurnLamps();
+                this.TurnLamps();
             }
         }
 
@@ -254,7 +251,7 @@ namespace R440O.R440OForms.A304
         private void A304Кнопка2КОткл_MouseDown(object sender, MouseEventArgs e)
         {
             this.A304Кнопка2КОткл.BackgroundImage = null;
-            this.A304Кнопка2КОткл.Text = "";
+            this.A304Кнопка2КОткл.Text = string.Empty;
         }
 
         private void A304Кнопка2КОткл_MouseUp(object sender, MouseEventArgs e)
@@ -264,7 +261,7 @@ namespace R440O.R440OForms.A304
             if (A304Parameters.A304ТумблерМестноеДистанц_2 == "местное")
             {
                 A304Parameters.A304Комплект2 = false;
-                TurnLamps();
+                this.TurnLamps();
             }
         }
 
@@ -278,9 +275,15 @@ namespace R440O.R440OForms.A304
         public void TurnLampsEvent()
         {
             if (A304Parameters.A304ТумблерМестноеДистанц_1 == "дистанц")
-                TurnLamps(1);
+            {
+                this.TurnLamps(1);
+            }
+
             if (A304Parameters.A304ТумблерМестноеДистанц_2 == "дистанц")
-                TurnLamps(2);
+            {
+                this.TurnLamps(2);
+            }
+
             this.InitializeControl();
         }
 
@@ -346,7 +349,7 @@ namespace R440O.R440OForms.A304
                 A304Parameters.A304ПереключательВыборСтвола -= 1;
             }
 
-            var angle = A304Parameters.A304ПереключательВыборСтвола*26 - 145;
+            var angle = A304Parameters.A304ПереключательВыборСтвола * 26 - 145;
             A304ПереключательВыборСтвола.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
         }
@@ -366,7 +369,7 @@ namespace R440O.R440OForms.A304
                 A304Parameters.A304ПереключательКонтроль -= 1;
             }
 
-            var angle = A304Parameters.A304ПереключательКонтроль*30 - 150;
+            var angle = A304Parameters.A304ПереключательКонтроль * 30 - 150;
             A304ПереключательКонтрольButton.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
 

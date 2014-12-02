@@ -3,7 +3,7 @@
     /// <summary>
     /// Параметры блока НКН-1
     /// </summary>
-    class NKN_2Parameters
+    public class NKN_2Parameters
     {
         /// <summary>
         /// Лампочка показывающая включено ли питание
@@ -13,6 +13,6 @@
         /// <summary>
         /// Лампочки показывающие есть ли питание на данной фазе
         /// </summary>
-        public static bool[] NKN_2ЛампочкиФаз = {false, false, false};
+        public static bool[] NKN_2ЛампочкиФаз = { false, false, false };
     }
 }

@@ -1,29 +1,30 @@
 ﻿namespace R440O.Parameters
 {
-    class N502BParameters
+    public class N502BParameters
     {
-        //Лампочки
+        ////Лампочки
         public static string N502BЛампочкаСеть { get; set; }
         public static string N502BЛампочкаСфазировано { get; set; }
         public static string N502BЛампочкаРБППроверка { get; set; }
+        
+        ////public static string N502BЛампочкаРБППредохранитель { get; set; }
 
-        //public static string N502BЛампочкаРБППредохранитель { get; set; }
-
-        //Кнопки
+        ////Кнопки
         public static string N502BКнопкаВклНагрузки { get; set; }
         public static string N502BКнопкаРБППроверка { get; set; }
         public static string N502BКнопкаРБПСброс { get; set; }
 
         #region Тумблеры
-        //Тумблеры
         /// <summary>
         /// true - вкл, false - выкл
         /// </summary>
         public static bool N502BТумблерЭлектрооборуд = false;
+
         /// <summary>
         /// true - вкл, false - выкл
         /// </summary>
         public static bool N502BТумблерВыпрямитель27В = false;
+
         public static string N502BТумблерОсвещение = "false";
         public static string N502BТумблерН13_1 = "false";
         public static string N502BТумблерН13_2 = "false";
@@ -33,7 +34,7 @@
         #endregion
 
         #region Переключатели
-        //Переключатели
+        
         public static string N502BПереключательСеть = "false";
 
         #region ПереключательНапряжение
@@ -146,7 +147,5 @@
         #endregion
 
         #endregion
-
-        //Индикаторы
     }
 }

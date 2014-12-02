@@ -20,6 +20,5 @@ namespace R440O.R440OForms.B3_1
         {
             this.InitializeComponent();
         }
-
     }
 }

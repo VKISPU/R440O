@@ -1,15 +1,18 @@
-﻿using System.Drawing;
-
-namespace R440O.ThirdParty
+﻿namespace R440O.ThirdParty
 {
-    class TransformImageHelper
+    using System.Drawing;
+
+    /// <summary>
+    /// Класс предоставляющий методы для трансформирования изображений
+    /// </summary>
+    public class TransformImageHelper
     {
         /// <summary>
         /// Rotates the image by angle.
         /// </summary>
         /// <param name="oldBitmap">The old bitmap.</param>
         /// <param name="angle">The angle.</param>
-        /// <returns></returns>
+        /// <returns>New image.</returns>
         public static Bitmap RotateImageByAngle(System.Drawing.Image oldBitmap, float angle)
         {
             var newBitmap = new Bitmap(oldBitmap.Width, oldBitmap.Height);

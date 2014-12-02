@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace R440O.Parameters
+﻿namespace R440O.Parameters
 {
-    class B1_2Parameters
+    public class B1_2Parameters
     {
         #region Лампочки
         public static string B1_2ЛампочкаБОЧ { get; set; }
@@ -30,13 +24,13 @@ namespace R440O.Parameters
         public static string B1_2ЛампочкаНеиспр { get; set; }
         #endregion
 
-        //Тумблер
+        ////Тумблер
         /// <summary>
         /// Возможные состояния: Му - местное управление, Ду - дистанционное управление
         /// </summary>
         public static string B1_2ТумблерМуДу { get; set; }
 
-        //Кнопки
+        ////Кнопки
         /// <summary>
         /// Возможные состояния: true, false
         /// </summary>

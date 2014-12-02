@@ -1,8 +1,11 @@
 ﻿namespace R440O.Parameters
 {
-    class A1Parameters
+    /// <summary>
+    /// Параметры для блока А1
+    /// </summary>
+    public class A1Parameters
     {
-        //Лампочки
+        ////Лампочки
         public static string A1ЛампочкаБОЧ { get; set; }
         public static string A1ЛампочкаФСПК { get; set; }
         public static string A1ЛампочкаТКААвария { get; set; }
@@ -18,22 +21,21 @@
         public static string A1ЛампочкаНеиспр { get; set; }
         public static string A1BЛампочкаПитание { get; set; }
 
-        //Тумблер
+        ////Тумблер
         /// <summary>
-        /// Возможные состояния: Му - местное управление, Ду - дистанционное управление
+        /// Получает или задает возможные состояния: Му - местное управление, Ду - дистанционное управление
         /// </summary>
         public static string A1ТумблерМуДу { get; set; }
 
-        //Кнопки
+        ////Кнопки
         /// <summary>
-        /// Возможные состояния: true, false
+        /// Получает или задает возможные состояния: true, false
         /// </summary>
         public static string A1КнопкаСкоростьГР { get; set; }
 
         /// <summary>
-        /// Возможные состояния: true, false
+        /// Получает или задает возможные состояния: true, false
         /// </summary>
         public static string A1КнопкаСкоростьАБ_1ТЛФ_К { get; set; }
-
     }
 }

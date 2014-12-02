@@ -58,7 +58,7 @@ namespace R440O.R440OForms.R440O
                 var thisForm = Activator.CreateInstance(Type.GetType(typeName));
                 var newForm = (Form)thisForm;
                 
-                //Подписка на события
+                ////Подписка на события
                 switch (newForm.Name)
                 {
                     case "A304Form":
@@ -69,10 +69,11 @@ namespace R440O.R440OForms.R440O
                         {
                             n15Form.A30412StateChange += newA304Form.TurnLampsEvent;
                         }
+
                         newForm = newA304Form;
                     }
-                    break;
 
+                    break;
                     case "N15Form":
                     {
                         var n15Form = new N15Form();
@@ -81,22 +82,30 @@ namespace R440O.R440OForms.R440O
                         {
                             n15Form.A30412StateChange += newA304Form.TurnLampsEvent;
                         }
+
                         newForm = n15Form;
                     }
+
                     break;
                     case "N502BForm":
                     {
                         var newN502BForm = new N502BForm();
                         var nkn1Form = (NKN_1Form)this.GetSpecificForm("NKN_1Form");
-                        if (nkn1Form != null) newN502BForm.PowerTumblersChanged += nkn1Form.TurnLamps;
+                        if (nkn1Form != null)
+                        {
+                            newN502BForm.PowerTumblersChanged += nkn1Form.TurnLamps;
+                        }
 
                         var nkn2Form = (NKN_2Form)this.GetSpecificForm("NKN_2Form");
-                        if (nkn2Form != null) newN502BForm.PowerTumblersChanged += nkn2Form.TurnLamps;
+                        if (nkn2Form != null)
+                        {
+                            newN502BForm.PowerTumblersChanged += nkn2Form.TurnLamps;
+                        }
 
                         newForm = newN502BForm;
                     }
-                    break;
 
+                    break;
                     case "NKN_1Form":
                     {
                         var newNkn1Form = new NKN_1Form();
@@ -105,10 +114,11 @@ namespace R440O.R440OForms.R440O
                         {
                             n502BForm.PowerTumblersChanged += newNkn1Form.TurnLamps;
                         }
+
                         newForm = newNkn1Form;
                     }
-                    break;
 
+                    break;
                     case "NKN_2Form":
                     {
                         var newNkn2Form = new NKN_2Form();
@@ -117,10 +127,13 @@ namespace R440O.R440OForms.R440O
                         {
                             n502BForm.PowerTumblersChanged += newNkn2Form.TurnLamps;
                         }
+
                         newForm = newNkn2Form;
                     }
+
                     break;
                 }
+
                 newForm.Show(this);
             }
             catch
@@ -129,14 +142,14 @@ namespace R440O.R440OForms.R440O
             }
         }
 
+        /// <summary>
+        /// Возвращает форму по заданному имени
+        /// </summary>
+        /// <param name="formName">Имя вормы</param>
+        /// <returns>Объект формы</returns>
         private Form GetSpecificForm(string formName)
         {
-            return (from form in OwnedForms.Where(form => form.Name == formName) 
-                    let specificForm = new Form() select form).FirstOrDefault();
-        }
-
-        private void R440OForm_Load(object sender, EventArgs e)
-        {
+            return (from form in OwnedForms.Where(form => form.Name == formName) let specificForm = new Form() select form).FirstOrDefault();
         }
     }
 }

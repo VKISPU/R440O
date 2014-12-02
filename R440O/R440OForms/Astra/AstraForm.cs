@@ -4,12 +4,11 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-using R440O.Parameters;
-using R440O.ThirdParty;
-
 namespace R440O.R440OForms.Astra
 {
     using System.Windows.Forms;
+    using Parameters;
+    using ThirdParty;
     
     /// <summary>
     /// Форма блока Астра
@@ -66,6 +65,7 @@ namespace R440O.R440OForms.Astra
             {
                 AstraParameters.AstraПереключательТлгТлф += 1;
             }
+
             if (e.Button == MouseButtons.Right)
             {
                 AstraParameters.AstraПереключательТлгТлф -= 1;
@@ -83,6 +83,7 @@ namespace R440O.R440OForms.Astra
             {
                 AstraParameters.AstraПереключательВнешнегоПитания += 1;
             }
+
             if (e.Button == MouseButtons.Right)
             {
                 AstraParameters.AstraПереключательВнешнегоПитания -= 1;
@@ -100,6 +101,7 @@ namespace R440O.R440OForms.Astra
             {
                 AstraParameters.AstraПереключательКонтроль += 1;
             }
+
             if (e.Button == MouseButtons.Right)
             {
                 AstraParameters.AstraПереключательКонтроль -= 1;
@@ -117,6 +119,7 @@ namespace R440O.R440OForms.Astra
             {
                 AstraParameters.AstraПереключательДиапазоны += 1;
             }
+
             if (e.Button == MouseButtons.Right)
             {
                 AstraParameters.AstraПереключательДиапазоны -= 1;
@@ -134,6 +137,7 @@ namespace R440O.R440OForms.Astra
             {
                 AstraParameters.AstraПереключательВыходаРеле += 1;
             }
+
             if (e.Button == MouseButtons.Right)
             {
                 AstraParameters.AstraПереключательВыходаРеле -= 1;

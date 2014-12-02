@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace R440O.Parameters
+﻿namespace R440O.Parameters
 {
     class B2_2Parameters
     {
@@ -49,7 +43,7 @@ namespace R440O.Parameters
         public static string B2_2КнопкаБК2_9 { get; set; }
         #endregion
 
-        //Тумблер
+        ////Тумблер
         /// <summary>
         /// Возможные состояния: Му - местное управление, Ду - дистанционное управление
         /// </summary>

@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace R440O.Parameters
+﻿namespace R440O.Parameters
 {
     class A403_3Parameters
     {
-        //Лампочки
+        ////Лампочки
         public static string A403_3Лампочка1Комплект_1 { get; set; }
         public static string A403_3Лампочка1Комплект_2 { get; set; }
         public static string A403_3Лампочка1Комплект_3 { get; set; }
@@ -18,8 +12,7 @@ namespace R440O.Parameters
         public static string A403_3Лампочка2Комплект_3 { get; set; }
         public static string A403_3Лампочка2Комплект_4 { get; set; }
 
-        //Тумблеры
+        ////Тумблеры
         public static string A403_3Тублер1К2К { get; set; }
-
     }
 }

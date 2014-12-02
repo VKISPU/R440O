@@ -4,11 +4,10 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-using R440O.Parameters;
-
 namespace R440O.R440OForms.A1
 {
     using System.Windows.Forms;
+    using Parameters;
 
     /// <summary>
     /// Форма блока А1

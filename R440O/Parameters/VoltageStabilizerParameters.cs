@@ -1,8 +1,8 @@
 ﻿namespace R440O.Parameters
 {
-    class VoltageStabilizerParameters
+    public class VoltageStabilizerParameters
     {
-        //Лампочки
+        ////Лампочки
         public static string VoltageStabilizerЛампочкаСетьВкл { get; set; }
         public static string VoltageStabilizerЛампочкаАвария { get; set; }
 
@@ -14,7 +14,11 @@
 
         public static int VoltageStabilizerПереключательКонтрольНапр
         {
-            get { return _VoltageStabilizerПереключательКонтрольНапр; }
+            get
+            {
+                return _VoltageStabilizerПереключательКонтрольНапр;
+            }
+
             set
             {
                 if (value > 0 && value < 13) _VoltageStabilizerПереключательКонтрольНапр = value;
@@ -40,12 +44,10 @@
         };
         #endregion
 
-        //Кабель
+        ////Кабель
         /// <summary>
         /// Возможные состояния: 220, 380
         /// </summary>
-        public static string VoltageStabilizerКабельВход = "220"; 
-        
-        //Индикаторы
+        public static string VoltageStabilizerКабельВход = "220";
     }
 }

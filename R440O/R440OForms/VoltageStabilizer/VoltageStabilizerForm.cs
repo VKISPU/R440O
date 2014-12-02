@@ -4,13 +4,11 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-using R440O.Parameters;
-using R440O.ThirdParty;
-
 namespace R440O.R440OForms.VoltageStabilizer
 {
     using System.Windows.Forms;
-    using System.Drawing;
+    using Parameters;
+    using ThirdParty;
 
     /// <summary>
     /// Форма блока стабилизатор напряжения
@@ -23,7 +21,7 @@ namespace R440O.R440OForms.VoltageStabilizer
         public VoltageStabilizerForm()
         {
             this.InitializeComponent();
-            InitializeTogglePosition();
+            this.InitializeTogglePosition();
         }
         
         /// <summary>
@@ -53,7 +51,8 @@ namespace R440O.R440OForms.VoltageStabilizer
                 VoltageStabilizerParameters.VoltageStabilizerКабельВход = "380";
             }
         }
-        /// </summary>
+
+        /// <summary>
         /// Переключатель КонтрольНапряжения
         /// </summary>
         private void VoltageStabilizerПереключательКонтрольНапр_MouseUp(object sender, MouseEventArgs e)

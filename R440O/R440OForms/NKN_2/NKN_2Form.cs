@@ -4,11 +4,10 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-using R440O.Parameters;
-
 namespace R440O.R440OForms.NKN_2
 {
     using System.Windows.Forms;
+    using Parameters;
 
     /// <summary>
     /// Форма блока НКН-2
@@ -64,6 +63,7 @@ namespace R440O.R440OForms.NKN_2
                 {
                     NKN_2Parameters.NKN_2ЛампочкиФаз[i] = on;
                 }
+
                 NKN_2ЛампочкаФаза1.BackgroundImage = NKN_2Parameters.NKN_2ЛампочкиФаз[0]
                     ? ControlElementImages.lampType9OnGreen
                     : null;
@@ -86,7 +86,7 @@ namespace R440O.R440OForms.NKN_2
         private void NKN_2Кнопка220Вкл_MouseUp(object sender, MouseEventArgs e)
         {
             NKN_2Кнопка220Вкл.BackgroundImage = null;
-            TurnLamps(true);
+            this.TurnLamps(true);
         }
 
         private void NKN_2Кнопка220Откл_MouseDown(object sender, MouseEventArgs e)
@@ -97,7 +97,7 @@ namespace R440O.R440OForms.NKN_2
         private void NKN_2Кнопка220Откл_MouseUp(object sender, MouseEventArgs e)
         {
             NKN_2Кнопка220Откл.BackgroundImage = null;
-            TurnLamps(false);
+            this.TurnLamps(false);
         }
         #endregion
     }
