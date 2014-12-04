@@ -20,6 +20,7 @@ namespace R440O.R440OForms.P220_27G_3
         public P220_27G_3Form()
         {
             this.InitializeComponent();
+            this.InitializeTumblersPosition();
         }
 
         private void P220_27G_3ТумблерСеть_Click(object sender, System.EventArgs e)
@@ -48,6 +49,17 @@ namespace R440O.R440OForms.P220_27G_3
                 this.P220_27G_3ТумблерМуДу.BackgroundImage = ControlElementImages.tumblerType4Up;
                 P220_27G_3Parameters.P220_27G_3ТумблерМуДу = "Му";
             }
+        }
+
+        private void InitializeTumblersPosition()
+        {
+            this.P220_27G_3ТумблерМуДу.BackgroundImage = P220_27G_3Parameters.P220_27G_3ТумблерМуДу == "Ду"
+                ? ControlElementImages.tumblerType4Down
+                : ControlElementImages.tumblerType4Up;
+
+            this.P220_27G_3ТумблерСеть.BackgroundImage = P220_27G_3Parameters.P220_27G_3ТумблерСеть == "откл"
+                ? ControlElementImages.tumblerType6Down
+                : ControlElementImages.tumblerType6Up;
         }
     }
 }

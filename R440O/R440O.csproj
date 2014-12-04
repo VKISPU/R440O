@@ -68,6 +68,10 @@
     <Compile Include="Parameters\B1_2Parameters.cs" />
     <Compile Include="Parameters\B2_1Parameters.cs" />
     <Compile Include="Parameters\B2_2Parameters.cs" />
+    <Compile Include="Parameters\B3_1Parameters.cs" />
+    <Compile Include="Parameters\B3_2Parameters.cs" />
+    <Compile Include="Parameters\BMA_M_2Parameters.cs" />
+    <Compile Include="Parameters\BMA_M_1Parameters.cs" />
     <Compile Include="Parameters\C300M_1Parameters.cs" />
     <Compile Include="Parameters\N18_MParameters.cs" />
     <Compile Include="Parameters\A205M_1Parameters.cs" />
@@ -749,9 +753,6 @@
     <None Include="Resources\A306.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\BMA_M.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\BMB.png" />
   </ItemGroup>
   <ItemGroup>
@@ -995,9 +996,6 @@
     <None Include="Resources\buttonSquareWhite.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\buttonSquareYellow.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\jumperType1.png" />
   </ItemGroup>
   <ItemGroup>
@@ -1061,6 +1059,10 @@
     <None Include="Resources\toggleType4.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\buttonSquareBlueOff.png" />
+    <None Include="Resources\buttonSquareBlueOn.png" />
+    <None Include="Resources\buttonSquareYellow.png" />
+    <None Include="Resources\BMA_M.png" />
     <Content Include="Resources\buttonRoundType6.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

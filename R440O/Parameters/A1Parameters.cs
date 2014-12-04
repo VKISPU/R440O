@@ -25,17 +25,17 @@
         /// <summary>
         /// Получает или задает возможные состояния: Му - местное управление, Ду - дистанционное управление
         /// </summary>
-        public static string A1ТумблерМуДу { get; set; }
+        public static string A1ТумблерМуДу = "Ду";
 
         ////Кнопки
         /// <summary>
         /// Получает или задает возможные состояния: true, false
         /// </summary>
-        public static string A1КнопкаСкоростьГР { get; set; }
+        public static string A1КнопкаСкоростьГР = "false";
 
         /// <summary>
         /// Получает или задает возможные состояния: true, false
         /// </summary>
-        public static string A1КнопкаСкоростьАБ_1ТЛФ_К { get; set; }
+        public static string A1КнопкаСкоростьАБ_1ТЛФ_К = "false";
     }
 }

@@ -20,9 +20,8 @@ namespace R440O.R440OForms.A1
         public A1Form()
         {
             this.InitializeComponent();
-            A1Parameters.A1КнопкаСкоростьАБ_1ТЛФ_К = "false";
-            A1Parameters.A1КнопкаСкоростьГР = "false";
-            A1Parameters.A1ТумблерМуДу = "Ду";
+            this.InitializeTumblersPosition();
+            this.InitializeButtonsPosition();
         }
 
         /// <summary>
@@ -74,6 +73,25 @@ namespace R440O.R440OForms.A1
                 this.A1ТумблерМуДу.BackgroundImage = ControlElementImages.tumblerType4Up;
                 A1Parameters.A1ТумблерМуДу = "Му";
             }
+        }
+
+
+        private void InitializeTumblersPosition()
+        {
+            this.A1ТумблерМуДу.BackgroundImage = A1Parameters.A1ТумблерМуДу == "Ду"
+                ? ControlElementImages.tumblerType4Down
+                : ControlElementImages.tumblerType4Up;
+        }
+
+        private void InitializeButtonsPosition()
+        {
+            this.A1КнопкаСкоростьГР.BackgroundImage = A1Parameters.A1КнопкаСкоростьГР == "true"
+                ? null
+                : ControlElementImages.buttonRectType1;
+
+            this.A1КнопкаСкоростьАБ_1ТЛФ_К.BackgroundImage = A1Parameters.A1КнопкаСкоростьАБ_1ТЛФ_К == "true"
+                ? null
+                : ControlElementImages.buttonRectType1;
         }
     }
 }

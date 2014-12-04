@@ -10,7 +10,7 @@ namespace R440O.R440OForms.B2_2
     using Parameters;
 
     /// <summary>
-    /// Форма блока Б2-2
+    /// Форма блока Б2-1
     /// </summary>
     public partial class B2_2Form : Form
     {
@@ -20,8 +20,10 @@ namespace R440O.R440OForms.B2_2
         public B2_2Form()
         {
             this.InitializeComponent();
+            this.InitializeTumblersPosition();
+            this.InitializeButtonsPosition();
         }
-
+        #region Кнопки
         private void B2_2КнопкаБК1_1_Click(object sender, System.EventArgs e)
         {
             this.B2_2КнопкаБК1_1.Visible = false;
@@ -242,7 +244,7 @@ namespace R440O.R440OForms.B2_2
             B2_2Parameters.B2_2КнопкаБК2_9 = "false";
         }
 
-        private void B2_2КнопкаБК2_2_Click_1(object sender, System.EventArgs e)
+        private void B2_2КнопкаБК2_2_Click(object sender, System.EventArgs e)
         {
             this.B2_2КнопкаБК2_1.Visible = true;
             B2_2Parameters.B2_2КнопкаБК2_1 = "false";
@@ -352,7 +354,7 @@ namespace R440O.R440OForms.B2_2
             B2_2Parameters.B2_2КнопкаБК2_9 = "false";
         }
 
-        private void B2_2КнопкаБК2_7_Click_1(object sender, System.EventArgs e)
+        private void B2_2КнопкаБК2_7_Click(object sender, System.EventArgs e)
         {
             this.B2_2КнопкаБК2_1.Visible = true;
             B2_2Parameters.B2_2КнопкаБК2_1 = "false";
@@ -417,6 +419,81 @@ namespace R440O.R440OForms.B2_2
             this.B2_2КнопкаБК2_9.Visible = false;
             B2_2Parameters.B2_2КнопкаБК2_9 = "true";
         }
+        #endregion
+
+        #region Колодки
+        private void B2_2КолодкаТЛГпр_1_Click(object sender, System.EventArgs e)
+        {
+            if (B2_2Parameters.B2_2КолодкаТЛГпр_1 == "false")
+            {
+                this.B2_2КолодкаТЛГпр_1.BackgroundImage = ControlElementImages.jumperType1;
+                this.B2_2КолодкаТЛГпр_2.Visible = false;
+                B2_2Parameters.B2_2КолодкаТЛГпр_1 = "true";
+                this.B2_2КолодкаТЛГпр_2.BackgroundImage = null;
+                B2_2Parameters.B2_2КолодкаТЛГпр_2 = "false";
+            }
+            else
+            {
+                this.B2_2КолодкаТЛГпр_1.BackgroundImage = null;
+                B2_2Parameters.B2_2КолодкаТЛГпр_1 = "false";
+                this.B2_2КолодкаТЛГпр_2.Visible = true;
+            }
+        }
+        private void B2_2КолодкаТЛГпр_2_Click(object sender, System.EventArgs e)
+        {
+            if (B2_2Parameters.B2_2КолодкаТЛГпр_2 == "false")
+            {
+                this.B2_2КолодкаТЛГпр_2.BackgroundImage = ControlElementImages.jumperType1;
+                this.B2_2КолодкаТЛГпр_1.Visible = false;
+                B2_2Parameters.B2_2КолодкаТЛГпр_2 = "true";
+                this.B2_2КолодкаТЛГпр_1.BackgroundImage = null;
+                B2_2Parameters.B2_2КолодкаТЛГпр_1 = "false";
+            }
+            else
+            {
+                this.B2_2КолодкаТЛГпр_1.Visible = true;
+                this.B2_2КолодкаТЛГпр_2.BackgroundImage = null;
+                B2_2Parameters.B2_2КолодкаТЛГпр_2 = "false";
+            }
+        }
+
+
+        private void B2_2КолодкаТКСпр2_1_Click(object sender, System.EventArgs e)
+        {
+            if (B2_2Parameters.B2_2КолодкаТКСпр2_1 == "false")
+            {
+                this.B2_2КолодкаТКСпр2_1.BackgroundImage = ControlElementImages.jumperType1;
+                this.B2_2КолодкаТКСпр2_2.Visible = false;
+                B2_2Parameters.B2_2КолодкаТКСпр2_1 = "true";
+                this.B2_2КолодкаТКСпр2_2.BackgroundImage = null;
+                B2_2Parameters.B2_2КолодкаТКСпр2_2 = "false";
+            }
+            else
+            {
+                this.B2_2КолодкаТКСпр2_1.BackgroundImage = null;
+                B2_2Parameters.B2_2КолодкаТКСпр2_1 = "false";
+                this.B2_2КолодкаТКСпр2_2.Visible = true;
+            }
+        }
+
+        private void B2_2КолодкаТКСпр2_2_Click(object sender, System.EventArgs e)
+        {
+            if (B2_2Parameters.B2_2КолодкаТКСпр2_2 == "false")
+            {
+                this.B2_2КолодкаТКСпр2_2.BackgroundImage = ControlElementImages.jumperType1;
+                this.B2_2КолодкаТКСпр2_1.Visible = false;
+                B2_2Parameters.B2_2КолодкаТКСпр2_2 = "true";
+                this.B2_2КолодкаТКСпр2_1.BackgroundImage = null;
+                B2_2Parameters.B2_2КолодкаТКСпр2_1 = "false";
+            }
+            else
+            {
+                this.B2_2КолодкаТКСпр2_1.Visible = true;
+                this.B2_2КолодкаТКСпр2_2.BackgroundImage = null;
+                B2_2Parameters.B2_2КолодкаТКСпр2_2 = "false";
+            }
+        }
+        #endregion
 
         private void B2_2ТумблерМуДу_Click(object sender, System.EventArgs e)
         {
@@ -431,5 +508,105 @@ namespace R440O.R440OForms.B2_2
                 B2_2Parameters.B2_2ТумблерМуДу = "Му";
             }
         }
+
+        private void InitializeTumblersPosition()
+        {
+            this.B2_2ТумблерМуДу.BackgroundImage = B2_2Parameters.B2_2ТумблерМуДу == "Ду"
+                ? ControlElementImages.tumblerType4Down
+                : ControlElementImages.tumblerType4Up;
+        }
+
+        private void InitializeButtonsPosition()
+        {
+            if (B2_2Parameters.B2_2КнопкаБК1_1 == "true")
+                this.B2_2КнопкаБК1_1.Visible = false;
+
+            else if (B2_2Parameters.B2_2КнопкаБК1_2 == "true")
+                this.B2_2КнопкаБК1_2.Visible = false;
+
+            else if (B2_2Parameters.B2_2КнопкаБК1_3 == "true")
+
+                this.B2_2КнопкаБК1_3.Visible = false;
+
+            else if (B2_2Parameters.B2_2КнопкаБК1_4 == "true")
+
+                this.B2_2КнопкаБК1_4.Visible = false;
+
+            else if (B2_2Parameters.B2_2КнопкаБК1_5 == "true")
+                this.B2_2КнопкаБК1_5.Visible = false;
+
+            else if (B2_2Parameters.B2_2КнопкаБК1_6 == "true")
+                this.B2_2КнопкаБК1_6.Visible = false;
+
+            else if (B2_2Parameters.B2_2КнопкаБК1_7 == "true")
+                this.B2_2КнопкаБК1_7.Visible = false;
+
+            else if (B2_2Parameters.B2_2КнопкаБК1_8 == "true")
+                this.B2_2КнопкаБК1_8.Visible = false;
+
+            else if (B2_2Parameters.B2_2КнопкаБК1_9 == "true")
+                this.B2_2КнопкаБК1_9.Visible = false;
+
+
+
+
+            if (B2_2Parameters.B2_2КнопкаБК2_1 == "true")
+                this.B2_2КнопкаБК2_1.Visible = false;
+
+
+            else if (B2_2Parameters.B2_2КнопкаБК2_2 == "true")
+                this.B2_2КнопкаБК2_2.Visible = false;
+
+            else if (B2_2Parameters.B2_2КнопкаБК2_3 == "true")
+                this.B2_2КнопкаБК2_3.Visible = false;
+
+            else if (B2_2Parameters.B2_2КнопкаБК2_4 == "true")
+                this.B2_2КнопкаБК2_4.Visible = false;
+
+            else if (B2_2Parameters.B2_2КнопкаБК2_5 == "true")
+                this.B2_2КнопкаБК2_5.Visible = false;
+
+            else if (B2_2Parameters.B2_2КнопкаБК2_6 == "true")
+                this.B2_2КнопкаБК2_6.Visible = false;
+
+            else if (B2_2Parameters.B2_2КнопкаБК2_7 == "true")
+                this.B2_2КнопкаБК2_7.Visible = false;
+
+            else if (B2_2Parameters.B2_2КнопкаБК2_8 == "true")
+                this.B2_2КнопкаБК2_8.Visible = false;
+
+            else if (B2_2Parameters.B2_2КнопкаБК2_9 == "true")
+                this.B2_2КнопкаБК2_9.Visible = false;
+
+
+            if (B2_2Parameters.B2_2КолодкаТЛГпр_1 == "true")
+            {
+                this.B2_2КолодкаТЛГпр_1.BackgroundImage = ControlElementImages.jumperType1;
+                this.B2_2КолодкаТЛГпр_2.Visible = false;
+                this.B2_2КолодкаТЛГпр_2.BackgroundImage = null;
+            }
+            else if (B2_2Parameters.B2_2КолодкаТЛГпр_2 == "true")
+            {
+                this.B2_2КолодкаТЛГпр_2.BackgroundImage = ControlElementImages.jumperType1;
+                this.B2_2КолодкаТЛГпр_1.Visible = false;
+                this.B2_2КолодкаТЛГпр_1.BackgroundImage = null;
+            }
+
+
+            if (B2_2Parameters.B2_2КолодкаТКСпр2_1 == "true")
+            {
+                this.B2_2КолодкаТКСпр2_1.BackgroundImage = ControlElementImages.jumperType1;
+                this.B2_2КолодкаТКСпр2_2.Visible = false;
+                this.B2_2КолодкаТКСпр2_2.BackgroundImage = null;
+            }
+            else if (B2_2Parameters.B2_2КолодкаТКСпр2_2 == "true")
+            {
+                this.B2_2КолодкаТКСпр2_2.BackgroundImage = ControlElementImages.jumperType1;
+                this.B2_2КолодкаТКСпр2_1.Visible = false;
+                this.B2_2КолодкаТКСпр2_1.BackgroundImage = null;
+            }
+
+        }
+
     }
 }

@@ -20,8 +20,11 @@ namespace R440O.R440OForms.B1_1
         public B1_1Form()
         {
             this.InitializeComponent();
+            this.InitializeTumblersPosition();
+            this.InitializeButtonsPosition();
         }
 
+        #region Кнопки
         /// <summary>
         /// Переключение кнопки скорость В ГР
         /// </summary>
@@ -55,6 +58,120 @@ namespace R440O.R440OForms.B1_1
                 B1_1Parameters.B1_1КнопкаСкоростьАБ_1ТЛФ_К = "false";
             }
         }
+        #endregion
+
+        #region ТЛГпр1 Колодки
+        private void B1_1КолодкаТЛГпр1_1_Click(object sender, System.EventArgs e)
+        {
+            if (B1_1Parameters.B1_1КолодкаТЛГпр1_1 == "false")
+            {
+                this.B1_1КолодкаТЛГпр1_1.BackgroundImage = ControlElementImages.jumperType1;
+                this.B1_1КолодкаТЛГпр1_2.Visible = false;
+                B1_1Parameters.B1_1КолодкаТЛГпр1_1 = "true";
+                this.B1_1КолодкаТЛГпр1_2.BackgroundImage = null;
+                B1_1Parameters.B1_1КолодкаТЛГпр1_2 = "false";
+            }
+            else
+            {
+                this.B1_1КолодкаТЛГпр1_1.BackgroundImage = null;
+                B1_1Parameters.B1_1КолодкаТЛГпр1_1 = "false";
+                this.B1_1КолодкаТЛГпр1_2.Visible = true;
+            }
+        }
+
+        private void B1_1КолодкаТЛГпр1_2_Click(object sender, System.EventArgs e)
+        {
+            if (B1_1Parameters.B1_1КолодкаТЛГпр1_2 == "false")
+            {
+                this.B1_1КолодкаТЛГпр1_2.BackgroundImage = ControlElementImages.jumperType1;
+                this.B1_1КолодкаТЛГпр1_1.Visible = false;
+                B1_1Parameters.B1_1КолодкаТЛГпр1_2 = "true";
+                this.B1_1КолодкаТЛГпр1_1.BackgroundImage = null;
+                B1_1Parameters.B1_1КолодкаТЛГпр1_1 = "false";
+            }
+            else
+            {
+                this.B1_1КолодкаТЛГпр1_1.Visible = true;
+                this.B1_1КолодкаТЛГпр1_2.BackgroundImage = null;
+                B1_1Parameters.B1_1КолодкаТЛГпр1_2 = "false";
+            }
+        }
+        #endregion
+
+        #region ТЛГпр2 Колодки
+        private void B1_1КолодкаТЛГпр2_1_Click(object sender, System.EventArgs e)
+        {
+            if (B1_1Parameters.B1_1КолодкаТЛГпр2_1 == "false")
+            {
+                this.B1_1КолодкаТЛГпр2_1.BackgroundImage = ControlElementImages.jumperType1;
+                this.B1_1КолодкаТЛГпр2_2.Visible = false;
+                B1_1Parameters.B1_1КолодкаТЛГпр2_1 = "true";
+                this.B1_1КолодкаТЛГпр2_2.BackgroundImage = null;
+                B1_1Parameters.B1_1КолодкаТЛГпр2_2 = "false";
+            }
+            else
+            {
+                this.B1_1КолодкаТЛГпр2_2.Visible = true;
+                this.B1_1КолодкаТЛГпр2_1.BackgroundImage = null;
+                B1_1Parameters.B1_1КолодкаТЛГпр2_1 = "false";
+            }
+        }
+        private void B1_1КолодкаТЛГпр2_2_Click(object sender, System.EventArgs e)
+        {
+            if (B1_1Parameters.B1_1КолодкаТЛГпр2_2 == "false")
+            {
+                this.B1_1КолодкаТЛГпр2_2.BackgroundImage = ControlElementImages.jumperType1;
+                this.B1_1КолодкаТЛГпр2_1.Visible = false;
+                B1_1Parameters.B1_1КолодкаТЛГпр2_2 = "true";
+                this.B1_1КолодкаТЛГпр2_1.BackgroundImage = null;
+                B1_1Parameters.B1_1КолодкаТЛГпр2_1 = "false";
+            }
+            else
+            {
+                this.B1_1КолодкаТЛГпр2_1.Visible = true;
+                this.B1_1КолодкаТЛГпр2_2.BackgroundImage = null;
+                B1_1Parameters.B1_1КолодкаТЛГпр2_2 = "false";
+            }
+        }
+        #endregion
+
+        #region ТЛГпр3 Колодки
+        private void B1_1КолодкаТЛГпр3_1_Click(object sender, System.EventArgs e)
+        {
+            if (B1_1Parameters.B1_1КолодкаТЛГпр3_1 == "false")
+            {
+                this.B1_1КолодкаТЛГпр3_1.BackgroundImage = ControlElementImages.jumperType1;
+                this.B1_1КолодкаТЛГпр3_2.Visible = false;
+                B1_1Parameters.B1_1КолодкаТЛГпр3_1 = "true";
+                this.B1_1КолодкаТЛГпр3_2.BackgroundImage = null;
+                B1_1Parameters.B1_1КолодкаТЛГпр3_2 = "false";
+            }
+            else
+            {
+                this.B1_1КолодкаТЛГпр3_2.Visible = true;
+                this.B1_1КолодкаТЛГпр3_1.BackgroundImage = null;
+                B1_1Parameters.B1_1КолодкаТЛГпр3_1 = "false";
+            }
+        }
+
+        private void B1_1КолодкаТЛГпр3_2_Click(object sender, System.EventArgs e)
+        {
+            if (B1_1Parameters.B1_1КолодкаТЛГпр3_2 == "false")
+            {
+                this.B1_1КолодкаТЛГпр3_2.BackgroundImage = ControlElementImages.jumperType1;
+                this.B1_1КолодкаТЛГпр3_1.Visible = false;
+                B1_1Parameters.B1_1КолодкаТЛГпр3_2 = "true";
+                this.B1_1КолодкаТЛГпр3_1.BackgroundImage = null;
+                B1_1Parameters.B1_1КолодкаТЛГпр3_1 = "false";
+            }
+            else
+            {
+                this.B1_1КолодкаТЛГпр3_1.Visible = true;
+                this.B1_1КолодкаТЛГпр3_2.BackgroundImage = null;
+                B1_1Parameters.B1_1КолодкаТЛГпр3_2 = "false";
+            }
+        }
+        #endregion
 
         /// <summary>
         /// Переключение тумблера управления питанием блока
@@ -70,6 +187,62 @@ namespace R440O.R440OForms.B1_1
             {
                 this.B1_1ТумблерМуДу.BackgroundImage = ControlElementImages.tumblerType4Up;
                 B1_1Parameters.B1_1ТумблерМуДу = "Му";
+            }
+        }
+
+        private void InitializeTumblersPosition()
+        {
+            this.B1_1ТумблерМуДу.BackgroundImage = B1_1Parameters.B1_1ТумблерМуДу == "Ду"
+                ? ControlElementImages.tumblerType4Down
+                : ControlElementImages.tumblerType4Up;
+        }
+        private void InitializeButtonsPosition()
+        {
+            this.B1_1КнопкаСкоростьГР.BackgroundImage = B1_1Parameters.B1_1КнопкаСкоростьГР == "true"
+                ? null
+                : ControlElementImages.buttonRectType1;
+
+            this.B1_1КнопкаСкоростьАБ_1ТЛФ_К.BackgroundImage = B1_1Parameters.B1_1КнопкаСкоростьАБ_1ТЛФ_К == "true"
+                ? null
+                : ControlElementImages.buttonRectType1;
+
+            if (B1_1Parameters.B1_1КолодкаТЛГпр1_1 == "true")
+            {
+                this.B1_1КолодкаТЛГпр1_1.BackgroundImage = ControlElementImages.jumperType1;
+                this.B1_1КолодкаТЛГпр1_2.Visible = false;
+                this.B1_1КолодкаТЛГпр1_2.BackgroundImage = null;
+            }
+            else if (B1_1Parameters.B1_1КолодкаТЛГпр1_2 == "true")
+            {
+                this.B1_1КолодкаТЛГпр1_2.BackgroundImage = ControlElementImages.jumperType1;
+                this.B1_1КолодкаТЛГпр1_1.Visible = false;
+                this.B1_1КолодкаТЛГпр1_1.BackgroundImage = null;
+            }
+
+            if (B1_1Parameters.B1_1КолодкаТЛГпр2_1 == "true")
+            {
+                this.B1_1КолодкаТЛГпр2_1.BackgroundImage = ControlElementImages.jumperType1;
+                this.B1_1КолодкаТЛГпр2_2.Visible = false;
+                this.B1_1КолодкаТЛГпр2_2.BackgroundImage = null;
+            }
+            else if (B1_1Parameters.B1_1КолодкаТЛГпр2_2 == "true")
+            {
+                this.B1_1КолодкаТЛГпр2_2.BackgroundImage = ControlElementImages.jumperType1;
+                this.B1_1КолодкаТЛГпр2_1.Visible = false;
+                this.B1_1КолодкаТЛГпр2_1.BackgroundImage = null;
+            }
+
+            if (B1_1Parameters.B1_1КолодкаТЛГпр3_1 == "true")
+            {
+                this.B1_1КолодкаТЛГпр3_1.BackgroundImage = ControlElementImages.jumperType1;
+                this.B1_1КолодкаТЛГпр3_2.Visible = false;
+                this.B1_1КолодкаТЛГпр3_2.BackgroundImage = null;
+            }
+            else if (B1_1Parameters.B1_1КолодкаТЛГпр3_2 == "true")
+            {
+                this.B1_1КолодкаТЛГпр3_2.BackgroundImage = ControlElementImages.jumperType1;
+                this.B1_1КолодкаТЛГпр3_1.Visible = false;
+                this.B1_1КолодкаТЛГпр3_1.BackgroundImage = null;
             }
         }
     }

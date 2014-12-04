@@ -24,21 +24,32 @@
         public static string B1_1ЛампочкаВУПНеиспр { get; set; }
         #endregion
 
+        #region Колодки
+        public static string B1_1КолодкаТЛГпр1_1 = "false";
+        public static string B1_1КолодкаТЛГпр1_2 = "false";
+
+        public static string B1_1КолодкаТЛГпр2_1 = "false";
+        public static string B1_1КолодкаТЛГпр2_2 = "false";
+
+        public static string B1_1КолодкаТЛГпр3_1 = "false";
+        public static string B1_1КолодкаТЛГпр3_2 = "false";
+        #endregion
+
         ////Тумблер
         /// <summary>
         /// Возможные состояния: Му - местное управление, Ду - дистанционное управление
         /// </summary>
-        public static string B1_1ТумблерМуДу { get; set; }
+        public static string B1_1ТумблерМуДу = "Ду";
         
         ////Кнопки
         /// <summary>
         /// Возможные состояния: true, false
         /// </summary>
-        public static string B1_1КнопкаСкоростьГР { get; set; }
+        public static string B1_1КнопкаСкоростьГР = "false";
 
         /// <summary>
         /// Возможные состояния: true, false
         /// </summary>
-        public static string B1_1КнопкаСкоростьАБ_1ТЛФ_К { get; set; }
+        public static string B1_1КнопкаСкоростьАБ_1ТЛФ_К = "false";
     }
 }

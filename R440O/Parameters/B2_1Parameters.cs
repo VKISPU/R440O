@@ -28,32 +28,41 @@ namespace R440O.Parameters
         #endregion
 
         #region Кнопки
-        public static string B2_1КнопкаБК1_1 { get; set; }
-        public static string B2_1КнопкаБК1_2 { get; set; }
-        public static string B2_1КнопкаБК1_3 { get; set; }
-        public static string B2_1КнопкаБК1_4 { get; set; }
-        public static string B2_1КнопкаБК1_5 { get; set; }
-        public static string B2_1КнопкаБК1_6 { get; set; }
-        public static string B2_1КнопкаБК1_7 { get; set; }
-        public static string B2_1КнопкаБК1_8 { get; set; }
-        public static string B2_1КнопкаБК1_9 { get; set; }
 
-        public static string B2_1КнопкаБК2_1 { get; set; }
-        public static string B2_1КнопкаБК2_2 { get; set; }
-        public static string B2_1КнопкаБК2_3 { get; set; }
-        public static string B2_1КнопкаБК2_4 { get; set; }
-        public static string B2_1КнопкаБК2_5 { get; set; }
-        public static string B2_1КнопкаБК2_6 { get; set; }
-        public static string B2_1КнопкаБК2_7 { get; set; }
-        public static string B2_1КнопкаБК2_8 { get; set; }
-        public static string B2_1КнопкаБК2_9 { get; set; }
+        public static string B2_1КнопкаБК1_1 = "false";
+        public static string B2_1КнопкаБК1_2 = "false";
+        public static string B2_1КнопкаБК1_3 = "false";
+        public static string B2_1КнопкаБК1_4 = "false";
+        public static string B2_1КнопкаБК1_5 = "false";
+        public static string B2_1КнопкаБК1_6 = "false";
+        public static string B2_1КнопкаБК1_7 = "false";
+        public static string B2_1КнопкаБК1_8 = "false";
+        public static string B2_1КнопкаБК1_9 = "false";
+
+        public static string B2_1КнопкаБК2_1 = "false";
+        public static string B2_1КнопкаБК2_2 = "false";
+        public static string B2_1КнопкаБК2_3 = "false";
+        public static string B2_1КнопкаБК2_4 = "false";
+        public static string B2_1КнопкаБК2_5 = "false";
+        public static string B2_1КнопкаБК2_6 = "false";
+        public static string B2_1КнопкаБК2_7 = "false";
+        public static string B2_1КнопкаБК2_8 = "false";
+        public static string B2_1КнопкаБК2_9 = "false";
+        #endregion
+
+        #region Колодки
+        public static string B2_1КолодкаТЛГпр_1 = "false";
+        public static string B2_1КолодкаТЛГпр_2 = "false";
+
+        public static string B2_1КолодкаТКСпр2_1 = "false";
+        public static string B2_1КолодкаТКСпр2_2 = "false";
         #endregion
 
         //Тумблеры 
         /// <summary>
         /// Возможные состояния: Му - местное управление, Ду - дистанционное управление
         /// </summary>
-        public static string B2_1ТумблерМуДу { get; set; }
+        public static string B2_1ТумблерМуДу = "Ду";
 
 
     }

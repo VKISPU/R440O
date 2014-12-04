@@ -9,7 +9,7 @@
         public static string P220_27G_3Лампочка27В { get; set; }
 
         ////Тумблер
-        public static string P220_27G_3ТумблерМуДу { get; set; }
-        public static string P220_27G_3ТумблерСеть { get; set; }
+        public static string P220_27G_3ТумблерМуДу = "Ду";
+        public static string P220_27G_3ТумблерСеть = "откл";
     }
 }
