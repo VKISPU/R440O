@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.N502BPanel = new System.Windows.Forms.Panel();
+            this.N502BЛампочкаСеть = new System.Windows.Forms.PictureBox();
             this.N502BПереключательТокНагрузкиИЗаряда = new System.Windows.Forms.Button();
             this.N502BПереключательКонтрольНапряжения = new System.Windows.Forms.Button();
             this.N502BПереключательФазировка = new System.Windows.Forms.Button();
@@ -45,13 +46,18 @@
             this.N502BТумблерОсвещение = new System.Windows.Forms.Button();
             this.N502BТумблерВыпрямитель27В = new System.Windows.Forms.Button();
             this.N502BТумблерЭлектрооборуд = new System.Windows.Forms.Button();
+            this.N502BЛампочкаСфазировано = new System.Windows.Forms.PictureBox();
             this.N502BPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.N502BЛампочкаСеть)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N502BЛампочкаСфазировано)).BeginInit();
             this.SuspendLayout();
             // 
             // N502BPanel
             // 
             this.N502BPanel.BackgroundImage = global::R440O.BackgroundImages.N502B;
             this.N502BPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.N502BPanel.Controls.Add(this.N502BЛампочкаСфазировано);
+            this.N502BPanel.Controls.Add(this.N502BЛампочкаСеть);
             this.N502BPanel.Controls.Add(this.N502BПереключательТокНагрузкиИЗаряда);
             this.N502BPanel.Controls.Add(this.N502BПереключательКонтрольНапряжения);
             this.N502BPanel.Controls.Add(this.N502BПереключательФазировка);
@@ -72,6 +78,17 @@
             this.N502BPanel.Name = "N502BPanel";
             this.N502BPanel.Size = new System.Drawing.Size(749, 745);
             this.N502BPanel.TabIndex = 1;
+            // 
+            // N502BЛампочкаСеть
+            // 
+            this.N502BЛампочкаСеть.BackColor = System.Drawing.Color.Transparent;
+            this.N502BЛампочкаСеть.BackgroundImage = global::R440O.ControlElementImages.lampType12OnRed;
+            this.N502BЛампочкаСеть.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.N502BЛампочкаСеть.Location = new System.Drawing.Point(119, 50);
+            this.N502BЛампочкаСеть.Name = "N502BЛампочкаСеть";
+            this.N502BЛампочкаСеть.Size = new System.Drawing.Size(37, 36);
+            this.N502BЛампочкаСеть.TabIndex = 36;
+            this.N502BЛампочкаСеть.TabStop = false;
             // 
             // N502BПереключательТокНагрузкиИЗаряда
             // 
@@ -98,9 +115,9 @@
             this.N502BПереключательКонтрольНапряжения.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.N502BПереключательКонтрольНапряжения.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.N502BПереключательКонтрольНапряжения.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N502BПереключательКонтрольНапряжения.Location = new System.Drawing.Point(480, 261);
+            this.N502BПереключательКонтрольНапряжения.Location = new System.Drawing.Point(474, 262);
             this.N502BПереключательКонтрольНапряжения.Name = "N502BПереключательКонтрольНапряжения";
-            this.N502BПереключательКонтрольНапряжения.Size = new System.Drawing.Size(74, 74);
+            this.N502BПереключательКонтрольНапряжения.Size = new System.Drawing.Size(93, 76);
             this.N502BПереключательКонтрольНапряжения.TabIndex = 34;
             this.N502BПереключательКонтрольНапряжения.UseVisualStyleBackColor = false;
             this.N502BПереключательКонтрольНапряжения.MouseUp += new System.Windows.Forms.MouseEventHandler(this.N502BПереключательКонтрольНапряжения_MouseUp);
@@ -332,6 +349,17 @@
             this.N502BТумблерЭлектрооборуд.UseVisualStyleBackColor = false;
             this.N502BТумблерЭлектрооборуд.Click += new System.EventHandler(this.N502BТумблерЭлектрооборуд_Click);
             // 
+            // N502BЛампочкаСфазировано
+            // 
+            this.N502BЛампочкаСфазировано.BackColor = System.Drawing.Color.Transparent;
+            this.N502BЛампочкаСфазировано.BackgroundImage = global::R440O.ControlElementImages.lampType12OnRed;
+            this.N502BЛампочкаСфазировано.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.N502BЛампочкаСфазировано.Location = new System.Drawing.Point(215, 51);
+            this.N502BЛампочкаСфазировано.Name = "N502BЛампочкаСфазировано";
+            this.N502BЛампочкаСфазировано.Size = new System.Drawing.Size(37, 36);
+            this.N502BЛампочкаСфазировано.TabIndex = 37;
+            this.N502BЛампочкаСфазировано.TabStop = false;
+            // 
             // N502BForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,6 +372,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Н502Б";
             this.N502BPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.N502BЛампочкаСеть)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N502BЛампочкаСфазировано)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -367,6 +397,8 @@
         private System.Windows.Forms.Button N502BПереключательФазировка;
         private System.Windows.Forms.Button N502BПереключательКонтрольНапряжения;
         private System.Windows.Forms.Button N502BПереключательТокНагрузкиИЗаряда;
+        private System.Windows.Forms.PictureBox N502BЛампочкаСеть;
+        private System.Windows.Forms.PictureBox N502BЛампочкаСфазировано;
 
     }
 }

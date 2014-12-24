@@ -3,8 +3,38 @@
     public class VoltageStabilizerParameters
     {
         ////Лампочки
-        public static string VoltageStabilizerЛампочкаСетьВкл { get; set; }
-        public static string VoltageStabilizerЛампочкаАвария { get; set; }
+        /// <summary>
+        /// Параметр для лампочки. Возможные состояния: true, false
+        /// </summary>
+        private static bool _VoltageStabilizerЛампочкаСетьВкл = false;
+        public static bool VoltageStabilizerЛампочкаСетьВкл
+        {
+            get
+            {
+                return _VoltageStabilizerЛампочкаСетьВкл;
+            }
+            set
+            {
+                _VoltageStabilizerЛампочкаСетьВкл = value;
+            }
+        }
+
+        /// <summary>
+        /// Параметр для лампочки. Возможные состояния: true, false
+        /// </summary>
+        private static bool _VoltageStabilizerЛампочкаАвария = true;
+        public static bool VoltageStabilizerЛампочкаАвария
+        {
+            get
+            {
+                return _VoltageStabilizerЛампочкаАвария;
+            }
+
+            set
+            {
+                _VoltageStabilizerЛампочкаАвария = value;
+            }
+        }
 
         #region Переключатель КонтрольНапряжения
         /// <summary>

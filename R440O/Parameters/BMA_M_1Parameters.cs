@@ -236,7 +236,7 @@ namespace R440O.Parameters
         public static bool BMA_M_1КнопкаШлейфТЧ = false;
         public static bool BMA_M_1КнопкаШлейфДК = false;
         public static bool BMA_M_1КнопкаПитаниеВКЛ = false;
-        public static bool BMA_M_1КнопкаПитаниеВЫКЛ = false;
+        public static bool BMA_M_1КнопкаПитаниеВЫКЛ = true;
         #endregion
 
         #region Лампочки

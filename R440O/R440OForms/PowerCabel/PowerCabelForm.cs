@@ -19,35 +19,37 @@ namespace R440O.R440OForms.PowerCabel
         /// </summary>
         public PowerCabelForm()
         {
-            this.InitializeComponent();
+            InitializeComponent();
+            InitializePosition();
         }
 
         private void PowerCabelТумблерОсвещение_Click(object sender, System.EventArgs e)
         {
-            if (PowerCabelParameters.PowerCabelТумблерОсвещение == "true")
-            {
-                this.PowerCabelТумблерОсвещение.BackgroundImage = ControlElementImages.tumblerType4Left;
-                PowerCabelParameters.PowerCabelТумблерОсвещение = "false";
-            }
-            else
-            {
-                this.PowerCabelТумблерОсвещение.BackgroundImage = ControlElementImages.tumblerType4Right;
-                PowerCabelParameters.PowerCabelТумблерОсвещение = "true";
-            }
+            PowerCabelТумблерОсвещение.BackgroundImage = (PowerCabelParameters.PowerCabelТумблерОсвещение)
+                ? ControlElementImages.tumblerType4Left
+                : ControlElementImages.tumblerType4Right;
+       
+            PowerCabelParameters.PowerCabelТумблерОсвещение = !PowerCabelParameters.PowerCabelТумблерОсвещение;
         }
 
         private void PowerCabelВход_Click(object sender, System.EventArgs e)
         {
-            if (PowerCabelParameters.PowerCabelВход == "true")
-            {
-                this.PowerCabelВход.BackgroundImage = null;
-                PowerCabelParameters.PowerCabelВход = "false";
-            }
-            else
-            {
-                this.PowerCabelВход.BackgroundImage = ControlElementImages.powerCabelEnter;
-                PowerCabelParameters.PowerCabelВход = "true";
-            }
+            PowerCabelВход.BackgroundImage = (PowerCabelParameters.PowerCabelВход)
+                ? null
+                : ControlElementImages.powerCabelEnter;
+
+            PowerCabelParameters.PowerCabelВход = !PowerCabelParameters.PowerCabelВход;
+        }
+
+        private void InitializePosition()
+        {
+            PowerCabelВход.BackgroundImage = (PowerCabelParameters.PowerCabelВход)
+                ? ControlElementImages.powerCabelEnter
+                : null;
+
+            PowerCabelТумблерОсвещение.BackgroundImage = (PowerCabelParameters.PowerCabelТумблерОсвещение)
+                ? ControlElementImages.tumblerType4Right
+                : ControlElementImages.tumblerType4Left;
         }
     }
 }

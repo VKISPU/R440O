@@ -14,7 +14,7 @@ namespace R440O.R440OForms.VoltageStabilizer
     /// Форма блока стабилизатор напряжения
     /// </summary>
     public partial class VoltageStabilizerForm : Form
-    {      
+    {
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="VoltageStabilizerForm"/>
         /// </summary>
@@ -22,8 +22,9 @@ namespace R440O.R440OForms.VoltageStabilizer
         {
             this.InitializeComponent();
             this.InitializeTogglePosition();
+            this.InitializeLamps();
         }
-        
+
         /// <summary>
         /// Если в текущий момент времени включено питание 380, а клик происходит по месту,
         /// где находится вход для кабеля 220 вольт - кабель переключается на 220.
@@ -91,7 +92,18 @@ namespace R440O.R440OForms.VoltageStabilizer
 
             var angle = VoltageStabilizerParameters.VoltageStabilizerПереключательКонтрольНапр * 30 - 195;
             VoltageStabilizerПереключательКонтрольНапр.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);      
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
+        }
+
+        private void InitializeLamps()
+        {
+            VoltageStabilizerЛампочкаСетьВкл.BackgroundImage = VoltageStabilizerParameters.VoltageStabilizerЛампочкаСетьВкл
+                ? ControlElementImages.lampType9OnGreen
+                : null;
+
+            VoltageStabilizerЛампочкаАвария.BackgroundImage = VoltageStabilizerParameters.VoltageStabilizerЛампочкаАвария
+                ? ControlElementImages.lampType6OnRed
+                : null;
         }
     }
 }

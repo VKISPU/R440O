@@ -103,6 +103,16 @@ namespace R440O {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BMBИндикатор1 {
+            get {
+                object obj = ResourceManager.GetObject("BMBИндикатор1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap buttonN15Off {
             get {
                 object obj = ResourceManager.GetObject("buttonN15Off", resourceCulture);
@@ -263,6 +273,16 @@ namespace R440O {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap buttonSquareLightBlue1 {
+            get {
+                object obj = ResourceManager.GetObject("buttonSquareLightBlue1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap buttonSquareWhite {
             get {
                 object obj = ResourceManager.GetObject("buttonSquareWhite", resourceCulture);
@@ -276,6 +296,16 @@ namespace R440O {
         internal static System.Drawing.Bitmap buttonSquareYellow {
             get {
                 object obj = ResourceManager.GetObject("buttonSquareYellow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buttonSquareYellow1 {
+            get {
+                object obj = ResourceManager.GetObject("buttonSquareYellow1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

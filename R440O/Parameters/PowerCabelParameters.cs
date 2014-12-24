@@ -2,8 +2,8 @@
 {
     public class PowerCabelParameters
     {
-        public static string PowerCabelТумблерОсвещение = "false";
+        public static bool PowerCabelТумблерОсвещение = false;
 
-        public static string PowerCabelВход = "false";
+        public static bool PowerCabelВход = false;
     }
 }

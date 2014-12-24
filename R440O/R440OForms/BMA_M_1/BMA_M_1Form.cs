@@ -223,40 +223,55 @@ namespace R440O.R440OForms.BMA_M_1
         }
 
 
-        private void BMA_M_1КнопкаПитаниеВЫКЛ_MouseUp(object sender, MouseEventArgs e)
-        {
-            //this.BMA_M_1КнопкаПитаниеВЫКЛ.Text = "ВЫКЛ";
-            //BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВЫКЛ = true;
-        }
-
         private void BMA_M_1КнопкаПитаниеВЫКЛ_MouseDown(object sender, MouseEventArgs e)
         {
-            //this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = null;
-            //this.BMA_M_1КнопкаПитаниеВЫКЛ.Text = string.Empty;
-            //if (BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВКЛ)
-            //{
-            //    this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
-            //    BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВКЛ = false;
-            //} 
+            this.BMA_M_1КнопкаПитаниеВЫКЛ.Text = string.Empty;
+            this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = null;
+
+            if (BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВКЛ)
+            {
+                BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВЫКЛ = true;
+                BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВКЛ = false;
+                this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
+            }
         }
 
-
-
-        private void BMA_M_1КнопкаПитаниеВКЛ_MouseUp(object sender, MouseEventArgs e)
+        private void BMA_M_1КнопкаПитаниеВЫКЛ_MouseUp(object sender, MouseEventArgs e)
         {
-            //this.BMA_M_1КнопкаПитаниеВКЛ.Text = "ВКЛ";
-            //BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВКЛ = true;
+            this.BMA_M_1КнопкаПитаниеВЫКЛ.Text = "ВЫКЛ";
+            if (BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВЫКЛ)
+                this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOn;
+            else
+            {
+                this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
+                BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВКЛ = !BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВКЛ;
+            }
         }
 
         private void BMA_M_1КнопкаПитаниеВКЛ_MouseDown(object sender, MouseEventArgs e)
         {
-            //this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = null;
-            //this.BMA_M_1КнопкаПитаниеВКЛ.Text = string.Empty;
-            //if (BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВЫКЛ)
-            //{
-            //    this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
-            //    BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВЫКЛ = false;
-            //} 
+            this.BMA_M_1КнопкаПитаниеВКЛ.Text = string.Empty;
+            this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = null;
+
+            if (BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВЫКЛ)
+            {
+                BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВКЛ = true;
+                BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВЫКЛ = false;
+                this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
+            }
+        }
+
+        private void BMA_M_1КнопкаПитаниеВКЛ_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.BMA_M_1КнопкаПитаниеВКЛ.Text = "ВКЛ";
+            if (BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВКЛ)
+                this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOn;
+            else
+            {
+                this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
+                BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВКЛ = !BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВКЛ;
+            }
+
         }
         #endregion
 
@@ -324,6 +339,14 @@ namespace R440O.R440OForms.BMA_M_1
                 this.BMA_M_1КнопкаШлейфДК.BackgroundImage = ControlElementImages.buttonSquareYellow;
                 this.BMA_M_1КнопкаШлейфДК.Text = "ДК";
             }
+
+            this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВКЛ
+                ? ControlElementImages.buttonSquareBlueOn
+                : ControlElementImages.buttonSquareBlueOff;
+
+            this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВЫКЛ
+                ? ControlElementImages.buttonSquareBlueOn
+                : ControlElementImages.buttonSquareBlueOff;
         }
         #endregion
 

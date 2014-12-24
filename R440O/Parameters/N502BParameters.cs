@@ -3,16 +3,43 @@
     public class N502BParameters
     {
         ////Лампочки
-        public static string N502BЛампочкаСеть { get; set; }
-        public static string N502BЛампочкаСфазировано { get; set; }
-        public static string N502BЛампочкаРБППроверка { get; set; }
-        
-        ////public static string N502BЛампочкаРБППредохранитель { get; set; }
+        /// <summary>
+        /// Параметр для лампочки. Возможные состояния: true, false
+        /// </summary>
+        private static bool _N502BЛампочкаСеть = true;
+        public static bool N502BЛампочкаСеть
+        {
+            get
+            {
+                return _N502BЛампочкаСеть;
+            }
 
-        ////Кнопки
-        public static string N502BКнопкаВклНагрузки { get; set; }
-        public static string N502BКнопкаРБППроверка { get; set; }
-        public static string N502BКнопкаРБПСброс { get; set; }
+            set
+            {
+                _N502BЛампочкаСеть = value;
+            }
+        }
+
+        /// <summary>
+        /// Параметр для лампочки. Возможные состояния: true, false
+        /// </summary>
+        private static bool _N502BЛампочкаСфазировано = false;
+        public static bool N502BЛампочкаСфазировано
+        {
+            get
+            {
+                return _N502BЛампочкаСфазировано;
+            }
+
+            set
+            {
+                _N502BЛампочкаСфазировано = value;
+            }
+        }
+
+        public static string N502BЛампочкаРБППроверка { get; set; }
+
+        ////public static string N502BЛампочкаРБППредохранитель { get; set; }
 
         #region Тумблеры
         /// <summary>
@@ -34,7 +61,7 @@
         #endregion
 
         #region Переключатели
-        
+
         public static string N502BПереключательСеть = "false";
 
         #region ПереключательНапряжение

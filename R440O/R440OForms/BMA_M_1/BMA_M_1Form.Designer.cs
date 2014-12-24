@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BMA_M_1Form));
             this.BMA_M_1Panel = new System.Windows.Forms.Panel();
             this.BMA_M_1КнопкаПитаниеВЫКЛ = new System.Windows.Forms.Button();
             this.BMA_M_1КнопкаПитаниеВКЛ = new System.Windows.Forms.Button();
@@ -79,7 +78,7 @@
             this.BMA_M_1КнопкаПитаниеВЫКЛ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BMA_M_1КнопкаПитаниеВЫКЛ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BMA_M_1КнопкаПитаниеВЫКЛ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMA_M_1КнопкаПитаниеВЫКЛ.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.BMA_M_1КнопкаПитаниеВЫКЛ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.BMA_M_1КнопкаПитаниеВЫКЛ.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BMA_M_1КнопкаПитаниеВЫКЛ.Location = new System.Drawing.Point(508, 508);
             this.BMA_M_1КнопкаПитаниеВЫКЛ.Name = "BMA_M_1КнопкаПитаниеВЫКЛ";
@@ -99,7 +98,7 @@
             this.BMA_M_1КнопкаПитаниеВКЛ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BMA_M_1КнопкаПитаниеВКЛ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BMA_M_1КнопкаПитаниеВКЛ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMA_M_1КнопкаПитаниеВКЛ.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.BMA_M_1КнопкаПитаниеВКЛ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.BMA_M_1КнопкаПитаниеВКЛ.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BMA_M_1КнопкаПитаниеВКЛ.Location = new System.Drawing.Point(590, 508);
             this.BMA_M_1КнопкаПитаниеВКЛ.Name = "BMA_M_1КнопкаПитаниеВКЛ";
@@ -113,7 +112,7 @@
             // BMA_M_1КнопкаПроверка
             // 
             this.BMA_M_1КнопкаПроверка.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1КнопкаПроверка.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BMA_M_1КнопкаПроверка.BackgroundImage")));
+            this.BMA_M_1КнопкаПроверка.BackgroundImage = global::R440O.ControlElementImages.buttonSquareYellow;
             this.BMA_M_1КнопкаПроверка.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BMA_M_1КнопкаПроверка.FlatAppearance.BorderSize = 0;
             this.BMA_M_1КнопкаПроверка.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -132,7 +131,7 @@
             // BMA_M_1КнопкаШлейфДК
             // 
             this.BMA_M_1КнопкаШлейфДК.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1КнопкаШлейфДК.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BMA_M_1КнопкаШлейфДК.BackgroundImage")));
+            this.BMA_M_1КнопкаШлейфДК.BackgroundImage = global::R440O.ControlElementImages.buttonSquareYellow;
             this.BMA_M_1КнопкаШлейфДК.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BMA_M_1КнопкаШлейфДК.FlatAppearance.BorderSize = 0;
             this.BMA_M_1КнопкаШлейфДК.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -150,7 +149,7 @@
             // BMA_M_1КнопкаШлейфТЧ
             // 
             this.BMA_M_1КнопкаШлейфТЧ.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1КнопкаШлейфТЧ.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BMA_M_1КнопкаШлейфТЧ.BackgroundImage")));
+            this.BMA_M_1КнопкаШлейфТЧ.BackgroundImage = global::R440O.ControlElementImages.buttonSquareYellow;
             this.BMA_M_1КнопкаШлейфТЧ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BMA_M_1КнопкаШлейфТЧ.FlatAppearance.BorderSize = 0;
             this.BMA_M_1КнопкаШлейфТЧ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;

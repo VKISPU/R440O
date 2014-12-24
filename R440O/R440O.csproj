@@ -72,6 +72,7 @@
     <Compile Include="Parameters\B3_2Parameters.cs" />
     <Compile Include="Parameters\BMA_M_2Parameters.cs" />
     <Compile Include="Parameters\BMA_M_1Parameters.cs" />
+    <Compile Include="Parameters\BMBParameters.cs" />
     <Compile Include="Parameters\C300M_1Parameters.cs" />
     <Compile Include="Parameters\N18_MParameters.cs" />
     <Compile Include="Parameters\A205M_1Parameters.cs" />
@@ -1038,9 +1039,6 @@
     <None Include="Resources\lampType11OnYellow.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\lampType12OnRed.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\orderSchemeIcon.png" />
   </ItemGroup>
   <ItemGroup>
@@ -1059,9 +1057,13 @@
     <None Include="Resources\toggleType4.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\buttonSquareLightBlue1.png" />
+    <None Include="Resources\lampType12OnRed.png" />
+    <None Include="Resources\buttonSquareYellow1.png" />
     <None Include="Resources\buttonSquareBlueOff.png" />
     <None Include="Resources\buttonSquareBlueOn.png" />
     <None Include="Resources\buttonSquareYellow.png" />
+    <None Include="Resources\BMBИндикатор1.png" />
     <None Include="Resources\BMA_M.png" />
     <Content Include="Resources\buttonRoundType6.png" />
   </ItemGroup>

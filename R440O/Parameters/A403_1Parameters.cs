@@ -34,7 +34,7 @@
             get { return _A403_1ПереключательПроверка; }
             set
             {
-                if (value > 0 && value < 10) _A403_1ПереключательПроверка = value;
+                if (value > 0 && value < 11) _A403_1ПереключательПроверка = value;
             }
         }
 
@@ -103,15 +103,17 @@
         public static string A403_1КнопкаМинус { get; set; }
         public static string A403_1КнопкаСброс { get; set; }
 
-        public static string A403_1КнопкаАlpha_Lambda { get; set; }
-        public static string A403_1КнопкаEpsilon_Phi { get; set; }
-        public static string A403_1КнопкаI_H { get; set; }
-        public static string A403_1КнопкаOmega_N { get; set; }
-        public static string A403_1КнопкаLambda0_f { get; set; }
-        public static string A403_1Кнопкаt0_K { get; set; }
-        public static string A403_1КнопкаT_Kbeta { get; set; }
-        public static string A403_1Кнопкаtсв_Yalpha { get; set; }
-        public static string A403_1Кнопкаtуст_Ybeta { get; set; }
+        public static string A403_1TextParameter { get; set; }
+
+        public static bool A403_1КнопкаАlpha_Lambda = false;
+        public static bool A403_1КнопкаEpsilon_Phi = false;
+        public static bool A403_1КнопкаI_H = false;
+        public static bool A403_1КнопкаOmega_N = false;
+        public static bool A403_1КнопкаLambda0_f = false;
+        public static bool A403_1Кнопкаt0_K = false;
+        public static bool A403_1КнопкаT_Kbeta = false;
+        public static bool A403_1Кнопкаtсв_Yalpha = false;
+        public static bool A403_1Кнопкаtуст_Ybeta = false;
         #endregion
 
         #region Табло

@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.A403_1Panel = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.A403_1ТаблоПоле6 = new System.Windows.Forms.Label();
+            this.A403_1ТаблоПоле5 = new System.Windows.Forms.Label();
+            this.A403_1ТаблоПоле3 = new System.Windows.Forms.Label();
+            this.A403_1ТаблоПоле4 = new System.Windows.Forms.Label();
+            this.A403_1ТаблоПоле2 = new System.Windows.Forms.Label();
             this.A403_1ТаблоПоле0 = new System.Windows.Forms.Label();
             this.A403_1ПереключательПроверка = new System.Windows.Forms.Button();
             this.A403_1ПереключательРежимРаботы = new System.Windows.Forms.Button();
@@ -59,12 +65,6 @@
             this.A403_1ТумблерГотов = new System.Windows.Forms.Button();
             this.A403_1ТумблерКомплект = new System.Windows.Forms.Button();
             this.A403_1ТумблерСеть = new System.Windows.Forms.Button();
-            this.A403_1ТаблоПоле2 = new System.Windows.Forms.Label();
-            this.A403_1ТаблоПоле4 = new System.Windows.Forms.Label();
-            this.A403_1ТаблоПоле3 = new System.Windows.Forms.Label();
-            this.A403_1ТаблоПоле5 = new System.Windows.Forms.Label();
-            this.A403_1ТаблоПоле6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.A403_1Panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,6 +113,78 @@
             this.A403_1Panel.Size = new System.Drawing.Size(684, 578);
             this.A403_1Panel.TabIndex = 0;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(250, 318);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(16, 19);
+            this.label7.TabIndex = 58;
+            this.label7.Text = "*";
+            // 
+            // A403_1ТаблоПоле6
+            // 
+            this.A403_1ТаблоПоле6.AutoSize = true;
+            this.A403_1ТаблоПоле6.BackColor = System.Drawing.Color.Transparent;
+            this.A403_1ТаблоПоле6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.A403_1ТаблоПоле6.ForeColor = System.Drawing.Color.Red;
+            this.A403_1ТаблоПоле6.Location = new System.Drawing.Point(363, 318);
+            this.A403_1ТаблоПоле6.Name = "A403_1ТаблоПоле6";
+            this.A403_1ТаблоПоле6.Size = new System.Drawing.Size(18, 19);
+            this.A403_1ТаблоПоле6.TabIndex = 57;
+            this.A403_1ТаблоПоле6.Text = "0";
+            // 
+            // A403_1ТаблоПоле5
+            // 
+            this.A403_1ТаблоПоле5.AutoSize = true;
+            this.A403_1ТаблоПоле5.BackColor = System.Drawing.Color.Transparent;
+            this.A403_1ТаблоПоле5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.A403_1ТаблоПоле5.ForeColor = System.Drawing.Color.Red;
+            this.A403_1ТаблоПоле5.Location = new System.Drawing.Point(343, 318);
+            this.A403_1ТаблоПоле5.Name = "A403_1ТаблоПоле5";
+            this.A403_1ТаблоПоле5.Size = new System.Drawing.Size(18, 19);
+            this.A403_1ТаблоПоле5.TabIndex = 56;
+            this.A403_1ТаблоПоле5.Text = "0";
+            // 
+            // A403_1ТаблоПоле3
+            // 
+            this.A403_1ТаблоПоле3.AutoSize = true;
+            this.A403_1ТаблоПоле3.BackColor = System.Drawing.Color.Transparent;
+            this.A403_1ТаблоПоле3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.A403_1ТаблоПоле3.ForeColor = System.Drawing.Color.Red;
+            this.A403_1ТаблоПоле3.Location = new System.Drawing.Point(303, 318);
+            this.A403_1ТаблоПоле3.Name = "A403_1ТаблоПоле3";
+            this.A403_1ТаблоПоле3.Size = new System.Drawing.Size(18, 19);
+            this.A403_1ТаблоПоле3.TabIndex = 55;
+            this.A403_1ТаблоПоле3.Text = "0";
+            // 
+            // A403_1ТаблоПоле4
+            // 
+            this.A403_1ТаблоПоле4.AutoSize = true;
+            this.A403_1ТаблоПоле4.BackColor = System.Drawing.Color.Transparent;
+            this.A403_1ТаблоПоле4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.A403_1ТаблоПоле4.ForeColor = System.Drawing.Color.Red;
+            this.A403_1ТаблоПоле4.Location = new System.Drawing.Point(323, 318);
+            this.A403_1ТаблоПоле4.Name = "A403_1ТаблоПоле4";
+            this.A403_1ТаблоПоле4.Size = new System.Drawing.Size(18, 19);
+            this.A403_1ТаблоПоле4.TabIndex = 54;
+            this.A403_1ТаблоПоле4.Text = "0";
+            // 
+            // A403_1ТаблоПоле2
+            // 
+            this.A403_1ТаблоПоле2.AutoSize = true;
+            this.A403_1ТаблоПоле2.BackColor = System.Drawing.Color.Transparent;
+            this.A403_1ТаблоПоле2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.A403_1ТаблоПоле2.ForeColor = System.Drawing.Color.Red;
+            this.A403_1ТаблоПоле2.Location = new System.Drawing.Point(284, 318);
+            this.A403_1ТаблоПоле2.Name = "A403_1ТаблоПоле2";
+            this.A403_1ТаблоПоле2.Size = new System.Drawing.Size(18, 19);
+            this.A403_1ТаблоПоле2.TabIndex = 53;
+            this.A403_1ТаблоПоле2.Text = "0";
+            // 
             // A403_1ТаблоПоле0
             // 
             this.A403_1ТаблоПоле0.AutoSize = true;
@@ -160,7 +232,7 @@
             // A403_1КнопкаУстВремени
             // 
             this.A403_1КнопкаУстВремени.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1КнопкаУстВремени.BackgroundImage = global::R440O.ControlElementImages.buttonSquareLightBlue;
+            this.A403_1КнопкаУстВремени.BackgroundImage = global::R440O.ControlElementImages.buttonSquareLightBlue1;
             this.A403_1КнопкаУстВремени.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1КнопкаУстВремени.FlatAppearance.BorderSize = 0;
             this.A403_1КнопкаУстВремени.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -173,12 +245,13 @@
             this.A403_1КнопкаУстВремени.Size = new System.Drawing.Size(38, 37);
             this.A403_1КнопкаУстВремени.TabIndex = 49;
             this.A403_1КнопкаУстВремени.UseVisualStyleBackColor = false;
-            this.A403_1КнопкаУстВремени.Click += new System.EventHandler(this.A403_1КнопкаУстВремени_Click);
+            this.A403_1КнопкаУстВремени.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаУстВремени_MouseDown);
+            this.A403_1КнопкаУстВремени.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаУстВремени_MouseUp);
             // 
             // A403_1КнопкаСброс
             // 
             this.A403_1КнопкаСброс.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1КнопкаСброс.BackgroundImage = global::R440O.ControlElementImages.buttonSquareLightBlue;
+            this.A403_1КнопкаСброс.BackgroundImage = global::R440O.ControlElementImages.buttonSquareLightBlue1;
             this.A403_1КнопкаСброс.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1КнопкаСброс.FlatAppearance.BorderSize = 0;
             this.A403_1КнопкаСброс.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -655,78 +728,6 @@
             this.A403_1ТумблерСеть.TabIndex = 22;
             this.A403_1ТумблерСеть.UseVisualStyleBackColor = false;
             this.A403_1ТумблерСеть.Click += new System.EventHandler(this.A403_1ТумблерСеть_Click);
-            // 
-            // A403_1ТаблоПоле2
-            // 
-            this.A403_1ТаблоПоле2.AutoSize = true;
-            this.A403_1ТаблоПоле2.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1ТаблоПоле2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.A403_1ТаблоПоле2.ForeColor = System.Drawing.Color.Red;
-            this.A403_1ТаблоПоле2.Location = new System.Drawing.Point(284, 318);
-            this.A403_1ТаблоПоле2.Name = "A403_1ТаблоПоле2";
-            this.A403_1ТаблоПоле2.Size = new System.Drawing.Size(18, 19);
-            this.A403_1ТаблоПоле2.TabIndex = 53;
-            this.A403_1ТаблоПоле2.Text = "0";
-            // 
-            // A403_1ТаблоПоле4
-            // 
-            this.A403_1ТаблоПоле4.AutoSize = true;
-            this.A403_1ТаблоПоле4.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1ТаблоПоле4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.A403_1ТаблоПоле4.ForeColor = System.Drawing.Color.Red;
-            this.A403_1ТаблоПоле4.Location = new System.Drawing.Point(323, 318);
-            this.A403_1ТаблоПоле4.Name = "A403_1ТаблоПоле4";
-            this.A403_1ТаблоПоле4.Size = new System.Drawing.Size(18, 19);
-            this.A403_1ТаблоПоле4.TabIndex = 54;
-            this.A403_1ТаблоПоле4.Text = "0";
-            // 
-            // A403_1ТаблоПоле3
-            // 
-            this.A403_1ТаблоПоле3.AutoSize = true;
-            this.A403_1ТаблоПоле3.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1ТаблоПоле3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.A403_1ТаблоПоле3.ForeColor = System.Drawing.Color.Red;
-            this.A403_1ТаблоПоле3.Location = new System.Drawing.Point(303, 318);
-            this.A403_1ТаблоПоле3.Name = "A403_1ТаблоПоле3";
-            this.A403_1ТаблоПоле3.Size = new System.Drawing.Size(18, 19);
-            this.A403_1ТаблоПоле3.TabIndex = 55;
-            this.A403_1ТаблоПоле3.Text = "0";
-            // 
-            // A403_1ТаблоПоле5
-            // 
-            this.A403_1ТаблоПоле5.AutoSize = true;
-            this.A403_1ТаблоПоле5.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1ТаблоПоле5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.A403_1ТаблоПоле5.ForeColor = System.Drawing.Color.Red;
-            this.A403_1ТаблоПоле5.Location = new System.Drawing.Point(343, 318);
-            this.A403_1ТаблоПоле5.Name = "A403_1ТаблоПоле5";
-            this.A403_1ТаблоПоле5.Size = new System.Drawing.Size(18, 19);
-            this.A403_1ТаблоПоле5.TabIndex = 56;
-            this.A403_1ТаблоПоле5.Text = "0";
-            // 
-            // A403_1ТаблоПоле6
-            // 
-            this.A403_1ТаблоПоле6.AutoSize = true;
-            this.A403_1ТаблоПоле6.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1ТаблоПоле6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.A403_1ТаблоПоле6.ForeColor = System.Drawing.Color.Red;
-            this.A403_1ТаблоПоле6.Location = new System.Drawing.Point(363, 318);
-            this.A403_1ТаблоПоле6.Name = "A403_1ТаблоПоле6";
-            this.A403_1ТаблоПоле6.Size = new System.Drawing.Size(18, 19);
-            this.A403_1ТаблоПоле6.TabIndex = 57;
-            this.A403_1ТаблоПоле6.Text = "0";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(250, 318);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(16, 19);
-            this.label7.TabIndex = 58;
-            this.label7.Text = "*";
             // 
             // A403_1Form
             // 
