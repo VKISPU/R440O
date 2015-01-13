@@ -75,5 +75,74 @@ namespace R440O.Parameters
         public static string Ц300М_1КнопкаВидРаботыСброс { get { return _Ц300М_1КнопкаВидРаботыСброс; } set { _Ц300М_1КнопкаВидРаботыСброс = value; } }
         private static string _Ц300М_1КнопкаВидРаботыСброс = "false";
         #endregion
+
+        #region Кнопки КОНТРОЛЬ РЕЖИМА
+        /// <summary>
+        /// Возможные состояния: true, false
+        /// </summary>
+        public static string Ц300М_1КнопкаКонтрольРежимаУрСигн { get { return _Ц300М_1КнопкаКонтрольРежимаУрСигн; } set { _Ц300М_1КнопкаКонтрольРежимаУрСигн = value; } }
+        private static string _Ц300М_1КнопкаКонтрольРежимаУрСигн = "false";
+
+        /// <summary>
+        /// Возможные состояния: true, false
+        /// </summary>
+        public static string Ц300М_1КнопкаКонтрольРежимаУрШума { get { return _Ц300М_1КнопкаКонтрольРежимаУрШума; } set { _Ц300М_1КнопкаКонтрольРежимаУрШума = value; } }
+        private static string _Ц300М_1КнопкаКонтрольРежимаУрШума = "false";
+
+        /// <summary>
+        /// Возможные состояния: true, false
+        /// </summary>
+        public static string Ц300М_1КнопкаКонтрольРежима0АПЧ { get { return _Ц300М_1КнопкаКонтрольРежима0АПЧ; } set { _Ц300М_1КнопкаКонтрольРежима0АПЧ = value; } }
+        private static string _Ц300М_1КнопкаКонтрольРежима0АПЧ = "false";
+
+        /// <summary>
+        /// Возможные состояния: true, false
+        /// </summary>
+        public static string Ц300М_1КнопкаКонтрольРежимаПоиск { get { return _Ц300М_1КнопкаКонтрольРежимаПоиск; } set { _Ц300М_1КнопкаКонтрольРежимаПоиск = value; } }
+        private static string _Ц300М_1КнопкаКонтрольРежимаПоиск = "false";
+
+        /// <summary>
+        /// Возможные состояния: true, false
+        /// </summary>
+        public static string Ц300М_1КнопкаКонтрольРежимаГЕТ_2 { get { return _Ц300М_1КнопкаКонтрольРежимаГЕТ_2; } set { _Ц300М_1КнопкаКонтрольРежимаГЕТ_2 = value; } }
+        private static string _Ц300М_1КнопкаКонтрольРежимаГЕТ_2 = "false";
+
+        /// <summary>
+        /// Возможные состояния: true, false
+        /// </summary>
+        public static string Ц300М_1КнопкаКонтрольРежимаПлюс5 { get { return _Ц300М_1КнопкаКонтрольРежимаПлюс5; } set { _Ц300М_1КнопкаКонтрольРежимаПлюс5 = value; } }
+        private static string _Ц300М_1КнопкаКонтрольРежимаПлюс5 = "false";
+
+        /// <summary>
+        /// Возможные состояния: true, false
+        /// </summary>
+        public static string Ц300М_1КнопкаКонтрольРежимаПлюс6d3 { get { return _Ц300М_1КнопкаКонтрольРежимаПлюс6d3; } set { _Ц300М_1КнопкаКонтрольРежимаПлюс6d3 = value; } }
+        private static string _Ц300М_1КнопкаКонтрольРежимаПлюс6d3 = "false";
+
+        /// <summary>
+        /// Возможные состояния: true, false
+        /// </summary>
+        public static string Ц300М_1КнопкаКонтрольРежимаПлюс27 { get { return _Ц300М_1КнопкаКонтрольРежимаПлюс27; } set { _Ц300М_1КнопкаКонтрольРежимаПлюс27 = value; } }
+        private static string _Ц300М_1КнопкаКонтрольРежимаПлюс27 = "false";
+
+        /// <summary>
+        /// Возможные состояния: true, false
+        /// </summary>
+        public static string Ц300М_1КнопкаКонтрольРежимаМинус5 { get { return _Ц300М_1КнопкаКонтрольРежимаМинус5; } set { _Ц300М_1КнопкаКонтрольРежимаМинус5 = value; } }
+        private static string _Ц300М_1КнопкаКонтрольРежимаМинус5 = "false";
+
+        /// <summary>
+        /// Возможные состояния: true, false
+        /// </summary>
+        public static string Ц300М_1КнопкаКонтрольРежимаМинус12d8 { get { return _Ц300М_1КнопкаКонтрольРежимаМинус12d8; } set { _Ц300М_1КнопкаКонтрольРежимаМинус12d8 = value; } }
+        private static string _Ц300М_1КнопкаКонтрольРежимаМинус12d8 = "false";
+
+        /// <summary>
+        /// Возможные состояния: true, false
+        /// </summary>
+        public static string Ц300М_1КнопкаКонтрольРежимаМинус27 { get { return _Ц300М_1КнопкаКонтрольРежимаМинус27; } set { _Ц300М_1КнопкаКонтрольРежимаМинус27 = value; } }
+        private static string _Ц300М_1КнопкаКонтрольРежимаМинус27 = "false";
+        #endregion
+
     }
 }
