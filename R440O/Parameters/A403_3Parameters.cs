@@ -13,6 +13,9 @@
         public static string A403_3Лампочка2Комплект_4 { get; set; }
 
         ////Тумблеры
-        public static string A403_3Тублер1К2К { get; set; }
+        /// <summary>
+        /// Определяет номер комплекта, выбранный на блоке.
+        /// </summary>
+        public static int A403_3Тублер1К2К = 1;
     }
 }

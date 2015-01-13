@@ -2,15 +2,20 @@
 {
     public class A306Parameters
     {
-        ////Входы (коаксиальные разъемы)
-        
         ////Лампочки
         public static string A306ЛампочкаСетьВкл { get; set; }
         public static string A306ЛампочкаНО1Вкл { get; set; }
         public static string A306ЛампочкаНО2Вкл { get; set; }
 
         ////Тумблеры
-        public static string A306ТумблерДистанцМестн { get; set; }
-        public static string A306ТумблерВклВыкл { get; set; }
+        /// <summary>
+        /// Положение переключателя A306 определяющее тип питания блока. true - дистанционное, false - местное
+        /// </summary>
+        public static bool A306ТумблерДистанцМестн = true;
+
+        /// <summary>
+        /// Положение переключателя A306 определяющее включен блок или нет. true - вкл, false - выкл
+        /// </summary>
+        public static bool A306ТумблерВклВыкл = true;
     }
 }

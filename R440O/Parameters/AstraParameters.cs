@@ -113,16 +113,17 @@
         #endregion
 
         ////Тумблеры
-        public static string AstraТумблерШпУп { get; set; }
+        /// <summary>
+        /// Положение переключателя ШпУп. true - шп, false - уп
+        /// </summary>
+        public static bool AstraТумблерШпУп = true;
 
         ////Кнопки
-        public static string AstraКнопка150_270 { get; set; }
-        public static string AstraКнопка270_480 { get; set; }
-        public static string AstraКнопка480_860 { get; set; }
-        public static string AstraКнопка860_1500 { get; set; }
-        public static string AstraКнопкаЧастота { get; set; }
+        public static bool AstraКнопка150_270 { get; set; }
+        public static bool AstraКнопка270_480 { get; set; }
+        public static bool AstraКнопка480_860 { get; set; }
+        public static bool AstraКнопка860_1500 { get; set; }
 
-        ////Регуляторы
-        ////Индикаторы
+        public static bool AstraКнопкаЧастота { get; set; }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.AstraPanel = new System.Windows.Forms.Panel();
+            this.AstraТумблерШпУп = new System.Windows.Forms.Button();
             this.AstraПереключательВыходаРеле = new System.Windows.Forms.Button();
             this.AstraПереключательДиапазоны = new System.Windows.Forms.Button();
             this.AstraПереключательКонтроль = new System.Windows.Forms.Button();
@@ -38,7 +39,7 @@
             this.AstraКнопка480_860 = new System.Windows.Forms.Button();
             this.AstraКнопка270_480 = new System.Windows.Forms.Button();
             this.AstraКнопка150_270 = new System.Windows.Forms.Button();
-            this.AstraТумблерШпУп = new System.Windows.Forms.Button();
+            this.A403_3Тублер1К2К = new System.Windows.Forms.Button();
             this.AstraPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +47,7 @@
             // 
             this.AstraPanel.BackgroundImage = global::R440O.BackgroundImages.Astra;
             this.AstraPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.AstraPanel.Controls.Add(this.A403_3Тублер1К2К);
             this.AstraPanel.Controls.Add(this.AstraТумблерШпУп);
             this.AstraPanel.Controls.Add(this.AstraПереключательВыходаРеле);
             this.AstraPanel.Controls.Add(this.AstraПереключательДиапазоны);
@@ -60,6 +62,22 @@
             this.AstraPanel.Name = "AstraPanel";
             this.AstraPanel.Size = new System.Drawing.Size(715, 480);
             this.AstraPanel.TabIndex = 1;
+            // 
+            // AstraТумблерШпУп
+            // 
+            this.AstraТумблерШпУп.BackColor = System.Drawing.Color.Transparent;
+            this.AstraТумблерШпУп.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Right;
+            this.AstraТумблерШпУп.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.AstraТумблерШпУп.FlatAppearance.BorderSize = 0;
+            this.AstraТумблерШпУп.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.AstraТумблерШпУп.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.AstraТумблерШпУп.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AstraТумблерШпУп.Location = new System.Drawing.Point(529, 305);
+            this.AstraТумблерШпУп.Name = "AstraТумблерШпУп";
+            this.AstraТумблерШпУп.Size = new System.Drawing.Size(50, 35);
+            this.AstraТумблерШпУп.TabIndex = 56;
+            this.AstraТумблерШпУп.UseVisualStyleBackColor = false;
+            this.AstraТумблерШпУп.Click += new System.EventHandler(this.AstraТумблерШпУп_Click);
             // 
             // AstraПереключательВыходаРеле
             // 
@@ -213,21 +231,21 @@
             this.AstraКнопка150_270.UseVisualStyleBackColor = false;
             this.AstraКнопка150_270.Click += new System.EventHandler(this.AstraКнопка150_270_Click);
             // 
-            // AstraТумблерШпУп
+            // A403_3Тублер1К2К
             // 
-            this.AstraТумблерШпУп.BackColor = System.Drawing.Color.Transparent;
-            this.AstraТумблерШпУп.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Right;
-            this.AstraТумблерШпУп.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.AstraТумблерШпУп.FlatAppearance.BorderSize = 0;
-            this.AstraТумблерШпУп.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.AstraТумблерШпУп.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.AstraТумблерШпУп.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AstraТумблерШпУп.Location = new System.Drawing.Point(529, 305);
-            this.AstraТумблерШпУп.Name = "AstraТумблерШпУп";
-            this.AstraТумблерШпУп.Size = new System.Drawing.Size(50, 35);
-            this.AstraТумблерШпУп.TabIndex = 56;
-            this.AstraТумблерШпУп.UseVisualStyleBackColor = false;
-            this.AstraТумблерШпУп.Click += new System.EventHandler(this.AstraТумблерШпУп_Click);
+            this.A403_3Тублер1К2К.BackColor = System.Drawing.Color.Transparent;
+            this.A403_3Тублер1К2К.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A403_3Тублер1К2К.FlatAppearance.BorderSize = 0;
+            this.A403_3Тублер1К2К.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.A403_3Тублер1К2К.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.A403_3Тублер1К2К.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.A403_3Тублер1К2К.Location = new System.Drawing.Point(270, 227);
+            this.A403_3Тублер1К2К.Name = "A403_3Тублер1К2К";
+            this.A403_3Тублер1К2К.Size = new System.Drawing.Size(35, 38);
+            this.A403_3Тублер1К2К.TabIndex = 30;
+            this.A403_3Тублер1К2К.UseVisualStyleBackColor = false;
+            this.A403_3Тублер1К2К.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_3Тублер1К2К_MouseDown);
+            this.A403_3Тублер1К2К.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_3Тублер1К2К_MouseUp);
             // 
             // AstraForm
             // 
@@ -257,5 +275,6 @@
         private System.Windows.Forms.Button AstraПереключательДиапазоны;
         private System.Windows.Forms.Button AstraПереключательВыходаРеле;
         private System.Windows.Forms.Button AstraТумблерШпУп;
+        private System.Windows.Forms.Button A403_3Тублер1К2К;
     }
 }
