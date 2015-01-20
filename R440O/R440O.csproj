@@ -74,6 +74,7 @@
     <Compile Include="Parameters\BMA_M_1Parameters.cs" />
     <Compile Include="Parameters\BMBParameters.cs" />
     <Compile Include="Parameters\C300M_1Parameters.cs" />
+    <Compile Include="Parameters\DAB_5Parameters.cs" />
     <Compile Include="Parameters\C300PM_3Parameters.cs" />
     <Compile Include="Parameters\C300PM_2Parameters.cs" />
     <Compile Include="Parameters\C300PM_1Parameters.cs" />
