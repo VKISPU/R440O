@@ -4,6 +4,8 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+using System;
+
 namespace R440O.R440OForms.Astra
 {
     using System.Windows.Forms;
@@ -190,6 +192,7 @@ namespace R440O.R440OForms.Astra
 
         #endregion
 
+        #region Переключатель комплекта
         private void A403_3Тублер1К2К_MouseDown(object sender, MouseEventArgs e)
         {
             AstraParameters.AstraКнопкаЧастота = true;
@@ -204,6 +207,127 @@ namespace R440O.R440OForms.Astra
             A403_3Тублер1К2К.BackgroundImage = AstraParameters.AstraКнопкаЧастота
                 ? ControlElementImages.buttonRoundType2
                 : null;
+        } 
+        #endregion
+
+        #region Вращатели
+        private int startX;
+        private int startY;
+        private int zeroX;
+        private int zeroY;
+        private bool isManipulation = false;
+
+        #region Частота
+        private void AstraВращательЧастота_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                var button = sender as Button;
+                zeroX = button.Width / 2;
+                zeroY = button.Height / 2;
+
+                startX = e.X;
+                startY = e.Y;
+                isManipulation = true;
+            }
         }
+
+        private void AstraВращательЧастота_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isManipulation)
+            {
+                var a = Math.Sqrt(Math.Pow(zeroX - startX, 2) + Math.Pow(zeroY - startY, 2));
+                var b = Math.Sqrt(Math.Pow(startX - e.X, 2) + Math.Pow(startY - e.Y, 2));
+                var c = Math.Sqrt(Math.Pow(e.X - zeroX, 2) + Math.Pow(e.Y - zeroY, 2));
+                var cosB = (a * a + c * c - b * b) / (2 * a * c);
+                var angle = Math.Acos(cosB);
+                AstraВращательЧастота.BackgroundImage =
+                    TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, (float)angle);
+                startX = e.X;
+                startY = e.Y;
+            }
+        }
+
+        private void AstraВращательЧастота_MouseUp(object sender, MouseEventArgs e)
+        {
+            isManipulation = false;
+        } 
+        #endregion 
+
+        #region Усиление
+        private void AstraВращательУсиление_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                var button = sender as Button;
+                zeroX = button.Width / 2;
+                zeroY = button.Height / 2;
+
+                startX = e.X;
+                startY = e.Y;
+                isManipulation = true;
+            }
+        }
+
+        private void AstraВращательУсиление_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isManipulation)
+            {
+                var a = Math.Sqrt(Math.Pow(zeroX - startX, 2) + Math.Pow(zeroY - startY, 2));
+                var b = Math.Sqrt(Math.Pow(startX - e.X, 2) + Math.Pow(startY - e.Y, 2));
+                var c = Math.Sqrt(Math.Pow(e.X - zeroX, 2) + Math.Pow(e.Y - zeroY, 2));
+                var cosB = (a * a + c * c - b * b) / (2 * a * c);
+                var angle = Math.Acos(cosB);
+                AstraВращательЧастота.BackgroundImage =
+                    TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, (float)angle);
+                startX = e.X;
+                startY = e.Y;
+            }
+        }
+
+        private void AstraВращательУсиление_MouseUp(object sender, MouseEventArgs e)
+        {
+            isManipulation = false;
+        }
+        #endregion
+
+        #region УсилениеПЧ
+        private void AstraВращательУсилениеПЧ_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                var button = sender as Button;
+                zeroX = button.Width / 2;
+                zeroY = button.Height / 2;
+
+                startX = e.X;
+                startY = e.Y;
+                isManipulation = true;
+            }
+        }
+
+        private void AstraВращательУсилениеПЧ_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isManipulation)
+            {
+                var a = Math.Sqrt(Math.Pow(zeroX - startX, 2) + Math.Pow(zeroY - startY, 2));
+                var b = Math.Sqrt(Math.Pow(startX - e.X, 2) + Math.Pow(startY - e.Y, 2));
+                var c = Math.Sqrt(Math.Pow(e.X - zeroX, 2) + Math.Pow(e.Y - zeroY, 2));
+                var cosB = (a * a + c * c - b * b) / (2 * a * c);
+                var angle = Math.Acos(cosB);
+                AstraВращательЧастота.BackgroundImage =
+                    TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, (float)angle);
+                startX = e.X;
+                startY = e.Y;
+            }
+        }
+
+        private void AstraВращательУсилениеПЧ_MouseUp(object sender, MouseEventArgs e)
+        {
+            isManipulation = false;
+        }
+        #endregion
+        
+        #endregion
     }
 }

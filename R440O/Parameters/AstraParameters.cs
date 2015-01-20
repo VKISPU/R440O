@@ -123,7 +123,11 @@
         public static bool AstraКнопка270_480 { get; set; }
         public static bool AstraКнопка480_860 { get; set; }
         public static bool AstraКнопка860_1500 { get; set; }
-
         public static bool AstraКнопкаЧастота { get; set; }
+
+        ////Вращатели
+        public static int AstraВращательЧастота = 0;
+        public static int AstraВращательУсиление = 0;
+        public static int AstraВращательУсилениеПЧ = 0;
     }
 }
