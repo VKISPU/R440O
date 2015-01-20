@@ -1,13 +1,8 @@
-﻿//-----------------------------------------------------------------------
-// <copyright file="C300PM_3Form.cs" company="VKISPU">
-//      R440O station.
-// </copyright>
-//-----------------------------------------------------------------------
-
-namespace R440O.R440OForms.C300PM_3
+﻿namespace R440O.R440OForms.C300PM_3
 {
     using System.Windows.Forms;
-
+    using Parameters;
+    
     /// <summary>
     /// Форма блока С300ПМ-3
     /// </summary>
@@ -19,6 +14,20 @@ namespace R440O.R440OForms.C300PM_3
         public C300PM_3Form()
         {
             this.InitializeComponent();
+            this.InitializeLamps();
+        }
+
+        /// <summary>
+        /// Инициализирует начальное состояние ламп блока.
+        /// </summary>
+        private void InitializeLamps()
+        {
+            C300PM_3Лампочка2К.BackgroundImage = C300PM_3Parameters.C300PM_3Комплект1
+                ? ControlElementImages.lampType10OnGreen
+                : null;
+            C300PM_3Лампочка1К.BackgroundImage = C300PM_3Parameters.C300PM_3Комплект2
+                ? ControlElementImages.lampType10OnGreen
+                : null;
         }
     }
 }
