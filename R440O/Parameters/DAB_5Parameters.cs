@@ -1,12 +1,15 @@
 ﻿namespace R440O.Parameters
 {
+    /// <summary>
+    /// Состояния элементов блока ДАБ-5
+    /// </summary>
     class DAB_5Parameters
     {
         #region Лампочки ДАБ-5 УП
         public static bool DAB_5ЛампочкаВыборПрмПрд2;
         public static bool DAB_5ЛампочкаРежимПрмПрд2К;
-        public static bool DAB_5ЛампочкаРежимПрд2К;
-        public static bool DAB_5ЛампочкаРежимПрд1К;
+        public static bool DAB_5ЛампочкаРежимПрм2К;
+        public static bool DAB_5ЛампочкаРежимПрм1К;
         public static bool DAB_5ЛампочкаРежимПрмПрд1К;
         public static bool DAB_5ЛампочкаРежимШлейф1К;
         public static bool DAB_5ЛампочкаРежимШлейф2К;
@@ -27,5 +30,10 @@
         public static bool DAB_5ЛампочкаОбход;
         public static bool DAB_5ЛампочкаПитание;
         #endregion
+
+        /// <summary>
+        /// Тумблер определяющий тип питания данного блока
+        /// </summary>
+        public static bool DAB_5ТумблерПитание;
     }
 }
