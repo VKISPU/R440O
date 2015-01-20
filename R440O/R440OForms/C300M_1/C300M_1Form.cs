@@ -262,13 +262,6 @@ namespace R440O.R440OForms.C300M_1
             this.Ц300М_1КнопкаВидРаботыСброс.BackgroundImage = null;
             this.Ц300М_1КнопкаВидРаботыСброс.Text = "";
             C300M_1Parameters.Ц300М_1КнопкаВидРаботыСброс = "true";
-        }
-
-        private void Ц300М_1КнопкаВидРаботыСброс_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.Ц300М_1КнопкаВидРаботыСброс.BackgroundImage = ControlElementImages.buttonSquareWhite;
-            this.Ц300М_1КнопкаВидРаботыСброс.Text = "Сброс";
-            C300M_1Parameters.Ц300М_1КнопкаВидРаботыСброс = "false";
 
             foreach (Control control in C300M_1Panel.Controls)
             {
@@ -286,6 +279,13 @@ namespace R440O.R440OForms.C300M_1
                     property.SetValue(null, "false");
                 }
             }
+        }
+
+        private void Ц300М_1КнопкаВидРаботыСброс_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.Ц300М_1КнопкаВидРаботыСброс.BackgroundImage = ControlElementImages.buttonSquareWhite;
+            this.Ц300М_1КнопкаВидРаботыСброс.Text = "Сброс";
+            C300M_1Parameters.Ц300М_1КнопкаВидРаботыСброс = "false";
         }
         #endregion
 
@@ -520,9 +520,10 @@ namespace R440O.R440OForms.C300M_1
             }
         }
 
-        private void Ц300М_1КнопкаКонтрольРежимаМинус27_Click(object sender, System.EventArgs e)
+        private void Ц300М_1КнопкаКонтрольРежимаМинус27_MouseDown(object sender, MouseEventArgs e)
         {
-            this.Ц300М_1КнопкаКонтрольРежимаМинус27.Visible = false;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус27.BackgroundImage = null;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус27.Text = "";
             C300M_1Parameters.Ц300М_1КнопкаКонтрольРежимаМинус27 = "true";
 
             foreach (Control control in C300M_1Panel.Controls)
@@ -541,6 +542,13 @@ namespace R440O.R440OForms.C300M_1
                     property.SetValue(null, "false");
                 }
             }
+        }
+
+        private void Ц300М_1КнопкаКонтрольРежимаМинус27_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.Ц300М_1КнопкаКонтрольРежимаМинус27.BackgroundImage = ControlElementImages.buttonSquareWhite;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус27.Text = "-27";
+            C300M_1Parameters.Ц300М_1КнопкаКонтрольРежимаМинус27 = "false";
         }
         #endregion
 
@@ -687,5 +695,104 @@ namespace R440O.R440OForms.C300M_1
             }
         }
         #endregion
+
+        private void Ц300М_1ТумблерВведениеЧТОФТ_Click(object sender, System.EventArgs e)
+        {
+            if (C300M_1Parameters.Ц300М_1ТумблерВведениеЧТОФТ == "ЧТ")
+            {
+                this.Ц300М_1ТумблерВведениеЧТОФТ.BackgroundImage = ControlElementImages.tumblerType3Down;
+                C300M_1Parameters.Ц300М_1ТумблерВведениеЧТОФТ = "ОФТ";
+            }
+            else
+            {
+                this.Ц300М_1ТумблерВведениеЧТОФТ.BackgroundImage = ControlElementImages.tumblerType3Up;
+                C300M_1Parameters.Ц300М_1ТумблерВведениеЧТОФТ = "ЧТ";
+            }
+        }
+
+        private void Ц300М_1ТумблерПоискБлокировкаВклОткл_Click(object sender, System.EventArgs e)
+        {
+            if (C300M_1Parameters.Ц300М_1ТумблерПоискБлокировкаВклОткл == "Вкл")
+            {
+                this.Ц300М_1ТумблерПоискБлокировкаВклОткл.BackgroundImage = ControlElementImages.tumblerType3Down;
+                C300M_1Parameters.Ц300М_1ТумблерПоискБлокировкаВклОткл = "Откл";
+            }
+            else
+            {
+                this.Ц300М_1ТумблерПоискБлокировкаВклОткл.BackgroundImage = ControlElementImages.tumblerType3Up;
+                C300M_1Parameters.Ц300М_1ТумблерПоискБлокировкаВклОткл = "Вкл";
+            }
+        }
+
+        private void Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн_Click(object sender, System.EventArgs e)
+        {
+            if (C300M_1Parameters.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн == "Автоматич")
+            {
+                this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.BackgroundImage = ControlElementImages.tumblerType3Down;
+                C300M_1Parameters.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн = "Ручн";
+            }
+            else
+            {
+                this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.BackgroundImage = ControlElementImages.tumblerType3Up;
+                C300M_1Parameters.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн = "Автоматич";
+            }
+        }
+
+        private void Ц300М_1ТумблерПоискС_АналСимметрОткл_Click(object sender, System.EventArgs e)
+        {
+            if (C300M_1Parameters.Ц300М_1ТумблерПоискС_АналСимметрОткл == "Симметр")
+            {
+                this.Ц300М_1ТумблерПоискС_АналСимметрОткл.BackgroundImage = ControlElementImages.tumblerType3Down;
+                C300M_1Parameters.Ц300М_1ТумблерПоискС_АналСимметрОткл = "Откл";
+            }
+            else
+            {
+                this.Ц300М_1ТумблерПоискС_АналСимметрОткл.BackgroundImage = ControlElementImages.tumblerType3Up;
+                C300M_1Parameters.Ц300М_1ТумблерПоискС_АналСимметрОткл = "Симметр";
+            }
+        }
+
+        private void Ц300М_1ТумблерАСЧОткл_Click(object sender, System.EventArgs e)
+        {
+            if (C300M_1Parameters.Ц300М_1ТумблерАСЧОткл == "АСЧ")
+            {
+                this.Ц300М_1ТумблерАСЧОткл.BackgroundImage = ControlElementImages.tumblerType3Down;
+                C300M_1Parameters.Ц300М_1ТумблерАСЧОткл = "Откл";
+            }
+            else
+            {
+                this.Ц300М_1ТумблерАСЧОткл.BackgroundImage = ControlElementImages.tumblerType3Up;
+                C300M_1Parameters.Ц300М_1ТумблерАСЧОткл = "АСЧ";
+            }
+        }
+
+        private void Ц300М_1ТумблерАРУРРУ_Click(object sender, System.EventArgs e)
+        {
+            if (C300M_1Parameters.Ц300М_1ТумблерАРУРРУ == "АРУ")
+            {
+                this.Ц300М_1ТумблерАРУРРУ.BackgroundImage = ControlElementImages.tumblerType3Down;
+                C300M_1Parameters.Ц300М_1ТумблерАРУРРУ = "РРУ";
+            }
+            else
+            {
+                this.Ц300М_1ТумблерАРУРРУ.BackgroundImage = ControlElementImages.tumblerType3Up;
+                C300M_1Parameters.Ц300М_1ТумблерАРУРРУ = "АРУ";
+            }
+        }
+
+        private void Ц300М_1ТумблерЧТОФТ_Click(object sender, System.EventArgs e)
+        {
+            if (C300M_1Parameters.Ц300М_1ТумблерЧТОФТ == "ЧТ")
+            {
+                this.Ц300М_1ТумблерЧТОФТ.BackgroundImage = ControlElementImages.tumblerType3Down;
+                C300M_1Parameters.Ц300М_1ТумблерЧТОФТ = "ОФТ";
+            }
+            else
+            {
+                this.Ц300М_1ТумблерЧТОФТ.BackgroundImage = ControlElementImages.tumblerType3Up;
+                C300M_1Parameters.Ц300М_1ТумблерЧТОФТ = "ЧТ";
+            }
+        }
+
     }
 }

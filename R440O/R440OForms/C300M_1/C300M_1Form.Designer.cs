@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.C300M_1Panel = new System.Windows.Forms.Panel();
+            this.Ц300М_1ИндикаторВолна1 = new System.Windows.Forms.Label();
+            this.Ц300М_1ИндикаторВолна10 = new System.Windows.Forms.Label();
+            this.Ц300М_1ИндикаторВолна100 = new System.Windows.Forms.Label();
+            this.Ц300М_1ИндикаторВолна1000 = new System.Windows.Forms.Label();
             this.Ц300М_1ПереключательВолна1 = new System.Windows.Forms.Button();
             this.Ц300М_1ПереключательВолна10 = new System.Windows.Forms.Button();
             this.Ц300М_1ПереключательВолна100 = new System.Windows.Forms.Button();
@@ -56,10 +60,13 @@
             this.Ц300М_1КнопкаВидРаботы0d1 = new System.Windows.Forms.Button();
             this.Ц300М_1КнопкаВидРаботы0d05 = new System.Windows.Forms.Button();
             this.Ц300М_1КнопкаВидРаботы0d025 = new System.Windows.Forms.Button();
-            this.Ц300М_1ИндикаторВолна1000 = new System.Windows.Forms.Label();
-            this.Ц300М_1ИндикаторВолна100 = new System.Windows.Forms.Label();
-            this.Ц300М_1ИндикаторВолна10 = new System.Windows.Forms.Label();
-            this.Ц300М_1ИндикаторВолна1 = new System.Windows.Forms.Label();
+            this.Ц300М_1ТумблерВведениеЧТОФТ = new System.Windows.Forms.Button();
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл = new System.Windows.Forms.Button();
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн = new System.Windows.Forms.Button();
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл = new System.Windows.Forms.Button();
+            this.Ц300М_1ТумблерАСЧОткл = new System.Windows.Forms.Button();
+            this.Ц300М_1ТумблерАРУРРУ = new System.Windows.Forms.Button();
+            this.Ц300М_1ТумблерЧТОФТ = new System.Windows.Forms.Button();
             this.C300M_1Panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +74,13 @@
             // 
             this.C300M_1Panel.BackgroundImage = global::R440O.BackgroundImages.C300M;
             this.C300M_1Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.C300M_1Panel.Controls.Add(this.Ц300М_1ТумблерЧТОФТ);
+            this.C300M_1Panel.Controls.Add(this.Ц300М_1ТумблерАРУРРУ);
+            this.C300M_1Panel.Controls.Add(this.Ц300М_1ТумблерАСЧОткл);
+            this.C300M_1Panel.Controls.Add(this.Ц300М_1ТумблерПоискС_АналСимметрОткл);
+            this.C300M_1Panel.Controls.Add(this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн);
+            this.C300M_1Panel.Controls.Add(this.Ц300М_1ТумблерПоискБлокировкаВклОткл);
+            this.C300M_1Panel.Controls.Add(this.Ц300М_1ТумблерВведениеЧТОФТ);
             this.C300M_1Panel.Controls.Add(this.Ц300М_1ИндикаторВолна1);
             this.C300M_1Panel.Controls.Add(this.Ц300М_1ИндикаторВолна10);
             this.C300M_1Panel.Controls.Add(this.Ц300М_1ИндикаторВолна100);
@@ -102,6 +116,54 @@
             this.C300M_1Panel.Name = "C300M_1Panel";
             this.C300M_1Panel.Size = new System.Drawing.Size(1100, 430);
             this.C300M_1Panel.TabIndex = 1;
+            // 
+            // Ц300М_1ИндикаторВолна1
+            // 
+            this.Ц300М_1ИндикаторВолна1.AutoSize = true;
+            this.Ц300М_1ИндикаторВолна1.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ИндикаторВолна1.ForeColor = System.Drawing.Color.Red;
+            this.Ц300М_1ИндикаторВолна1.Location = new System.Drawing.Point(364, 60);
+            this.Ц300М_1ИндикаторВолна1.Name = "Ц300М_1ИндикаторВолна1";
+            this.Ц300М_1ИндикаторВолна1.Size = new System.Drawing.Size(13, 13);
+            this.Ц300М_1ИндикаторВолна1.TabIndex = 40;
+            this.Ц300М_1ИндикаторВолна1.Text = "0";
+            this.Ц300М_1ИндикаторВолна1.Visible = false;
+            // 
+            // Ц300М_1ИндикаторВолна10
+            // 
+            this.Ц300М_1ИндикаторВолна10.AutoSize = true;
+            this.Ц300М_1ИндикаторВолна10.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ИндикаторВолна10.ForeColor = System.Drawing.Color.Red;
+            this.Ц300М_1ИндикаторВолна10.Location = new System.Drawing.Point(286, 60);
+            this.Ц300М_1ИндикаторВолна10.Name = "Ц300М_1ИндикаторВолна10";
+            this.Ц300М_1ИндикаторВолна10.Size = new System.Drawing.Size(13, 13);
+            this.Ц300М_1ИндикаторВолна10.TabIndex = 39;
+            this.Ц300М_1ИндикаторВолна10.Text = "0";
+            this.Ц300М_1ИндикаторВолна10.Visible = false;
+            // 
+            // Ц300М_1ИндикаторВолна100
+            // 
+            this.Ц300М_1ИндикаторВолна100.AutoSize = true;
+            this.Ц300М_1ИндикаторВолна100.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ИндикаторВолна100.ForeColor = System.Drawing.Color.Red;
+            this.Ц300М_1ИндикаторВолна100.Location = new System.Drawing.Point(207, 60);
+            this.Ц300М_1ИндикаторВолна100.Name = "Ц300М_1ИндикаторВолна100";
+            this.Ц300М_1ИндикаторВолна100.Size = new System.Drawing.Size(13, 13);
+            this.Ц300М_1ИндикаторВолна100.TabIndex = 38;
+            this.Ц300М_1ИндикаторВолна100.Text = "0";
+            this.Ц300М_1ИндикаторВолна100.Visible = false;
+            // 
+            // Ц300М_1ИндикаторВолна1000
+            // 
+            this.Ц300М_1ИндикаторВолна1000.AutoSize = true;
+            this.Ц300М_1ИндикаторВолна1000.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ИндикаторВолна1000.ForeColor = System.Drawing.Color.Red;
+            this.Ц300М_1ИндикаторВолна1000.Location = new System.Drawing.Point(133, 60);
+            this.Ц300М_1ИндикаторВолна1000.Name = "Ц300М_1ИндикаторВолна1000";
+            this.Ц300М_1ИндикаторВолна1000.Size = new System.Drawing.Size(13, 13);
+            this.Ц300М_1ИндикаторВолна1000.TabIndex = 37;
+            this.Ц300М_1ИндикаторВолна1000.Text = "0";
+            this.Ц300М_1ИндикаторВолна1000.Visible = false;
             // 
             // Ц300М_1ПереключательВолна1
             // 
@@ -202,7 +264,8 @@
             this.Ц300М_1КнопкаКонтрольРежимаМинус27.TabIndex = 31;
             this.Ц300М_1КнопкаКонтрольРежимаМинус27.Text = "-27";
             this.Ц300М_1КнопкаКонтрольРежимаМинус27.UseVisualStyleBackColor = false;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус27.Click += new System.EventHandler(this.Ц300М_1КнопкаКонтрольРежимаМинус27_Click);
+            this.Ц300М_1КнопкаКонтрольРежимаМинус27.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Ц300М_1КнопкаКонтрольРежимаМинус27_MouseDown);
+            this.Ц300М_1КнопкаКонтрольРежимаМинус27.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Ц300М_1КнопкаКонтрольРежимаМинус27_MouseUp);
             // 
             // Ц300М_1КнопкаКонтрольРежимаМинус12d8
             // 
@@ -593,53 +656,117 @@
             this.Ц300М_1КнопкаВидРаботы0d025.UseVisualStyleBackColor = false;
             this.Ц300М_1КнопкаВидРаботы0d025.Click += new System.EventHandler(this.Ц300М_1КнопкаВидРаботы0d025_Click);
             // 
-            // Ц300М_1ИндикаторВолна1000
+            // Ц300М_1ТумблерВведениеЧТОФТ
             // 
-            this.Ц300М_1ИндикаторВолна1000.AutoSize = true;
-            this.Ц300М_1ИндикаторВолна1000.BackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1ИндикаторВолна1000.ForeColor = System.Drawing.Color.Red;
-            this.Ц300М_1ИндикаторВолна1000.Location = new System.Drawing.Point(133, 60);
-            this.Ц300М_1ИндикаторВолна1000.Name = "Ц300М_1ИндикаторВолна1000";
-            this.Ц300М_1ИндикаторВолна1000.Size = new System.Drawing.Size(13, 13);
-            this.Ц300М_1ИндикаторВолна1000.TabIndex = 37;
-            this.Ц300М_1ИндикаторВолна1000.Text = "0";
-            this.Ц300М_1ИндикаторВолна1000.Visible = false;
+            this.Ц300М_1ТумблерВведениеЧТОФТ.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерВведениеЧТОФТ.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
+            this.Ц300М_1ТумблерВведениеЧТОФТ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Ц300М_1ТумблерВведениеЧТОФТ.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1ТумблерВведениеЧТОФТ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерВведениеЧТОФТ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерВведениеЧТОФТ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1ТумблерВведениеЧТОФТ.Location = new System.Drawing.Point(387, 315);
+            this.Ц300М_1ТумблерВведениеЧТОФТ.Name = "Ц300М_1ТумблерВведениеЧТОФТ";
+            this.Ц300М_1ТумблерВведениеЧТОФТ.Size = new System.Drawing.Size(24, 29);
+            this.Ц300М_1ТумблерВведениеЧТОФТ.TabIndex = 41;
+            this.Ц300М_1ТумблерВведениеЧТОФТ.UseVisualStyleBackColor = false;
+            this.Ц300М_1ТумблерВведениеЧТОФТ.Click += new System.EventHandler(this.Ц300М_1ТумблерВведениеЧТОФТ_Click);
             // 
-            // Ц300М_1ИндикаторВолна100
+            // Ц300М_1ТумблерПоискБлокировкаВклОткл
             // 
-            this.Ц300М_1ИндикаторВолна100.AutoSize = true;
-            this.Ц300М_1ИндикаторВолна100.BackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1ИндикаторВолна100.ForeColor = System.Drawing.Color.Red;
-            this.Ц300М_1ИндикаторВолна100.Location = new System.Drawing.Point(207, 60);
-            this.Ц300М_1ИндикаторВолна100.Name = "Ц300М_1ИндикаторВолна100";
-            this.Ц300М_1ИндикаторВолна100.Size = new System.Drawing.Size(13, 13);
-            this.Ц300М_1ИндикаторВолна100.TabIndex = 38;
-            this.Ц300М_1ИндикаторВолна100.Text = "0";
-            this.Ц300М_1ИндикаторВолна100.Visible = false;
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.Location = new System.Drawing.Point(426, 315);
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.Name = "Ц300М_1ТумблерПоискБлокировкаВклОткл";
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.Size = new System.Drawing.Size(24, 29);
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.TabIndex = 42;
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.UseVisualStyleBackColor = false;
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.Click += new System.EventHandler(this.Ц300М_1ТумблерПоискБлокировкаВклОткл_Click);
             // 
-            // Ц300М_1ИндикаторВолна10
+            // Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн
             // 
-            this.Ц300М_1ИндикаторВолна10.AutoSize = true;
-            this.Ц300М_1ИндикаторВолна10.BackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1ИндикаторВолна10.ForeColor = System.Drawing.Color.Red;
-            this.Ц300М_1ИндикаторВолна10.Location = new System.Drawing.Point(286, 60);
-            this.Ц300М_1ИндикаторВолна10.Name = "Ц300М_1ИндикаторВолна10";
-            this.Ц300М_1ИндикаторВолна10.Size = new System.Drawing.Size(13, 13);
-            this.Ц300М_1ИндикаторВолна10.TabIndex = 39;
-            this.Ц300М_1ИндикаторВолна10.Text = "0";
-            this.Ц300М_1ИндикаторВолна10.Visible = false;
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.Location = new System.Drawing.Point(515, 316);
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.Name = "Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн";
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.Size = new System.Drawing.Size(24, 29);
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.TabIndex = 43;
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.UseVisualStyleBackColor = false;
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.Click += new System.EventHandler(this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн_Click);
             // 
-            // Ц300М_1ИндикаторВолна1
+            // Ц300М_1ТумблерПоискС_АналСимметрОткл
             // 
-            this.Ц300М_1ИндикаторВолна1.AutoSize = true;
-            this.Ц300М_1ИндикаторВолна1.BackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1ИндикаторВолна1.ForeColor = System.Drawing.Color.Red;
-            this.Ц300М_1ИндикаторВолна1.Location = new System.Drawing.Point(364, 60);
-            this.Ц300М_1ИндикаторВолна1.Name = "Ц300М_1ИндикаторВолна1";
-            this.Ц300М_1ИндикаторВолна1.Size = new System.Drawing.Size(13, 13);
-            this.Ц300М_1ИндикаторВолна1.TabIndex = 40;
-            this.Ц300М_1ИндикаторВолна1.Text = "0";
-            this.Ц300М_1ИндикаторВолна1.Visible = false;
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.Location = new System.Drawing.Point(551, 317);
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.Name = "Ц300М_1ТумблерПоискС_АналСимметрОткл";
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.Size = new System.Drawing.Size(24, 29);
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.TabIndex = 44;
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.UseVisualStyleBackColor = false;
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.Click += new System.EventHandler(this.Ц300М_1ТумблерПоискС_АналСимметрОткл_Click);
+            // 
+            // Ц300М_1ТумблерАСЧОткл
+            // 
+            this.Ц300М_1ТумблерАСЧОткл.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерАСЧОткл.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
+            this.Ц300М_1ТумблерАСЧОткл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Ц300М_1ТумблерАСЧОткл.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1ТумблерАСЧОткл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерАСЧОткл.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерАСЧОткл.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1ТумблерАСЧОткл.Location = new System.Drawing.Point(585, 314);
+            this.Ц300М_1ТумблерАСЧОткл.Name = "Ц300М_1ТумблерАСЧОткл";
+            this.Ц300М_1ТумблерАСЧОткл.Size = new System.Drawing.Size(24, 29);
+            this.Ц300М_1ТумблерАСЧОткл.TabIndex = 45;
+            this.Ц300М_1ТумблерАСЧОткл.UseVisualStyleBackColor = false;
+            this.Ц300М_1ТумблерАСЧОткл.Click += new System.EventHandler(this.Ц300М_1ТумблерАСЧОткл_Click);
+            // 
+            // Ц300М_1ТумблерАРУРРУ
+            // 
+            this.Ц300М_1ТумблерАРУРРУ.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерАРУРРУ.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
+            this.Ц300М_1ТумблерАРУРРУ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Ц300М_1ТумблерАРУРРУ.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1ТумблерАРУРРУ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерАРУРРУ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерАРУРРУ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1ТумблерАРУРРУ.Location = new System.Drawing.Point(631, 295);
+            this.Ц300М_1ТумблерАРУРРУ.Name = "Ц300М_1ТумблерАРУРРУ";
+            this.Ц300М_1ТумблерАРУРРУ.Size = new System.Drawing.Size(24, 29);
+            this.Ц300М_1ТумблерАРУРРУ.TabIndex = 46;
+            this.Ц300М_1ТумблерАРУРРУ.UseVisualStyleBackColor = false;
+            this.Ц300М_1ТумблерАРУРРУ.Click += new System.EventHandler(this.Ц300М_1ТумблерАРУРРУ_Click);
+            // 
+            // Ц300М_1ТумблерЧТОФТ
+            // 
+            this.Ц300М_1ТумблерЧТОФТ.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерЧТОФТ.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
+            this.Ц300М_1ТумблерЧТОФТ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Ц300М_1ТумблерЧТОФТ.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1ТумблерЧТОФТ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерЧТОФТ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерЧТОФТ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1ТумблерЧТОФТ.Location = new System.Drawing.Point(664, 315);
+            this.Ц300М_1ТумблерЧТОФТ.Name = "Ц300М_1ТумблерЧТОФТ";
+            this.Ц300М_1ТумблерЧТОФТ.Size = new System.Drawing.Size(24, 29);
+            this.Ц300М_1ТумблерЧТОФТ.TabIndex = 47;
+            this.Ц300М_1ТумблерЧТОФТ.UseVisualStyleBackColor = false;
+            this.Ц300М_1ТумблерЧТОФТ.Click += new System.EventHandler(this.Ц300М_1ТумблерЧТОФТ_Click);
             // 
             // C300M_1Form
             // 
@@ -692,5 +819,12 @@
         private System.Windows.Forms.Label Ц300М_1ИндикаторВолна1;
         private System.Windows.Forms.Label Ц300М_1ИндикаторВолна10;
         private System.Windows.Forms.Label Ц300М_1ИндикаторВолна100;
+        private System.Windows.Forms.Button Ц300М_1ТумблерВведениеЧТОФТ;
+        private System.Windows.Forms.Button Ц300М_1ТумблерПоискБлокировкаВклОткл;
+        private System.Windows.Forms.Button Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн;
+        private System.Windows.Forms.Button Ц300М_1ТумблерПоискС_АналСимметрОткл;
+        private System.Windows.Forms.Button Ц300М_1ТумблерАСЧОткл;
+        private System.Windows.Forms.Button Ц300М_1ТумблерАРУРРУ;
+        private System.Windows.Forms.Button Ц300М_1ТумблерЧТОФТ;
     }
 }
