@@ -144,5 +144,94 @@ namespace R440O.Parameters
         private static string _Ц300М_1КнопкаКонтрольРежимаМинус27 = "false";
         #endregion
 
+        #region Кнопка Индикация волны
+        /// <summary>
+        /// Возможные состояния: true, false
+        /// </summary>
+        public static string Ц300М_1КнопкаИндикацияВолны { get { return _Ц300М_1КнопкаИндикацияВолны; } set { _Ц300М_1КнопкаИндикацияВолны = value; } }
+        private static string _Ц300М_1КнопкаИндикацияВолны = "false";
+        #endregion
+
+        #region Переключатели ВОЛНА
+        /// <summary>
+        /// 0 - 9
+        /// </summary>
+        public static int Ц300М_1ПереключательВолна1000
+        {
+            get
+            {
+                return _Ц300М_1ПереключательВолна1000;
+            }
+
+            set
+            {
+                if (value >= 0 && value <= 9)
+                {
+                    _Ц300М_1ПереключательВолна1000 = value;
+                }
+            }
+        }
+        private static int _Ц300М_1ПереключательВолна1000 = 0;
+
+        /// <summary>
+        /// 0 - 9
+        /// </summary>
+        public static int Ц300М_1ПереключательВолна100
+        {
+            get
+            {
+                return _Ц300М_1ПереключательВолна100;
+            }
+
+            set
+            {
+                if (value >= 0 && value <= 9)
+                {
+                    _Ц300М_1ПереключательВолна100 = value;
+                }
+            }
+        }
+        private static int _Ц300М_1ПереключательВолна100 = 0;
+
+        /// <summary>
+        /// 0 - 9
+        /// </summary>
+        public static int Ц300М_1ПереключательВолна10
+        {
+            get
+            {
+                return _Ц300М_1ПереключательВолна10;
+            }
+
+            set
+            {
+                if (value >= 0 && value <= 9)
+                {
+                    _Ц300М_1ПереключательВолна10 = value;
+                }
+            }
+        }
+        private static int _Ц300М_1ПереключательВолна10 = 0;
+
+        /// <summary>
+        /// 0 - 9
+        /// </summary>
+        public static int Ц300М_1ПереключательВолна1
+        {
+            get
+            {
+                return _Ц300М_1ПереключательВолна1;
+            }
+
+            set
+            {
+                if (value >= 0 && value <= 9)
+                {
+                    _Ц300М_1ПереключательВолна1 = value;
+                }
+            }
+        }
+        private static int _Ц300М_1ПереключательВолна1 = 0;
+        #endregion
     }
 }

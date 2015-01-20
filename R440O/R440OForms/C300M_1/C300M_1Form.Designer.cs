@@ -29,6 +29,16 @@
         private void InitializeComponent()
         {
             this.C300M_1Panel = new System.Windows.Forms.Panel();
+            this.Ц300М_1ПереключательВолна1 = new System.Windows.Forms.Button();
+            this.Ц300М_1ПереключательВолна10 = new System.Windows.Forms.Button();
+            this.Ц300М_1ПереключательВолна100 = new System.Windows.Forms.Button();
+            this.Ц300М_1ПереключательВолна1000 = new System.Windows.Forms.Button();
+            this.Ц300М_1КнопкаИндикацияВолны = new System.Windows.Forms.Button();
+            this.Ц300М_1КнопкаКонтрольРежимаМинус27 = new System.Windows.Forms.Button();
+            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8 = new System.Windows.Forms.Button();
+            this.Ц300М_1КнопкаКонтрольРежимаМинус5 = new System.Windows.Forms.Button();
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс27 = new System.Windows.Forms.Button();
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3 = new System.Windows.Forms.Button();
             this.Ц300М_1КнопкаКонтрольРежимаПлюс5 = new System.Windows.Forms.Button();
             this.Ц300М_1КнопкаКонтрольРежимаГЕТ_2 = new System.Windows.Forms.Button();
             this.Ц300М_1КнопкаКонтрольРежимаПоиск = new System.Windows.Forms.Button();
@@ -46,11 +56,10 @@
             this.Ц300М_1КнопкаВидРаботы0d1 = new System.Windows.Forms.Button();
             this.Ц300М_1КнопкаВидРаботы0d05 = new System.Windows.Forms.Button();
             this.Ц300М_1КнопкаВидРаботы0d025 = new System.Windows.Forms.Button();
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3 = new System.Windows.Forms.Button();
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс27 = new System.Windows.Forms.Button();
-            this.Ц300М_1КнопкаКонтрольРежимаМинус5 = new System.Windows.Forms.Button();
-            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8 = new System.Windows.Forms.Button();
-            this.Ц300М_1КнопкаКонтрольРежимаМинус27 = new System.Windows.Forms.Button();
+            this.Ц300М_1ИндикаторВолна1000 = new System.Windows.Forms.Label();
+            this.Ц300М_1ИндикаторВолна100 = new System.Windows.Forms.Label();
+            this.Ц300М_1ИндикаторВолна10 = new System.Windows.Forms.Label();
+            this.Ц300М_1ИндикаторВолна1 = new System.Windows.Forms.Label();
             this.C300M_1Panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +67,15 @@
             // 
             this.C300M_1Panel.BackgroundImage = global::R440O.BackgroundImages.C300M;
             this.C300M_1Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.C300M_1Panel.Controls.Add(this.Ц300М_1ИндикаторВолна1);
+            this.C300M_1Panel.Controls.Add(this.Ц300М_1ИндикаторВолна10);
+            this.C300M_1Panel.Controls.Add(this.Ц300М_1ИндикаторВолна100);
+            this.C300M_1Panel.Controls.Add(this.Ц300М_1ИндикаторВолна1000);
+            this.C300M_1Panel.Controls.Add(this.Ц300М_1ПереключательВолна1);
+            this.C300M_1Panel.Controls.Add(this.Ц300М_1ПереключательВолна10);
+            this.C300M_1Panel.Controls.Add(this.Ц300М_1ПереключательВолна100);
+            this.C300M_1Panel.Controls.Add(this.Ц300М_1ПереключательВолна1000);
+            this.C300M_1Panel.Controls.Add(this.Ц300М_1КнопкаИндикацияВолны);
             this.C300M_1Panel.Controls.Add(this.Ц300М_1КнопкаКонтрольРежимаМинус27);
             this.C300M_1Panel.Controls.Add(this.Ц300М_1КнопкаКонтрольРежимаМинус12d8);
             this.C300M_1Panel.Controls.Add(this.Ц300М_1КнопкаКонтрольРежимаМинус5);
@@ -84,6 +102,183 @@
             this.C300M_1Panel.Name = "C300M_1Panel";
             this.C300M_1Panel.Size = new System.Drawing.Size(1100, 430);
             this.C300M_1Panel.TabIndex = 1;
+            // 
+            // Ц300М_1ПереключательВолна1
+            // 
+            this.Ц300М_1ПереключательВолна1.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ПереключательВолна1.BackgroundImage = global::R440O.ControlElementImages.toggleType3;
+            this.Ц300М_1ПереключательВолна1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Ц300М_1ПереключательВолна1.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1ПереключательВолна1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ПереключательВолна1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ПереключательВолна1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1ПереключательВолна1.Location = new System.Drawing.Point(331, 102);
+            this.Ц300М_1ПереключательВолна1.Name = "Ц300М_1ПереключательВолна1";
+            this.Ц300М_1ПереключательВолна1.Size = new System.Drawing.Size(76, 71);
+            this.Ц300М_1ПереключательВолна1.TabIndex = 36;
+            this.Ц300М_1ПереключательВолна1.UseVisualStyleBackColor = false;
+            this.Ц300М_1ПереключательВолна1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Ц300М_1ПереключательВолна1_MouseUp);
+            // 
+            // Ц300М_1ПереключательВолна10
+            // 
+            this.Ц300М_1ПереключательВолна10.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ПереключательВолна10.BackgroundImage = global::R440O.ControlElementImages.toggleType3;
+            this.Ц300М_1ПереключательВолна10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Ц300М_1ПереключательВолна10.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1ПереключательВолна10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ПереключательВолна10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ПереключательВолна10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1ПереключательВолна10.Location = new System.Drawing.Point(252, 104);
+            this.Ц300М_1ПереключательВолна10.Name = "Ц300М_1ПереключательВолна10";
+            this.Ц300М_1ПереключательВолна10.Size = new System.Drawing.Size(76, 71);
+            this.Ц300М_1ПереключательВолна10.TabIndex = 35;
+            this.Ц300М_1ПереключательВолна10.UseVisualStyleBackColor = false;
+            this.Ц300М_1ПереключательВолна10.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Ц300М_1ПереключательВолна10_MouseUp);
+            // 
+            // Ц300М_1ПереключательВолна100
+            // 
+            this.Ц300М_1ПереключательВолна100.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ПереключательВолна100.BackgroundImage = global::R440O.ControlElementImages.toggleType3;
+            this.Ц300М_1ПереключательВолна100.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Ц300М_1ПереключательВолна100.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1ПереключательВолна100.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ПереключательВолна100.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ПереключательВолна100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1ПереключательВолна100.Location = new System.Drawing.Point(175, 103);
+            this.Ц300М_1ПереключательВолна100.Name = "Ц300М_1ПереключательВолна100";
+            this.Ц300М_1ПереключательВолна100.Size = new System.Drawing.Size(76, 71);
+            this.Ц300М_1ПереключательВолна100.TabIndex = 34;
+            this.Ц300М_1ПереключательВолна100.UseVisualStyleBackColor = false;
+            this.Ц300М_1ПереключательВолна100.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Ц300М_1ПереключательВолна100_MouseUp);
+            // 
+            // Ц300М_1ПереключательВолна1000
+            // 
+            this.Ц300М_1ПереключательВолна1000.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ПереключательВолна1000.BackgroundImage = global::R440O.ControlElementImages.toggleType3;
+            this.Ц300М_1ПереключательВолна1000.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Ц300М_1ПереключательВолна1000.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1ПереключательВолна1000.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ПереключательВолна1000.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ПереключательВолна1000.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1ПереключательВолна1000.Location = new System.Drawing.Point(99, 103);
+            this.Ц300М_1ПереключательВолна1000.Name = "Ц300М_1ПереключательВолна1000";
+            this.Ц300М_1ПереключательВолна1000.Size = new System.Drawing.Size(76, 71);
+            this.Ц300М_1ПереключательВолна1000.TabIndex = 33;
+            this.Ц300М_1ПереключательВолна1000.UseVisualStyleBackColor = false;
+            this.Ц300М_1ПереключательВолна1000.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Ц300М_1ПереключательВолна1000_MouseUp);
+            // 
+            // Ц300М_1КнопкаИндикацияВолны
+            // 
+            this.Ц300М_1КнопкаИндикацияВолны.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаИндикацияВолны.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
+            this.Ц300М_1КнопкаИндикацияВолны.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Ц300М_1КнопкаИндикацияВолны.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1КнопкаИндикацияВолны.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаИндикацияВолны.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаИндикацияВолны.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1КнопкаИндикацияВолны.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.Ц300М_1КнопкаИндикацияВолны.Location = new System.Drawing.Point(423, 36);
+            this.Ц300М_1КнопкаИндикацияВолны.Name = "Ц300М_1КнопкаИндикацияВолны";
+            this.Ц300М_1КнопкаИндикацияВолны.Size = new System.Drawing.Size(36, 35);
+            this.Ц300М_1КнопкаИндикацияВолны.TabIndex = 32;
+            this.Ц300М_1КнопкаИндикацияВолны.UseVisualStyleBackColor = false;
+            this.Ц300М_1КнопкаИндикацияВолны.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Ц300М_1КнопкаИндикацияВолны_MouseDown);
+            this.Ц300М_1КнопкаИндикацияВолны.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Ц300М_1КнопкаИндикацияВолны_MouseUp);
+            // 
+            // Ц300М_1КнопкаКонтрольРежимаМинус27
+            // 
+            this.Ц300М_1КнопкаКонтрольРежимаМинус27.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус27.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус27.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус27.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус27.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус27.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Ц300М_1КнопкаКонтрольРежимаМинус27.ForeColor = System.Drawing.Color.Black;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус27.Location = new System.Drawing.Point(899, 197);
+            this.Ц300М_1КнопкаКонтрольРежимаМинус27.Name = "Ц300М_1КнопкаКонтрольРежимаМинус27";
+            this.Ц300М_1КнопкаКонтрольРежимаМинус27.Size = new System.Drawing.Size(35, 35);
+            this.Ц300М_1КнопкаКонтрольРежимаМинус27.TabIndex = 31;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус27.Text = "-27";
+            this.Ц300М_1КнопкаКонтрольРежимаМинус27.UseVisualStyleBackColor = false;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус27.Click += new System.EventHandler(this.Ц300М_1КнопкаКонтрольРежимаМинус27_Click);
+            // 
+            // Ц300М_1КнопкаКонтрольРежимаМинус12d8
+            // 
+            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.ForeColor = System.Drawing.Color.Black;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.Location = new System.Drawing.Point(867, 197);
+            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.Name = "Ц300М_1КнопкаКонтрольРежимаМинус12d8";
+            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.Size = new System.Drawing.Size(35, 35);
+            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.TabIndex = 30;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.Text = "-12,8";
+            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.UseVisualStyleBackColor = false;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.Click += new System.EventHandler(this.Ц300М_1КнопкаКонтрольРежимаМинус12d8_Click);
+            // 
+            // Ц300М_1КнопкаКонтрольРежимаМинус5
+            // 
+            this.Ц300М_1КнопкаКонтрольРежимаМинус5.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус5.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус5.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус5.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Ц300М_1КнопкаКонтрольРежимаМинус5.ForeColor = System.Drawing.Color.Black;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус5.Location = new System.Drawing.Point(835, 197);
+            this.Ц300М_1КнопкаКонтрольРежимаМинус5.Name = "Ц300М_1КнопкаКонтрольРежимаМинус5";
+            this.Ц300М_1КнопкаКонтрольРежимаМинус5.Size = new System.Drawing.Size(35, 35);
+            this.Ц300М_1КнопкаКонтрольРежимаМинус5.TabIndex = 29;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус5.Text = "-5";
+            this.Ц300М_1КнопкаКонтрольРежимаМинус5.UseVisualStyleBackColor = false;
+            this.Ц300М_1КнопкаКонтрольРежимаМинус5.Click += new System.EventHandler(this.Ц300М_1КнопкаКонтрольРежимаМинус5_Click);
+            // 
+            // Ц300М_1КнопкаКонтрольРежимаПлюс27
+            // 
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.ForeColor = System.Drawing.Color.Black;
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.Location = new System.Drawing.Point(803, 197);
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.Name = "Ц300М_1КнопкаКонтрольРежимаПлюс27";
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.Size = new System.Drawing.Size(35, 35);
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.TabIndex = 28;
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.Text = "+27";
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.UseVisualStyleBackColor = false;
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.Click += new System.EventHandler(this.Ц300М_1КнопкаКонтрольРежимаПлюс27_Click);
+            // 
+            // Ц300М_1КнопкаКонтрольРежимаПлюс6d3
+            // 
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.ForeColor = System.Drawing.Color.Black;
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.Location = new System.Drawing.Point(771, 197);
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.Name = "Ц300М_1КнопкаКонтрольРежимаПлюс6d3";
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.Size = new System.Drawing.Size(35, 35);
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.TabIndex = 27;
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.Text = "+6.3";
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.UseVisualStyleBackColor = false;
+            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.Click += new System.EventHandler(this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3_Click);
             // 
             // Ц300М_1КнопкаКонтрольРежимаПлюс5
             // 
@@ -398,100 +593,53 @@
             this.Ц300М_1КнопкаВидРаботы0d025.UseVisualStyleBackColor = false;
             this.Ц300М_1КнопкаВидРаботы0d025.Click += new System.EventHandler(this.Ц300М_1КнопкаВидРаботы0d025_Click);
             // 
-            // Ц300М_1КнопкаКонтрольРежимаПлюс6d3
+            // Ц300М_1ИндикаторВолна1000
             // 
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.BackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.FlatAppearance.BorderSize = 0;
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.ForeColor = System.Drawing.Color.Black;
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.Location = new System.Drawing.Point(771, 197);
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.Name = "Ц300М_1КнопкаКонтрольРежимаПлюс6d3";
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.Size = new System.Drawing.Size(35, 35);
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.TabIndex = 27;
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.Text = "+6.3";
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.UseVisualStyleBackColor = false;
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.Click += new System.EventHandler(this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3_Click);
+            this.Ц300М_1ИндикаторВолна1000.AutoSize = true;
+            this.Ц300М_1ИндикаторВолна1000.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ИндикаторВолна1000.ForeColor = System.Drawing.Color.Red;
+            this.Ц300М_1ИндикаторВолна1000.Location = new System.Drawing.Point(133, 60);
+            this.Ц300М_1ИндикаторВолна1000.Name = "Ц300М_1ИндикаторВолна1000";
+            this.Ц300М_1ИндикаторВолна1000.Size = new System.Drawing.Size(13, 13);
+            this.Ц300М_1ИндикаторВолна1000.TabIndex = 37;
+            this.Ц300М_1ИндикаторВолна1000.Text = "0";
+            this.Ц300М_1ИндикаторВолна1000.Visible = false;
             // 
-            // Ц300М_1КнопкаКонтрольРежимаПлюс27
+            // Ц300М_1ИндикаторВолна100
             // 
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.BackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.FlatAppearance.BorderSize = 0;
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.ForeColor = System.Drawing.Color.Black;
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.Location = new System.Drawing.Point(803, 197);
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.Name = "Ц300М_1КнопкаКонтрольРежимаПлюс27";
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.Size = new System.Drawing.Size(35, 35);
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.TabIndex = 28;
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.Text = "+27";
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.UseVisualStyleBackColor = false;
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.Click += new System.EventHandler(this.Ц300М_1КнопкаКонтрольРежимаПлюс27_Click);
+            this.Ц300М_1ИндикаторВолна100.AutoSize = true;
+            this.Ц300М_1ИндикаторВолна100.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ИндикаторВолна100.ForeColor = System.Drawing.Color.Red;
+            this.Ц300М_1ИндикаторВолна100.Location = new System.Drawing.Point(207, 60);
+            this.Ц300М_1ИндикаторВолна100.Name = "Ц300М_1ИндикаторВолна100";
+            this.Ц300М_1ИндикаторВолна100.Size = new System.Drawing.Size(13, 13);
+            this.Ц300М_1ИндикаторВолна100.TabIndex = 38;
+            this.Ц300М_1ИндикаторВолна100.Text = "0";
+            this.Ц300М_1ИндикаторВолна100.Visible = false;
             // 
-            // Ц300М_1КнопкаКонтрольРежимаМинус5
+            // Ц300М_1ИндикаторВолна10
             // 
-            this.Ц300М_1КнопкаКонтрольРежимаМинус5.BackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус5.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус5.FlatAppearance.BorderSize = 0;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус5.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Ц300М_1КнопкаКонтрольРежимаМинус5.ForeColor = System.Drawing.Color.Black;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус5.Location = new System.Drawing.Point(835, 197);
-            this.Ц300М_1КнопкаКонтрольРежимаМинус5.Name = "Ц300М_1КнопкаКонтрольРежимаМинус5";
-            this.Ц300М_1КнопкаКонтрольРежимаМинус5.Size = new System.Drawing.Size(35, 35);
-            this.Ц300М_1КнопкаКонтрольРежимаМинус5.TabIndex = 29;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус5.Text = "-5";
-            this.Ц300М_1КнопкаКонтрольРежимаМинус5.UseVisualStyleBackColor = false;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус5.Click += new System.EventHandler(this.Ц300М_1КнопкаКонтрольРежимаМинус5_Click);
+            this.Ц300М_1ИндикаторВолна10.AutoSize = true;
+            this.Ц300М_1ИндикаторВолна10.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ИндикаторВолна10.ForeColor = System.Drawing.Color.Red;
+            this.Ц300М_1ИндикаторВолна10.Location = new System.Drawing.Point(286, 60);
+            this.Ц300М_1ИндикаторВолна10.Name = "Ц300М_1ИндикаторВолна10";
+            this.Ц300М_1ИндикаторВолна10.Size = new System.Drawing.Size(13, 13);
+            this.Ц300М_1ИндикаторВолна10.TabIndex = 39;
+            this.Ц300М_1ИндикаторВолна10.Text = "0";
+            this.Ц300М_1ИндикаторВолна10.Visible = false;
             // 
-            // Ц300М_1КнопкаКонтрольРежимаМинус12d8
+            // Ц300М_1ИндикаторВолна1
             // 
-            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.BackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.FlatAppearance.BorderSize = 0;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.ForeColor = System.Drawing.Color.Black;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.Location = new System.Drawing.Point(867, 197);
-            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.Name = "Ц300М_1КнопкаКонтрольРежимаМинус12d8";
-            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.Size = new System.Drawing.Size(35, 35);
-            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.TabIndex = 30;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.Text = "-12,8";
-            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.UseVisualStyleBackColor = false;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.Click += new System.EventHandler(this.Ц300М_1КнопкаКонтрольРежимаМинус12d8_Click);
-            // 
-            // Ц300М_1КнопкаКонтрольРежимаМинус27
-            // 
-            this.Ц300М_1КнопкаКонтрольРежимаМинус27.BackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус27.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус27.FlatAppearance.BorderSize = 0;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус27.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус27.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус27.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Ц300М_1КнопкаКонтрольРежимаМинус27.ForeColor = System.Drawing.Color.Black;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус27.Location = new System.Drawing.Point(899, 197);
-            this.Ц300М_1КнопкаКонтрольРежимаМинус27.Name = "Ц300М_1КнопкаКонтрольРежимаМинус27";
-            this.Ц300М_1КнопкаКонтрольРежимаМинус27.Size = new System.Drawing.Size(35, 35);
-            this.Ц300М_1КнопкаКонтрольРежимаМинус27.TabIndex = 31;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус27.Text = "-27";
-            this.Ц300М_1КнопкаКонтрольРежимаМинус27.UseVisualStyleBackColor = false;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус27.Click += new System.EventHandler(this.Ц300М_1КнопкаКонтрольРежимаМинус27_Click);
+            this.Ц300М_1ИндикаторВолна1.AutoSize = true;
+            this.Ц300М_1ИндикаторВолна1.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ИндикаторВолна1.ForeColor = System.Drawing.Color.Red;
+            this.Ц300М_1ИндикаторВолна1.Location = new System.Drawing.Point(364, 60);
+            this.Ц300М_1ИндикаторВолна1.Name = "Ц300М_1ИндикаторВолна1";
+            this.Ц300М_1ИндикаторВолна1.Size = new System.Drawing.Size(13, 13);
+            this.Ц300М_1ИндикаторВолна1.TabIndex = 40;
+            this.Ц300М_1ИндикаторВолна1.Text = "0";
+            this.Ц300М_1ИндикаторВолна1.Visible = false;
             // 
             // C300M_1Form
             // 
@@ -505,6 +653,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ц300M-1";
             this.C300M_1Panel.ResumeLayout(false);
+            this.C300M_1Panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -534,5 +683,14 @@
         private System.Windows.Forms.Button Ц300М_1КнопкаКонтрольРежимаМинус5;
         private System.Windows.Forms.Button Ц300М_1КнопкаКонтрольРежимаМинус12d8;
         private System.Windows.Forms.Button Ц300М_1КнопкаКонтрольРежимаМинус27;
+        private System.Windows.Forms.Button Ц300М_1КнопкаИндикацияВолны;
+        private System.Windows.Forms.Button Ц300М_1ПереключательВолна1000;
+        private System.Windows.Forms.Button Ц300М_1ПереключательВолна100;
+        private System.Windows.Forms.Button Ц300М_1ПереключательВолна10;
+        private System.Windows.Forms.Button Ц300М_1ПереключательВолна1;
+        private System.Windows.Forms.Label Ц300М_1ИндикаторВолна1000;
+        private System.Windows.Forms.Label Ц300М_1ИндикаторВолна1;
+        private System.Windows.Forms.Label Ц300М_1ИндикаторВолна10;
+        private System.Windows.Forms.Label Ц300М_1ИндикаторВолна100;
     }
 }
