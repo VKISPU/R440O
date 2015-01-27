@@ -69,6 +69,8 @@
     <Compile Include="Parameters\B2_1Parameters.cs" />
     <Compile Include="Parameters\B2_2Parameters.cs" />
     <Compile Include="Parameters\B3_1Parameters.cs" />
+    <Compile Include="Parameters\K04M_02Parameters.cs" />
+    <Compile Include="Parameters\K04M_01Parameters.cs" />
     <Compile Include="Parameters\K03M_02Parameters.cs" />
     <Compile Include="Parameters\K03M_01Parameters.cs" />
     <Compile Include="Parameters\K02M_02Parameters.cs" />
