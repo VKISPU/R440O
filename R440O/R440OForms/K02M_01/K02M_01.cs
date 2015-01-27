@@ -99,6 +99,7 @@ namespace R440O.R440OForms.K02M_01
         } 
         #endregion
 
+        #region Переключатели
         private void K02M_01ПереключательСкорость_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -108,7 +109,7 @@ namespace R440O.R440OForms.K02M_01
 
             if (e.Button == MouseButtons.Right)
             {
-                K02M_01Parameters.K02M_01ПереключательСкорость -= 1; 
+                K02M_01Parameters.K02M_01ПереключательСкорость -= 1;
             }
 
             var angle = K02M_01Parameters.K02M_01ПереключательСкорость * 45 - 90;
@@ -165,6 +166,7 @@ namespace R440O.R440OForms.K02M_01
             var angle = K02M_01Parameters.K02M_01ПереключательНапряжение2К * 30 - 75;
             K02M_01ПереключательНапряжение2К.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
-        }
+        } 
+        #endregion
     }
 }

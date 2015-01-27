@@ -323,16 +323,6 @@ namespace R440O {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap lampType12OnRed {
-            get {
-                object obj = ResourceManager.GetObject("lampType12OnRed", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap N12S {
             get {
                 object obj = ResourceManager.GetObject("N12S", resourceCulture);
