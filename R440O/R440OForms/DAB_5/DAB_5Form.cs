@@ -37,9 +37,11 @@ namespace R440O.R440OForms.DAB_5
                                 ? ControlElementImages.lampType10OnGreen
                                 : null;
                         }
-                        else
+                        else if (item.Name.Contains("DAB_5Лампочка"))
                         {
-                            item.BackgroundImage = (bool)property.GetValue(null)? ControlElementImages.lampType5OnRed : null;
+                            item.BackgroundImage = (bool)property.GetValue(null)
+                                ? ControlElementImages.lampType5OnRed 
+                                : null;
                         }
                     }
                 }
