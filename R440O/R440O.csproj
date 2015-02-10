@@ -84,6 +84,7 @@
     <Compile Include="Parameters\K02M_02Parameters.cs" />
     <Compile Include="Parameters\K02M_01Parameters.cs" />
     <Compile Include="Parameters\Kontur_P3Parameters.cs" />
+    <Compile Include="Parameters\N16Parameters.cs" />
     <Compile Include="Parameters\PU_K1_2Parameters.cs" />
     <Compile Include="Parameters\PU_K1_1Parameters.cs" />
     <Compile Include="Parameters\B3_2Parameters.cs" />
@@ -1079,7 +1080,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\buttonSquareBlack.png" />
+    <Content Include="Resources\buttonSquareBlackLarge.png" />
     <Content Include="Resources\buttonSquareRed.png" />
+    <Content Include="Resources\buttonSquareRedLarge.png" />
     <Content Include="Resources\revolverRound.png" />
     <None Include="Resources\buttonSquareLightBlue1.png" />
     <None Include="Resources\lampType12OnRed.png" />
