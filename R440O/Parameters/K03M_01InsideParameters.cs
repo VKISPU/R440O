@@ -2,10 +2,10 @@
 {
     internal class K03M_01InsideParameters
     {
-        public static IndexerClass K03M_01InsideПереключатель = new IndexerClass();
+        public static KulonIndexerClass K03M_01InsideПереключатель = new KulonIndexerClass();
     }
 
-    class IndexerClass
+    class KulonIndexerClass
     {
         private int[] myArray = new int[31];
         public int this[int index]

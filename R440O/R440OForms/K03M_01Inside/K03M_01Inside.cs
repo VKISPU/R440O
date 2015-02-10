@@ -60,7 +60,6 @@ namespace R440O.R440OForms.K03M_01Inside
             }
         }
 
-
         private void K03M_01InsideПереключатель_MouseDown(object sender, MouseEventArgs e)
         {
             var item = sender as Button;
