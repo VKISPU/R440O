@@ -50,13 +50,25 @@ namespace R440O.R440OForms.K05M_01Inside
                 }
                 if (item.Name.Contains("K05M_01InsideТумблер"))
                 {
-                    var index = Convert.ToInt32(item.Name.Substring(item.Name.IndexOf("K05M_01InsideТумблер") +
-                                                                    "K05M_01InsideТумблер".Length));
-                    item.BackgroundImage = (K05M_01InsideParameters.K05M_01InsideПереключатель[index] == 0)
-                        ? ControlElementImages.tumblerType3Left
-                        : ControlElementImages.tumblerType3Right;
+                    try
+                    {
+                        var index = Convert.ToInt32(item.Name.Substring(item.Name.IndexOf("K05M_01InsideТумблер") +
+                                                                        "K05M_01InsideТумблер".Length));
+                        item.BackgroundImage = (K05M_01InsideParameters.K05M_01InsideПереключатель[index] == 0)
+                            ? ControlElementImages.tumblerType3Left
+                            : ControlElementImages.tumblerType3Right;
+                    }
+                    catch (System.FormatException)
+                    {
+                    }
                 }
             }
+            K05M_01InsideТумблерВ4.BackgroundImage = K05M_01InsideParameters.K05M_01InsideТумблерВ4
+                            ? ControlElementImages.tumblerType7Right
+                            : ControlElementImages.tumblerType7Left;
+            K05M_01InsideТумблерВ7.BackgroundImage = K05M_01InsideParameters.K05M_01InsideТумблерВ7
+                            ? ControlElementImages.tumblerType7Up
+                            : ControlElementImages.tumblerType7Down;
         }
 
         private void K05M_01InsideПереключатель_MouseDown(object sender, MouseEventArgs e)
@@ -97,6 +109,22 @@ namespace R440O.R440OForms.K05M_01Inside
                     ? ControlElementImages.tumblerType3Left
                     : ControlElementImages.tumblerType3Right;
             }
+        }
+
+        private void K05M_01InsideТумблерВ4_Click(object sender, EventArgs e)
+        {
+            K05M_01InsideParameters.K05M_01InsideТумблерВ4 = !K05M_01InsideParameters.K05M_01InsideТумблерВ4;
+            K05M_01InsideТумблерВ4.BackgroundImage = K05M_01InsideParameters.K05M_01InsideТумблерВ4
+                            ? ControlElementImages.tumblerType7Right
+                            : ControlElementImages.tumblerType7Left;
+        }
+
+        private void K05M_01InsideТумблерВ7_Click(object sender, EventArgs e)
+        {
+            K05M_01InsideParameters.K05M_01InsideТумблерВ7 = !K05M_01InsideParameters.K05M_01InsideТумблерВ7;
+            K05M_01InsideТумблерВ7.BackgroundImage = K05M_01InsideParameters.K05M_01InsideТумблерВ7
+                            ? ControlElementImages.tumblerType7Up
+                            : ControlElementImages.tumblerType7Down;
         }
     }
 }
