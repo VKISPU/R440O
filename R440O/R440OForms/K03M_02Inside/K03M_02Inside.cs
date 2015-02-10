@@ -6,6 +6,7 @@
 
 using System;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using R440O.Parameters;
 using R440O.ThirdParty;
 
@@ -51,15 +52,26 @@ namespace R440O.R440OForms.K03M_02Inside
                 }
                 if (item.Name.Contains("K03M_02InsideТумблер"))
                 {
-                    var index = Convert.ToInt32(item.Name.Substring(item.Name.IndexOf("K03M_02InsideТумблер") +
-                                                                    "K03M_02InsideТумблер".Length));
-                    item.BackgroundImage = (K03M_02InsideParameters.K03M_02InsideПереключатель[index] == 0)
+                    try
+                    {
+                        var index = Convert.ToInt32(item.Name.Substring(item.Name.IndexOf("K03M_02InsideТумблер") +
+                                                                        "K03M_02InsideТумблер".Length));
+                        item.BackgroundImage = (K03M_02InsideParameters.K03M_02InsideПереключатель[index] == 0)
                         ? ControlElementImages.tumblerType3Left
                         : ControlElementImages.tumblerType3Right;
+                    }
+                    catch (System.FormatException)
+                    {
+                    }
                 }
             }
+            K03M_02InsideТумблерИП.BackgroundImage = K03M_02InsideParameters.K03M_02InsideТумблерИП
+                ? ControlElementImages.tumblerType4Left
+                : ControlElementImages.tumblerType4Right;
+            K03M_02InsideТумблерВклОткл.BackgroundImage = K03M_02InsideParameters.K03M_02InsideТумблерВклОткл
+                ? ControlElementImages.tumblerType4Left
+                : ControlElementImages.tumblerType4Right;
         }
-
 
         private void K03M_02InsideПереключатель_MouseDown(object sender, MouseEventArgs e)
         {
@@ -99,6 +111,22 @@ namespace R440O.R440OForms.K03M_02Inside
                     ? ControlElementImages.tumblerType3Left
                     : ControlElementImages.tumblerType3Right;
             }
+        }
+
+        private void K03M_02InsideТумблерИП_Click(object sender, EventArgs e)
+        {
+            K03M_02InsideParameters.K03M_02InsideТумблерИП = !K03M_02InsideParameters.K03M_02InsideТумблерИП;
+            K03M_02InsideТумблерИП.BackgroundImage = K03M_02InsideParameters.K03M_02InsideТумблерИП
+                ? ControlElementImages.tumblerType4Left
+                : ControlElementImages.tumblerType4Right;
+        }
+
+        private void K03M_02InsideТумблерВклОткл_Click(object sender, EventArgs e)
+        {
+            K03M_02InsideParameters.K03M_02InsideТумблерВклОткл = !K03M_02InsideParameters.K03M_02InsideТумблерВклОткл;
+            K03M_02InsideТумблерВклОткл.BackgroundImage = K03M_02InsideParameters.K03M_02InsideТумблерВклОткл
+                ? ControlElementImages.tumblerType4Left
+                : ControlElementImages.tumblerType4Right;
         }
     }
 }

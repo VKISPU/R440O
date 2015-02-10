@@ -3,6 +3,8 @@
     internal class K03M_01InsideParameters
     {
         public static KulonIndexerClass K03M_01InsideПереключатель = new KulonIndexerClass();
+        public static bool K03M_01InsideТумблерИП;
+        public static bool K03M_01InsideТумблерВклОткл;
     }
 
     class KulonIndexerClass
