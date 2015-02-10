@@ -1078,6 +1078,8 @@
     <None Include="Resources\toggleType4.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\buttonSquareBlack.png" />
+    <Content Include="Resources\buttonSquareRed.png" />
     <Content Include="Resources\revolverRound.png" />
     <None Include="Resources\buttonSquareLightBlue1.png" />
     <None Include="Resources\lampType12OnRed.png" />
