@@ -30,8 +30,8 @@ namespace R440O.Parameters
         /// <summary>
         /// Возможные состояния: true, false
         /// </summary>
-        public static string Контур_П3КнопкаКонтроль { get { return _Контур_П3КнопкаКонтроль; } set { _Контур_П3КнопкаКонтроль = value; } }
-        private static string _Контур_П3КнопкаКонтроль = "false";
+        public static string Контур_П3КнопкаКП1Контроль { get { return _Контур_П3КнопкаКП1Контроль; } set { _Контур_П3КнопкаКП1Контроль = value; } }
+        private static string _Контур_П3КнопкаКП1Контроль = "false";
         #endregion
 
         #region КП2
@@ -380,6 +380,11 @@ namespace R440O.Parameters
         private static string _Контур_П3КнопкаКП5ИнформС = "false";
         #endregion
 
+        /// <summary>
+        /// Возможные состояния: true, false
+        /// </summary>
+        public static string Контур_П3КнопкаКП6Пуск { get { return _Контур_П3КнопкаКП6Пуск; } set { _Контур_П3КнопкаКП6Пуск = value; } }
+        private static string _Контур_П3КнопкаКП6Пуск = "false";
 
     }
 }
