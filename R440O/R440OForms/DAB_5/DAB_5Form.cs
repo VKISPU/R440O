@@ -33,14 +33,14 @@ namespace R440O.R440OForms.DAB_5
                     {
                         if (item.Name == "DAB_5ЛампочкаОбход" || item.Name == "DAB_5ЛампочкаПитание")
                         {
-                            item.BackgroundImage = (bool) property.GetValue(null)
+                            item.BackgroundImage = (bool)property.GetValue(null)
                                 ? ControlElementImages.lampType10OnGreen
                                 : null;
                         }
                         else if (item.Name.Contains("DAB_5Лампочка"))
                         {
                             item.BackgroundImage = (bool)property.GetValue(null)
-                                ? ControlElementImages.lampType5OnRed 
+                                ? ControlElementImages.lampType5OnRed
                                 : null;
                         }
                     }
@@ -65,10 +65,10 @@ namespace R440O.R440OForms.DAB_5
             switch (button.Name)
             {
                 case "DAB_5КнопкаОбходВкл":
-                {
-                    DAB_5Parameters.DAB_5ЛампочкаОбход = true;
-                    DAB_5ЛампочкаОбход.BackgroundImage = DAB_5Parameters.DAB_5ЛампочкаОбход ? ControlElementImages.lampType10OnGreen : null;
-                }
+                    {
+                        DAB_5Parameters.DAB_5ЛампочкаОбход = true;
+                        DAB_5ЛампочкаОбход.BackgroundImage = DAB_5Parameters.DAB_5ЛампочкаОбход ? ControlElementImages.lampType10OnGreen : null;
+                    }
                     break;
                 case "DAB_5КнопкаОбходВыкл":
                     {
@@ -105,9 +105,9 @@ namespace R440O.R440OForms.DAB_5
 
                 ////Режим работы
                 case "DAB_5КнопкаРежимВыкл1К":
-                {
-                    this.TurnLampsForComplect(1, 0);
-                }
+                    {
+                        this.TurnLampsForComplect(1, 0);
+                    }
                     break;
                 case "DAB_5КнопкаРежимРабота1К":
                     {
@@ -253,5 +253,6 @@ namespace R440O.R440OForms.DAB_5
                     ? ControlElementImages.lampType10OnGreen
                     : null;
         }
+
     }
 }

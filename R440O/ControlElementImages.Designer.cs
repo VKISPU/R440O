@@ -213,9 +213,29 @@ namespace R440O {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap buttonSquareBlack {
+        internal static System.Drawing.Bitmap buttonRoundType7 {
             get {
-                object obj = ResourceManager.GetObject("buttonSquareBlack", resourceCulture);
+                object obj = ResourceManager.GetObject("buttonRoundType7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buttonRoundType8 {
+            get {
+                object obj = ResourceManager.GetObject("buttonRoundType8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buttonSquareBlack_small {
+            get {
+                object obj = ResourceManager.GetObject("buttonSquareBlack_small", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -303,9 +323,9 @@ namespace R440O {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap buttonSquareRed {
+        internal static System.Drawing.Bitmap buttonSquareRed_small {
             get {
-                object obj = ResourceManager.GetObject("buttonSquareRed", resourceCulture);
+                object obj = ResourceManager.GetObject("buttonSquareRed_small", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -586,6 +606,26 @@ namespace R440O {
         internal static System.Drawing.Bitmap toggleType6 {
             get {
                 object obj = ResourceManager.GetObject("toggleType6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toggleType7 {
+            get {
+                object obj = ResourceManager.GetObject("toggleType7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toggleType8 {
+            get {
+                object obj = ResourceManager.GetObject("toggleType8", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

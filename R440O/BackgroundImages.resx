@@ -151,17 +151,11 @@
   <data name="C1_67" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\C1_67.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="C300M" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\C300M.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="C300PM" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\C300PM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DAB_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\DAB_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Kontur_P3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\Kontur_P.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="N12S" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\N12S.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -243,5 +237,11 @@
   </data>
   <data name="N15_inside" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\N15_inside.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kontur_P3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Kontur_P3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="C300M" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\C300M.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.C300M_1Panel = new System.Windows.Forms.Panel();
+            this.Ц300М_1ТумблерЧТОФТ = new System.Windows.Forms.Button();
+            this.Ц300М_1ТумблерАРУРРУ = new System.Windows.Forms.Button();
+            this.Ц300М_1ТумблерАСЧОткл = new System.Windows.Forms.Button();
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл = new System.Windows.Forms.Button();
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн = new System.Windows.Forms.Button();
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл = new System.Windows.Forms.Button();
+            this.Ц300М_1ТумблерВведениеЧТОФТ = new System.Windows.Forms.Button();
             this.Ц300М_1ИндикаторВолна1 = new System.Windows.Forms.Label();
             this.Ц300М_1ИндикаторВолна10 = new System.Windows.Forms.Label();
             this.Ц300М_1ИндикаторВолна100 = new System.Windows.Forms.Label();
@@ -60,13 +67,6 @@
             this.Ц300М_1КнопкаВидРаботы0d1 = new System.Windows.Forms.Button();
             this.Ц300М_1КнопкаВидРаботы0d05 = new System.Windows.Forms.Button();
             this.Ц300М_1КнопкаВидРаботы0d025 = new System.Windows.Forms.Button();
-            this.Ц300М_1ТумблерВведениеЧТОФТ = new System.Windows.Forms.Button();
-            this.Ц300М_1ТумблерПоискБлокировкаВклОткл = new System.Windows.Forms.Button();
-            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн = new System.Windows.Forms.Button();
-            this.Ц300М_1ТумблерПоискС_АналСимметрОткл = new System.Windows.Forms.Button();
-            this.Ц300М_1ТумблерАСЧОткл = new System.Windows.Forms.Button();
-            this.Ц300М_1ТумблерАРУРРУ = new System.Windows.Forms.Button();
-            this.Ц300М_1ТумблерЧТОФТ = new System.Windows.Forms.Button();
             this.C300M_1Panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,6 +116,118 @@
             this.C300M_1Panel.Name = "C300M_1Panel";
             this.C300M_1Panel.Size = new System.Drawing.Size(1100, 430);
             this.C300M_1Panel.TabIndex = 1;
+            // 
+            // Ц300М_1ТумблерЧТОФТ
+            // 
+            this.Ц300М_1ТумблерЧТОФТ.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерЧТОФТ.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
+            this.Ц300М_1ТумблерЧТОФТ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Ц300М_1ТумблерЧТОФТ.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1ТумблерЧТОФТ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерЧТОФТ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерЧТОФТ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1ТумблерЧТОФТ.Location = new System.Drawing.Point(664, 315);
+            this.Ц300М_1ТумблерЧТОФТ.Name = "Ц300М_1ТумблерЧТОФТ";
+            this.Ц300М_1ТумблерЧТОФТ.Size = new System.Drawing.Size(24, 29);
+            this.Ц300М_1ТумблерЧТОФТ.TabIndex = 47;
+            this.Ц300М_1ТумблерЧТОФТ.UseVisualStyleBackColor = false;
+            this.Ц300М_1ТумблерЧТОФТ.Click += new System.EventHandler(this.Ц300М_1ТумблерЧТОФТ_Click);
+            // 
+            // Ц300М_1ТумблерАРУРРУ
+            // 
+            this.Ц300М_1ТумблерАРУРРУ.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерАРУРРУ.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
+            this.Ц300М_1ТумблерАРУРРУ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Ц300М_1ТумблерАРУРРУ.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1ТумблерАРУРРУ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерАРУРРУ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерАРУРРУ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1ТумблерАРУРРУ.Location = new System.Drawing.Point(631, 295);
+            this.Ц300М_1ТумблерАРУРРУ.Name = "Ц300М_1ТумблерАРУРРУ";
+            this.Ц300М_1ТумблерАРУРРУ.Size = new System.Drawing.Size(24, 29);
+            this.Ц300М_1ТумблерАРУРРУ.TabIndex = 46;
+            this.Ц300М_1ТумблерАРУРРУ.UseVisualStyleBackColor = false;
+            this.Ц300М_1ТумблерАРУРРУ.Click += new System.EventHandler(this.Ц300М_1ТумблерАРУРРУ_Click);
+            // 
+            // Ц300М_1ТумблерАСЧОткл
+            // 
+            this.Ц300М_1ТумблерАСЧОткл.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерАСЧОткл.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
+            this.Ц300М_1ТумблерАСЧОткл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Ц300М_1ТумблерАСЧОткл.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1ТумблерАСЧОткл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерАСЧОткл.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерАСЧОткл.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1ТумблерАСЧОткл.Location = new System.Drawing.Point(585, 314);
+            this.Ц300М_1ТумблерАСЧОткл.Name = "Ц300М_1ТумблерАСЧОткл";
+            this.Ц300М_1ТумблерАСЧОткл.Size = new System.Drawing.Size(24, 29);
+            this.Ц300М_1ТумблерАСЧОткл.TabIndex = 45;
+            this.Ц300М_1ТумблерАСЧОткл.UseVisualStyleBackColor = false;
+            this.Ц300М_1ТумблерАСЧОткл.Click += new System.EventHandler(this.Ц300М_1ТумблерАСЧОткл_Click);
+            // 
+            // Ц300М_1ТумблерПоискС_АналСимметрОткл
+            // 
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.Location = new System.Drawing.Point(551, 317);
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.Name = "Ц300М_1ТумблерПоискС_АналСимметрОткл";
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.Size = new System.Drawing.Size(24, 29);
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.TabIndex = 44;
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.UseVisualStyleBackColor = false;
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.Click += new System.EventHandler(this.Ц300М_1ТумблерПоискС_АналСимметрОткл_Click);
+            // 
+            // Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн
+            // 
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.Location = new System.Drawing.Point(515, 316);
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.Name = "Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн";
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.Size = new System.Drawing.Size(24, 29);
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.TabIndex = 43;
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.UseVisualStyleBackColor = false;
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.Click += new System.EventHandler(this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн_Click);
+            // 
+            // Ц300М_1ТумблерПоискБлокировкаВклОткл
+            // 
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.Location = new System.Drawing.Point(426, 315);
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.Name = "Ц300М_1ТумблерПоискБлокировкаВклОткл";
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.Size = new System.Drawing.Size(24, 29);
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.TabIndex = 42;
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.UseVisualStyleBackColor = false;
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.Click += new System.EventHandler(this.Ц300М_1ТумблерПоискБлокировкаВклОткл_Click);
+            // 
+            // Ц300М_1ТумблерВведениеЧТОФТ
+            // 
+            this.Ц300М_1ТумблерВведениеЧТОФТ.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерВведениеЧТОФТ.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
+            this.Ц300М_1ТумблерВведениеЧТОФТ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Ц300М_1ТумблерВведениеЧТОФТ.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1ТумблерВведениеЧТОФТ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерВведениеЧТОФТ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерВведениеЧТОФТ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1ТумблерВведениеЧТОФТ.Location = new System.Drawing.Point(387, 315);
+            this.Ц300М_1ТумблерВведениеЧТОФТ.Name = "Ц300М_1ТумблерВведениеЧТОФТ";
+            this.Ц300М_1ТумблерВведениеЧТОФТ.Size = new System.Drawing.Size(24, 29);
+            this.Ц300М_1ТумблерВведениеЧТОФТ.TabIndex = 41;
+            this.Ц300М_1ТумблерВведениеЧТОФТ.UseVisualStyleBackColor = false;
+            this.Ц300М_1ТумблерВведениеЧТОФТ.Click += new System.EventHandler(this.Ц300М_1ТумблерВведениеЧТОФТ_Click);
             // 
             // Ц300М_1ИндикаторВолна1
             // 
@@ -655,118 +767,6 @@
             this.Ц300М_1КнопкаВидРаботы0d025.Text = "0,025";
             this.Ц300М_1КнопкаВидРаботы0d025.UseVisualStyleBackColor = false;
             this.Ц300М_1КнопкаВидРаботы0d025.Click += new System.EventHandler(this.Ц300М_1КнопкаВидРаботы0d025_Click);
-            // 
-            // Ц300М_1ТумблерВведениеЧТОФТ
-            // 
-            this.Ц300М_1ТумблерВведениеЧТОФТ.BackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1ТумблерВведениеЧТОФТ.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
-            this.Ц300М_1ТумблерВведениеЧТОФТ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Ц300М_1ТумблерВведениеЧТОФТ.FlatAppearance.BorderSize = 0;
-            this.Ц300М_1ТумблерВведениеЧТОФТ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1ТумблерВведениеЧТОФТ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1ТумблерВведениеЧТОФТ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ц300М_1ТумблерВведениеЧТОФТ.Location = new System.Drawing.Point(387, 315);
-            this.Ц300М_1ТумблерВведениеЧТОФТ.Name = "Ц300М_1ТумблерВведениеЧТОФТ";
-            this.Ц300М_1ТумблерВведениеЧТОФТ.Size = new System.Drawing.Size(24, 29);
-            this.Ц300М_1ТумблерВведениеЧТОФТ.TabIndex = 41;
-            this.Ц300М_1ТумблерВведениеЧТОФТ.UseVisualStyleBackColor = false;
-            this.Ц300М_1ТумблерВведениеЧТОФТ.Click += new System.EventHandler(this.Ц300М_1ТумблерВведениеЧТОФТ_Click);
-            // 
-            // Ц300М_1ТумблерПоискБлокировкаВклОткл
-            // 
-            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.BackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
-            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.FlatAppearance.BorderSize = 0;
-            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.Location = new System.Drawing.Point(426, 315);
-            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.Name = "Ц300М_1ТумблерПоискБлокировкаВклОткл";
-            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.Size = new System.Drawing.Size(24, 29);
-            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.TabIndex = 42;
-            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.UseVisualStyleBackColor = false;
-            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.Click += new System.EventHandler(this.Ц300М_1ТумблерПоискБлокировкаВклОткл_Click);
-            // 
-            // Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн
-            // 
-            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.BackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
-            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.FlatAppearance.BorderSize = 0;
-            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.Location = new System.Drawing.Point(515, 316);
-            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.Name = "Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн";
-            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.Size = new System.Drawing.Size(24, 29);
-            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.TabIndex = 43;
-            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.UseVisualStyleBackColor = false;
-            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.Click += new System.EventHandler(this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн_Click);
-            // 
-            // Ц300М_1ТумблерПоискС_АналСимметрОткл
-            // 
-            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.BackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
-            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.FlatAppearance.BorderSize = 0;
-            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.Location = new System.Drawing.Point(551, 317);
-            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.Name = "Ц300М_1ТумблерПоискС_АналСимметрОткл";
-            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.Size = new System.Drawing.Size(24, 29);
-            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.TabIndex = 44;
-            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.UseVisualStyleBackColor = false;
-            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.Click += new System.EventHandler(this.Ц300М_1ТумблерПоискС_АналСимметрОткл_Click);
-            // 
-            // Ц300М_1ТумблерАСЧОткл
-            // 
-            this.Ц300М_1ТумблерАСЧОткл.BackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1ТумблерАСЧОткл.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
-            this.Ц300М_1ТумблерАСЧОткл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Ц300М_1ТумблерАСЧОткл.FlatAppearance.BorderSize = 0;
-            this.Ц300М_1ТумблерАСЧОткл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1ТумблерАСЧОткл.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1ТумблерАСЧОткл.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ц300М_1ТумблерАСЧОткл.Location = new System.Drawing.Point(585, 314);
-            this.Ц300М_1ТумблерАСЧОткл.Name = "Ц300М_1ТумблерАСЧОткл";
-            this.Ц300М_1ТумблерАСЧОткл.Size = new System.Drawing.Size(24, 29);
-            this.Ц300М_1ТумблерАСЧОткл.TabIndex = 45;
-            this.Ц300М_1ТумблерАСЧОткл.UseVisualStyleBackColor = false;
-            this.Ц300М_1ТумблерАСЧОткл.Click += new System.EventHandler(this.Ц300М_1ТумблерАСЧОткл_Click);
-            // 
-            // Ц300М_1ТумблерАРУРРУ
-            // 
-            this.Ц300М_1ТумблерАРУРРУ.BackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1ТумблерАРУРРУ.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
-            this.Ц300М_1ТумблерАРУРРУ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Ц300М_1ТумблерАРУРРУ.FlatAppearance.BorderSize = 0;
-            this.Ц300М_1ТумблерАРУРРУ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1ТумблерАРУРРУ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1ТумблерАРУРРУ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ц300М_1ТумблерАРУРРУ.Location = new System.Drawing.Point(631, 295);
-            this.Ц300М_1ТумблерАРУРРУ.Name = "Ц300М_1ТумблерАРУРРУ";
-            this.Ц300М_1ТумблерАРУРРУ.Size = new System.Drawing.Size(24, 29);
-            this.Ц300М_1ТумблерАРУРРУ.TabIndex = 46;
-            this.Ц300М_1ТумблерАРУРРУ.UseVisualStyleBackColor = false;
-            this.Ц300М_1ТумблерАРУРРУ.Click += new System.EventHandler(this.Ц300М_1ТумблерАРУРРУ_Click);
-            // 
-            // Ц300М_1ТумблерЧТОФТ
-            // 
-            this.Ц300М_1ТумблерЧТОФТ.BackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1ТумблерЧТОФТ.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
-            this.Ц300М_1ТумблерЧТОФТ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Ц300М_1ТумблерЧТОФТ.FlatAppearance.BorderSize = 0;
-            this.Ц300М_1ТумблерЧТОФТ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1ТумблерЧТОФТ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1ТумблерЧТОФТ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ц300М_1ТумблерЧТОФТ.Location = new System.Drawing.Point(664, 315);
-            this.Ц300М_1ТумблерЧТОФТ.Name = "Ц300М_1ТумблерЧТОФТ";
-            this.Ц300М_1ТумблерЧТОФТ.Size = new System.Drawing.Size(24, 29);
-            this.Ц300М_1ТумблерЧТОФТ.TabIndex = 47;
-            this.Ц300М_1ТумблерЧТОФТ.UseVisualStyleBackColor = false;
-            this.Ц300М_1ТумблерЧТОФТ.Click += new System.EventHandler(this.Ц300М_1ТумблерЧТОФТ_Click);
             // 
             // C300M_1Form
             // 

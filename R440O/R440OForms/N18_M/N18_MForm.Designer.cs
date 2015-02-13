@@ -44,13 +44,43 @@
             this.N18_MТумблерПРД_СС = new System.Windows.Forms.Button();
             this.N18_MТумблерКАУ_ПРМ = new System.Windows.Forms.Button();
             this.N18_MТумблерДАБ5 = new System.Windows.Forms.Button();
+            this.N18_MЛампочкаСПСТест = new System.Windows.Forms.PictureBox();
+            this.N18_MЛампочкаСПСИнформ = new System.Windows.Forms.PictureBox();
+            this.N18_MЛампочкаПилотК1_1 = new System.Windows.Forms.PictureBox();
+            this.N18_MЛампочкаПилотК1_2 = new System.Windows.Forms.PictureBox();
+            this.N18_MЛампочкаИнформК1_1 = new System.Windows.Forms.PictureBox();
+            this.N18_MЛампочкаИнформК1_2 = new System.Windows.Forms.PictureBox();
+            this.N18_MЛампочкаКЗТЛГ1 = new System.Windows.Forms.PictureBox();
+            this.N18_MЛампочкаКЗТЛГ2 = new System.Windows.Forms.PictureBox();
+            this.N18_MЛампочкаКЗТЛГ3 = new System.Windows.Forms.PictureBox();
+            this.N18_MЛампочкаКЗТЛГ4 = new System.Windows.Forms.PictureBox();
             this.N18_MPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.N18_MЛампочкаСПСТест)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N18_MЛампочкаСПСИнформ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N18_MЛампочкаПилотК1_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N18_MЛампочкаПилотК1_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N18_MЛампочкаИнформК1_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N18_MЛампочкаИнформК1_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N18_MЛампочкаКЗТЛГ1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N18_MЛампочкаКЗТЛГ2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N18_MЛампочкаКЗТЛГ3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N18_MЛампочкаКЗТЛГ4)).BeginInit();
             this.SuspendLayout();
             // 
             // N18_MPanel
             // 
             this.N18_MPanel.BackgroundImage = global::R440O.BackgroundImages.N18_M;
             this.N18_MPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.N18_MPanel.Controls.Add(this.N18_MЛампочкаКЗТЛГ4);
+            this.N18_MPanel.Controls.Add(this.N18_MЛампочкаКЗТЛГ3);
+            this.N18_MPanel.Controls.Add(this.N18_MЛампочкаКЗТЛГ2);
+            this.N18_MPanel.Controls.Add(this.N18_MЛампочкаКЗТЛГ1);
+            this.N18_MPanel.Controls.Add(this.N18_MЛампочкаИнформК1_2);
+            this.N18_MPanel.Controls.Add(this.N18_MЛампочкаИнформК1_1);
+            this.N18_MPanel.Controls.Add(this.N18_MЛампочкаПилотК1_2);
+            this.N18_MPanel.Controls.Add(this.N18_MЛампочкаПилотК1_1);
+            this.N18_MPanel.Controls.Add(this.N18_MЛампочкаСПСИнформ);
+            this.N18_MPanel.Controls.Add(this.N18_MЛампочкаСПСТест);
             this.N18_MPanel.Controls.Add(this.N18_MПереключательВходБ22);
             this.N18_MPanel.Controls.Add(this.N18_MПереключательВыход1РН);
             this.N18_MPanel.Controls.Add(this.N18_MПереключательВыход2РН);
@@ -311,6 +341,106 @@
             this.N18_MТумблерДАБ5.UseVisualStyleBackColor = false;
             this.N18_MТумблерДАБ5.Click += new System.EventHandler(this.N18_MТумблерДАБ5_Click);
             // 
+            // N18_MЛампочкаСПСТест
+            // 
+            this.N18_MЛампочкаСПСТест.BackColor = System.Drawing.Color.Transparent;
+            this.N18_MЛампочкаСПСТест.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.N18_MЛампочкаСПСТест.Location = new System.Drawing.Point(165, 32);
+            this.N18_MЛампочкаСПСТест.Name = "N18_MЛампочкаСПСТест";
+            this.N18_MЛампочкаСПСТест.Size = new System.Drawing.Size(15, 16);
+            this.N18_MЛампочкаСПСТест.TabIndex = 44;
+            this.N18_MЛампочкаСПСТест.TabStop = false;
+            // 
+            // N18_MЛампочкаСПСИнформ
+            // 
+            this.N18_MЛампочкаСПСИнформ.BackColor = System.Drawing.Color.Transparent;
+            this.N18_MЛампочкаСПСИнформ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.N18_MЛампочкаСПСИнформ.Location = new System.Drawing.Point(205, 32);
+            this.N18_MЛампочкаСПСИнформ.Name = "N18_MЛампочкаСПСИнформ";
+            this.N18_MЛампочкаСПСИнформ.Size = new System.Drawing.Size(15, 16);
+            this.N18_MЛампочкаСПСИнформ.TabIndex = 45;
+            this.N18_MЛампочкаСПСИнформ.TabStop = false;
+            // 
+            // N18_MЛампочкаПилотК1_1
+            // 
+            this.N18_MЛампочкаПилотК1_1.BackColor = System.Drawing.Color.Transparent;
+            this.N18_MЛампочкаПилотК1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.N18_MЛампочкаПилотК1_1.Location = new System.Drawing.Point(242, 32);
+            this.N18_MЛампочкаПилотК1_1.Name = "N18_MЛампочкаПилотК1_1";
+            this.N18_MЛампочкаПилотК1_1.Size = new System.Drawing.Size(15, 16);
+            this.N18_MЛампочкаПилотК1_1.TabIndex = 46;
+            this.N18_MЛампочкаПилотК1_1.TabStop = false;
+            // 
+            // N18_MЛампочкаПилотК1_2
+            // 
+            this.N18_MЛампочкаПилотК1_2.BackColor = System.Drawing.Color.Transparent;
+            this.N18_MЛампочкаПилотК1_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.N18_MЛампочкаПилотК1_2.Location = new System.Drawing.Point(276, 32);
+            this.N18_MЛампочкаПилотК1_2.Name = "N18_MЛампочкаПилотК1_2";
+            this.N18_MЛампочкаПилотК1_2.Size = new System.Drawing.Size(15, 16);
+            this.N18_MЛампочкаПилотК1_2.TabIndex = 47;
+            this.N18_MЛампочкаПилотК1_2.TabStop = false;
+            // 
+            // N18_MЛампочкаИнформК1_1
+            // 
+            this.N18_MЛампочкаИнформК1_1.BackColor = System.Drawing.Color.Transparent;
+            this.N18_MЛампочкаИнформК1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.N18_MЛампочкаИнформК1_1.Location = new System.Drawing.Point(308, 32);
+            this.N18_MЛампочкаИнформК1_1.Name = "N18_MЛампочкаИнформК1_1";
+            this.N18_MЛампочкаИнформК1_1.Size = new System.Drawing.Size(15, 16);
+            this.N18_MЛампочкаИнформК1_1.TabIndex = 48;
+            this.N18_MЛампочкаИнформК1_1.TabStop = false;
+            // 
+            // N18_MЛампочкаИнформК1_2
+            // 
+            this.N18_MЛампочкаИнформК1_2.BackColor = System.Drawing.Color.Transparent;
+            this.N18_MЛампочкаИнформК1_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.N18_MЛампочкаИнформК1_2.Location = new System.Drawing.Point(340, 32);
+            this.N18_MЛампочкаИнформК1_2.Name = "N18_MЛампочкаИнформК1_2";
+            this.N18_MЛампочкаИнформК1_2.Size = new System.Drawing.Size(15, 16);
+            this.N18_MЛампочкаИнформК1_2.TabIndex = 49;
+            this.N18_MЛампочкаИнформК1_2.TabStop = false;
+            // 
+            // N18_MЛампочкаКЗТЛГ1
+            // 
+            this.N18_MЛампочкаКЗТЛГ1.BackColor = System.Drawing.Color.Transparent;
+            this.N18_MЛампочкаКЗТЛГ1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.N18_MЛампочкаКЗТЛГ1.Location = new System.Drawing.Point(20, 11);
+            this.N18_MЛампочкаКЗТЛГ1.Name = "N18_MЛампочкаКЗТЛГ1";
+            this.N18_MЛампочкаКЗТЛГ1.Size = new System.Drawing.Size(26, 25);
+            this.N18_MЛампочкаКЗТЛГ1.TabIndex = 50;
+            this.N18_MЛампочкаКЗТЛГ1.TabStop = false;
+            // 
+            // N18_MЛампочкаКЗТЛГ2
+            // 
+            this.N18_MЛампочкаКЗТЛГ2.BackColor = System.Drawing.Color.Transparent;
+            this.N18_MЛампочкаКЗТЛГ2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.N18_MЛампочкаКЗТЛГ2.Location = new System.Drawing.Point(20, 38);
+            this.N18_MЛампочкаКЗТЛГ2.Name = "N18_MЛампочкаКЗТЛГ2";
+            this.N18_MЛампочкаКЗТЛГ2.Size = new System.Drawing.Size(26, 25);
+            this.N18_MЛампочкаКЗТЛГ2.TabIndex = 51;
+            this.N18_MЛампочкаКЗТЛГ2.TabStop = false;
+            // 
+            // N18_MЛампочкаКЗТЛГ3
+            // 
+            this.N18_MЛампочкаКЗТЛГ3.BackColor = System.Drawing.Color.Transparent;
+            this.N18_MЛампочкаКЗТЛГ3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.N18_MЛампочкаКЗТЛГ3.Location = new System.Drawing.Point(90, 11);
+            this.N18_MЛампочкаКЗТЛГ3.Name = "N18_MЛампочкаКЗТЛГ3";
+            this.N18_MЛампочкаКЗТЛГ3.Size = new System.Drawing.Size(26, 25);
+            this.N18_MЛампочкаКЗТЛГ3.TabIndex = 52;
+            this.N18_MЛампочкаКЗТЛГ3.TabStop = false;
+            // 
+            // N18_MЛампочкаКЗТЛГ4
+            // 
+            this.N18_MЛампочкаКЗТЛГ4.BackColor = System.Drawing.Color.Transparent;
+            this.N18_MЛампочкаКЗТЛГ4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.N18_MЛампочкаКЗТЛГ4.Location = new System.Drawing.Point(90, 38);
+            this.N18_MЛампочкаКЗТЛГ4.Name = "N18_MЛампочкаКЗТЛГ4";
+            this.N18_MЛампочкаКЗТЛГ4.Size = new System.Drawing.Size(26, 25);
+            this.N18_MЛампочкаКЗТЛГ4.TabIndex = 53;
+            this.N18_MЛампочкаКЗТЛГ4.TabStop = false;
+            // 
             // N18_MForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -322,6 +452,16 @@
             this.Name = "N18_MForm";
             this.Text = "Н18-М";
             this.N18_MPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.N18_MЛампочкаСПСТест)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N18_MЛампочкаСПСИнформ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N18_MЛампочкаПилотК1_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N18_MЛампочкаПилотК1_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N18_MЛампочкаИнформК1_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N18_MЛампочкаИнформК1_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N18_MЛампочкаКЗТЛГ1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N18_MЛампочкаКЗТЛГ2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N18_MЛампочкаКЗТЛГ3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N18_MЛампочкаКЗТЛГ4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -344,5 +484,15 @@
         private System.Windows.Forms.Button N18_MПереключательВыход2РН;
         private System.Windows.Forms.Button N18_MПереключательВыход1РН;
         private System.Windows.Forms.Button N18_MПереключательВходБ22;
+        private System.Windows.Forms.PictureBox N18_MЛампочкаИнформК1_2;
+        private System.Windows.Forms.PictureBox N18_MЛампочкаИнформК1_1;
+        private System.Windows.Forms.PictureBox N18_MЛампочкаПилотК1_2;
+        private System.Windows.Forms.PictureBox N18_MЛампочкаПилотК1_1;
+        private System.Windows.Forms.PictureBox N18_MЛампочкаСПСИнформ;
+        private System.Windows.Forms.PictureBox N18_MЛампочкаСПСТест;
+        private System.Windows.Forms.PictureBox N18_MЛампочкаКЗТЛГ1;
+        private System.Windows.Forms.PictureBox N18_MЛампочкаКЗТЛГ4;
+        private System.Windows.Forms.PictureBox N18_MЛампочкаКЗТЛГ3;
+        private System.Windows.Forms.PictureBox N18_MЛампочкаКЗТЛГ2;
     }
 }

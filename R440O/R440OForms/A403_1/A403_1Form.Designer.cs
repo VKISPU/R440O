@@ -65,13 +65,28 @@
             this.A403_1ТумблерГотов = new System.Windows.Forms.Button();
             this.A403_1ТумблерКомплект = new System.Windows.Forms.Button();
             this.A403_1ТумблерСеть = new System.Windows.Forms.Button();
+            this.A403_1ЛампочкаНеисправностьАПН = new System.Windows.Forms.PictureBox();
+            this.A403_1ЛампочкаНеисправностьФС = new System.Windows.Forms.PictureBox();
+            this.A403_1ЛампочкаНеисправностьРИ = new System.Windows.Forms.PictureBox();
+            this.A403_1ЛампочкаКомплект1 = new System.Windows.Forms.PictureBox();
+            this.A403_1ЛампочкаКомплект2 = new System.Windows.Forms.PictureBox();
             this.A403_1Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.A403_1ЛампочкаНеисправностьАПН)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A403_1ЛампочкаНеисправностьФС)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A403_1ЛампочкаНеисправностьРИ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A403_1ЛампочкаКомплект1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A403_1ЛампочкаКомплект2)).BeginInit();
             this.SuspendLayout();
             // 
             // A403_1Panel
             // 
             this.A403_1Panel.BackgroundImage = global::R440O.BackgroundImages.A403_1;
             this.A403_1Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A403_1Panel.Controls.Add(this.A403_1ЛампочкаКомплект2);
+            this.A403_1Panel.Controls.Add(this.A403_1ЛампочкаКомплект1);
+            this.A403_1Panel.Controls.Add(this.A403_1ЛампочкаНеисправностьРИ);
+            this.A403_1Panel.Controls.Add(this.A403_1ЛампочкаНеисправностьФС);
+            this.A403_1Panel.Controls.Add(this.A403_1ЛампочкаНеисправностьАПН);
             this.A403_1Panel.Controls.Add(this.label7);
             this.A403_1Panel.Controls.Add(this.A403_1ТаблоПоле6);
             this.A403_1Panel.Controls.Add(this.A403_1ТаблоПоле5);
@@ -729,6 +744,56 @@
             this.A403_1ТумблерСеть.UseVisualStyleBackColor = false;
             this.A403_1ТумблерСеть.Click += new System.EventHandler(this.A403_1ТумблерСеть_Click);
             // 
+            // A403_1ЛампочкаНеисправностьАПН
+            // 
+            this.A403_1ЛампочкаНеисправностьАПН.BackColor = System.Drawing.Color.Transparent;
+            this.A403_1ЛампочкаНеисправностьАПН.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.A403_1ЛампочкаНеисправностьАПН.Location = new System.Drawing.Point(135, 90);
+            this.A403_1ЛампочкаНеисправностьАПН.Name = "A403_1ЛампочкаНеисправностьАПН";
+            this.A403_1ЛампочкаНеисправностьАПН.Size = new System.Drawing.Size(26, 25);
+            this.A403_1ЛампочкаНеисправностьАПН.TabIndex = 59;
+            this.A403_1ЛампочкаНеисправностьАПН.TabStop = false;
+            // 
+            // A403_1ЛампочкаНеисправностьФС
+            // 
+            this.A403_1ЛампочкаНеисправностьФС.BackColor = System.Drawing.Color.Transparent;
+            this.A403_1ЛампочкаНеисправностьФС.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.A403_1ЛампочкаНеисправностьФС.Location = new System.Drawing.Point(178, 90);
+            this.A403_1ЛампочкаНеисправностьФС.Name = "A403_1ЛампочкаНеисправностьФС";
+            this.A403_1ЛампочкаНеисправностьФС.Size = new System.Drawing.Size(26, 25);
+            this.A403_1ЛампочкаНеисправностьФС.TabIndex = 60;
+            this.A403_1ЛампочкаНеисправностьФС.TabStop = false;
+            // 
+            // A403_1ЛампочкаНеисправностьРИ
+            // 
+            this.A403_1ЛампочкаНеисправностьРИ.BackColor = System.Drawing.Color.Transparent;
+            this.A403_1ЛампочкаНеисправностьРИ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.A403_1ЛампочкаНеисправностьРИ.Location = new System.Drawing.Point(220, 90);
+            this.A403_1ЛампочкаНеисправностьРИ.Name = "A403_1ЛампочкаНеисправностьРИ";
+            this.A403_1ЛампочкаНеисправностьРИ.Size = new System.Drawing.Size(26, 25);
+            this.A403_1ЛампочкаНеисправностьРИ.TabIndex = 61;
+            this.A403_1ЛампочкаНеисправностьРИ.TabStop = false;
+            // 
+            // A403_1ЛампочкаКомплект1
+            // 
+            this.A403_1ЛампочкаКомплект1.BackColor = System.Drawing.Color.Transparent;
+            this.A403_1ЛампочкаКомплект1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.A403_1ЛампочкаКомплект1.Location = new System.Drawing.Point(300, 90);
+            this.A403_1ЛампочкаКомплект1.Name = "A403_1ЛампочкаКомплект1";
+            this.A403_1ЛампочкаКомплект1.Size = new System.Drawing.Size(26, 25);
+            this.A403_1ЛампочкаКомплект1.TabIndex = 62;
+            this.A403_1ЛампочкаКомплект1.TabStop = false;
+            // 
+            // A403_1ЛампочкаКомплект2
+            // 
+            this.A403_1ЛампочкаКомплект2.BackColor = System.Drawing.Color.Transparent;
+            this.A403_1ЛампочкаКомплект2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.A403_1ЛампочкаКомплект2.Location = new System.Drawing.Point(367, 90);
+            this.A403_1ЛампочкаКомплект2.Name = "A403_1ЛампочкаКомплект2";
+            this.A403_1ЛампочкаКомплект2.Size = new System.Drawing.Size(26, 25);
+            this.A403_1ЛампочкаКомплект2.TabIndex = 63;
+            this.A403_1ЛампочкаКомплект2.TabStop = false;
+            // 
             // A403_1Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -741,6 +806,11 @@
             this.Text = "A403-1";
             this.A403_1Panel.ResumeLayout(false);
             this.A403_1Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.A403_1ЛампочкаНеисправностьАПН)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A403_1ЛампочкаНеисправностьФС)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A403_1ЛампочкаНеисправностьРИ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A403_1ЛампочкаКомплект1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A403_1ЛампочкаКомплект2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -784,5 +854,10 @@
         private System.Windows.Forms.Label A403_1ТаблоПоле3;
         private System.Windows.Forms.Label A403_1ТаблоПоле4;
         private System.Windows.Forms.Label A403_1ТаблоПоле2;
+        private System.Windows.Forms.PictureBox A403_1ЛампочкаНеисправностьАПН;
+        private System.Windows.Forms.PictureBox A403_1ЛампочкаКомплект2;
+        private System.Windows.Forms.PictureBox A403_1ЛампочкаКомплект1;
+        private System.Windows.Forms.PictureBox A403_1ЛампочкаНеисправностьРИ;
+        private System.Windows.Forms.PictureBox A403_1ЛампочкаНеисправностьФС;
     }
 }

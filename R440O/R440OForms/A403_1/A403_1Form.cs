@@ -477,7 +477,7 @@ namespace R440O.R440OForms.A403_1
 
         private void A403_1Кнопкаtуст_Ybeta_Click(object sender, System.EventArgs e)
         {
-            
+
             this.A403_1Кнопкаtуст_Ybeta.Visible = false;
             A403_1Parameters.A403_1Кнопкаtуст_Ybeta = true;
             switch (A403_1Parameters.A403_1ТумблерГруппа)

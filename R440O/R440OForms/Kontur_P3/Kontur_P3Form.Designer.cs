@@ -29,27 +29,48 @@
         private void InitializeComponent()
         {
             this.Kontur_P3Panel = new System.Windows.Forms.Panel();
-            this.Контур_П3КнопкаКП5Подпись1 = new System.Windows.Forms.Button();
-            this.Контур_П3КнопкаКП5АдресК = new System.Windows.Forms.Button();
-            this.Контур_П3КнопкаКП5АдресУСС = new System.Windows.Forms.Button();
-            this.Контур_П3КнопкаКП6Пуск = new System.Windows.Forms.Button();
-            this.Контур_П3КнопкаКП4Контроль = new System.Windows.Forms.Button();
-            this.Контур_П3КнопкаКП3КонтрольКанал12 = new System.Windows.Forms.Button();
-            this.Контур_П3КнопкаКП3КонтрольКанал11 = new System.Windows.Forms.Button();
-            this.Контур_П3КнопкаКП3КонтрольКанал10 = new System.Windows.Forms.Button();
-            this.Контур_П3КнопкаКП2НачИнформ = new System.Windows.Forms.Button();
-            this.Контур_П3КнопкаКП2Сдвиг10 = new System.Windows.Forms.Button();
-            this.Контур_П3КнопкаКП2Сдвиг1 = new System.Windows.Forms.Button();
-            this.Контур_П3КнопкаКП1Контроль = new System.Windows.Forms.Button();
-            this.Контур_П3КнопкаКП5Подпись2 = new System.Windows.Forms.Button();
-            this.Контур_П3КнопкаКП5Подпись3 = new System.Windows.Forms.Button();
-            this.Контур_П3КнопкаКП5Группа = new System.Windows.Forms.Button();
-            this.Контур_П3КнопкаКП5ОбщийС = new System.Windows.Forms.Button();
-            this.Контур_П3КнопкаКП5ПередачаВызов = new System.Windows.Forms.Button();
-            this.Контур_П3КнопкаКП5ПередачаПУОтбой = new System.Windows.Forms.Button();
-            this.Контур_П3КнопкаКП5ПередачаИнформ = new System.Windows.Forms.Button();
-            this.Контур_П3КнопкаКП5ПередачаНаборККПРМ = new System.Windows.Forms.Button();
-            this.Контур_П3КнопкаКП5ПередачаКонтрольЗанятости = new System.Windows.Forms.Button();
+            this.Kontur_P3Кнопка9 = new System.Windows.Forms.Button();
+            this.Kontur_P3Кнопка8 = new System.Windows.Forms.Button();
+            this.Kontur_P3Кнопка6 = new System.Windows.Forms.Button();
+            this.Kontur_P3Кнопка3 = new System.Windows.Forms.Button();
+            this.Kontur_P3Кнопка5 = new System.Windows.Forms.Button();
+            this.Kontur_P3Кнопка2 = new System.Windows.Forms.Button();
+            this.Kontur_P3Кнопка0 = new System.Windows.Forms.Button();
+            this.Kontur_P3Кнопка1 = new System.Windows.Forms.Button();
+            this.Kontur_P3Кнопка4 = new System.Windows.Forms.Button();
+            this.Kontur_P3Кнопка7 = new System.Windows.Forms.Button();
+            this.Kontur_P3КнопкаКонтрольЗанятости = new System.Windows.Forms.Button();
+            this.Kontur_P3КнопкаИнформ = new System.Windows.Forms.Button();
+            this.Kontur_P3КнопкаОтбой = new System.Windows.Forms.Button();
+            this.Kontur_P3КнопкаВызов = new System.Windows.Forms.Button();
+            this.Kontur_P3КнопкаОтклЗС = new System.Windows.Forms.Button();
+            this.Kontur_P3КнопкаГруппа = new System.Windows.Forms.Button();
+            this.Kontur_P3КнопкаАдресК = new System.Windows.Forms.Button();
+            this.Kontur_P3КнопкаАдресУСС = new System.Windows.Forms.Button();
+            this.Kontur_P3КнопкаНаборКК = new System.Windows.Forms.Button();
+            this.Kontur_P3КнопкаИнформКОН = new System.Windows.Forms.Button();
+            this.Kontur_P3КнопкаИнформС = new System.Windows.Forms.Button();
+            this.Kontur_P3КнопкаОбщийС = new System.Windows.Forms.Button();
+            this.Kontur_P3КнопкаПодпись3 = new System.Windows.Forms.Button();
+            this.Kontur_P3КнопкаПодпись2 = new System.Windows.Forms.Button();
+            this.Kontur_P3КнопкаПодпись1 = new System.Windows.Forms.Button();
+            this.Kontur_P3КнопкаПуск = new System.Windows.Forms.Button();
+            this.Kontur_P3КнопкаКП4Контроль = new System.Windows.Forms.Button();
+            this.Kontur_P3КнопкаКан12 = new System.Windows.Forms.Button();
+            this.Kontur_P3КнопкаКан11 = new System.Windows.Forms.Button();
+            this.Kontur_P3КнопкаКан10 = new System.Windows.Forms.Button();
+            this.Kontur_P3КнопкаКП1Контроль = new System.Windows.Forms.Button();
+            this.Kontur_P3КнопкаНачИнформ = new System.Windows.Forms.Button();
+            this.Kontur_P3КнопкаСдвиг10 = new System.Windows.Forms.Button();
+            this.Kontur_P3КнопкаСдвиг1 = new System.Windows.Forms.Button();
+            this.Kontur_P3ТумблерСеть = new System.Windows.Forms.Button();
+            this.Kontur_P3ТумблерДокументирование = new System.Windows.Forms.Button();
+            this.Kontur_P3ТумблерРежим = new System.Windows.Forms.Button();
+            this.Kontur_P3ТумблерАсинхрСинхр = new System.Windows.Forms.Button();
+            this.Kontur_P3ТумблерМткПУ = new System.Windows.Forms.Button();
+            this.Kontur_P3ТумблерКонтроль = new System.Windows.Forms.Button();
+            this.Kontur_P3ПереключательПриоритет = new System.Windows.Forms.Button();
+            this.Kontur_P3ПереключательКонтроль = new System.Windows.Forms.Button();
             this.Kontur_P3Panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,419 +78,840 @@
             // 
             this.Kontur_P3Panel.BackgroundImage = global::R440O.BackgroundImages.Kontur_P3;
             this.Kontur_P3Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Kontur_P3Panel.Controls.Add(this.Контур_П3КнопкаКП5ПередачаКонтрольЗанятости);
-            this.Kontur_P3Panel.Controls.Add(this.Контур_П3КнопкаКП5ПередачаНаборККПРМ);
-            this.Kontur_P3Panel.Controls.Add(this.Контур_П3КнопкаКП5ПередачаИнформ);
-            this.Kontur_P3Panel.Controls.Add(this.Контур_П3КнопкаКП5ПередачаПУОтбой);
-            this.Kontur_P3Panel.Controls.Add(this.Контур_П3КнопкаКП5ПередачаВызов);
-            this.Kontur_P3Panel.Controls.Add(this.Контур_П3КнопкаКП5ОбщийС);
-            this.Kontur_P3Panel.Controls.Add(this.Контур_П3КнопкаКП5Группа);
-            this.Kontur_P3Panel.Controls.Add(this.Контур_П3КнопкаКП5Подпись3);
-            this.Kontur_P3Panel.Controls.Add(this.Контур_П3КнопкаКП5Подпись2);
-            this.Kontur_P3Panel.Controls.Add(this.Контур_П3КнопкаКП5Подпись1);
-            this.Kontur_P3Panel.Controls.Add(this.Контур_П3КнопкаКП5АдресК);
-            this.Kontur_P3Panel.Controls.Add(this.Контур_П3КнопкаКП5АдресУСС);
-            this.Kontur_P3Panel.Controls.Add(this.Контур_П3КнопкаКП6Пуск);
-            this.Kontur_P3Panel.Controls.Add(this.Контур_П3КнопкаКП4Контроль);
-            this.Kontur_P3Panel.Controls.Add(this.Контур_П3КнопкаКП3КонтрольКанал12);
-            this.Kontur_P3Panel.Controls.Add(this.Контур_П3КнопкаКП3КонтрольКанал11);
-            this.Kontur_P3Panel.Controls.Add(this.Контур_П3КнопкаКП3КонтрольКанал10);
-            this.Kontur_P3Panel.Controls.Add(this.Контур_П3КнопкаКП2НачИнформ);
-            this.Kontur_P3Panel.Controls.Add(this.Контур_П3КнопкаКП2Сдвиг10);
-            this.Kontur_P3Panel.Controls.Add(this.Контур_П3КнопкаКП2Сдвиг1);
-            this.Kontur_P3Panel.Controls.Add(this.Контур_П3КнопкаКП1Контроль);
-            this.Kontur_P3Panel.Location = new System.Drawing.Point(0, 0);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3Кнопка9);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3Кнопка8);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3Кнопка6);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3Кнопка3);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3Кнопка5);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3Кнопка2);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3Кнопка0);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3Кнопка1);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3Кнопка4);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3Кнопка7);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3КнопкаКонтрольЗанятости);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3КнопкаИнформ);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3КнопкаОтбой);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3КнопкаВызов);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3КнопкаОтклЗС);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3КнопкаГруппа);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3КнопкаАдресК);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3КнопкаАдресУСС);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3КнопкаНаборКК);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3КнопкаИнформКОН);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3КнопкаИнформС);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3КнопкаОбщийС);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3КнопкаПодпись3);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3КнопкаПодпись2);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3КнопкаПодпись1);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3КнопкаПуск);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3КнопкаКП4Контроль);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3КнопкаКан12);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3КнопкаКан11);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3КнопкаКан10);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3КнопкаКП1Контроль);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3КнопкаНачИнформ);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3КнопкаСдвиг10);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3КнопкаСдвиг1);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ТумблерСеть);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ТумблерДокументирование);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ТумблерРежим);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ТумблерАсинхрСинхр);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ТумблерМткПУ);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ТумблерКонтроль);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ПереключательПриоритет);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ПереключательКонтроль);
+            this.Kontur_P3Panel.Location = new System.Drawing.Point(-2, 1);
             this.Kontur_P3Panel.Name = "Kontur_P3Panel";
             this.Kontur_P3Panel.Size = new System.Drawing.Size(1109, 409);
             this.Kontur_P3Panel.TabIndex = 1;
             // 
-            // Контур_П3КнопкаКП5Подпись1
+            // Kontur_P3Кнопка9
             // 
-            this.Контур_П3КнопкаКП5Подпись1.BackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5Подпись1.BackgroundImage = global::R440O.ControlElementImages.buttonSquareRed;
-            this.Контур_П3КнопкаКП5Подпись1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Контур_П3КнопкаКП5Подпись1.FlatAppearance.BorderSize = 0;
-            this.Контур_П3КнопкаКП5Подпись1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5Подпись1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5Подпись1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Контур_П3КнопкаКП5Подпись1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Контур_П3КнопкаКП5Подпись1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Контур_П3КнопкаКП5Подпись1.Location = new System.Drawing.Point(613, 176);
-            this.Контур_П3КнопкаКП5Подпись1.Name = "Контур_П3КнопкаКП5Подпись1";
-            this.Контур_П3КнопкаКП5Подпись1.Size = new System.Drawing.Size(22, 21);
-            this.Контур_П3КнопкаКП5Подпись1.TabIndex = 61;
-            this.Контур_П3КнопкаКП5Подпись1.Text = "1";
-            this.Контур_П3КнопкаКП5Подпись1.UseVisualStyleBackColor = false;
-            this.Контур_П3КнопкаКП5Подпись1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП5Подпись1_MouseDown);
-            this.Контур_П3КнопкаКП5Подпись1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП5Подпись1_MouseUp);
+            this.Kontur_P3Кнопка9.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка9.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack_small;
+            this.Kontur_P3Кнопка9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3Кнопка9.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3Кнопка9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3Кнопка9.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.Kontur_P3Кнопка9.ForeColor = System.Drawing.Color.White;
+            this.Kontur_P3Кнопка9.Location = new System.Drawing.Point(786, 212);
+            this.Kontur_P3Кнопка9.Name = "Kontur_P3Кнопка9";
+            this.Kontur_P3Кнопка9.Size = new System.Drawing.Size(25, 26);
+            this.Kontur_P3Кнопка9.TabIndex = 60;
+            this.Kontur_P3Кнопка9.Text = " 9";
+            this.Kontur_P3Кнопка9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Kontur_P3Кнопка9.UseVisualStyleBackColor = false;
+            this.Kontur_P3Кнопка9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3Кнопка9_MouseDown);
+            this.Kontur_P3Кнопка9.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3Кнопка9_MouseUp);
             // 
-            // Контур_П3КнопкаКП5АдресК
+            // Kontur_P3Кнопка8
             // 
-            this.Контур_П3КнопкаКП5АдресК.BackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5АдресК.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack;
-            this.Контур_П3КнопкаКП5АдресК.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Контур_П3КнопкаКП5АдресК.FlatAppearance.BorderSize = 0;
-            this.Контур_П3КнопкаКП5АдресК.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5АдресК.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5АдресК.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Контур_П3КнопкаКП5АдресК.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Контур_П3КнопкаКП5АдресК.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Контур_П3КнопкаКП5АдресК.Location = new System.Drawing.Point(582, 177);
-            this.Контур_П3КнопкаКП5АдресК.Name = "Контур_П3КнопкаКП5АдресК";
-            this.Контур_П3КнопкаКП5АдресК.Size = new System.Drawing.Size(22, 21);
-            this.Контур_П3КнопкаКП5АдресК.TabIndex = 60;
-            this.Контур_П3КнопкаКП5АдресК.Text = "К";
-            this.Контур_П3КнопкаКП5АдресК.UseVisualStyleBackColor = false;
-            this.Контур_П3КнопкаКП5АдресК.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП5АдресК_MouseDown);
-            this.Контур_П3КнопкаКП5АдресК.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП5АдресК_MouseUp);
+            this.Kontur_P3Кнопка8.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка8.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack_small;
+            this.Kontur_P3Кнопка8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3Кнопка8.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3Кнопка8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3Кнопка8.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.Kontur_P3Кнопка8.ForeColor = System.Drawing.Color.White;
+            this.Kontur_P3Кнопка8.Location = new System.Drawing.Point(755, 212);
+            this.Kontur_P3Кнопка8.Name = "Kontur_P3Кнопка8";
+            this.Kontur_P3Кнопка8.Size = new System.Drawing.Size(25, 26);
+            this.Kontur_P3Кнопка8.TabIndex = 59;
+            this.Kontur_P3Кнопка8.Text = " 8";
+            this.Kontur_P3Кнопка8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Kontur_P3Кнопка8.UseVisualStyleBackColor = false;
+            this.Kontur_P3Кнопка8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3Кнопка8_MouseDown);
+            this.Kontur_P3Кнопка8.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3Кнопка8_MouseUp);
             // 
-            // Контур_П3КнопкаКП5АдресУСС
+            // Kontur_P3Кнопка6
             // 
-            this.Контур_П3КнопкаКП5АдресУСС.BackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5АдресУСС.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack;
-            this.Контур_П3КнопкаКП5АдресУСС.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Контур_П3КнопкаКП5АдресУСС.FlatAppearance.BorderSize = 0;
-            this.Контур_П3КнопкаКП5АдресУСС.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5АдресУСС.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5АдресУСС.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Контур_П3КнопкаКП5АдресУСС.Font = new System.Drawing.Font("Microsoft Sans Serif", 3.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Контур_П3КнопкаКП5АдресУСС.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Контур_П3КнопкаКП5АдресУСС.Location = new System.Drawing.Point(536, 177);
-            this.Контур_П3КнопкаКП5АдресУСС.Name = "Контур_П3КнопкаКП5АдресУСС";
-            this.Контур_П3КнопкаКП5АдресУСС.Size = new System.Drawing.Size(22, 21);
-            this.Контур_П3КнопкаКП5АдресУСС.TabIndex = 59;
-            this.Контур_П3КнопкаКП5АдресУСС.Text = "УСС";
-            this.Контур_П3КнопкаКП5АдресУСС.UseVisualStyleBackColor = false;
-            this.Контур_П3КнопкаКП5АдресУСС.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП5АдресУСС_MouseDown);
-            this.Контур_П3КнопкаКП5АдресУСС.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП5АдресУСС_MouseUp);
+            this.Kontur_P3Кнопка6.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка6.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack_small;
+            this.Kontur_P3Кнопка6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3Кнопка6.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3Кнопка6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3Кнопка6.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.Kontur_P3Кнопка6.ForeColor = System.Drawing.Color.White;
+            this.Kontur_P3Кнопка6.Location = new System.Drawing.Point(786, 240);
+            this.Kontur_P3Кнопка6.Name = "Kontur_P3Кнопка6";
+            this.Kontur_P3Кнопка6.Size = new System.Drawing.Size(25, 26);
+            this.Kontur_P3Кнопка6.TabIndex = 58;
+            this.Kontur_P3Кнопка6.Text = " 6";
+            this.Kontur_P3Кнопка6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Kontur_P3Кнопка6.UseVisualStyleBackColor = false;
+            this.Kontur_P3Кнопка6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3Кнопка6_MouseDown);
+            this.Kontur_P3Кнопка6.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3Кнопка6_MouseUp);
             // 
-            // Контур_П3КнопкаКП6Пуск
+            // Kontur_P3Кнопка3
             // 
-            this.Контур_П3КнопкаКП6Пуск.BackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП6Пуск.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Контур_П3КнопкаКП6Пуск.FlatAppearance.BorderSize = 0;
-            this.Контур_П3КнопкаКП6Пуск.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП6Пуск.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП6Пуск.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Контур_П3КнопкаКП6Пуск.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.Контур_П3КнопкаКП6Пуск.Location = new System.Drawing.Point(847, 163);
-            this.Контур_П3КнопкаКП6Пуск.Name = "Контур_П3КнопкаКП6Пуск";
-            this.Контур_П3КнопкаКП6Пуск.Size = new System.Drawing.Size(36, 33);
-            this.Контур_П3КнопкаКП6Пуск.TabIndex = 58;
-            this.Контур_П3КнопкаКП6Пуск.UseVisualStyleBackColor = false;
-            this.Контур_П3КнопкаКП6Пуск.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП6Пуск_MouseDown);
-            this.Контур_П3КнопкаКП6Пуск.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП6Пуск_MouseUp);
+            this.Kontur_P3Кнопка3.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка3.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack_small;
+            this.Kontur_P3Кнопка3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3Кнопка3.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3Кнопка3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3Кнопка3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.Kontur_P3Кнопка3.ForeColor = System.Drawing.Color.White;
+            this.Kontur_P3Кнопка3.Location = new System.Drawing.Point(786, 270);
+            this.Kontur_P3Кнопка3.Name = "Kontur_P3Кнопка3";
+            this.Kontur_P3Кнопка3.Size = new System.Drawing.Size(25, 26);
+            this.Kontur_P3Кнопка3.TabIndex = 57;
+            this.Kontur_P3Кнопка3.Text = " 3";
+            this.Kontur_P3Кнопка3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Kontur_P3Кнопка3.UseVisualStyleBackColor = false;
+            this.Kontur_P3Кнопка3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3Кнопка3_MouseDown);
+            this.Kontur_P3Кнопка3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3Кнопка3_MouseUp);
             // 
-            // Контур_П3КнопкаКП4Контроль
+            // Kontur_P3Кнопка5
             // 
-            this.Контур_П3КнопкаКП4Контроль.BackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП4Контроль.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Контур_П3КнопкаКП4Контроль.FlatAppearance.BorderSize = 0;
-            this.Контур_П3КнопкаКП4Контроль.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП4Контроль.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП4Контроль.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Контур_П3КнопкаКП4Контроль.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.Контур_П3КнопкаКП4Контроль.Location = new System.Drawing.Point(427, 303);
-            this.Контур_П3КнопкаКП4Контроль.Name = "Контур_П3КнопкаКП4Контроль";
-            this.Контур_П3КнопкаКП4Контроль.Size = new System.Drawing.Size(36, 33);
-            this.Контур_П3КнопкаКП4Контроль.TabIndex = 57;
-            this.Контур_П3КнопкаКП4Контроль.UseVisualStyleBackColor = false;
-            this.Контур_П3КнопкаКП4Контроль.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП4Контроль_MouseDown);
-            this.Контур_П3КнопкаКП4Контроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП4Контроль_MouseUp);
+            this.Kontur_P3Кнопка5.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка5.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack_small;
+            this.Kontur_P3Кнопка5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3Кнопка5.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3Кнопка5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3Кнопка5.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.Kontur_P3Кнопка5.ForeColor = System.Drawing.Color.White;
+            this.Kontur_P3Кнопка5.Location = new System.Drawing.Point(756, 240);
+            this.Kontur_P3Кнопка5.Name = "Kontur_P3Кнопка5";
+            this.Kontur_P3Кнопка5.Size = new System.Drawing.Size(25, 26);
+            this.Kontur_P3Кнопка5.TabIndex = 56;
+            this.Kontur_P3Кнопка5.Text = "  5";
+            this.Kontur_P3Кнопка5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Kontur_P3Кнопка5.UseVisualStyleBackColor = false;
+            this.Kontur_P3Кнопка5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3Кнопка5_MouseDown);
+            this.Kontur_P3Кнопка5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3Кнопка5_MouseUp);
             // 
-            // Контур_П3КнопкаКП3КонтрольКанал12
+            // Kontur_P3Кнопка2
             // 
-            this.Контур_П3КнопкаКП3КонтрольКанал12.BackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП3КонтрольКанал12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Контур_П3КнопкаКП3КонтрольКанал12.FlatAppearance.BorderSize = 0;
-            this.Контур_П3КнопкаКП3КонтрольКанал12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП3КонтрольКанал12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП3КонтрольКанал12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Контур_П3КнопкаКП3КонтрольКанал12.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.Контур_П3КнопкаКП3КонтрольКанал12.Location = new System.Drawing.Point(308, 310);
-            this.Контур_П3КнопкаКП3КонтрольКанал12.Name = "Контур_П3КнопкаКП3КонтрольКанал12";
-            this.Контур_П3КнопкаКП3КонтрольКанал12.Size = new System.Drawing.Size(36, 33);
-            this.Контур_П3КнопкаКП3КонтрольКанал12.TabIndex = 56;
-            this.Контур_П3КнопкаКП3КонтрольКанал12.UseVisualStyleBackColor = false;
-            this.Контур_П3КнопкаКП3КонтрольКанал12.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП3КонтрольКанал12_MouseDown);
-            this.Контур_П3КнопкаКП3КонтрольКанал12.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП3КонтрольКанал12_MouseUp);
+            this.Kontur_P3Кнопка2.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка2.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack_small;
+            this.Kontur_P3Кнопка2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3Кнопка2.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3Кнопка2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3Кнопка2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.Kontur_P3Кнопка2.ForeColor = System.Drawing.Color.White;
+            this.Kontur_P3Кнопка2.Location = new System.Drawing.Point(756, 270);
+            this.Kontur_P3Кнопка2.Name = "Kontur_P3Кнопка2";
+            this.Kontur_P3Кнопка2.Size = new System.Drawing.Size(25, 26);
+            this.Kontur_P3Кнопка2.TabIndex = 55;
+            this.Kontur_P3Кнопка2.Text = " 2";
+            this.Kontur_P3Кнопка2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Kontur_P3Кнопка2.UseVisualStyleBackColor = false;
+            this.Kontur_P3Кнопка2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3Кнопка2_MouseDown);
+            this.Kontur_P3Кнопка2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3Кнопка2_MouseUp);
             // 
-            // Контур_П3КнопкаКП3КонтрольКанал11
+            // Kontur_P3Кнопка0
             // 
-            this.Контур_П3КнопкаКП3КонтрольКанал11.BackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП3КонтрольКанал11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Контур_П3КнопкаКП3КонтрольКанал11.FlatAppearance.BorderSize = 0;
-            this.Контур_П3КнопкаКП3КонтрольКанал11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП3КонтрольКанал11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП3КонтрольКанал11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Контур_П3КнопкаКП3КонтрольКанал11.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.Контур_П3КнопкаКП3КонтрольКанал11.Location = new System.Drawing.Point(308, 256);
-            this.Контур_П3КнопкаКП3КонтрольКанал11.Name = "Контур_П3КнопкаКП3КонтрольКанал11";
-            this.Контур_П3КнопкаКП3КонтрольКанал11.Size = new System.Drawing.Size(36, 33);
-            this.Контур_П3КнопкаКП3КонтрольКанал11.TabIndex = 55;
-            this.Контур_П3КнопкаКП3КонтрольКанал11.UseVisualStyleBackColor = false;
-            this.Контур_П3КнопкаКП3КонтрольКанал11.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП3КонтрольКанал11_MouseDown);
-            this.Контур_П3КнопкаКП3КонтрольКанал11.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП3КонтрольКанал11_MouseUp);
+            this.Kontur_P3Кнопка0.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка0.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack_small;
+            this.Kontur_P3Кнопка0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3Кнопка0.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3Кнопка0.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка0.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3Кнопка0.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.Kontur_P3Кнопка0.ForeColor = System.Drawing.Color.White;
+            this.Kontur_P3Кнопка0.Location = new System.Drawing.Point(724, 300);
+            this.Kontur_P3Кнопка0.Name = "Kontur_P3Кнопка0";
+            this.Kontur_P3Кнопка0.Size = new System.Drawing.Size(25, 26);
+            this.Kontur_P3Кнопка0.TabIndex = 54;
+            this.Kontur_P3Кнопка0.Text = " 0";
+            this.Kontur_P3Кнопка0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Kontur_P3Кнопка0.UseVisualStyleBackColor = false;
+            this.Kontur_P3Кнопка0.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3Кнопка0_MouseDown);
+            this.Kontur_P3Кнопка0.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3Кнопка0_MouseUp);
             // 
-            // Контур_П3КнопкаКП3КонтрольКанал10
+            // Kontur_P3Кнопка1
             // 
-            this.Контур_П3КнопкаКП3КонтрольКанал10.BackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП3КонтрольКанал10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Контур_П3КнопкаКП3КонтрольКанал10.FlatAppearance.BorderSize = 0;
-            this.Контур_П3КнопкаКП3КонтрольКанал10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП3КонтрольКанал10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП3КонтрольКанал10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Контур_П3КнопкаКП3КонтрольКанал10.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.Контур_П3КнопкаКП3КонтрольКанал10.Location = new System.Drawing.Point(308, 203);
-            this.Контур_П3КнопкаКП3КонтрольКанал10.Name = "Контур_П3КнопкаКП3КонтрольКанал10";
-            this.Контур_П3КнопкаКП3КонтрольКанал10.Size = new System.Drawing.Size(36, 33);
-            this.Контур_П3КнопкаКП3КонтрольКанал10.TabIndex = 54;
-            this.Контур_П3КнопкаКП3КонтрольКанал10.UseVisualStyleBackColor = false;
-            this.Контур_П3КнопкаКП3КонтрольКанал10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП3КонтрольКанал10_MouseDown);
-            this.Контур_П3КнопкаКП3КонтрольКанал10.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП3КонтрольКанал10_MouseUp);
+            this.Kontur_P3Кнопка1.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка1.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack_small;
+            this.Kontur_P3Кнопка1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3Кнопка1.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3Кнопка1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3Кнопка1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.Kontur_P3Кнопка1.ForeColor = System.Drawing.Color.White;
+            this.Kontur_P3Кнопка1.Location = new System.Drawing.Point(724, 270);
+            this.Kontur_P3Кнопка1.Name = "Kontur_P3Кнопка1";
+            this.Kontur_P3Кнопка1.Size = new System.Drawing.Size(25, 26);
+            this.Kontur_P3Кнопка1.TabIndex = 53;
+            this.Kontur_P3Кнопка1.Text = " 1";
+            this.Kontur_P3Кнопка1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Kontur_P3Кнопка1.UseVisualStyleBackColor = false;
+            this.Kontur_P3Кнопка1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3Кнопка1_MouseDown);
+            this.Kontur_P3Кнопка1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3Кнопка1_MouseUp);
             // 
-            // Контур_П3КнопкаКП2НачИнформ
+            // Kontur_P3Кнопка4
             // 
-            this.Контур_П3КнопкаКП2НачИнформ.BackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП2НачИнформ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Контур_П3КнопкаКП2НачИнформ.FlatAppearance.BorderSize = 0;
-            this.Контур_П3КнопкаКП2НачИнформ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП2НачИнформ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП2НачИнформ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Контур_П3КнопкаКП2НачИнформ.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.Контур_П3КнопкаКП2НачИнформ.Location = new System.Drawing.Point(199, 258);
-            this.Контур_П3КнопкаКП2НачИнформ.Name = "Контур_П3КнопкаКП2НачИнформ";
-            this.Контур_П3КнопкаКП2НачИнформ.Size = new System.Drawing.Size(36, 33);
-            this.Контур_П3КнопкаКП2НачИнформ.TabIndex = 53;
-            this.Контур_П3КнопкаКП2НачИнформ.UseVisualStyleBackColor = false;
-            this.Контур_П3КнопкаКП2НачИнформ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП2НачИнформ_MouseDown);
-            this.Контур_П3КнопкаКП2НачИнформ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП2НачИнформ_MouseUp);
+            this.Kontur_P3Кнопка4.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка4.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack_small;
+            this.Kontur_P3Кнопка4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3Кнопка4.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3Кнопка4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3Кнопка4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.Kontur_P3Кнопка4.ForeColor = System.Drawing.Color.White;
+            this.Kontur_P3Кнопка4.Location = new System.Drawing.Point(724, 240);
+            this.Kontur_P3Кнопка4.Name = "Kontur_P3Кнопка4";
+            this.Kontur_P3Кнопка4.Size = new System.Drawing.Size(25, 26);
+            this.Kontur_P3Кнопка4.TabIndex = 52;
+            this.Kontur_P3Кнопка4.Text = " 4";
+            this.Kontur_P3Кнопка4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Kontur_P3Кнопка4.UseVisualStyleBackColor = false;
+            this.Kontur_P3Кнопка4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3Кнопка4_MouseDown);
+            this.Kontur_P3Кнопка4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3Кнопка4_MouseUp);
             // 
-            // Контур_П3КнопкаКП2Сдвиг10
+            // Kontur_P3Кнопка7
             // 
-            this.Контур_П3КнопкаКП2Сдвиг10.BackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП2Сдвиг10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Контур_П3КнопкаКП2Сдвиг10.FlatAppearance.BorderSize = 0;
-            this.Контур_П3КнопкаКП2Сдвиг10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП2Сдвиг10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП2Сдвиг10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Контур_П3КнопкаКП2Сдвиг10.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.Контур_П3КнопкаКП2Сдвиг10.Location = new System.Drawing.Point(219, 212);
-            this.Контур_П3КнопкаКП2Сдвиг10.Name = "Контур_П3КнопкаКП2Сдвиг10";
-            this.Контур_П3КнопкаКП2Сдвиг10.Size = new System.Drawing.Size(36, 33);
-            this.Контур_П3КнопкаКП2Сдвиг10.TabIndex = 52;
-            this.Контур_П3КнопкаКП2Сдвиг10.UseVisualStyleBackColor = false;
-            this.Контур_П3КнопкаКП2Сдвиг10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП2Сдвиг10_MouseDown);
-            this.Контур_П3КнопкаКП2Сдвиг10.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП2Сдвиг10_MouseUp);
+            this.Kontur_P3Кнопка7.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка7.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack_small;
+            this.Kontur_P3Кнопка7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3Кнопка7.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3Кнопка7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3Кнопка7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3Кнопка7.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.Kontur_P3Кнопка7.ForeColor = System.Drawing.Color.White;
+            this.Kontur_P3Кнопка7.Location = new System.Drawing.Point(724, 212);
+            this.Kontur_P3Кнопка7.Name = "Kontur_P3Кнопка7";
+            this.Kontur_P3Кнопка7.Size = new System.Drawing.Size(25, 26);
+            this.Kontur_P3Кнопка7.TabIndex = 51;
+            this.Kontur_P3Кнопка7.Text = " 7";
+            this.Kontur_P3Кнопка7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Kontur_P3Кнопка7.UseVisualStyleBackColor = false;
+            this.Kontur_P3Кнопка7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3Кнопка7_MouseDown);
+            this.Kontur_P3Кнопка7.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3Кнопка7_MouseUp);
             // 
-            // Контур_П3КнопкаКП2Сдвиг1
+            // Kontur_P3КнопкаКонтрольЗанятости
             // 
-            this.Контур_П3КнопкаКП2Сдвиг1.BackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП2Сдвиг1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Контур_П3КнопкаКП2Сдвиг1.FlatAppearance.BorderSize = 0;
-            this.Контур_П3КнопкаКП2Сдвиг1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП2Сдвиг1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП2Сдвиг1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Контур_П3КнопкаКП2Сдвиг1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.Контур_П3КнопкаКП2Сдвиг1.Location = new System.Drawing.Point(178, 212);
-            this.Контур_П3КнопкаКП2Сдвиг1.Name = "Контур_П3КнопкаКП2Сдвиг1";
-            this.Контур_П3КнопкаКП2Сдвиг1.Size = new System.Drawing.Size(36, 33);
-            this.Контур_П3КнопкаКП2Сдвиг1.TabIndex = 51;
-            this.Контур_П3КнопкаКП2Сдвиг1.UseVisualStyleBackColor = false;
-            this.Контур_П3КнопкаКП2Сдвиг1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП2Сдвиг1_MouseDown);
-            this.Контур_П3КнопкаКП2Сдвиг1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП2Сдвиг1_MouseUp);
+            this.Kontur_P3КнопкаКонтрольЗанятости.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаКонтрольЗанятости.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack_small;
+            this.Kontur_P3КнопкаКонтрольЗанятости.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3КнопкаКонтрольЗанятости.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3КнопкаКонтрольЗанятости.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаКонтрольЗанятости.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаКонтрольЗанятости.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3КнопкаКонтрольЗанятости.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F);
+            this.Kontur_P3КнопкаКонтрольЗанятости.ForeColor = System.Drawing.Color.White;
+            this.Kontur_P3КнопкаКонтрольЗанятости.Location = new System.Drawing.Point(570, 315);
+            this.Kontur_P3КнопкаКонтрольЗанятости.Name = "Kontur_P3КнопкаКонтрольЗанятости";
+            this.Kontur_P3КнопкаКонтрольЗанятости.Size = new System.Drawing.Size(29, 28);
+            this.Kontur_P3КнопкаКонтрольЗанятости.TabIndex = 50;
+            this.Kontur_P3КнопкаКонтрольЗанятости.UseVisualStyleBackColor = false;
+            this.Kontur_P3КнопкаКонтрольЗанятости.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаКонтрольЗанятости_MouseDown);
+            this.Kontur_P3КнопкаКонтрольЗанятости.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаКонтрольЗанятости_MouseUp);
             // 
-            // Контур_П3КнопкаКП1Контроль
+            // Kontur_P3КнопкаИнформ
             // 
-            this.Контур_П3КнопкаКП1Контроль.BackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП1Контроль.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Контур_П3КнопкаКП1Контроль.FlatAppearance.BorderSize = 0;
-            this.Контур_П3КнопкаКП1Контроль.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП1Контроль.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП1Контроль.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Контур_П3КнопкаКП1Контроль.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.Контур_П3КнопкаКП1Контроль.Location = new System.Drawing.Point(103, 307);
-            this.Контур_П3КнопкаКП1Контроль.Name = "Контур_П3КнопкаКП1Контроль";
-            this.Контур_П3КнопкаКП1Контроль.Size = new System.Drawing.Size(36, 33);
-            this.Контур_П3КнопкаКП1Контроль.TabIndex = 50;
-            this.Контур_П3КнопкаКП1Контроль.UseVisualStyleBackColor = false;
-            this.Контур_П3КнопкаКП1Контроль.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП1Контроль_MouseDown);
-            this.Контур_П3КнопкаКП1Контроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП1Контроль_MouseUp);
+            this.Kontur_P3КнопкаИнформ.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаИнформ.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack_small;
+            this.Kontur_P3КнопкаИнформ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3КнопкаИнформ.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3КнопкаИнформ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаИнформ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаИнформ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3КнопкаИнформ.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F);
+            this.Kontur_P3КнопкаИнформ.ForeColor = System.Drawing.Color.White;
+            this.Kontur_P3КнопкаИнформ.Location = new System.Drawing.Point(570, 276);
+            this.Kontur_P3КнопкаИнформ.Name = "Kontur_P3КнопкаИнформ";
+            this.Kontur_P3КнопкаИнформ.Size = new System.Drawing.Size(29, 28);
+            this.Kontur_P3КнопкаИнформ.TabIndex = 49;
+            this.Kontur_P3КнопкаИнформ.UseVisualStyleBackColor = false;
+            this.Kontur_P3КнопкаИнформ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаИнформ_MouseDown);
+            this.Kontur_P3КнопкаИнформ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаИнформ_MouseUp);
             // 
-            // Контур_П3КнопкаКП5Подпись2
+            // Kontur_P3КнопкаОтбой
             // 
-            this.Контур_П3КнопкаКП5Подпись2.BackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5Подпись2.BackgroundImage = global::R440O.ControlElementImages.buttonSquareRed;
-            this.Контур_П3КнопкаКП5Подпись2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Контур_П3КнопкаКП5Подпись2.FlatAppearance.BorderSize = 0;
-            this.Контур_П3КнопкаКП5Подпись2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5Подпись2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5Подпись2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Контур_П3КнопкаКП5Подпись2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Контур_П3КнопкаКП5Подпись2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Контур_П3КнопкаКП5Подпись2.Location = new System.Drawing.Point(641, 176);
-            this.Контур_П3КнопкаКП5Подпись2.Name = "Контур_П3КнопкаКП5Подпись2";
-            this.Контур_П3КнопкаКП5Подпись2.Size = new System.Drawing.Size(22, 21);
-            this.Контур_П3КнопкаКП5Подпись2.TabIndex = 62;
-            this.Контур_П3КнопкаКП5Подпись2.Text = "2";
-            this.Контур_П3КнопкаКП5Подпись2.UseVisualStyleBackColor = false;
-            this.Контур_П3КнопкаКП5Подпись2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП5Подпись2_MouseDown);
-            this.Контур_П3КнопкаКП5Подпись2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП5Подпись2_MouseUp);
+            this.Kontur_P3КнопкаОтбой.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаОтбой.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack_small;
+            this.Kontur_P3КнопкаОтбой.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3КнопкаОтбой.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3КнопкаОтбой.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаОтбой.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаОтбой.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3КнопкаОтбой.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F);
+            this.Kontur_P3КнопкаОтбой.ForeColor = System.Drawing.Color.White;
+            this.Kontur_P3КнопкаОтбой.Location = new System.Drawing.Point(533, 276);
+            this.Kontur_P3КнопкаОтбой.Name = "Kontur_P3КнопкаОтбой";
+            this.Kontur_P3КнопкаОтбой.Size = new System.Drawing.Size(29, 28);
+            this.Kontur_P3КнопкаОтбой.TabIndex = 48;
+            this.Kontur_P3КнопкаОтбой.UseVisualStyleBackColor = false;
+            this.Kontur_P3КнопкаОтбой.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаОтбой_MouseDown);
+            this.Kontur_P3КнопкаОтбой.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаОтбой_MouseUp);
             // 
-            // Контур_П3КнопкаКП5Подпись3
+            // Kontur_P3КнопкаВызов
             // 
-            this.Контур_П3КнопкаКП5Подпись3.BackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5Подпись3.BackgroundImage = global::R440O.ControlElementImages.buttonSquareRed;
-            this.Контур_П3КнопкаКП5Подпись3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Контур_П3КнопкаКП5Подпись3.FlatAppearance.BorderSize = 0;
-            this.Контур_П3КнопкаКП5Подпись3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5Подпись3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5Подпись3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Контур_П3КнопкаКП5Подпись3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Контур_П3КнопкаКП5Подпись3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Контур_П3КнопкаКП5Подпись3.Location = new System.Drawing.Point(670, 176);
-            this.Контур_П3КнопкаКП5Подпись3.Name = "Контур_П3КнопкаКП5Подпись3";
-            this.Контур_П3КнопкаКП5Подпись3.Size = new System.Drawing.Size(22, 21);
-            this.Контур_П3КнопкаКП5Подпись3.TabIndex = 63;
-            this.Контур_П3КнопкаКП5Подпись3.Text = "3";
-            this.Контур_П3КнопкаКП5Подпись3.UseVisualStyleBackColor = false;
-            this.Контур_П3КнопкаКП5Подпись3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП5Подпись3_MouseDown);
-            this.Контур_П3КнопкаКП5Подпись3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП5Подпись3_MouseUp);
+            this.Kontur_P3КнопкаВызов.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаВызов.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack_small;
+            this.Kontur_P3КнопкаВызов.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3КнопкаВызов.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3КнопкаВызов.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаВызов.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаВызов.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3КнопкаВызов.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F);
+            this.Kontur_P3КнопкаВызов.ForeColor = System.Drawing.Color.White;
+            this.Kontur_P3КнопкаВызов.Location = new System.Drawing.Point(570, 239);
+            this.Kontur_P3КнопкаВызов.Name = "Kontur_P3КнопкаВызов";
+            this.Kontur_P3КнопкаВызов.Size = new System.Drawing.Size(29, 28);
+            this.Kontur_P3КнопкаВызов.TabIndex = 47;
+            this.Kontur_P3КнопкаВызов.UseVisualStyleBackColor = false;
+            this.Kontur_P3КнопкаВызов.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаВызов_MouseDown);
+            this.Kontur_P3КнопкаВызов.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаВызов_MouseUp);
             // 
-            // Контур_П3КнопкаКП5Группа
+            // Kontur_P3КнопкаОтклЗС
             // 
-            this.Контур_П3КнопкаКП5Группа.BackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5Группа.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack;
-            this.Контур_П3КнопкаКП5Группа.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Контур_П3КнопкаКП5Группа.FlatAppearance.BorderSize = 0;
-            this.Контур_П3КнопкаКП5Группа.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5Группа.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5Группа.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Контур_П3КнопкаКП5Группа.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Контур_П3КнопкаКП5Группа.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Контур_П3КнопкаКП5Группа.Location = new System.Drawing.Point(702, 176);
-            this.Контур_П3КнопкаКП5Группа.Name = "Контур_П3КнопкаКП5Группа";
-            this.Контур_П3КнопкаКП5Группа.Size = new System.Drawing.Size(22, 21);
-            this.Контур_П3КнопкаКП5Группа.TabIndex = 64;
-            this.Контур_П3КнопкаКП5Группа.UseVisualStyleBackColor = false;
-            this.Контур_П3КнопкаКП5Группа.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП5Группа_MouseDown);
-            this.Контур_П3КнопкаКП5Группа.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП5Группа_MouseUp);
+            this.Kontur_P3КнопкаОтклЗС.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаОтклЗС.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack_small;
+            this.Kontur_P3КнопкаОтклЗС.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3КнопкаОтклЗС.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3КнопкаОтклЗС.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаОтклЗС.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаОтклЗС.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3КнопкаОтклЗС.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F);
+            this.Kontur_P3КнопкаОтклЗС.ForeColor = System.Drawing.Color.White;
+            this.Kontur_P3КнопкаОтклЗС.Location = new System.Drawing.Point(651, 211);
+            this.Kontur_P3КнопкаОтклЗС.Name = "Kontur_P3КнопкаОтклЗС";
+            this.Kontur_P3КнопкаОтклЗС.Size = new System.Drawing.Size(29, 28);
+            this.Kontur_P3КнопкаОтклЗС.TabIndex = 46;
+            this.Kontur_P3КнопкаОтклЗС.UseVisualStyleBackColor = false;
+            this.Kontur_P3КнопкаОтклЗС.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаОтклЗС_MouseDown);
+            this.Kontur_P3КнопкаОтклЗС.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаОтклЗС_MouseUp);
             // 
-            // Контур_П3КнопкаКП5ОбщийС
+            // Kontur_P3КнопкаГруппа
             // 
-            this.Контур_П3КнопкаКП5ОбщийС.BackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5ОбщийС.BackgroundImage = global::R440O.ControlElementImages.buttonSquareRed;
-            this.Контур_П3КнопкаКП5ОбщийС.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Контур_П3КнопкаКП5ОбщийС.FlatAppearance.BorderSize = 0;
-            this.Контур_П3КнопкаКП5ОбщийС.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5ОбщийС.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5ОбщийС.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Контур_П3КнопкаКП5ОбщийС.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Контур_П3КнопкаКП5ОбщийС.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Контур_П3КнопкаКП5ОбщийС.Location = new System.Drawing.Point(763, 177);
-            this.Контур_П3КнопкаКП5ОбщийС.Name = "Контур_П3КнопкаКП5ОбщийС";
-            this.Контур_П3КнопкаКП5ОбщийС.Size = new System.Drawing.Size(22, 21);
-            this.Контур_П3КнопкаКП5ОбщийС.TabIndex = 65;
-            this.Контур_П3КнопкаКП5ОбщийС.Text = "C";
-            this.Контур_П3КнопкаКП5ОбщийС.UseVisualStyleBackColor = false;
-            this.Контур_П3КнопкаКП5ОбщийС.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП5ОбщийС_MouseDown);
-            this.Контур_П3КнопкаКП5ОбщийС.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП5ОбщийС_MouseUp);
+            this.Kontur_P3КнопкаГруппа.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаГруппа.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack_small;
+            this.Kontur_P3КнопкаГруппа.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3КнопкаГруппа.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3КнопкаГруппа.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаГруппа.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаГруппа.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3КнопкаГруппа.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F);
+            this.Kontur_P3КнопкаГруппа.ForeColor = System.Drawing.Color.White;
+            this.Kontur_P3КнопкаГруппа.Location = new System.Drawing.Point(699, 174);
+            this.Kontur_P3КнопкаГруппа.Name = "Kontur_P3КнопкаГруппа";
+            this.Kontur_P3КнопкаГруппа.Size = new System.Drawing.Size(29, 28);
+            this.Kontur_P3КнопкаГруппа.TabIndex = 45;
+            this.Kontur_P3КнопкаГруппа.UseVisualStyleBackColor = false;
+            this.Kontur_P3КнопкаГруппа.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаГруппа_MouseDown);
+            this.Kontur_P3КнопкаГруппа.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаГруппа_MouseUp);
             // 
-            // Контур_П3КнопкаКП5ПередачаВызов
+            // Kontur_P3КнопкаАдресК
             // 
-            this.Контур_П3КнопкаКП5ПередачаВызов.BackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5ПередачаВызов.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack;
-            this.Контур_П3КнопкаКП5ПередачаВызов.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Контур_П3КнопкаКП5ПередачаВызов.FlatAppearance.BorderSize = 0;
-            this.Контур_П3КнопкаКП5ПередачаВызов.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5ПередачаВызов.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5ПередачаВызов.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Контур_П3КнопкаКП5ПередачаВызов.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Контур_П3КнопкаКП5ПередачаВызов.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Контур_П3КнопкаКП5ПередачаВызов.Location = new System.Drawing.Point(573, 241);
-            this.Контур_П3КнопкаКП5ПередачаВызов.Name = "Контур_П3КнопкаКП5ПередачаВызов";
-            this.Контур_П3КнопкаКП5ПередачаВызов.Size = new System.Drawing.Size(22, 21);
-            this.Контур_П3КнопкаКП5ПередачаВызов.TabIndex = 66;
-            this.Контур_П3КнопкаКП5ПередачаВызов.UseVisualStyleBackColor = false;
-            this.Контур_П3КнопкаКП5ПередачаВызов.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП5ПередачаВызов_MouseDown);
-            this.Контур_П3КнопкаКП5ПередачаВызов.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП5ПередачаВызов_MouseUp);
+            this.Kontur_P3КнопкаАдресК.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаАдресК.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack_small;
+            this.Kontur_P3КнопкаАдресК.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3КнопкаАдресК.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3КнопкаАдресК.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаАдресК.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаАдресК.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3КнопкаАдресК.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.Kontur_P3КнопкаАдресК.ForeColor = System.Drawing.Color.White;
+            this.Kontur_P3КнопкаАдресК.Location = new System.Drawing.Point(578, 174);
+            this.Kontur_P3КнопкаАдресК.Name = "Kontur_P3КнопкаАдресК";
+            this.Kontur_P3КнопкаАдресК.Size = new System.Drawing.Size(29, 28);
+            this.Kontur_P3КнопкаАдресК.TabIndex = 44;
+            this.Kontur_P3КнопкаАдресК.Text = "К";
+            this.Kontur_P3КнопкаАдресК.UseVisualStyleBackColor = false;
+            this.Kontur_P3КнопкаАдресК.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаАдресК_MouseDown);
+            this.Kontur_P3КнопкаАдресК.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаАдресК_MouseUp);
             // 
-            // Контур_П3КнопкаКП5ПередачаПУОтбой
+            // Kontur_P3КнопкаАдресУСС
             // 
-            this.Контур_П3КнопкаКП5ПередачаПУОтбой.BackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5ПередачаПУОтбой.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack;
-            this.Контур_П3КнопкаКП5ПередачаПУОтбой.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Контур_П3КнопкаКП5ПередачаПУОтбой.FlatAppearance.BorderSize = 0;
-            this.Контур_П3КнопкаКП5ПередачаПУОтбой.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5ПередачаПУОтбой.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5ПередачаПУОтбой.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Контур_П3КнопкаКП5ПередачаПУОтбой.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Контур_П3КнопкаКП5ПередачаПУОтбой.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Контур_П3КнопкаКП5ПередачаПУОтбой.Location = new System.Drawing.Point(536, 279);
-            this.Контур_П3КнопкаКП5ПередачаПУОтбой.Name = "Контур_П3КнопкаКП5ПередачаПУОтбой";
-            this.Контур_П3КнопкаКП5ПередачаПУОтбой.Size = new System.Drawing.Size(22, 21);
-            this.Контур_П3КнопкаКП5ПередачаПУОтбой.TabIndex = 67;
-            this.Контур_П3КнопкаКП5ПередачаПУОтбой.UseVisualStyleBackColor = false;
-            this.Контур_П3КнопкаКП5ПередачаПУОтбой.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП5ПередачаПУОтбой_MouseDown);
-            this.Контур_П3КнопкаКП5ПередачаПУОтбой.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП5ПередачаПУОтбой_MouseUp);
+            this.Kontur_P3КнопкаАдресУСС.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаАдресУСС.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack_small;
+            this.Kontur_P3КнопкаАдресУСС.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3КнопкаАдресУСС.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3КнопкаАдресУСС.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаАдресУСС.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаАдресУСС.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3КнопкаАдресУСС.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F);
+            this.Kontur_P3КнопкаАдресУСС.ForeColor = System.Drawing.Color.White;
+            this.Kontur_P3КнопкаАдресУСС.Location = new System.Drawing.Point(534, 174);
+            this.Kontur_P3КнопкаАдресУСС.Name = "Kontur_P3КнопкаАдресУСС";
+            this.Kontur_P3КнопкаАдресУСС.Size = new System.Drawing.Size(29, 28);
+            this.Kontur_P3КнопкаАдресУСС.TabIndex = 43;
+            this.Kontur_P3КнопкаАдресУСС.Text = "УСС";
+            this.Kontur_P3КнопкаАдресУСС.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Kontur_P3КнопкаАдресУСС.UseVisualStyleBackColor = false;
+            this.Kontur_P3КнопкаАдресУСС.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаАдресУСС_MouseDown);
+            this.Kontur_P3КнопкаАдресУСС.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаАдресУСС_MouseUp);
             // 
-            // Контур_П3КнопкаКП5ПередачаИнформ
+            // Kontur_P3КнопкаНаборКК
             // 
-            this.Контур_П3КнопкаКП5ПередачаИнформ.BackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5ПередачаИнформ.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack;
-            this.Контур_П3КнопкаКП5ПередачаИнформ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Контур_П3КнопкаКП5ПередачаИнформ.FlatAppearance.BorderSize = 0;
-            this.Контур_П3КнопкаКП5ПередачаИнформ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5ПередачаИнформ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5ПередачаИнформ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Контур_П3КнопкаКП5ПередачаИнформ.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Контур_П3КнопкаКП5ПередачаИнформ.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Контур_П3КнопкаКП5ПередачаИнформ.Location = new System.Drawing.Point(572, 278);
-            this.Контур_П3КнопкаКП5ПередачаИнформ.Name = "Контур_П3КнопкаКП5ПередачаИнформ";
-            this.Контур_П3КнопкаКП5ПередачаИнформ.Size = new System.Drawing.Size(22, 21);
-            this.Контур_П3КнопкаКП5ПередачаИнформ.TabIndex = 68;
-            this.Контур_П3КнопкаКП5ПередачаИнформ.UseVisualStyleBackColor = false;
-            this.Контур_П3КнопкаКП5ПередачаИнформ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП5ПередачаИнформ_MouseDown);
-            this.Контур_П3КнопкаКП5ПередачаИнформ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП5ПередачаИнформ_MouseUp);
+            this.Kontur_P3КнопкаНаборКК.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаНаборКК.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack_small;
+            this.Kontur_P3КнопкаНаборКК.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3КнопкаНаборКК.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3КнопкаНаборКК.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаНаборКК.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаНаборКК.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3КнопкаНаборКК.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F);
+            this.Kontur_P3КнопкаНаборКК.ForeColor = System.Drawing.Color.White;
+            this.Kontur_P3КнопкаНаборКК.Location = new System.Drawing.Point(533, 315);
+            this.Kontur_P3КнопкаНаборКК.Name = "Kontur_P3КнопкаНаборКК";
+            this.Kontur_P3КнопкаНаборКК.Size = new System.Drawing.Size(29, 28);
+            this.Kontur_P3КнопкаНаборКК.TabIndex = 42;
+            this.Kontur_P3КнопкаНаборКК.Text = "ПРМ";
+            this.Kontur_P3КнопкаНаборКК.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Kontur_P3КнопкаНаборКК.UseVisualStyleBackColor = false;
+            this.Kontur_P3КнопкаНаборКК.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаНаборКК_MouseDown);
+            this.Kontur_P3КнопкаНаборКК.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаНаборКК_MouseUp);
             // 
-            // Контур_П3КнопкаКП5ПередачаНаборККПРМ
+            // Kontur_P3КнопкаИнформКОН
             // 
-            this.Контур_П3КнопкаКП5ПередачаНаборККПРМ.BackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5ПередачаНаборККПРМ.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack;
-            this.Контур_П3КнопкаКП5ПередачаНаборККПРМ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Контур_П3КнопкаКП5ПередачаНаборККПРМ.FlatAppearance.BorderSize = 0;
-            this.Контур_П3КнопкаКП5ПередачаНаборККПРМ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5ПередачаНаборККПРМ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5ПередачаНаборККПРМ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Контур_П3КнопкаКП5ПередачаНаборККПРМ.Font = new System.Drawing.Font("Microsoft Sans Serif", 3.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Контур_П3КнопкаКП5ПередачаНаборККПРМ.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Контур_П3КнопкаКП5ПередачаНаборККПРМ.Location = new System.Drawing.Point(535, 317);
-            this.Контур_П3КнопкаКП5ПередачаНаборККПРМ.Name = "Контур_П3КнопкаКП5ПередачаНаборККПРМ";
-            this.Контур_П3КнопкаКП5ПередачаНаборККПРМ.Size = new System.Drawing.Size(22, 21);
-            this.Контур_П3КнопкаКП5ПередачаНаборККПРМ.TabIndex = 69;
-            this.Контур_П3КнопкаКП5ПередачаНаборККПРМ.Text = "ПРМ";
-            this.Контур_П3КнопкаКП5ПередачаНаборККПРМ.UseVisualStyleBackColor = false;
-            this.Контур_П3КнопкаКП5ПередачаНаборККПРМ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП5ПередачаНаборККПРМ_MouseDown);
-            this.Контур_П3КнопкаКП5ПередачаНаборККПРМ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП5ПередачаНаборККПРМ_MouseUp);
+            this.Kontur_P3КнопкаИнформКОН.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаИнформКОН.BackgroundImage = global::R440O.ControlElementImages.buttonSquareRed_small;
+            this.Kontur_P3КнопкаИнформКОН.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3КнопкаИнформКОН.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3КнопкаИнформКОН.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаИнформКОН.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаИнформКОН.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3КнопкаИнформКОН.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F);
+            this.Kontur_P3КнопкаИнформКОН.ForeColor = System.Drawing.Color.White;
+            this.Kontur_P3КнопкаИнформКОН.Location = new System.Drawing.Point(754, 299);
+            this.Kontur_P3КнопкаИнформКОН.Name = "Kontur_P3КнопкаИнформКОН";
+            this.Kontur_P3КнопкаИнформКОН.Size = new System.Drawing.Size(29, 28);
+            this.Kontur_P3КнопкаИнформКОН.TabIndex = 41;
+            this.Kontur_P3КнопкаИнформКОН.Text = "КОН";
+            this.Kontur_P3КнопкаИнформКОН.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Kontur_P3КнопкаИнформКОН.UseVisualStyleBackColor = false;
+            this.Kontur_P3КнопкаИнформКОН.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаИнформКОН_MouseDown);
+            this.Kontur_P3КнопкаИнформКОН.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаИнформКОН_MouseUp);
             // 
-            // Контур_П3КнопкаКП5ПередачаКонтрольЗанятости
+            // Kontur_P3КнопкаИнформС
             // 
-            this.Контур_П3КнопкаКП5ПередачаКонтрольЗанятости.BackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5ПередачаКонтрольЗанятости.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlack;
-            this.Контур_П3КнопкаКП5ПередачаКонтрольЗанятости.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Контур_П3КнопкаКП5ПередачаКонтрольЗанятости.FlatAppearance.BorderSize = 0;
-            this.Контур_П3КнопкаКП5ПередачаКонтрольЗанятости.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5ПередачаКонтрольЗанятости.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Контур_П3КнопкаКП5ПередачаКонтрольЗанятости.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Контур_П3КнопкаКП5ПередачаКонтрольЗанятости.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Контур_П3КнопкаКП5ПередачаКонтрольЗанятости.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Контур_П3КнопкаКП5ПередачаКонтрольЗанятости.Location = new System.Drawing.Point(573, 317);
-            this.Контур_П3КнопкаКП5ПередачаКонтрольЗанятости.Name = "Контур_П3КнопкаКП5ПередачаКонтрольЗанятости";
-            this.Контур_П3КнопкаКП5ПередачаКонтрольЗанятости.Size = new System.Drawing.Size(22, 21);
-            this.Контур_П3КнопкаКП5ПередачаКонтрольЗанятости.TabIndex = 70;
-            this.Контур_П3КнопкаКП5ПередачаКонтрольЗанятости.UseVisualStyleBackColor = false;
-            this.Контур_П3КнопкаКП5ПередачаКонтрольЗанятости.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП5ПередачаКонтрольЗанятости_MouseDown);
-            this.Контур_П3КнопкаКП5ПередачаКонтрольЗанятости.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Контур_П3КнопкаКП5ПередачаКонтрольЗанятости_MouseUp);
+            this.Kontur_P3КнопкаИнформС.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаИнформС.BackgroundImage = global::R440O.ControlElementImages.buttonSquareRed_small;
+            this.Kontur_P3КнопкаИнформС.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3КнопкаИнформС.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3КнопкаИнформС.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаИнформС.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаИнформС.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3КнопкаИнформС.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.Kontur_P3КнопкаИнформС.ForeColor = System.Drawing.Color.White;
+            this.Kontur_P3КнопкаИнформС.Location = new System.Drawing.Point(787, 299);
+            this.Kontur_P3КнопкаИнформС.Name = "Kontur_P3КнопкаИнформС";
+            this.Kontur_P3КнопкаИнформС.Size = new System.Drawing.Size(22, 28);
+            this.Kontur_P3КнопкаИнформС.TabIndex = 40;
+            this.Kontur_P3КнопкаИнформС.Text = "C";
+            this.Kontur_P3КнопкаИнформС.UseVisualStyleBackColor = false;
+            this.Kontur_P3КнопкаИнформС.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаИнформС_MouseDown);
+            this.Kontur_P3КнопкаИнформС.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаИнформС_MouseUp);
+            // 
+            // Kontur_P3КнопкаОбщийС
+            // 
+            this.Kontur_P3КнопкаОбщийС.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаОбщийС.BackgroundImage = global::R440O.ControlElementImages.buttonSquareRed_small;
+            this.Kontur_P3КнопкаОбщийС.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3КнопкаОбщийС.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3КнопкаОбщийС.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаОбщийС.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаОбщийС.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3КнопкаОбщийС.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.Kontur_P3КнопкаОбщийС.ForeColor = System.Drawing.Color.White;
+            this.Kontur_P3КнопкаОбщийС.Location = new System.Drawing.Point(764, 174);
+            this.Kontur_P3КнопкаОбщийС.Name = "Kontur_P3КнопкаОбщийС";
+            this.Kontur_P3КнопкаОбщийС.Size = new System.Drawing.Size(22, 28);
+            this.Kontur_P3КнопкаОбщийС.TabIndex = 39;
+            this.Kontur_P3КнопкаОбщийС.Text = "C";
+            this.Kontur_P3КнопкаОбщийС.UseVisualStyleBackColor = false;
+            this.Kontur_P3КнопкаОбщийС.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаОбщийС_MouseDown);
+            this.Kontur_P3КнопкаОбщийС.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаОбщийС_MouseUp);
+            // 
+            // Kontur_P3КнопкаПодпись3
+            // 
+            this.Kontur_P3КнопкаПодпись3.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаПодпись3.BackgroundImage = global::R440O.ControlElementImages.buttonSquareRed_small;
+            this.Kontur_P3КнопкаПодпись3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3КнопкаПодпись3.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3КнопкаПодпись3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаПодпись3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаПодпись3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3КнопкаПодпись3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.Kontur_P3КнопкаПодпись3.ForeColor = System.Drawing.Color.White;
+            this.Kontur_P3КнопкаПодпись3.Location = new System.Drawing.Point(671, 174);
+            this.Kontur_P3КнопкаПодпись3.Name = "Kontur_P3КнопкаПодпись3";
+            this.Kontur_P3КнопкаПодпись3.Size = new System.Drawing.Size(22, 28);
+            this.Kontur_P3КнопкаПодпись3.TabIndex = 38;
+            this.Kontur_P3КнопкаПодпись3.Text = "3";
+            this.Kontur_P3КнопкаПодпись3.UseVisualStyleBackColor = false;
+            this.Kontur_P3КнопкаПодпись3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаПодпись3_MouseDown);
+            this.Kontur_P3КнопкаПодпись3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаПодпись3_MouseUp);
+            // 
+            // Kontur_P3КнопкаПодпись2
+            // 
+            this.Kontur_P3КнопкаПодпись2.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаПодпись2.BackgroundImage = global::R440O.ControlElementImages.buttonSquareRed_small;
+            this.Kontur_P3КнопкаПодпись2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3КнопкаПодпись2.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3КнопкаПодпись2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаПодпись2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаПодпись2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3КнопкаПодпись2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.Kontur_P3КнопкаПодпись2.ForeColor = System.Drawing.Color.White;
+            this.Kontur_P3КнопкаПодпись2.Location = new System.Drawing.Point(643, 174);
+            this.Kontur_P3КнопкаПодпись2.Name = "Kontur_P3КнопкаПодпись2";
+            this.Kontur_P3КнопкаПодпись2.Size = new System.Drawing.Size(22, 28);
+            this.Kontur_P3КнопкаПодпись2.TabIndex = 37;
+            this.Kontur_P3КнопкаПодпись2.Text = "2";
+            this.Kontur_P3КнопкаПодпись2.UseVisualStyleBackColor = false;
+            this.Kontur_P3КнопкаПодпись2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаПодпись2_MouseDown);
+            this.Kontur_P3КнопкаПодпись2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаПодпись2_MouseUp);
+            // 
+            // Kontur_P3КнопкаПодпись1
+            // 
+            this.Kontur_P3КнопкаПодпись1.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаПодпись1.BackgroundImage = global::R440O.ControlElementImages.buttonSquareRed_small;
+            this.Kontur_P3КнопкаПодпись1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3КнопкаПодпись1.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3КнопкаПодпись1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаПодпись1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаПодпись1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3КнопкаПодпись1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.Kontur_P3КнопкаПодпись1.ForeColor = System.Drawing.Color.White;
+            this.Kontur_P3КнопкаПодпись1.Location = new System.Drawing.Point(613, 174);
+            this.Kontur_P3КнопкаПодпись1.Name = "Kontur_P3КнопкаПодпись1";
+            this.Kontur_P3КнопкаПодпись1.Size = new System.Drawing.Size(22, 28);
+            this.Kontur_P3КнопкаПодпись1.TabIndex = 36;
+            this.Kontur_P3КнопкаПодпись1.Text = "1";
+            this.Kontur_P3КнопкаПодпись1.UseVisualStyleBackColor = false;
+            this.Kontur_P3КнопкаПодпись1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаПодпись1_MouseDown);
+            this.Kontur_P3КнопкаПодпись1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаПодпись1_MouseUp);
+            // 
+            // Kontur_P3КнопкаПуск
+            // 
+            this.Kontur_P3КнопкаПуск.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаПуск.BackgroundImage = global::R440O.ControlElementImages.buttonRoundType8;
+            this.Kontur_P3КнопкаПуск.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3КнопкаПуск.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3КнопкаПуск.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаПуск.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаПуск.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3КнопкаПуск.Location = new System.Drawing.Point(846, 159);
+            this.Kontur_P3КнопкаПуск.Name = "Kontur_P3КнопкаПуск";
+            this.Kontur_P3КнопкаПуск.Size = new System.Drawing.Size(36, 38);
+            this.Kontur_P3КнопкаПуск.TabIndex = 35;
+            this.Kontur_P3КнопкаПуск.UseVisualStyleBackColor = false;
+            this.Kontur_P3КнопкаПуск.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаПуск_MouseDown);
+            this.Kontur_P3КнопкаПуск.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаПуск_MouseUp);
+            // 
+            // Kontur_P3КнопкаКП4Контроль
+            // 
+            this.Kontur_P3КнопкаКП4Контроль.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаКП4Контроль.BackgroundImage = global::R440O.ControlElementImages.buttonRoundType8;
+            this.Kontur_P3КнопкаКП4Контроль.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3КнопкаКП4Контроль.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3КнопкаКП4Контроль.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаКП4Контроль.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаКП4Контроль.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3КнопкаКП4Контроль.Location = new System.Drawing.Point(425, 299);
+            this.Kontur_P3КнопкаКП4Контроль.Name = "Kontur_P3КнопкаКП4Контроль";
+            this.Kontur_P3КнопкаКП4Контроль.Size = new System.Drawing.Size(36, 38);
+            this.Kontur_P3КнопкаКП4Контроль.TabIndex = 34;
+            this.Kontur_P3КнопкаКП4Контроль.UseVisualStyleBackColor = false;
+            this.Kontur_P3КнопкаКП4Контроль.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаКП4Контроль_MouseDown);
+            this.Kontur_P3КнопкаКП4Контроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаКП4Контроль_MouseUp);
+            // 
+            // Kontur_P3КнопкаКан12
+            // 
+            this.Kontur_P3КнопкаКан12.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаКан12.BackgroundImage = global::R440O.ControlElementImages.buttonRoundType8;
+            this.Kontur_P3КнопкаКан12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3КнопкаКан12.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3КнопкаКан12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаКан12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаКан12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3КнопкаКан12.Location = new System.Drawing.Point(308, 306);
+            this.Kontur_P3КнопкаКан12.Name = "Kontur_P3КнопкаКан12";
+            this.Kontur_P3КнопкаКан12.Size = new System.Drawing.Size(36, 38);
+            this.Kontur_P3КнопкаКан12.TabIndex = 33;
+            this.Kontur_P3КнопкаКан12.UseVisualStyleBackColor = false;
+            this.Kontur_P3КнопкаКан12.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаКан12_MouseDown);
+            this.Kontur_P3КнопкаКан12.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаКан12_MouseUp);
+            // 
+            // Kontur_P3КнопкаКан11
+            // 
+            this.Kontur_P3КнопкаКан11.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаКан11.BackgroundImage = global::R440O.ControlElementImages.buttonRoundType8;
+            this.Kontur_P3КнопкаКан11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3КнопкаКан11.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3КнопкаКан11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаКан11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаКан11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3КнопкаКан11.Location = new System.Drawing.Point(307, 252);
+            this.Kontur_P3КнопкаКан11.Name = "Kontur_P3КнопкаКан11";
+            this.Kontur_P3КнопкаКан11.Size = new System.Drawing.Size(36, 38);
+            this.Kontur_P3КнопкаКан11.TabIndex = 32;
+            this.Kontur_P3КнопкаКан11.UseVisualStyleBackColor = false;
+            this.Kontur_P3КнопкаКан11.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаКан11_MouseDown);
+            this.Kontur_P3КнопкаКан11.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаКан11_MouseUp);
+            // 
+            // Kontur_P3КнопкаКан10
+            // 
+            this.Kontur_P3КнопкаКан10.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаКан10.BackgroundImage = global::R440O.ControlElementImages.buttonRoundType8;
+            this.Kontur_P3КнопкаКан10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3КнопкаКан10.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3КнопкаКан10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаКан10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаКан10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3КнопкаКан10.Location = new System.Drawing.Point(307, 199);
+            this.Kontur_P3КнопкаКан10.Name = "Kontur_P3КнопкаКан10";
+            this.Kontur_P3КнопкаКан10.Size = new System.Drawing.Size(36, 38);
+            this.Kontur_P3КнопкаКан10.TabIndex = 31;
+            this.Kontur_P3КнопкаКан10.UseVisualStyleBackColor = false;
+            this.Kontur_P3КнопкаКан10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаКан10_MouseDown);
+            this.Kontur_P3КнопкаКан10.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаКан10_MouseUp);
+            // 
+            // Kontur_P3КнопкаКП1Контроль
+            // 
+            this.Kontur_P3КнопкаКП1Контроль.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаКП1Контроль.BackgroundImage = global::R440O.ControlElementImages.buttonRoundType8;
+            this.Kontur_P3КнопкаКП1Контроль.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3КнопкаКП1Контроль.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3КнопкаКП1Контроль.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаКП1Контроль.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаКП1Контроль.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3КнопкаКП1Контроль.Location = new System.Drawing.Point(101, 303);
+            this.Kontur_P3КнопкаКП1Контроль.Name = "Kontur_P3КнопкаКП1Контроль";
+            this.Kontur_P3КнопкаКП1Контроль.Size = new System.Drawing.Size(36, 38);
+            this.Kontur_P3КнопкаКП1Контроль.TabIndex = 30;
+            this.Kontur_P3КнопкаКП1Контроль.UseVisualStyleBackColor = false;
+            this.Kontur_P3КнопкаКП1Контроль.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаКП1Контроль_MouseDown);
+            this.Kontur_P3КнопкаКП1Контроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаКП1Контроль_MouseUp);
+            // 
+            // Kontur_P3КнопкаНачИнформ
+            // 
+            this.Kontur_P3КнопкаНачИнформ.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаНачИнформ.BackgroundImage = global::R440O.ControlElementImages.buttonRoundType8;
+            this.Kontur_P3КнопкаНачИнформ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3КнопкаНачИнформ.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3КнопкаНачИнформ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаНачИнформ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаНачИнформ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3КнопкаНачИнформ.Location = new System.Drawing.Point(198, 255);
+            this.Kontur_P3КнопкаНачИнформ.Name = "Kontur_P3КнопкаНачИнформ";
+            this.Kontur_P3КнопкаНачИнформ.Size = new System.Drawing.Size(36, 38);
+            this.Kontur_P3КнопкаНачИнформ.TabIndex = 29;
+            this.Kontur_P3КнопкаНачИнформ.UseVisualStyleBackColor = false;
+            this.Kontur_P3КнопкаНачИнформ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаНачИнформ_MouseDown);
+            this.Kontur_P3КнопкаНачИнформ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаНачИнформ_MouseUp);
+            // 
+            // Kontur_P3КнопкаСдвиг10
+            // 
+            this.Kontur_P3КнопкаСдвиг10.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаСдвиг10.BackgroundImage = global::R440O.ControlElementImages.buttonRoundType8;
+            this.Kontur_P3КнопкаСдвиг10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3КнопкаСдвиг10.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3КнопкаСдвиг10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаСдвиг10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаСдвиг10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3КнопкаСдвиг10.Location = new System.Drawing.Point(219, 207);
+            this.Kontur_P3КнопкаСдвиг10.Name = "Kontur_P3КнопкаСдвиг10";
+            this.Kontur_P3КнопкаСдвиг10.Size = new System.Drawing.Size(36, 38);
+            this.Kontur_P3КнопкаСдвиг10.TabIndex = 28;
+            this.Kontur_P3КнопкаСдвиг10.UseVisualStyleBackColor = false;
+            this.Kontur_P3КнопкаСдвиг10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаСдвиг10_MouseDown);
+            this.Kontur_P3КнопкаСдвиг10.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаСдвиг10_MouseUp);
+            // 
+            // Kontur_P3КнопкаСдвиг1
+            // 
+            this.Kontur_P3КнопкаСдвиг1.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаСдвиг1.BackgroundImage = global::R440O.ControlElementImages.buttonRoundType8;
+            this.Kontur_P3КнопкаСдвиг1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3КнопкаСдвиг1.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3КнопкаСдвиг1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаСдвиг1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3КнопкаСдвиг1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3КнопкаСдвиг1.Location = new System.Drawing.Point(177, 210);
+            this.Kontur_P3КнопкаСдвиг1.Name = "Kontur_P3КнопкаСдвиг1";
+            this.Kontur_P3КнопкаСдвиг1.Size = new System.Drawing.Size(36, 35);
+            this.Kontur_P3КнопкаСдвиг1.TabIndex = 27;
+            this.Kontur_P3КнопкаСдвиг1.UseVisualStyleBackColor = false;
+            this.Kontur_P3КнопкаСдвиг1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаСдвиг1_MouseDown);
+            this.Kontur_P3КнопкаСдвиг1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаСдвиг1_MouseUp);
+            // 
+            // Kontur_P3ТумблерСеть
+            // 
+            this.Kontur_P3ТумблерСеть.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ТумблерСеть.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
+            this.Kontur_P3ТумблерСеть.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3ТумблерСеть.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3ТумблерСеть.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ТумблерСеть.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ТумблерСеть.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3ТумблерСеть.Location = new System.Drawing.Point(957, 130);
+            this.Kontur_P3ТумблерСеть.Name = "Kontur_P3ТумблерСеть";
+            this.Kontur_P3ТумблерСеть.Size = new System.Drawing.Size(43, 56);
+            this.Kontur_P3ТумблерСеть.TabIndex = 26;
+            this.Kontur_P3ТумблерСеть.UseVisualStyleBackColor = false;
+            this.Kontur_P3ТумблерСеть.Click += new System.EventHandler(this.Kontur_P3ТумблерСеть_Click);
+            // 
+            // Kontur_P3ТумблерДокументирование
+            // 
+            this.Kontur_P3ТумблерДокументирование.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ТумблерДокументирование.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
+            this.Kontur_P3ТумблерДокументирование.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3ТумблерДокументирование.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3ТумблерДокументирование.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ТумблерДокументирование.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ТумблерДокументирование.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3ТумблерДокументирование.Location = new System.Drawing.Point(844, 98);
+            this.Kontur_P3ТумблерДокументирование.Name = "Kontur_P3ТумблерДокументирование";
+            this.Kontur_P3ТумблерДокументирование.Size = new System.Drawing.Size(43, 56);
+            this.Kontur_P3ТумблерДокументирование.TabIndex = 25;
+            this.Kontur_P3ТумблерДокументирование.UseVisualStyleBackColor = false;
+            this.Kontur_P3ТумблерДокументирование.Click += new System.EventHandler(this.Kontur_P3ТумблерДокументирование_Click);
+            // 
+            // Kontur_P3ТумблерРежим
+            // 
+            this.Kontur_P3ТумблерРежим.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ТумблерРежим.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
+            this.Kontur_P3ТумблерРежим.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3ТумблерРежим.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3ТумблерРежим.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ТумблерРежим.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ТумблерРежим.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3ТумблерРежим.Location = new System.Drawing.Point(845, 275);
+            this.Kontur_P3ТумблерРежим.Name = "Kontur_P3ТумблерРежим";
+            this.Kontur_P3ТумблерРежим.Size = new System.Drawing.Size(43, 56);
+            this.Kontur_P3ТумблерРежим.TabIndex = 24;
+            this.Kontur_P3ТумблерРежим.UseVisualStyleBackColor = false;
+            this.Kontur_P3ТумблерРежим.Click += new System.EventHandler(this.Kontur_P3ТумблерРежим_Click);
+            // 
+            // Kontur_P3ТумблерАсинхрСинхр
+            // 
+            this.Kontur_P3ТумблерАсинхрСинхр.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ТумблерАсинхрСинхр.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
+            this.Kontur_P3ТумблерАсинхрСинхр.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3ТумблерАсинхрСинхр.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3ТумблерАсинхрСинхр.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ТумблерАсинхрСинхр.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ТумблерАсинхрСинхр.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3ТумблерАсинхрСинхр.Location = new System.Drawing.Point(845, 218);
+            this.Kontur_P3ТумблерАсинхрСинхр.Name = "Kontur_P3ТумблерАсинхрСинхр";
+            this.Kontur_P3ТумблерАсинхрСинхр.Size = new System.Drawing.Size(43, 56);
+            this.Kontur_P3ТумблерАсинхрСинхр.TabIndex = 23;
+            this.Kontur_P3ТумблерАсинхрСинхр.UseVisualStyleBackColor = false;
+            this.Kontur_P3ТумблерАсинхрСинхр.Click += new System.EventHandler(this.Kontur_P3ТумблерАсинхрСинхр_Click);
+            // 
+            // Kontur_P3ТумблерМткПУ
+            // 
+            this.Kontur_P3ТумблерМткПУ.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ТумблерМткПУ.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
+            this.Kontur_P3ТумблерМткПУ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3ТумблерМткПУ.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3ТумблерМткПУ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ТумблерМткПУ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ТумблерМткПУ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3ТумблерМткПУ.Location = new System.Drawing.Point(527, 216);
+            this.Kontur_P3ТумблерМткПУ.Name = "Kontur_P3ТумблерМткПУ";
+            this.Kontur_P3ТумблерМткПУ.Size = new System.Drawing.Size(43, 56);
+            this.Kontur_P3ТумблерМткПУ.TabIndex = 22;
+            this.Kontur_P3ТумблерМткПУ.UseVisualStyleBackColor = false;
+            this.Kontur_P3ТумблерМткПУ.Click += new System.EventHandler(this.Kontur_P3ТумблерМткПУ_Click);
+            // 
+            // Kontur_P3ТумблерКонтроль
+            // 
+            this.Kontur_P3ТумблерКонтроль.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ТумблерКонтроль.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
+            this.Kontur_P3ТумблерКонтроль.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3ТумблерКонтроль.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3ТумблерКонтроль.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ТумблерКонтроль.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ТумблерКонтроль.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3ТумблерКонтроль.Location = new System.Drawing.Point(197, 294);
+            this.Kontur_P3ТумблерКонтроль.Name = "Kontur_P3ТумблерКонтроль";
+            this.Kontur_P3ТумблерКонтроль.Size = new System.Drawing.Size(43, 56);
+            this.Kontur_P3ТумблерКонтроль.TabIndex = 21;
+            this.Kontur_P3ТумблерКонтроль.UseVisualStyleBackColor = false;
+            this.Kontur_P3ТумблерКонтроль.Click += new System.EventHandler(this.Kontur_P3ТумблерКонтроль_Click);
+            // 
+            // Kontur_P3ПереключательПриоритет
+            // 
+            this.Kontur_P3ПереключательПриоритет.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ПереключательПриоритет.BackgroundImage = global::R440O.ControlElementImages.toggleType6;
+            this.Kontur_P3ПереключательПриоритет.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ПереключательПриоритет.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3ПереключательПриоритет.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ПереключательПриоритет.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ПереключательПриоритет.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3ПереключательПриоритет.Location = new System.Drawing.Point(417, 202);
+            this.Kontur_P3ПереключательПриоритет.Name = "Kontur_P3ПереключательПриоритет";
+            this.Kontur_P3ПереключательПриоритет.Size = new System.Drawing.Size(57, 65);
+            this.Kontur_P3ПереключательПриоритет.TabIndex = 4;
+            this.Kontur_P3ПереключательПриоритет.UseVisualStyleBackColor = false;
+            this.Kontur_P3ПереключательПриоритет.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3ПереключательПриоритет_MouseUp);
+            // 
+            // Kontur_P3ПереключательКонтроль
+            // 
+            this.Kontur_P3ПереключательКонтроль.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ПереключательКонтроль.BackgroundImage = global::R440O.ControlElementImages.toggleType6;
+            this.Kontur_P3ПереключательКонтроль.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ПереключательКонтроль.FlatAppearance.BorderSize = 0;
+            this.Kontur_P3ПереключательКонтроль.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ПереключательКонтроль.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ПереключательКонтроль.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kontur_P3ПереключательКонтроль.Location = new System.Drawing.Point(944, 271);
+            this.Kontur_P3ПереключательКонтроль.Name = "Kontur_P3ПереключательКонтроль";
+            this.Kontur_P3ПереключательКонтроль.Size = new System.Drawing.Size(57, 65);
+            this.Kontur_P3ПереключательКонтроль.TabIndex = 3;
+            this.Kontur_P3ПереключательКонтроль.UseVisualStyleBackColor = false;
+            this.Kontur_P3ПереключательКонтроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3ПереключательКонтроль_MouseUp);
             // 
             // Kontur_P3Form
             // 
@@ -490,26 +932,47 @@
         #endregion
 
         private System.Windows.Forms.Panel Kontur_P3Panel;
-        private System.Windows.Forms.Button Контур_П3КнопкаКП1Контроль;
-        private System.Windows.Forms.Button Контур_П3КнопкаКП2Сдвиг1;
-        private System.Windows.Forms.Button Контур_П3КнопкаКП2Сдвиг10;
-        private System.Windows.Forms.Button Контур_П3КнопкаКП2НачИнформ;
-        private System.Windows.Forms.Button Контур_П3КнопкаКП3КонтрольКанал10;
-        private System.Windows.Forms.Button Контур_П3КнопкаКП3КонтрольКанал11;
-        private System.Windows.Forms.Button Контур_П3КнопкаКП3КонтрольКанал12;
-        private System.Windows.Forms.Button Контур_П3КнопкаКП4Контроль;
-        private System.Windows.Forms.Button Контур_П3КнопкаКП6Пуск;
-        private System.Windows.Forms.Button Контур_П3КнопкаКП5АдресУСС;
-        private System.Windows.Forms.Button Контур_П3КнопкаКП5АдресК;
-        private System.Windows.Forms.Button Контур_П3КнопкаКП5Подпись1;
-        private System.Windows.Forms.Button Контур_П3КнопкаКП5Подпись2;
-        private System.Windows.Forms.Button Контур_П3КнопкаКП5Подпись3;
-        private System.Windows.Forms.Button Контур_П3КнопкаКП5Группа;
-        private System.Windows.Forms.Button Контур_П3КнопкаКП5ОбщийС;
-        private System.Windows.Forms.Button Контур_П3КнопкаКП5ПередачаВызов;
-        private System.Windows.Forms.Button Контур_П3КнопкаКП5ПередачаПУОтбой;
-        private System.Windows.Forms.Button Контур_П3КнопкаКП5ПередачаИнформ;
-        private System.Windows.Forms.Button Контур_П3КнопкаКП5ПередачаНаборККПРМ;
-        private System.Windows.Forms.Button Контур_П3КнопкаКП5ПередачаКонтрольЗанятости;
+        private System.Windows.Forms.Button Kontur_P3ПереключательКонтроль;
+        private System.Windows.Forms.Button Kontur_P3ПереключательПриоритет;
+        private System.Windows.Forms.Button Kontur_P3ТумблерКонтроль;
+        private System.Windows.Forms.Button Kontur_P3ТумблерМткПУ;
+        private System.Windows.Forms.Button Kontur_P3ТумблерАсинхрСинхр;
+        private System.Windows.Forms.Button Kontur_P3ТумблерРежим;
+        private System.Windows.Forms.Button Kontur_P3ТумблерДокументирование;
+        private System.Windows.Forms.Button Kontur_P3ТумблерСеть;
+        private System.Windows.Forms.Button Kontur_P3КнопкаСдвиг1;
+        private System.Windows.Forms.Button Kontur_P3КнопкаПуск;
+        private System.Windows.Forms.Button Kontur_P3КнопкаКП4Контроль;
+        private System.Windows.Forms.Button Kontur_P3КнопкаКан12;
+        private System.Windows.Forms.Button Kontur_P3КнопкаКан11;
+        private System.Windows.Forms.Button Kontur_P3КнопкаКан10;
+        private System.Windows.Forms.Button Kontur_P3КнопкаКП1Контроль;
+        private System.Windows.Forms.Button Kontur_P3КнопкаНачИнформ;
+        private System.Windows.Forms.Button Kontur_P3КнопкаСдвиг10;
+        private System.Windows.Forms.Button Kontur_P3Кнопка9;
+        private System.Windows.Forms.Button Kontur_P3Кнопка8;
+        private System.Windows.Forms.Button Kontur_P3Кнопка6;
+        private System.Windows.Forms.Button Kontur_P3Кнопка3;
+        private System.Windows.Forms.Button Kontur_P3Кнопка5;
+        private System.Windows.Forms.Button Kontur_P3Кнопка2;
+        private System.Windows.Forms.Button Kontur_P3Кнопка0;
+        private System.Windows.Forms.Button Kontur_P3Кнопка1;
+        private System.Windows.Forms.Button Kontur_P3Кнопка4;
+        private System.Windows.Forms.Button Kontur_P3Кнопка7;
+        private System.Windows.Forms.Button Kontur_P3КнопкаКонтрольЗанятости;
+        private System.Windows.Forms.Button Kontur_P3КнопкаИнформ;
+        private System.Windows.Forms.Button Kontur_P3КнопкаОтбой;
+        private System.Windows.Forms.Button Kontur_P3КнопкаВызов;
+        private System.Windows.Forms.Button Kontur_P3КнопкаОтклЗС;
+        private System.Windows.Forms.Button Kontur_P3КнопкаГруппа;
+        private System.Windows.Forms.Button Kontur_P3КнопкаАдресК;
+        private System.Windows.Forms.Button Kontur_P3КнопкаАдресУСС;
+        private System.Windows.Forms.Button Kontur_P3КнопкаНаборКК;
+        private System.Windows.Forms.Button Kontur_P3КнопкаИнформКОН;
+        private System.Windows.Forms.Button Kontur_P3КнопкаИнформС;
+        private System.Windows.Forms.Button Kontur_P3КнопкаОбщийС;
+        private System.Windows.Forms.Button Kontur_P3КнопкаПодпись3;
+        private System.Windows.Forms.Button Kontur_P3КнопкаПодпись2;
+        private System.Windows.Forms.Button Kontur_P3КнопкаПодпись1;
     }
 }

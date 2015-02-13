@@ -172,7 +172,7 @@
             this.DAB_5КнопкаВыборПрмПрд2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаВыборПрмПрд2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаВыборПрмПрд2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DAB_5КнопкаВыборПрмПрд2.Location = new System.Drawing.Point(853, 164);
+            this.DAB_5КнопкаВыборПрмПрд2.Location = new System.Drawing.Point(853, 165);
             this.DAB_5КнопкаВыборПрмПрд2.Name = "DAB_5КнопкаВыборПрмПрд2";
             this.DAB_5КнопкаВыборПрмПрд2.Size = new System.Drawing.Size(23, 23);
             this.DAB_5КнопкаВыборПрмПрд2.TabIndex = 33;
@@ -188,7 +188,7 @@
             this.DAB_5КнопкаВыборБП1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаВыборБП1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаВыборБП1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DAB_5КнопкаВыборБП1.Location = new System.Drawing.Point(892, 167);
+            this.DAB_5КнопкаВыборБП1.Location = new System.Drawing.Point(892, 165);
             this.DAB_5КнопкаВыборБП1.Name = "DAB_5КнопкаВыборБП1";
             this.DAB_5КнопкаВыборБП1.Size = new System.Drawing.Size(23, 23);
             this.DAB_5КнопкаВыборБП1.TabIndex = 33;
@@ -220,7 +220,7 @@
             this.DAB_5КнопкаРежимПрм2К.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаРежимПрм2К.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаРежимПрм2К.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DAB_5КнопкаРежимПрм2К.Location = new System.Drawing.Point(976, 232);
+            this.DAB_5КнопкаРежимПрм2К.Location = new System.Drawing.Point(977, 233);
             this.DAB_5КнопкаРежимПрм2К.Name = "DAB_5КнопкаРежимПрм2К";
             this.DAB_5КнопкаРежимПрм2К.Size = new System.Drawing.Size(23, 23);
             this.DAB_5КнопкаРежимПрм2К.TabIndex = 33;
@@ -236,7 +236,7 @@
             this.DAB_5КнопкаРежимПрмПрд2К.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаРежимПрмПрд2К.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаРежимПрмПрд2К.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DAB_5КнопкаРежимПрмПрд2К.Location = new System.Drawing.Point(953, 232);
+            this.DAB_5КнопкаРежимПрмПрд2К.Location = new System.Drawing.Point(954, 233);
             this.DAB_5КнопкаРежимПрмПрд2К.Name = "DAB_5КнопкаРежимПрмПрд2К";
             this.DAB_5КнопкаРежимПрмПрд2К.Size = new System.Drawing.Size(23, 23);
             this.DAB_5КнопкаРежимПрмПрд2К.TabIndex = 33;
@@ -252,7 +252,7 @@
             this.DAB_5КнопкаРежимШлейф2К.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаРежимШлейф2К.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаРежимШлейф2К.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DAB_5КнопкаРежимШлейф2К.Location = new System.Drawing.Point(932, 233);
+            this.DAB_5КнопкаРежимШлейф2К.Location = new System.Drawing.Point(931, 233);
             this.DAB_5КнопкаРежимШлейф2К.Name = "DAB_5КнопкаРежимШлейф2К";
             this.DAB_5КнопкаРежимШлейф2К.Size = new System.Drawing.Size(23, 23);
             this.DAB_5КнопкаРежимШлейф2К.TabIndex = 33;
@@ -284,7 +284,7 @@
             this.DAB_5КнопкаРежимВыкл2К.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаРежимВыкл2К.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаРежимВыкл2К.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DAB_5КнопкаРежимВыкл2К.Location = new System.Drawing.Point(886, 233);
+            this.DAB_5КнопкаРежимВыкл2К.Location = new System.Drawing.Point(885, 233);
             this.DAB_5КнопкаРежимВыкл2К.Name = "DAB_5КнопкаРежимВыкл2К";
             this.DAB_5КнопкаРежимВыкл2К.Size = new System.Drawing.Size(23, 23);
             this.DAB_5КнопкаРежимВыкл2К.TabIndex = 33;
@@ -316,7 +316,7 @@
             this.DAB_5КнопкаРежимПрмПрд1К.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаРежимПрмПрд1К.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаРежимПрмПрд1К.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DAB_5КнопкаРежимПрмПрд1К.Location = new System.Drawing.Point(831, 232);
+            this.DAB_5КнопкаРежимПрмПрд1К.Location = new System.Drawing.Point(831, 233);
             this.DAB_5КнопкаРежимПрмПрд1К.Name = "DAB_5КнопкаРежимПрмПрд1К";
             this.DAB_5КнопкаРежимПрмПрд1К.Size = new System.Drawing.Size(23, 23);
             this.DAB_5КнопкаРежимПрмПрд1К.TabIndex = 33;
@@ -332,7 +332,7 @@
             this.DAB_5КнопкаРежимШлейф1К.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаРежимШлейф1К.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаРежимШлейф1К.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DAB_5КнопкаРежимШлейф1К.Location = new System.Drawing.Point(808, 232);
+            this.DAB_5КнопкаРежимШлейф1К.Location = new System.Drawing.Point(808, 233);
             this.DAB_5КнопкаРежимШлейф1К.Name = "DAB_5КнопкаРежимШлейф1К";
             this.DAB_5КнопкаРежимШлейф1К.Size = new System.Drawing.Size(23, 23);
             this.DAB_5КнопкаРежимШлейф1К.TabIndex = 33;
@@ -348,7 +348,7 @@
             this.DAB_5КнопкаРежимРабота1К.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаРежимРабота1К.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаРежимРабота1К.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DAB_5КнопкаРежимРабота1К.Location = new System.Drawing.Point(786, 233);
+            this.DAB_5КнопкаРежимРабота1К.Location = new System.Drawing.Point(785, 233);
             this.DAB_5КнопкаРежимРабота1К.Name = "DAB_5КнопкаРежимРабота1К";
             this.DAB_5КнопкаРежимРабота1К.Size = new System.Drawing.Size(23, 23);
             this.DAB_5КнопкаРежимРабота1К.TabIndex = 33;
@@ -380,7 +380,7 @@
             this.DAB_5КнопкаВыборПрмПрд1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаВыборПрмПрд1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаВыборПрмПрд1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DAB_5КнопкаВыборПрмПрд1.Location = new System.Drawing.Point(811, 164);
+            this.DAB_5КнопкаВыборПрмПрд1.Location = new System.Drawing.Point(810, 165);
             this.DAB_5КнопкаВыборПрмПрд1.Name = "DAB_5КнопкаВыборПрмПрд1";
             this.DAB_5КнопкаВыборПрмПрд1.Size = new System.Drawing.Size(23, 23);
             this.DAB_5КнопкаВыборПрмПрд1.TabIndex = 33;
@@ -396,7 +396,7 @@
             this.DAB_5КнопкаРежимПравая.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаРежимПравая.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаРежимПравая.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DAB_5КнопкаРежимПравая.Location = new System.Drawing.Point(941, 88);
+            this.DAB_5КнопкаРежимПравая.Location = new System.Drawing.Point(940, 88);
             this.DAB_5КнопкаРежимПравая.Name = "DAB_5КнопкаРежимПравая";
             this.DAB_5КнопкаРежимПравая.Size = new System.Drawing.Size(23, 23);
             this.DAB_5КнопкаРежимПравая.TabIndex = 33;
@@ -412,7 +412,7 @@
             this.DAB_5КнопкаРежимЛевая.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаРежимЛевая.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаРежимЛевая.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DAB_5КнопкаРежимЛевая.Location = new System.Drawing.Point(890, 88);
+            this.DAB_5КнопкаРежимЛевая.Location = new System.Drawing.Point(889, 88);
             this.DAB_5КнопкаРежимЛевая.Name = "DAB_5КнопкаРежимЛевая";
             this.DAB_5КнопкаРежимЛевая.Size = new System.Drawing.Size(23, 23);
             this.DAB_5КнопкаРежимЛевая.TabIndex = 33;
@@ -428,7 +428,7 @@
             this.DAB_5КнопкаОбходВыкл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаОбходВыкл.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.DAB_5КнопкаОбходВыкл.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DAB_5КнопкаОбходВыкл.Location = new System.Drawing.Point(833, 88);
+            this.DAB_5КнопкаОбходВыкл.Location = new System.Drawing.Point(832, 88);
             this.DAB_5КнопкаОбходВыкл.Name = "DAB_5КнопкаОбходВыкл";
             this.DAB_5КнопкаОбходВыкл.Size = new System.Drawing.Size(23, 23);
             this.DAB_5КнопкаОбходВыкл.TabIndex = 33;

@@ -10,6 +10,10 @@ namespace R440O.Parameters
     {
         #region Лампочки
         //Лампочки
+        public static string N18_MЛампочкаКЗТЛГ1 { get; set; }
+        public static string N18_MЛампочкаКЗТЛГ2 { get; set; }
+        public static string N18_MЛампочкаКЗТЛГ3 { get; set; }
+        public static string N18_MЛампочкаКЗТЛГ4 { get; set; }
         public static string N18_MЛампочкаСПСТест { get; set; }
         public static string N18_MЛампочкаСПСИнформ { get; set; }
         public static string N18_MЛампочкаПилотК1_1 { get; set; }
