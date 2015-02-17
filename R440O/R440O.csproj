@@ -115,6 +115,7 @@
     <Compile Include="Parameters\PowerCabelParameters.cs" />
     <Compile Include="Parameters\Rubin_NParameters.cs" />
     <Compile Include="Parameters\VoltageStabilizerParameters.cs" />
+    <Compile Include="Parameters\WattmeterParameters.cs" />
     <Compile Include="R440OForms\A1\A1Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1092,6 +1093,7 @@
     <None Include="Resources\Kontur_P3.png" />
     <None Include="Resources\C300M.png" />
     <Content Include="Resources\revolverRound.png" />
+    <None Include="Resources\revolverRoundBlack.png" />
     <Content Include="Resources\tumblerType6Left.png" />
     <Content Include="Resources\tumblerType6Right.png" />
     <None Include="Resources\buttonSquareLightBlue1.png" />

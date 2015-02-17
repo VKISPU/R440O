@@ -379,4 +379,7 @@
   <data name="tumblerType6Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\tumblerType6Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="revolverRoundBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\revolverRoundBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
