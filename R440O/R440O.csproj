@@ -398,6 +398,12 @@
     <Compile Include="R440OForms\N13_1\N13_1Form.Designer.cs">
       <DependentUpon>N13_1Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="R440OForms\OrderScheme\OrderSchemeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\OrderScheme\OrderSchemeForm.Designer.cs">
+      <DependentUpon>OrderSchemeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="R440OForms\PowerShield\PowerShieldForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -671,6 +677,9 @@
     <EmbeddedResource Include="R440OForms\N13_1\N13_1Form.resx">
       <DependentUpon>N13_1Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\OrderScheme\OrderSchemeForm.resx">
+      <DependentUpon>OrderSchemeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\PowerShield\PowerShieldForm.resx">
       <DependentUpon>PowerShieldForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -804,9 +813,6 @@
     <None Include="Resources\DAB_5.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Kontur_P.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\PU_K1.png" />
   </ItemGroup>
   <ItemGroup>
@@ -868,9 +874,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\K03M_01_inside.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\N15_inside.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Astra.png" />
@@ -1014,9 +1017,6 @@
     <None Include="Resources\buttonSquareGrey.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\buttonSquareLightBlue.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\buttonSquareWhite.png" />
   </ItemGroup>
   <ItemGroup>
@@ -1062,9 +1062,6 @@
     <None Include="Resources\lampType11OnYellow.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\orderSchemeIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\powerCabelEnter.png" />
   </ItemGroup>
   <ItemGroup>
@@ -1087,17 +1084,19 @@
     <Content Include="Resources\buttonSquareBlack.png" />
     <Content Include="Resources\buttonSquareBlackLarge.png" />
     <None Include="Resources\buttonSquareBlack_small.png" />
+    <None Include="Resources\buttonSquareLightBlue.png" />
     <Content Include="Resources\buttonSquareRed.png" />
     <Content Include="Resources\buttonSquareRedLarge.png" />
     <None Include="Resources\buttonSquareRed_small.png" />
     <None Include="Resources\Kontur_P3.png" />
+    <None Include="Resources\N15_inside.png" />
+    <None Include="Resources\orderSchemeIcon.png" />
+    <None Include="Resources\OrderScheme.png" />
     <None Include="Resources\C300M.png" />
-    <Content Include="Resources\revolverRound.png" />
     <None Include="Resources\revolverRoundBlack.png" />
-	<Content Include="Resources\revolverRoundSmall.png" />
-	<Content Include="Resources\tumblerType6Left.png" />
+    <Content Include="Resources\revolverRoundSmall.png" />
+    <Content Include="Resources\tumblerType6Left.png" />
     <Content Include="Resources\tumblerType6Right.png" />
-    <None Include="Resources\buttonSquareLightBlue1.png" />
     <None Include="Resources\lampType12OnRed.png" />
     <None Include="Resources\buttonSquareYellow1.png" />
     <None Include="Resources\buttonSquareBlueOff.png" />

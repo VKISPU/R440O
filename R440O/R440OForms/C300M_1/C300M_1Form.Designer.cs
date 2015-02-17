@@ -522,7 +522,7 @@
             this.Ц300М_1КнопкаКонтрольРежима0АПЧ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.Ц300М_1КнопкаКонтрольРежима0АПЧ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ц300М_1КнопкаКонтрольРежима0АПЧ.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Ц300М_1КнопкаКонтрольРежима0АПЧ.ForeColor = System.Drawing.Color.Yellow;
+            this.Ц300М_1КнопкаКонтрольРежима0АПЧ.ForeColor = System.Drawing.Color.Orange;
             this.Ц300М_1КнопкаКонтрольРежима0АПЧ.Location = new System.Drawing.Point(643, 197);
             this.Ц300М_1КнопкаКонтрольРежима0АПЧ.Name = "Ц300М_1КнопкаКонтрольРежима0АПЧ";
             this.Ц300М_1КнопкаКонтрольРежима0АПЧ.Size = new System.Drawing.Size(35, 35);

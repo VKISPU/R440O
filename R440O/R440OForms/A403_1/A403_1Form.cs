@@ -514,7 +514,7 @@ namespace R440O.R440OForms.A403_1
 
         private void A403_1КнопкаСброс_MouseUp(object sender, MouseEventArgs e)
         {
-            this.A403_1КнопкаСброс.BackgroundImage = ControlElementImages.buttonSquareLightBlue1;
+            this.A403_1КнопкаСброс.BackgroundImage = ControlElementImages.buttonSquareLightBlue;
             A403_1Parameters.A403_1TextParameter = string.Empty;
 
             this.A403_1КнопкаАlpha_Lambda.Visible = true;
@@ -662,7 +662,7 @@ namespace R440O.R440OForms.A403_1
 
         private void A403_1КнопкаУстВремени_MouseUp(object sender, MouseEventArgs e)
         {
-            this.A403_1КнопкаУстВремени.BackgroundImage = ControlElementImages.buttonSquareLightBlue1;
+            this.A403_1КнопкаУстВремени.BackgroundImage = ControlElementImages.buttonSquareLightBlue;
         }
 
         private void A403_1КнопкаУстВремени_MouseDown(object sender, MouseEventArgs e)

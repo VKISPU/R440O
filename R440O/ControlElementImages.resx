@@ -130,9 +130,6 @@
   <data name="arrowRound" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\arrowRound.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BMBИндикатор1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\BMBИндикатор1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="buttonN15Off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\buttonN15Off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -177,9 +174,6 @@
   </data>
   <data name="buttonSquareGrey" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\buttonSquareGrey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="buttonSquareLightBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\buttonSquareLightBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="buttonSquareWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\buttonSquareWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -234,9 +228,6 @@
   </data>
   <data name="lampType9OnGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\lampType9OnGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="orderSchemeIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\orderSchemeIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="powerCabelEnter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\powerCabelEnter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -343,12 +334,6 @@
   <data name="voltageStabilizerInput" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\voltageStabilizerInput.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttonSquareLightBlue1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\buttonSquareLightBlue1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="revolverRound" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\revolverRound.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="buttonSquareBlackLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\buttonSquareBlackLarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -384,5 +369,11 @@
   </data>
   <data name="revolverRoundSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\revolverRoundSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orderSchemeIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\orderSchemeIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttonSquareLightBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\buttonSquareLightBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

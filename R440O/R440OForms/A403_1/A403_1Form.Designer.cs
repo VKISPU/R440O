@@ -247,7 +247,7 @@
             // A403_1КнопкаУстВремени
             // 
             this.A403_1КнопкаУстВремени.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1КнопкаУстВремени.BackgroundImage = global::R440O.ControlElementImages.buttonSquareLightBlue1;
+            this.A403_1КнопкаУстВремени.BackgroundImage = global::R440O.ControlElementImages.buttonSquareLightBlue;
             this.A403_1КнопкаУстВремени.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1КнопкаУстВремени.FlatAppearance.BorderSize = 0;
             this.A403_1КнопкаУстВремени.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -266,7 +266,7 @@
             // A403_1КнопкаСброс
             // 
             this.A403_1КнопкаСброс.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1КнопкаСброс.BackgroundImage = global::R440O.ControlElementImages.buttonSquareLightBlue1;
+            this.A403_1КнопкаСброс.BackgroundImage = global::R440O.ControlElementImages.buttonSquareLightBlue;
             this.A403_1КнопкаСброс.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.A403_1КнопкаСброс.FlatAppearance.BorderSize = 0;
             this.A403_1КнопкаСброс.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;

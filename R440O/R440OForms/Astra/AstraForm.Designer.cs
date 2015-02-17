@@ -72,7 +72,7 @@
             // AstraРегуляторУсилениеПЧ
             // 
             this.AstraРегуляторУсилениеПЧ.BackColor = System.Drawing.Color.Transparent;
-            this.AstraРегуляторУсилениеПЧ.BackgroundImage = global::R440O.ControlElementImages.revolverRound;
+            this.AstraРегуляторУсилениеПЧ.BackgroundImage = global::R440O.ControlElementImages.revolverRoundBlack;
             this.AstraРегуляторУсилениеПЧ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.AstraРегуляторУсилениеПЧ.FlatAppearance.BorderSize = 0;
             this.AstraРегуляторУсилениеПЧ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -90,7 +90,7 @@
             // AstraРегуляторУсиление
             // 
             this.AstraРегуляторУсиление.BackColor = System.Drawing.Color.Transparent;
-            this.AstraРегуляторУсиление.BackgroundImage = global::R440O.ControlElementImages.revolverRound;
+            this.AstraРегуляторУсиление.BackgroundImage = global::R440O.ControlElementImages.revolverRoundBlack;
             this.AstraРегуляторУсиление.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.AstraРегуляторУсиление.FlatAppearance.BorderSize = 0;
             this.AstraРегуляторУсиление.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -108,7 +108,7 @@
             // AstraРегуляторЧастота
             // 
             this.AstraРегуляторЧастота.BackColor = System.Drawing.Color.Transparent;
-            this.AstraРегуляторЧастота.BackgroundImage = global::R440O.ControlElementImages.revolverRound;
+            this.AstraРегуляторЧастота.BackgroundImage = global::R440O.ControlElementImages.revolverRoundBlack;
             this.AstraРегуляторЧастота.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.AstraРегуляторЧастота.FlatAppearance.BorderSize = 0;
             this.AstraРегуляторЧастота.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.R440OPanel = new System.Windows.Forms.Panel();
+            this.R440OButtonOrderScheme = new System.Windows.Forms.Button();
             this.R440OButtonWattmeter = new System.Windows.Forms.Button();
             this.R440OButtonK06M_02 = new System.Windows.Forms.Button();
             this.R440OButtonK06M_01 = new System.Windows.Forms.Button();
@@ -93,6 +94,7 @@
             // 
             this.R440OPanel.BackgroundImage = global::R440O.BackgroundImages.R440O;
             this.R440OPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.R440OPanel.Controls.Add(this.R440OButtonOrderScheme);
             this.R440OPanel.Controls.Add(this.R440OButtonWattmeter);
             this.R440OPanel.Controls.Add(this.R440OButtonK06M_02);
             this.R440OPanel.Controls.Add(this.R440OButtonK06M_01);
@@ -154,6 +156,22 @@
             this.R440OPanel.Name = "R440OPanel";
             this.R440OPanel.Size = new System.Drawing.Size(1101, 391);
             this.R440OPanel.TabIndex = 0;
+            // 
+            // R440OButtonOrderScheme
+            // 
+            this.R440OButtonOrderScheme.BackColor = System.Drawing.Color.Transparent;
+            this.R440OButtonOrderScheme.BackgroundImage = global::R440O.ControlElementImages.orderSchemeIcon;
+            this.R440OButtonOrderScheme.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.R440OButtonOrderScheme.FlatAppearance.BorderSize = 0;
+            this.R440OButtonOrderScheme.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.R440OButtonOrderScheme.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.R440OButtonOrderScheme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.R440OButtonOrderScheme.Location = new System.Drawing.Point(990, 16);
+            this.R440OButtonOrderScheme.Name = "R440OButtonOrderScheme";
+            this.R440OButtonOrderScheme.Size = new System.Drawing.Size(80, 66);
+            this.R440OButtonOrderScheme.TabIndex = 58;
+            this.R440OButtonOrderScheme.UseVisualStyleBackColor = false;
+            this.R440OButtonOrderScheme.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
             // R440OButtonWattmeter
             // 
@@ -1027,6 +1045,7 @@
         private System.Windows.Forms.Button R440OButtonK06M_02;
         private System.Windows.Forms.Button R440OButtonK06M_01;
         private System.Windows.Forms.Button R440OButtonWattmeter;
+        private System.Windows.Forms.Button R440OButtonOrderScheme;
     }
 }
 

@@ -30,11 +30,11 @@ namespace R440O.R440OForms.Astra
         private void InitializeRevolvers()
         {
             AstraРегуляторЧастота.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, AstraParameters.AstraРегуляторЧастота);
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRoundBlack, AstraParameters.AstraРегуляторЧастота);
             AstraРегуляторУсиление.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, AstraParameters.AstraРегуляторУсиление);
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRoundBlack, AstraParameters.AstraРегуляторУсиление);
             AstraРегуляторУсилениеПЧ.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, AstraParameters.AstraРегуляторУсилениеПЧ);
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRoundBlack, AstraParameters.AstraРегуляторУсилениеПЧ);
         }
 
         #region Кнопки
@@ -221,7 +221,7 @@ namespace R440O.R440OForms.Astra
         } 
         #endregion
 
-        #region Вращатели
+        #region Регуляторы
 
         private bool isManipulation;
         private void AstraРегулятор_MouseDown(object sender, MouseEventArgs e)
@@ -241,7 +241,7 @@ namespace R440O.R440OForms.Astra
             var angle = TransformImageHelper.CalculateAngle(button.Width, button.Height, e);
             AstraParameters.AstraРегуляторЧастота = angle;
             AstraРегуляторЧастота.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, AstraParameters.AstraРегуляторЧастота);
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRoundBlack, AstraParameters.AstraРегуляторЧастота);
         }
 
         private void AstraРегуляторУсиление_MouseMove(object sender, MouseEventArgs e)
@@ -251,7 +251,7 @@ namespace R440O.R440OForms.Astra
             var angle = TransformImageHelper.CalculateAngle(button.Width, button.Height, e);
             AstraParameters.AstraРегуляторУсиление = angle;
             AstraРегуляторУсиление.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, AstraParameters.AstraРегуляторУсиление);
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRoundBlack, AstraParameters.AstraРегуляторУсиление);
         }
 
         private void AstraРегуляторУсилениеПЧ_MouseMove(object sender, MouseEventArgs e)
@@ -261,7 +261,7 @@ namespace R440O.R440OForms.Astra
             var angle = TransformImageHelper.CalculateAngle(button.Width, button.Height, e);
             AstraParameters.AstraРегуляторУсилениеПЧ = angle;
             AstraРегуляторУсилениеПЧ.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, AstraParameters.AstraРегуляторУсилениеПЧ);
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRoundBlack, AstraParameters.AstraРегуляторУсилениеПЧ);
         }
         #endregion
     }

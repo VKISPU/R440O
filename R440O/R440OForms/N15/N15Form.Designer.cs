@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.N15Panel = new System.Windows.Forms.Panel();
+            this.Н15ТумблерТлфТлгПрд = new System.Windows.Forms.Button();
+            this.Н15ТумблерТлфТлгПрм = new System.Windows.Forms.Button();
             this.Н15ТумблерАнтЭкв = new System.Windows.Forms.Button();
             this.Н15ЛампочкаДАБ_5 = new System.Windows.Forms.PictureBox();
             this.Н15ЛампочкаА403Вкл = new System.Windows.Forms.PictureBox();
@@ -98,8 +100,8 @@
             this.Н15КнопкаПРМНаведениеЦ300М1 = new System.Windows.Forms.Button();
             this.Н15КнопкаСтанцияВыкл = new System.Windows.Forms.Button();
             this.Н15КнопкаСтанцияВкл = new System.Windows.Forms.Button();
-            this.Н15ТумблерТлфТлгПрм = new System.Windows.Forms.Button();
-            this.Н15ТумблерТлфТлгПрд = new System.Windows.Forms.Button();
+            this.N15ButtonInside1 = new System.Windows.Forms.Button();
+            this.N15ButtonInside2 = new System.Windows.Forms.Button();
             this.N15Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Н15ЛампочкаДАБ_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Н15ЛампочкаА403Вкл)).BeginInit();
@@ -138,6 +140,8 @@
             // 
             this.N15Panel.BackgroundImage = global::R440O.BackgroundImages.N15;
             this.N15Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.N15Panel.Controls.Add(this.N15ButtonInside2);
+            this.N15Panel.Controls.Add(this.N15ButtonInside1);
             this.N15Panel.Controls.Add(this.Н15ТумблерТлфТлгПрд);
             this.N15Panel.Controls.Add(this.Н15ТумблерТлфТлгПрм);
             this.N15Panel.Controls.Add(this.Н15ТумблерАнтЭкв);
@@ -213,6 +217,38 @@
             this.N15Panel.Name = "N15Panel";
             this.N15Panel.Size = new System.Drawing.Size(1042, 503);
             this.N15Panel.TabIndex = 2;
+            // 
+            // Н15ТумблерТлфТлгПрд
+            // 
+            this.Н15ТумблерТлфТлгПрд.BackColor = System.Drawing.Color.Transparent;
+            this.Н15ТумблерТлфТлгПрд.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
+            this.Н15ТумблерТлфТлгПрд.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Н15ТумблерТлфТлгПрд.FlatAppearance.BorderSize = 0;
+            this.Н15ТумблерТлфТлгПрд.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Н15ТумблерТлфТлгПрд.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Н15ТумблерТлфТлгПрд.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Н15ТумблерТлфТлгПрд.Location = new System.Drawing.Point(887, 383);
+            this.Н15ТумблерТлфТлгПрд.Name = "Н15ТумблерТлфТлгПрд";
+            this.Н15ТумблерТлфТлгПрд.Size = new System.Drawing.Size(34, 51);
+            this.Н15ТумблерТлфТлгПрд.TabIndex = 70;
+            this.Н15ТумблерТлфТлгПрд.UseVisualStyleBackColor = false;
+            this.Н15ТумблерТлфТлгПрд.Click += new System.EventHandler(this.Н15ТумблерТлфТлгПрд_Click);
+            // 
+            // Н15ТумблерТлфТлгПрм
+            // 
+            this.Н15ТумблерТлфТлгПрм.BackColor = System.Drawing.Color.Transparent;
+            this.Н15ТумблерТлфТлгПрм.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
+            this.Н15ТумблерТлфТлгПрм.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Н15ТумблерТлфТлгПрм.FlatAppearance.BorderSize = 0;
+            this.Н15ТумблерТлфТлгПрм.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Н15ТумблерТлфТлгПрм.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Н15ТумблерТлфТлгПрм.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Н15ТумблерТлфТлгПрм.Location = new System.Drawing.Point(844, 383);
+            this.Н15ТумблерТлфТлгПрм.Name = "Н15ТумблерТлфТлгПрм";
+            this.Н15ТумблерТлфТлгПрм.Size = new System.Drawing.Size(34, 51);
+            this.Н15ТумблерТлфТлгПрм.TabIndex = 69;
+            this.Н15ТумблерТлфТлгПрм.UseVisualStyleBackColor = false;
+            this.Н15ТумблерТлфТлгПрм.Click += new System.EventHandler(this.Н15ТумблерТлфТлгПрм_Click);
             // 
             // Н15ТумблерАнтЭкв
             // 
@@ -1159,37 +1195,33 @@
             this.Н15КнопкаСтанцияВкл.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Н15КнопкаСтанцияВкл_MouseDown);
             this.Н15КнопкаСтанцияВкл.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Н15КнопкаСтанцияВкл_MouseUp);
             // 
-            // Н15ТумблерТлфТлгПрм
+            // N15ButtonInside1
             // 
-            this.Н15ТумблерТлфТлгПрм.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерТлфТлгПрм.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
-            this.Н15ТумблерТлфТлгПрм.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Н15ТумблерТлфТлгПрм.FlatAppearance.BorderSize = 0;
-            this.Н15ТумблерТлфТлгПрм.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерТлфТлгПрм.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерТлфТлгПрм.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Н15ТумблерТлфТлгПрм.Location = new System.Drawing.Point(844, 383);
-            this.Н15ТумблерТлфТлгПрм.Name = "Н15ТумблерТлфТлгПрм";
-            this.Н15ТумблерТлфТлгПрм.Size = new System.Drawing.Size(34, 51);
-            this.Н15ТумблерТлфТлгПрм.TabIndex = 69;
-            this.Н15ТумблерТлфТлгПрм.UseVisualStyleBackColor = false;
-            this.Н15ТумблерТлфТлгПрм.Click += new System.EventHandler(this.Н15ТумблерТлфТлгПрм_Click);
+            this.N15ButtonInside1.BackColor = System.Drawing.Color.Transparent;
+            this.N15ButtonInside1.FlatAppearance.BorderSize = 0;
+            this.N15ButtonInside1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.N15ButtonInside1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.N15ButtonInside1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.N15ButtonInside1.Location = new System.Drawing.Point(11, 12);
+            this.N15ButtonInside1.Name = "N15ButtonInside1";
+            this.N15ButtonInside1.Size = new System.Drawing.Size(42, 35);
+            this.N15ButtonInside1.TabIndex = 71;
+            this.N15ButtonInside1.UseVisualStyleBackColor = false;
+            this.N15ButtonInside1.Click += new System.EventHandler(this.N15ButtonInside1_Click);
             // 
-            // Н15ТумблерТлфТлгПрд
+            // N15ButtonInside2
             // 
-            this.Н15ТумблерТлфТлгПрд.BackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерТлфТлгПрд.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
-            this.Н15ТумблерТлфТлгПрд.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Н15ТумблерТлфТлгПрд.FlatAppearance.BorderSize = 0;
-            this.Н15ТумблерТлфТлгПрд.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерТлфТлгПрд.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Н15ТумблерТлфТлгПрд.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Н15ТумблерТлфТлгПрд.Location = new System.Drawing.Point(887, 383);
-            this.Н15ТумблерТлфТлгПрд.Name = "Н15ТумблерТлфТлгПрд";
-            this.Н15ТумблерТлфТлгПрд.Size = new System.Drawing.Size(34, 51);
-            this.Н15ТумблерТлфТлгПрд.TabIndex = 70;
-            this.Н15ТумблерТлфТлгПрд.UseVisualStyleBackColor = false;
-            this.Н15ТумблерТлфТлгПрд.Click += new System.EventHandler(this.Н15ТумблерТлфТлгПрд_Click);
+            this.N15ButtonInside2.BackColor = System.Drawing.Color.Transparent;
+            this.N15ButtonInside2.FlatAppearance.BorderSize = 0;
+            this.N15ButtonInside2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.N15ButtonInside2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.N15ButtonInside2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.N15ButtonInside2.Location = new System.Drawing.Point(984, 12);
+            this.N15ButtonInside2.Name = "N15ButtonInside2";
+            this.N15ButtonInside2.Size = new System.Drawing.Size(42, 35);
+            this.N15ButtonInside2.TabIndex = 72;
+            this.N15ButtonInside2.UseVisualStyleBackColor = false;
+            this.N15ButtonInside2.Click += new System.EventHandler(this.N15ButtonInside2_Click);
             // 
             // N15Form
             // 
@@ -1313,5 +1345,7 @@
         private System.Windows.Forms.Button Н15ТумблерАнтЭкв;
         private System.Windows.Forms.Button Н15ТумблерТлфТлгПрд;
         private System.Windows.Forms.Button Н15ТумблерТлфТлгПрм;
+        private System.Windows.Forms.Button N15ButtonInside2;
+        private System.Windows.Forms.Button N15ButtonInside1;
     }
 }

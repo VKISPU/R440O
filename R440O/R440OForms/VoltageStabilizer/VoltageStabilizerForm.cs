@@ -26,30 +26,54 @@ namespace R440O.R440OForms.VoltageStabilizer
         }
 
         /// <summary>
-        /// Если в текущий момент времени включено питание 380, а клик происходит по месту,
-        /// где находится вход для кабеля 220 вольт - кабель переключается на 220.
+        /// Обработка клика на кабельный вход 220В.
+        /// Если питание отключено, оно будет установлено на 220В.
+        /// Если питание установлено на 220В, то оно будет отключено.
+        /// Если питание установлено на 380В, то оно будет переключено на 220В.
         /// </summary>
         private void VoltageStabilizerКабельВход1_Click(object sender, System.EventArgs e)
         {
-            if (VoltageStabilizerParameters.VoltageStabilizerКабельВход == "380")
+            switch (VoltageStabilizerParameters.VoltageStabilizerКабельВход)
             {
-                this.VoltageStabilizerКабельВход1.BackgroundImage = ControlElementImages.voltageStabilizerInput;
-                this.VoltageStabilizerКабельВход2.BackgroundImage = null;
-                VoltageStabilizerParameters.VoltageStabilizerКабельВход = "220";
+                case "0":
+                    VoltageStabilizerКабельВход1.BackgroundImage = ControlElementImages.voltageStabilizerInput;
+                    VoltageStabilizerParameters.VoltageStabilizerКабельВход = "220";
+                    break;
+                case "220":
+                    VoltageStabilizerКабельВход1.BackgroundImage = null;
+                    VoltageStabilizerParameters.VoltageStabilizerКабельВход = "0";
+                    break;
+                case "380":
+                    VoltageStabilizerКабельВход1.BackgroundImage = ControlElementImages.voltageStabilizerInput;
+                    VoltageStabilizerКабельВход2.BackgroundImage = null;
+                    VoltageStabilizerParameters.VoltageStabilizerКабельВход = "220";
+                    break;
             }
         }
 
         /// <summary>
-        /// Если в текущий момент времени включено питание 220, а клик происходит по месту,
-        /// где находится вход для кабеля 380 вольт - кабель переключается на 380.
+        /// Обработка клика на кабельный вход 380В.
+        /// Если питание отключено, оно будет установлено на 380В.
+        /// Если питание установлено на 380В, то оно будет отключено.
+        /// Если питание установлено на 220В, то оно будет переключено на 380В.
         /// </summary>
         private void VoltageStabilizerКабельВход2_Click(object sender, System.EventArgs e)
         {
-            if (VoltageStabilizerParameters.VoltageStabilizerКабельВход == "220")
+            switch (VoltageStabilizerParameters.VoltageStabilizerКабельВход)
             {
-                this.VoltageStabilizerКабельВход1.BackgroundImage = null;
-                this.VoltageStabilizerКабельВход2.BackgroundImage = ControlElementImages.voltageStabilizerInput;
-                VoltageStabilizerParameters.VoltageStabilizerКабельВход = "380";
+                case "0":
+                    VoltageStabilizerКабельВход2.BackgroundImage = ControlElementImages.voltageStabilizerInput;
+                    VoltageStabilizerParameters.VoltageStabilizerКабельВход = "380";
+                    break;
+                case "220":
+                    VoltageStabilizerКабельВход1.BackgroundImage = null;
+                    VoltageStabilizerКабельВход2.BackgroundImage = ControlElementImages.voltageStabilizerInput;
+                    VoltageStabilizerParameters.VoltageStabilizerКабельВход = "380";    
+                    break;
+                case "380":
+                    VoltageStabilizerКабельВход2.BackgroundImage = null;
+                    VoltageStabilizerParameters.VoltageStabilizerКабельВход = "0";
+                    break;
             }
         }
 
@@ -79,17 +103,21 @@ namespace R440O.R440OForms.VoltageStabilizer
         /// </summary>
         private void InitializeTogglePosition()
         {
-            if (VoltageStabilizerParameters.VoltageStabilizerКабельВход == "220")
+            switch (VoltageStabilizerParameters.VoltageStabilizerКабельВход)
             {
-                this.VoltageStabilizerКабельВход1.BackgroundImage = ControlElementImages.voltageStabilizerInput;
-                this.VoltageStabilizerКабельВход2.BackgroundImage = null;
+                case "0":
+                    VoltageStabilizerКабельВход1.BackgroundImage = null;
+                    VoltageStabilizerКабельВход2.BackgroundImage = null;
+                    break;
+                case "220":
+                    VoltageStabilizerКабельВход1.BackgroundImage = ControlElementImages.voltageStabilizerInput;
+                    VoltageStabilizerКабельВход2.BackgroundImage = null;
+                    break;
+                case "380":
+                    VoltageStabilizerКабельВход1.BackgroundImage = null;
+                    VoltageStabilizerКабельВход2.BackgroundImage = ControlElementImages.voltageStabilizerInput;
+                    break;
             }
-            else
-            {
-                this.VoltageStabilizerКабельВход1.BackgroundImage = null;
-                this.VoltageStabilizerКабельВход2.BackgroundImage = ControlElementImages.voltageStabilizerInput;
-            }
-
             var angle = VoltageStabilizerParameters.VoltageStabilizerПереключательКонтрольНапр * 30 - 195;
             VoltageStabilizerПереключательКонтрольНапр.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);

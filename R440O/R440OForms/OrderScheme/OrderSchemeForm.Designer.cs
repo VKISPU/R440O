@@ -1,6 +1,6 @@
-﻿namespace R440O.R440OForms.N15Inside
+﻿namespace R440O.R440OForms.OrderScheme
 {
-    partial class N15InsideForm
+    partial class OrderSchemeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.N15InsidePanel = new System.Windows.Forms.Panel();
+            this.OrderSchemePanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // N15InsidePanel
+            // OrderSchemePanel
             // 
-            this.N15InsidePanel.BackgroundImage = global::R440O.BackgroundImages.N15_inside;
-            this.N15InsidePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N15InsidePanel.Location = new System.Drawing.Point(0, 0);
-            this.N15InsidePanel.Name = "N15InsidePanel";
-            this.N15InsidePanel.Size = new System.Drawing.Size(1043, 503);
-            this.N15InsidePanel.TabIndex = 0;
+            this.OrderSchemePanel.BackgroundImage = global::R440O.BackgroundImages.OrderScheme;
+            this.OrderSchemePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.OrderSchemePanel.Location = new System.Drawing.Point(0, 0);
+            this.OrderSchemePanel.Name = "OrderSchemePanel";
+            this.OrderSchemePanel.Size = new System.Drawing.Size(1089, 749);
+            this.OrderSchemePanel.TabIndex = 4;
             // 
-            // N15InsideForm
+            // OrderSchemeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1044, 504);
-            this.Controls.Add(this.N15InsidePanel);
+            this.ClientSize = new System.Drawing.Size(1092, 751);
+            this.Controls.Add(this.OrderSchemePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "N15InsideForm";
+            this.Name = "OrderSchemeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Н15";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.N15InsideForm_FormClosed);
+            this.Text = "СХЕМА-ПРИКАЗ";
             this.ResumeLayout(false);
 
         }
+
         #endregion
 
-        private System.Windows.Forms.Panel N15InsidePanel;
+        private System.Windows.Forms.Panel OrderSchemePanel;
     }
 }

@@ -20,5 +20,15 @@ namespace R440O.R440OForms.N15Inside
         {
             this.InitializeComponent();
         }
+
+        /// <summary>
+        /// Закрытие формы внутренней части блока
+        /// </summary>
+        /// <param name="sender">Объет вызвавший событие</param>
+        /// <param name="e">Событие закрытия формы</param>
+        private void N15InsideForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Owner.Show();
+        }
     }
 }

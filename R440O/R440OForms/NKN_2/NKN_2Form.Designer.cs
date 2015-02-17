@@ -122,7 +122,7 @@
             this.NKN_2Кнопка220Откл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.NKN_2Кнопка220Откл.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.NKN_2Кнопка220Откл.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NKN_2Кнопка220Откл.Location = new System.Drawing.Point(731, 52);
+            this.NKN_2Кнопка220Откл.Location = new System.Drawing.Point(732, 52);
             this.NKN_2Кнопка220Откл.Name = "NKN_2Кнопка220Откл";
             this.NKN_2Кнопка220Откл.Size = new System.Drawing.Size(50, 50);
             this.NKN_2Кнопка220Откл.TabIndex = 1;

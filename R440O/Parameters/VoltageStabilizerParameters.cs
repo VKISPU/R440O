@@ -76,8 +76,8 @@
 
         ////Кабель
         /// <summary>
-        /// Возможные состояния: 220, 380
+        /// Возможные состояния: 220, 380, 0
         /// </summary>
-        public static string VoltageStabilizerКабельВход = "220";
+        public static string VoltageStabilizerКабельВход = "0";
     }
 }
