@@ -24,6 +24,17 @@ namespace R440O.R440OForms.Astra
         {
             this.InitializeComponent();
             this.InitializeTogglesPosition();
+            this.InitializeRevolvers();
+        }
+
+        private void InitializeRevolvers()
+        {
+            AstraВращательЧастота.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, AstraParameters.AstraВращательЧастота);
+            AstraВращательУсиление.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, AstraParameters.AstraВращательУсиление);
+            AstraВращательУсилениеПЧ.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, AstraParameters.AstraВращательУсилениеПЧ);
         }
 
         #region Кнопки
@@ -211,123 +222,47 @@ namespace R440O.R440OForms.Astra
         #endregion
 
         #region Вращатели
-        private int startX;
-        private int startY;
-        private int zeroX;
-        private int zeroY;
-        private bool isManipulation = false;
 
-        #region Частота
-        private void AstraВращательЧастота_MouseDown(object sender, MouseEventArgs e)
+        private bool isManipulation;
+        private void AstraВращатель_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                var button = sender as Button;
-                zeroX = button.Width / 2;
-                zeroY = button.Height / 2;
+            isManipulation = true;
+        }
 
-                startX = e.X;
-                startY = e.Y;
-                isManipulation = true;
-            }
+        private void AstraВращатель_MouseUp(object sender, MouseEventArgs e)
+        {
+            isManipulation = false;
         }
 
         private void AstraВращательЧастота_MouseMove(object sender, MouseEventArgs e)
         {
-            if (isManipulation)
-            {
-                var a = Math.Sqrt(Math.Pow(zeroX - startX, 2) + Math.Pow(zeroY - startY, 2));
-                var b = Math.Sqrt(Math.Pow(startX - e.X, 2) + Math.Pow(startY - e.Y, 2));
-                var c = Math.Sqrt(Math.Pow(e.X - zeroX, 2) + Math.Pow(e.Y - zeroY, 2));
-                var cosB = (a * a + c * c - b * b) / (2 * a * c);
-                var angle = Math.Acos(cosB);
-                AstraВращательЧастота.BackgroundImage =
-                    TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, (float)angle);
-                startX = e.X;
-                startY = e.Y;
-            }
-        }
-
-        private void AstraВращательЧастота_MouseUp(object sender, MouseEventArgs e)
-        {
-            isManipulation = false;
-        } 
-        #endregion 
-
-        #region Усиление
-        private void AstraВращательУсиление_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                var button = sender as Button;
-                zeroX = button.Width / 2;
-                zeroY = button.Height / 2;
-
-                startX = e.X;
-                startY = e.Y;
-                isManipulation = true;
-            }
+            if (!isManipulation) return;
+            var button = sender as Button;
+            var angle = TransformImageHelper.CalculateAngle(button.Width, button.Height, e);
+            AstraParameters.AstraВращательЧастота = angle;
+            AstraВращательЧастота.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, AstraParameters.AstraВращательЧастота);
         }
 
         private void AstraВращательУсиление_MouseMove(object sender, MouseEventArgs e)
         {
-            if (isManipulation)
-            {
-                var a = Math.Sqrt(Math.Pow(zeroX - startX, 2) + Math.Pow(zeroY - startY, 2));
-                var b = Math.Sqrt(Math.Pow(startX - e.X, 2) + Math.Pow(startY - e.Y, 2));
-                var c = Math.Sqrt(Math.Pow(e.X - zeroX, 2) + Math.Pow(e.Y - zeroY, 2));
-                var cosB = (a * a + c * c - b * b) / (2 * a * c);
-                var angle = Math.Acos(cosB);
-                AstraВращательЧастота.BackgroundImage =
-                    TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, (float)angle);
-                startX = e.X;
-                startY = e.Y;
-            }
-        }
-
-        private void AstraВращательУсиление_MouseUp(object sender, MouseEventArgs e)
-        {
-            isManipulation = false;
-        }
-        #endregion
-
-        #region УсилениеПЧ
-        private void AstraВращательУсилениеПЧ_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                var button = sender as Button;
-                zeroX = button.Width / 2;
-                zeroY = button.Height / 2;
-
-                startX = e.X;
-                startY = e.Y;
-                isManipulation = true;
-            }
+            if (!isManipulation) return;
+            var button = sender as Button;
+            var angle = TransformImageHelper.CalculateAngle(button.Width, button.Height, e);
+            AstraParameters.AstraВращательУсиление = angle;
+            AstraВращательУсиление.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, AstraParameters.AstraВращательУсиление);
         }
 
         private void AstraВращательУсилениеПЧ_MouseMove(object sender, MouseEventArgs e)
         {
-            if (isManipulation)
-            {
-                var a = Math.Sqrt(Math.Pow(zeroX - startX, 2) + Math.Pow(zeroY - startY, 2));
-                var b = Math.Sqrt(Math.Pow(startX - e.X, 2) + Math.Pow(startY - e.Y, 2));
-                var c = Math.Sqrt(Math.Pow(e.X - zeroX, 2) + Math.Pow(e.Y - zeroY, 2));
-                var cosB = (a * a + c * c - b * b) / (2 * a * c);
-                var angle = Math.Acos(cosB);
-                AstraВращательЧастота.BackgroundImage =
-                    TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, (float)angle);
-                startX = e.X;
-                startY = e.Y;
-            }
+            if (!isManipulation) return;
+            var button = sender as Button;
+            var angle = TransformImageHelper.CalculateAngle(button.Width, button.Height, e);
+            AstraParameters.AstraВращательУсилениеПЧ = angle;
+            AstraВращательУсилениеПЧ.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, AstraParameters.AstraВращательУсилениеПЧ);
         }
-
-        private void AstraВращательУсилениеПЧ_MouseUp(object sender, MouseEventArgs e)
-        {
-            isManipulation = false;
-        }
-        #endregion
-        
         #endregion
     }
 }
