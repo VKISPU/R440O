@@ -85,6 +85,7 @@
     <Compile Include="Parameters\K02M_02Parameters.cs" />
     <Compile Include="Parameters\K02M_01Parameters.cs" />
     <Compile Include="Parameters\Kontur_P3Parameters.cs" />
+    <Compile Include="Parameters\N12SParameters.cs" />
     <Compile Include="Parameters\N16Parameters.cs" />
     <Compile Include="Parameters\PU_K1_2Parameters.cs" />
     <Compile Include="Parameters\PU_K1_1Parameters.cs" />
@@ -1091,6 +1092,8 @@
     <None Include="Resources\Kontur_P3.png" />
     <None Include="Resources\C300M.png" />
     <Content Include="Resources\revolverRound.png" />
+    <Content Include="Resources\tumblerType6Left.png" />
+    <Content Include="Resources\tumblerType6Right.png" />
     <None Include="Resources\buttonSquareLightBlue1.png" />
     <None Include="Resources\lampType12OnRed.png" />
     <None Include="Resources\buttonSquareYellow1.png" />

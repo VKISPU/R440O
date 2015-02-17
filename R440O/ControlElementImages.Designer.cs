@@ -853,6 +853,26 @@ namespace R440O {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap tumblerType6Left {
+            get {
+                object obj = ResourceManager.GetObject("tumblerType6Left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tumblerType6Right {
+            get {
+                object obj = ResourceManager.GetObject("tumblerType6Right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tumblerType6Up {
             get {
                 object obj = ResourceManager.GetObject("tumblerType6Up", resourceCulture);
