@@ -1094,7 +1094,8 @@
     <None Include="Resources\C300M.png" />
     <Content Include="Resources\revolverRound.png" />
     <None Include="Resources\revolverRoundBlack.png" />
-    <Content Include="Resources\tumblerType6Left.png" />
+	<Content Include="Resources\revolverRoundSmall.png" />
+	<Content Include="Resources\tumblerType6Left.png" />
     <Content Include="Resources\tumblerType6Right.png" />
     <None Include="Resources\buttonSquareLightBlue1.png" />
     <None Include="Resources\lampType12OnRed.png" />

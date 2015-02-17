@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.C1_67Panel = new System.Windows.Forms.Panel();
+            this.C1_67РегуляторСинхронизация = new System.Windows.Forms.Button();
+            this.C1_67РегуляторУсиление = new System.Windows.Forms.Button();
+            this.C1_67РегуляторСтаб = new System.Windows.Forms.Button();
+            this.C1_67РегуляторПлавно = new System.Windows.Forms.Button();
+            this.C1_67РегуляторГрубо = new System.Windows.Forms.Button();
+            this.C1_67РегуляторШкала = new System.Windows.Forms.Button();
+            this.C1_67РегуляторФокус = new System.Windows.Forms.Button();
+            this.C1_67РегуляторЯркость = new System.Windows.Forms.Button();
             this.С1_67ПереключательУсилительУ2 = new System.Windows.Forms.Button();
             this.С1_67ПереключательУсилительУ3 = new System.Windows.Forms.Button();
             this.С1_67ПереключательУсилительУ1 = new System.Windows.Forms.Button();
@@ -40,6 +48,8 @@
             this.C1_67_N19ПереключательВыборПриемника = new System.Windows.Forms.Button();
             this.C1_67ПереключательУсиление = new System.Windows.Forms.Button();
             this.C1_67ПереключательДлительность = new System.Windows.Forms.Button();
+            this.C1_67РегуляторУровень = new System.Windows.Forms.Button();
+            this.C1_67РегуляторКоррекция = new System.Windows.Forms.Button();
             this.C1_67Panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +57,16 @@
             // 
             this.C1_67Panel.BackgroundImage = global::R440O.BackgroundImages.C1_67;
             this.C1_67Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.C1_67Panel.Controls.Add(this.C1_67РегуляторСинхронизация);
+            this.C1_67Panel.Controls.Add(this.C1_67РегуляторУсиление);
+            this.C1_67Panel.Controls.Add(this.C1_67РегуляторСтаб);
+            this.C1_67Panel.Controls.Add(this.C1_67РегуляторПлавно);
+            this.C1_67Panel.Controls.Add(this.C1_67РегуляторКоррекция);
+            this.C1_67Panel.Controls.Add(this.C1_67РегуляторУровень);
+            this.C1_67Panel.Controls.Add(this.C1_67РегуляторГрубо);
+            this.C1_67Panel.Controls.Add(this.C1_67РегуляторШкала);
+            this.C1_67Panel.Controls.Add(this.C1_67РегуляторФокус);
+            this.C1_67Panel.Controls.Add(this.C1_67РегуляторЯркость);
             this.C1_67Panel.Controls.Add(this.С1_67ПереключательУсилительУ2);
             this.C1_67Panel.Controls.Add(this.С1_67ПереключательУсилительУ3);
             this.C1_67Panel.Controls.Add(this.С1_67ПереключательУсилительУ1);
@@ -62,6 +82,150 @@
             this.C1_67Panel.Name = "C1_67Panel";
             this.C1_67Panel.Size = new System.Drawing.Size(721, 592);
             this.C1_67Panel.TabIndex = 0;
+            // 
+            // C1_67РегуляторСинхронизация
+            // 
+            this.C1_67РегуляторСинхронизация.BackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторСинхронизация.BackgroundImage = global::R440O.ControlElementImages.revolverRoundSmall;
+            this.C1_67РегуляторСинхронизация.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.C1_67РегуляторСинхронизация.FlatAppearance.BorderSize = 0;
+            this.C1_67РегуляторСинхронизация.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторСинхронизация.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторСинхронизация.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.C1_67РегуляторСинхронизация.Location = new System.Drawing.Point(540, 424);
+            this.C1_67РегуляторСинхронизация.Name = "C1_67РегуляторСинхронизация";
+            this.C1_67РегуляторСинхронизация.Size = new System.Drawing.Size(50, 51);
+            this.C1_67РегуляторСинхронизация.TabIndex = 49;
+            this.C1_67РегуляторСинхронизация.UseVisualStyleBackColor = false;
+            this.C1_67РегуляторСинхронизация.MouseDown += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseDown);
+            this.C1_67РегуляторСинхронизация.MouseMove += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseMove);
+            this.C1_67РегуляторСинхронизация.MouseUp += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseUp);
+            // 
+            // C1_67РегуляторУсиление
+            // 
+            this.C1_67РегуляторУсиление.BackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторУсиление.BackgroundImage = global::R440O.ControlElementImages.revolverRoundSmall;
+            this.C1_67РегуляторУсиление.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.C1_67РегуляторУсиление.FlatAppearance.BorderSize = 0;
+            this.C1_67РегуляторУсиление.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторУсиление.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторУсиление.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.C1_67РегуляторУсиление.Location = new System.Drawing.Point(309, 424);
+            this.C1_67РегуляторУсиление.Name = "C1_67РегуляторУсиление";
+            this.C1_67РегуляторУсиление.Size = new System.Drawing.Size(50, 51);
+            this.C1_67РегуляторУсиление.TabIndex = 49;
+            this.C1_67РегуляторУсиление.UseVisualStyleBackColor = false;
+            this.C1_67РегуляторУсиление.MouseDown += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseDown);
+            this.C1_67РегуляторУсиление.MouseMove += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseMove);
+            this.C1_67РегуляторУсиление.MouseUp += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseUp);
+            // 
+            // C1_67РегуляторСтаб
+            // 
+            this.C1_67РегуляторСтаб.BackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторСтаб.BackgroundImage = global::R440O.ControlElementImages.revolverRoundSmall;
+            this.C1_67РегуляторСтаб.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.C1_67РегуляторСтаб.FlatAppearance.BorderSize = 0;
+            this.C1_67РегуляторСтаб.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторСтаб.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторСтаб.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.C1_67РегуляторСтаб.Location = new System.Drawing.Point(383, 310);
+            this.C1_67РегуляторСтаб.Name = "C1_67РегуляторСтаб";
+            this.C1_67РегуляторСтаб.Size = new System.Drawing.Size(50, 51);
+            this.C1_67РегуляторСтаб.TabIndex = 49;
+            this.C1_67РегуляторСтаб.UseVisualStyleBackColor = false;
+            this.C1_67РегуляторСтаб.MouseDown += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseDown);
+            this.C1_67РегуляторСтаб.MouseMove += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseMove);
+            this.C1_67РегуляторСтаб.MouseUp += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseUp);
+            // 
+            // C1_67РегуляторПлавно
+            // 
+            this.C1_67РегуляторПлавно.BackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторПлавно.BackgroundImage = global::R440O.ControlElementImages.revolverRoundSmall;
+            this.C1_67РегуляторПлавно.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.C1_67РегуляторПлавно.FlatAppearance.BorderSize = 0;
+            this.C1_67РегуляторПлавно.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторПлавно.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторПлавно.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.C1_67РегуляторПлавно.Location = new System.Drawing.Point(383, 246);
+            this.C1_67РегуляторПлавно.Name = "C1_67РегуляторПлавно";
+            this.C1_67РегуляторПлавно.Size = new System.Drawing.Size(50, 51);
+            this.C1_67РегуляторПлавно.TabIndex = 49;
+            this.C1_67РегуляторПлавно.UseVisualStyleBackColor = false;
+            this.C1_67РегуляторПлавно.MouseDown += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseDown);
+            this.C1_67РегуляторПлавно.MouseMove += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseMove);
+            this.C1_67РегуляторПлавно.MouseUp += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseUp);
+            // 
+            // C1_67РегуляторГрубо
+            // 
+            this.C1_67РегуляторГрубо.BackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторГрубо.BackgroundImage = global::R440O.ControlElementImages.revolverRoundSmall;
+            this.C1_67РегуляторГрубо.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.C1_67РегуляторГрубо.FlatAppearance.BorderSize = 0;
+            this.C1_67РегуляторГрубо.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторГрубо.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторГрубо.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.C1_67РегуляторГрубо.Location = new System.Drawing.Point(383, 183);
+            this.C1_67РегуляторГрубо.Name = "C1_67РегуляторГрубо";
+            this.C1_67РегуляторГрубо.Size = new System.Drawing.Size(50, 51);
+            this.C1_67РегуляторГрубо.TabIndex = 49;
+            this.C1_67РегуляторГрубо.UseVisualStyleBackColor = false;
+            this.C1_67РегуляторГрубо.MouseDown += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseDown);
+            this.C1_67РегуляторГрубо.MouseMove += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseMove);
+            this.C1_67РегуляторГрубо.MouseUp += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseUp);
+            // 
+            // C1_67РегуляторШкала
+            // 
+            this.C1_67РегуляторШкала.BackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторШкала.BackgroundImage = global::R440O.ControlElementImages.revolverRoundSmall;
+            this.C1_67РегуляторШкала.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.C1_67РегуляторШкала.FlatAppearance.BorderSize = 0;
+            this.C1_67РегуляторШкала.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторШкала.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторШкала.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.C1_67РегуляторШкала.Location = new System.Drawing.Point(28, 324);
+            this.C1_67РегуляторШкала.Name = "C1_67РегуляторШкала";
+            this.C1_67РегуляторШкала.Size = new System.Drawing.Size(50, 51);
+            this.C1_67РегуляторШкала.TabIndex = 49;
+            this.C1_67РегуляторШкала.UseVisualStyleBackColor = false;
+            this.C1_67РегуляторШкала.MouseDown += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseDown);
+            this.C1_67РегуляторШкала.MouseMove += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseMove);
+            this.C1_67РегуляторШкала.MouseUp += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseUp);
+            // 
+            // C1_67РегуляторФокус
+            // 
+            this.C1_67РегуляторФокус.BackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторФокус.BackgroundImage = global::R440O.ControlElementImages.revolverRoundSmall;
+            this.C1_67РегуляторФокус.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.C1_67РегуляторФокус.FlatAppearance.BorderSize = 0;
+            this.C1_67РегуляторФокус.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторФокус.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторФокус.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.C1_67РегуляторФокус.Location = new System.Drawing.Point(27, 225);
+            this.C1_67РегуляторФокус.Name = "C1_67РегуляторФокус";
+            this.C1_67РегуляторФокус.Size = new System.Drawing.Size(50, 51);
+            this.C1_67РегуляторФокус.TabIndex = 49;
+            this.C1_67РегуляторФокус.UseVisualStyleBackColor = false;
+            this.C1_67РегуляторФокус.MouseDown += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseDown);
+            this.C1_67РегуляторФокус.MouseMove += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseMove);
+            this.C1_67РегуляторФокус.MouseUp += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseUp);
+            // 
+            // C1_67РегуляторЯркость
+            // 
+            this.C1_67РегуляторЯркость.BackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторЯркость.BackgroundImage = global::R440O.ControlElementImages.revolverRoundSmall;
+            this.C1_67РегуляторЯркость.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.C1_67РегуляторЯркость.FlatAppearance.BorderSize = 0;
+            this.C1_67РегуляторЯркость.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторЯркость.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторЯркость.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.C1_67РегуляторЯркость.Location = new System.Drawing.Point(27, 173);
+            this.C1_67РегуляторЯркость.Name = "C1_67РегуляторЯркость";
+            this.C1_67РегуляторЯркость.Size = new System.Drawing.Size(50, 51);
+            this.C1_67РегуляторЯркость.TabIndex = 49;
+            this.C1_67РегуляторЯркость.UseVisualStyleBackColor = false;
+            this.C1_67РегуляторЯркость.MouseDown += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseDown);
+            this.C1_67РегуляторЯркость.MouseMove += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseMove);
+            this.C1_67РегуляторЯркость.MouseUp += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseUp);
             // 
             // С1_67ПереключательУсилительУ2
             // 
@@ -236,6 +400,42 @@
             this.C1_67ПереключательДлительность.UseVisualStyleBackColor = false;
             this.C1_67ПереключательДлительность.MouseUp += new System.Windows.Forms.MouseEventHandler(this.C1_67ПереключательДлительность_MouseUp);
             // 
+            // C1_67РегуляторУровень
+            // 
+            this.C1_67РегуляторУровень.BackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторУровень.BackgroundImage = global::R440O.ControlElementImages.revolverRoundSmall;
+            this.C1_67РегуляторУровень.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.C1_67РегуляторУровень.FlatAppearance.BorderSize = 0;
+            this.C1_67РегуляторУровень.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторУровень.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторУровень.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.C1_67РегуляторУровень.Location = new System.Drawing.Point(256, 40);
+            this.C1_67РегуляторУровень.Name = "C1_67РегуляторУровень";
+            this.C1_67РегуляторУровень.Size = new System.Drawing.Size(50, 51);
+            this.C1_67РегуляторУровень.TabIndex = 49;
+            this.C1_67РегуляторУровень.UseVisualStyleBackColor = false;
+            this.C1_67РегуляторУровень.MouseDown += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseDown);
+            this.C1_67РегуляторУровень.MouseMove += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseMove);
+            this.C1_67РегуляторУровень.MouseUp += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseUp);
+            // 
+            // C1_67РегуляторКоррекция
+            // 
+            this.C1_67РегуляторКоррекция.BackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторКоррекция.BackgroundImage = global::R440O.ControlElementImages.revolverRoundSmall;
+            this.C1_67РегуляторКоррекция.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.C1_67РегуляторКоррекция.FlatAppearance.BorderSize = 0;
+            this.C1_67РегуляторКоррекция.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторКоррекция.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.C1_67РегуляторКоррекция.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.C1_67РегуляторКоррекция.Location = new System.Drawing.Point(328, 40);
+            this.C1_67РегуляторКоррекция.Name = "C1_67РегуляторКоррекция";
+            this.C1_67РегуляторКоррекция.Size = new System.Drawing.Size(50, 51);
+            this.C1_67РегуляторКоррекция.TabIndex = 49;
+            this.C1_67РегуляторКоррекция.UseVisualStyleBackColor = false;
+            this.C1_67РегуляторКоррекция.MouseDown += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseDown);
+            this.C1_67РегуляторКоррекция.MouseMove += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseMove);
+            this.C1_67РегуляторКоррекция.MouseUp += new System.Windows.Forms.MouseEventHandler(this.C1_67Регулятор_MouseUp);
+            // 
             // C1_67Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -266,5 +466,15 @@
         private System.Windows.Forms.Button С1_67ПереключательУсилительУ2;
         private System.Windows.Forms.Button С1_67ПереключательУсилительУ3;
         private System.Windows.Forms.Button С1_67ПереключательУсилительУ1;
+        private System.Windows.Forms.Button C1_67РегуляторЯркость;
+        private System.Windows.Forms.Button C1_67РегуляторСинхронизация;
+        private System.Windows.Forms.Button C1_67РегуляторУсиление;
+        private System.Windows.Forms.Button C1_67РегуляторСтаб;
+        private System.Windows.Forms.Button C1_67РегуляторПлавно;
+        private System.Windows.Forms.Button C1_67РегуляторГрубо;
+        private System.Windows.Forms.Button C1_67РегуляторШкала;
+        private System.Windows.Forms.Button C1_67РегуляторФокус;
+        private System.Windows.Forms.Button C1_67РегуляторУровень;
+        private System.Windows.Forms.Button C1_67РегуляторКоррекция;
     }
 }

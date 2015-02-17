@@ -29,12 +29,12 @@ namespace R440O.R440OForms.Astra
 
         private void InitializeRevolvers()
         {
-            AstraВращательЧастота.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, AstraParameters.AstraВращательЧастота);
-            AstraВращательУсиление.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, AstraParameters.AstraВращательУсиление);
-            AstraВращательУсилениеПЧ.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, AstraParameters.AstraВращательУсилениеПЧ);
+            AstraРегуляторЧастота.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, AstraParameters.AstraРегуляторЧастота);
+            AstraРегуляторУсиление.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, AstraParameters.AstraРегуляторУсиление);
+            AstraРегуляторУсилениеПЧ.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, AstraParameters.AstraРегуляторУсилениеПЧ);
         }
 
         #region Кнопки
@@ -224,44 +224,44 @@ namespace R440O.R440OForms.Astra
         #region Вращатели
 
         private bool isManipulation;
-        private void AstraВращатель_MouseDown(object sender, MouseEventArgs e)
+        private void AstraРегулятор_MouseDown(object sender, MouseEventArgs e)
         {
             isManipulation = true;
         }
 
-        private void AstraВращатель_MouseUp(object sender, MouseEventArgs e)
+        private void AstraРегулятор_MouseUp(object sender, MouseEventArgs e)
         {
             isManipulation = false;
         }
 
-        private void AstraВращательЧастота_MouseMove(object sender, MouseEventArgs e)
+        private void AstraРегуляторЧастота_MouseMove(object sender, MouseEventArgs e)
         {
             if (!isManipulation) return;
             var button = sender as Button;
             var angle = TransformImageHelper.CalculateAngle(button.Width, button.Height, e);
-            AstraParameters.AstraВращательЧастота = angle;
-            AstraВращательЧастота.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, AstraParameters.AstraВращательЧастота);
+            AstraParameters.AstraРегуляторЧастота = angle;
+            AstraРегуляторЧастота.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, AstraParameters.AstraРегуляторЧастота);
         }
 
-        private void AstraВращательУсиление_MouseMove(object sender, MouseEventArgs e)
+        private void AstraРегуляторУсиление_MouseMove(object sender, MouseEventArgs e)
         {
             if (!isManipulation) return;
             var button = sender as Button;
             var angle = TransformImageHelper.CalculateAngle(button.Width, button.Height, e);
-            AstraParameters.AstraВращательУсиление = angle;
-            AstraВращательУсиление.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, AstraParameters.AstraВращательУсиление);
+            AstraParameters.AstraРегуляторУсиление = angle;
+            AstraРегуляторУсиление.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, AstraParameters.AstraРегуляторУсиление);
         }
 
-        private void AstraВращательУсилениеПЧ_MouseMove(object sender, MouseEventArgs e)
+        private void AstraРегуляторУсилениеПЧ_MouseMove(object sender, MouseEventArgs e)
         {
             if (!isManipulation) return;
             var button = sender as Button;
             var angle = TransformImageHelper.CalculateAngle(button.Width, button.Height, e);
-            AstraParameters.AstraВращательУсилениеПЧ = angle;
-            AstraВращательУсилениеПЧ.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, AstraParameters.AstraВращательУсилениеПЧ);
+            AstraParameters.AstraРегуляторУсилениеПЧ = angle;
+            AstraРегуляторУсилениеПЧ.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRound, AstraParameters.AstraРегуляторУсилениеПЧ);
         }
         #endregion
     }

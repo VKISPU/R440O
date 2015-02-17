@@ -563,6 +563,16 @@ namespace R440O {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap revolverRoundSmall {
+            get {
+                object obj = ResourceManager.GetObject("revolverRoundSmall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap toggleType1 {
             get {
                 object obj = ResourceManager.GetObject("toggleType1", resourceCulture);

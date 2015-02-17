@@ -126,25 +126,25 @@
         public static bool AstraКнопкаЧастота { get; set; }
 
         ////Вращатели
-        private static int _astraВращательУсиление;
-        private static int _astraВращательУсилениеПЧ;
+        private static int _astraРегуляторУсиление;
+        private static int _astraРегуляторУсилениеПЧ;
 
-        public static int AstraВращательЧастота { get; set; }
+        public static int AstraРегуляторЧастота { get; set; }
 
-        public static int AstraВращательУсиление
+        public static int AstraРегуляторУсиление
         {
-            get { return _astraВращательУсиление; }
-            set { if (value < 120 && value > -120) _astraВращательУсиление = value; }
+            get { return _astraРегуляторУсиление; }
+            set { if (value < 120 && value > -120) _astraРегуляторУсиление = value; }
         }
-        public static int AstraВращательУсилениеПЧ
+        public static int AstraРегуляторУсилениеПЧ
         {
-            get { return _astraВращательУсилениеПЧ; }
-            set { if (value < 120 && value > -120) _astraВращательУсилениеПЧ = value; }
+            get { return _astraРегуляторУсилениеПЧ; }
+            set { if (value < 120 && value > -120) _astraРегуляторУсилениеПЧ = value; }
         }
 
         static AstraParameters()
         {
-            AstraВращательЧастота = 0;
+            AstraРегуляторЧастота = 0;
         }
     }
 }

@@ -4,6 +4,9 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+using System;
+using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using R440O.Parameters;
 using R440O.ThirdParty;
@@ -259,6 +262,35 @@ namespace R440O.R440OForms.C1_67
         }
         #endregion
 
+        #region Вращатели
 
+        private static bool isManipulation;
+
+        private void C1_67Регулятор_MouseDown(object sender, MouseEventArgs e)
+        {
+            isManipulation = true;
+        }
+
+        private void C1_67Регулятор_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (!isManipulation) return;
+            var button = sender as Button;
+            var angle = TransformImageHelper.CalculateAngle(button.Width, button.Height, e);
+            var propertyList = typeof(C1_67Parameters).GetProperties();
+            foreach (var property in propertyList.Where(property => button.Name == property.Name))
+            {
+                property.SetValue(null, angle);
+                var tempAngle = Convert.ToInt32(property.GetValue(null, null));
+                button.BackgroundImage = TransformImageHelper.RotateImageByAngle(
+                    ControlElementImages.revolverRoundSmall,
+                    tempAngle);
+            }
+        }
+
+        private void C1_67Регулятор_MouseUp(object sender, MouseEventArgs e)
+        {
+            isManipulation = false;
+        }
+        #endregion
     }
 }
