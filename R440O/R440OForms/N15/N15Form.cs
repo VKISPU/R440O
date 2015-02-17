@@ -10,6 +10,7 @@ namespace R440O.R440OForms.N15
     using System.Threading;
     using System.Windows.Forms;
     using Parameters;
+    using System.Reflection;
 
     /// <summary>
     /// Форма блока Н-15
@@ -24,6 +25,7 @@ namespace R440O.R440OForms.N15
             this.InitializeComponent();
         }
 
+        #region Локальные свойства
         ////Тумблеры
         private static string локН15ТумблерЦ300М1 { get; set; }
         private static string локН15ТумблерЦ300М2 { get; set; }
@@ -48,15 +50,14 @@ namespace R440O.R440OForms.N15
         private static string локН15ТумблерБ3_2 { get; set; }
         private static string локН15ТумблерДАБ_5 { get; set; }
         private static string локН15ТумблерР_Н { get; set; }
-
         private static string локН15ТумблерАнтЭкв { get; set; }
         private static string локН15ТумблерТлфТлгПрм { get; set; }
         private static string локН15ТумблерТлфТлгПрд { get; set; }
-
         ////Кнопки
         private static string локН15КнопкаН13_1 { get; set; }
         private static string локН15КнопкаН13_2 { get; set; }
         private static string локН15КнопкаН13_12 { get; set; }
+        #endregion
 
         private void Н15КнопкаСтанцияВкл_MouseDown(object sender, MouseEventArgs e)
         {
@@ -313,8 +314,13 @@ namespace R440O.R440OForms.N15
             }
             #endregion
 
+            #region Н15ТумблерК1_1
             N15Parameters.Н15ТумблерК1_1 = локН15ТумблерК1_1;
+            #endregion
+
+            #region Н15ТумблерК1_2
             N15Parameters.Н15ТумблерК1_2 = локН15ТумблерК1_2;
+            #endregion
 
             #region Н15ТумблерБ1_1
             N15Parameters.Н15ТумблерБ1_1 = локН15ТумблерБ1_1;
@@ -703,6 +709,7 @@ namespace R440O.R440OForms.N15
 
         private void N15Form_Load(object sender, EventArgs e)
         {
+            #region Присвоение значений локальным параметрам
             локН15ТумблерЦ300М1 = N15Parameters.Н15ТумблерЦ300М1;
             локН15ТумблерЦ300М2 = N15Parameters.Н15ТумблерЦ300М2;
             локН15ТумблерЦ300М3 = N15Parameters.Н15ТумблерЦ300М3;
@@ -726,14 +733,141 @@ namespace R440O.R440OForms.N15
             локН15ТумблерБ3_2 = N15Parameters.Н15ТумблерБ3_2;
             локН15ТумблерДАБ_5 = N15Parameters.Н15ТумблерДАБ_5;
             локН15ТумблерР_Н = N15Parameters.Н15ТумблерР_Н;
-
             локН15ТумблерАнтЭкв = N15Parameters.Н15ТумблерАнтЭкв;
             локН15ТумблерТлфТлгПрм = N15Parameters.Н15ТумблерТлфТлгПрм;
             локН15ТумблерТлфТлгПрд = N15Parameters.Н15ТумблерТлфТлгПрд;
-
             локН15КнопкаН13_1 = N15Parameters.Н15КнопкаН13_1;
             локН15КнопкаН13_2 = N15Parameters.Н15КнопкаН13_2;
             локН15КнопкаН13_12 = N15Parameters.Н15КнопкаН13_12;
+            #endregion
+            InitializeButtons();
+            InitializeTumblers();
+            InitializeLamps();
+        }
+
+        /// <summary>
+        /// Установка кнопок в положение последней их установки
+        /// </summary>
+        private void InitializeButtons()
+        {
+            foreach (Control item in N15Panel.Controls)
+            {
+                if (item.Name.Contains("Кнопка"))
+                {
+                    PropertyInfo[] fieldList = typeof(N15Parameters).GetProperties();
+                    foreach (PropertyInfo property in fieldList)
+                    {
+                        if (item.Name == property.Name)
+                        {
+                            string value = System.Convert.ToString(property.GetValue(null));
+                            item.Visible = (value != "true") ? true : false;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Установка тумблеров в положение последней их установки
+        /// </summary>
+        private void InitializeTumblers()
+        {
+            foreach (Control item in N15Panel.Controls)
+            {
+                if (item.Name.Contains("Тумблер"))
+                {
+                    PropertyInfo[] fieldList = typeof(N15Parameters).GetProperties();
+                    foreach (PropertyInfo property in fieldList)
+                    {
+                        if (item.Name == property.Name)
+                        {
+                            string value = System.Convert.ToString(property.GetValue(null));
+                            if (value == "true")
+                            {
+                                item.BackgroundImage = ControlElementImages.tumblerType3Up;
+                            }
+                            else
+                                if (value == "false")
+                                {
+                                    item.BackgroundImage = ControlElementImages.tumblerType3Down;
+                                }
+                            if (value == "1" && item.Name.Contains("А20512"))
+                            {
+                                item.BackgroundImage = ControlElementImages.tumblerType4Up;
+                            }
+                            else
+                                if (value == "2" && item.Name.Contains("А20512"))
+                                {
+                                    item.BackgroundImage = ControlElementImages.tumblerType4Down;
+                                }
+                            if (value == "1" && item.Name.Contains("А30412"))
+                            {
+                                item.BackgroundImage = ControlElementImages.tumblerType3Up;
+                            }
+                            else
+                                if (value == "2" && item.Name.Contains("А30412"))
+                                {
+                                    item.BackgroundImage = ControlElementImages.tumblerType3Down;
+                                }
+                            if (value == "ТЛФ")
+                            {
+                                item.BackgroundImage = ControlElementImages.tumblerType4Up;
+                            }
+                            else
+                                if (value == "ТЛГ")
+                                {
+                                    item.BackgroundImage = ControlElementImages.tumblerType4Down;
+                                }
+                            if (value == "АНТ")
+                            {
+                                item.BackgroundImage = ControlElementImages.tumblerType4Up;
+                            }
+                            else
+                                if (value == "ЭКВ")
+                                {
+                                    item.BackgroundImage = ControlElementImages.tumblerType4Down;
+                                }
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Установка лампочек в положение последней их установки
+        /// </summary>
+        private void InitializeLamps()
+        {
+            foreach (Control item in N15Panel.Controls)
+            {
+                if (item.Name.Contains("Лампочка"))
+                {
+                    PropertyInfo[] fieldList = typeof(N15Parameters).GetProperties();
+                    foreach (PropertyInfo property in fieldList)
+                    {
+                        if (item.Name == property.Name)
+                        {
+                            string value = System.Convert.ToString(property.GetValue(null));
+                            if ((value == "true" && (item.Name.Contains("Ц300М") || item.Name.Contains("ППВ") || item.Name.Contains("А205") || item.Name.Contains("УМ1"))))
+                            {
+                                item.BackgroundImage = ControlElementImages.lampType8OnRed;
+                            }
+                            else
+                                if (value == "true")
+                                {
+                                    item.BackgroundImage = ControlElementImages.lampType5OnRed;
+                                }
+                                else
+                                {
+                                    item.BackgroundImage = null;
+                                }
+                            break;
+                        }
+                    }
+                }
+            }
         }
 
         private void Н15ТумблерЦ300М1_Click(object sender, EventArgs e)
@@ -1124,33 +1258,30 @@ namespace R440O.R440OForms.N15
 
         private void Н15ТумблерТлфТлгПрм_Click(object sender, EventArgs e)
         {
-            if (локН15ТумблерТлфТлгПрм == "АНТ")
+            if (локН15ТумблерТлфТлгПрм == "ТЛФ")
             {
                 this.Н15ТумблерТлфТлгПрм.BackgroundImage = ControlElementImages.tumblerType4Down;
-                локН15ТумблерТлфТлгПрм = "ЭКВ";
+                локН15ТумблерТлфТлгПрм = "ТЛГ";
             }
             else
             {
                 this.Н15ТумблерТлфТлгПрм.BackgroundImage = ControlElementImages.tumblerType4Up;
-                локН15ТумблерТлфТлгПрм = "АНТ";
+                локН15ТумблерТлфТлгПрм = "ТЛФ";
             }
         }
 
         private void Н15ТумблерТлфТлгПрд_Click(object sender, EventArgs e)
         {
-            if (локН15ТумблерТлфТлгПрд == "АНТ")
+            if (локН15ТумблерТлфТлгПрд == "ТЛФ")
             {
                 this.Н15ТумблерТлфТлгПрд.BackgroundImage = ControlElementImages.tumblerType4Down;
-                локН15ТумблерТлфТлгПрд = "ЭКВ";
+                локН15ТумблерТлфТлгПрд = "ТЛГ";
             }
             else
             {
                 this.Н15ТумблерТлфТлгПрд.BackgroundImage = ControlElementImages.tumblerType4Up;
-                локН15ТумблерТлфТлгПрд = "АНТ";
+                локН15ТумблерТлфТлгПрд = "ТЛФ";
             }
         }
-
-        
-
     }
 }
