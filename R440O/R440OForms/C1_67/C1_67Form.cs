@@ -55,15 +55,15 @@ namespace R440O.R440OForms.C1_67
 
             this.С1_67ПереключательУсилительУ1.BackgroundImage = C1_67Parameters.C1_67ПереключательУсилительУ1 == false
                 ? null
-                : ControlElementImages.toggleType8;
+                : ControlElementImages.toggleType9;
 
             this.С1_67ПереключательУсилительУ2.BackgroundImage = C1_67Parameters.C1_67ПереключательУсилительУ2 == false
                 ? null
-                : ControlElementImages.toggleType8;
+                : ControlElementImages.toggleType9;
 
             this.С1_67ПереключательУсилительУ3.BackgroundImage = C1_67Parameters.C1_67ПереключательУсилительУ3 == false
                 ? null
-                : ControlElementImages.toggleType8;
+                : ControlElementImages.toggleType9;
 
 
         }
@@ -226,7 +226,7 @@ namespace R440O.R440OForms.C1_67
         {
             if (C1_67Parameters.C1_67ПереключательУсилительУ1 == false)
             {
-                this.С1_67ПереключательУсилительУ1.BackgroundImage = ControlElementImages.toggleType8;
+                this.С1_67ПереключательУсилительУ1.BackgroundImage = ControlElementImages.toggleType9;
                 C1_67Parameters.C1_67ПереключательУсилительУ1 = true;
                 this.С1_67ПереключательУсилительУ2.BackgroundImage = null;
                 C1_67Parameters.C1_67ПереключательУсилительУ2 = false;
@@ -239,7 +239,7 @@ namespace R440O.R440OForms.C1_67
         {
             if (C1_67Parameters.C1_67ПереключательУсилительУ2 == false)
             {
-                this.С1_67ПереключательУсилительУ2.BackgroundImage = ControlElementImages.toggleType8;
+                this.С1_67ПереключательУсилительУ2.BackgroundImage = ControlElementImages.toggleType9;
                 C1_67Parameters.C1_67ПереключательУсилительУ2 = true;
                 this.С1_67ПереключательУсилительУ1.BackgroundImage = null;
                 C1_67Parameters.C1_67ПереключательУсилительУ1 = false;
@@ -252,7 +252,7 @@ namespace R440O.R440OForms.C1_67
         {
             if (C1_67Parameters.C1_67ПереключательУсилительУ3 == false)
             {
-                this.С1_67ПереключательУсилительУ3.BackgroundImage = ControlElementImages.toggleType8;
+                this.С1_67ПереключательУсилительУ3.BackgroundImage = ControlElementImages.toggleType9;
                 C1_67Parameters.C1_67ПереключательУсилительУ3 = true;
                 this.С1_67ПереключательУсилительУ1.BackgroundImage = null;
                 C1_67Parameters.C1_67ПереключательУсилительУ1 = false;

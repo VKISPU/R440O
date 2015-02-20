@@ -142,7 +142,7 @@
             // AstraТумблерШпУп
             // 
             this.AstraТумблерШпУп.BackColor = System.Drawing.Color.Transparent;
-            this.AstraТумблерШпУп.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Right;
+            this.AstraТумблерШпУп.BackgroundImage = global::R440O.ControlElementImages.tumblerType5Right;
             this.AstraТумблерШпУп.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.AstraТумблерШпУп.FlatAppearance.BorderSize = 0;
             this.AstraТумблерШпУп.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;

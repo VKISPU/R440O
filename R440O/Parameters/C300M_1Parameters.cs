@@ -271,10 +271,16 @@ namespace R440O.Parameters
         private static string _Ц300М_1ТумблерАРУРРУ = "РРУ";
 
         /// <summary>
-        /// Возможные состояния: АРУ, РРУ
+        /// Возможные состояния: ЧТ, ОФТ
         /// </summary>
         public static string Ц300М_1ТумблерЧТОФТ { get { return _Ц300М_1ТумблерЧТОФТ; } set { _Ц300М_1ТумблерЧТОФТ = value; } }
         private static string _Ц300М_1ТумблерЧТОФТ = "ОФТ";
+
+        /// <summary>
+        /// Возможные состояния: 300, 60
+        /// </summary>
+        public static string Ц300М_1ТумблерПоискПределы { get { return _Ц300М_1ТумблерПоискПределы; } set { _Ц300М_1ТумблерПоискПределы = value; } }
+        private static string _Ц300М_1ТумблерПоискПределы = "300";
 
     }
 }

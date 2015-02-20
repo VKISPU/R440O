@@ -87,7 +87,7 @@ namespace R440O.R440OForms.Astra
                 AstraParameters.AstraПереключательТлгТлф -= 1;
             }
 
-            var angle = AstraParameters.AstraПереключательТлгТлф*30 - 150;
+            var angle = AstraParameters.AstraПереключательТлгТлф * 30 - 150;
 
             AstraПереключательТлгТлф.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
@@ -105,7 +105,7 @@ namespace R440O.R440OForms.Astra
                 AstraParameters.AstraПереключательВнешнегоПитания -= 1;
             }
 
-            var angle = AstraParameters.AstraПереключательВнешнегоПитания*30;
+            var angle = AstraParameters.AstraПереключательВнешнегоПитания * 30;
 
             AstraПереключательВнешнегоПитания.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
@@ -123,7 +123,7 @@ namespace R440O.R440OForms.Astra
                 AstraParameters.AstraПереключательКонтроль -= 1;
             }
 
-            var angle = AstraParameters.AstraПереключательКонтроль*35 - 160;
+            var angle = AstraParameters.AstraПереключательКонтроль * 35 - 160;
 
             AstraПереключательКонтроль.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
@@ -141,7 +141,7 @@ namespace R440O.R440OForms.Astra
                 AstraParameters.AstraПереключательДиапазоны -= 1;
             }
 
-            var angle = AstraParameters.AstraПереключательДиапазоны*30 - 148;
+            var angle = AstraParameters.AstraПереключательДиапазоны * 30 - 148;
 
             AstraПереключательДиапазоны.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
@@ -159,7 +159,7 @@ namespace R440O.R440OForms.Astra
                 AstraParameters.AstraПереключательВыходаРеле -= 1;
             }
 
-            var angle = AstraParameters.AstraПереключательВыходаРеле*30 - 60;
+            var angle = AstraParameters.AstraПереключательВыходаРеле * 30 - 60;
 
             AstraПереключательВыходаРеле.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
@@ -169,7 +169,7 @@ namespace R440O.R440OForms.Astra
         private void AstraТумблерШпУп_Click(object sender, System.EventArgs e)
         {
             AstraParameters.AstraТумблерШпУп = !AstraParameters.AstraТумблерШпУп;
-            AstraТумблерШпУп.BackgroundImage = AstraParameters.AstraТумблерШпУп ? ControlElementImages.tumblerType2Left : ControlElementImages.tumblerType2Right;
+            AstraТумблерШпУп.BackgroundImage = AstraParameters.AstraТумблерШпУп ? ControlElementImages.tumblerType5Left : ControlElementImages.tumblerType5Right;
         }
 
         #endregion
@@ -178,27 +178,27 @@ namespace R440O.R440OForms.Astra
 
         private void InitializeTogglesPosition()
         {
-            var angle = AstraParameters.AstraПереключательТлгТлф*30 - 150;
+            var angle = AstraParameters.AstraПереключательТлгТлф * 30 - 150;
             AstraПереключательТлгТлф.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = AstraParameters.AstraПереключательВнешнегоПитания*30;
+            angle = AstraParameters.AstraПереключательВнешнегоПитания * 30;
             AstraПереключательВнешнегоПитания.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = AstraParameters.AstraПереключательКонтроль*35 - 160;
+            angle = AstraParameters.AstraПереключательКонтроль * 35 - 160;
             AstraПереключательКонтроль.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = AstraParameters.AstraПереключательДиапазоны*30 - 148;
+            angle = AstraParameters.AstraПереключательДиапазоны * 30 - 148;
             AstraПереключательДиапазоны.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = AstraParameters.AstraПереключательВыходаРеле*30 - 60;
+            angle = AstraParameters.AstraПереключательВыходаРеле * 30 - 60;
             AstraПереключательВыходаРеле.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            AstraТумблерШпУп.BackgroundImage = AstraParameters.AstraТумблерШпУп ? ControlElementImages.tumblerType2Left : ControlElementImages.tumblerType2Right;
+            AstraТумблерШпУп.BackgroundImage = AstraParameters.AstraТумблерШпУп ? ControlElementImages.tumblerType5Left : ControlElementImages.tumblerType5Right;
         }
 
         #endregion
@@ -218,7 +218,7 @@ namespace R440O.R440OForms.Astra
             A403_3Тублер1К2К.BackgroundImage = AstraParameters.AstraКнопкаЧастота
                 ? ControlElementImages.buttonRoundType2
                 : null;
-        } 
+        }
         #endregion
 
         #region Регуляторы

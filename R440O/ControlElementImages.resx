@@ -376,4 +376,34 @@
   <data name="buttonSquareLightBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\buttonSquareLightBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tumblerType8Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType8Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType8Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType8Up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="N12SIndicatorAlpha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\N12SIndicatorAlpha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="N12SIndicatorBeta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\N12SIndicatorBeta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="N12SIndicatorCenter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\N12SIndicatorCenter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType8Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType8Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblerType8Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tumblerType8Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="N12SSticker" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\N12SSticker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="N12SArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\N12SArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="toggleType9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\toggleType9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

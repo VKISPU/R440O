@@ -86,6 +86,7 @@
     <Compile Include="Parameters\K02M_01Parameters.cs" />
     <Compile Include="Parameters\Kontur_P3Parameters.cs" />
     <Compile Include="Parameters\N12SParameters.cs" />
+    <Compile Include="Parameters\N15InsideParameters.cs" />
     <Compile Include="Parameters\N16Parameters.cs" />
     <Compile Include="Parameters\PU_K1_2Parameters.cs" />
     <Compile Include="Parameters\PU_K1_1Parameters.cs" />
@@ -1077,7 +1078,10 @@
     <None Include="Resources\toggleType4.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\toggleType8.png" />
+    <None Include="Resources\tumblerType8Right.png" />
+    <None Include="Resources\tumblerType8Left.png" />
+    <None Include="Resources\tumblerType8Down.png" />
+    <None Include="Resources\tumblerType8Up.png" />
     <None Include="Resources\toggleType7.png" />
     <None Include="Resources\buttonRoundType7.png" />
     <None Include="Resources\buttonRoundType8.png" />
@@ -1094,7 +1098,14 @@
     <None Include="Resources\OrderScheme.png" />
     <None Include="Resources\C300M.png" />
     <None Include="Resources\revolverRoundBlack.png" />
+    <None Include="Resources\N12SIndicatorAlpha.png" />
+    <None Include="Resources\N12SIndicatorBeta.png" />
+    <None Include="Resources\N12SIndicatorCenter.png" />
+    <None Include="Resources\N12SSticker.png" />
+    <None Include="Resources\N12SArrow.png" />
     <Content Include="Resources\revolverRoundSmall.png" />
+    <None Include="Resources\toggleType8.png" />
+    <None Include="Resources\toggleType9.png" />
     <Content Include="Resources\tumblerType6Left.png" />
     <Content Include="Resources\tumblerType6Right.png" />
     <None Include="Resources\lampType12OnRed.png" />

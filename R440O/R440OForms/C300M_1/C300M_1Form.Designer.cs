@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.C300M_1Panel = new System.Windows.Forms.Panel();
+            this.Ц300М_1ТумблерПоискПределы = new System.Windows.Forms.Button();
             this.Ц300М_1ТумблерЧТОФТ = new System.Windows.Forms.Button();
             this.Ц300М_1ТумблерАРУРРУ = new System.Windows.Forms.Button();
             this.Ц300М_1ТумблерАСЧОткл = new System.Windows.Forms.Button();
@@ -74,6 +75,7 @@
             // 
             this.C300M_1Panel.BackgroundImage = global::R440O.BackgroundImages.C300M;
             this.C300M_1Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.C300M_1Panel.Controls.Add(this.Ц300М_1ТумблерПоискПределы);
             this.C300M_1Panel.Controls.Add(this.Ц300М_1ТумблерЧТОФТ);
             this.C300M_1Panel.Controls.Add(this.Ц300М_1ТумблерАРУРРУ);
             this.C300M_1Panel.Controls.Add(this.Ц300М_1ТумблерАСЧОткл);
@@ -116,6 +118,22 @@
             this.C300M_1Panel.Name = "C300M_1Panel";
             this.C300M_1Panel.Size = new System.Drawing.Size(1100, 430);
             this.C300M_1Panel.TabIndex = 1;
+            // 
+            // Ц300М_1ТумблерПоискПределы
+            // 
+            this.Ц300М_1ТумблерПоискПределы.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерПоискПределы.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Left;
+            this.Ц300М_1ТумблерПоискПределы.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Ц300М_1ТумблерПоискПределы.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1ТумблерПоискПределы.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерПоискПределы.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1ТумблерПоискПределы.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1ТумблерПоискПределы.Location = new System.Drawing.Point(454, 317);
+            this.Ц300М_1ТумблерПоискПределы.Name = "Ц300М_1ТумблерПоискПределы";
+            this.Ц300М_1ТумблерПоискПределы.Size = new System.Drawing.Size(51, 29);
+            this.Ц300М_1ТумблерПоискПределы.TabIndex = 48;
+            this.Ц300М_1ТумблерПоискПределы.UseVisualStyleBackColor = false;
+            this.Ц300М_1ТумблерПоискПределы.Click += new System.EventHandler(this.Ц300М_1ТумблерПоискПределы_Click);
             // 
             // Ц300М_1ТумблерЧТОФТ
             // 
@@ -826,5 +844,6 @@
         private System.Windows.Forms.Button Ц300М_1ТумблерАСЧОткл;
         private System.Windows.Forms.Button Ц300М_1ТумблерАРУРРУ;
         private System.Windows.Forms.Button Ц300М_1ТумблерЧТОФТ;
+        private System.Windows.Forms.Button Ц300М_1ТумблерПоискПределы;
     }
 }

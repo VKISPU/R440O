@@ -1,0 +1,135 @@
+﻿//-----------------------------------------------------------------------
+// <copyright file="N12SForm.cs" company="VKISPU">
+//      R440O station.
+// </copyright>
+//-----------------------------------------------------------------------
+
+using System;
+using R440O.Parameters;
+using R440O.ThirdParty;
+
+namespace R440O.R440OForms.N12S
+{
+    using System.Windows.Forms;
+
+    /// <summary>
+    /// Форма блока Н-12-С
+    /// </summary>
+    public partial class N12SForm : Form
+    {
+        /// <summary>
+        /// Инициализирует новый экземпляр класса <see cref="N12SForm"/>
+        /// </summary>
+        public N12SForm()
+        {
+            this.InitializeComponent();
+            InitializeButtonsPosition();
+
+            timer1 = new Timer();
+            timer1.Tick += timer1_Tick;
+            timer1.Enabled = false;
+
+            timer2 = new Timer();
+            timer2.Tick += timer2_Tick;
+            timer2.Enabled = false;
+        }
+
+        private readonly Timer timer1;
+        private readonly Timer timer2;
+ 
+ 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+                N12SТумблерБ.BackgroundImage = ControlElementImages.tumblerType8Up;
+
+                N12SParameters.N12SIndicatorBetaCenter += 1;
+                var angle = N12SParameters.N12SIndicatorBetaCenter * 10;
+                N12SIndicatorBetaCenter.BackgroundImage =
+                    TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorCenter, angle);
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            N12SТумблерБ.BackgroundImage = ControlElementImages.tumblerType8Up;
+
+            N12SParameters.N12SIndicatorBetaCenter -= 1;
+            var angle = N12SParameters.N12SIndicatorBetaCenter * 10;
+            N12SIndicatorBetaCenter.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorCenter, angle);
+        }
+
+
+        private void N12SТумблерА_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                N12SТумблерА.BackgroundImage = ControlElementImages.tumblerType8Left;
+            }
+            if (e.Button == MouseButtons.Right)
+            {
+                N12SТумблерА.BackgroundImage = ControlElementImages.tumblerType8Right;
+            }
+        }
+
+        private void N12SТумблерА_MouseUp(object sender, MouseEventArgs e)
+        {
+            N12SТумблерА.BackgroundImage = null;
+
+        }
+
+        private void N12SТумблерБ_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                timer1.Start();
+                timer1.Interval = 50;
+
+            }
+            if (e.Button == MouseButtons.Right)
+            {
+                timer2.Start();
+                timer2.Interval = 50;        
+            }
+        }
+
+        private void N12SТумблерБ_MouseUp(object sender, MouseEventArgs e)
+        {
+            N12SТумблерБ.BackgroundImage = null;
+            timer1.Stop();
+            timer2.Stop();
+        }       
+
+        private void N12SКнопкаУскор_Click(object sender, System.EventArgs e)
+        {
+            if (N12SParameters.N12SКнопкаУскор)
+                N12SКнопкаУскор.BackgroundImage = ControlElementImages.buttonRoundType8;
+            else
+                N12SКнопкаУскор.BackgroundImage = null;
+            N12SParameters.N12SКнопкаУскор = !N12SParameters.N12SКнопкаУскор;
+        }
+
+        private void InitializeButtonsPosition()
+        {
+            if (!N12SParameters.N12SКнопкаУскор)
+                N12SКнопкаУскор.BackgroundImage = ControlElementImages.buttonRoundType8;
+            else
+                N12SКнопкаУскор.BackgroundImage = null;
+
+            if (!N12SParameters.N12SТумблерСеть)
+                N12SТумблерСеть.BackgroundImage = ControlElementImages.tumblerType8Down;
+            else
+                N12SТумблерСеть.BackgroundImage = ControlElementImages.tumblerType8Up;
+        }
+
+        private void N12SТумблерСеть_Click(object sender, System.EventArgs e)
+        {
+            if (N12SParameters.N12SТумблерСеть)
+                N12SТумблерСеть.BackgroundImage = ControlElementImages.tumblerType8Down;
+            else
+                N12SТумблерСеть.BackgroundImage = ControlElementImages.tumblerType8Up;
+            N12SParameters.N12SТумблерСеть = !N12SParameters.N12SТумблерСеть;
+        }
+
+
+    }
+}

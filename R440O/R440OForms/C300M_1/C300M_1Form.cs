@@ -23,7 +23,8 @@ namespace R440O.R440OForms.C300M_1
         {
             this.InitializeComponent();
             this.InitializeTogglesPosition();
-            this.InitializeButtons();
+            this.InitializeButtonsPosition();
+            this.InitializeTumblersPosition();
         }
 
         #region Кнопки ВИД РАБОТЫ
@@ -675,7 +676,7 @@ namespace R440O.R440OForms.C300M_1
         /// <summary>
         /// Установка кнопок в положение последней их установки
         /// </summary>
-        private void InitializeButtons()
+        private void InitializeButtonsPosition()
         {
             foreach (Control item in C300M_1Panel.Controls)
             {
@@ -694,8 +695,48 @@ namespace R440O.R440OForms.C300M_1
                 }
             }
         }
+
+        /// <summary>
+        /// Установка тумблеров в положение последней их установки
+        /// </summary>
+        private void InitializeTumblersPosition()
+        {
+            this.Ц300М_1ТумблерВведениеЧТОФТ.BackgroundImage = C300M_1Parameters.Ц300М_1ТумблерВведениеЧТОФТ == "ЧТ"
+                ? ControlElementImages.tumblerType3Up
+                : ControlElementImages.tumblerType3Down;
+
+            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.BackgroundImage = C300M_1Parameters.Ц300М_1ТумблерПоискБлокировкаВклОткл == "Вкл"
+                ? ControlElementImages.tumblerType3Up
+                : ControlElementImages.tumblerType3Down;
+
+            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.BackgroundImage = C300M_1Parameters.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн == "Автоматич"
+                ? ControlElementImages.tumblerType3Up
+                : ControlElementImages.tumblerType3Down;
+
+            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.BackgroundImage = C300M_1Parameters.Ц300М_1ТумблерПоискС_АналСимметрОткл == "Симметр"
+                ? ControlElementImages.tumblerType3Up
+                : ControlElementImages.tumblerType3Down;
+
+            this.Ц300М_1ТумблерАСЧОткл.BackgroundImage = C300M_1Parameters.Ц300М_1ТумблерАСЧОткл == "АСЧ"
+                ? ControlElementImages.tumblerType3Up
+                : ControlElementImages.tumblerType3Down;
+
+            this.Ц300М_1ТумблерАРУРРУ.BackgroundImage = C300M_1Parameters.Ц300М_1ТумблерАРУРРУ == "АРУ"
+                ? ControlElementImages.tumblerType3Up
+                : ControlElementImages.tumblerType3Down;
+
+            this.Ц300М_1ТумблерЧТОФТ.BackgroundImage = C300M_1Parameters.Ц300М_1ТумблерЧТОФТ == "ЧТ"
+                ? ControlElementImages.tumblerType3Up
+                : ControlElementImages.tumblerType3Down;
+
+            this.Ц300М_1ТумблерПоискПределы.BackgroundImage = C300M_1Parameters.Ц300М_1ТумблерПоискПределы == "300"
+                ? ControlElementImages.tumblerType3Left
+                : ControlElementImages.tumblerType3Right;
+
+        }
         #endregion
 
+        #region Тумблеры
         private void Ц300М_1ТумблерВведениеЧТОФТ_Click(object sender, System.EventArgs e)
         {
             if (C300M_1Parameters.Ц300М_1ТумблерВведениеЧТОФТ == "ЧТ")
@@ -794,5 +835,19 @@ namespace R440O.R440OForms.C300M_1
             }
         }
 
+        private void Ц300М_1ТумблерПоискПределы_Click(object sender, System.EventArgs e)
+        {
+            if (C300M_1Parameters.Ц300М_1ТумблерПоискПределы == "300")
+            {
+                this.Ц300М_1ТумблерПоискПределы.BackgroundImage = ControlElementImages.tumblerType3Right;
+                C300M_1Parameters.Ц300М_1ТумблерПоискПределы = "60";
+            }
+            else
+            {
+                this.Ц300М_1ТумблерПоискПределы.BackgroundImage = ControlElementImages.tumblerType3Left;
+                C300M_1Parameters.Ц300М_1ТумблерПоискПределы = "300";
+            }
+        }
+        #endregion
     }
 }
