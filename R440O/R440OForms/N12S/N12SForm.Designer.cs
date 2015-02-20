@@ -35,8 +35,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.N12SIndicatorBeta = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.N12SIndicatorBetaCenter = new System.Windows.Forms.Panel();
             this.N12SSticker = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.N12SТумблерСеть = new System.Windows.Forms.Button();
             this.N12SЛампочкаГотовность = new System.Windows.Forms.PictureBox();
             this.N12SЛампочкаУпорБ = new System.Windows.Forms.PictureBox();
@@ -44,8 +46,6 @@
             this.N12SТумблерБ = new System.Windows.Forms.Button();
             this.N12SКнопкаУскор = new System.Windows.Forms.Button();
             this.N12SТумблерА = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.N12SPanel.SuspendLayout();
             this.N12SIndicatorAlpha.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -53,13 +53,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.N12SIndicatorBeta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.N12SIndicatorBetaCenter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.N12SSticker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.N12SЛампочкаГотовность)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.N12SЛампочкаУпорБ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.N12SЛампочкаУпорА)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // N12SPanel
@@ -152,6 +152,18 @@
             this.N12SIndicatorBeta.Size = new System.Drawing.Size(212, 202);
             this.N12SIndicatorBeta.TabIndex = 71;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImage = global::R440O.ControlElementImages.N12SArrow;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox4.InitialImage = null;
+            this.pictureBox4.Location = new System.Drawing.Point(103, -1);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(10, 48);
+            this.pictureBox4.TabIndex = 74;
+            this.pictureBox4.TabStop = false;
+            // 
             // N12SIndicatorBetaCenter
             // 
             this.N12SIndicatorBetaCenter.BackColor = System.Drawing.Color.Transparent;
@@ -175,6 +187,18 @@
             this.N12SSticker.Size = new System.Drawing.Size(76, 77);
             this.N12SSticker.TabIndex = 68;
             this.N12SSticker.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.BackgroundImage = global::R440O.ControlElementImages.N12SArrow;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox5.InitialImage = null;
+            this.pictureBox5.Location = new System.Drawing.Point(65, -36);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(10, 61);
+            this.pictureBox5.TabIndex = 75;
+            this.pictureBox5.TabStop = false;
             // 
             // N12SТумблерСеть
             // 
@@ -209,7 +233,7 @@
             this.N12SЛампочкаУпорБ.BackColor = System.Drawing.Color.Transparent;
             this.N12SЛампочкаУпорБ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.N12SЛампочкаУпорБ.InitialImage = null;
-            this.N12SЛампочкаУпорБ.Location = new System.Drawing.Point(446, 377);
+            this.N12SЛампочкаУпорБ.Location = new System.Drawing.Point(448, 379);
             this.N12SЛампочкаУпорБ.Name = "N12SЛампочкаУпорБ";
             this.N12SЛампочкаУпорБ.Size = new System.Drawing.Size(33, 33);
             this.N12SЛампочкаУпорБ.TabIndex = 61;
@@ -220,7 +244,7 @@
             this.N12SЛампочкаУпорА.BackColor = System.Drawing.Color.Transparent;
             this.N12SЛампочкаУпорА.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.N12SЛампочкаУпорА.InitialImage = null;
-            this.N12SЛампочкаУпорА.Location = new System.Drawing.Point(224, 343);
+            this.N12SЛампочкаУпорА.Location = new System.Drawing.Point(225, 345);
             this.N12SЛампочкаУпорА.Name = "N12SЛампочкаУпорА";
             this.N12SЛампочкаУпорА.Size = new System.Drawing.Size(33, 33);
             this.N12SЛампочкаУпорА.TabIndex = 61;
@@ -276,30 +300,6 @@
             this.N12SТумблерА.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N12SТумблерА_MouseDown);
             this.N12SТумблерА.MouseUp += new System.Windows.Forms.MouseEventHandler(this.N12SТумблерА_MouseUp);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.BackgroundImage = global::R440O.ControlElementImages.N12SArrow;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox4.InitialImage = null;
-            this.pictureBox4.Location = new System.Drawing.Point(103, -1);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(10, 48);
-            this.pictureBox4.TabIndex = 74;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.BackgroundImage = global::R440O.ControlElementImages.N12SArrow;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox5.InitialImage = null;
-            this.pictureBox5.Location = new System.Drawing.Point(65, -36);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(10, 61);
-            this.pictureBox5.TabIndex = 75;
-            this.pictureBox5.TabStop = false;
-            // 
             // N12SForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -318,13 +318,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.N12SIndicatorBeta.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.N12SIndicatorBetaCenter.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.N12SSticker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.N12SЛампочкаГотовность)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.N12SЛампочкаУпорБ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.N12SЛампочкаУпорА)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }

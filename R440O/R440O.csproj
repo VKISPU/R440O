@@ -1039,9 +1039,6 @@
     <None Include="Resources\lampType5OnRed.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\lampType6OnRed.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\lampType7OnRed.png" />
   </ItemGroup>
   <ItemGroup>
@@ -1097,6 +1094,7 @@
     <None Include="Resources\N12SIndicatorCenter.png" />
     <None Include="Resources\N12SSticker.png" />
     <None Include="Resources\N12SArrow.png" />
+    <None Include="Resources\lampType6OnRed.png" />
     <Content Include="Resources\revolverRoundSmall.png" />
     <None Include="Resources\toggleType8.png" />
     <None Include="Resources\toggleС1_67.png" />

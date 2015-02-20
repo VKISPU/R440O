@@ -46,6 +46,17 @@ namespace R440O.R440OForms.N12S
             angle = (N12SParameters.N12SIndicatorAlpha - N12SParameters.N12SIndicatorAlpha % 10) * (-1) - 67 - N12SParameters.N12SIndicatorAlpha % 10;
             N12SIndicatorAlpha.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorAlpha, angle);
+
+            if (N12SParameters.N12SIndicatorAlpha == 340)
+            {
+                N12SParameters.N12SЛампочкаУпорА = true;
+                N12SЛампочкаУпорА.BackgroundImage = ControlElementImages.lampType6OnRed;
+            }
+            else
+            {
+                N12SParameters.N12SЛампочкаУпорА = false;
+                N12SЛампочкаУпорА.BackgroundImage = null;
+            }
         }
 
         private void timerAlphaLeft_Tick(object sender, EventArgs e)
@@ -59,6 +70,18 @@ namespace R440O.R440OForms.N12S
             angle = (N12SParameters.N12SIndicatorAlpha - N12SParameters.N12SIndicatorAlpha % 10) * (-1) - 67 - N12SParameters.N12SIndicatorAlpha % 10;
             N12SIndicatorAlpha.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorAlpha, angle);
+
+            if (N12SParameters.N12SIndicatorAlpha == 0)
+            {
+                N12SParameters.N12SЛампочкаУпорА = true;
+                N12SЛампочкаУпорА.BackgroundImage = ControlElementImages.lampType6OnRed;
+            }
+            else
+            {
+                N12SParameters.N12SЛампочкаУпорА = true;
+                N12SЛампочкаУпорА.BackgroundImage = null;
+            }
+
         }
 
         private void timerBetaLeft_Tick(object sender, EventArgs e)
@@ -73,6 +96,17 @@ namespace R440O.R440OForms.N12S
                 angle = (N12SParameters.N12SIndicatorBeta - N12SParameters.N12SIndicatorBeta % 10) * (-1) + 48 - N12SParameters.N12SIndicatorBeta % 10;
                 N12SIndicatorBeta.BackgroundImage =
                     TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorBeta, angle);
+
+            if (N12SParameters.N12SIndicatorBeta == 90)
+            {
+                N12SParameters.N12SЛампочкаУпорБ = true;
+                N12SЛампочкаУпорБ.BackgroundImage = ControlElementImages.lampType6OnRed;
+            }
+            else
+            {
+                N12SParameters.N12SЛампочкаУпорБ = false;
+                N12SЛампочкаУпорБ.BackgroundImage = null;
+            }
         }
 
         private void timerBetaRight_Tick(object sender, EventArgs e)
@@ -86,6 +120,17 @@ namespace R440O.R440OForms.N12S
             angle = (N12SParameters.N12SIndicatorBeta - N12SParameters.N12SIndicatorBeta % 10) * (-1) + 48 - N12SParameters.N12SIndicatorBeta % 10;
             N12SIndicatorBeta.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorBeta, angle);
+
+            if (N12SParameters.N12SIndicatorBeta == 0)
+            {
+                N12SParameters.N12SЛампочкаУпорБ = true;
+                N12SЛампочкаУпорБ.BackgroundImage = ControlElementImages.lampType6OnRed;
+            }
+            else
+            {
+                N12SParameters.N12SЛампочкаУпорБ = false;
+                N12SЛампочкаУпорБ.BackgroundImage = null;
+            }
         }
 
         private void N12SКнопкаУскор_Click(object sender, System.EventArgs e)
@@ -220,6 +265,15 @@ namespace R440O.R440OForms.N12S
             angle = (N12SParameters.N12SIndicatorAlpha - N12SParameters.N12SIndicatorAlpha % 10) * (-1) - 67 - N12SParameters.N12SIndicatorAlpha % 10;
             N12SIndicatorAlpha.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorAlpha, angle);
+
+
+            N12SЛампочкаУпорА.BackgroundImage = (N12SParameters.N12SIndicatorAlpha == 340 || N12SParameters.N12SIndicatorAlpha == 0)
+                ? ControlElementImages.lampType6OnRed
+                : null;
+
+            N12SЛампочкаУпорБ.BackgroundImage = (N12SParameters.N12SIndicatorAlpha == 0 || N12SParameters.N12SIndicatorAlpha == 90)
+                ? ControlElementImages.lampType6OnRed
+                : null;
 
         }
         #endregion
