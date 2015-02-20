@@ -901,12 +901,6 @@
     <None Include="Resources\tumblerType2Down.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tumblerType2Left.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tumblerType2Right.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\tumblerType2Up.png" />
   </ItemGroup>
   <ItemGroup>
@@ -1105,7 +1099,7 @@
     <None Include="Resources\N12SArrow.png" />
     <Content Include="Resources\revolverRoundSmall.png" />
     <None Include="Resources\toggleType8.png" />
-    <None Include="Resources\toggleType9.png" />
+    <None Include="Resources\toggleС1_67.png" />
     <Content Include="Resources\tumblerType6Left.png" />
     <Content Include="Resources\tumblerType6Right.png" />
     <None Include="Resources\lampType12OnRed.png" />
@@ -1113,7 +1107,6 @@
     <None Include="Resources\buttonSquareBlueOff.png" />
     <None Include="Resources\buttonSquareBlueOn.png" />
     <None Include="Resources\buttonSquareYellow.png" />
-    <None Include="Resources\BMBИндикатор1.png" />
     <None Include="Resources\BMA_M.png" />
     <Content Include="Resources\buttonRoundType6.png" />
   </ItemGroup>

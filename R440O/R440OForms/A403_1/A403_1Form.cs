@@ -47,12 +47,12 @@ namespace R440O.R440OForms.A403_1
         {
             if (A403_1Parameters.A403_1ТумблерКомплект == "1")
             {
-                this.A403_1ТумблерКомплект.BackgroundImage = ControlElementImages.tumblerType2Right;
+                this.A403_1ТумблерКомплект.BackgroundImage = ControlElementImages.tumblerType5Right;
                 A403_1Parameters.A403_1ТумблерКомплект = "2";
             }
             else
             {
-                this.A403_1ТумблерКомплект.BackgroundImage = ControlElementImages.tumblerType2Left;
+                this.A403_1ТумблерКомплект.BackgroundImage = ControlElementImages.tumblerType5Left;
                 A403_1Parameters.A403_1ТумблерКомплект = "1";
             }
         }
@@ -597,7 +597,7 @@ namespace R440O.R440OForms.A403_1
                 ? ControlElementImages.tumblerType4Down : ControlElementImages.tumblerType4Up;
 
             this.A403_1ТумблерКомплект.BackgroundImage = A403_1Parameters.A403_1ТумблерКомплект == "1"
-                ? ControlElementImages.tumblerType2Left : ControlElementImages.tumblerType2Right;
+                ? ControlElementImages.tumblerType5Left : ControlElementImages.tumblerType5Right;
 
             this.A403_1ТумблерГруппа.BackgroundImage = A403_1Parameters.A403_1ТумблерГруппа == "2группа"
                 ? ControlElementImages.tumblerType4Down : ControlElementImages.tumblerType4Up;

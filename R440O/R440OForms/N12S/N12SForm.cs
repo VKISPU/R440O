@@ -24,11 +24,7 @@ namespace R440O.R440OForms.N12S
         {
             this.InitializeComponent();
             InitializeButtonsPosition();
-            InitializeIndicatorsPosition();
-            N12SParameters.N12SIndicatorBetaCenter = 0;
-            N12SParameters.N12SIndicatorBeta = 0;
-            N12SParameters.N12SIndicatorAlphaCenter = 0;
-            N12SParameters.N12SIndicatorAlpha = 0;
+            InitializeIndicatorsPosition();         
 
             timer = new Timer();
             timer.Enabled = false;
@@ -39,85 +35,55 @@ namespace R440O.R440OForms.N12S
 
 
         #region Индикаторы
-        private void timerAlphaCenterLeft_Tick(object sender, EventArgs e)
+        private void timerAlphaRight_Tick(object sender, EventArgs e)
         {
-            N12SParameters.N12SIndicatorAlphaCenter += 0.5F;
+            N12SParameters.N12SIndicatorAlpha += 0.5F;
 
-            if (N12SParameters.N12SIndicatorAlphaCenter == 10)
-            {
-                N12SParameters.N12SIndicatorAlphaCenter = 0F;
-                N12SParameters.N12SIndicatorAlpha += 10;
-                if (N12SParameters.N12SIndicatorAlpha > 360) N12SParameters.N12SIndicatorAlpha = 10;
-            }
-
-
-            var angle = N12SParameters.N12SIndicatorAlphaCenter * (-36) + 36;
+            var angle = N12SParameters.N12SIndicatorAlpha * (-36) + 36;
             N12SIndicatorAlphaCenter.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorCenter, angle);
 
-            angle = N12SParameters.N12SIndicatorAlpha * (-1) - 67;
+            angle = (N12SParameters.N12SIndicatorAlpha - N12SParameters.N12SIndicatorAlpha % 10) * (-1) - 67 - N12SParameters.N12SIndicatorAlpha % 10;
             N12SIndicatorAlpha.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorAlpha, angle);
         }
 
-        private void timerAlphaCenterRight_Tick(object sender, EventArgs e)
+        private void timerAlphaLeft_Tick(object sender, EventArgs e)
         {
-            N12SParameters.N12SIndicatorAlphaCenter -= 0.5F;
+            N12SParameters.N12SIndicatorAlpha -= 0.5F;
 
-            if (N12SParameters.N12SIndicatorAlphaCenter == -0.5)
-            {
-                N12SParameters.N12SIndicatorAlphaCenter = 9.5F;
-                N12SParameters.N12SIndicatorAlpha -= 10;
-
-                if (N12SParameters.N12SIndicatorAlpha < 0) N12SParameters.N12SIndicatorAlpha = 350;
-            }
-
-
-            var angle = N12SParameters.N12SIndicatorAlphaCenter * (-36) + 36;
+            var angle = N12SParameters.N12SIndicatorAlpha * (-36) + 36;
             N12SIndicatorAlphaCenter.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorCenter, angle);
 
-            angle = N12SParameters.N12SIndicatorAlpha * (-1) - 67;
+            angle = (N12SParameters.N12SIndicatorAlpha - N12SParameters.N12SIndicatorAlpha % 10) * (-1) - 67 - N12SParameters.N12SIndicatorAlpha % 10;
             N12SIndicatorAlpha.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorAlpha, angle);
         }
 
-        private void timerBetaCenterLeft_Tick(object sender, EventArgs e)
+        private void timerBetaLeft_Tick(object sender, EventArgs e)
         {
-            N12SParameters.N12SIndicatorBetaCenter += 0.5F;
-
-            if (N12SParameters.N12SIndicatorBetaCenter == 10)
-            {
-                N12SParameters.N12SIndicatorBetaCenter = 0F;
-                N12SParameters.N12SIndicatorBeta+=10;
-            }
+            N12SParameters.N12SIndicatorBeta += 0.5F;
 
 
-            var angle = N12SParameters.N12SIndicatorBetaCenter * (-36)  + 36;
+            var angle = N12SParameters.N12SIndicatorBeta * (-36)  + 36;
                 N12SIndicatorBetaCenter.BackgroundImage =
                     TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorCenter, angle);
 
-                angle = N12SParameters.N12SIndicatorBeta*(-1)+48;
+                angle = (N12SParameters.N12SIndicatorBeta - N12SParameters.N12SIndicatorBeta % 10) * (-1) + 48 - N12SParameters.N12SIndicatorBeta % 10;
                 N12SIndicatorBeta.BackgroundImage =
                     TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorBeta, angle);
         }
 
-        private void timerBetaCenterRight_Tick(object sender, EventArgs e)
+        private void timerBetaRight_Tick(object sender, EventArgs e)
         {
-            N12SParameters.N12SIndicatorBetaCenter -= 0.5F;
+            N12SParameters.N12SIndicatorBeta -= 0.5F;
 
-            if (N12SParameters.N12SIndicatorBetaCenter == -0.5)
-            {
-                N12SParameters.N12SIndicatorBetaCenter = 9.5F;
-                N12SParameters.N12SIndicatorBeta-=10;
-            }
-
-
-            var angle = N12SParameters.N12SIndicatorBetaCenter *(-36) + 36;
+            var angle = N12SParameters.N12SIndicatorBeta *(-36) + 36;
             N12SIndicatorBetaCenter.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorCenter, angle);
 
-            angle = N12SParameters.N12SIndicatorBeta * (-1)+48;
+            angle = (N12SParameters.N12SIndicatorBeta - N12SParameters.N12SIndicatorBeta % 10) * (-1) + 48 - N12SParameters.N12SIndicatorBeta % 10;
             N12SIndicatorBeta.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorBeta, angle);
         }
@@ -137,26 +103,30 @@ namespace R440O.R440OForms.N12S
         {
             if (e.Button == MouseButtons.Left)
             {
-                timer.Tick += timerAlphaCenterLeft_Tick;
-                if (N12SParameters.N12SКнопкаУскор)
-                    timer.Interval = 5;
-                else
-                    timer.Interval = 50;
-                timer.Start();
+                if (N12SParameters.N12SIndicatorAlpha != 0)
+                {
+                    timer.Tick += timerAlphaLeft_Tick;
+                    if (N12SParameters.N12SКнопкаУскор)
+                        timer.Interval = 5;
+                    else
+                        timer.Interval = 50;
+                    timer.Start();
+                }
 
-                N12SТумблерА.BackgroundImage = ControlElementImages.tumblerType8Right;
-
+                N12SТумблерА.BackgroundImage = ControlElementImages.tumblerType8Left;
             }
             if (e.Button == MouseButtons.Right)
             {
-                timer.Tick += timerAlphaCenterRight_Tick;
-                if (N12SParameters.N12SКнопкаУскор)
-                    timer.Interval = 5;
-                else
-                    timer.Interval = 50;
-                timer.Start();
-
-                N12SТумблерА.BackgroundImage = ControlElementImages.tumblerType8Left;
+                if (N12SParameters.N12SIndicatorAlpha != 340)
+                {
+                    timer.Tick += timerAlphaRight_Tick;
+                    if (N12SParameters.N12SКнопкаУскор)
+                        timer.Interval = 5;
+                    else
+                        timer.Interval = 50;
+                    timer.Start();
+                }
+                N12SТумблерА.BackgroundImage = ControlElementImages.tumblerType8Right;
             }
         }
 
@@ -164,8 +134,8 @@ namespace R440O.R440OForms.N12S
         {
             N12SТумблерА.BackgroundImage = null;
             timer.Stop();
-            timer.Tick -= timerAlphaCenterRight_Tick;
-            timer.Tick -= timerAlphaCenterLeft_Tick;
+            timer.Tick -= timerAlphaRight_Tick;
+            timer.Tick -= timerAlphaLeft_Tick;
 
         }
 
@@ -173,25 +143,30 @@ namespace R440O.R440OForms.N12S
         {
             if (e.Button == MouseButtons.Left)
             {
-                timer.Tick += timerBetaCenterLeft_Tick;
-                if (N12SParameters.N12SКнопкаУскор)
-                    timer.Interval = 5;
-                else
-                    timer.Interval = 50;
-                timer.Start();
-
+                if (N12SParameters.N12SIndicatorBeta != 90)
+                {
+                    timer.Tick += timerBetaLeft_Tick;
+                    if (N12SParameters.N12SКнопкаУскор)
+                        timer.Interval = 5;
+                    else
+                        timer.Interval = 50;
+                    timer.Start();
+                }
+                
                 N12SТумблерБ.BackgroundImage = ControlElementImages.tumblerType8Up;
 
             }
             if (e.Button == MouseButtons.Right)
             {
-                timer.Tick += timerBetaCenterRight_Tick;
-                if (N12SParameters.N12SКнопкаУскор)
-                    timer.Interval = 5;
-                else
-                    timer.Interval = 50;
-                timer.Start();
-
+                if (N12SParameters.N12SIndicatorBeta != 0)
+                {
+                    timer.Tick += timerBetaRight_Tick;
+                    if (N12SParameters.N12SКнопкаУскор)
+                        timer.Interval = 5;
+                    else
+                        timer.Interval = 50;
+                    timer.Start();
+                }
                 N12SТумблерБ.BackgroundImage = ControlElementImages.tumblerType8Down;
             }
         }
@@ -200,8 +175,8 @@ namespace R440O.R440OForms.N12S
         {
             N12SТумблерБ.BackgroundImage = null;
             timer.Stop();
-            timer.Tick -= timerBetaCenterRight_Tick;
-            timer.Tick -= timerBetaCenterLeft_Tick;
+            timer.Tick -= timerBetaRight_Tick;
+            timer.Tick -= timerBetaLeft_Tick;
        }
 
         private void N12SТумблерСеть_Click(object sender, System.EventArgs e)
@@ -230,19 +205,19 @@ namespace R440O.R440OForms.N12S
 
         private void InitializeIndicatorsPosition()
         {
-            var angle = N12SParameters.N12SIndicatorBetaCenter * (-36) + 36;
+            var angle = N12SParameters.N12SIndicatorBeta * (-36) + 36;
             N12SIndicatorBetaCenter.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorCenter, angle);
 
-            angle = N12SParameters.N12SIndicatorBeta * (-1) + 48;
+            angle = (N12SParameters.N12SIndicatorBeta - N12SParameters.N12SIndicatorBeta % 10) * (-1) + 48 - N12SParameters.N12SIndicatorBeta % 10;
             N12SIndicatorBeta.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorBeta, angle);
 
-            angle = N12SParameters.N12SIndicatorAlphaCenter * (-36) + 36;
+            angle = N12SParameters.N12SIndicatorAlpha * (-36) + 36;
             N12SIndicatorAlphaCenter.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorCenter, angle);
 
-            angle = N12SParameters.N12SIndicatorAlpha * (-1) - 67;
+            angle = (N12SParameters.N12SIndicatorAlpha - N12SParameters.N12SIndicatorAlpha % 10) * (-1) - 67 - N12SParameters.N12SIndicatorAlpha % 10;
             N12SIndicatorAlpha.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorAlpha, angle);
 

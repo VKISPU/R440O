@@ -16,49 +16,24 @@
         public static bool N12SКнопкаУскор = false;
 
         //индикаторы
-        #region N12SIndicatorAlphaCenter
-        private static float _N12SIndicatorAlphaCenter = 1;
-
-        public static float N12SIndicatorAlphaCenter
-        {
-            get { return _N12SIndicatorAlphaCenter; }
-            set
-            {
-                if (value > -1 && value < 10.5) _N12SIndicatorAlphaCenter = value;
-            }
-        }
-        #endregion
-
         #region N12SIndicatorAlpha
-        private static int _N12SIndicatorAlpha = 1;
+        private static float _N12SIndicatorAlpha = 0;
 
-        public static int N12SIndicatorAlpha
+        public static float N12SIndicatorAlpha
         {
             get { return _N12SIndicatorAlpha; }
             set
             {
-                if (value >= -10 && value <= 370) _N12SIndicatorAlpha = value;
+                if (value >= 0 && value <= 340) _N12SIndicatorAlpha = value;
             }
         }
         #endregion
 
-        #region N12SIndicatorBetaCenter
-        private static float _N12SIndicatorBetaCenter = 1;
-
-        public static float N12SIndicatorBetaCenter
-        {
-            get { return _N12SIndicatorBetaCenter; }
-            set
-            {
-                if (value > -1 && value < 10.5) _N12SIndicatorBetaCenter = value;
-            }
-        }
-        #endregion
 
         #region N12SIndicatorBeta
-        private static int _N12SIndicatorBeta = 1;
+        private static float _N12SIndicatorBeta = 0;
 
-        public static int N12SIndicatorBeta
+        public static float N12SIndicatorBeta
         {
             get { return _N12SIndicatorBeta; }
             set
