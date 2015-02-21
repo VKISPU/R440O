@@ -1076,6 +1076,7 @@
     <None Include="Resources\toggleType7.png" />
     <None Include="Resources\buttonRoundType7.png" />
     <None Include="Resources\buttonRoundType8.png" />
+    <None Include="Resources\Arrow.png" />
     <Content Include="Resources\buttonSquareBlack.png" />
     <Content Include="Resources\buttonSquareBlackLarge.png" />
     <None Include="Resources\buttonSquareBlack_small.png" />

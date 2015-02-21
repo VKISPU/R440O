@@ -43,7 +43,7 @@ namespace R440O.R440OForms.N12S
             N12SIndicatorAlphaCenter.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorCenter, angle);
 
-            angle = (N12SParameters.N12SIndicatorAlpha - N12SParameters.N12SIndicatorAlpha % 10) * (-1) - 67 - N12SParameters.N12SIndicatorAlpha % 10;
+            angle = - N12SParameters.N12SIndicatorAlpha - 67;
             N12SIndicatorAlpha.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorAlpha, angle);
 
@@ -67,7 +67,7 @@ namespace R440O.R440OForms.N12S
             N12SIndicatorAlphaCenter.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorCenter, angle);
 
-            angle = (N12SParameters.N12SIndicatorAlpha - N12SParameters.N12SIndicatorAlpha % 10) * (-1) - 67 - N12SParameters.N12SIndicatorAlpha % 10;
+            angle = - N12SParameters.N12SIndicatorAlpha - 67;
             N12SIndicatorAlpha.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorAlpha, angle);
 
@@ -93,9 +93,13 @@ namespace R440O.R440OForms.N12S
                 N12SIndicatorBetaCenter.BackgroundImage =
                     TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorCenter, angle);
 
-                angle = (N12SParameters.N12SIndicatorBeta - N12SParameters.N12SIndicatorBeta % 10) * (-1) + 48 - N12SParameters.N12SIndicatorBeta % 10;
+                angle = - N12SParameters.N12SIndicatorBeta + 48;
                 N12SIndicatorBeta.BackgroundImage =
                     TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorBeta, angle);
+
+                angle = N12SParameters.N12SIndicatorBeta * 1.1F - 50;
+                N12SIndicatorBetaИ.BackgroundImage =
+                       TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow, angle);
 
             if (N12SParameters.N12SIndicatorBeta == 90)
             {
@@ -117,9 +121,13 @@ namespace R440O.R440OForms.N12S
             N12SIndicatorBetaCenter.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorCenter, angle);
 
-            angle = (N12SParameters.N12SIndicatorBeta - N12SParameters.N12SIndicatorBeta % 10) * (-1) + 48 - N12SParameters.N12SIndicatorBeta % 10;
+            angle = - N12SParameters.N12SIndicatorBeta + 48;
             N12SIndicatorBeta.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorBeta, angle);
+
+            angle = N12SParameters.N12SIndicatorBeta*1.1F - 50;
+            N12SIndicatorBetaИ.BackgroundImage =
+                   TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow, angle);
 
             if (N12SParameters.N12SIndicatorBeta == 0)
             {
@@ -254,7 +262,7 @@ namespace R440O.R440OForms.N12S
             N12SIndicatorBetaCenter.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorCenter, angle);
 
-            angle = (N12SParameters.N12SIndicatorBeta - N12SParameters.N12SIndicatorBeta % 10) * (-1) + 48 - N12SParameters.N12SIndicatorBeta % 10;
+            angle = - N12SParameters.N12SIndicatorBeta + 48;
             N12SIndicatorBeta.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorBeta, angle);
 
@@ -262,9 +270,13 @@ namespace R440O.R440OForms.N12S
             N12SIndicatorAlphaCenter.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorCenter, angle);
 
-            angle = (N12SParameters.N12SIndicatorAlpha - N12SParameters.N12SIndicatorAlpha % 10) * (-1) - 67 - N12SParameters.N12SIndicatorAlpha % 10;
+            angle = - N12SParameters.N12SIndicatorAlpha - 67;
             N12SIndicatorAlpha.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorAlpha, angle);
+
+            angle = N12SParameters.N12SIndicatorBeta * 1.1F - 50;
+            N12SIndicatorBetaИ.BackgroundImage =
+                   TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow, angle);
 
 
             N12SЛампочкаУпорА.BackgroundImage = (N12SParameters.N12SIndicatorAlpha == 340 || N12SParameters.N12SIndicatorAlpha == 0)
