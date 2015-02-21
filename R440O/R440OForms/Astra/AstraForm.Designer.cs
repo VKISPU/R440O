@@ -32,7 +32,7 @@
             this.AstraРегуляторУсилениеПЧ = new System.Windows.Forms.Button();
             this.AstraРегуляторУсиление = new System.Windows.Forms.Button();
             this.AstraРегуляторЧастота = new System.Windows.Forms.Button();
-            this.A403_3Тублер1К2К = new System.Windows.Forms.Button();
+            this.AstraКнопкаЧастота = new System.Windows.Forms.Button();
             this.AstraТумблерШпУп = new System.Windows.Forms.Button();
             this.AstraПереключательВыходаРеле = new System.Windows.Forms.Button();
             this.AstraПереключательДиапазоны = new System.Windows.Forms.Button();
@@ -53,7 +53,7 @@
             this.AstraPanel.Controls.Add(this.AstraРегуляторУсилениеПЧ);
             this.AstraPanel.Controls.Add(this.AstraРегуляторУсиление);
             this.AstraPanel.Controls.Add(this.AstraРегуляторЧастота);
-            this.AstraPanel.Controls.Add(this.A403_3Тублер1К2К);
+            this.AstraPanel.Controls.Add(this.AstraКнопкаЧастота);
             this.AstraPanel.Controls.Add(this.AstraТумблерШпУп);
             this.AstraPanel.Controls.Add(this.AstraПереключательВыходаРеле);
             this.AstraPanel.Controls.Add(this.AstraПереключательДиапазоны);
@@ -123,21 +123,21 @@
             this.AstraРегуляторЧастота.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AstraРегуляторЧастота_MouseMove);
             this.AstraРегуляторЧастота.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AstraРегулятор_MouseUp);
             // 
-            // A403_3Тублер1К2К
+            // AstraКнопкаЧастота
             // 
-            this.A403_3Тублер1К2К.BackColor = System.Drawing.Color.Transparent;
-            this.A403_3Тублер1К2К.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.A403_3Тублер1К2К.FlatAppearance.BorderSize = 0;
-            this.A403_3Тублер1К2К.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.A403_3Тублер1К2К.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.A403_3Тублер1К2К.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.A403_3Тублер1К2К.Location = new System.Drawing.Point(270, 227);
-            this.A403_3Тублер1К2К.Name = "A403_3Тублер1К2К";
-            this.A403_3Тублер1К2К.Size = new System.Drawing.Size(35, 38);
-            this.A403_3Тублер1К2К.TabIndex = 30;
-            this.A403_3Тублер1К2К.UseVisualStyleBackColor = false;
-            this.A403_3Тублер1К2К.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_3Тублер1К2К_MouseDown);
-            this.A403_3Тублер1К2К.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_3Тублер1К2К_MouseUp);
+            this.AstraКнопкаЧастота.BackColor = System.Drawing.Color.Transparent;
+            this.AstraКнопкаЧастота.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.AstraКнопкаЧастота.FlatAppearance.BorderSize = 0;
+            this.AstraКнопкаЧастота.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.AstraКнопкаЧастота.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.AstraКнопкаЧастота.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AstraКнопкаЧастота.Location = new System.Drawing.Point(270, 227);
+            this.AstraКнопкаЧастота.Name = "AstraКнопкаЧастота";
+            this.AstraКнопкаЧастота.Size = new System.Drawing.Size(35, 38);
+            this.AstraКнопкаЧастота.TabIndex = 30;
+            this.AstraКнопкаЧастота.UseVisualStyleBackColor = false;
+            this.AstraКнопкаЧастота.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AstraКнопкаЧастота_MouseDown);
+            this.AstraКнопкаЧастота.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AstraКнопкаЧастота_MouseUp);
             // 
             // AstraТумблерШпУп
             // 
@@ -335,7 +335,7 @@
         private System.Windows.Forms.Button AstraПереключательДиапазоны;
         private System.Windows.Forms.Button AstraПереключательВыходаРеле;
         private System.Windows.Forms.Button AstraТумблерШпУп;
-        private System.Windows.Forms.Button A403_3Тублер1К2К;
+        private System.Windows.Forms.Button AstraКнопкаЧастота;
         private System.Windows.Forms.Button AstraРегуляторЧастота;
         private System.Windows.Forms.Button AstraРегуляторУсилениеПЧ;
         private System.Windows.Forms.Button AstraРегуляторУсиление;

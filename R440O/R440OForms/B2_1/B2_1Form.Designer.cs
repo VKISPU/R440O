@@ -385,7 +385,7 @@
             this.B2_1КнопкаБК2_9.Size = new System.Drawing.Size(17, 22);
             this.B2_1КнопкаБК2_9.TabIndex = 27;
             this.B2_1КнопкаБК2_9.UseVisualStyleBackColor = false;
-            this.B2_1КнопкаБК2_9.Click += new System.EventHandler(this.B2_1КнопкаБК2_9_Click);
+            this.B2_1КнопкаБК2_9.Click += new System.EventHandler(this.B2_1КнопкаБК_Click);
             // 
             // B2_1КнопкаБК2_8
             // 
@@ -401,7 +401,7 @@
             this.B2_1КнопкаБК2_8.Size = new System.Drawing.Size(17, 22);
             this.B2_1КнопкаБК2_8.TabIndex = 26;
             this.B2_1КнопкаБК2_8.UseVisualStyleBackColor = false;
-            this.B2_1КнопкаБК2_8.Click += new System.EventHandler(this.B2_1КнопкаБК2_8_Click);
+            this.B2_1КнопкаБК2_8.Click += new System.EventHandler(this.B2_1КнопкаБК_Click);
             // 
             // B2_1КнопкаБК2_7
             // 
@@ -417,7 +417,7 @@
             this.B2_1КнопкаБК2_7.Size = new System.Drawing.Size(17, 22);
             this.B2_1КнопкаБК2_7.TabIndex = 25;
             this.B2_1КнопкаБК2_7.UseVisualStyleBackColor = false;
-            this.B2_1КнопкаБК2_7.Click += new System.EventHandler(this.B2_1КнопкаБК2_7_Click);
+            this.B2_1КнопкаБК2_7.Click += new System.EventHandler(this.B2_1КнопкаБК_Click);
             // 
             // B2_1КнопкаБК2_6
             // 
@@ -433,7 +433,7 @@
             this.B2_1КнопкаБК2_6.Size = new System.Drawing.Size(17, 22);
             this.B2_1КнопкаБК2_6.TabIndex = 24;
             this.B2_1КнопкаБК2_6.UseVisualStyleBackColor = false;
-            this.B2_1КнопкаБК2_6.Click += new System.EventHandler(this.B2_1КнопкаБК2_6_Click);
+            this.B2_1КнопкаБК2_6.Click += new System.EventHandler(this.B2_1КнопкаБК_Click);
             // 
             // B2_1КнопкаБК2_5
             // 
@@ -449,7 +449,7 @@
             this.B2_1КнопкаБК2_5.Size = new System.Drawing.Size(17, 22);
             this.B2_1КнопкаБК2_5.TabIndex = 23;
             this.B2_1КнопкаБК2_5.UseVisualStyleBackColor = false;
-            this.B2_1КнопкаБК2_5.Click += new System.EventHandler(this.B2_1КнопкаБК2_5_Click);
+            this.B2_1КнопкаБК2_5.Click += new System.EventHandler(this.B2_1КнопкаБК_Click);
             // 
             // B2_1КнопкаБК2_4
             // 
@@ -465,7 +465,7 @@
             this.B2_1КнопкаБК2_4.Size = new System.Drawing.Size(17, 22);
             this.B2_1КнопкаБК2_4.TabIndex = 22;
             this.B2_1КнопкаБК2_4.UseVisualStyleBackColor = false;
-            this.B2_1КнопкаБК2_4.Click += new System.EventHandler(this.B2_1КнопкаБК2_4_Click);
+            this.B2_1КнопкаБК2_4.Click += new System.EventHandler(this.B2_1КнопкаБК_Click);
             // 
             // B2_1КнопкаБК2_3
             // 
@@ -481,7 +481,7 @@
             this.B2_1КнопкаБК2_3.Size = new System.Drawing.Size(17, 22);
             this.B2_1КнопкаБК2_3.TabIndex = 21;
             this.B2_1КнопкаБК2_3.UseVisualStyleBackColor = false;
-            this.B2_1КнопкаБК2_3.Click += new System.EventHandler(this.B2_1КнопкаБК2_3_Click);
+            this.B2_1КнопкаБК2_3.Click += new System.EventHandler(this.B2_1КнопкаБК_Click);
             // 
             // B2_1КнопкаБК2_2
             // 
@@ -497,7 +497,7 @@
             this.B2_1КнопкаБК2_2.Size = new System.Drawing.Size(17, 22);
             this.B2_1КнопкаБК2_2.TabIndex = 20;
             this.B2_1КнопкаБК2_2.UseVisualStyleBackColor = false;
-            this.B2_1КнопкаБК2_2.Click += new System.EventHandler(this.B2_1КнопкаБК2_2_Click);
+            this.B2_1КнопкаБК2_2.Click += new System.EventHandler(this.B2_1КнопкаБК_Click);
             // 
             // B2_1КнопкаБК2_1
             // 
@@ -513,7 +513,7 @@
             this.B2_1КнопкаБК2_1.Size = new System.Drawing.Size(17, 22);
             this.B2_1КнопкаБК2_1.TabIndex = 19;
             this.B2_1КнопкаБК2_1.UseVisualStyleBackColor = false;
-            this.B2_1КнопкаБК2_1.Click += new System.EventHandler(this.B2_1КнопкаБК2_1_Click);
+            this.B2_1КнопкаБК2_1.Click += new System.EventHandler(this.B2_1КнопкаБК_Click);
             // 
             // B2_1КнопкаБК1_9
             // 
@@ -529,7 +529,7 @@
             this.B2_1КнопкаБК1_9.Size = new System.Drawing.Size(17, 22);
             this.B2_1КнопкаБК1_9.TabIndex = 18;
             this.B2_1КнопкаБК1_9.UseVisualStyleBackColor = false;
-            this.B2_1КнопкаБК1_9.Click += new System.EventHandler(this.B2_1КнопкаБК1_9_Click);
+            this.B2_1КнопкаБК1_9.Click += new System.EventHandler(this.B2_1КнопкаБК_Click);
             // 
             // B2_1КнопкаБК1_8
             // 
@@ -545,7 +545,7 @@
             this.B2_1КнопкаБК1_8.Size = new System.Drawing.Size(17, 22);
             this.B2_1КнопкаБК1_8.TabIndex = 17;
             this.B2_1КнопкаБК1_8.UseVisualStyleBackColor = false;
-            this.B2_1КнопкаБК1_8.Click += new System.EventHandler(this.B2_1КнопкаБК1_8_Click);
+            this.B2_1КнопкаБК1_8.Click += new System.EventHandler(this.B2_1КнопкаБК_Click);
             // 
             // B2_1КнопкаБК1_7
             // 
@@ -561,7 +561,7 @@
             this.B2_1КнопкаБК1_7.Size = new System.Drawing.Size(17, 22);
             this.B2_1КнопкаБК1_7.TabIndex = 16;
             this.B2_1КнопкаБК1_7.UseVisualStyleBackColor = false;
-            this.B2_1КнопкаБК1_7.Click += new System.EventHandler(this.B2_1КнопкаБК1_7_Click);
+            this.B2_1КнопкаБК1_7.Click += new System.EventHandler(this.B2_1КнопкаБК_Click);
             // 
             // B2_1КнопкаБК1_6
             // 
@@ -577,7 +577,7 @@
             this.B2_1КнопкаБК1_6.Size = new System.Drawing.Size(17, 22);
             this.B2_1КнопкаБК1_6.TabIndex = 15;
             this.B2_1КнопкаБК1_6.UseVisualStyleBackColor = false;
-            this.B2_1КнопкаБК1_6.Click += new System.EventHandler(this.B2_1КнопкаБК1_6_Click);
+            this.B2_1КнопкаБК1_6.Click += new System.EventHandler(this.B2_1КнопкаБК_Click);
             // 
             // B2_1КнопкаБК1_5
             // 
@@ -593,7 +593,7 @@
             this.B2_1КнопкаБК1_5.Size = new System.Drawing.Size(17, 22);
             this.B2_1КнопкаБК1_5.TabIndex = 14;
             this.B2_1КнопкаБК1_5.UseVisualStyleBackColor = false;
-            this.B2_1КнопкаБК1_5.Click += new System.EventHandler(this.B2_1КнопкаБК1_5_Click);
+            this.B2_1КнопкаБК1_5.Click += new System.EventHandler(this.B2_1КнопкаБК_Click);
             // 
             // B2_1КнопкаБК1_4
             // 
@@ -609,7 +609,7 @@
             this.B2_1КнопкаБК1_4.Size = new System.Drawing.Size(17, 22);
             this.B2_1КнопкаБК1_4.TabIndex = 13;
             this.B2_1КнопкаБК1_4.UseVisualStyleBackColor = false;
-            this.B2_1КнопкаБК1_4.Click += new System.EventHandler(this.B2_1КнопкаБК1_4_Click);
+            this.B2_1КнопкаБК1_4.Click += new System.EventHandler(this.B2_1КнопкаБК_Click);
             // 
             // B2_1КнопкаБК1_3
             // 
@@ -625,7 +625,7 @@
             this.B2_1КнопкаБК1_3.Size = new System.Drawing.Size(17, 22);
             this.B2_1КнопкаБК1_3.TabIndex = 12;
             this.B2_1КнопкаБК1_3.UseVisualStyleBackColor = false;
-            this.B2_1КнопкаБК1_3.Click += new System.EventHandler(this.B2_1КнопкаБК1_3_Click);
+            this.B2_1КнопкаБК1_3.Click += new System.EventHandler(this.B2_1КнопкаБК_Click);
             // 
             // B2_1КнопкаБК1_2
             // 
@@ -641,7 +641,7 @@
             this.B2_1КнопкаБК1_2.Size = new System.Drawing.Size(17, 22);
             this.B2_1КнопкаБК1_2.TabIndex = 11;
             this.B2_1КнопкаБК1_2.UseVisualStyleBackColor = false;
-            this.B2_1КнопкаБК1_2.Click += new System.EventHandler(this.B2_1КнопкаБК1_2_Click);
+            this.B2_1КнопкаБК1_2.Click += new System.EventHandler(this.B2_1КнопкаБК_Click);
             // 
             // B2_1КнопкаБК1_1
             // 
@@ -657,7 +657,7 @@
             this.B2_1КнопкаБК1_1.Size = new System.Drawing.Size(17, 22);
             this.B2_1КнопкаБК1_1.TabIndex = 10;
             this.B2_1КнопкаБК1_1.UseVisualStyleBackColor = false;
-            this.B2_1КнопкаБК1_1.Click += new System.EventHandler(this.B2_1КнопкаБК1_1_Click);
+            this.B2_1КнопкаБК1_1.Click += new System.EventHandler(this.B2_1КнопкаБК_Click);
             // 
             // B2_1Form
             // 

@@ -31,11 +31,11 @@
         /// <summary>
         /// Получает или задает возможные состояния: true, false
         /// </summary>
-        public static string A1КнопкаСкоростьГР = "false";
-
+        public static bool A1КнопкаСкоростьГР = false;
+        
         /// <summary>
         /// Получает или задает возможные состояния: true, false
         /// </summary>
-        public static string A1КнопкаСкоростьАБ_1ТЛФ_К = "false";
+        public static bool A1КнопкаСкоростьАБ_1ТЛФ_К = false;
     }
 }

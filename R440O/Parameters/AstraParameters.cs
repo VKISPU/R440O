@@ -119,13 +119,12 @@
         public static bool AstraТумблерШпУп = true;
 
         ////Кнопки
-        public static bool AstraКнопка150_270 { get; set; }
-        public static bool AstraКнопка270_480 { get; set; }
-        public static bool AstraКнопка480_860 { get; set; }
-        public static bool AstraКнопка860_1500 { get; set; }
-        public static bool AstraКнопкаЧастота { get; set; }
+        public static bool AstraКнопка150_270 = false;
+        public static bool AstraКнопка270_480 = false;
+        public static bool AstraКнопка480_860 = false;
+        public static bool AstraКнопка860_1500 = false;
 
-        ////Вращатели
+        ////Регуляторы
         private static int _astraРегуляторУсиление;
         private static int _astraРегуляторУсилениеПЧ;
 

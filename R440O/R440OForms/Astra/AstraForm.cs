@@ -5,6 +5,7 @@
 //-----------------------------------------------------------------------
 
 using System;
+using System.Diagnostics;
 
 namespace R440O.R440OForms.Astra
 {
@@ -24,18 +25,11 @@ namespace R440O.R440OForms.Astra
         {
             this.InitializeComponent();
             this.InitializeTogglesPosition();
-            this.InitializeRevolvers();
+            this.InitializeRevolversPosition();
+            this.InitializeButtonsPosition();
         }
 
-        private void InitializeRevolvers()
-        {
-            AstraРегуляторЧастота.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRoundBlack, AstraParameters.AstraРегуляторЧастота);
-            AstraРегуляторУсиление.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRoundBlack, AstraParameters.AstraРегуляторУсиление);
-            AstraРегуляторУсилениеПЧ.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRoundBlack, AstraParameters.AstraРегуляторУсилениеПЧ);
-        }
+        
 
         #region Кнопки
 
@@ -65,10 +59,14 @@ namespace R440O.R440OForms.Astra
         /// <param name="numberOfButton">Номер нажатой кнопки по порядку слева направо.</param>
         private void switchToButton(int numberOfButton)
         {
-            this.AstraКнопка150_270.Visible = AstraParameters.AstraКнопка150_270 = numberOfButton != 1;
-            this.AstraКнопка270_480.Visible = AstraParameters.AstraКнопка270_480 = numberOfButton != 2;
-            this.AstraКнопка480_860.Visible = AstraParameters.AstraКнопка480_860 = numberOfButton != 3;
-            this.AstraКнопка860_1500.Visible = AstraParameters.AstraКнопка860_1500 = numberOfButton != 4;
+            AstraParameters.AstraКнопка150_270 = numberOfButton == 1;
+            AstraParameters.AstraКнопка270_480 = numberOfButton == 2;
+            AstraParameters.AstraКнопка480_860 = numberOfButton == 3;
+            AstraParameters.AstraКнопка860_1500 = numberOfButton == 4;
+            this.AstraКнопка150_270.Visible = !AstraParameters.AstraКнопка150_270;
+            this.AstraКнопка270_480.Visible = !AstraParameters.AstraКнопка270_480;
+            this.AstraКнопка480_860.Visible = !AstraParameters.AstraКнопка480_860;
+            this.AstraКнопка860_1500.Visible = !AstraParameters.AstraКнопка860_1500;
         }
 
         #endregion
@@ -165,6 +163,7 @@ namespace R440O.R440OForms.Astra
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
         }
+        #endregion
 
         private void AstraТумблерШпУп_Click(object sender, System.EventArgs e)
         {
@@ -172,10 +171,9 @@ namespace R440O.R440OForms.Astra
             AstraТумблерШпУп.BackgroundImage = AstraParameters.AstraТумблерШпУп ? ControlElementImages.tumblerType5Left : ControlElementImages.tumblerType5Right;
         }
 
-        #endregion
+        
 
         #region Инициализация
-
         private void InitializeTogglesPosition()
         {
             var angle = AstraParameters.AstraПереключательТлгТлф * 30 - 150;
@@ -198,26 +196,39 @@ namespace R440O.R440OForms.Astra
             AstraПереключательВыходаРеле.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            AstraТумблерШпУп.BackgroundImage = AstraParameters.AstraТумблерШпУп ? ControlElementImages.tumblerType5Left : ControlElementImages.tumblerType5Right;
+            AstraТумблерШпУп.BackgroundImage = AstraParameters.AstraТумблерШпУп 
+                ? ControlElementImages.tumblerType5Left 
+                : ControlElementImages.tumblerType5Right;
         }
 
+        private void InitializeRevolversPosition()
+        {
+            AstraРегуляторЧастота.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRoundBlack, AstraParameters.AstraРегуляторЧастота);
+            AstraРегуляторУсиление.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRoundBlack, AstraParameters.AstraРегуляторУсиление);
+            AstraРегуляторУсилениеПЧ.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRoundBlack, AstraParameters.AstraРегуляторУсилениеПЧ);
+        }
+
+        private void InitializeButtonsPosition()
+        {
+            AstraКнопка150_270.Visible = !AstraParameters.AstraКнопка150_270;
+            AstraКнопка270_480.Visible = !AstraParameters.AstraКнопка270_480;
+            AstraКнопка480_860.Visible = !AstraParameters.AstraКнопка480_860;
+            AstraКнопка860_1500.Visible = !AstraParameters.AstraКнопка860_1500;
+        }
         #endregion
 
         #region Переключатель комплекта
-        private void A403_3Тублер1К2К_MouseDown(object sender, MouseEventArgs e)
+        private void AstraКнопкаЧастота_MouseDown(object sender, MouseEventArgs e)
         {
-            AstraParameters.AstraКнопкаЧастота = true;
-            A403_3Тублер1К2К.BackgroundImage = AstraParameters.AstraКнопкаЧастота
-                ? ControlElementImages.buttonRoundType2
-                : null;
+            AstraКнопкаЧастота.BackgroundImage = ControlElementImages.buttonRoundType2;
         }
 
-        private void A403_3Тублер1К2К_MouseUp(object sender, MouseEventArgs e)
+        private void AstraКнопкаЧастота_MouseUp(object sender, MouseEventArgs e)
         {
-            AstraParameters.AstraКнопкаЧастота = false;
-            A403_3Тублер1К2К.BackgroundImage = AstraParameters.AstraКнопкаЧастота
-                ? ControlElementImages.buttonRoundType2
-                : null;
+            AstraКнопкаЧастота.BackgroundImage = null;
         }
         #endregion
 

@@ -89,22 +89,6 @@
 
         #region Кнопки
         ////Кнопки
-        public static string A403_1КнопкаУстВремени { get; set; }
-        public static string A403_1Кнопка0 { get; set; }
-        public static string A403_1Кнопка1 { get; set; }
-        public static string A403_1Кнопка2 { get; set; }
-        public static string A403_1Кнопка3 { get; set; }
-        public static string A403_1Кнопка4 { get; set; }
-        public static string A403_1Кнопка5 { get; set; }
-        public static string A403_1Кнопка6 { get; set; }
-        public static string A403_1Кнопка7 { get; set; }
-        public static string A403_1Кнопка8 { get; set; }
-        public static string A403_1Кнопка9 { get; set; }
-        public static string A403_1КнопкаМинус { get; set; }
-        public static string A403_1КнопкаСброс { get; set; }
-
-        public static string A403_1TextParameter { get; set; }
-
         public static bool A403_1КнопкаАlpha_Lambda = false;
         public static bool A403_1КнопкаEpsilon_Phi = false;
         public static bool A403_1КнопкаI_H = false;
@@ -117,6 +101,8 @@
         #endregion
 
         #region Табло
+        public static string A403_1TextParameter { get; set; }
+
         public static string A403_1ТаблоПоле0 { get; set; }
         public static string A403_1ТаблоПолe1 { get; set; }
         public static string A403_1ТаблоПоле2 { get; set; }
@@ -124,7 +110,6 @@
         public static string A403_1ТаблоПоле4 { get; set; }
         public static string A403_1ТаблоПоле5 { get; set; }
         public static string A403_1ТаблоПоле6 { get; set; }
-
         #endregion
     }
 }

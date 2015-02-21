@@ -29,15 +29,15 @@ namespace R440O.R440OForms.A1
         /// </summary>
         private void A1КнопкаСкоростьАБ_1ТЛФ_К_Click(object sender, System.EventArgs e)
         {
-            if (A1Parameters.A1КнопкаСкоростьАБ_1ТЛФ_К == "false")
+            if (A1Parameters.A1КнопкаСкоростьАБ_1ТЛФ_К == false)
             {
                 this.A1КнопкаСкоростьАБ_1ТЛФ_К.BackgroundImage = null;
-                A1Parameters.A1КнопкаСкоростьАБ_1ТЛФ_К = "true";
+                A1Parameters.A1КнопкаСкоростьАБ_1ТЛФ_К = true;
             }
             else
             {
                 this.A1КнопкаСкоростьАБ_1ТЛФ_К.BackgroundImage = ControlElementImages.buttonRectType1;
-                A1Parameters.A1КнопкаСкоростьАБ_1ТЛФ_К = "false";
+                A1Parameters.A1КнопкаСкоростьАБ_1ТЛФ_К = false;
             }
         }
 
@@ -46,15 +46,15 @@ namespace R440O.R440OForms.A1
         /// </summary>
         private void A1КнопкаСкоростьГР_Click(object sender, System.EventArgs e)
         {
-            if (A1Parameters.A1КнопкаСкоростьГР == "false")
+            if (A1Parameters.A1КнопкаСкоростьГР == false)
             {
                 this.A1КнопкаСкоростьГР.BackgroundImage = null;
-                A1Parameters.A1КнопкаСкоростьГР = "true";
+                A1Parameters.A1КнопкаСкоростьГР = true;
             }
             else
             {
                 this.A1КнопкаСкоростьГР.BackgroundImage = ControlElementImages.buttonRectType1;
-                A1Parameters.A1КнопкаСкоростьГР = "false";
+                A1Parameters.A1КнопкаСкоростьГР = false;
             }
         }
 
@@ -85,11 +85,11 @@ namespace R440O.R440OForms.A1
 
         private void InitializeButtonsPosition()
         {
-            this.A1КнопкаСкоростьГР.BackgroundImage = A1Parameters.A1КнопкаСкоростьГР == "true"
+            this.A1КнопкаСкоростьГР.BackgroundImage = A1Parameters.A1КнопкаСкоростьГР
                 ? null
                 : ControlElementImages.buttonRectType1;
 
-            this.A1КнопкаСкоростьАБ_1ТЛФ_К.BackgroundImage = A1Parameters.A1КнопкаСкоростьАБ_1ТЛФ_К == "true"
+            this.A1КнопкаСкоростьАБ_1ТЛФ_К.BackgroundImage = A1Parameters.A1КнопкаСкоростьАБ_1ТЛФ_К
                 ? null
                 : ControlElementImages.buttonRectType1;
         }
