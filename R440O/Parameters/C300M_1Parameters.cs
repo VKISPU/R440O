@@ -152,6 +152,28 @@ namespace R440O.Parameters
         private static string _Ц300М_1КнопкаИндикацияВолны = "false";
         #endregion
 
+        #region Кнопки ПИТАНИЕ
+        /// <summary>
+        /// Возможные состояния: true, false
+        /// </summary>
+        public static string Ц300М_1КнопкаПитаниеВкл { get { return _Ц300М_1КнопкаПитаниеВкл; } set { _Ц300М_1КнопкаПитаниеВкл = value; } }
+        private static string _Ц300М_1КнопкаПитаниеВкл = "false";
+
+        /// <summary>
+        /// Возможные состояния: true, false
+        /// </summary>
+        public static string Ц300М_1КнопкаПитаниеВыкл { get { return _Ц300М_1КнопкаПитаниеВыкл; } set { _Ц300М_1КнопкаПитаниеВыкл = value; } }
+        private static string _Ц300М_1КнопкаПитаниеВыкл = "false";
+        #endregion
+
+        #region Кнопка ПОИСК
+        /// <summary>
+        /// Возможные состояния: true, false
+        /// </summary>
+        public static string Ц300М_1КнопкаПоискВкл { get { return _Ц300М_1КнопкаПоискВкл; } set { _Ц300М_1КнопкаПоискВкл = value; } }
+        private static string _Ц300М_1КнопкаПоискВкл = "false";
+        #endregion
+
         #region Переключатели ВОЛНА
         /// <summary>
         /// 0 - 9

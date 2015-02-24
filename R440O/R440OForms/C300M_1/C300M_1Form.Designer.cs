@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.C300M_1Panel = new System.Windows.Forms.Panel();
+            this.Ц300М_1КнопкаПитаниеВыкл = new System.Windows.Forms.Button();
+            this.Ц300М_1КнопкаПитаниеВкл = new System.Windows.Forms.Button();
             this.Ц300М_1ТумблерПоискПределы = new System.Windows.Forms.Button();
             this.Ц300М_1ТумблерЧТОФТ = new System.Windows.Forms.Button();
             this.Ц300М_1ТумблерАРУРРУ = new System.Windows.Forms.Button();
@@ -68,6 +70,7 @@
             this.Ц300М_1КнопкаВидРаботы0d1 = new System.Windows.Forms.Button();
             this.Ц300М_1КнопкаВидРаботы0d05 = new System.Windows.Forms.Button();
             this.Ц300М_1КнопкаВидРаботы0d025 = new System.Windows.Forms.Button();
+            this.Ц300М_1КнопкаПоискВкл = new System.Windows.Forms.Button();
             this.C300M_1Panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +78,9 @@
             // 
             this.C300M_1Panel.BackgroundImage = global::R440O.BackgroundImages.C300M;
             this.C300M_1Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.C300M_1Panel.Controls.Add(this.Ц300М_1КнопкаПоискВкл);
+            this.C300M_1Panel.Controls.Add(this.Ц300М_1КнопкаПитаниеВыкл);
+            this.C300M_1Panel.Controls.Add(this.Ц300М_1КнопкаПитаниеВкл);
             this.C300M_1Panel.Controls.Add(this.Ц300М_1ТумблерПоискПределы);
             this.C300M_1Panel.Controls.Add(this.Ц300М_1ТумблерЧТОФТ);
             this.C300M_1Panel.Controls.Add(this.Ц300М_1ТумблерАРУРРУ);
@@ -118,6 +124,44 @@
             this.C300M_1Panel.Name = "C300M_1Panel";
             this.C300M_1Panel.Size = new System.Drawing.Size(1100, 430);
             this.C300M_1Panel.TabIndex = 1;
+            // 
+            // Ц300М_1КнопкаПитаниеВыкл
+            // 
+            this.Ц300М_1КнопкаПитаниеВыкл.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаПитаниеВыкл.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
+            this.Ц300М_1КнопкаПитаниеВыкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Ц300М_1КнопкаПитаниеВыкл.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1КнопкаПитаниеВыкл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаПитаниеВыкл.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаПитаниеВыкл.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1КнопкаПитаниеВыкл.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.Ц300М_1КнопкаПитаниеВыкл.Location = new System.Drawing.Point(880, 43);
+            this.Ц300М_1КнопкаПитаниеВыкл.Name = "Ц300М_1КнопкаПитаниеВыкл";
+            this.Ц300М_1КнопкаПитаниеВыкл.Size = new System.Drawing.Size(37, 34);
+            this.Ц300М_1КнопкаПитаниеВыкл.TabIndex = 50;
+            this.Ц300М_1КнопкаПитаниеВыкл.Text = "ВЫКЛ";
+            this.Ц300М_1КнопкаПитаниеВыкл.UseVisualStyleBackColor = false;
+            this.Ц300М_1КнопкаПитаниеВыкл.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Ц300М_1КнопкаПитаниеВыкл_MouseDown);
+            this.Ц300М_1КнопкаПитаниеВыкл.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Ц300М_1КнопкаПитаниеВыкл_MouseUp);
+            // 
+            // Ц300М_1КнопкаПитаниеВкл
+            // 
+            this.Ц300М_1КнопкаПитаниеВкл.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаПитаниеВкл.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
+            this.Ц300М_1КнопкаПитаниеВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Ц300М_1КнопкаПитаниеВкл.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1КнопкаПитаниеВкл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаПитаниеВкл.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаПитаниеВкл.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1КнопкаПитаниеВкл.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.Ц300М_1КнопкаПитаниеВкл.Location = new System.Drawing.Point(915, 43);
+            this.Ц300М_1КнопкаПитаниеВкл.Name = "Ц300М_1КнопкаПитаниеВкл";
+            this.Ц300М_1КнопкаПитаниеВкл.Size = new System.Drawing.Size(35, 34);
+            this.Ц300М_1КнопкаПитаниеВкл.TabIndex = 49;
+            this.Ц300М_1КнопкаПитаниеВкл.Text = "ВКЛ";
+            this.Ц300М_1КнопкаПитаниеВкл.UseVisualStyleBackColor = false;
+            this.Ц300М_1КнопкаПитаниеВкл.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Ц300М_1КнопкаПитаниеВкл_MouseDown);
+            this.Ц300М_1КнопкаПитаниеВкл.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Ц300М_1КнопкаПитаниеВкл_MouseUp);
             // 
             // Ц300М_1ТумблерПоискПределы
             // 
@@ -786,6 +830,25 @@
             this.Ц300М_1КнопкаВидРаботы0d025.UseVisualStyleBackColor = false;
             this.Ц300М_1КнопкаВидРаботы0d025.Click += new System.EventHandler(this.Ц300М_1КнопкаВидРаботы0d025_Click);
             // 
+            // Ц300М_1КнопкаПоискВкл
+            // 
+            this.Ц300М_1КнопкаПоискВкл.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаПоискВкл.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
+            this.Ц300М_1КнопкаПоискВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Ц300М_1КнопкаПоискВкл.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1КнопкаПоискВкл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаПоискВкл.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаПоискВкл.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1КнопкаПоискВкл.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.Ц300М_1КнопкаПоискВкл.Location = new System.Drawing.Point(886, 117);
+            this.Ц300М_1КнопкаПоискВкл.Name = "Ц300М_1КнопкаПоискВкл";
+            this.Ц300М_1КнопкаПоискВкл.Size = new System.Drawing.Size(35, 34);
+            this.Ц300М_1КнопкаПоискВкл.TabIndex = 51;
+            this.Ц300М_1КнопкаПоискВкл.Text = "ВКЛ";
+            this.Ц300М_1КнопкаПоискВкл.UseVisualStyleBackColor = false;
+            this.Ц300М_1КнопкаПоискВкл.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Ц300М_1КнопкаПоискВкл_MouseDown);
+            this.Ц300М_1КнопкаПоискВкл.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Ц300М_1КнопкаПоискВкл_MouseUp);
+            // 
             // C300M_1Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -845,5 +908,8 @@
         private System.Windows.Forms.Button Ц300М_1ТумблерАРУРРУ;
         private System.Windows.Forms.Button Ц300М_1ТумблерЧТОФТ;
         private System.Windows.Forms.Button Ц300М_1ТумблерПоискПределы;
+        private System.Windows.Forms.Button Ц300М_1КнопкаПитаниеВкл;
+        private System.Windows.Forms.Button Ц300М_1КнопкаПитаниеВыкл;
+        private System.Windows.Forms.Button Ц300М_1КнопкаПоискВкл;
     }
 }

@@ -849,5 +849,51 @@ namespace R440O.R440OForms.C300M_1
             }
         }
         #endregion
+
+        #region Кнопки ПИТАНИЕ
+        private void Ц300М_1КнопкаПитаниеВкл_MouseDown(object sender, MouseEventArgs e)
+        {
+            Ц300М_1КнопкаПитаниеВкл.BackgroundImage = null;
+            Ц300М_1КнопкаПитаниеВкл.Text = "";
+            C300M_1Parameters.Ц300М_1КнопкаПитаниеВкл = "true";
+        }
+
+        private void Ц300М_1КнопкаПитаниеВкл_MouseUp(object sender, MouseEventArgs e)
+        {
+            Ц300М_1КнопкаПитаниеВкл.BackgroundImage = ControlElementImages.buttonSquareWhite;
+            Ц300М_1КнопкаПитаниеВкл.Text = "ВКЛ";
+            C300M_1Parameters.Ц300М_1КнопкаПитаниеВкл = "false";
+        }
+
+        private void Ц300М_1КнопкаПитаниеВыкл_MouseDown(object sender, MouseEventArgs e)
+        {
+            Ц300М_1КнопкаПитаниеВыкл.BackgroundImage = null;
+            Ц300М_1КнопкаПитаниеВыкл.Text = "";
+            C300M_1Parameters.Ц300М_1КнопкаПитаниеВыкл = "true";
+        }
+
+        private void Ц300М_1КнопкаПитаниеВыкл_MouseUp(object sender, MouseEventArgs e)
+        {
+            Ц300М_1КнопкаПитаниеВыкл.BackgroundImage = ControlElementImages.buttonSquareWhite;
+            Ц300М_1КнопкаПитаниеВыкл.Text = "ОТКЛ";
+            C300M_1Parameters.Ц300М_1КнопкаПитаниеВыкл = "false";
+        }
+        #endregion
+
+        #region Кнопка ПОИСК
+        private void Ц300М_1КнопкаПоискВкл_MouseDown(object sender, MouseEventArgs e)
+        {
+            Ц300М_1КнопкаПоискВкл.BackgroundImage = null;
+            Ц300М_1КнопкаПоискВкл.Text = "";
+            C300M_1Parameters.Ц300М_1КнопкаПоискВкл = "true";
+        }
+        #endregion
+
+        private void Ц300М_1КнопкаПоискВкл_MouseUp(object sender, MouseEventArgs e)
+        {
+            Ц300М_1КнопкаПоискВкл.BackgroundImage = ControlElementImages.buttonSquareWhite;
+            Ц300М_1КнопкаПоискВкл.Text = "ВКЛ";
+            C300M_1Parameters.Ц300М_1КнопкаПоискВкл = "false";
+        }
     }
 }
