@@ -70,6 +70,9 @@
     <Compile Include="Parameters\B2_2Parameters.cs" />
     <Compile Include="Parameters\B3_1Parameters.cs" />
     <Compile Include="Parameters\C1_67Parameters.cs" />
+    <Compile Include="Parameters\C300M_2Parameters.cs" />
+    <Compile Include="Parameters\C300M_3Parameterscs.cs" />
+    <Compile Include="Parameters\C300M_4Parameters.cs" />
     <Compile Include="Parameters\K05M_02InsideParameters.cs" />
     <Compile Include="Parameters\K05M_01InsideParameters.cs" />
     <Compile Include="Parameters\K03M_02InsideParameters.cs" />
@@ -219,11 +222,11 @@
     <Compile Include="R440OForms\C1_67\C1_67Form.Designer.cs">
       <DependentUpon>C1_67Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="R440OForms\C300M_4\C300M_4Form.cs">
+    <Compile Include="R440OForms\C300M_2\C300M_2Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="R440OForms\C300M_4\C300M_4Form.Designer.cs">
-      <DependentUpon>C300M_4Form.cs</DependentUpon>
+    <Compile Include="R440OForms\C300M_2\C300M_2Form.Designer.cs">
+      <DependentUpon>C300M_2Form.cs</DependentUpon>
     </Compile>
     <Compile Include="R440OForms\C300M_3\C300M_3Form.cs">
       <SubType>Form</SubType>
@@ -231,11 +234,11 @@
     <Compile Include="R440OForms\C300M_3\C300M_3Form.Designer.cs">
       <DependentUpon>C300M_3Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="R440OForms\C300M_2\C300M_2Form.cs">
+    <Compile Include="R440OForms\C300M_4\C300M_4Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="R440OForms\C300M_2\C300M_2Form.Designer.cs">
-      <DependentUpon>C300M_2Form.cs</DependentUpon>
+    <Compile Include="R440OForms\C300M_4\C300M_4Form.Designer.cs">
+      <DependentUpon>C300M_4Form.cs</DependentUpon>
     </Compile>
     <Compile Include="R440OForms\C300M_1\C300M_1Form.cs">
       <SubType>Form</SubType>
@@ -588,14 +591,14 @@
     <EmbeddedResource Include="R440OForms\C1_67\C1_67Form.resx">
       <DependentUpon>C1_67Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="R440OForms\C300M_4\C300M_4Form.resx">
-      <DependentUpon>C300M_4Form.cs</DependentUpon>
+    <EmbeddedResource Include="R440OForms\C300M_2\C300M_2Form.resx">
+      <DependentUpon>C300M_2Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\C300M_3\C300M_3Form.resx">
       <DependentUpon>C300M_3Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="R440OForms\C300M_2\C300M_2Form.resx">
-      <DependentUpon>C300M_2Form.cs</DependentUpon>
+    <EmbeddedResource Include="R440OForms\C300M_4\C300M_4Form.resx">
+      <DependentUpon>C300M_4Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\C300M_1\C300M_1Form.resx">
       <DependentUpon>C300M_1Form.cs</DependentUpon>
