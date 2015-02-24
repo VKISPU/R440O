@@ -5,6 +5,8 @@
 //-----------------------------------------------------------------------
 
 using System;
+using System.Linq;
+using System.Reflection;
 
 namespace R440O.R440OForms.A403_1
 {
@@ -101,136 +103,30 @@ namespace R440O.R440OForms.A403_1
         #endregion
 
         #region Кнопки
-        private void A403_1Кнопка1_MouseDown(object sender, MouseEventArgs e)
+
+        /// <summary>
+        /// Универсальный метод обработки нажатий на кнопки набора значений
+        /// </summary>
+        private void A403_1КнопкаНабора_MouseDown(object sender, MouseEventArgs e)
         {
-            this.A403_1Кнопка1.BackgroundImage = null;
-            this.A403_1Кнопка1.Text = string.Empty;
+            var button = sender as Button;
+            button.BackgroundImage = null;
+            button.Text = string.Empty;    
         }
 
-        private void A403_1Кнопка1_MouseUp(object sender, MouseEventArgs e)
+        /// <summary>
+        /// Универсальный метод обработки нажатий на кнопки набора значений
+        /// </summary>
+        private void A403_1КнопкаНабора_MouseUp(object sender, MouseEventArgs e)
         {
-            this.A403_1Кнопка1.BackgroundImage = ControlElementImages.buttonSquareWhite;
-            this.A403_1Кнопка1.Text = "1";
-        }
-
-        private void A403_1Кнопка2_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.A403_1Кнопка2.BackgroundImage = null;
-            this.A403_1Кнопка2.Text = string.Empty;
-        }
-
-        private void A403_1Кнопка2_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.A403_1Кнопка2.BackgroundImage = ControlElementImages.buttonSquareWhite;
-            this.A403_1Кнопка2.Text = "2";
-        }
-
-        private void A403_1Кнопка3_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.A403_1Кнопка3.BackgroundImage = null;
-            this.A403_1Кнопка3.Text = string.Empty;
-        }
-
-        private void A403_1Кнопка3_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.A403_1Кнопка3.BackgroundImage = ControlElementImages.buttonSquareWhite;
-            this.A403_1Кнопка3.Text = "3";
-        }
-
-        private void A403_1Кнопка4_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.A403_1Кнопка4.BackgroundImage = null;
-            this.A403_1Кнопка4.Text = string.Empty;
-        }
-
-        private void A403_1Кнопка4_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.A403_1Кнопка4.BackgroundImage = ControlElementImages.buttonSquareWhite;
-            this.A403_1Кнопка4.Text = "4";
-        }
-
-        private void A403_1Кнопка5_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.A403_1Кнопка5.BackgroundImage = null;
-            this.A403_1Кнопка5.Text = string.Empty;
-        }
-
-        private void A403_1Кнопка5_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.A403_1Кнопка5.BackgroundImage = ControlElementImages.buttonSquareWhite;
-            this.A403_1Кнопка5.Text = "5";
-        }
-
-        private void A403_1Кнопка6_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.A403_1Кнопка6.BackgroundImage = null;
-            this.A403_1Кнопка6.Text = string.Empty;
-        }
-
-        private void A403_1Кнопка6_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.A403_1Кнопка6.BackgroundImage = ControlElementImages.buttonSquareWhite;
-            this.A403_1Кнопка6.Text = "6";
-        }
-
-        private void A403_1Кнопка7_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.A403_1Кнопка7.BackgroundImage = null;
-            this.A403_1Кнопка7.Text = string.Empty;
-        }
-
-        private void A403_1Кнопка7_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.A403_1Кнопка7.BackgroundImage = ControlElementImages.buttonSquareWhite;
-            this.A403_1Кнопка7.Text = "7";
-        }
-
-        private void A403_1Кнопка8_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.A403_1Кнопка8.BackgroundImage = null;
-            this.A403_1Кнопка8.Text = string.Empty;
-        }
-
-        private void A403_1Кнопка8_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.A403_1Кнопка8.BackgroundImage = ControlElementImages.buttonSquareWhite;
-            this.A403_1Кнопка8.Text = "8";
-        }
-
-        private void A403_1Кнопка9_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.A403_1Кнопка9.BackgroundImage = null;
-            this.A403_1Кнопка9.Text = string.Empty;
-        }
-
-        private void A403_1Кнопка9_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.A403_1Кнопка9.BackgroundImage = ControlElementImages.buttonSquareWhite;
-            this.A403_1Кнопка9.Text = "9";
-        }
-
-        private void A403_1Кнопка0_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.A403_1Кнопка0.BackgroundImage = null;
-            this.A403_1Кнопка0.Text = string.Empty;
-        }
-
-        private void A403_1Кнопка0_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.A403_1Кнопка0.BackgroundImage = ControlElementImages.buttonSquareWhite;
-            this.A403_1Кнопка0.Text = "0";
-        }
-
-        private void A403_1КнопкаМинус_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.A403_1КнопкаМинус.BackgroundImage = null;
-            this.A403_1КнопкаМинус.Text = string.Empty;
-        }
-
-        private void A403_1КнопкаМинус_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.A403_1КнопкаМинус.BackgroundImage = ControlElementImages.buttonSquareWhite;
-            this.A403_1КнопкаМинус.Text = "–";
+            var button = sender as Button;
+            //Названия всех кнопок отличаются лишь на один 12 символ (Исключение КнопкаМинус)
+            char number = button.Name[12];
+            button.BackgroundImage = ControlElementImages.buttonSquareWhite;
+            //Восстановление текста надо кнопкой после отжатия (КнопкаМинус, как отдельный случай)
+            button.Text = (number == 'М')
+                        ? "-"
+                        : Convert.ToString(number);
         }
 
         private void A403_1КнопкаАlpha_Lambda_Click(object sender, System.EventArgs e)

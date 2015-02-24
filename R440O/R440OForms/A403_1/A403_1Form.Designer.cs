@@ -511,8 +511,8 @@
             this.A403_1КнопкаМинус.TabIndex = 38;
             this.A403_1КнопкаМинус.Text = "–";
             this.A403_1КнопкаМинус.UseVisualStyleBackColor = false;
-            this.A403_1КнопкаМинус.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаМинус_MouseDown);
-            this.A403_1КнопкаМинус.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаМинус_MouseUp);
+            this.A403_1КнопкаМинус.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаНабора_MouseDown);
+            this.A403_1КнопкаМинус.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаНабора_MouseUp);
             // 
             // A403_1Кнопка0
             // 
@@ -531,8 +531,8 @@
             this.A403_1Кнопка0.TabIndex = 37;
             this.A403_1Кнопка0.Text = "0";
             this.A403_1Кнопка0.UseVisualStyleBackColor = false;
-            this.A403_1Кнопка0.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1Кнопка0_MouseDown);
-            this.A403_1Кнопка0.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1Кнопка0_MouseUp);
+            this.A403_1Кнопка0.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаНабора_MouseDown);
+            this.A403_1Кнопка0.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаНабора_MouseUp);
             // 
             // A403_1Кнопка9
             // 
@@ -551,8 +551,8 @@
             this.A403_1Кнопка9.TabIndex = 36;
             this.A403_1Кнопка9.Text = "9";
             this.A403_1Кнопка9.UseVisualStyleBackColor = false;
-            this.A403_1Кнопка9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1Кнопка9_MouseDown);
-            this.A403_1Кнопка9.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1Кнопка9_MouseUp);
+            this.A403_1Кнопка9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаНабора_MouseDown);
+            this.A403_1Кнопка9.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаНабора_MouseUp);
             // 
             // A403_1Кнопка8
             // 
@@ -571,8 +571,8 @@
             this.A403_1Кнопка8.TabIndex = 35;
             this.A403_1Кнопка8.Text = "8";
             this.A403_1Кнопка8.UseVisualStyleBackColor = false;
-            this.A403_1Кнопка8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1Кнопка8_MouseDown);
-            this.A403_1Кнопка8.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1Кнопка8_MouseUp);
+            this.A403_1Кнопка8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаНабора_MouseDown);
+            this.A403_1Кнопка8.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаНабора_MouseUp);
             // 
             // A403_1Кнопка7
             // 
@@ -591,8 +591,8 @@
             this.A403_1Кнопка7.TabIndex = 34;
             this.A403_1Кнопка7.Text = "7";
             this.A403_1Кнопка7.UseVisualStyleBackColor = false;
-            this.A403_1Кнопка7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1Кнопка7_MouseDown);
-            this.A403_1Кнопка7.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1Кнопка7_MouseUp);
+            this.A403_1Кнопка7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаНабора_MouseDown);
+            this.A403_1Кнопка7.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаНабора_MouseUp);
             // 
             // A403_1Кнопка6
             // 
@@ -611,8 +611,8 @@
             this.A403_1Кнопка6.TabIndex = 33;
             this.A403_1Кнопка6.Text = "6";
             this.A403_1Кнопка6.UseVisualStyleBackColor = false;
-            this.A403_1Кнопка6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1Кнопка6_MouseDown);
-            this.A403_1Кнопка6.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1Кнопка6_MouseUp);
+            this.A403_1Кнопка6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаНабора_MouseDown);
+            this.A403_1Кнопка6.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаНабора_MouseUp);
             // 
             // A403_1Кнопка5
             // 
@@ -631,8 +631,8 @@
             this.A403_1Кнопка5.TabIndex = 32;
             this.A403_1Кнопка5.Text = "5";
             this.A403_1Кнопка5.UseVisualStyleBackColor = false;
-            this.A403_1Кнопка5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1Кнопка5_MouseDown);
-            this.A403_1Кнопка5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1Кнопка5_MouseUp);
+            this.A403_1Кнопка5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаНабора_MouseDown);
+            this.A403_1Кнопка5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаНабора_MouseUp);
             // 
             // A403_1Кнопка4
             // 
@@ -651,8 +651,8 @@
             this.A403_1Кнопка4.TabIndex = 31;
             this.A403_1Кнопка4.Text = "4";
             this.A403_1Кнопка4.UseVisualStyleBackColor = false;
-            this.A403_1Кнопка4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1Кнопка4_MouseDown);
-            this.A403_1Кнопка4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1Кнопка4_MouseUp);
+            this.A403_1Кнопка4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаНабора_MouseDown);
+            this.A403_1Кнопка4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаНабора_MouseUp);
             // 
             // A403_1Кнопка3
             // 
@@ -671,8 +671,8 @@
             this.A403_1Кнопка3.TabIndex = 30;
             this.A403_1Кнопка3.Text = "3";
             this.A403_1Кнопка3.UseVisualStyleBackColor = false;
-            this.A403_1Кнопка3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1Кнопка3_MouseDown);
-            this.A403_1Кнопка3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1Кнопка3_MouseUp);
+            this.A403_1Кнопка3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаНабора_MouseDown);
+            this.A403_1Кнопка3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаНабора_MouseUp);
             // 
             // A403_1Кнопка2
             // 
@@ -691,8 +691,8 @@
             this.A403_1Кнопка2.TabIndex = 29;
             this.A403_1Кнопка2.Text = "2";
             this.A403_1Кнопка2.UseVisualStyleBackColor = false;
-            this.A403_1Кнопка2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1Кнопка2_MouseDown);
-            this.A403_1Кнопка2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1Кнопка2_MouseUp);
+            this.A403_1Кнопка2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаНабора_MouseDown);
+            this.A403_1Кнопка2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаНабора_MouseUp);
             // 
             // A403_1Кнопка1
             // 
@@ -711,8 +711,8 @@
             this.A403_1Кнопка1.TabIndex = 28;
             this.A403_1Кнопка1.Text = "1";
             this.A403_1Кнопка1.UseVisualStyleBackColor = false;
-            this.A403_1Кнопка1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1Кнопка1_MouseDown);
-            this.A403_1Кнопка1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1Кнопка1_MouseUp);
+            this.A403_1Кнопка1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаНабора_MouseDown);
+            this.A403_1Кнопка1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаНабора_MouseUp);
             // 
             // A403_1ТумблерАвтКоррекция
             // 

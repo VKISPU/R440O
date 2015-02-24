@@ -7,6 +7,7 @@
 using System;
 using System.Linq;
 using System.Reflection;
+using System.Windows.Forms.VisualStyles;
 
 namespace R440O.R440OForms.B2_1
 {
@@ -55,7 +56,6 @@ namespace R440O.R440OForms.B2_1
 
             //Получим список get set полей из класса параметров
             PropertyInfo[] PropertyList = typeof(B2_1Parameters).GetProperties();
-
             //Переберём список контролов
             foreach (Control item in B2_1Panel.Controls)
             {

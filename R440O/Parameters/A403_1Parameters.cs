@@ -87,17 +87,35 @@
 
         #endregion
 
+        
         #region Кнопки
         ////Кнопки
-        public static bool A403_1КнопкаАlpha_Lambda = false;
-        public static bool A403_1КнопкаEpsilon_Phi = false;
-        public static bool A403_1КнопкаI_H = false;
-        public static bool A403_1КнопкаOmega_N = false;
-        public static bool A403_1КнопкаLambda0_f = false;
-        public static bool A403_1Кнопкаt0_K = false;
-        public static bool A403_1КнопкаT_Kbeta = false;
-        public static bool A403_1Кнопкаtсв_Yalpha = false;
-        public static bool A403_1Кнопкаtуст_Ybeta = false;
+        public static bool A403_1КнопкаАlpha_Lambda { get { return _A403_1КнопкаАlpha_Lambda; } set { _A403_1КнопкаАlpha_Lambda = value; } }
+        private static bool _A403_1КнопкаАlpha_Lambda;
+
+        public static bool A403_1КнопкаEpsilon_Phi { get { return _A403_1КнопкаEpsilon_Phi; } set { _A403_1КнопкаEpsilon_Phi = value; } }
+        private static bool _A403_1КнопкаEpsilon_Phi;
+
+        public static bool A403_1КнопкаI_H { get { return _A403_1КнопкаI_H; } set { _A403_1КнопкаI_H = value; } }
+        private static bool _A403_1КнопкаI_H;
+
+        public static bool A403_1КнопкаOmega_N { get { return _A403_1КнопкаOmega_N; } set { _A403_1КнопкаOmega_N = value; } }
+        private static bool _A403_1КнопкаOmega_N;
+
+        public static bool A403_1КнопкаLambda0_f { get { return _A403_1КнопкаLambda0_f; } set { _A403_1КнопкаLambda0_f = value; } }
+        private static bool _A403_1КнопкаLambda0_f;
+
+        public static bool A403_1Кнопкаt0_K { get { return _A403_1Кнопкаt0_K; } set { _A403_1Кнопкаt0_K = value; } }
+        private static bool _A403_1Кнопкаt0_K;
+
+        public static bool A403_1КнопкаT_Kbeta { get { return _A403_1КнопкаT_Kbeta; } set { _A403_1КнопкаT_Kbeta = value; } }
+        private static bool _A403_1КнопкаT_Kbeta;
+
+        public static bool A403_1Кнопкаtсв_Yalpha { get { return _A403_1Кнопкаtсв_Yalpha; } set { _A403_1Кнопкаtсв_Yalpha = value; } }
+        private static bool _A403_1Кнопкаtсв_Yalpha;
+
+        public static bool A403_1Кнопкаtуст_Ybeta { get { return _A403_1Кнопкаtуст_Ybeta; } set { _A403_1Кнопкаtуст_Ybeta = value; } }
+        private static bool _A403_1Кнопкаtуст_Ybeta;
         #endregion
 
         #region Табло
