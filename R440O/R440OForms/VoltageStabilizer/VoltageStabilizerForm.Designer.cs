@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.VoltageStabilizerPanel = new System.Windows.Forms.Panel();
+            this.VoltageStabilizerЛампочкаАвария = new System.Windows.Forms.PictureBox();
             this.VoltageStabilizerЛампочкаСетьВкл = new System.Windows.Forms.PictureBox();
             this.VoltageStabilizerПереключательКонтрольНапр = new System.Windows.Forms.Button();
             this.VoltageStabilizerКабельВход2 = new System.Windows.Forms.Button();
             this.VoltageStabilizerКабельВход1 = new System.Windows.Forms.Button();
-            this.VoltageStabilizerЛампочкаАвария = new System.Windows.Forms.PictureBox();
             this.VoltageStabilizerPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VoltageStabilizerЛампочкаСетьВкл)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VoltageStabilizerЛампочкаАвария)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VoltageStabilizerЛампочкаСетьВкл)).BeginInit();
             this.SuspendLayout();
             // 
             // VoltageStabilizerPanel
@@ -52,6 +52,17 @@
             this.VoltageStabilizerPanel.Name = "VoltageStabilizerPanel";
             this.VoltageStabilizerPanel.Size = new System.Drawing.Size(1092, 773);
             this.VoltageStabilizerPanel.TabIndex = 0;
+            // 
+            // VoltageStabilizerЛампочкаАвария
+            // 
+            this.VoltageStabilizerЛампочкаАвария.BackColor = System.Drawing.Color.Transparent;
+            this.VoltageStabilizerЛампочкаАвария.BackgroundImage = global::R440O.ControlElementImages.lampType6OnRed;
+            this.VoltageStabilizerЛампочкаАвария.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.VoltageStabilizerЛампочкаАвария.Location = new System.Drawing.Point(646, 10);
+            this.VoltageStabilizerЛампочкаАвария.Name = "VoltageStabilizerЛампочкаАвария";
+            this.VoltageStabilizerЛампочкаАвария.Size = new System.Drawing.Size(51, 45);
+            this.VoltageStabilizerЛампочкаАвария.TabIndex = 36;
+            this.VoltageStabilizerЛампочкаАвария.TabStop = false;
             // 
             // VoltageStabilizerЛампочкаСетьВкл
             // 
@@ -111,17 +122,6 @@
             this.VoltageStabilizerКабельВход1.UseVisualStyleBackColor = false;
             this.VoltageStabilizerКабельВход1.Click += new System.EventHandler(this.VoltageStabilizerКабельВход1_Click);
             // 
-            // VoltageStabilizerЛампочкаАвария
-            // 
-            this.VoltageStabilizerЛампочкаАвария.BackColor = System.Drawing.Color.Transparent;
-            this.VoltageStabilizerЛампочкаАвария.BackgroundImage = global::R440O.ControlElementImages.lampType6OnRed;
-            this.VoltageStabilizerЛампочкаАвария.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.VoltageStabilizerЛампочкаАвария.Location = new System.Drawing.Point(651, 14);
-            this.VoltageStabilizerЛампочкаАвария.Name = "VoltageStabilizerЛампочкаАвария";
-            this.VoltageStabilizerЛампочкаАвария.Size = new System.Drawing.Size(51, 45);
-            this.VoltageStabilizerЛампочкаАвария.TabIndex = 36;
-            this.VoltageStabilizerЛампочкаАвария.TabStop = false;
-            // 
             // VoltageStabilizerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -134,8 +134,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "СТАБИЛИЗАТОР НАПРЯЖЕНИЯ";
             this.VoltageStabilizerPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VoltageStabilizerЛампочкаСетьВкл)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VoltageStabilizerЛампочкаАвария)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VoltageStabilizerЛампочкаСетьВкл)).EndInit();
             this.ResumeLayout(false);
 
         }
