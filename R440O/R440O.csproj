@@ -93,6 +93,7 @@
     <Compile Include="Parameters\N13_2Parameters.cs" />
     <Compile Include="Parameters\N15InsideParameters.cs" />
     <Compile Include="Parameters\N16Parameters.cs" />
+    <Compile Include="Parameters\OrderSchemeParameters.cs" />
     <Compile Include="Parameters\PU_K1_2Parameters.cs" />
     <Compile Include="Parameters\PU_K1_1Parameters.cs" />
     <Compile Include="Parameters\B3_2Parameters.cs" />
@@ -1053,9 +1054,6 @@
     <None Include="Resources\lampType9OnGreen.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\lampType10OnGreen.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\lampType11OnYellow.png" />
   </ItemGroup>
   <ItemGroup>
@@ -1093,7 +1091,6 @@
     <None Include="Resources\N15_inside.png" />
     <None Include="Resources\orderSchemeIcon.png" />
     <None Include="Resources\OrderScheme.png" />
-    <None Include="Resources\C300M.png" />
     <None Include="Resources\revolverRoundBlack.png" />
     <None Include="Resources\N12SIndicatorAlpha.png" />
     <None Include="Resources\N12SIndicatorBeta.png" />
@@ -1101,6 +1098,8 @@
     <None Include="Resources\N12SSticker.png" />
     <None Include="Resources\N12SArrow.png" />
     <None Include="Resources\lampType6OnRed.png" />
+    <None Include="Resources\lampType10OnGreen.png" />
+    <None Include="Resources\C300M.png" />
     <Content Include="Resources\revolverRoundSmall.png" />
     <None Include="Resources\toggleType8.png" />
     <None Include="Resources\toggleС1_67.png" />

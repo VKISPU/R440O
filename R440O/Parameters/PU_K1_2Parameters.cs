@@ -4,43 +4,45 @@
     {
         ////Лампочки
         public static bool PU_K1_2ЛампочкаCеть;
-        
+
         ////Тумблеры 
         /// <summary>
         /// Возможные состояния: 0. Дист - дистанционное управление, 1. Откл - отключено, 2. Мест - местное управление.
         /// </summary>
         public static int PU_K1_2ТумблерПитание
         {
-            get { return _PU_K1_2ТумблерПитание; }
+            get { return _pU_K1_2ТумблерПитание; }
 
             set
             {
                 if (value >= 0 && value <= 2)
                 {
-                    _PU_K1_2ТумблерПитание = value;
+                    _pU_K1_2ТумблерПитание = value;
                 }
             }
         }
-        private static int _PU_K1_2ТумблерПитание = 1;
+        private static int _pU_K1_2ТумблерПитание = 1;
+
+        public static bool PU_K1_2ТумблерВентВкл = false;
 
         #region Переключатели
         /// <summary>
         /// Положение переключателя контроля
         /// </summary>
-        private static int _PU_K1_2ПереключательКаналы = 1;
+        private static int _pU_K1_2ПереключательКаналы = 1;
 
         public static int PU_K1_2ПереключательКаналы
         {
             get
             {
-                return _PU_K1_2ПереключательКаналы;
+                return _pU_K1_2ПереключательКаналы;
             }
 
             set
             {
                 if (value > 0 && value < 5)
                 {
-                    _PU_K1_2ПереключательКаналы = value;
+                    _pU_K1_2ПереключательКаналы = value;
                 }
             }
         }
@@ -58,20 +60,20 @@
         /// <summary>
         /// Положение переключателя контроля
         /// </summary>
-        private static int _PU_K1_2ПереключательНапряжение = 1;
+        private static int _pU_K1_2ПереключательНапряжение = 1;
 
         public static int PU_K1_2ПереключательНапряжение
         {
             get
             {
-                return _PU_K1_2ПереключательНапряжение;
+                return _pU_K1_2ПереключательНапряжение;
             }
 
             set
             {
                 if (value > 0 && value < 13)
                 {
-                    _PU_K1_2ПереключательНапряжение = value;
+                    _pU_K1_2ПереключательНапряжение = value;
                 }
             }
         }
@@ -92,7 +94,7 @@
             { "+60 I", "0" },
             { "+60 II", "0" },
             { "+120", "0" }
-        }; 
+        };
         #endregion
     }
 }

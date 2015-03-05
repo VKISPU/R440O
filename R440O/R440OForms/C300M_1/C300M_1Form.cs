@@ -848,6 +848,20 @@ namespace R440O.R440OForms.C300M_1
                 C300M_1Parameters.Ц300М_1ТумблерПоискПределы = "300";
             }
         }
+
+        private void Ц300М_1ТумблерУправление_Click(object sender, System.EventArgs e)
+        {
+            if (C300M_1Parameters.Ц300М_1ТумблерУправление == "Местное")
+            {
+                this.Ц300М_1ТумблерУправление.BackgroundImage = ControlElementImages.tumblerType4Up;
+                C300M_1Parameters.Ц300М_1ТумблерУправление = "Дистанц";
+            }
+            else
+            {
+                this.Ц300М_1ТумблерУправление.BackgroundImage = ControlElementImages.tumblerType4Down;
+                C300M_1Parameters.Ц300М_1ТумблерУправление = "Местное";
+            }
+        }
         #endregion
 
         #region Кнопки ПИТАНИЕ

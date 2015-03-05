@@ -87,7 +87,10 @@
 
         #endregion
 
-        
+        //Матрица для хранения введённых значений, 1 строка соответствует значениям 1 группы переменных, а 2 для 2 группы.
+        public static float[,] A403_1Значения = {  { 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F},
+                                                   { 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F}    };
+
         #region Кнопки
         ////Кнопки
         public static bool A403_1КнопкаАlpha_Lambda { get { return _A403_1КнопкаАlpha_Lambda; } set { _A403_1КнопкаАlpha_Lambda = value; } }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace R440O.Parameters
+﻿namespace R440O.Parameters
 {
     class C300M_4Parameters
     {
@@ -256,6 +250,14 @@ namespace R440O.Parameters
         private static int _Ц300М_4ПереключательВолна1 = 0;
         #endregion
 
+        #region Тумблеры
+        /// <summary>
+        /// Возможные состояния: Дистанц, Местное
+        /// </summary>
+        public static string Ц300М_4ТумблерУправление { get { return _Ц300М_4ТумблерУправление; } set { _Ц300М_4ТумблерУправление = value; } }
+        private static string _Ц300М_4ТумблерУправление = "Местное";
+
+
         /// <summary>
         /// Возможные состояния: ЧТ, ОФТ
         /// </summary>
@@ -303,11 +305,13 @@ namespace R440O.Parameters
         /// </summary>
         public static string Ц300М_4ТумблерПоискПределы { get { return _Ц300М_4ТумблерПоискПределы; } set { _Ц300М_4ТумблерПоискПределы = value; } }
         private static string _Ц300М_4ТумблерПоискПределы = "300";
+        #endregion
 
         #region Лампочки
-        public static bool Ц300М_1ЛампочкаСигнал = false;
-        public static bool Ц300М_1ЛампочкаПитание = false;
-        public static bool Ц300М_1ЛампочкаПоиск = false;
+        public static bool Ц300М_4ЛампочкаСигнал = false;
+        public static bool Ц300М_4ЛампочкаПитание = false;
+        public static bool Ц300М_4ЛампочкаПоиск = false;
         #endregion
+
     }
 }

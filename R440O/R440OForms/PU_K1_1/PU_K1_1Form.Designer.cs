@@ -34,6 +34,7 @@
             this.PU_K1_1СтрелкаКонтроляНапряжения = new System.Windows.Forms.PictureBox();
             this.PU_K1_1ТумблерПитание = new System.Windows.Forms.Button();
             this.PU_K1_1ЛампочкаCеть = new System.Windows.Forms.PictureBox();
+            this.PU_K1_1ТумблерВентВкл = new System.Windows.Forms.Button();
             this.PU_K1_1Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PU_K1_1СтрелкаКонтроляНапряжения)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PU_K1_1ЛампочкаCеть)).BeginInit();
@@ -43,6 +44,7 @@
             // 
             this.PU_K1_1Panel.BackgroundImage = global::R440O.BackgroundImages.PU_K1;
             this.PU_K1_1Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.PU_K1_1Panel.Controls.Add(this.PU_K1_1ТумблерВентВкл);
             this.PU_K1_1Panel.Controls.Add(this.PU_K1_1ПереключательНапряжение);
             this.PU_K1_1Panel.Controls.Add(this.PU_K1_1ПереключательКаналы);
             this.PU_K1_1Panel.Controls.Add(this.PU_K1_1СтрелкаКонтроляНапряжения);
@@ -62,7 +64,7 @@
             this.PU_K1_1ПереключательНапряжение.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.PU_K1_1ПереключательНапряжение.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.PU_K1_1ПереключательНапряжение.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PU_K1_1ПереключательНапряжение.Location = new System.Drawing.Point(728, 64);
+            this.PU_K1_1ПереключательНапряжение.Location = new System.Drawing.Point(728, 59);
             this.PU_K1_1ПереключательНапряжение.Name = "PU_K1_1ПереключательНапряжение";
             this.PU_K1_1ПереключательНапряжение.Size = new System.Drawing.Size(109, 102);
             this.PU_K1_1ПереключательНапряжение.TabIndex = 36;
@@ -78,9 +80,9 @@
             this.PU_K1_1ПереключательКаналы.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.PU_K1_1ПереключательКаналы.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.PU_K1_1ПереключательКаналы.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PU_K1_1ПереключательКаналы.Location = new System.Drawing.Point(327, 64);
+            this.PU_K1_1ПереключательКаналы.Location = new System.Drawing.Point(339, 72);
             this.PU_K1_1ПереключательКаналы.Name = "PU_K1_1ПереключательКаналы";
-            this.PU_K1_1ПереключательКаналы.Size = new System.Drawing.Size(109, 102);
+            this.PU_K1_1ПереключательКаналы.Size = new System.Drawing.Size(81, 75);
             this.PU_K1_1ПереключательКаналы.TabIndex = 36;
             this.PU_K1_1ПереключательКаналы.UseVisualStyleBackColor = false;
             this.PU_K1_1ПереключательКаналы.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PU_K1_1ПереключательКаналы_MouseUp);
@@ -121,6 +123,22 @@
             this.PU_K1_1ЛампочкаCеть.TabIndex = 33;
             this.PU_K1_1ЛампочкаCеть.TabStop = false;
             // 
+            // PU_K1_1ТумблерВентВкл
+            // 
+            this.PU_K1_1ТумблерВентВкл.BackColor = System.Drawing.Color.Transparent;
+            this.PU_K1_1ТумблерВентВкл.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
+            this.PU_K1_1ТумблерВентВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.PU_K1_1ТумблерВентВкл.FlatAppearance.BorderSize = 0;
+            this.PU_K1_1ТумблерВентВкл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.PU_K1_1ТумблерВентВкл.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.PU_K1_1ТумблерВентВкл.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PU_K1_1ТумблерВентВкл.Location = new System.Drawing.Point(863, 80);
+            this.PU_K1_1ТумблерВентВкл.Name = "PU_K1_1ТумблерВентВкл";
+            this.PU_K1_1ТумблерВентВкл.Size = new System.Drawing.Size(39, 65);
+            this.PU_K1_1ТумблерВентВкл.TabIndex = 63;
+            this.PU_K1_1ТумблерВентВкл.UseVisualStyleBackColor = false;
+            this.PU_K1_1ТумблерВентВкл.Click += new System.EventHandler(this.PU_K1_1ТумблерВентВкл_Click);
+            // 
             // PU_K1_1Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -147,5 +165,6 @@
         private System.Windows.Forms.PictureBox PU_K1_1СтрелкаКонтроляНапряжения;
         private System.Windows.Forms.Button PU_K1_1ПереключательКаналы;
         private System.Windows.Forms.Button PU_K1_1ПереключательНапряжение;
+        private System.Windows.Forms.Button PU_K1_1ТумблерВентВкл;
     }
 }

@@ -449,7 +449,7 @@
             this.B3_2КолодкаКРПР_5.Size = new System.Drawing.Size(42, 19);
             this.B3_2КолодкаКРПР_5.TabIndex = 36;
             this.B3_2КолодкаКРПР_5.UseVisualStyleBackColor = false;
-            this.B3_2КолодкаКРПР_5.Click += new System.EventHandler(this.B3_2КолодкаКРПР_5_Click);
+            this.B3_2КолодкаКРПР_5.Click += new System.EventHandler(this.B3_2КолодкаКРПР_Click);
             // 
             // B3_2КолодкаКРПР_4
             // 
@@ -464,7 +464,7 @@
             this.B3_2КолодкаКРПР_4.Size = new System.Drawing.Size(42, 19);
             this.B3_2КолодкаКРПР_4.TabIndex = 35;
             this.B3_2КолодкаКРПР_4.UseVisualStyleBackColor = false;
-            this.B3_2КолодкаКРПР_4.Click += new System.EventHandler(this.B3_2КолодкаКРПР_4_Click);
+            this.B3_2КолодкаКРПР_4.Click += new System.EventHandler(this.B3_2КолодкаКРПР_Click);
             // 
             // B3_2КолодкаКРПР_3
             // 
@@ -479,7 +479,7 @@
             this.B3_2КолодкаКРПР_3.Size = new System.Drawing.Size(42, 19);
             this.B3_2КолодкаКРПР_3.TabIndex = 34;
             this.B3_2КолодкаКРПР_3.UseVisualStyleBackColor = false;
-            this.B3_2КолодкаКРПР_3.Click += new System.EventHandler(this.B3_2КолодкаКРПР_3_Click);
+            this.B3_2КолодкаКРПР_3.Click += new System.EventHandler(this.B3_2КолодкаКРПР_Click);
             // 
             // B3_2КолодкаКРПР_2
             // 
@@ -494,7 +494,7 @@
             this.B3_2КолодкаКРПР_2.Size = new System.Drawing.Size(42, 19);
             this.B3_2КолодкаКРПР_2.TabIndex = 33;
             this.B3_2КолодкаКРПР_2.UseVisualStyleBackColor = false;
-            this.B3_2КолодкаКРПР_2.Click += new System.EventHandler(this.B3_2КолодкаКРПР_2_Click);
+            this.B3_2КолодкаКРПР_2.Click += new System.EventHandler(this.B3_2КолодкаКРПР_Click);
             // 
             // B3_2КолодкаКРПР_1
             // 
@@ -509,7 +509,7 @@
             this.B3_2КолодкаКРПР_1.Size = new System.Drawing.Size(42, 19);
             this.B3_2КолодкаКРПР_1.TabIndex = 32;
             this.B3_2КолодкаКРПР_1.UseVisualStyleBackColor = false;
-            this.B3_2КолодкаКРПР_1.Click += new System.EventHandler(this.B3_2КолодкаКРПР_1_Click);
+            this.B3_2КолодкаКРПР_1.Click += new System.EventHandler(this.B3_2КолодкаКРПР_Click);
             // 
             // B3_2КолодкаОКпр2_ас
             // 
@@ -584,7 +584,7 @@
             this.B3_2КолодкаУКК2_9.Size = new System.Drawing.Size(42, 19);
             this.B3_2КолодкаУКК2_9.TabIndex = 27;
             this.B3_2КолодкаУКК2_9.UseVisualStyleBackColor = false;
-            this.B3_2КолодкаУКК2_9.Click += new System.EventHandler(this.B3_2КолодкаУКК2_9_Click);
+            this.B3_2КолодкаУКК2_9.Click += new System.EventHandler(this.B3_2КолодкаУКК_Click);
             // 
             // B3_2КолодкаУКК2_8
             // 
@@ -599,7 +599,7 @@
             this.B3_2КолодкаУКК2_8.Size = new System.Drawing.Size(42, 19);
             this.B3_2КолодкаУКК2_8.TabIndex = 26;
             this.B3_2КолодкаУКК2_8.UseVisualStyleBackColor = false;
-            this.B3_2КолодкаУКК2_8.Click += new System.EventHandler(this.B3_2КолодкаУКК2_8_Click);
+            this.B3_2КолодкаУКК2_8.Click += new System.EventHandler(this.B3_2КолодкаУКК_Click);
             // 
             // B3_2КолодкаУКК2_7
             // 
@@ -614,7 +614,7 @@
             this.B3_2КолодкаУКК2_7.Size = new System.Drawing.Size(42, 19);
             this.B3_2КолодкаУКК2_7.TabIndex = 25;
             this.B3_2КолодкаУКК2_7.UseVisualStyleBackColor = false;
-            this.B3_2КолодкаУКК2_7.Click += new System.EventHandler(this.B3_2КолодкаУКК2_7_Click);
+            this.B3_2КолодкаУКК2_7.Click += new System.EventHandler(this.B3_2КолодкаУКК_Click);
             // 
             // B3_2КолодкаУКК2_6
             // 
@@ -629,7 +629,7 @@
             this.B3_2КолодкаУКК2_6.Size = new System.Drawing.Size(42, 19);
             this.B3_2КолодкаУКК2_6.TabIndex = 24;
             this.B3_2КолодкаУКК2_6.UseVisualStyleBackColor = false;
-            this.B3_2КолодкаУКК2_6.Click += new System.EventHandler(this.B3_2КолодкаУКК2_6_Click);
+            this.B3_2КолодкаУКК2_6.Click += new System.EventHandler(this.B3_2КолодкаУКК_Click);
             // 
             // B3_2КолодкаУКК2_5
             // 
@@ -644,7 +644,7 @@
             this.B3_2КолодкаУКК2_5.Size = new System.Drawing.Size(42, 19);
             this.B3_2КолодкаУКК2_5.TabIndex = 23;
             this.B3_2КолодкаУКК2_5.UseVisualStyleBackColor = false;
-            this.B3_2КолодкаУКК2_5.Click += new System.EventHandler(this.B3_2КолодкаУКК2_5_Click);
+            this.B3_2КолодкаУКК2_5.Click += new System.EventHandler(this.B3_2КолодкаУКК_Click);
             // 
             // B3_2КолодкаУКК2_4
             // 
@@ -659,7 +659,7 @@
             this.B3_2КолодкаУКК2_4.Size = new System.Drawing.Size(42, 19);
             this.B3_2КолодкаУКК2_4.TabIndex = 22;
             this.B3_2КолодкаУКК2_4.UseVisualStyleBackColor = false;
-            this.B3_2КолодкаУКК2_4.Click += new System.EventHandler(this.B3_2КолодкаУКК2_4_Click);
+            this.B3_2КолодкаУКК2_4.Click += new System.EventHandler(this.B3_2КолодкаУКК_Click);
             // 
             // B3_2КолодкаУКК2_3
             // 
@@ -674,7 +674,7 @@
             this.B3_2КолодкаУКК2_3.Size = new System.Drawing.Size(42, 19);
             this.B3_2КолодкаУКК2_3.TabIndex = 21;
             this.B3_2КолодкаУКК2_3.UseVisualStyleBackColor = false;
-            this.B3_2КолодкаУКК2_3.Click += new System.EventHandler(this.B3_2КолодкаУКК2_3_Click);
+            this.B3_2КолодкаУКК2_3.Click += new System.EventHandler(this.B3_2КолодкаУКК_Click);
             // 
             // B3_2КолодкаУКК2_2
             // 
@@ -689,7 +689,7 @@
             this.B3_2КолодкаУКК2_2.Size = new System.Drawing.Size(42, 19);
             this.B3_2КолодкаУКК2_2.TabIndex = 20;
             this.B3_2КолодкаУКК2_2.UseVisualStyleBackColor = false;
-            this.B3_2КолодкаУКК2_2.Click += new System.EventHandler(this.B3_2КолодкаУКК2_2_Click);
+            this.B3_2КолодкаУКК2_2.Click += new System.EventHandler(this.B3_2КолодкаУКК_Click);
             // 
             // B3_2КолодкаУКК2_1
             // 
@@ -704,7 +704,7 @@
             this.B3_2КолодкаУКК2_1.Size = new System.Drawing.Size(42, 19);
             this.B3_2КолодкаУКК2_1.TabIndex = 19;
             this.B3_2КолодкаУКК2_1.UseVisualStyleBackColor = false;
-            this.B3_2КолодкаУКК2_1.Click += new System.EventHandler(this.B3_2КолодкаУКК2_1_Click);
+            this.B3_2КолодкаУКК2_1.Click += new System.EventHandler(this.B3_2КолодкаУКК_Click);
             // 
             // B3_2КолодкаУКК1_9
             // 
@@ -719,7 +719,7 @@
             this.B3_2КолодкаУКК1_9.Size = new System.Drawing.Size(42, 19);
             this.B3_2КолодкаУКК1_9.TabIndex = 18;
             this.B3_2КолодкаУКК1_9.UseVisualStyleBackColor = false;
-            this.B3_2КолодкаУКК1_9.Click += new System.EventHandler(this.B3_2КолодкаУКК1_9_Click);
+            this.B3_2КолодкаУКК1_9.Click += new System.EventHandler(this.B3_2КолодкаУКК_Click);
             // 
             // B3_2КолодкаУКК1_8
             // 
@@ -734,7 +734,7 @@
             this.B3_2КолодкаУКК1_8.Size = new System.Drawing.Size(42, 19);
             this.B3_2КолодкаУКК1_8.TabIndex = 17;
             this.B3_2КолодкаУКК1_8.UseVisualStyleBackColor = false;
-            this.B3_2КолодкаУКК1_8.Click += new System.EventHandler(this.B3_2КолодкаУКК1_8_Click);
+            this.B3_2КолодкаУКК1_8.Click += new System.EventHandler(this.B3_2КолодкаУКК_Click);
             // 
             // B3_2КолодкаУКК1_7
             // 
@@ -749,7 +749,7 @@
             this.B3_2КолодкаУКК1_7.Size = new System.Drawing.Size(42, 19);
             this.B3_2КолодкаУКК1_7.TabIndex = 16;
             this.B3_2КолодкаУКК1_7.UseVisualStyleBackColor = false;
-            this.B3_2КолодкаУКК1_7.Click += new System.EventHandler(this.B3_2КолодкаУКК1_7_Click);
+            this.B3_2КолодкаУКК1_7.Click += new System.EventHandler(this.B3_2КолодкаУКК_Click);
             // 
             // B3_2КолодкаУКК1_6
             // 
@@ -764,7 +764,7 @@
             this.B3_2КолодкаУКК1_6.Size = new System.Drawing.Size(42, 19);
             this.B3_2КолодкаУКК1_6.TabIndex = 15;
             this.B3_2КолодкаУКК1_6.UseVisualStyleBackColor = false;
-            this.B3_2КолодкаУКК1_6.Click += new System.EventHandler(this.B3_2КолодкаУКК1_6_Click);
+            this.B3_2КолодкаУКК1_6.Click += new System.EventHandler(this.B3_2КолодкаУКК_Click);
             // 
             // B3_2КолодкаУКК1_5
             // 
@@ -779,7 +779,7 @@
             this.B3_2КолодкаУКК1_5.Size = new System.Drawing.Size(42, 19);
             this.B3_2КолодкаУКК1_5.TabIndex = 14;
             this.B3_2КолодкаУКК1_5.UseVisualStyleBackColor = false;
-            this.B3_2КолодкаУКК1_5.Click += new System.EventHandler(this.B3_2КолодкаУКК1_5_Click);
+            this.B3_2КолодкаУКК1_5.Click += new System.EventHandler(this.B3_2КолодкаУКК_Click);
             // 
             // B3_2КолодкаУКК1_4
             // 
@@ -794,7 +794,7 @@
             this.B3_2КолодкаУКК1_4.Size = new System.Drawing.Size(42, 19);
             this.B3_2КолодкаУКК1_4.TabIndex = 13;
             this.B3_2КолодкаУКК1_4.UseVisualStyleBackColor = false;
-            this.B3_2КолодкаУКК1_4.Click += new System.EventHandler(this.B3_2КолодкаУКК1_4_Click);
+            this.B3_2КолодкаУКК1_4.Click += new System.EventHandler(this.B3_2КолодкаУКК_Click);
             // 
             // B3_2КолодкаУКК1_3
             // 
@@ -809,7 +809,7 @@
             this.B3_2КолодкаУКК1_3.Size = new System.Drawing.Size(42, 19);
             this.B3_2КолодкаУКК1_3.TabIndex = 12;
             this.B3_2КолодкаУКК1_3.UseVisualStyleBackColor = false;
-            this.B3_2КолодкаУКК1_3.Click += new System.EventHandler(this.B3_2КолодкаУКК1_3_Click);
+            this.B3_2КолодкаУКК1_3.Click += new System.EventHandler(this.B3_2КолодкаУКК_Click);
             // 
             // B3_2КолодкаУКК1_2
             // 
@@ -824,7 +824,7 @@
             this.B3_2КолодкаУКК1_2.Size = new System.Drawing.Size(42, 19);
             this.B3_2КолодкаУКК1_2.TabIndex = 11;
             this.B3_2КолодкаУКК1_2.UseVisualStyleBackColor = false;
-            this.B3_2КолодкаУКК1_2.Click += new System.EventHandler(this.B3_2КолодкаУКК1_2_Click);
+            this.B3_2КолодкаУКК1_2.Click += new System.EventHandler(this.B3_2КолодкаУКК_Click);
             // 
             // B3_2КолодкаУКК1_1
             // 
@@ -839,7 +839,7 @@
             this.B3_2КолодкаУКК1_1.Size = new System.Drawing.Size(42, 19);
             this.B3_2КолодкаУКК1_1.TabIndex = 10;
             this.B3_2КолодкаУКК1_1.UseVisualStyleBackColor = false;
-            this.B3_2КолодкаУКК1_1.Click += new System.EventHandler(this.B3_2КолодкаУКК1_1_Click);
+            this.B3_2КолодкаУКК1_1.Click += new System.EventHandler(this.B3_2КолодкаУКК_Click);
             // 
             // B3_2Form
             // 
@@ -851,7 +851,7 @@
             this.MaximizeBox = false;
             this.Name = "B3_2Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Б3-2";
+            this.Text = "Б3-1";
             this.B3_2Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.B3_2ЛампочкаТЛГпр3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.B3_2ЛампочкаТЛГпр2)).EndInit();

@@ -256,6 +256,14 @@ namespace R440O.Parameters
         private static int _Ц300М_1ПереключательВолна1 = 0;
         #endregion
 
+        #region Тумблеры
+        /// <summary>
+        /// Возможные состояния: Дистанц, Местное
+        /// </summary>
+        public static string Ц300М_1ТумблерУправление { get { return _Ц300М_1ТумблерУправление; } set { _Ц300М_1ТумблерУправление = value; } }
+        private static string _Ц300М_1ТумблерУправление = "Местное";
+
+
         /// <summary>
         /// Возможные состояния: ЧТ, ОФТ
         /// </summary>
@@ -303,6 +311,7 @@ namespace R440O.Parameters
         /// </summary>
         public static string Ц300М_1ТумблерПоискПределы { get { return _Ц300М_1ТумблерПоискПределы; } set { _Ц300М_1ТумблерПоискПределы = value; } }
         private static string _Ц300М_1ТумблерПоискПределы = "300";
+        #endregion
 
         #region Лампочки
         public static bool Ц300М_1ЛампочкаСигнал = false;

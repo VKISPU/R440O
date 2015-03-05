@@ -25,15 +25,15 @@ namespace R440O.R440OForms.P220_27G_3
 
         private void P220_27G_3ТумблерСеть_Click(object sender, System.EventArgs e)
         {
-            if (P220_27G_3Parameters.P220_27G_3ТумблерСеть == "сеть")
+            if (P220_27G_3Parameters.P220_27G_3ТумблерСеть)
             {
                 this.P220_27G_3ТумблерСеть.BackgroundImage = ControlElementImages.tumblerType6Down;
-                P220_27G_3Parameters.P220_27G_3ТумблерСеть = "откл";
+                P220_27G_3Parameters.P220_27G_3ТумблерСеть = false;
             }
             else
             {
                 this.P220_27G_3ТумблерСеть.BackgroundImage = ControlElementImages.tumblerType6Up;
-                P220_27G_3Parameters.P220_27G_3ТумблерСеть = "сеть";
+                P220_27G_3Parameters.P220_27G_3ТумблерСеть = true;
             }
         }
 
@@ -57,9 +57,9 @@ namespace R440O.R440OForms.P220_27G_3
                 ? ControlElementImages.tumblerType4Down
                 : ControlElementImages.tumblerType4Up;
 
-            this.P220_27G_3ТумблерСеть.BackgroundImage = P220_27G_3Parameters.P220_27G_3ТумблерСеть == "откл"
-                ? ControlElementImages.tumblerType6Down
-                : ControlElementImages.tumblerType6Up;
+            this.P220_27G_3ТумблерСеть.BackgroundImage = P220_27G_3Parameters.P220_27G_3ТумблерСеть
+                ? ControlElementImages.tumblerType6Up
+                : ControlElementImages.tumblerType6Down;
         }
     }
 }

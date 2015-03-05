@@ -95,7 +95,21 @@
             var angle = PU_K1_1Parameters.PU_K1_1ПереключательНапряжение * 28 - 180;
             PU_K1_1ПереключательНапряжение.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
-        } 
+        }
         #endregion
+
+        private void PU_K1_1ТумблерВентВкл_Click(object sender, System.EventArgs e)
+        {
+            if (PU_K1_1Parameters.PU_K1_1ТумблерВентВкл)
+            {
+                this.PU_K1_1ТумблерВентВкл.BackgroundImage = ControlElementImages.tumblerType4Down;
+                PU_K1_1Parameters.PU_K1_1ТумблерВентВкл = false;
+            }
+            else
+            {
+                this.PU_K1_1ТумблерВентВкл.BackgroundImage = ControlElementImages.tumblerType4Up;
+                PU_K1_1Parameters.PU_K1_1ТумблерВентВкл = true;
+            }
+        }
     }
 }

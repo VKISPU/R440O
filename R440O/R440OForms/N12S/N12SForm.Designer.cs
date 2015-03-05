@@ -336,11 +336,12 @@
             // N12SЛампочкаГотовность
             // 
             this.N12SЛампочкаГотовность.BackColor = System.Drawing.Color.Transparent;
+            this.N12SЛампочкаГотовность.BackgroundImage = global::R440O.ControlElementImages.lampType10OnGreen;
             this.N12SЛампочкаГотовность.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.N12SЛампочкаГотовность.InitialImage = null;
-            this.N12SЛампочкаГотовность.Location = new System.Drawing.Point(401, 352);
+            this.N12SЛампочкаГотовность.Location = new System.Drawing.Point(399, 350);
             this.N12SЛампочкаГотовность.Name = "N12SЛампочкаГотовность";
-            this.N12SЛампочкаГотовность.Size = new System.Drawing.Size(33, 33);
+            this.N12SЛампочкаГотовность.Size = new System.Drawing.Size(45, 45);
             this.N12SЛампочкаГотовность.TabIndex = 61;
             this.N12SЛампочкаГотовность.TabStop = false;
             // 

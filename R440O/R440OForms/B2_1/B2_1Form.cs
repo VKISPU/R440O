@@ -60,8 +60,8 @@ namespace R440O.R440OForms.B2_1
             foreach (Control item in B2_1Panel.Controls)
             {
                 //С помощью условия отсеем все контролы кроме тех, которые являются кнопками и содержат в имени один из номеров(1-2 столбик) 
-                if(item.Name.Contains("B2_1КнопкаБК" + numberOfComplect))
-                {   
+                if (item.Name.Contains("B2_1КнопкаБК" + numberOfComplect))
+                {
                     //Отжимаем кнопку если она нажата
                     if (item.Visible == false) item.Visible = true;
                     //Остановимся на контроле, который отвечает за кнопку которую мы нажали
@@ -79,10 +79,10 @@ namespace R440O.R440OForms.B2_1
                                 Property.SetValue(null, true);
                             }
                             else Property.SetValue(null, false);
-                       }
+                        }
                     }
                 }
-            }       
+            }
         }
         #endregion Кнопки
 
@@ -186,9 +186,9 @@ namespace R440O.R440OForms.B2_1
                         }
                     }
                 }
-            } 
+            }
 
-            if (B2_1Parameters.B2_1КолодкаТЛГпр_1 == true)
+            if (B2_1Parameters.B2_1КолодкаТЛГпр_1)
             {
                 this.B2_1КолодкаТЛГпр_1.BackgroundImage = ControlElementImages.jumperType1;
                 this.B2_1КолодкаТЛГпр_2.Visible = false;
@@ -202,7 +202,7 @@ namespace R440O.R440OForms.B2_1
             }
 
 
-            if (B2_1Parameters.B2_1КолодкаТКСпр2_1 == true)
+            if (B2_1Parameters.B2_1КолодкаТКСпр2_1)
             {
                 this.B2_1КолодкаТКСпр2_1.BackgroundImage = ControlElementImages.jumperType1;
                 this.B2_1КолодкаТКСпр2_2.Visible = false;

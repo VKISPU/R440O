@@ -5,7 +5,7 @@
     using ThirdParty;
 
     /// <summary>
-    /// Форма блока пульт управления К01-1
+    /// Форма блока пульт управления К01-2
     /// </summary>
     public partial class PU_K1_2Form : Form
     {
@@ -97,5 +97,19 @@
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
         }
         #endregion
+
+        private void PU_K1_2ТумблерВентВкл_Click(object sender, System.EventArgs e)
+        {
+            if (PU_K1_2Parameters.PU_K1_2ТумблерВентВкл)
+            {
+                this.PU_K1_2ТумблерВентВкл.BackgroundImage = ControlElementImages.tumblerType4Down;
+                PU_K1_2Parameters.PU_K1_2ТумблерВентВкл = false;
+            }
+            else
+            {
+                this.PU_K1_2ТумблерВентВкл.BackgroundImage = ControlElementImages.tumblerType4Up;
+                PU_K1_2Parameters.PU_K1_2ТумблерВентВкл = true;
+            }
+        }
     }
 }

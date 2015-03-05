@@ -25,14 +25,14 @@
         #endregion
 
         #region Колодки
-        public static string B1_2КолодкаТЛГпр1_1 = "false";
-        public static string B1_2КолодкаТЛГпр1_2 = "false";
+        public static bool B1_2КолодкаТЛГпр1_1 = false;
+        public static bool B1_2КолодкаТЛГпр1_2 = false;
 
-        public static string B1_2КолодкаТЛГпр2_1 = "false";
-        public static string B1_2КолодкаТЛГпр2_2 = "false";
+        public static bool B1_2КолодкаТЛГпр2_1 = false;
+        public static bool B1_2КолодкаТЛГпр2_2 = false;
 
-        public static string B1_2КолодкаТЛГпр3_1 = "false";
-        public static string B1_2КолодкаТЛГпр3_2 = "false";
+        public static bool B1_2КолодкаТЛГпр3_1 = false;
+        public static bool B1_2КолодкаТЛГпр3_2 = false;
         #endregion
 
         ////Тумблер
@@ -45,11 +45,11 @@
         /// <summary>
         /// Возможные состояния: true, false
         /// </summary>
-        public static string B1_2КнопкаСкоростьГР = "false";
+        public static bool B1_2КнопкаСкоростьГР = false;
 
         /// <summary>
         /// Возможные состояния: true, false
         /// </summary>
-        public static string B1_2КнопкаСкоростьАБ_1ТЛФ_К = "false";
+        public static bool B1_2КнопкаСкоростьАБ_1ТЛФ_К = false;
     }
 }

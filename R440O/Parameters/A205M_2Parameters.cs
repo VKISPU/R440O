@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-
-namespace R440O.Parameters
+﻿namespace R440O.Parameters
 {
     public class A205M_2Parameters
     {
