@@ -1,4 +1,6 @@
-﻿namespace R440O.Parameters
+﻿using System.Drawing;
+
+namespace R440O.Parameters
 {
     public class A205M_1Parameters
     {
@@ -15,17 +17,16 @@
         #endregion
         
         ////Лампочки
-        public static string A205M_1ЛампочкаНормРаб { get; set; }
-        public static string A205M_1ЛампочкаПерегрев { get; set; }
+        public static bool A205M_1ЛампочкаНормРаб;
+        public static bool A205M_1ЛампочкаПерегрев;
 
         ////Тумблеры
         /// <summary>
         /// Получает или задает положение тумблера КЭД
         /// </summary>
-        public static bool A205M_1ТумблерКЭД { get; set; }
+        public static bool A205M_1ТумблерКЭД = false;
 
-        ////Переключатели
-
+        //Переключатели
         #region Переключатели волны
         public static int A205M_1ПереключательВолнаX10000
         {
@@ -93,6 +94,7 @@
         } 
         #endregion
 
+        #region ПереключательКонтроль
         public static int A205M_1ПереключательКонтроль
         {
             get { return _а205M_1ПереключательКонтроль; }
@@ -117,7 +119,9 @@
             { "ЧТ-ВТ", "0" },
             { "ВБВ", "0" }
         };
+        #endregion
 
+        #region ПереключательВидРаботы
         public static int A205M_1ПереключательВидРаботы
         {
             get { return _а205M_1ПереключательВидРаботы; }
@@ -138,7 +142,9 @@
             "ОФТ2,4-5,2", 
             "ОФТ48"
         };
+        #endregion
 
+        #region ПереключательВходЧТ
         public static int A205M_1ПереключательВходЧТ
         {
             get { return _а205M_1ПереключательВходЧТ; }
@@ -151,5 +157,9 @@
                 }
             }
         }
+        #endregion
+
+        //Индикатор
+        private static int A205M_1ИндикаторКонтроль;
     }
 }

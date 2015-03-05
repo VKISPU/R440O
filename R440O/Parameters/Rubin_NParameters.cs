@@ -268,6 +268,39 @@ namespace R440O.Parameters
         private static string _Rubin_NТумблерБлок4963 = "4.8";
         #endregion
 
+        #region Лампочки
+        public static bool Rubin_NЛампочкаN3349Неиспр = false;
+        public static bool Rubin_NЛампочкаN3349МУ = false;
+        public static bool Rubin_NЛампочкаN3349ДУ = false;
+        public static bool Rubin_NЛампочкаN3349ПР2А = false;
+        public static bool Rubin_NЛампочкаN3349_5В = false;
+        public static bool Rubin_NЛампочкаN3349_27В = false;
+
+        public static bool Rubin_NЛампочкаN1422Осн1 = false;
+        public static bool Rubin_NЛампочкаN1422Осн2 = false;
+        public static bool Rubin_NЛампочкаN1422Осн3 = false;
+        public static bool Rubin_NЛампочкаN1422Резервный = false;
+        public static bool Rubin_NЛампочкаN1422РезервированиеВкл = false;
+        public static bool Rubin_NЛампочкаN1422РезервированиеОткл = false;
+        public static bool Rubin_NЛампочкаN1422Транзит = false;
+
+        public static bool Rubin_NЛампочкаN2215_1 = false;
+        public static bool Rubin_NЛампочкаN2215_2 = false;
+        public static bool Rubin_NЛампочкаN2215_3 = false;
+        public static bool Rubin_NЛампочкаN2215_II1 = false;
+        public static bool Rubin_NЛампочкаN2215_II2 = false;
+        public static bool Rubin_NЛампочкаN2215_II3 = false;
+        public static bool Rubin_NЛампочкаN2215_ТИ = false;
+        public static bool Rubin_NЛампочкаN2215_48кГц = false;
+        public static bool Rubin_NЛампочкаN2215_ЧтСи = false;
+
+        public static bool Rubin_NЛампочкаN5063СрывСинхр = false;
+         
+        public static bool Rubin_NЛампочкаN4923СрывСинхр = false;
+
+        public static bool Rubin_NЛампочкаN4963СрывСинхр = false;
+        #endregion
+
         public static bool Rubin_NКнопкаОткл = false;
         public static bool Rubin_NКнопкаВкл = false;
 

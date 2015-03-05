@@ -24,5 +24,11 @@
         public static bool N16КнопкаАнтенна;
         public static bool N16КнопкаЭквивалент;
         #endregion
+
+        #region Индикаторы
+        public static int N16ИндикаторКонтрольМощностиРнагр;
+        public static int N16ИндикаторКонтрольМощностиРвых;
+
+        #endregion
     }
 }

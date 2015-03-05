@@ -29,6 +29,43 @@
         private void InitializeComponent()
         {
             this.DAB_5Panel = new System.Windows.Forms.Panel();
+            this.DAB_5Лампочка1КомплектПрдДаб5ГТакт = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка1КомплектПрдДаб5ГТСнх = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка1КомплектПрдДаб5ГВкл = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектПрдДаб5ГТакт = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектПрдДаб5ГТСнх = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектПрдДаб5ГВкл = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектИмТакт = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектИмТСнх = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектИмВкл = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектПрмДаб5ГИмКк = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектПрмДаб5ГИмСс = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектПрмДаб5ГИмТлф = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектПрмДаб5ГТакт = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектПрмДаб5ГЦСнх = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектПрмДаб5ГТСнх = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектПрмДаб5ГВкл = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка1КомплектПрмДаб5ГИмКк = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка1КомплектПрмДаб5ГИмСс = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка1КомплектПрмДаб5ГИмТлф = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка1КомплектПрмДаб5ГТакт = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка1КомплектПрмДаб5ГЦСнх = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка1КомплектПрмДаб5ГТСнх = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка1КомплектПрмДаб5ГВкл = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхТч = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхКк = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхСс = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВхКк = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка1КомплектПрмДаб51ВхСс = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка1КомплектПрмДаб51БиВх = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка1КомплектПрмДаб51БиВых = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхТч = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхКк = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхСс = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка1КомплектПрдДаб51ВхКк = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка1КомплектПрдДаб51ВхСс = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка1КомплектПрдДаб51БиВх = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка1КомплектПрдДаб51БиВых = new System.Windows.Forms.PictureBox();
             this.DAB_5ТумблерПитание = new System.Windows.Forms.Button();
             this.DAB_5КнопкаВыборПрмПрд2 = new System.Windows.Forms.Button();
             this.DAB_5КнопкаВыборБП1 = new System.Windows.Forms.Button();
@@ -71,7 +108,58 @@
             this.DAB_5ЛампочкаРежимМестн = new System.Windows.Forms.PictureBox();
             this.DAB_5ЛампочкаПитание = new System.Windows.Forms.PictureBox();
             this.DAB_5ЛампочкаОбход = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхТч = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхКк = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхСс = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВхКк = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектПрмДаб51ВхСс = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектПрмДаб51БиВх = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектПрмДаб51БиВых = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхТч = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхКк = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхСс = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВхКк = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектПрдДаб51ВхСс = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектПрдДаб51БиВх = new System.Windows.Forms.PictureBox();
+            this.DAB_5Лампочка2КомплектПрдДаб51БиВых = new System.Windows.Forms.PictureBox();
             this.DAB_5Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрдДаб5ГТакт)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрдДаб5ГТСнх)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрдДаб5ГВкл)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрдДаб5ГТакт)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрдДаб5ГТСнх)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрдДаб5ГВкл)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектИмТакт)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектИмТСнх)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектИмВкл)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб5ГИмКк)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб5ГИмСс)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб5ГИмТлф)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб5ГТакт)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб5ГЦСнх)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб5ГТСнх)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб5ГВкл)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб5ГИмКк)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб5ГИмСс)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб5ГИмТлф)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб5ГТакт)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб5ГЦСнх)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб5ГТСнх)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб5ГВкл)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхТч)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхКк)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхСс)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб5_1ВхКк)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб51ВхСс)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб51БиВх)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб51БиВых)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхТч)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхКк)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхСс)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрдДаб51ВхКк)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрдДаб51ВхСс)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрдДаб51БиВх)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрдДаб51БиВых)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DAB_5ЛампочкаВыборПрмПрд2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DAB_5ЛампочкаРежимПрмПрд2К)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DAB_5ЛампочкаРежимПрм2К)).BeginInit();
@@ -95,12 +183,77 @@
             ((System.ComponentModel.ISupportInitialize)(this.DAB_5ЛампочкаРежимМестн)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DAB_5ЛампочкаПитание)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DAB_5ЛампочкаОбход)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхТч)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхКк)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхСс)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб5_1ВхКк)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб51ВхСс)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб51БиВх)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб51БиВых)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхТч)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхКк)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхСс)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрдДаб5_1ВхКк)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрдДаб51ВхСс)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрдДаб51БиВх)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрдДаб51БиВых)).BeginInit();
             this.SuspendLayout();
             // 
             // DAB_5Panel
             // 
             this.DAB_5Panel.BackgroundImage = global::R440O.BackgroundImages.DAB_5;
             this.DAB_5Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхТч);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхКк);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхСс);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектПрдДаб5_1ВхКк);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектПрдДаб51ВхСс);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектПрдДаб51БиВх);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектПрдДаб51БиВых);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхТч);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхКк);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхСс);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектПрмДаб5_1ВхКк);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектПрмДаб51ВхСс);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектПрмДаб51БиВх);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектПрмДаб51БиВых);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка1КомплектПрдДаб5ГТакт);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка1КомплектПрдДаб5ГТСнх);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка1КомплектПрдДаб5ГВкл);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектПрдДаб5ГТакт);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектПрдДаб5ГТСнх);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектПрдДаб5ГВкл);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектИмТакт);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектИмТСнх);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектИмВкл);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектПрмДаб5ГИмКк);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектПрмДаб5ГИмСс);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектПрмДаб5ГИмТлф);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектПрмДаб5ГТакт);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектПрмДаб5ГЦСнх);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектПрмДаб5ГТСнх);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка2КомплектПрмДаб5ГВкл);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка1КомплектПрмДаб5ГИмКк);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка1КомплектПрмДаб5ГИмСс);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка1КомплектПрмДаб5ГИмТлф);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка1КомплектПрмДаб5ГТакт);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка1КомплектПрмДаб5ГЦСнх);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка1КомплектПрмДаб5ГТСнх);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка1КомплектПрмДаб5ГВкл);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхТч);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхКк);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхСс);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка1КомплектПрмДаб5_1ВхКк);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка1КомплектПрмДаб51ВхСс);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка1КомплектПрмДаб51БиВх);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка1КомплектПрмДаб51БиВых);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхТч);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхКк);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхСс);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка1КомплектПрдДаб51ВхКк);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка1КомплектПрдДаб51ВхСс);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка1КомплектПрдДаб51БиВх);
+            this.DAB_5Panel.Controls.Add(this.DAB_5Лампочка1КомплектПрдДаб51БиВых);
             this.DAB_5Panel.Controls.Add(this.DAB_5ТумблерПитание);
             this.DAB_5Panel.Controls.Add(this.DAB_5КнопкаВыборПрмПрд2);
             this.DAB_5Panel.Controls.Add(this.DAB_5КнопкаВыборБП1);
@@ -147,6 +300,376 @@
             this.DAB_5Panel.Name = "DAB_5Panel";
             this.DAB_5Panel.Size = new System.Drawing.Size(1109, 303);
             this.DAB_5Panel.TabIndex = 0;
+            // 
+            // DAB_5Лампочка1КомплектПрдДаб5ГТакт
+            // 
+            this.DAB_5Лампочка1КомплектПрдДаб5ГТакт.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка1КомплектПрдДаб5ГТакт.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка1КомплектПрдДаб5ГТакт.Location = new System.Drawing.Point(160, 98);
+            this.DAB_5Лампочка1КомплектПрдДаб5ГТакт.Name = "DAB_5Лампочка1КомплектПрдДаб5ГТакт";
+            this.DAB_5Лампочка1КомплектПрдДаб5ГТакт.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка1КомплектПрдДаб5ГТакт.TabIndex = 69;
+            this.DAB_5Лампочка1КомплектПрдДаб5ГТакт.TabStop = false;
+            // 
+            // DAB_5Лампочка1КомплектПрдДаб5ГТСнх
+            // 
+            this.DAB_5Лампочка1КомплектПрдДаб5ГТСнх.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка1КомплектПрдДаб5ГТСнх.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка1КомплектПрдДаб5ГТСнх.Location = new System.Drawing.Point(160, 83);
+            this.DAB_5Лампочка1КомплектПрдДаб5ГТСнх.Name = "DAB_5Лампочка1КомплектПрдДаб5ГТСнх";
+            this.DAB_5Лампочка1КомплектПрдДаб5ГТСнх.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка1КомплектПрдДаб5ГТСнх.TabIndex = 70;
+            this.DAB_5Лампочка1КомплектПрдДаб5ГТСнх.TabStop = false;
+            // 
+            // DAB_5Лампочка1КомплектПрдДаб5ГВкл
+            // 
+            this.DAB_5Лампочка1КомплектПрдДаб5ГВкл.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка1КомплектПрдДаб5ГВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка1КомплектПрдДаб5ГВкл.Location = new System.Drawing.Point(160, 67);
+            this.DAB_5Лампочка1КомплектПрдДаб5ГВкл.Name = "DAB_5Лампочка1КомплектПрдДаб5ГВкл";
+            this.DAB_5Лампочка1КомплектПрдДаб5ГВкл.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка1КомплектПрдДаб5ГВкл.TabIndex = 71;
+            this.DAB_5Лампочка1КомплектПрдДаб5ГВкл.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектПрдДаб5ГТакт
+            // 
+            this.DAB_5Лампочка2КомплектПрдДаб5ГТакт.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектПрдДаб5ГТакт.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектПрдДаб5ГТакт.Location = new System.Drawing.Point(394, 100);
+            this.DAB_5Лампочка2КомплектПрдДаб5ГТакт.Name = "DAB_5Лампочка2КомплектПрдДаб5ГТакт";
+            this.DAB_5Лампочка2КомплектПрдДаб5ГТакт.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектПрдДаб5ГТакт.TabIndex = 67;
+            this.DAB_5Лампочка2КомплектПрдДаб5ГТакт.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектПрдДаб5ГТСнх
+            // 
+            this.DAB_5Лампочка2КомплектПрдДаб5ГТСнх.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектПрдДаб5ГТСнх.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектПрдДаб5ГТСнх.Location = new System.Drawing.Point(394, 84);
+            this.DAB_5Лампочка2КомплектПрдДаб5ГТСнх.Name = "DAB_5Лампочка2КомплектПрдДаб5ГТСнх";
+            this.DAB_5Лампочка2КомплектПрдДаб5ГТСнх.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектПрдДаб5ГТСнх.TabIndex = 68;
+            this.DAB_5Лампочка2КомплектПрдДаб5ГТСнх.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектПрдДаб5ГВкл
+            // 
+            this.DAB_5Лампочка2КомплектПрдДаб5ГВкл.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектПрдДаб5ГВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектПрдДаб5ГВкл.Location = new System.Drawing.Point(394, 68);
+            this.DAB_5Лампочка2КомплектПрдДаб5ГВкл.Name = "DAB_5Лампочка2КомплектПрдДаб5ГВкл";
+            this.DAB_5Лампочка2КомплектПрдДаб5ГВкл.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектПрдДаб5ГВкл.TabIndex = 62;
+            this.DAB_5Лампочка2КомплектПрдДаб5ГВкл.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектИмТакт
+            // 
+            this.DAB_5Лампочка2КомплектИмТакт.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектИмТакт.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектИмТакт.Location = new System.Drawing.Point(574, 101);
+            this.DAB_5Лампочка2КомплектИмТакт.Name = "DAB_5Лампочка2КомплектИмТакт";
+            this.DAB_5Лампочка2КомплектИмТакт.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектИмТакт.TabIndex = 64;
+            this.DAB_5Лампочка2КомплектИмТакт.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектИмТСнх
+            // 
+            this.DAB_5Лампочка2КомплектИмТСнх.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектИмТСнх.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектИмТСнх.Location = new System.Drawing.Point(574, 86);
+            this.DAB_5Лампочка2КомплектИмТСнх.Name = "DAB_5Лампочка2КомплектИмТСнх";
+            this.DAB_5Лампочка2КомплектИмТСнх.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектИмТСнх.TabIndex = 65;
+            this.DAB_5Лампочка2КомплектИмТСнх.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектИмВкл
+            // 
+            this.DAB_5Лампочка2КомплектИмВкл.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектИмВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектИмВкл.Location = new System.Drawing.Point(574, 70);
+            this.DAB_5Лампочка2КомплектИмВкл.Name = "DAB_5Лампочка2КомплектИмВкл";
+            this.DAB_5Лампочка2КомплектИмВкл.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектИмВкл.TabIndex = 66;
+            this.DAB_5Лампочка2КомплектИмВкл.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектПрмДаб5ГИмКк
+            // 
+            this.DAB_5Лампочка2КомплектПрмДаб5ГИмКк.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектПрмДаб5ГИмКк.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектПрмДаб5ГИмКк.Location = new System.Drawing.Point(516, 164);
+            this.DAB_5Лампочка2КомплектПрмДаб5ГИмКк.Name = "DAB_5Лампочка2КомплектПрмДаб5ГИмКк";
+            this.DAB_5Лампочка2КомплектПрмДаб5ГИмКк.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектПрмДаб5ГИмКк.TabIndex = 60;
+            this.DAB_5Лампочка2КомплектПрмДаб5ГИмКк.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектПрмДаб5ГИмСс
+            // 
+            this.DAB_5Лампочка2КомплектПрмДаб5ГИмСс.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектПрмДаб5ГИмСс.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектПрмДаб5ГИмСс.Location = new System.Drawing.Point(516, 148);
+            this.DAB_5Лампочка2КомплектПрмДаб5ГИмСс.Name = "DAB_5Лампочка2КомплектПрмДаб5ГИмСс";
+            this.DAB_5Лампочка2КомплектПрмДаб5ГИмСс.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектПрмДаб5ГИмСс.TabIndex = 61;
+            this.DAB_5Лампочка2КомплектПрмДаб5ГИмСс.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектПрмДаб5ГИмТлф
+            // 
+            this.DAB_5Лампочка2КомплектПрмДаб5ГИмТлф.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектПрмДаб5ГИмТлф.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектПрмДаб5ГИмТлф.Location = new System.Drawing.Point(516, 132);
+            this.DAB_5Лампочка2КомплектПрмДаб5ГИмТлф.Name = "DAB_5Лампочка2КомплектПрмДаб5ГИмТлф";
+            this.DAB_5Лампочка2КомплектПрмДаб5ГИмТлф.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектПрмДаб5ГИмТлф.TabIndex = 55;
+            this.DAB_5Лампочка2КомплектПрмДаб5ГИмТлф.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектПрмДаб5ГТакт
+            // 
+            this.DAB_5Лампочка2КомплектПрмДаб5ГТакт.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектПрмДаб5ГТакт.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектПрмДаб5ГТакт.Location = new System.Drawing.Point(516, 116);
+            this.DAB_5Лампочка2КомплектПрмДаб5ГТакт.Name = "DAB_5Лампочка2КомплектПрмДаб5ГТакт";
+            this.DAB_5Лампочка2КомплектПрмДаб5ГТакт.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектПрмДаб5ГТакт.TabIndex = 56;
+            this.DAB_5Лампочка2КомплектПрмДаб5ГТакт.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектПрмДаб5ГЦСнх
+            // 
+            this.DAB_5Лампочка2КомплектПрмДаб5ГЦСнх.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектПрмДаб5ГЦСнх.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектПрмДаб5ГЦСнх.Location = new System.Drawing.Point(516, 100);
+            this.DAB_5Лампочка2КомплектПрмДаб5ГЦСнх.Name = "DAB_5Лампочка2КомплектПрмДаб5ГЦСнх";
+            this.DAB_5Лампочка2КомплектПрмДаб5ГЦСнх.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектПрмДаб5ГЦСнх.TabIndex = 57;
+            this.DAB_5Лампочка2КомплектПрмДаб5ГЦСнх.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектПрмДаб5ГТСнх
+            // 
+            this.DAB_5Лампочка2КомплектПрмДаб5ГТСнх.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектПрмДаб5ГТСнх.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектПрмДаб5ГТСнх.Location = new System.Drawing.Point(516, 85);
+            this.DAB_5Лампочка2КомплектПрмДаб5ГТСнх.Name = "DAB_5Лампочка2КомплектПрмДаб5ГТСнх";
+            this.DAB_5Лампочка2КомплектПрмДаб5ГТСнх.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектПрмДаб5ГТСнх.TabIndex = 58;
+            this.DAB_5Лампочка2КомплектПрмДаб5ГТСнх.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектПрмДаб5ГВкл
+            // 
+            this.DAB_5Лампочка2КомплектПрмДаб5ГВкл.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектПрмДаб5ГВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектПрмДаб5ГВкл.Location = new System.Drawing.Point(516, 69);
+            this.DAB_5Лампочка2КомплектПрмДаб5ГВкл.Name = "DAB_5Лампочка2КомплектПрмДаб5ГВкл";
+            this.DAB_5Лампочка2КомплектПрмДаб5ГВкл.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектПрмДаб5ГВкл.TabIndex = 59;
+            this.DAB_5Лампочка2КомплектПрмДаб5ГВкл.TabStop = false;
+            // 
+            // DAB_5Лампочка1КомплектПрмДаб5ГИмКк
+            // 
+            this.DAB_5Лампочка1КомплектПрмДаб5ГИмКк.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка1КомплектПрмДаб5ГИмКк.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка1КомплектПрмДаб5ГИмКк.Location = new System.Drawing.Point(279, 160);
+            this.DAB_5Лампочка1КомплектПрмДаб5ГИмКк.Name = "DAB_5Лампочка1КомплектПрмДаб5ГИмКк";
+            this.DAB_5Лампочка1КомплектПрмДаб5ГИмКк.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка1КомплектПрмДаб5ГИмКк.TabIndex = 53;
+            this.DAB_5Лампочка1КомплектПрмДаб5ГИмКк.TabStop = false;
+            // 
+            // DAB_5Лампочка1КомплектПрмДаб5ГИмСс
+            // 
+            this.DAB_5Лампочка1КомплектПрмДаб5ГИмСс.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка1КомплектПрмДаб5ГИмСс.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка1КомплектПрмДаб5ГИмСс.Location = new System.Drawing.Point(279, 144);
+            this.DAB_5Лампочка1КомплектПрмДаб5ГИмСс.Name = "DAB_5Лампочка1КомплектПрмДаб5ГИмСс";
+            this.DAB_5Лампочка1КомплектПрмДаб5ГИмСс.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка1КомплектПрмДаб5ГИмСс.TabIndex = 54;
+            this.DAB_5Лампочка1КомплектПрмДаб5ГИмСс.TabStop = false;
+            // 
+            // DAB_5Лампочка1КомплектПрмДаб5ГИмТлф
+            // 
+            this.DAB_5Лампочка1КомплектПрмДаб5ГИмТлф.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка1КомплектПрмДаб5ГИмТлф.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка1КомплектПрмДаб5ГИмТлф.Location = new System.Drawing.Point(279, 128);
+            this.DAB_5Лампочка1КомплектПрмДаб5ГИмТлф.Name = "DAB_5Лампочка1КомплектПрмДаб5ГИмТлф";
+            this.DAB_5Лампочка1КомплектПрмДаб5ГИмТлф.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка1КомплектПрмДаб5ГИмТлф.TabIndex = 48;
+            this.DAB_5Лампочка1КомплектПрмДаб5ГИмТлф.TabStop = false;
+            // 
+            // DAB_5Лампочка1КомплектПрмДаб5ГТакт
+            // 
+            this.DAB_5Лампочка1КомплектПрмДаб5ГТакт.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка1КомплектПрмДаб5ГТакт.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка1КомплектПрмДаб5ГТакт.Location = new System.Drawing.Point(279, 112);
+            this.DAB_5Лампочка1КомплектПрмДаб5ГТакт.Name = "DAB_5Лампочка1КомплектПрмДаб5ГТакт";
+            this.DAB_5Лампочка1КомплектПрмДаб5ГТакт.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка1КомплектПрмДаб5ГТакт.TabIndex = 49;
+            this.DAB_5Лампочка1КомплектПрмДаб5ГТакт.TabStop = false;
+            // 
+            // DAB_5Лампочка1КомплектПрмДаб5ГЦСнх
+            // 
+            this.DAB_5Лампочка1КомплектПрмДаб5ГЦСнх.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка1КомплектПрмДаб5ГЦСнх.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка1КомплектПрмДаб5ГЦСнх.Location = new System.Drawing.Point(279, 96);
+            this.DAB_5Лампочка1КомплектПрмДаб5ГЦСнх.Name = "DAB_5Лампочка1КомплектПрмДаб5ГЦСнх";
+            this.DAB_5Лампочка1КомплектПрмДаб5ГЦСнх.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка1КомплектПрмДаб5ГЦСнх.TabIndex = 50;
+            this.DAB_5Лампочка1КомплектПрмДаб5ГЦСнх.TabStop = false;
+            // 
+            // DAB_5Лампочка1КомплектПрмДаб5ГТСнх
+            // 
+            this.DAB_5Лампочка1КомплектПрмДаб5ГТСнх.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка1КомплектПрмДаб5ГТСнх.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка1КомплектПрмДаб5ГТСнх.Location = new System.Drawing.Point(279, 81);
+            this.DAB_5Лампочка1КомплектПрмДаб5ГТСнх.Name = "DAB_5Лампочка1КомплектПрмДаб5ГТСнх";
+            this.DAB_5Лампочка1КомплектПрмДаб5ГТСнх.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка1КомплектПрмДаб5ГТСнх.TabIndex = 51;
+            this.DAB_5Лампочка1КомплектПрмДаб5ГТСнх.TabStop = false;
+            // 
+            // DAB_5Лампочка1КомплектПрмДаб5ГВкл
+            // 
+            this.DAB_5Лампочка1КомплектПрмДаб5ГВкл.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка1КомплектПрмДаб5ГВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка1КомплектПрмДаб5ГВкл.Location = new System.Drawing.Point(279, 65);
+            this.DAB_5Лампочка1КомплектПрмДаб5ГВкл.Name = "DAB_5Лампочка1КомплектПрмДаб5ГВкл";
+            this.DAB_5Лампочка1КомплектПрмДаб5ГВкл.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка1КомплектПрмДаб5ГВкл.TabIndex = 52;
+            this.DAB_5Лампочка1КомплектПрмДаб5ГВкл.TabStop = false;
+            // 
+            // DAB_5Лампочка1КомплектПрмДаб5_1ВыхТч
+            // 
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхТч.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхТч.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхТч.Location = new System.Drawing.Point(221, 161);
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхТч.Name = "DAB_5Лампочка1КомплектПрмДаб5_1ВыхТч";
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхТч.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхТч.TabIndex = 46;
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхТч.TabStop = false;
+            // 
+            // DAB_5Лампочка1КомплектПрмДаб5_1ВыхКк
+            // 
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхКк.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхКк.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхКк.Location = new System.Drawing.Point(221, 145);
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхКк.Name = "DAB_5Лампочка1КомплектПрмДаб5_1ВыхКк";
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхКк.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхКк.TabIndex = 47;
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхКк.TabStop = false;
+            // 
+            // DAB_5Лампочка1КомплектПрмДаб5_1ВыхСс
+            // 
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхСс.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхСс.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхСс.Location = new System.Drawing.Point(221, 129);
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхСс.Name = "DAB_5Лампочка1КомплектПрмДаб5_1ВыхСс";
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхСс.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхСс.TabIndex = 41;
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхСс.TabStop = false;
+            // 
+            // DAB_5Лампочка1КомплектПрмДаб5_1ВхКк
+            // 
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВхКк.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВхКк.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВхКк.Location = new System.Drawing.Point(221, 113);
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВхКк.Name = "DAB_5Лампочка1КомплектПрмДаб5_1ВхКк";
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВхКк.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВхКк.TabIndex = 42;
+            this.DAB_5Лампочка1КомплектПрмДаб5_1ВхКк.TabStop = false;
+            // 
+            // DAB_5Лампочка1КомплектПрмДаб51ВхСс
+            // 
+            this.DAB_5Лампочка1КомплектПрмДаб51ВхСс.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка1КомплектПрмДаб51ВхСс.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка1КомплектПрмДаб51ВхСс.Location = new System.Drawing.Point(221, 97);
+            this.DAB_5Лампочка1КомплектПрмДаб51ВхСс.Name = "DAB_5Лампочка1КомплектПрмДаб51ВхСс";
+            this.DAB_5Лампочка1КомплектПрмДаб51ВхСс.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка1КомплектПрмДаб51ВхСс.TabIndex = 43;
+            this.DAB_5Лампочка1КомплектПрмДаб51ВхСс.TabStop = false;
+            // 
+            // DAB_5Лампочка1КомплектПрмДаб51БиВх
+            // 
+            this.DAB_5Лампочка1КомплектПрмДаб51БиВх.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка1КомплектПрмДаб51БиВх.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка1КомплектПрмДаб51БиВх.Location = new System.Drawing.Point(221, 82);
+            this.DAB_5Лампочка1КомплектПрмДаб51БиВх.Name = "DAB_5Лампочка1КомплектПрмДаб51БиВх";
+            this.DAB_5Лампочка1КомплектПрмДаб51БиВх.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка1КомплектПрмДаб51БиВх.TabIndex = 44;
+            this.DAB_5Лампочка1КомплектПрмДаб51БиВх.TabStop = false;
+            // 
+            // DAB_5Лампочка1КомплектПрмДаб51БиВых
+            // 
+            this.DAB_5Лампочка1КомплектПрмДаб51БиВых.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка1КомплектПрмДаб51БиВых.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка1КомплектПрмДаб51БиВых.Location = new System.Drawing.Point(221, 66);
+            this.DAB_5Лампочка1КомплектПрмДаб51БиВых.Name = "DAB_5Лампочка1КомплектПрмДаб51БиВых";
+            this.DAB_5Лампочка1КомплектПрмДаб51БиВых.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка1КомплектПрмДаб51БиВых.TabIndex = 45;
+            this.DAB_5Лампочка1КомплектПрмДаб51БиВых.TabStop = false;
+            // 
+            // DAB_5Лампочка1КомплектПрдДаб5_1ВыхТч
+            // 
+            this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхТч.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхТч.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхТч.Location = new System.Drawing.Point(101, 161);
+            this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхТч.Name = "DAB_5Лампочка1КомплектПрдДаб5_1ВыхТч";
+            this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхТч.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхТч.TabIndex = 39;
+            this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхТч.TabStop = false;
+            // 
+            // DAB_5Лампочка1КомплектПрдДаб5_1ВыхКк
+            // 
+            this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхКк.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхКк.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхКк.Location = new System.Drawing.Point(101, 145);
+            this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхКк.Name = "DAB_5Лампочка1КомплектПрдДаб5_1ВыхКк";
+            this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхКк.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхКк.TabIndex = 40;
+            this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхКк.TabStop = false;
+            // 
+            // DAB_5Лампочка1КомплектПрдДаб5_1ВыхСс
+            // 
+            this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхСс.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхСс.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхСс.Location = new System.Drawing.Point(101, 129);
+            this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхСс.Name = "DAB_5Лампочка1КомплектПрдДаб5_1ВыхСс";
+            this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхСс.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхСс.TabIndex = 34;
+            this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхСс.TabStop = false;
+            // 
+            // DAB_5Лампочка1КомплектПрдДаб51ВхКк
+            // 
+            this.DAB_5Лампочка1КомплектПрдДаб51ВхКк.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка1КомплектПрдДаб51ВхКк.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка1КомплектПрдДаб51ВхКк.Location = new System.Drawing.Point(101, 113);
+            this.DAB_5Лампочка1КомплектПрдДаб51ВхКк.Name = "DAB_5Лампочка1КомплектПрдДаб51ВхКк";
+            this.DAB_5Лампочка1КомплектПрдДаб51ВхКк.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка1КомплектПрдДаб51ВхКк.TabIndex = 35;
+            this.DAB_5Лампочка1КомплектПрдДаб51ВхКк.TabStop = false;
+            // 
+            // DAB_5Лампочка1КомплектПрдДаб51ВхСс
+            // 
+            this.DAB_5Лампочка1КомплектПрдДаб51ВхСс.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка1КомплектПрдДаб51ВхСс.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка1КомплектПрдДаб51ВхСс.Location = new System.Drawing.Point(101, 97);
+            this.DAB_5Лампочка1КомплектПрдДаб51ВхСс.Name = "DAB_5Лампочка1КомплектПрдДаб51ВхСс";
+            this.DAB_5Лампочка1КомплектПрдДаб51ВхСс.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка1КомплектПрдДаб51ВхСс.TabIndex = 36;
+            this.DAB_5Лампочка1КомплектПрдДаб51ВхСс.TabStop = false;
+            // 
+            // DAB_5Лампочка1КомплектПрдДаб51БиВх
+            // 
+            this.DAB_5Лампочка1КомплектПрдДаб51БиВх.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка1КомплектПрдДаб51БиВх.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка1КомплектПрдДаб51БиВх.Location = new System.Drawing.Point(101, 82);
+            this.DAB_5Лампочка1КомплектПрдДаб51БиВх.Name = "DAB_5Лампочка1КомплектПрдДаб51БиВх";
+            this.DAB_5Лампочка1КомплектПрдДаб51БиВх.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка1КомплектПрдДаб51БиВх.TabIndex = 37;
+            this.DAB_5Лампочка1КомплектПрдДаб51БиВх.TabStop = false;
+            // 
+            // DAB_5Лампочка1КомплектПрдДаб51БиВых
+            // 
+            this.DAB_5Лампочка1КомплектПрдДаб51БиВых.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка1КомплектПрдДаб51БиВых.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка1КомплектПрдДаб51БиВых.Location = new System.Drawing.Point(101, 66);
+            this.DAB_5Лампочка1КомплектПрдДаб51БиВых.Name = "DAB_5Лампочка1КомплектПрдДаб51БиВых";
+            this.DAB_5Лампочка1КомплектПрдДаб51БиВых.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка1КомплектПрдДаб51БиВых.TabIndex = 38;
+            this.DAB_5Лампочка1КомплектПрдДаб51БиВых.TabStop = false;
             // 
             // DAB_5ТумблерПитание
             // 
@@ -682,6 +1205,146 @@
             this.DAB_5ЛампочкаОбход.TabIndex = 32;
             this.DAB_5ЛампочкаОбход.TabStop = false;
             // 
+            // DAB_5Лампочка2КомплектПрмДаб5_1ВыхТч
+            // 
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхТч.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхТч.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхТч.Location = new System.Drawing.Point(459, 158);
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхТч.Name = "DAB_5Лампочка2КомплектПрмДаб5_1ВыхТч";
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхТч.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхТч.TabIndex = 77;
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхТч.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектПрмДаб5_1ВыхКк
+            // 
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхКк.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхКк.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхКк.Location = new System.Drawing.Point(459, 143);
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхКк.Name = "DAB_5Лампочка2КомплектПрмДаб5_1ВыхКк";
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхКк.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхКк.TabIndex = 78;
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхКк.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектПрмДаб5_1ВыхСс
+            // 
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхСс.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхСс.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхСс.Location = new System.Drawing.Point(459, 128);
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхСс.Name = "DAB_5Лампочка2КомплектПрмДаб5_1ВыхСс";
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхСс.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхСс.TabIndex = 72;
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхСс.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектПрмДаб5_1ВхКк
+            // 
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВхКк.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВхКк.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВхКк.Location = new System.Drawing.Point(459, 112);
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВхКк.Name = "DAB_5Лампочка2КомплектПрмДаб5_1ВхКк";
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВхКк.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВхКк.TabIndex = 73;
+            this.DAB_5Лампочка2КомплектПрмДаб5_1ВхКк.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектПрмДаб51ВхСс
+            // 
+            this.DAB_5Лампочка2КомплектПрмДаб51ВхСс.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектПрмДаб51ВхСс.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектПрмДаб51ВхСс.Location = new System.Drawing.Point(459, 97);
+            this.DAB_5Лампочка2КомплектПрмДаб51ВхСс.Name = "DAB_5Лампочка2КомплектПрмДаб51ВхСс";
+            this.DAB_5Лампочка2КомплектПрмДаб51ВхСс.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектПрмДаб51ВхСс.TabIndex = 74;
+            this.DAB_5Лампочка2КомплектПрмДаб51ВхСс.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектПрмДаб51БиВх
+            // 
+            this.DAB_5Лампочка2КомплектПрмДаб51БиВх.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектПрмДаб51БиВх.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектПрмДаб51БиВх.Location = new System.Drawing.Point(459, 83);
+            this.DAB_5Лампочка2КомплектПрмДаб51БиВх.Name = "DAB_5Лампочка2КомплектПрмДаб51БиВх";
+            this.DAB_5Лампочка2КомплектПрмДаб51БиВх.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектПрмДаб51БиВх.TabIndex = 75;
+            this.DAB_5Лампочка2КомплектПрмДаб51БиВх.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектПрмДаб51БиВых
+            // 
+            this.DAB_5Лампочка2КомплектПрмДаб51БиВых.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектПрмДаб51БиВых.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектПрмДаб51БиВых.Location = new System.Drawing.Point(459, 68);
+            this.DAB_5Лампочка2КомплектПрмДаб51БиВых.Name = "DAB_5Лампочка2КомплектПрмДаб51БиВых";
+            this.DAB_5Лампочка2КомплектПрмДаб51БиВых.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектПрмДаб51БиВых.TabIndex = 76;
+            this.DAB_5Лампочка2КомплектПрмДаб51БиВых.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектПрдДаб5_1ВыхТч
+            // 
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхТч.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхТч.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхТч.Location = new System.Drawing.Point(341, 157);
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхТч.Name = "DAB_5Лампочка2КомплектПрдДаб5_1ВыхТч";
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхТч.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхТч.TabIndex = 84;
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхТч.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектПрдДаб5_1ВыхКк
+            // 
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхКк.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхКк.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхКк.Location = new System.Drawing.Point(341, 142);
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхКк.Name = "DAB_5Лампочка2КомплектПрдДаб5_1ВыхКк";
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхКк.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхКк.TabIndex = 85;
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхКк.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектПрдДаб5_1ВыхСс
+            // 
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхСс.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхСс.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхСс.Location = new System.Drawing.Point(341, 127);
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхСс.Name = "DAB_5Лампочка2КомплектПрдДаб5_1ВыхСс";
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхСс.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхСс.TabIndex = 79;
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхСс.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектПрдДаб5_1ВхКк
+            // 
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВхКк.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВхКк.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВхКк.Location = new System.Drawing.Point(341, 111);
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВхКк.Name = "DAB_5Лампочка2КомплектПрдДаб5_1ВхКк";
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВхКк.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВхКк.TabIndex = 80;
+            this.DAB_5Лампочка2КомплектПрдДаб5_1ВхКк.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектПрдДаб51ВхСс
+            // 
+            this.DAB_5Лампочка2КомплектПрдДаб51ВхСс.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектПрдДаб51ВхСс.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектПрдДаб51ВхСс.Location = new System.Drawing.Point(341, 96);
+            this.DAB_5Лампочка2КомплектПрдДаб51ВхСс.Name = "DAB_5Лампочка2КомплектПрдДаб51ВхСс";
+            this.DAB_5Лампочка2КомплектПрдДаб51ВхСс.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектПрдДаб51ВхСс.TabIndex = 81;
+            this.DAB_5Лампочка2КомплектПрдДаб51ВхСс.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектПрдДаб51БиВх
+            // 
+            this.DAB_5Лампочка2КомплектПрдДаб51БиВх.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектПрдДаб51БиВх.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектПрдДаб51БиВх.Location = new System.Drawing.Point(341, 82);
+            this.DAB_5Лампочка2КомплектПрдДаб51БиВх.Name = "DAB_5Лампочка2КомплектПрдДаб51БиВх";
+            this.DAB_5Лампочка2КомплектПрдДаб51БиВх.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектПрдДаб51БиВх.TabIndex = 82;
+            this.DAB_5Лампочка2КомплектПрдДаб51БиВх.TabStop = false;
+            // 
+            // DAB_5Лампочка2КомплектПрдДаб51БиВых
+            // 
+            this.DAB_5Лампочка2КомплектПрдДаб51БиВых.BackColor = System.Drawing.Color.Transparent;
+            this.DAB_5Лампочка2КомплектПрдДаб51БиВых.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DAB_5Лампочка2КомплектПрдДаб51БиВых.Location = new System.Drawing.Point(341, 67);
+            this.DAB_5Лампочка2КомплектПрдДаб51БиВых.Name = "DAB_5Лампочка2КомплектПрдДаб51БиВых";
+            this.DAB_5Лампочка2КомплектПрдДаб51БиВых.Size = new System.Drawing.Size(15, 16);
+            this.DAB_5Лампочка2КомплектПрдДаб51БиВых.TabIndex = 83;
+            this.DAB_5Лампочка2КомплектПрдДаб51БиВых.TabStop = false;
+            // 
             // DAB_5Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -694,6 +1357,43 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ДАБ-5";
             this.DAB_5Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрдДаб5ГТакт)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрдДаб5ГТСнх)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрдДаб5ГВкл)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрдДаб5ГТакт)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрдДаб5ГТСнх)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрдДаб5ГВкл)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектИмТакт)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектИмТСнх)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектИмВкл)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб5ГИмКк)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб5ГИмСс)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб5ГИмТлф)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб5ГТакт)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб5ГЦСнх)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб5ГТСнх)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб5ГВкл)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб5ГИмКк)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб5ГИмСс)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб5ГИмТлф)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб5ГТакт)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб5ГЦСнх)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб5ГТСнх)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб5ГВкл)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхТч)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхКк)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб5_1ВыхСс)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб5_1ВхКк)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб51ВхСс)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб51БиВх)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрмДаб51БиВых)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхТч)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхКк)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрдДаб5_1ВыхСс)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрдДаб51ВхКк)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрдДаб51ВхСс)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрдДаб51БиВх)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка1КомплектПрдДаб51БиВых)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DAB_5ЛампочкаВыборПрмПрд2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DAB_5ЛампочкаРежимПрмПрд2К)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DAB_5ЛампочкаРежимПрм2К)).EndInit();
@@ -717,6 +1417,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.DAB_5ЛампочкаРежимМестн)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DAB_5ЛампочкаПитание)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DAB_5ЛампочкаОбход)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхТч)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхКк)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб5_1ВыхСс)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб5_1ВхКк)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб51ВхСс)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб51БиВх)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрмДаб51БиВых)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхТч)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхКк)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрдДаб5_1ВыхСс)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрдДаб5_1ВхКк)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрдДаб51ВхСс)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрдДаб51БиВх)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAB_5Лампочка2КомплектПрдДаб51БиВых)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -766,5 +1480,56 @@
         private System.Windows.Forms.Button DAB_5КнопкаРежимВыкл1К;
         private System.Windows.Forms.Button DAB_5ТумблерПитание;
         private System.Windows.Forms.PictureBox DAB_5ЛампочкаОбход;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка1КомплектПрдДаб5ГТакт;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка1КомплектПрдДаб5ГТСнх;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка1КомплектПрдДаб5ГВкл;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектПрдДаб5ГТакт;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектПрдДаб5ГТСнх;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектПрдДаб5ГВкл;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектИмТакт;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектИмТСнх;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектИмВкл;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектПрмДаб5ГИмКк;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектПрмДаб5ГИмСс;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектПрмДаб5ГИмТлф;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектПрмДаб5ГТакт;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектПрмДаб5ГЦСнх;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектПрмДаб5ГТСнх;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектПрмДаб5ГВкл;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка1КомплектПрмДаб5ГИмКк;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка1КомплектПрмДаб5ГИмСс;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка1КомплектПрмДаб5ГИмТлф;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка1КомплектПрмДаб5ГТакт;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка1КомплектПрмДаб5ГЦСнх;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка1КомплектПрмДаб5ГТСнх;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка1КомплектПрмДаб5ГВкл;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка1КомплектПрмДаб5_1ВыхТч;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка1КомплектПрмДаб5_1ВыхКк;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка1КомплектПрмДаб5_1ВыхСс;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка1КомплектПрмДаб5_1ВхКк;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка1КомплектПрмДаб51ВхСс;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка1КомплектПрмДаб51БиВх;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка1КомплектПрмДаб51БиВых;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка1КомплектПрдДаб5_1ВыхТч;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка1КомплектПрдДаб5_1ВыхКк;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка1КомплектПрдДаб5_1ВыхСс;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка1КомплектПрдДаб51ВхКк;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка1КомплектПрдДаб51ВхСс;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка1КомплектПрдДаб51БиВх;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка1КомплектПрдДаб51БиВых;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектПрдДаб5_1ВыхТч;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектПрдДаб5_1ВыхКк;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектПрдДаб5_1ВыхСс;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектПрдДаб5_1ВхКк;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектПрдДаб51ВхСс;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектПрдДаб51БиВх;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектПрдДаб51БиВых;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектПрмДаб5_1ВыхТч;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектПрмДаб5_1ВыхКк;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектПрмДаб5_1ВыхСс;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектПрмДаб5_1ВхКк;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектПрмДаб51ВхСс;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектПрмДаб51БиВх;
+        private System.Windows.Forms.PictureBox DAB_5Лампочка2КомплектПрмДаб51БиВых;
     }
 }

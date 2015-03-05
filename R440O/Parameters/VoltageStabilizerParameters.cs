@@ -79,5 +79,7 @@
         /// Возможные состояния: 220, 380, 0
         /// </summary>
         public static string VoltageStabilizerКабельВход = "0";
+
+        public static int VoltageStabilizerИндикаторНапряжение;
     }
 }

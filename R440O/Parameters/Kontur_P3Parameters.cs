@@ -3,42 +3,43 @@
     public class Kontur_P3Parameters
     {
         //Лампочки
-        public static string Kontur_P3ЛампочкаКонтрольПодписи { get; set; }
-        public static string Kontur_P3ЛампочкаКП1Канал10 { get; set; }
-        public static string Kontur_P3ЛампочкаКП1Канал11 { get; set; }
-        public static string Kontur_P3ЛампочкаКП2Прием { get; set; }
-        public static string Kontur_P3ЛампочкаКП3Канал10 { get; set; }
-        public static string Kontur_P3ЛампочкаКП3Канал11 { get; set; }
-        public static string Kontur_P3ЛампочкаКП3Канал12 { get; set; }
+        public static bool Kontur_P3ЛампочкаКонтрольПодписи = false;
+        public static bool Kontur_P3ЛампочкаКП1Канал10 = false;
+        public static bool Kontur_P3ЛампочкаКП1Канал11 = false;
+        public static bool Kontur_P3ЛампочкаКП2Прием = false;
+        public static bool Kontur_P3ЛампочкаКП3Сбой = false;
+        public static bool Kontur_P3ЛампочкаКП3Канал10 = false;
+        public static bool Kontur_P3ЛампочкаКП3Канал11 = false;
+        public static bool Kontur_P3ЛампочкаКП3Канал12 = false;
 
-        public static string Kontur_P3ЛампочкаКП4Канал1 { get; set; }
-        public static string Kontur_P3ЛампочкаКП4Канал2 { get; set; }
-        public static string Kontur_P3ЛампочкаКП4Канал3 { get; set; }
-        public static string Kontur_P3ЛампочкаКП4Канал4 { get; set; }
-        public static string Kontur_P3ЛампочкаКП4Канал5 { get; set; }
-        public static string Kontur_P3ЛампочкаКП4Канал6 { get; set; }
-        public static string Kontur_P3ЛампочкаКП4Канал7 { get; set; }
-        public static string Kontur_P3ЛампочкаКП4Канал8 { get; set; }
-        public static string Kontur_P3ЛампочкаКП4Канал9 { get; set; }
+        public static bool Kontur_P3ЛампочкаКП4Канал1 = false;
+        public static bool Kontur_P3ЛампочкаКП4Канал2 = false;
+        public static bool Kontur_P3ЛампочкаКП4Канал3 = false;
+        public static bool Kontur_P3ЛампочкаКП4Канал4 = false;
+        public static bool Kontur_P3ЛампочкаКП4Канал5 = false;
+        public static bool Kontur_P3ЛампочкаКП4Канал6 = false;
+        public static bool Kontur_P3ЛампочкаКП4Канал7 = false;
+        public static bool Kontur_P3ЛампочкаКП4Канал8 = false;
+        public static bool Kontur_P3ЛампочкаКП4Канал9 = false;
 
-        public static string Kontur_P3ЛампочкаКП5Прием { get; set; }
+        public static bool Kontur_P3ЛампочкаКП5Прием = false;
 
-        public static string Kontur_P3ЛампочкаНеиспр { get; set; }
-        public static string Kontur_P3ЛампочкаКонтроль { get; set; }
-        public static string Kontur_P3ЛампочкаСбойПодписи { get; set; }
+        public static bool Kontur_P3ЛампочкаНеиспр = false;
+        public static bool Kontur_P3ЛампочкаКонтроль = false;
+        public static bool Kontur_P3ЛампочкаСбойПодписи = false;
 
-        public static string Kontur_P3ЛампочкаПередача { get; set; }
+        public static bool Kontur_P3ЛампочкаПередача = false;
 
-        public static string Kontur_P3ЛампочкаОтбой { get; set; }
-        public static string Kontur_P3ЛампочкаИнформПринята { get; set; }
+        public static bool Kontur_P3ЛампочкаОтбой = false;
+        public static bool Kontur_P3ЛампочкаИнформПринята = false;
 
-        public static string Kontur_P3ЛампочкаКП6Передача { get; set; }
-        public static string Kontur_P3ЛампочкаКП6Сбой { get; set; }
-        public static string Kontur_P3ЛампочкаКП6Режим3 { get; set; }
+        public static bool Kontur_P3ЛампочкаКП6Передача = false;
+        public static bool Kontur_P3ЛампочкаКП6Сбой = false;
+        public static bool Kontur_P3ЛампочкаКП6Режим3 = false;
 
-        public static string Kontur_P3ЛампочкаПР1_ЗА { get; set; }
-        public static string Kontur_P3ЛампочкаПР2_ЗА { get; set; }
-        public static string Kontur_P3ЛампочкаСеть { get; set; }
+        public static bool Kontur_P3ЛампочкаПР1_ЗА = false;
+        public static bool Kontur_P3ЛампочкаПР2_ЗА = false;
+        public static bool Kontur_P3ЛампочкаСеть = false;
 
         //Тумблеры
 

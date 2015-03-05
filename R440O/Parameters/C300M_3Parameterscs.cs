@@ -304,5 +304,10 @@ namespace R440O.Parameters
         public static string Ц300М_3ТумблерПоискПределы { get { return _Ц300М_3ТумблерПоискПределы; } set { _Ц300М_3ТумблерПоискПределы = value; } }
         private static string _Ц300М_3ТумблерПоискПределы = "300";
 
+        #region Лампочки
+        public static bool Ц300М_1ЛампочкаСигнал = false;
+        public static bool Ц300М_1ЛампочкаПитание = false;
+        public static bool Ц300М_1ЛампочкаПоиск = false;
+        #endregion
     }
 }

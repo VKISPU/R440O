@@ -89,6 +89,8 @@
     <Compile Include="Parameters\K02M_01Parameters.cs" />
     <Compile Include="Parameters\Kontur_P3Parameters.cs" />
     <Compile Include="Parameters\N12SParameters.cs" />
+    <Compile Include="Parameters\N13_1Parameters.cs" />
+    <Compile Include="Parameters\N13_2Parameters.cs" />
     <Compile Include="Parameters\N15InsideParameters.cs" />
     <Compile Include="Parameters\N16Parameters.cs" />
     <Compile Include="Parameters\PU_K1_2Parameters.cs" />

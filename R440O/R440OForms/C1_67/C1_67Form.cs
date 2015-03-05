@@ -53,22 +53,57 @@ namespace R440O.R440OForms.C1_67
             C1_67_N19ПереключательВыборПриемника.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
-            this.С1_67ПереключательУсилительУ1.BackgroundImage = C1_67Parameters.C1_67ПереключательУсилительУ1 == false
+            this.С1_67ПереключательУсилительУ1.BackgroundImage = C1_67Parameters.C1_67ПереключательУсилительУ != 1
                 ? null
                 : ControlElementImages.toggleС1_67;
 
-            this.С1_67ПереключательУсилительУ2.BackgroundImage = C1_67Parameters.C1_67ПереключательУсилительУ2 == false
+            this.С1_67ПереключательУсилительУ2.BackgroundImage = C1_67Parameters.C1_67ПереключательУсилительУ != 2
                 ? null
                 : ControlElementImages.toggleС1_67;
 
-            this.С1_67ПереключательУсилительУ3.BackgroundImage = C1_67Parameters.C1_67ПереключательУсилительУ3 == false
+            this.С1_67ПереключательУсилительУ3.BackgroundImage = C1_67Parameters.C1_67ПереключательУсилительУ != 3
                 ? null
                 : ControlElementImages.toggleС1_67;
 
+
+
+            this.C1_67ПереключательСинхронизация1_1.BackgroundImage = C1_67Parameters.C1_67ПереключательСинхронизация1 != 1
+                ? null
+                : ControlElementImages.toggleС1_67;
+
+            this.C1_67ПереключательСинхронизация1_2.BackgroundImage = C1_67Parameters.C1_67ПереключательСинхронизация1 != 2
+                ? null
+                : ControlElementImages.toggleС1_67;
+
+            this.C1_67ПереключательСинхронизация1_3.BackgroundImage = C1_67Parameters.C1_67ПереключательСинхронизация1 != 3
+                ? null
+                : ControlElementImages.toggleС1_67;
+
+            this.C1_67ПереключательСинхронизация1_4.BackgroundImage = C1_67Parameters.C1_67ПереключательСинхронизация1 != 4
+                ? null
+                : ControlElementImages.toggleС1_67;
+
+
+
+            this.C1_67ПереключательСинхронизация2_1.BackgroundImage = C1_67Parameters.C1_67ПереключательСинхронизация2 != 1
+                ? null
+                : ControlElementImages.toggleС1_67;
+
+            this.C1_67ПереключательСинхронизация2_2.BackgroundImage = C1_67Parameters.C1_67ПереключательСинхронизация2 != 2
+                ? null
+                : ControlElementImages.toggleС1_67;
+
+            this.C1_67ПереключательСинхронизация2_3.BackgroundImage = C1_67Parameters.C1_67ПереключательСинхронизация2 != 3
+                ? null
+                : ControlElementImages.toggleС1_67;
+
+            this.C1_67ПереключательСинхронизация2_4.BackgroundImage = C1_67Parameters.C1_67ПереключательСинхронизация2 != 4
+                ? null
+                : ControlElementImages.toggleС1_67;
 
         }
 
-
+        #region Тумблеры
         private void C1_67_N19ТумблерВклВыкл_Click(object sender, System.EventArgs e)
         {
             if (C1_67Parameters.C1_67_N19ТумблерВклВыкл == true)
@@ -138,7 +173,7 @@ namespace R440O.R440OForms.C1_67
                 C1_67Parameters.C1_67Тумблер2kHz = true;
             }
         }
-
+        #endregion
 
         private void InitializeTumblersPosition()
         {
@@ -163,7 +198,7 @@ namespace R440O.R440OForms.C1_67
                 : ControlElementImages.tumblerType4Right;
         }
 
-        #region переключатели
+        #region Переключатели
         private void C1_67_N19ПереключательВыборПриемника_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -202,7 +237,6 @@ namespace R440O.R440OForms.C1_67
             C1_67ПереключательУсиление.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType7, angle);
         }
-
         private void C1_67ПереключательДлительность_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -224,42 +258,35 @@ namespace R440O.R440OForms.C1_67
         }
         private void С1_67ПереключательУсилительУ1_Click(object sender, System.EventArgs e)
         {
-            if (C1_67Parameters.C1_67ПереключательУсилительУ1 == false)
+            if (C1_67Parameters.C1_67ПереключательУсилительУ != 1)
             {
                 this.С1_67ПереключательУсилительУ1.BackgroundImage = ControlElementImages.toggleС1_67;
-                C1_67Parameters.C1_67ПереключательУсилительУ1 = true;
                 this.С1_67ПереключательУсилительУ2.BackgroundImage = null;
-                C1_67Parameters.C1_67ПереключательУсилительУ2 = false;
                 this.С1_67ПереключательУсилительУ3.BackgroundImage = null;
-                C1_67Parameters.C1_67ПереключательУсилительУ3 = false;
+                C1_67Parameters.C1_67ПереключательУсилительУ = 1;
             }
         }
-
         private void С1_67ПереключательУсилительУ2_Click(object sender, System.EventArgs e)
         {
-            if (C1_67Parameters.C1_67ПереключательУсилительУ2 == false)
+            if (C1_67Parameters.C1_67ПереключательУсилительУ != 2)
             {
-                this.С1_67ПереключательУсилительУ2.BackgroundImage = ControlElementImages.toggleС1_67;
-                C1_67Parameters.C1_67ПереключательУсилительУ2 = true;
                 this.С1_67ПереключательУсилительУ1.BackgroundImage = null;
-                C1_67Parameters.C1_67ПереключательУсилительУ1 = false;
+                this.С1_67ПереключательУсилительУ2.BackgroundImage = ControlElementImages.toggleС1_67;
                 this.С1_67ПереключательУсилительУ3.BackgroundImage = null;
-                C1_67Parameters.C1_67ПереключательУсилительУ3 = false;
+                C1_67Parameters.C1_67ПереключательУсилительУ = 2;
+            }
+        }
+        private void С1_67ПереключательУсилительУ3_Click(object sender, System.EventArgs e)
+        {
+            if (C1_67Parameters.C1_67ПереключательУсилительУ != 3)
+            {
+                this.С1_67ПереключательУсилительУ1.BackgroundImage = null;
+                this.С1_67ПереключательУсилительУ2.BackgroundImage = null;
+                this.С1_67ПереключательУсилительУ3.BackgroundImage = ControlElementImages.toggleС1_67;
+                C1_67Parameters.C1_67ПереключательУсилительУ = 3;
             }
         }
 
-        private void С1_67ПереключательУсилительУ3_Click(object sender, System.EventArgs e)
-        {
-            if (C1_67Parameters.C1_67ПереключательУсилительУ3 == false)
-            {
-                this.С1_67ПереключательУсилительУ3.BackgroundImage = ControlElementImages.toggleС1_67;
-                C1_67Parameters.C1_67ПереключательУсилительУ3 = true;
-                this.С1_67ПереключательУсилительУ1.BackgroundImage = null;
-                C1_67Parameters.C1_67ПереключательУсилительУ1 = false;
-                this.С1_67ПереключательУсилительУ2.BackgroundImage = null;
-                C1_67Parameters.C1_67ПереключательУсилительУ2 = false;
-            }
-        }
         #endregion
 
         #region Вращатели
@@ -292,5 +319,101 @@ namespace R440O.R440OForms.C1_67
             isManipulation = false;
         }
         #endregion
+
+        private void C1_67ПереключательСинхронизация1_1_Click(object sender, EventArgs e)
+        {
+            if (C1_67Parameters.C1_67ПереключательСинхронизация1 != 1)
+            {
+                C1_67ПереключательСинхронизация1_1.BackgroundImage = ControlElementImages.toggleС1_67;
+                C1_67ПереключательСинхронизация1_2.BackgroundImage = null;
+                C1_67ПереключательСинхронизация1_3.BackgroundImage = null;
+                C1_67ПереключательСинхронизация1_4.BackgroundImage = null;
+                C1_67Parameters.C1_67ПереключательСинхронизация1 = 1;
+            }
+        }
+
+        private void C1_67ПереключательСинхронизация1_2_Click(object sender, EventArgs e)
+        {
+            if (C1_67Parameters.C1_67ПереключательСинхронизация1 != 2)
+            {
+                C1_67ПереключательСинхронизация1_2.BackgroundImage = ControlElementImages.toggleС1_67;
+                C1_67ПереключательСинхронизация1_1.BackgroundImage = null;
+                C1_67ПереключательСинхронизация1_3.BackgroundImage = null;
+                C1_67ПереключательСинхронизация1_4.BackgroundImage = null;
+                C1_67Parameters.C1_67ПереключательСинхронизация1 = 2;
+            }
+        }
+
+        private void C1_67ПереключательСинхронизация1_3_Click(object sender, EventArgs e)
+        {
+            if (C1_67Parameters.C1_67ПереключательСинхронизация1 != 3)
+            {
+                C1_67ПереключательСинхронизация1_3.BackgroundImage = ControlElementImages.toggleС1_67;
+                C1_67ПереключательСинхронизация1_2.BackgroundImage = null;
+                C1_67ПереключательСинхронизация1_1.BackgroundImage = null;
+                C1_67ПереключательСинхронизация1_4.BackgroundImage = null;
+                C1_67Parameters.C1_67ПереключательСинхронизация1 = 3;
+            }
+        }
+
+        private void C1_67ПереключательСинхронизация1_4_Click(object sender, EventArgs e)
+        {
+            if (C1_67Parameters.C1_67ПереключательСинхронизация1 != 1)
+            {
+                C1_67ПереключательСинхронизация1_4.BackgroundImage = ControlElementImages.toggleС1_67;
+                C1_67ПереключательСинхронизация1_2.BackgroundImage = null;
+                C1_67ПереключательСинхронизация1_3.BackgroundImage = null;
+                C1_67ПереключательСинхронизация1_1.BackgroundImage = null;
+                C1_67Parameters.C1_67ПереключательСинхронизация1 = 4;
+            }
+        }
+
+        private void C1_67ПереключательСинхронизация2_1_Click(object sender, EventArgs e)
+        {
+            if (C1_67Parameters.C1_67ПереключательСинхронизация2 != 1)
+            {
+                C1_67ПереключательСинхронизация2_1.BackgroundImage = ControlElementImages.toggleС1_67;
+                C1_67ПереключательСинхронизация2_2.BackgroundImage = null;
+                C1_67ПереключательСинхронизация2_3.BackgroundImage = null;
+                C1_67ПереключательСинхронизация2_4.BackgroundImage = null;
+                C1_67Parameters.C1_67ПереключательСинхронизация2 = 1;
+            }
+        }
+
+        private void C1_67ПереключательСинхронизация2_2_Click(object sender, EventArgs e)
+        {
+            if (C1_67Parameters.C1_67ПереключательСинхронизация2 != 2)
+            {
+                C1_67ПереключательСинхронизация2_2.BackgroundImage = ControlElementImages.toggleС1_67;
+                C1_67ПереключательСинхронизация2_1.BackgroundImage = null;
+                C1_67ПереключательСинхронизация2_3.BackgroundImage = null;
+                C1_67ПереключательСинхронизация2_4.BackgroundImage = null;
+                C1_67Parameters.C1_67ПереключательСинхронизация2 = 2;
+            }
+        }
+
+        private void C1_67ПереключательСинхронизация2_3_Click(object sender, EventArgs e)
+        {
+            if (C1_67Parameters.C1_67ПереключательСинхронизация2 != 3)
+            {
+                C1_67ПереключательСинхронизация2_3.BackgroundImage = ControlElementImages.toggleС1_67;
+                C1_67ПереключательСинхронизация2_2.BackgroundImage = null;
+                C1_67ПереключательСинхронизация2_1.BackgroundImage = null;
+                C1_67ПереключательСинхронизация2_4.BackgroundImage = null;
+                C1_67Parameters.C1_67ПереключательСинхронизация2 = 3;
+            }
+        }
+
+        private void C1_67ПереключательСинхронизация2_4_Click(object sender, EventArgs e)
+        {
+            if (C1_67Parameters.C1_67ПереключательСинхронизация2 != 4)
+            {
+                C1_67ПереключательСинхронизация2_4.BackgroundImage = ControlElementImages.toggleС1_67;
+                C1_67ПереключательСинхронизация2_2.BackgroundImage = null;
+                C1_67ПереключательСинхронизация2_3.BackgroundImage = null;
+                C1_67ПереключательСинхронизация2_1.BackgroundImage = null;
+                C1_67Parameters.C1_67ПереключательСинхронизация2 = 4;
+            }
+        }
     }
 }

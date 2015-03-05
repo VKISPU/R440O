@@ -240,39 +240,44 @@ namespace R440O.Parameters
         #endregion
 
         #region Лампочки
-        public static string BMA_M_1ЛампочкаТЧБ { get; set; }
-        public static string BMA_M_1ЛампочкаФЗ { get; set; }
-        public static string BMA_M_1ЛампочкаДК { get; set; }
-        public static string BMA_M_1ЛампочкаСинхрТЧ { get; set; }
-        public static string BMA_M_1ЛампочкаСинхрДК { get; set; }
-        public static string BMA_M_1ЛампочкаПрдТЧ { get; set; }
-        public static string BMA_M_1ЛампочкаПрдДК { get; set; }
-        public static string BMA_M_1ЛампочкаПрмТЧ { get; set; }
-        public static string BMA_M_1ЛампочкаПрмФР { get; set; }
-        public static string BMA_M_1ЛампочкаПрмДК1 { get; set; }
-        public static string BMA_M_1ЛампочкаПрмДК2 { get; set; }
+        public static bool BMA_M_1ЛампочкаТЧБ = false;
+        public static bool BMA_M_1ЛампочкаФЗ = false;
+        public static bool BMA_M_1ЛампочкаДК = false;
+        public static bool BMA_M_1ЛампочкаСинхрТЧ = false;
+        public static bool BMA_M_1ЛампочкаСинхрДК = false;
+        public static bool BMA_M_1ЛампочкаПрдТЧ = false;
+        public static bool BMA_M_1ЛампочкаПрдДК = false;
+        public static bool BMA_M_1ЛампочкаПрмТЧ = false;
+        public static bool BMA_M_1ЛампочкаПрмФР = false;
+        public static bool BMA_M_1ЛампочкаПрмДК1 = false;
+        public static bool BMA_M_1ЛампочкаПрмДК2 = false;
 
-        public static string BMA_M_1ЛампочкаПитание_5В { get; set; }
-        public static string BMA_M_1ЛампочкаПитание_10В { get; set; }
-        public static string BMA_M_1ЛампочкаПитание_12В { get; set; }
-        public static string BMA_M_1ЛампочкаПитание_15В { get; set; }
-        public static string BMA_M_1ЛампочкаПитание_15Вplus { get; set; }
+        public static bool BMA_M_1ЛампочкаПитание_5В = false;
+        public static bool BMA_M_1ЛампочкаПитание_10В = false;
+        public static bool BMA_M_1ЛампочкаПитание_12В = false;
+        public static bool BMA_M_1ЛампочкаПитание_15В = false;
+        public static bool BMA_M_1ЛампочкаПитание_15Вplus = false;
 
-        public static string BMA_M_1ЛампочкаКонтрольНенорм { get; set; }
-        public static string BMA_M_1ЛампочкаКонтрольНорм { get; set; }
-        public static string BMA_M_1ЛампочкаКонтрольТест { get; set; }
-        public static string BMA_M_1ЛампочкаКонтрольДК { get; set; }
-        public static string BMA_M_1ЛампочкаКонтрольТЧ { get; set; }
-        public static string BMA_M_1ЛампочкаКонтрольКомпл { get; set; }
+        public static bool BMA_M_1ЛампочкаКонтрольНенорм = false;
+        public static bool BMA_M_1ЛампочкаКонтрольНорм = false;
+        public static bool BMA_M_1ЛампочкаКонтрольТест = false;
+        public static bool BMA_M_1ЛампочкаКонтрольДК = false;
+        public static bool BMA_M_1ЛампочкаКонтрольТЧ = false;
+        public static bool BMA_M_1ЛампочкаКонтрольКомпл = false;
 
-        public static string BMA_M_1ЛампочкаРекурента15 { get; set; }
-        public static string BMA_M_1ЛампочкаРекурента31 { get; set; }
-        public static string BMA_M_1ЛампочкаРекурента511 { get; set; }
-        public static string BMA_M_1ЛампочкаРекурента1023 { get; set; }
+        public static bool BMA_M_1ЛампочкаРекурента15 = false;
+        public static bool BMA_M_1ЛампочкаРекурента31 = false;
+        public static bool BMA_M_1ЛампочкаРекурента511 = false; 
+        public static bool BMA_M_1ЛампочкаРекурента1023 = false;
 
-        public static string BMA_M_1ЛампочкаАвтомКоманда1 { get; set; }
-        public static string BMA_M_1ЛампочкаАвтомКоманда2 { get; set; }
+        public static bool BMA_M_1ЛампочкаАвтомКоманда1 = false;
+        public static bool BMA_M_1ЛампочкаАвтомКоманда2 = false;
 
+        public static bool BMA_M_1ЛампочкаИсправно = false;
+        public static bool BMA_M_1ЛампочкаНеисправно = false;
+
+        public static bool BMA_M_1ЛампочкаРРР = false;
+        public static bool BMA_M_1ЛампочкаДист = false;
 
         #endregion
     }

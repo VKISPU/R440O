@@ -22,6 +22,7 @@ namespace R440O.R440OForms.A1
             this.InitializeComponent();
             this.InitializeTumblersPosition();
             this.InitializeButtonsPosition();
+            this.InitializeLamps();
         }
 
         /// <summary>
@@ -92,6 +93,13 @@ namespace R440O.R440OForms.A1
             this.A1КнопкаСкоростьАБ_1ТЛФ_К.BackgroundImage = A1Parameters.A1КнопкаСкоростьАБ_1ТЛФ_К
                 ? null
                 : ControlElementImages.buttonRectType1;
+        }
+
+        public void InitializeLamps()
+        {
+            this.A1ЛампочкаБОЧ.BackgroundImage = A1Parameters.A1ЛампочкаБОЧ
+                ? ControlElementImages.lampType2OnRed
+                : null;
         }
     }
 }

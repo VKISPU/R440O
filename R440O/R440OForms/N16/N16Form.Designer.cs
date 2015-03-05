@@ -44,18 +44,24 @@
             this.N16КнопкаН12 = new System.Windows.Forms.Button();
             this.N16КнопкаВкл = new System.Windows.Forms.Button();
             this.N16ТумблерУровень1 = new System.Windows.Forms.Button();
+            this.N16ИндикаторКонтрольМощностиРнагр = new System.Windows.Forms.PictureBox();
+            this.N16ИндикаторКонтрольМощностиРвых = new System.Windows.Forms.PictureBox();
             this.N16Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.N16ЛампочкаЭквивалент)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.N16ЛампочкаАнтенна)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.N16ЛампочкаН2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.N16ЛампочкаН1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.N16ЛампочкаН12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N16ИндикаторКонтрольМощностиРнагр)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N16ИндикаторКонтрольМощностиРвых)).BeginInit();
             this.SuspendLayout();
             // 
             // N16Panel
             // 
             this.N16Panel.BackgroundImage = global::R440O.BackgroundImages.N16;
             this.N16Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.N16Panel.Controls.Add(this.N16ИндикаторКонтрольМощностиРвых);
+            this.N16Panel.Controls.Add(this.N16ИндикаторКонтрольМощностиРнагр);
             this.N16Panel.Controls.Add(this.N16ЛампочкаЭквивалент);
             this.N16Panel.Controls.Add(this.N16ЛампочкаАнтенна);
             this.N16Panel.Controls.Add(this.N16ЛампочкаН2);
@@ -302,6 +308,28 @@
             this.N16ТумблерУровень1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N16Тумблер_MouseDown);
             this.N16ТумблерУровень1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.N16Тумблер_MouseUp);
             // 
+            // N16ИндикаторКонтрольМощностиРнагр
+            // 
+            this.N16ИндикаторКонтрольМощностиРнагр.BackColor = System.Drawing.Color.Transparent;
+            this.N16ИндикаторКонтрольМощностиРнагр.BackgroundImage = global::R440O.ControlElementImages.arrowNormal;
+            this.N16ИндикаторКонтрольМощностиРнагр.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.N16ИндикаторКонтрольМощностиРнагр.Location = new System.Drawing.Point(253, 69);
+            this.N16ИндикаторКонтрольМощностиРнагр.Name = "N16ИндикаторКонтрольМощностиРнагр";
+            this.N16ИндикаторКонтрольМощностиРнагр.Size = new System.Drawing.Size(64, 59);
+            this.N16ИндикаторКонтрольМощностиРнагр.TabIndex = 80;
+            this.N16ИндикаторКонтрольМощностиРнагр.TabStop = false;
+            // 
+            // N16ИндикаторКонтрольМощностиРвых
+            // 
+            this.N16ИндикаторКонтрольМощностиРвых.BackColor = System.Drawing.Color.Transparent;
+            this.N16ИндикаторКонтрольМощностиРвых.BackgroundImage = global::R440O.ControlElementImages.arrowNormal;
+            this.N16ИндикаторКонтрольМощностиРвых.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.N16ИндикаторКонтрольМощностиРвых.Location = new System.Drawing.Point(405, 70);
+            this.N16ИндикаторКонтрольМощностиРвых.Name = "N16ИндикаторКонтрольМощностиРвых";
+            this.N16ИндикаторКонтрольМощностиРвых.Size = new System.Drawing.Size(64, 59);
+            this.N16ИндикаторКонтрольМощностиРвых.TabIndex = 81;
+            this.N16ИндикаторКонтрольМощностиРвых.TabStop = false;
+            // 
             // N16Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -318,6 +346,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.N16ЛампочкаН2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.N16ЛампочкаН1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.N16ЛампочкаН12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N16ИндикаторКонтрольМощностиРнагр)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N16ИндикаторКонтрольМощностиРвых)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -340,5 +370,7 @@
         private System.Windows.Forms.Button N16КнопкаАнтенна;
         private System.Windows.Forms.Button N16КнопкаН2;
         private System.Windows.Forms.Button N16КнопкаН1;
+        private System.Windows.Forms.PictureBox N16ИндикаторКонтрольМощностиРвых;
+        private System.Windows.Forms.PictureBox N16ИндикаторКонтрольМощностиРнагр;
     }
 }

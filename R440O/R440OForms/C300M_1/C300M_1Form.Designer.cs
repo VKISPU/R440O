@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.C300M_1Panel = new System.Windows.Forms.Panel();
+            this.Ц300М_1КнопкаПоискВкл = new System.Windows.Forms.Button();
             this.Ц300М_1КнопкаПитаниеВыкл = new System.Windows.Forms.Button();
             this.Ц300М_1КнопкаПитаниеВкл = new System.Windows.Forms.Button();
             this.Ц300М_1ТумблерПоискПределы = new System.Windows.Forms.Button();
@@ -70,14 +71,22 @@
             this.Ц300М_1КнопкаВидРаботы0d1 = new System.Windows.Forms.Button();
             this.Ц300М_1КнопкаВидРаботы0d05 = new System.Windows.Forms.Button();
             this.Ц300М_1КнопкаВидРаботы0d025 = new System.Windows.Forms.Button();
-            this.Ц300М_1КнопкаПоискВкл = new System.Windows.Forms.Button();
+            this.BMBЛампочкаТЧ = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.C300M_1Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаТЧ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // C300M_1Panel
             // 
             this.C300M_1Panel.BackgroundImage = global::R440O.BackgroundImages.C300M;
             this.C300M_1Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.C300M_1Panel.Controls.Add(this.pictureBox2);
+            this.C300M_1Panel.Controls.Add(this.pictureBox1);
+            this.C300M_1Panel.Controls.Add(this.BMBЛампочкаТЧ);
             this.C300M_1Panel.Controls.Add(this.Ц300М_1КнопкаПоискВкл);
             this.C300M_1Panel.Controls.Add(this.Ц300М_1КнопкаПитаниеВыкл);
             this.C300M_1Panel.Controls.Add(this.Ц300М_1КнопкаПитаниеВкл);
@@ -124,6 +133,25 @@
             this.C300M_1Panel.Name = "C300M_1Panel";
             this.C300M_1Panel.Size = new System.Drawing.Size(1100, 430);
             this.C300M_1Panel.TabIndex = 1;
+            // 
+            // Ц300М_1КнопкаПоискВкл
+            // 
+            this.Ц300М_1КнопкаПоискВкл.BackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаПоискВкл.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
+            this.Ц300М_1КнопкаПоискВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Ц300М_1КнопкаПоискВкл.FlatAppearance.BorderSize = 0;
+            this.Ц300М_1КнопкаПоискВкл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаПоискВкл.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Ц300М_1КнопкаПоискВкл.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ц300М_1КнопкаПоискВкл.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.Ц300М_1КнопкаПоискВкл.Location = new System.Drawing.Point(886, 117);
+            this.Ц300М_1КнопкаПоискВкл.Name = "Ц300М_1КнопкаПоискВкл";
+            this.Ц300М_1КнопкаПоискВкл.Size = new System.Drawing.Size(35, 34);
+            this.Ц300М_1КнопкаПоискВкл.TabIndex = 51;
+            this.Ц300М_1КнопкаПоискВкл.Text = "ВКЛ";
+            this.Ц300М_1КнопкаПоискВкл.UseVisualStyleBackColor = false;
+            this.Ц300М_1КнопкаПоискВкл.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Ц300М_1КнопкаПоискВкл_MouseDown);
+            this.Ц300М_1КнопкаПоискВкл.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Ц300М_1КнопкаПоискВкл_MouseUp);
             // 
             // Ц300М_1КнопкаПитаниеВыкл
             // 
@@ -830,24 +858,35 @@
             this.Ц300М_1КнопкаВидРаботы0d025.UseVisualStyleBackColor = false;
             this.Ц300М_1КнопкаВидРаботы0d025.Click += new System.EventHandler(this.Ц300М_1КнопкаВидРаботы0d025_Click);
             // 
-            // Ц300М_1КнопкаПоискВкл
+            // BMBЛампочкаТЧ
             // 
-            this.Ц300М_1КнопкаПоискВкл.BackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1КнопкаПоискВкл.BackgroundImage = global::R440O.ControlElementImages.buttonSquareWhite;
-            this.Ц300М_1КнопкаПоискВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Ц300М_1КнопкаПоискВкл.FlatAppearance.BorderSize = 0;
-            this.Ц300М_1КнопкаПоискВкл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1КнопкаПоискВкл.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Ц300М_1КнопкаПоискВкл.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ц300М_1КнопкаПоискВкл.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.Ц300М_1КнопкаПоискВкл.Location = new System.Drawing.Point(886, 117);
-            this.Ц300М_1КнопкаПоискВкл.Name = "Ц300М_1КнопкаПоискВкл";
-            this.Ц300М_1КнопкаПоискВкл.Size = new System.Drawing.Size(35, 34);
-            this.Ц300М_1КнопкаПоискВкл.TabIndex = 51;
-            this.Ц300М_1КнопкаПоискВкл.Text = "ВКЛ";
-            this.Ц300М_1КнопкаПоискВкл.UseVisualStyleBackColor = false;
-            this.Ц300М_1КнопкаПоискВкл.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Ц300М_1КнопкаПоискВкл_MouseDown);
-            this.Ц300М_1КнопкаПоискВкл.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Ц300М_1КнопкаПоискВкл_MouseUp);
+            this.BMBЛампочкаТЧ.BackColor = System.Drawing.Color.Transparent;
+            this.BMBЛампочкаТЧ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BMBЛампочкаТЧ.Location = new System.Drawing.Point(533, 33);
+            this.BMBЛампочкаТЧ.Name = "BMBЛампочкаТЧ";
+            this.BMBЛампочкаТЧ.Size = new System.Drawing.Size(27, 25);
+            this.BMBЛампочкаТЧ.TabIndex = 75;
+            this.BMBЛампочкаТЧ.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(844, 47);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(27, 25);
+            this.pictureBox1.TabIndex = 76;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox2.Location = new System.Drawing.Point(844, 120);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(27, 25);
+            this.pictureBox2.TabIndex = 77;
+            this.pictureBox2.TabStop = false;
             // 
             // C300M_1Form
             // 
@@ -862,6 +901,9 @@
             this.Text = "Ц300M-1";
             this.C300M_1Panel.ResumeLayout(false);
             this.C300M_1Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаТЧ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -911,5 +953,8 @@
         private System.Windows.Forms.Button Ц300М_1КнопкаПитаниеВкл;
         private System.Windows.Forms.Button Ц300М_1КнопкаПитаниеВыкл;
         private System.Windows.Forms.Button Ц300М_1КнопкаПоискВкл;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox BMBЛампочкаТЧ;
     }
 }

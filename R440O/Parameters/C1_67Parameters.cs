@@ -88,12 +88,10 @@
 
         #endregion
 
-        public static bool C1_67ПереключательУсилительУ1 = true;
-        public static bool C1_67ПереключательУсилительУ2 = false;
-        public static bool C1_67ПереключательУсилительУ3 = false;
+        public static int C1_67ПереключательУсилительУ = 1;
+        public static int C1_67ПереключательСинхронизация1 = 1;
+        public static int C1_67ПереключательСинхронизация2 = 1;
 
-        public static int C1_67ПереключательСинхронизация;
-        
         #region Вращатели
         private static int _c1_67РегуляторЯркость;
         private static int _c1_67РегуляторФокус;

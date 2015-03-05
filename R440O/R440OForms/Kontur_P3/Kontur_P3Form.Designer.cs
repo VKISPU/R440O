@@ -71,13 +71,103 @@
             this.Kontur_P3ТумблерКонтроль = new System.Windows.Forms.Button();
             this.Kontur_P3ПереключательПриоритет = new System.Windows.Forms.Button();
             this.Kontur_P3ПереключательКонтроль = new System.Windows.Forms.Button();
+            this.Kontur_P3ЛампочкаКонтрольПодписи = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаКП1Канал10 = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаКП1Канал11 = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаКП2Прием = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаКП3Сбой = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаКП3Канал10 = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаКП3Канал11 = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаКП3Канал12 = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаКП4Канал7 = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаКП4Канал4 = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаКП4Канал1 = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаКП4Канал8 = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаКП4Канал5 = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаКП4Канал2 = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаКП4Канал9 = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаКП4Канал6 = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаКП4Канал3 = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаСбойПодписи = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаНеиспр = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаКонтроль = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаКП5Прием = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаПередача = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаИнформПринята = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаОтбой = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаКП6Режим3 = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаКП6Сбой = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаКП6Передача = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаПР2_ЗА = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаСеть = new System.Windows.Forms.PictureBox();
+            this.Kontur_P3ЛампочкаПР1_ЗА = new System.Windows.Forms.PictureBox();
             this.Kontur_P3Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКонтрольПодписи)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП1Канал10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП1Канал11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП2Прием)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП3Сбой)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП3Канал10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП3Канал11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП3Канал12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП4Канал7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП4Канал4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП4Канал1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП4Канал8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП4Канал5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП4Канал2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП4Канал9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП4Канал6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП4Канал3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаСбойПодписи)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаНеиспр)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКонтроль)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП5Прием)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаПередача)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаИнформПринята)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаОтбой)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП6Режим3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП6Сбой)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП6Передача)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаПР2_ЗА)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаСеть)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаПР1_ЗА)).BeginInit();
             this.SuspendLayout();
             // 
             // Kontur_P3Panel
             // 
             this.Kontur_P3Panel.BackgroundImage = global::R440O.BackgroundImages.Kontur_P3;
             this.Kontur_P3Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаПР2_ЗА);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаСеть);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаПР1_ЗА);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаКП6Режим3);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаКП6Сбой);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаКП6Передача);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаИнформПринята);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаОтбой);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаКП5Прием);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаПередача);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаКонтроль);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаСбойПодписи);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаНеиспр);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаКП4Канал9);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаКП4Канал6);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаКП4Канал3);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаКП4Канал8);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаКП4Канал5);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаКП4Канал2);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаКП4Канал7);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаКП4Канал4);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаКП4Канал1);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаКП3Канал12);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаКП3Канал11);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаКП3Канал10);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаКП3Сбой);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаКП2Прием);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаКП1Канал11);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаКП1Канал10);
+            this.Kontur_P3Panel.Controls.Add(this.Kontur_P3ЛампочкаКонтрольПодписи);
             this.Kontur_P3Panel.Controls.Add(this.Kontur_P3Кнопка9);
             this.Kontur_P3Panel.Controls.Add(this.Kontur_P3Кнопка8);
             this.Kontur_P3Panel.Controls.Add(this.Kontur_P3Кнопка6);
@@ -913,6 +1003,306 @@
             this.Kontur_P3ПереключательКонтроль.UseVisualStyleBackColor = false;
             this.Kontur_P3ПереключательКонтроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3ПереключательКонтроль_MouseUp);
             // 
+            // Kontur_P3ЛампочкаКонтрольПодписи
+            // 
+            this.Kontur_P3ЛампочкаКонтрольПодписи.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаКонтрольПодписи.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаКонтрольПодписи.Location = new System.Drawing.Point(114, 65);
+            this.Kontur_P3ЛампочкаКонтрольПодписи.Name = "Kontur_P3ЛампочкаКонтрольПодписи";
+            this.Kontur_P3ЛампочкаКонтрольПодписи.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаКонтрольПодписи.TabIndex = 61;
+            this.Kontur_P3ЛампочкаКонтрольПодписи.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаКП1Канал10
+            // 
+            this.Kontur_P3ЛампочкаКП1Канал10.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаКП1Канал10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаКП1Канал10.Location = new System.Drawing.Point(113, 120);
+            this.Kontur_P3ЛампочкаКП1Канал10.Name = "Kontur_P3ЛампочкаКП1Канал10";
+            this.Kontur_P3ЛампочкаКП1Канал10.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаКП1Канал10.TabIndex = 62;
+            this.Kontur_P3ЛампочкаКП1Канал10.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаКП1Канал11
+            // 
+            this.Kontur_P3ЛампочкаКП1Канал11.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаКП1Канал11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаКП1Канал11.Location = new System.Drawing.Point(114, 153);
+            this.Kontur_P3ЛампочкаКП1Канал11.Name = "Kontur_P3ЛампочкаКП1Канал11";
+            this.Kontur_P3ЛампочкаКП1Канал11.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаКП1Канал11.TabIndex = 63;
+            this.Kontur_P3ЛампочкаКП1Канал11.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаКП2Прием
+            // 
+            this.Kontur_P3ЛампочкаКП2Прием.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаКП2Прием.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаКП2Прием.Location = new System.Drawing.Point(209, 55);
+            this.Kontur_P3ЛампочкаКП2Прием.Name = "Kontur_P3ЛампочкаКП2Прием";
+            this.Kontur_P3ЛампочкаКП2Прием.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаКП2Прием.TabIndex = 64;
+            this.Kontur_P3ЛампочкаКП2Прием.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаКП3Сбой
+            // 
+            this.Kontur_P3ЛампочкаКП3Сбой.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаКП3Сбой.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаКП3Сбой.Location = new System.Drawing.Point(317, 60);
+            this.Kontur_P3ЛампочкаКП3Сбой.Name = "Kontur_P3ЛампочкаКП3Сбой";
+            this.Kontur_P3ЛампочкаКП3Сбой.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаКП3Сбой.TabIndex = 65;
+            this.Kontur_P3ЛампочкаКП3Сбой.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаКП3Канал10
+            // 
+            this.Kontur_P3ЛампочкаКП3Канал10.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаКП3Канал10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаКП3Канал10.Location = new System.Drawing.Point(317, 109);
+            this.Kontur_P3ЛампочкаКП3Канал10.Name = "Kontur_P3ЛампочкаКП3Канал10";
+            this.Kontur_P3ЛампочкаКП3Канал10.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаКП3Канал10.TabIndex = 66;
+            this.Kontur_P3ЛампочкаКП3Канал10.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаКП3Канал11
+            // 
+            this.Kontur_P3ЛампочкаКП3Канал11.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаКП3Канал11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаКП3Канал11.Location = new System.Drawing.Point(317, 133);
+            this.Kontur_P3ЛампочкаКП3Канал11.Name = "Kontur_P3ЛампочкаКП3Канал11";
+            this.Kontur_P3ЛампочкаКП3Канал11.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаКП3Канал11.TabIndex = 67;
+            this.Kontur_P3ЛампочкаКП3Канал11.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаКП3Канал12
+            // 
+            this.Kontur_P3ЛампочкаКП3Канал12.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаКП3Канал12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаКП3Канал12.Location = new System.Drawing.Point(317, 158);
+            this.Kontur_P3ЛампочкаКП3Канал12.Name = "Kontur_P3ЛампочкаКП3Канал12";
+            this.Kontur_P3ЛампочкаКП3Канал12.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаКП3Канал12.TabIndex = 68;
+            this.Kontur_P3ЛампочкаКП3Канал12.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаКП4Канал7
+            // 
+            this.Kontur_P3ЛампочкаКП4Канал7.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаКП4Канал7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаКП4Канал7.Location = new System.Drawing.Point(409, 154);
+            this.Kontur_P3ЛампочкаКП4Канал7.Name = "Kontur_P3ЛампочкаКП4Канал7";
+            this.Kontur_P3ЛампочкаКП4Канал7.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаКП4Канал7.TabIndex = 71;
+            this.Kontur_P3ЛампочкаКП4Канал7.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаКП4Канал4
+            // 
+            this.Kontur_P3ЛампочкаКП4Канал4.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаКП4Канал4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаКП4Канал4.Location = new System.Drawing.Point(409, 124);
+            this.Kontur_P3ЛампочкаКП4Канал4.Name = "Kontur_P3ЛампочкаКП4Канал4";
+            this.Kontur_P3ЛампочкаКП4Канал4.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаКП4Канал4.TabIndex = 70;
+            this.Kontur_P3ЛампочкаКП4Канал4.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаКП4Канал1
+            // 
+            this.Kontur_P3ЛампочкаКП4Канал1.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаКП4Канал1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаКП4Канал1.Location = new System.Drawing.Point(409, 94);
+            this.Kontur_P3ЛампочкаКП4Канал1.Name = "Kontur_P3ЛампочкаКП4Канал1";
+            this.Kontur_P3ЛампочкаКП4Канал1.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаКП4Канал1.TabIndex = 69;
+            this.Kontur_P3ЛампочкаКП4Канал1.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаКП4Канал8
+            // 
+            this.Kontur_P3ЛампочкаКП4Канал8.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаКП4Канал8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаКП4Канал8.Location = new System.Drawing.Point(435, 154);
+            this.Kontur_P3ЛампочкаКП4Канал8.Name = "Kontur_P3ЛампочкаКП4Канал8";
+            this.Kontur_P3ЛампочкаКП4Канал8.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаКП4Канал8.TabIndex = 74;
+            this.Kontur_P3ЛампочкаКП4Канал8.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаКП4Канал5
+            // 
+            this.Kontur_P3ЛампочкаКП4Канал5.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаКП4Канал5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаКП4Канал5.Location = new System.Drawing.Point(435, 124);
+            this.Kontur_P3ЛампочкаКП4Канал5.Name = "Kontur_P3ЛампочкаКП4Канал5";
+            this.Kontur_P3ЛампочкаКП4Канал5.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаКП4Канал5.TabIndex = 73;
+            this.Kontur_P3ЛампочкаКП4Канал5.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаКП4Канал2
+            // 
+            this.Kontur_P3ЛампочкаКП4Канал2.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаКП4Канал2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаКП4Канал2.Location = new System.Drawing.Point(435, 94);
+            this.Kontur_P3ЛампочкаКП4Канал2.Name = "Kontur_P3ЛампочкаКП4Канал2";
+            this.Kontur_P3ЛампочкаКП4Канал2.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаКП4Канал2.TabIndex = 72;
+            this.Kontur_P3ЛампочкаКП4Канал2.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаКП4Канал9
+            // 
+            this.Kontur_P3ЛампочкаКП4Канал9.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаКП4Канал9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаКП4Канал9.Location = new System.Drawing.Point(461, 154);
+            this.Kontur_P3ЛампочкаКП4Канал9.Name = "Kontur_P3ЛампочкаКП4Канал9";
+            this.Kontur_P3ЛампочкаКП4Канал9.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаКП4Канал9.TabIndex = 77;
+            this.Kontur_P3ЛампочкаКП4Канал9.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаКП4Канал6
+            // 
+            this.Kontur_P3ЛампочкаКП4Канал6.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаКП4Канал6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаКП4Канал6.Location = new System.Drawing.Point(461, 124);
+            this.Kontur_P3ЛампочкаКП4Канал6.Name = "Kontur_P3ЛампочкаКП4Канал6";
+            this.Kontur_P3ЛампочкаКП4Канал6.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаКП4Канал6.TabIndex = 76;
+            this.Kontur_P3ЛампочкаКП4Канал6.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаКП4Канал3
+            // 
+            this.Kontur_P3ЛампочкаКП4Канал3.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаКП4Канал3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаКП4Канал3.Location = new System.Drawing.Point(461, 94);
+            this.Kontur_P3ЛампочкаКП4Канал3.Name = "Kontur_P3ЛампочкаКП4Канал3";
+            this.Kontur_P3ЛампочкаКП4Канал3.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаКП4Канал3.TabIndex = 75;
+            this.Kontur_P3ЛампочкаКП4Канал3.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаСбойПодписи
+            // 
+            this.Kontur_P3ЛампочкаСбойПодписи.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаСбойПодписи.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаСбойПодписи.Location = new System.Drawing.Point(549, 98);
+            this.Kontur_P3ЛампочкаСбойПодписи.Name = "Kontur_P3ЛампочкаСбойПодписи";
+            this.Kontur_P3ЛампочкаСбойПодписи.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаСбойПодписи.TabIndex = 79;
+            this.Kontur_P3ЛампочкаСбойПодписи.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаНеиспр
+            // 
+            this.Kontur_P3ЛампочкаНеиспр.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаНеиспр.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаНеиспр.Location = new System.Drawing.Point(548, 65);
+            this.Kontur_P3ЛампочкаНеиспр.Name = "Kontur_P3ЛампочкаНеиспр";
+            this.Kontur_P3ЛампочкаНеиспр.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаНеиспр.TabIndex = 78;
+            this.Kontur_P3ЛампочкаНеиспр.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаКонтроль
+            // 
+            this.Kontur_P3ЛампочкаКонтроль.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаКонтроль.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаКонтроль.Location = new System.Drawing.Point(601, 65);
+            this.Kontur_P3ЛампочкаКонтроль.Name = "Kontur_P3ЛампочкаКонтроль";
+            this.Kontur_P3ЛампочкаКонтроль.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаКонтроль.TabIndex = 80;
+            this.Kontur_P3ЛампочкаКонтроль.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаКП5Прием
+            // 
+            this.Kontur_P3ЛампочкаКП5Прием.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаКП5Прием.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаКП5Прием.Location = new System.Drawing.Point(683, 97);
+            this.Kontur_P3ЛампочкаКП5Прием.Name = "Kontur_P3ЛампочкаКП5Прием";
+            this.Kontur_P3ЛампочкаКП5Прием.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаКП5Прием.TabIndex = 82;
+            this.Kontur_P3ЛампочкаКП5Прием.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаПередача
+            // 
+            this.Kontur_P3ЛампочкаПередача.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаПередача.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаПередача.Location = new System.Drawing.Point(682, 64);
+            this.Kontur_P3ЛампочкаПередача.Name = "Kontur_P3ЛампочкаПередача";
+            this.Kontur_P3ЛампочкаПередача.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаПередача.TabIndex = 81;
+            this.Kontur_P3ЛампочкаПередача.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаИнформПринята
+            // 
+            this.Kontur_P3ЛампочкаИнформПринята.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаИнформПринята.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаИнформПринята.Location = new System.Drawing.Point(748, 98);
+            this.Kontur_P3ЛампочкаИнформПринята.Name = "Kontur_P3ЛампочкаИнформПринята";
+            this.Kontur_P3ЛампочкаИнформПринята.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаИнформПринята.TabIndex = 84;
+            this.Kontur_P3ЛампочкаИнформПринята.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаОтбой
+            // 
+            this.Kontur_P3ЛампочкаОтбой.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаОтбой.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаОтбой.Location = new System.Drawing.Point(747, 65);
+            this.Kontur_P3ЛампочкаОтбой.Name = "Kontur_P3ЛампочкаОтбой";
+            this.Kontur_P3ЛампочкаОтбой.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаОтбой.TabIndex = 83;
+            this.Kontur_P3ЛампочкаОтбой.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаКП6Режим3
+            // 
+            this.Kontur_P3ЛампочкаКП6Режим3.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаКП6Режим3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаКП6Режим3.Location = new System.Drawing.Point(881, 67);
+            this.Kontur_P3ЛампочкаКП6Режим3.Name = "Kontur_P3ЛампочкаКП6Режим3";
+            this.Kontur_P3ЛампочкаКП6Режим3.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаКП6Режим3.TabIndex = 87;
+            this.Kontur_P3ЛампочкаКП6Режим3.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаКП6Сбой
+            // 
+            this.Kontur_P3ЛампочкаКП6Сбой.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаКП6Сбой.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаКП6Сбой.Location = new System.Drawing.Point(855, 67);
+            this.Kontur_P3ЛампочкаКП6Сбой.Name = "Kontur_P3ЛампочкаКП6Сбой";
+            this.Kontur_P3ЛампочкаКП6Сбой.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаКП6Сбой.TabIndex = 86;
+            this.Kontur_P3ЛампочкаКП6Сбой.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаКП6Передача
+            // 
+            this.Kontur_P3ЛампочкаКП6Передача.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаКП6Передача.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаКП6Передача.Location = new System.Drawing.Point(829, 67);
+            this.Kontur_P3ЛампочкаКП6Передача.Name = "Kontur_P3ЛампочкаКП6Передача";
+            this.Kontur_P3ЛампочкаКП6Передача.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаКП6Передача.TabIndex = 85;
+            this.Kontur_P3ЛампочкаКП6Передача.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаПР2_ЗА
+            // 
+            this.Kontur_P3ЛампочкаПР2_ЗА.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаПР2_ЗА.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаПР2_ЗА.Location = new System.Drawing.Point(996, 107);
+            this.Kontur_P3ЛампочкаПР2_ЗА.Name = "Kontur_P3ЛампочкаПР2_ЗА";
+            this.Kontur_P3ЛампочкаПР2_ЗА.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаПР2_ЗА.TabIndex = 90;
+            this.Kontur_P3ЛампочкаПР2_ЗА.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаСеть
+            // 
+            this.Kontur_P3ЛампочкаСеть.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаСеть.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаСеть.Location = new System.Drawing.Point(970, 107);
+            this.Kontur_P3ЛампочкаСеть.Name = "Kontur_P3ЛампочкаСеть";
+            this.Kontur_P3ЛампочкаСеть.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаСеть.TabIndex = 89;
+            this.Kontur_P3ЛампочкаСеть.TabStop = false;
+            // 
+            // Kontur_P3ЛампочкаПР1_ЗА
+            // 
+            this.Kontur_P3ЛампочкаПР1_ЗА.BackColor = System.Drawing.Color.Transparent;
+            this.Kontur_P3ЛампочкаПР1_ЗА.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kontur_P3ЛампочкаПР1_ЗА.Location = new System.Drawing.Point(944, 107);
+            this.Kontur_P3ЛампочкаПР1_ЗА.Name = "Kontur_P3ЛампочкаПР1_ЗА";
+            this.Kontur_P3ЛампочкаПР1_ЗА.Size = new System.Drawing.Size(15, 16);
+            this.Kontur_P3ЛампочкаПР1_ЗА.TabIndex = 88;
+            this.Kontur_P3ЛампочкаПР1_ЗА.TabStop = false;
+            // 
             // Kontur_P3Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -925,6 +1315,36 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Контур-П";
             this.Kontur_P3Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКонтрольПодписи)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП1Канал10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП1Канал11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП2Прием)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП3Сбой)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП3Канал10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП3Канал11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП3Канал12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП4Канал7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП4Канал4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП4Канал1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП4Канал8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП4Канал5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП4Канал2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП4Канал9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП4Канал6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП4Канал3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаСбойПодписи)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаНеиспр)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКонтроль)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП5Прием)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаПередача)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаИнформПринята)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаОтбой)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП6Режим3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП6Сбой)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаКП6Передача)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаПР2_ЗА)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаСеть)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kontur_P3ЛампочкаПР1_ЗА)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -974,5 +1394,35 @@
         private System.Windows.Forms.Button Kontur_P3КнопкаПодпись3;
         private System.Windows.Forms.Button Kontur_P3КнопкаПодпись2;
         private System.Windows.Forms.Button Kontur_P3КнопкаПодпись1;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаКонтрольПодписи;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаПР2_ЗА;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаСеть;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаПР1_ЗА;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаКП6Режим3;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаКП6Сбой;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаКП6Передача;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаИнформПринята;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаОтбой;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаКП5Прием;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаПередача;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаКонтроль;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаСбойПодписи;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаНеиспр;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаКП4Канал9;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаКП4Канал6;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаКП4Канал3;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаКП4Канал8;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаКП4Канал5;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаКП4Канал2;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаКП4Канал7;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаКП4Канал4;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаКП4Канал1;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаКП3Канал12;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаКП3Канал11;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаКП3Канал10;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаКП3Сбой;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаКП2Прием;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаКП1Канал11;
+        private System.Windows.Forms.PictureBox Kontur_P3ЛампочкаКП1Канал10;
     }
 }

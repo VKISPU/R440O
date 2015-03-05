@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.A205M_2Panel = new System.Windows.Forms.Panel();
+            this.A205M_2ПереключательКонтроль = new System.Windows.Forms.Button();
+            this.A205M_2ПереключательВходЧТ = new System.Windows.Forms.Button();
+            this.A205M_2ПереключательВидРаботы = new System.Windows.Forms.Button();
+            this.A205M_2Дисплей = new System.Windows.Forms.Button();
             this.A205M_2ПереключательВолнаX1 = new System.Windows.Forms.Button();
             this.A205M_2ПереключательВолнаX10 = new System.Windows.Forms.Button();
             this.A205M_2ПереключательВолнаX100 = new System.Windows.Forms.Button();
@@ -37,17 +41,22 @@
             this.A205M_2ПереключательВолнаX10000 = new System.Windows.Forms.Button();
             this.A205M_2КнопкаОтсчет = new System.Windows.Forms.Button();
             this.A205M_2ТумблерКЭД = new System.Windows.Forms.Button();
-            this.A205M_2Дисплей = new System.Windows.Forms.Button();
-            this.A205M_2ПереключательВидРаботы = new System.Windows.Forms.Button();
-            this.A205M_2ПереключательВходЧТ = new System.Windows.Forms.Button();
-            this.A205M_2ПереключательКонтроль = new System.Windows.Forms.Button();
+            this.A205M_2ЛампочкаНормРаб = new System.Windows.Forms.PictureBox();
+            this.A205M_2ЛампочкаПерегрев = new System.Windows.Forms.PictureBox();
+            this.A205M_2ИндикаторКонтроль = new System.Windows.Forms.PictureBox();
             this.A205M_2Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.A205M_2ЛампочкаНормРаб)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A205M_2ЛампочкаПерегрев)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A205M_2ИндикаторКонтроль)).BeginInit();
             this.SuspendLayout();
             // 
             // A205M_2Panel
             // 
             this.A205M_2Panel.BackgroundImage = global::R440O.BackgroundImages.A205M;
             this.A205M_2Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A205M_2Panel.Controls.Add(this.A205M_2ИндикаторКонтроль);
+            this.A205M_2Panel.Controls.Add(this.A205M_2ЛампочкаПерегрев);
+            this.A205M_2Panel.Controls.Add(this.A205M_2ЛампочкаНормРаб);
             this.A205M_2Panel.Controls.Add(this.A205M_2ПереключательКонтроль);
             this.A205M_2Panel.Controls.Add(this.A205M_2ПереключательВходЧТ);
             this.A205M_2Panel.Controls.Add(this.A205M_2ПереключательВидРаботы);
@@ -64,6 +73,69 @@
             this.A205M_2Panel.Name = "A205M_2Panel";
             this.A205M_2Panel.Size = new System.Drawing.Size(1099, 428);
             this.A205M_2Panel.TabIndex = 0;
+            // 
+            // A205M_2ПереключательКонтроль
+            // 
+            this.A205M_2ПереключательКонтроль.BackColor = System.Drawing.Color.Transparent;
+            this.A205M_2ПереключательКонтроль.BackgroundImage = global::R440O.ControlElementImages.toggleType6;
+            this.A205M_2ПереключательКонтроль.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A205M_2ПереключательКонтроль.FlatAppearance.BorderSize = 0;
+            this.A205M_2ПереключательКонтроль.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.A205M_2ПереключательКонтроль.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.A205M_2ПереключательКонтроль.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.A205M_2ПереключательКонтроль.Location = new System.Drawing.Point(231, 172);
+            this.A205M_2ПереключательКонтроль.Name = "A205M_2ПереключательКонтроль";
+            this.A205M_2ПереключательКонтроль.Size = new System.Drawing.Size(100, 100);
+            this.A205M_2ПереключательКонтроль.TabIndex = 4;
+            this.A205M_2ПереключательКонтроль.UseVisualStyleBackColor = false;
+            this.A205M_2ПереключательКонтроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_2ПереключательКонтроль_MouseUp);
+            // 
+            // A205M_2ПереключательВходЧТ
+            // 
+            this.A205M_2ПереключательВходЧТ.BackColor = System.Drawing.Color.Transparent;
+            this.A205M_2ПереключательВходЧТ.BackgroundImage = global::R440O.ControlElementImages.toggleType6;
+            this.A205M_2ПереключательВходЧТ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A205M_2ПереключательВходЧТ.FlatAppearance.BorderSize = 0;
+            this.A205M_2ПереключательВходЧТ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.A205M_2ПереключательВходЧТ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.A205M_2ПереключательВходЧТ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.A205M_2ПереключательВходЧТ.Location = new System.Drawing.Point(874, 149);
+            this.A205M_2ПереключательВходЧТ.Name = "A205M_2ПереключательВходЧТ";
+            this.A205M_2ПереключательВходЧТ.Size = new System.Drawing.Size(100, 100);
+            this.A205M_2ПереключательВходЧТ.TabIndex = 4;
+            this.A205M_2ПереключательВходЧТ.UseVisualStyleBackColor = false;
+            this.A205M_2ПереключательВходЧТ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_2ПереключательВходЧТ_MouseUp);
+            // 
+            // A205M_2ПереключательВидРаботы
+            // 
+            this.A205M_2ПереключательВидРаботы.BackColor = System.Drawing.Color.Transparent;
+            this.A205M_2ПереключательВидРаботы.BackgroundImage = global::R440O.ControlElementImages.toggleType6;
+            this.A205M_2ПереключательВидРаботы.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A205M_2ПереключательВидРаботы.FlatAppearance.BorderSize = 0;
+            this.A205M_2ПереключательВидРаботы.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.A205M_2ПереключательВидРаботы.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.A205M_2ПереключательВидРаботы.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.A205M_2ПереключательВидРаботы.Location = new System.Drawing.Point(790, 151);
+            this.A205M_2ПереключательВидРаботы.Name = "A205M_2ПереключательВидРаботы";
+            this.A205M_2ПереключательВидРаботы.Size = new System.Drawing.Size(100, 100);
+            this.A205M_2ПереключательВидРаботы.TabIndex = 4;
+            this.A205M_2ПереключательВидРаботы.UseVisualStyleBackColor = false;
+            this.A205M_2ПереключательВидРаботы.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_2ПереключательВидРаботы_MouseUp);
+            // 
+            // A205M_2Дисплей
+            // 
+            this.A205M_2Дисплей.BackColor = System.Drawing.Color.Transparent;
+            this.A205M_2Дисплей.FlatAppearance.BorderSize = 0;
+            this.A205M_2Дисплей.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.A205M_2Дисплей.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.A205M_2Дисплей.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.A205M_2Дисплей.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.A205M_2Дисплей.ForeColor = System.Drawing.Color.DarkOrange;
+            this.A205M_2Дисплей.Location = new System.Drawing.Point(441, 51);
+            this.A205M_2Дисплей.Name = "A205M_2Дисплей";
+            this.A205M_2Дисплей.Size = new System.Drawing.Size(255, 55);
+            this.A205M_2Дисплей.TabIndex = 3;
+            this.A205M_2Дисплей.UseVisualStyleBackColor = false;
             // 
             // A205M_2ПереключательВолнаX1
             // 
@@ -190,68 +262,36 @@
             this.A205M_2ТумблерКЭД.UseVisualStyleBackColor = false;
             this.A205M_2ТумблерКЭД.Click += new System.EventHandler(this.A205M_2ПереключательКЭД_Click);
             // 
-            // A205M_2Дисплей
+            // A205M_2ЛампочкаНормРаб
             // 
-            this.A205M_2Дисплей.BackColor = System.Drawing.Color.Transparent;
-            this.A205M_2Дисплей.FlatAppearance.BorderSize = 0;
-            this.A205M_2Дисплей.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.A205M_2Дисплей.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.A205M_2Дисплей.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.A205M_2Дисплей.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.A205M_2Дисплей.ForeColor = System.Drawing.Color.DarkOrange;
-            this.A205M_2Дисплей.Location = new System.Drawing.Point(441, 51);
-            this.A205M_2Дисплей.Name = "A205M_2Дисплей";
-            this.A205M_2Дисплей.Size = new System.Drawing.Size(255, 55);
-            this.A205M_2Дисплей.TabIndex = 3;
-            this.A205M_2Дисплей.UseVisualStyleBackColor = false;
+            this.A205M_2ЛампочкаНормРаб.BackColor = System.Drawing.Color.Transparent;
+            this.A205M_2ЛампочкаНормРаб.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A205M_2ЛампочкаНормРаб.Location = new System.Drawing.Point(829, 66);
+            this.A205M_2ЛампочкаНормРаб.Name = "A205M_2ЛампочкаНормРаб";
+            this.A205M_2ЛампочкаНормРаб.Size = new System.Drawing.Size(32, 31);
+            this.A205M_2ЛампочкаНормРаб.TabIndex = 63;
+            this.A205M_2ЛампочкаНормРаб.TabStop = false;
             // 
-            // A205M_2ПереключательВидРаботы
+            // A205M_2ЛампочкаПерегрев
             // 
-            this.A205M_2ПереключательВидРаботы.BackColor = System.Drawing.Color.Transparent;
-            this.A205M_2ПереключательВидРаботы.BackgroundImage = global::R440O.ControlElementImages.toggleType6;
-            this.A205M_2ПереключательВидРаботы.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.A205M_2ПереключательВидРаботы.FlatAppearance.BorderSize = 0;
-            this.A205M_2ПереключательВидРаботы.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.A205M_2ПереключательВидРаботы.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.A205M_2ПереключательВидРаботы.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.A205M_2ПереключательВидРаботы.Location = new System.Drawing.Point(790, 151);
-            this.A205M_2ПереключательВидРаботы.Name = "A205M_2ПереключательВидРаботы";
-            this.A205M_2ПереключательВидРаботы.Size = new System.Drawing.Size(100, 100);
-            this.A205M_2ПереключательВидРаботы.TabIndex = 4;
-            this.A205M_2ПереключательВидРаботы.UseVisualStyleBackColor = false;
-            this.A205M_2ПереключательВидРаботы.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_2ПереключательВидРаботы_MouseUp);
+            this.A205M_2ЛампочкаПерегрев.BackColor = System.Drawing.Color.Transparent;
+            this.A205M_2ЛампочкаПерегрев.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A205M_2ЛампочкаПерегрев.Location = new System.Drawing.Point(895, 66);
+            this.A205M_2ЛампочкаПерегрев.Name = "A205M_2ЛампочкаПерегрев";
+            this.A205M_2ЛампочкаПерегрев.Size = new System.Drawing.Size(32, 31);
+            this.A205M_2ЛампочкаПерегрев.TabIndex = 64;
+            this.A205M_2ЛампочкаПерегрев.TabStop = false;
             // 
-            // A205M_2ПереключательВходЧТ
+            // A205M_2ИндикаторКонтроль
             // 
-            this.A205M_2ПереключательВходЧТ.BackColor = System.Drawing.Color.Transparent;
-            this.A205M_2ПереключательВходЧТ.BackgroundImage = global::R440O.ControlElementImages.toggleType6;
-            this.A205M_2ПереключательВходЧТ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.A205M_2ПереключательВходЧТ.FlatAppearance.BorderSize = 0;
-            this.A205M_2ПереключательВходЧТ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.A205M_2ПереключательВходЧТ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.A205M_2ПереключательВходЧТ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.A205M_2ПереключательВходЧТ.Location = new System.Drawing.Point(874, 149);
-            this.A205M_2ПереключательВходЧТ.Name = "A205M_2ПереключательВходЧТ";
-            this.A205M_2ПереключательВходЧТ.Size = new System.Drawing.Size(100, 100);
-            this.A205M_2ПереключательВходЧТ.TabIndex = 4;
-            this.A205M_2ПереключательВходЧТ.UseVisualStyleBackColor = false;
-            this.A205M_2ПереключательВходЧТ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_2ПереключательВходЧТ_MouseUp);
-            // 
-            // A205M_2ПереключательКонтроль
-            // 
-            this.A205M_2ПереключательКонтроль.BackColor = System.Drawing.Color.Transparent;
-            this.A205M_2ПереключательКонтроль.BackgroundImage = global::R440O.ControlElementImages.toggleType6;
-            this.A205M_2ПереключательКонтроль.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.A205M_2ПереключательКонтроль.FlatAppearance.BorderSize = 0;
-            this.A205M_2ПереключательКонтроль.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.A205M_2ПереключательКонтроль.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.A205M_2ПереключательКонтроль.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.A205M_2ПереключательКонтроль.Location = new System.Drawing.Point(231, 172);
-            this.A205M_2ПереключательКонтроль.Name = "A205M_2ПереключательКонтроль";
-            this.A205M_2ПереключательКонтроль.Size = new System.Drawing.Size(100, 100);
-            this.A205M_2ПереключательКонтроль.TabIndex = 4;
-            this.A205M_2ПереключательКонтроль.UseVisualStyleBackColor = false;
-            this.A205M_2ПереключательКонтроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_2ПереключательКонтроль_MouseUp);
+            this.A205M_2ИндикаторКонтроль.BackColor = System.Drawing.Color.Transparent;
+            this.A205M_2ИндикаторКонтроль.BackgroundImage = global::R440O.ControlElementImages.arrowNormal;
+            this.A205M_2ИндикаторКонтроль.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.A205M_2ИндикаторКонтроль.Location = new System.Drawing.Point(269, 56);
+            this.A205M_2ИндикаторКонтроль.Name = "A205M_2ИндикаторКонтроль";
+            this.A205M_2ИндикаторКонтроль.Size = new System.Drawing.Size(64, 56);
+            this.A205M_2ИндикаторКонтроль.TabIndex = 65;
+            this.A205M_2ИндикаторКонтроль.TabStop = false;
             // 
             // A205M_2Form
             // 
@@ -263,8 +303,11 @@
             this.MaximizeBox = false;
             this.Name = "A205M_2Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "A-205M-2";
+            this.Text = "A-205M-1";
             this.A205M_2Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.A205M_2ЛампочкаНормРаб)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A205M_2ЛампочкаПерегрев)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A205M_2ИндикаторКонтроль)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -284,5 +327,8 @@
         private System.Windows.Forms.Button A205M_2ПереключательВидРаботы;
         private System.Windows.Forms.Button A205M_2ПереключательКонтроль;
         private System.Windows.Forms.Button A205M_2ПереключательВходЧТ;
+        private System.Windows.Forms.PictureBox A205M_2ЛампочкаПерегрев;
+        private System.Windows.Forms.PictureBox A205M_2ЛампочкаНормРаб;
+        private System.Windows.Forms.PictureBox A205M_2ИндикаторКонтроль;
     }
 }

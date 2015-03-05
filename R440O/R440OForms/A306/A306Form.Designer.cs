@@ -30,20 +30,29 @@
         {
             this.A306Panel = new System.Windows.Forms.Panel();
             this.cabelOutput2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cabelOutput = new System.Windows.Forms.PictureBox();
             this.A306ТумблерВклВыкл = new System.Windows.Forms.Button();
             this.A306ТумблерДистанцМестн = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.A306ЛампочкаСетьВкл = new System.Windows.Forms.PictureBox();
+            this.A306ЛампочкаНО1Вкл = new System.Windows.Forms.PictureBox();
+            this.A306ЛампочкаНО2Вкл = new System.Windows.Forms.PictureBox();
             this.A306Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cabelOutput2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cabelOutput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cabelOutput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A306ЛампочкаСетьВкл)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A306ЛампочкаНО1Вкл)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A306ЛампочкаНО2Вкл)).BeginInit();
             this.SuspendLayout();
             // 
             // A306Panel
             // 
             this.A306Panel.BackgroundImage = global::R440O.BackgroundImages.A306;
             this.A306Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A306Panel.Controls.Add(this.A306ЛампочкаНО2Вкл);
+            this.A306Panel.Controls.Add(this.A306ЛампочкаНО1Вкл);
+            this.A306Panel.Controls.Add(this.A306ЛампочкаСетьВкл);
             this.A306Panel.Controls.Add(this.cabelOutput2);
             this.A306Panel.Controls.Add(this.pictureBox1);
             this.A306Panel.Controls.Add(this.cabelOutput);
@@ -65,6 +74,18 @@
             this.cabelOutput2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pb_MouseDown);
             this.cabelOutput2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pb_MouseMove);
             this.cabelOutput2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pb_MouseUp);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Location = new System.Drawing.Point(279, 102);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.TabIndex = 30;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pb_MouseDown);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pb_MouseMove);
+            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pb_MouseUp);
             // 
             // cabelOutput
             // 
@@ -109,17 +130,35 @@
             this.A306ТумблерДистанцМестн.UseVisualStyleBackColor = false;
             this.A306ТумблерДистанцМестн.Click += new System.EventHandler(this.A306ТумблерДистанцМестн_Click);
             // 
-            // pictureBox1
+            // A306ЛампочкаСетьВкл
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(636, 250);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.TabIndex = 30;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pb_MouseDown);
-            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pb_MouseMove);
-            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pb_MouseUp);
+            this.A306ЛампочкаСетьВкл.BackColor = System.Drawing.Color.Transparent;
+            this.A306ЛампочкаСетьВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A306ЛампочкаСетьВкл.Location = new System.Drawing.Point(765, 202);
+            this.A306ЛампочкаСетьВкл.Name = "A306ЛампочкаСетьВкл";
+            this.A306ЛампочкаСетьВкл.Size = new System.Drawing.Size(16, 16);
+            this.A306ЛампочкаСетьВкл.TabIndex = 54;
+            this.A306ЛампочкаСетьВкл.TabStop = false;
+            // 
+            // A306ЛампочкаНО1Вкл
+            // 
+            this.A306ЛампочкаНО1Вкл.BackColor = System.Drawing.Color.Transparent;
+            this.A306ЛампочкаНО1Вкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A306ЛампочкаНО1Вкл.Location = new System.Drawing.Point(796, 204);
+            this.A306ЛампочкаНО1Вкл.Name = "A306ЛампочкаНО1Вкл";
+            this.A306ЛампочкаНО1Вкл.Size = new System.Drawing.Size(16, 16);
+            this.A306ЛампочкаНО1Вкл.TabIndex = 55;
+            this.A306ЛампочкаНО1Вкл.TabStop = false;
+            // 
+            // A306ЛампочкаНО2Вкл
+            // 
+            this.A306ЛампочкаНО2Вкл.BackColor = System.Drawing.Color.Transparent;
+            this.A306ЛампочкаНО2Вкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.A306ЛампочкаНО2Вкл.Location = new System.Drawing.Point(827, 203);
+            this.A306ЛампочкаНО2Вкл.Name = "A306ЛампочкаНО2Вкл";
+            this.A306ЛампочкаНО2Вкл.Size = new System.Drawing.Size(16, 16);
+            this.A306ЛампочкаНО2Вкл.TabIndex = 56;
+            this.A306ЛампочкаНО2Вкл.TabStop = false;
             // 
             // A306Form
             // 
@@ -134,8 +173,11 @@
             this.Text = "А306";
             this.A306Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cabelOutput2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cabelOutput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cabelOutput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A306ЛампочкаСетьВкл)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A306ЛампочкаНО1Вкл)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A306ЛампочкаНО2Вкл)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -148,5 +190,8 @@
         private System.Windows.Forms.PictureBox cabelOutput2;
         private System.Windows.Forms.PictureBox cabelOutput;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox A306ЛампочкаНО2Вкл;
+        private System.Windows.Forms.PictureBox A306ЛампочкаНО1Вкл;
+        private System.Windows.Forms.PictureBox A306ЛампочкаСетьВкл;
     }
 }

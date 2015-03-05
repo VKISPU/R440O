@@ -455,6 +455,9 @@ namespace R440O.R440OForms.N12S
                 N12SЛампочкаГотовность.BackgroundImage = null;
                 N12SЛампочкаУпорА.BackgroundImage = null;
                 N12SЛампочкаУпорБ.BackgroundImage = null;
+
+                //остановка таймера
+                timer.Stop();
             }
             else
             {

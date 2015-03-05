@@ -51,13 +51,88 @@
             this.Rubin_NПереключательN5063_2кБод = new System.Windows.Forms.Button();
             this.Rubin_NПереключательКонтроль = new System.Windows.Forms.Button();
             this.Rubin_NПереключательГрупСкор = new System.Windows.Forms.Button();
+            this.Rubin_NЛампочкаN3349Неиспр = new System.Windows.Forms.PictureBox();
+            this.Rubin_NЛампочкаN3349МУ = new System.Windows.Forms.PictureBox();
+            this.Rubin_NЛампочкаN3349ДУ = new System.Windows.Forms.PictureBox();
+            this.Rubin_NЛампочкаN3349ПР2А = new System.Windows.Forms.PictureBox();
+            this.Rubin_NЛампочкаN1422Резервный = new System.Windows.Forms.PictureBox();
+            this.Rubin_NЛампочкаN1422Осн3 = new System.Windows.Forms.PictureBox();
+            this.Rubin_NЛампочкаN1422Осн2 = new System.Windows.Forms.PictureBox();
+            this.Rubin_NЛампочкаN1422Осн1 = new System.Windows.Forms.PictureBox();
+            this.Rubin_NЛампочкаN5063СрывСинхр = new System.Windows.Forms.PictureBox();
+            this.Rubin_NЛампочкаN1422Транзит = new System.Windows.Forms.PictureBox();
+            this.Rubin_NЛампочкаN3349_27В = new System.Windows.Forms.PictureBox();
+            this.Rubin_NЛампочкаN3349_5В = new System.Windows.Forms.PictureBox();
+            this.Rubin_NЛампочкаN4923СрывСинхр = new System.Windows.Forms.PictureBox();
+            this.Rubin_NЛампочкаN2215_3 = new System.Windows.Forms.PictureBox();
+            this.Rubin_NЛампочкаN2215_2 = new System.Windows.Forms.PictureBox();
+            this.Rubin_NЛампочкаN2215_1 = new System.Windows.Forms.PictureBox();
+            this.Rubin_NЛампочкаN4963СрывСинхр = new System.Windows.Forms.PictureBox();
+            this.Rubin_NЛампочкаN2215_II3 = new System.Windows.Forms.PictureBox();
+            this.Rubin_NЛампочкаN2215_II2 = new System.Windows.Forms.PictureBox();
+            this.Rubin_NЛампочкаN2215_II1 = new System.Windows.Forms.PictureBox();
+            this.Rubin_NЛампочкаN2215_ЧтСи = new System.Windows.Forms.PictureBox();
+            this.Rubin_NЛампочкаN2215_48кГц = new System.Windows.Forms.PictureBox();
+            this.Rubin_NЛампочкаN2215_ТИ = new System.Windows.Forms.PictureBox();
+            this.Rubin_NЛампочкаN1422РезервированиеОткл = new System.Windows.Forms.PictureBox();
+            this.Rubin_NЛампочкаN1422РезервированиеВкл = new System.Windows.Forms.PictureBox();
             this.RUBIN_NPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN3349Неиспр)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN3349МУ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN3349ДУ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN3349ПР2А)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN1422Резервный)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN1422Осн3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN1422Осн2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN1422Осн1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN5063СрывСинхр)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN1422Транзит)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN3349_27В)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN3349_5В)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN4923СрывСинхр)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN2215_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN2215_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN2215_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN4963СрывСинхр)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN2215_II3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN2215_II2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN2215_II1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN2215_ЧтСи)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN2215_48кГц)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN2215_ТИ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN1422РезервированиеОткл)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN1422РезервированиеВкл)).BeginInit();
             this.SuspendLayout();
             // 
             // RUBIN_NPanel
             // 
             this.RUBIN_NPanel.BackgroundImage = global::R440O.BackgroundImages.RUBIN_N;
             this.RUBIN_NPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.RUBIN_NPanel.Controls.Add(this.Rubin_NЛампочкаN1422РезервированиеОткл);
+            this.RUBIN_NPanel.Controls.Add(this.Rubin_NЛампочкаN1422РезервированиеВкл);
+            this.RUBIN_NPanel.Controls.Add(this.Rubin_NЛампочкаN2215_ЧтСи);
+            this.RUBIN_NPanel.Controls.Add(this.Rubin_NЛампочкаN2215_48кГц);
+            this.RUBIN_NPanel.Controls.Add(this.Rubin_NЛампочкаN2215_ТИ);
+            this.RUBIN_NPanel.Controls.Add(this.Rubin_NЛампочкаN4963СрывСинхр);
+            this.RUBIN_NPanel.Controls.Add(this.Rubin_NЛампочкаN2215_II3);
+            this.RUBIN_NPanel.Controls.Add(this.Rubin_NЛампочкаN2215_II2);
+            this.RUBIN_NPanel.Controls.Add(this.Rubin_NЛампочкаN2215_II1);
+            this.RUBIN_NPanel.Controls.Add(this.Rubin_NЛампочкаN4923СрывСинхр);
+            this.RUBIN_NPanel.Controls.Add(this.Rubin_NЛампочкаN2215_3);
+            this.RUBIN_NPanel.Controls.Add(this.Rubin_NЛампочкаN2215_2);
+            this.RUBIN_NPanel.Controls.Add(this.Rubin_NЛампочкаN2215_1);
+            this.RUBIN_NPanel.Controls.Add(this.Rubin_NЛампочкаN5063СрывСинхр);
+            this.RUBIN_NPanel.Controls.Add(this.Rubin_NЛампочкаN1422Транзит);
+            this.RUBIN_NPanel.Controls.Add(this.Rubin_NЛампочкаN3349_27В);
+            this.RUBIN_NPanel.Controls.Add(this.Rubin_NЛампочкаN3349_5В);
+            this.RUBIN_NPanel.Controls.Add(this.Rubin_NЛампочкаN1422Резервный);
+            this.RUBIN_NPanel.Controls.Add(this.Rubin_NЛампочкаN1422Осн3);
+            this.RUBIN_NPanel.Controls.Add(this.Rubin_NЛампочкаN1422Осн2);
+            this.RUBIN_NPanel.Controls.Add(this.Rubin_NЛампочкаN1422Осн1);
+            this.RUBIN_NPanel.Controls.Add(this.Rubin_NЛампочкаN3349ПР2А);
+            this.RUBIN_NPanel.Controls.Add(this.Rubin_NЛампочкаN3349ДУ);
+            this.RUBIN_NPanel.Controls.Add(this.Rubin_NЛампочкаN3349МУ);
+            this.RUBIN_NPanel.Controls.Add(this.Rubin_NЛампочкаN3349Неиспр);
             this.RUBIN_NPanel.Controls.Add(this.Rubin_NТумблерБлок4963);
             this.RUBIN_NPanel.Controls.Add(this.Rubin_NТумблерБлок4923);
             this.RUBIN_NPanel.Controls.Add(this.Rubin_NТумблерБлок5063);
@@ -446,6 +521,256 @@
             this.Rubin_NПереключательГрупСкор.UseVisualStyleBackColor = false;
             this.Rubin_NПереключательГрупСкор.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Rubin_NПереключательГрупСкор_MouseUp);
             // 
+            // Rubin_NЛампочкаN3349Неиспр
+            // 
+            this.Rubin_NЛампочкаN3349Неиспр.BackColor = System.Drawing.Color.Transparent;
+            this.Rubin_NЛампочкаN3349Неиспр.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rubin_NЛампочкаN3349Неиспр.Location = new System.Drawing.Point(87, 94);
+            this.Rubin_NЛампочкаN3349Неиспр.Name = "Rubin_NЛампочкаN3349Неиспр";
+            this.Rubin_NЛампочкаN3349Неиспр.Size = new System.Drawing.Size(31, 32);
+            this.Rubin_NЛампочкаN3349Неиспр.TabIndex = 67;
+            this.Rubin_NЛампочкаN3349Неиспр.TabStop = false;
+            // 
+            // Rubin_NЛампочкаN3349МУ
+            // 
+            this.Rubin_NЛампочкаN3349МУ.BackColor = System.Drawing.Color.Transparent;
+            this.Rubin_NЛампочкаN3349МУ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rubin_NЛампочкаN3349МУ.Location = new System.Drawing.Point(127, 95);
+            this.Rubin_NЛампочкаN3349МУ.Name = "Rubin_NЛампочкаN3349МУ";
+            this.Rubin_NЛампочкаN3349МУ.Size = new System.Drawing.Size(31, 32);
+            this.Rubin_NЛампочкаN3349МУ.TabIndex = 68;
+            this.Rubin_NЛампочкаN3349МУ.TabStop = false;
+            // 
+            // Rubin_NЛампочкаN3349ДУ
+            // 
+            this.Rubin_NЛампочкаN3349ДУ.BackColor = System.Drawing.Color.Transparent;
+            this.Rubin_NЛампочкаN3349ДУ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rubin_NЛампочкаN3349ДУ.Location = new System.Drawing.Point(167, 94);
+            this.Rubin_NЛампочкаN3349ДУ.Name = "Rubin_NЛампочкаN3349ДУ";
+            this.Rubin_NЛампочкаN3349ДУ.Size = new System.Drawing.Size(31, 32);
+            this.Rubin_NЛампочкаN3349ДУ.TabIndex = 69;
+            this.Rubin_NЛампочкаN3349ДУ.TabStop = false;
+            // 
+            // Rubin_NЛампочкаN3349ПР2А
+            // 
+            this.Rubin_NЛампочкаN3349ПР2А.BackColor = System.Drawing.Color.Transparent;
+            this.Rubin_NЛампочкаN3349ПР2А.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rubin_NЛампочкаN3349ПР2А.Location = new System.Drawing.Point(127, 145);
+            this.Rubin_NЛампочкаN3349ПР2А.Name = "Rubin_NЛампочкаN3349ПР2А";
+            this.Rubin_NЛампочкаN3349ПР2А.Size = new System.Drawing.Size(31, 32);
+            this.Rubin_NЛампочкаN3349ПР2А.TabIndex = 70;
+            this.Rubin_NЛампочкаN3349ПР2А.TabStop = false;
+            // 
+            // Rubin_NЛампочкаN1422Резервный
+            // 
+            this.Rubin_NЛампочкаN1422Резервный.BackColor = System.Drawing.Color.Transparent;
+            this.Rubin_NЛампочкаN1422Резервный.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rubin_NЛампочкаN1422Резервный.Location = new System.Drawing.Point(261, 145);
+            this.Rubin_NЛампочкаN1422Резервный.Name = "Rubin_NЛампочкаN1422Резервный";
+            this.Rubin_NЛампочкаN1422Резервный.Size = new System.Drawing.Size(31, 32);
+            this.Rubin_NЛампочкаN1422Резервный.TabIndex = 74;
+            this.Rubin_NЛампочкаN1422Резервный.TabStop = false;
+            // 
+            // Rubin_NЛампочкаN1422Осн3
+            // 
+            this.Rubin_NЛампочкаN1422Осн3.BackColor = System.Drawing.Color.Transparent;
+            this.Rubin_NЛампочкаN1422Осн3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rubin_NЛампочкаN1422Осн3.Location = new System.Drawing.Point(301, 94);
+            this.Rubin_NЛампочкаN1422Осн3.Name = "Rubin_NЛампочкаN1422Осн3";
+            this.Rubin_NЛампочкаN1422Осн3.Size = new System.Drawing.Size(31, 32);
+            this.Rubin_NЛампочкаN1422Осн3.TabIndex = 73;
+            this.Rubin_NЛампочкаN1422Осн3.TabStop = false;
+            // 
+            // Rubin_NЛампочкаN1422Осн2
+            // 
+            this.Rubin_NЛампочкаN1422Осн2.BackColor = System.Drawing.Color.Transparent;
+            this.Rubin_NЛампочкаN1422Осн2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rubin_NЛампочкаN1422Осн2.Location = new System.Drawing.Point(261, 95);
+            this.Rubin_NЛампочкаN1422Осн2.Name = "Rubin_NЛампочкаN1422Осн2";
+            this.Rubin_NЛампочкаN1422Осн2.Size = new System.Drawing.Size(31, 32);
+            this.Rubin_NЛампочкаN1422Осн2.TabIndex = 72;
+            this.Rubin_NЛампочкаN1422Осн2.TabStop = false;
+            // 
+            // Rubin_NЛампочкаN1422Осн1
+            // 
+            this.Rubin_NЛампочкаN1422Осн1.BackColor = System.Drawing.Color.Transparent;
+            this.Rubin_NЛампочкаN1422Осн1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rubin_NЛампочкаN1422Осн1.Location = new System.Drawing.Point(221, 94);
+            this.Rubin_NЛампочкаN1422Осн1.Name = "Rubin_NЛампочкаN1422Осн1";
+            this.Rubin_NЛампочкаN1422Осн1.Size = new System.Drawing.Size(31, 32);
+            this.Rubin_NЛампочкаN1422Осн1.TabIndex = 71;
+            this.Rubin_NЛампочкаN1422Осн1.TabStop = false;
+            // 
+            // Rubin_NЛампочкаN5063СрывСинхр
+            // 
+            this.Rubin_NЛампочкаN5063СрывСинхр.BackColor = System.Drawing.Color.Transparent;
+            this.Rubin_NЛампочкаN5063СрывСинхр.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rubin_NЛампочкаN5063СрывСинхр.Location = new System.Drawing.Point(528, 95);
+            this.Rubin_NЛампочкаN5063СрывСинхр.Name = "Rubin_NЛампочкаN5063СрывСинхр";
+            this.Rubin_NЛампочкаN5063СрывСинхр.Size = new System.Drawing.Size(31, 32);
+            this.Rubin_NЛампочкаN5063СрывСинхр.TabIndex = 78;
+            this.Rubin_NЛампочкаN5063СрывСинхр.TabStop = false;
+            // 
+            // Rubin_NЛампочкаN1422Транзит
+            // 
+            this.Rubin_NЛампочкаN1422Транзит.BackColor = System.Drawing.Color.Transparent;
+            this.Rubin_NЛампочкаN1422Транзит.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rubin_NЛампочкаN1422Транзит.Location = new System.Drawing.Point(224, 465);
+            this.Rubin_NЛампочкаN1422Транзит.Name = "Rubin_NЛампочкаN1422Транзит";
+            this.Rubin_NЛампочкаN1422Транзит.Size = new System.Drawing.Size(31, 32);
+            this.Rubin_NЛампочкаN1422Транзит.TabIndex = 77;
+            this.Rubin_NЛампочкаN1422Транзит.TabStop = false;
+            // 
+            // Rubin_NЛампочкаN3349_27В
+            // 
+            this.Rubin_NЛампочкаN3349_27В.BackColor = System.Drawing.Color.Transparent;
+            this.Rubin_NЛампочкаN3349_27В.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rubin_NЛампочкаN3349_27В.Location = new System.Drawing.Point(167, 466);
+            this.Rubin_NЛампочкаN3349_27В.Name = "Rubin_NЛампочкаN3349_27В";
+            this.Rubin_NЛампочкаN3349_27В.Size = new System.Drawing.Size(31, 32);
+            this.Rubin_NЛампочкаN3349_27В.TabIndex = 76;
+            this.Rubin_NЛампочкаN3349_27В.TabStop = false;
+            // 
+            // Rubin_NЛампочкаN3349_5В
+            // 
+            this.Rubin_NЛампочкаN3349_5В.BackColor = System.Drawing.Color.Transparent;
+            this.Rubin_NЛампочкаN3349_5В.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rubin_NЛампочкаN3349_5В.Location = new System.Drawing.Point(127, 465);
+            this.Rubin_NЛампочкаN3349_5В.Name = "Rubin_NЛампочкаN3349_5В";
+            this.Rubin_NЛампочкаN3349_5В.Size = new System.Drawing.Size(31, 32);
+            this.Rubin_NЛампочкаN3349_5В.TabIndex = 75;
+            this.Rubin_NЛампочкаN3349_5В.TabStop = false;
+            // 
+            // Rubin_NЛампочкаN4923СрывСинхр
+            // 
+            this.Rubin_NЛампочкаN4923СрывСинхр.BackColor = System.Drawing.Color.Transparent;
+            this.Rubin_NЛампочкаN4923СрывСинхр.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rubin_NЛампочкаN4923СрывСинхр.Location = new System.Drawing.Point(663, 95);
+            this.Rubin_NЛампочкаN4923СрывСинхр.Name = "Rubin_NЛампочкаN4923СрывСинхр";
+            this.Rubin_NЛампочкаN4923СрывСинхр.Size = new System.Drawing.Size(31, 32);
+            this.Rubin_NЛампочкаN4923СрывСинхр.TabIndex = 82;
+            this.Rubin_NЛампочкаN4923СрывСинхр.TabStop = false;
+            // 
+            // Rubin_NЛампочкаN2215_3
+            // 
+            this.Rubin_NЛампочкаN2215_3.BackColor = System.Drawing.Color.Transparent;
+            this.Rubin_NЛампочкаN2215_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rubin_NЛампочкаN2215_3.Location = new System.Drawing.Point(434, 94);
+            this.Rubin_NЛампочкаN2215_3.Name = "Rubin_NЛампочкаN2215_3";
+            this.Rubin_NЛампочкаN2215_3.Size = new System.Drawing.Size(31, 32);
+            this.Rubin_NЛампочкаN2215_3.TabIndex = 81;
+            this.Rubin_NЛампочкаN2215_3.TabStop = false;
+            // 
+            // Rubin_NЛампочкаN2215_2
+            // 
+            this.Rubin_NЛампочкаN2215_2.BackColor = System.Drawing.Color.Transparent;
+            this.Rubin_NЛампочкаN2215_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rubin_NЛампочкаN2215_2.Location = new System.Drawing.Point(394, 95);
+            this.Rubin_NЛампочкаN2215_2.Name = "Rubin_NЛампочкаN2215_2";
+            this.Rubin_NЛампочкаN2215_2.Size = new System.Drawing.Size(31, 32);
+            this.Rubin_NЛампочкаN2215_2.TabIndex = 80;
+            this.Rubin_NЛампочкаN2215_2.TabStop = false;
+            // 
+            // Rubin_NЛампочкаN2215_1
+            // 
+            this.Rubin_NЛампочкаN2215_1.BackColor = System.Drawing.Color.Transparent;
+            this.Rubin_NЛампочкаN2215_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rubin_NЛампочкаN2215_1.Location = new System.Drawing.Point(354, 94);
+            this.Rubin_NЛампочкаN2215_1.Name = "Rubin_NЛампочкаN2215_1";
+            this.Rubin_NЛампочкаN2215_1.Size = new System.Drawing.Size(31, 32);
+            this.Rubin_NЛампочкаN2215_1.TabIndex = 79;
+            this.Rubin_NЛампочкаN2215_1.TabStop = false;
+            // 
+            // Rubin_NЛампочкаN4963СрывСинхр
+            // 
+            this.Rubin_NЛампочкаN4963СрывСинхр.BackColor = System.Drawing.Color.Transparent;
+            this.Rubin_NЛампочкаN4963СрывСинхр.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rubin_NЛампочкаN4963СрывСинхр.Location = new System.Drawing.Point(799, 97);
+            this.Rubin_NЛампочкаN4963СрывСинхр.Name = "Rubin_NЛампочкаN4963СрывСинхр";
+            this.Rubin_NЛампочкаN4963СрывСинхр.Size = new System.Drawing.Size(31, 32);
+            this.Rubin_NЛампочкаN4963СрывСинхр.TabIndex = 86;
+            this.Rubin_NЛампочкаN4963СрывСинхр.TabStop = false;
+            // 
+            // Rubin_NЛампочкаN2215_II3
+            // 
+            this.Rubin_NЛампочкаN2215_II3.BackColor = System.Drawing.Color.Transparent;
+            this.Rubin_NЛампочкаN2215_II3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rubin_NЛампочкаN2215_II3.Location = new System.Drawing.Point(434, 136);
+            this.Rubin_NЛампочкаN2215_II3.Name = "Rubin_NЛампочкаN2215_II3";
+            this.Rubin_NЛампочкаN2215_II3.Size = new System.Drawing.Size(31, 32);
+            this.Rubin_NЛампочкаN2215_II3.TabIndex = 85;
+            this.Rubin_NЛампочкаN2215_II3.TabStop = false;
+            // 
+            // Rubin_NЛампочкаN2215_II2
+            // 
+            this.Rubin_NЛампочкаN2215_II2.BackColor = System.Drawing.Color.Transparent;
+            this.Rubin_NЛампочкаN2215_II2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rubin_NЛампочкаN2215_II2.Location = new System.Drawing.Point(394, 137);
+            this.Rubin_NЛампочкаN2215_II2.Name = "Rubin_NЛампочкаN2215_II2";
+            this.Rubin_NЛампочкаN2215_II2.Size = new System.Drawing.Size(31, 32);
+            this.Rubin_NЛампочкаN2215_II2.TabIndex = 84;
+            this.Rubin_NЛампочкаN2215_II2.TabStop = false;
+            // 
+            // Rubin_NЛампочкаN2215_II1
+            // 
+            this.Rubin_NЛампочкаN2215_II1.BackColor = System.Drawing.Color.Transparent;
+            this.Rubin_NЛампочкаN2215_II1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rubin_NЛампочкаN2215_II1.Location = new System.Drawing.Point(354, 136);
+            this.Rubin_NЛампочкаN2215_II1.Name = "Rubin_NЛампочкаN2215_II1";
+            this.Rubin_NЛампочкаN2215_II1.Size = new System.Drawing.Size(31, 32);
+            this.Rubin_NЛампочкаN2215_II1.TabIndex = 83;
+            this.Rubin_NЛампочкаN2215_II1.TabStop = false;
+            // 
+            // Rubin_NЛампочкаN2215_ЧтСи
+            // 
+            this.Rubin_NЛампочкаN2215_ЧтСи.BackColor = System.Drawing.Color.Transparent;
+            this.Rubin_NЛампочкаN2215_ЧтСи.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rubin_NЛампочкаN2215_ЧтСи.Location = new System.Drawing.Point(434, 174);
+            this.Rubin_NЛампочкаN2215_ЧтСи.Name = "Rubin_NЛампочкаN2215_ЧтСи";
+            this.Rubin_NЛампочкаN2215_ЧтСи.Size = new System.Drawing.Size(31, 32);
+            this.Rubin_NЛампочкаN2215_ЧтСи.TabIndex = 89;
+            this.Rubin_NЛампочкаN2215_ЧтСи.TabStop = false;
+            // 
+            // Rubin_NЛампочкаN2215_48кГц
+            // 
+            this.Rubin_NЛампочкаN2215_48кГц.BackColor = System.Drawing.Color.Transparent;
+            this.Rubin_NЛампочкаN2215_48кГц.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rubin_NЛампочкаN2215_48кГц.Location = new System.Drawing.Point(394, 175);
+            this.Rubin_NЛампочкаN2215_48кГц.Name = "Rubin_NЛампочкаN2215_48кГц";
+            this.Rubin_NЛампочкаN2215_48кГц.Size = new System.Drawing.Size(31, 32);
+            this.Rubin_NЛампочкаN2215_48кГц.TabIndex = 88;
+            this.Rubin_NЛампочкаN2215_48кГц.TabStop = false;
+            // 
+            // Rubin_NЛампочкаN2215_ТИ
+            // 
+            this.Rubin_NЛампочкаN2215_ТИ.BackColor = System.Drawing.Color.Transparent;
+            this.Rubin_NЛампочкаN2215_ТИ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rubin_NЛампочкаN2215_ТИ.Location = new System.Drawing.Point(354, 174);
+            this.Rubin_NЛампочкаN2215_ТИ.Name = "Rubin_NЛампочкаN2215_ТИ";
+            this.Rubin_NЛампочкаN2215_ТИ.Size = new System.Drawing.Size(31, 32);
+            this.Rubin_NЛампочкаN2215_ТИ.TabIndex = 87;
+            this.Rubin_NЛампочкаN2215_ТИ.TabStop = false;
+            // 
+            // Rubin_NЛампочкаN1422РезервированиеОткл
+            // 
+            this.Rubin_NЛампочкаN1422РезервированиеОткл.BackColor = System.Drawing.Color.Transparent;
+            this.Rubin_NЛампочкаN1422РезервированиеОткл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rubin_NЛампочкаN1422РезервированиеОткл.Location = new System.Drawing.Point(286, 335);
+            this.Rubin_NЛампочкаN1422РезервированиеОткл.Name = "Rubin_NЛампочкаN1422РезервированиеОткл";
+            this.Rubin_NЛампочкаN1422РезервированиеОткл.Size = new System.Drawing.Size(31, 32);
+            this.Rubin_NЛампочкаN1422РезервированиеОткл.TabIndex = 91;
+            this.Rubin_NЛампочкаN1422РезервированиеОткл.TabStop = false;
+            // 
+            // Rubin_NЛампочкаN1422РезервированиеВкл
+            // 
+            this.Rubin_NЛампочкаN1422РезервированиеВкл.BackColor = System.Drawing.Color.Transparent;
+            this.Rubin_NЛампочкаN1422РезервированиеВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rubin_NЛампочкаN1422РезервированиеВкл.Location = new System.Drawing.Point(224, 335);
+            this.Rubin_NЛампочкаN1422РезервированиеВкл.Name = "Rubin_NЛампочкаN1422РезервированиеВкл";
+            this.Rubin_NЛампочкаN1422РезервированиеВкл.Size = new System.Drawing.Size(31, 32);
+            this.Rubin_NЛампочкаN1422РезервированиеВкл.TabIndex = 90;
+            this.Rubin_NЛампочкаN1422РезервированиеВкл.TabStop = false;
+            // 
             // Rubin_NForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -458,6 +783,31 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "РУБИН-Н";
             this.RUBIN_NPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN3349Неиспр)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN3349МУ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN3349ДУ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN3349ПР2А)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN1422Резервный)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN1422Осн3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN1422Осн2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN1422Осн1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN5063СрывСинхр)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN1422Транзит)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN3349_27В)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN3349_5В)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN4923СрывСинхр)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN2215_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN2215_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN2215_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN4963СрывСинхр)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN2215_II3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN2215_II2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN2215_II1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN2215_ЧтСи)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN2215_48кГц)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN2215_ТИ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN1422РезервированиеОткл)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rubin_NЛампочкаN1422РезервированиеВкл)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -487,5 +837,30 @@
         private System.Windows.Forms.Button Rubin_NТумблерБлок4923;
         private System.Windows.Forms.Button Rubin_NТумблерБлок5063;
         private System.Windows.Forms.Button Rubin_NТумблерПолярность;
+        private System.Windows.Forms.PictureBox Rubin_NЛампочкаN3349Неиспр;
+        private System.Windows.Forms.PictureBox Rubin_NЛампочкаN2215_ЧтСи;
+        private System.Windows.Forms.PictureBox Rubin_NЛампочкаN2215_48кГц;
+        private System.Windows.Forms.PictureBox Rubin_NЛампочкаN2215_ТИ;
+        private System.Windows.Forms.PictureBox Rubin_NЛампочкаN4963СрывСинхр;
+        private System.Windows.Forms.PictureBox Rubin_NЛампочкаN2215_II3;
+        private System.Windows.Forms.PictureBox Rubin_NЛампочкаN2215_II2;
+        private System.Windows.Forms.PictureBox Rubin_NЛампочкаN2215_II1;
+        private System.Windows.Forms.PictureBox Rubin_NЛампочкаN4923СрывСинхр;
+        private System.Windows.Forms.PictureBox Rubin_NЛампочкаN2215_3;
+        private System.Windows.Forms.PictureBox Rubin_NЛампочкаN2215_2;
+        private System.Windows.Forms.PictureBox Rubin_NЛампочкаN2215_1;
+        private System.Windows.Forms.PictureBox Rubin_NЛампочкаN5063СрывСинхр;
+        private System.Windows.Forms.PictureBox Rubin_NЛампочкаN1422Транзит;
+        private System.Windows.Forms.PictureBox Rubin_NЛампочкаN3349_27В;
+        private System.Windows.Forms.PictureBox Rubin_NЛампочкаN3349_5В;
+        private System.Windows.Forms.PictureBox Rubin_NЛампочкаN1422Резервный;
+        private System.Windows.Forms.PictureBox Rubin_NЛампочкаN1422Осн3;
+        private System.Windows.Forms.PictureBox Rubin_NЛампочкаN1422Осн2;
+        private System.Windows.Forms.PictureBox Rubin_NЛампочкаN1422Осн1;
+        private System.Windows.Forms.PictureBox Rubin_NЛампочкаN3349ПР2А;
+        private System.Windows.Forms.PictureBox Rubin_NЛампочкаN3349ДУ;
+        private System.Windows.Forms.PictureBox Rubin_NЛампочкаN3349МУ;
+        private System.Windows.Forms.PictureBox Rubin_NЛампочкаN1422РезервированиеОткл;
+        private System.Windows.Forms.PictureBox Rubin_NЛампочкаN1422РезервированиеВкл;
     }
 }

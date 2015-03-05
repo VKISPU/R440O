@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.BMBPanel = new System.Windows.Forms.Panel();
-            this.BMBИндикаторПриемВызова = new System.Windows.Forms.PictureBox();
+            this.BMBЛампочкаПриемВызова = new System.Windows.Forms.PictureBox();
             this.BMBИндикаторПриемКоманды = new System.Windows.Forms.Label();
             this.BMBИндикаторНаборКоманды = new System.Windows.Forms.Label();
             this.BMBЛампочкаДК = new System.Windows.Forms.PictureBox();
@@ -53,17 +53,32 @@
             this.BMBКнопкаНаборКоманды3 = new System.Windows.Forms.Button();
             this.BMBКнопкаНаборКоманды2 = new System.Windows.Forms.Button();
             this.BMBКнопкаНаборКоманды1 = new System.Windows.Forms.Button();
+            this.BMBЛампочкаРезервВкл = new System.Windows.Forms.PictureBox();
+            this.BMBЛампочкаНаправление1 = new System.Windows.Forms.PictureBox();
+            this.BMBЛампочкаНаправление2 = new System.Windows.Forms.PictureBox();
+            this.BMBЛампочкаНаправление3 = new System.Windows.Forms.PictureBox();
+            this.BMBЛампочкаНаправление4 = new System.Windows.Forms.PictureBox();
             this.BMBPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BMBИндикаторПриемВызова)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаПриемВызова)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаДК)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаТЧ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаРезервВкл)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление4)).BeginInit();
             this.SuspendLayout();
             // 
             // BMBPanel
             // 
             this.BMBPanel.BackgroundImage = global::R440O.BackgroundImages.BMB;
             this.BMBPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBPanel.Controls.Add(this.BMBИндикаторПриемВызова);
+            this.BMBPanel.Controls.Add(this.BMBЛампочкаНаправление4);
+            this.BMBPanel.Controls.Add(this.BMBЛампочкаНаправление3);
+            this.BMBPanel.Controls.Add(this.BMBЛампочкаНаправление2);
+            this.BMBPanel.Controls.Add(this.BMBЛампочкаНаправление1);
+            this.BMBPanel.Controls.Add(this.BMBЛампочкаРезервВкл);
+            this.BMBPanel.Controls.Add(this.BMBЛампочкаПриемВызова);
             this.BMBPanel.Controls.Add(this.BMBИндикаторПриемКоманды);
             this.BMBPanel.Controls.Add(this.BMBИндикаторНаборКоманды);
             this.BMBPanel.Controls.Add(this.BMBЛампочкаДК);
@@ -92,15 +107,15 @@
             this.BMBPanel.Size = new System.Drawing.Size(954, 458);
             this.BMBPanel.TabIndex = 1;
             // 
-            // BMBИндикаторПриемВызова
+            // BMBЛампочкаПриемВызова
             // 
-            this.BMBИндикаторПриемВызова.BackColor = System.Drawing.Color.Transparent;
-            this.BMBИндикаторПриемВызова.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBИндикаторПриемВызова.Location = new System.Drawing.Point(467, 79);
-            this.BMBИндикаторПриемВызова.Name = "BMBИндикаторПриемВызова";
-            this.BMBИндикаторПриемВызова.Size = new System.Drawing.Size(86, 52);
-            this.BMBИндикаторПриемВызова.TabIndex = 78;
-            this.BMBИндикаторПриемВызова.TabStop = false;
+            this.BMBЛампочкаПриемВызова.BackColor = System.Drawing.Color.Transparent;
+            this.BMBЛампочкаПриемВызова.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BMBЛампочкаПриемВызова.Location = new System.Drawing.Point(467, 79);
+            this.BMBЛампочкаПриемВызова.Name = "BMBЛампочкаПриемВызова";
+            this.BMBЛампочкаПриемВызова.Size = new System.Drawing.Size(86, 52);
+            this.BMBЛампочкаПриемВызова.TabIndex = 78;
+            this.BMBЛампочкаПриемВызова.TabStop = false;
             // 
             // BMBИндикаторПриемКоманды
             // 
@@ -510,6 +525,56 @@
             this.BMBКнопкаНаборКоманды1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BMBКнопкаНаборКоманды1_MouseDown);
             this.BMBКнопкаНаборКоманды1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMBКнопкаНаборКоманды1_MouseUp);
             // 
+            // BMBЛампочкаРезервВкл
+            // 
+            this.BMBЛампочкаРезервВкл.BackColor = System.Drawing.Color.Transparent;
+            this.BMBЛампочкаРезервВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BMBЛампочкаРезервВкл.Location = new System.Drawing.Point(283, 79);
+            this.BMBЛампочкаРезервВкл.Name = "BMBЛампочкаРезервВкл";
+            this.BMBЛампочкаРезервВкл.Size = new System.Drawing.Size(86, 52);
+            this.BMBЛампочкаРезервВкл.TabIndex = 79;
+            this.BMBЛампочкаРезервВкл.TabStop = false;
+            // 
+            // BMBЛампочкаНаправление1
+            // 
+            this.BMBЛампочкаНаправление1.BackColor = System.Drawing.Color.Transparent;
+            this.BMBЛампочкаНаправление1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BMBЛампочкаНаправление1.Location = new System.Drawing.Point(460, 172);
+            this.BMBЛампочкаНаправление1.Name = "BMBЛампочкаНаправление1";
+            this.BMBЛампочкаНаправление1.Size = new System.Drawing.Size(27, 25);
+            this.BMBЛампочкаНаправление1.TabIndex = 80;
+            this.BMBЛампочкаНаправление1.TabStop = false;
+            // 
+            // BMBЛампочкаНаправление2
+            // 
+            this.BMBЛампочкаНаправление2.BackColor = System.Drawing.Color.Transparent;
+            this.BMBЛампочкаНаправление2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BMBЛампочкаНаправление2.Location = new System.Drawing.Point(484, 172);
+            this.BMBЛампочкаНаправление2.Name = "BMBЛампочкаНаправление2";
+            this.BMBЛампочкаНаправление2.Size = new System.Drawing.Size(27, 25);
+            this.BMBЛампочкаНаправление2.TabIndex = 81;
+            this.BMBЛампочкаНаправление2.TabStop = false;
+            // 
+            // BMBЛампочкаНаправление3
+            // 
+            this.BMBЛампочкаНаправление3.BackColor = System.Drawing.Color.Transparent;
+            this.BMBЛампочкаНаправление3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BMBЛампочкаНаправление3.Location = new System.Drawing.Point(509, 172);
+            this.BMBЛампочкаНаправление3.Name = "BMBЛампочкаНаправление3";
+            this.BMBЛампочкаНаправление3.Size = new System.Drawing.Size(27, 25);
+            this.BMBЛампочкаНаправление3.TabIndex = 82;
+            this.BMBЛампочкаНаправление3.TabStop = false;
+            // 
+            // BMBЛампочкаНаправление4
+            // 
+            this.BMBЛампочкаНаправление4.BackColor = System.Drawing.Color.Transparent;
+            this.BMBЛампочкаНаправление4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BMBЛампочкаНаправление4.Location = new System.Drawing.Point(534, 172);
+            this.BMBЛампочкаНаправление4.Name = "BMBЛампочкаНаправление4";
+            this.BMBЛампочкаНаправление4.Size = new System.Drawing.Size(27, 25);
+            this.BMBЛампочкаНаправление4.TabIndex = 83;
+            this.BMBЛампочкаНаправление4.TabStop = false;
+            // 
             // BMBForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -523,9 +588,14 @@
             this.Text = "БМБ";
             this.BMBPanel.ResumeLayout(false);
             this.BMBPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BMBИндикаторПриемВызова)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаПриемВызова)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаДК)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаТЧ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаРезервВкл)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -556,6 +626,11 @@
         private System.Windows.Forms.PictureBox BMBЛампочкаТЧ;
         private System.Windows.Forms.Label BMBИндикаторПриемКоманды;
         private System.Windows.Forms.Label BMBИндикаторНаборКоманды;
-        private System.Windows.Forms.PictureBox BMBИндикаторПриемВызова;
+        private System.Windows.Forms.PictureBox BMBЛампочкаПриемВызова;
+        private System.Windows.Forms.PictureBox BMBЛампочкаРезервВкл;
+        private System.Windows.Forms.PictureBox BMBЛампочкаНаправление4;
+        private System.Windows.Forms.PictureBox BMBЛампочкаНаправление3;
+        private System.Windows.Forms.PictureBox BMBЛампочкаНаправление2;
+        private System.Windows.Forms.PictureBox BMBЛампочкаНаправление1;
     }
 }

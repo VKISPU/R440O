@@ -5,9 +5,9 @@ namespace R440O.Parameters
     public class A306Parameters
     {
         ////Лампочки
-        public static string A306ЛампочкаСетьВкл { get; set; }
-        public static string A306ЛампочкаНО1Вкл { get; set; }
-        public static string A306ЛампочкаНО2Вкл { get; set; }
+        public static bool A306ЛампочкаСетьВкл = false;
+        public static bool A306ЛампочкаНО1Вкл = false;
+        public static bool A306ЛампочкаНО2Вкл = false;
 
         ////Тумблеры
         /// <summary>

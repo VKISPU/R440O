@@ -11,7 +11,7 @@ namespace R440O.R440OForms.A205M_2
     using ThirdParty;
 
     /// <summary>
-    /// Форма блока А205М-2
+    /// Форма блока А205М-1
     /// </summary>
     public partial class A205M_2Form : Form
     {

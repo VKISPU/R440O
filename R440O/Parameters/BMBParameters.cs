@@ -96,6 +96,12 @@ namespace R440O.Parameters
 
         public static bool BMBЛампочкаДК = false;
         public static bool BMBЛампочкаТЧ = false;
+        public static bool BMBЛампочкаРезервВкл = false;
+        public static bool BMBЛампочкаПриемВызова = false;
+        public static bool BMBЛампочкаНаправление1 = false;
+        public static bool BMBЛампочкаНаправление2 = false;
+        public static bool BMBЛампочкаНаправление3 = false;
+        public static bool BMBЛампочкаНаправление4 = false;
 
         #endregion
 

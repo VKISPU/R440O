@@ -6,20 +6,20 @@
     public class A1Parameters
     {
         ////Лампочки
-        public static string A1ЛампочкаБОЧ { get; set; }
-        public static string A1ЛампочкаФСПК { get; set; }
-        public static string A1ЛампочкаТКААвария { get; set; }
-        public static string A1ЛампочкаЭП1 { get; set; }
-        public static string A1ЛампочкаПУЛ1_1 { get; set; }
-        public static string A1ЛампочкаПУЛ1_2 { get; set; }
-        public static string A1ЛампочкаЭП2 { get; set; }
-        public static string A1ЛампочкаПУЛ2_1 { get; set; }
-        public static string A1ЛампочкаПУЛ2_2 { get; set; }
-        public static string A1ЛампочкаЭП3 { get; set; }
-        public static string A1ЛампочкаПУЛ3_1 { get; set; }
-        public static string A1ЛампочкаПУЛ3_2 { get; set; }
-        public static string A1ЛампочкаНеиспр { get; set; }
-        public static string A1BЛампочкаПитание { get; set; }
+        public static bool A1ЛампочкаБОЧ = false;
+        public static bool A1ЛампочкаФСПК;
+        public static bool A1ЛампочкаТКААвария;
+        public static bool A1ЛампочкаЭП1;
+        public static bool A1ЛампочкаПУЛ1_1;
+        public static bool A1ЛампочкаПУЛ1_2;
+        public static bool A1ЛампочкаЭП2;
+        public static bool A1ЛампочкаПУЛ2_1;
+        public static bool A1ЛампочкаПУЛ2_2;
+        public static bool A1ЛампочкаЭП3;
+        public static bool A1ЛампочкаПУЛ3_1;
+        public static bool A1ЛампочкаПУЛ3_2;
+        public static bool A1ЛампочкаНеиспр;
+        public static bool A1BЛампочкаПитание;
 
         ////Тумблер
         /// <summary>
