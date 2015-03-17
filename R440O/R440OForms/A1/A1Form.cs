@@ -1,22 +1,11 @@
-﻿//-----------------------------------------------------------------------
-// <copyright file="A1Form.cs" company="VKISPU">
-//      R440O station.
-// </copyright>
-//-----------------------------------------------------------------------
+﻿using System.Linq;
 
 namespace R440O.R440OForms.A1
 {
     using System.Windows.Forms;
-    using Parameters;
 
-    /// <summary>
-    /// Форма блока А1
-    /// </summary>
     public partial class A1Form : Form
     {
-        /// <summary>
-        /// Инициализирует новый экземпляр класса <see cref="A1Form"/>
-        /// </summary>
         public A1Form()
         {
             this.InitializeComponent();
@@ -25,81 +14,101 @@ namespace R440O.R440OForms.A1
             this.InitializeLamps();
         }
 
+        #region Обработка действий пользователя
+
         /// <summary>
         /// Переключение кнопки скорость В АБ 1ТЛФК
         /// </summary>
-        private void A1КнопкаСкоростьАБ_1ТЛФ_К_Click(object sender, System.EventArgs e)
+        private void КнопкаСкоростьАБ_1ТЛФ_К_Click(object sender, System.EventArgs e)
         {
-            if (A1Parameters.A1КнопкаСкоростьАБ_1ТЛФ_К == false)
+            if (A1Parameters.КнопкаСкоростьАБ_1ТЛФ_К == false)
             {
-                this.A1КнопкаСкоростьАБ_1ТЛФ_К.BackgroundImage = null;
-                A1Parameters.A1КнопкаСкоростьАБ_1ТЛФ_К = true;
+                this.КнопкаСкоростьАБ_1ТЛФ_К.BackgroundImage = null;
+                A1Parameters.КнопкаСкоростьАБ_1ТЛФ_К = true;
             }
             else
             {
-                this.A1КнопкаСкоростьАБ_1ТЛФ_К.BackgroundImage = ControlElementImages.buttonRectType1;
-                A1Parameters.A1КнопкаСкоростьАБ_1ТЛФ_К = false;
+                this.КнопкаСкоростьАБ_1ТЛФ_К.BackgroundImage = ControlElementImages.buttonRectType1;
+                A1Parameters.КнопкаСкоростьАБ_1ТЛФ_К = false;
             }
         }
 
         /// <summary>
         /// Переключение кнопки скорость В ГР
         /// </summary>
-        private void A1КнопкаСкоростьГР_Click(object sender, System.EventArgs e)
+        private void КнопкаСкоростьГР_Click(object sender, System.EventArgs e)
         {
-            if (A1Parameters.A1КнопкаСкоростьГР == false)
+            if (A1Parameters.КнопкаСкоростьГР == false)
             {
-                this.A1КнопкаСкоростьГР.BackgroundImage = null;
-                A1Parameters.A1КнопкаСкоростьГР = true;
+                this.КнопкаСкоростьГР.BackgroundImage = null;
+                A1Parameters.КнопкаСкоростьГР = true;
             }
             else
             {
-                this.A1КнопкаСкоростьГР.BackgroundImage = ControlElementImages.buttonRectType1;
-                A1Parameters.A1КнопкаСкоростьГР = false;
+                this.КнопкаСкоростьГР.BackgroundImage = ControlElementImages.buttonRectType1;
+                A1Parameters.КнопкаСкоростьГР = false;
             }
         }
 
         /// <summary>
         /// Переключение тумблера управления питанием блока
         /// </summary>
-        private void A1ТумблерМуДу_Click(object sender, System.EventArgs e)
+        private void ТумблерМуДу_Click(object sender, System.EventArgs e)
         {
-            if (A1Parameters.A1ТумблерМуДу == "Му")
-            {
-                this.A1ТумблерМуДу.BackgroundImage = ControlElementImages.tumblerType4Down;
-                A1Parameters.A1ТумблерМуДу = "Ду";
-            }
-            else
-            {
-                this.A1ТумблерМуДу.BackgroundImage = ControlElementImages.tumblerType4Up;
-                A1Parameters.A1ТумблерМуДу = "Му";
-            }
+            A1Parameters.ТумблерМуДу = !A1Parameters.ТумблерМуДу;
+            this.ТумблерМуДу.BackgroundImage = A1Parameters.ТумблерМуДу
+                ? ControlElementImages.tumblerType4Up
+                : ControlElementImages.tumblerType4Down;
         }
 
+        #endregion
+
+        #region Инициализация
 
         private void InitializeTumblersPosition()
         {
-            this.A1ТумблерМуДу.BackgroundImage = A1Parameters.A1ТумблерМуДу == "Ду"
-                ? ControlElementImages.tumblerType4Down
-                : ControlElementImages.tumblerType4Up;
+            this.ТумблерМуДу.BackgroundImage = A1Parameters.ТумблерМуДу
+                ? ControlElementImages.tumblerType4Up
+                : ControlElementImages.tumblerType4Down;
         }
 
         private void InitializeButtonsPosition()
         {
-            this.A1КнопкаСкоростьГР.BackgroundImage = A1Parameters.A1КнопкаСкоростьГР
+            this.КнопкаСкоростьГР.BackgroundImage = A1Parameters.КнопкаСкоростьГР
                 ? null
                 : ControlElementImages.buttonRectType1;
 
-            this.A1КнопкаСкоростьАБ_1ТЛФ_К.BackgroundImage = A1Parameters.A1КнопкаСкоростьАБ_1ТЛФ_К
+            this.КнопкаСкоростьАБ_1ТЛФ_К.BackgroundImage = A1Parameters.КнопкаСкоростьАБ_1ТЛФ_К
                 ? null
                 : ControlElementImages.buttonRectType1;
         }
 
-        public void InitializeLamps()
+        private void InitializeLamps()
         {
-            this.A1ЛампочкаБОЧ.BackgroundImage = A1Parameters.A1ЛампочкаБОЧ
-                ? ControlElementImages.lampType2OnRed
-                : null;
+            foreach (Control itemIn in Panel.Controls)
+            {
+                var item = itemIn;
+                if (!item.Name.Contains("Лампочка")) continue;
+                var fieldList = typeof (A1Parameters).GetFields();
+                foreach (var field in fieldList.Where(field => item.Name == field.Name))
+                {
+                    if (item.Name.Contains("ЛампочкаФСПК") ||
+                        item.Name.Contains("ЛампочкаПУЛ1_2") ||
+                        item.Name.Contains("ЛампочкаПУЛ2_2") ||
+                        item.Name.Contains("ЛампочкаПУЛ3_2") ||
+                        item.Name.Contains("ЛампочкаПитание"))
+                        item.BackgroundImage = (bool) field.GetValue(null)
+                            ? ControlElementImages.lampType3OnRed
+                            : null;
+                    else
+                        item.BackgroundImage = (bool) field.GetValue(null)
+                            ? ControlElementImages.lampType2OnRed
+                            : null;
+                    break;
+                }
+            }
         }
+
+        #endregion
     }
 }

@@ -52,7 +52,7 @@
             this.Panel.Controls.Add(this.КабельВход2);
             this.Panel.Controls.Add(this.КабельВход1);
             this.Panel.Location = new System.Drawing.Point(0, 0);
-            this.Panel.Name = "VoltageStabilizerPanel";
+            this.Panel.Name = "Panel";
             this.Panel.Size = new System.Drawing.Size(1092, 773);
             this.Panel.TabIndex = 0;
             // 
@@ -62,7 +62,7 @@
             this.ЛампочкаАвария.BackgroundImage = global::R440O.ControlElementImages.lampType6OnRed;
             this.ЛампочкаАвария.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ЛампочкаАвария.Location = new System.Drawing.Point(646, 10);
-            this.ЛампочкаАвария.Name = "VoltageStabilizerЛампочкаАвария";
+            this.ЛампочкаАвария.Name = "ЛампочкаАвария";
             this.ЛампочкаАвария.Size = new System.Drawing.Size(51, 45);
             this.ЛампочкаАвария.TabIndex = 36;
             this.ЛампочкаАвария.TabStop = false;
@@ -73,7 +73,7 @@
             this.ЛампочкаСетьВкл.BackgroundImage = global::R440O.ControlElementImages.lampType10OnGreen;
             this.ЛампочкаСетьВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ЛампочкаСетьВкл.Location = new System.Drawing.Point(582, 14);
-            this.ЛампочкаСетьВкл.Name = "VoltageStabilizerЛампочкаСетьВкл";
+            this.ЛампочкаСетьВкл.Name = "ЛампочкаСетьВкл";
             this.ЛампочкаСетьВкл.Size = new System.Drawing.Size(51, 45);
             this.ЛампочкаСетьВкл.TabIndex = 35;
             this.ЛампочкаСетьВкл.TabStop = false;
@@ -88,7 +88,7 @@
             this.ПереключательКонтрольНапр.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.ПереключательКонтрольНапр.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ПереключательКонтрольНапр.Location = new System.Drawing.Point(796, 63);
-            this.ПереключательКонтрольНапр.Name = "VoltageStabilizerПереключательКонтрольНапр";
+            this.ПереключательКонтрольНапр.Name = "ПереключательКонтрольНапр";
             this.ПереключательКонтрольНапр.Size = new System.Drawing.Size(81, 82);
             this.ПереключательКонтрольНапр.TabIndex = 34;
             this.ПереключательКонтрольНапр.UseVisualStyleBackColor = false;
@@ -103,13 +103,13 @@
             this.КабельВход2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КабельВход2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КабельВход2.Location = new System.Drawing.Point(-12, 410);
-            this.КабельВход2.Name = "VoltageStabilizerКабельВход2";
+            this.КабельВход2.Name = "КабельВход2";
             this.КабельВход2.Size = new System.Drawing.Size(107, 99);
             this.КабельВход2.TabIndex = 33;
             this.КабельВход2.UseVisualStyleBackColor = false;
             this.КабельВход2.Click += new System.EventHandler(this.КабельВход2_Click);
             // 
-            // VoltageStabilizerКабельВход1
+            // КабельВход1
             // 
             this.КабельВход1.BackColor = System.Drawing.Color.Transparent;
             this.КабельВход1.BackgroundImage = global::R440O.ControlElementImages.voltageStabilizerInput;
@@ -119,19 +119,19 @@
             this.КабельВход1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КабельВход1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КабельВход1.Location = new System.Drawing.Point(-12, 306);
-            this.КабельВход1.Name = "VoltageStabilizerКабельВход1";
+            this.КабельВход1.Name = "КабельВход1";
             this.КабельВход1.Size = new System.Drawing.Size(107, 99);
             this.КабельВход1.TabIndex = 32;
             this.КабельВход1.UseVisualStyleBackColor = false;
             this.КабельВход1.Click += new System.EventHandler(this.КабельВход1_Click);
             // 
-            // VoltageStabilizerИндикаторНапряжение
+            // ИндикаторНапряжение
             // 
             this.ИндикаторНапряжение.BackColor = System.Drawing.Color.Transparent;
             this.ИндикаторНапряжение.BackgroundImage = global::R440O.ControlElementImages.arrowNormal;
             this.ИндикаторНапряжение.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ИндикаторНапряжение.Location = new System.Drawing.Point(370, 41);
-            this.ИндикаторНапряжение.Name = "VoltageStabilizerИндикаторНапряжение";
+            this.ИндикаторНапряжение.Name = "ИндикаторНапряжение";
             this.ИндикаторНапряжение.Size = new System.Drawing.Size(64, 81);
             this.ИндикаторНапряжение.TabIndex = 66;
             this.ИндикаторНапряжение.TabStop = false;
