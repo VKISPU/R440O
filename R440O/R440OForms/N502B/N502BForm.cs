@@ -4,379 +4,341 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-using R440O.Parameters;
 using R440O.ThirdParty;
 
 namespace R440O.R440OForms.N502B
 {
     using System.Windows.Forms;
 
-    /// <summary>
-    /// Форма блока Н502Б
-    /// </summary>
     public partial class N502BForm : Form
     {
-        /// <summary>
-        /// Инициализирует новый экземпляр класса <see cref="N502BForm"/>
-        /// </summary>
         public N502BForm()
         {
-            this.InitializeComponent();
-            this.InitializeTogglesPosition();
-            this.InitializeTumblersPosition();
-            this.InitializeLamps();
+            InitializeComponent();
+            InitializeLamps();
+            InitializeTumblersPosition();
+            InitializeTogglesPosition();
         }
 
         #region Тумблеры
-        private void N502BТумблерЭлектрооборуд_Click(object sender, System.EventArgs e)
+
+        private void ТумблерЭлектрооборудование_Click(object sender, System.EventArgs e)
         {
-            N502BParameters.N502BТумблерЭлектрооборуд = !N502BParameters.N502BТумблерЭлектрооборуд;
-            this.N502BТумблерЭлектрооборуд.BackgroundImage = N502BParameters.N502BТумблерЭлектрооборуд
+            N502BParameters.ТумблерЭлектрооборудование = !N502BParameters.ТумблерЭлектрооборудование;
+            ТумблерЭлектрооборудование.BackgroundImage = N502BParameters.ТумблерЭлектрооборудование
                 ? ControlElementImages.tumblerType2Up
                 : ControlElementImages.tumblerType2Down;
-            if (this.PowerTumblersChanged != null)
-            {
-                this.PowerTumblersChanged();
-            }
         }
 
-        private void N502BТумблерВыпрямитель27В_Click(object sender, System.EventArgs e)
+        private void ТумблерВыпрямитель27В_Click(object sender, System.EventArgs e)
         {
-            N502BParameters.N502BТумблерВыпрямитель27В = !N502BParameters.N502BТумблерВыпрямитель27В;
-            this.N502BТумблерВыпрямитель27В.BackgroundImage = N502BParameters.N502BТумблерВыпрямитель27В
+            N502BParameters.ТумблерВыпрямитель27В = !N502BParameters.ТумблерВыпрямитель27В;
+            ТумблерВыпрямитель27В.BackgroundImage = N502BParameters.ТумблерВыпрямитель27В
                 ? ControlElementImages.tumblerType2Up
                 : ControlElementImages.tumblerType2Down;
-            if (this.PowerTumblersChanged != null)
-            {
-                this.PowerTumblersChanged();
-            }
         }
 
-        private void N502BТумблерОсвещение_Click(object sender, System.EventArgs e)
+        private void ТумблерОсвещение_Click(object sender, System.EventArgs e)
         {
-            if (N502BParameters.N502BТумблерОсвещение == "true")
-            {
-                this.N502BТумблерОсвещение.BackgroundImage = ControlElementImages.tumblerType2Down;
-                N502BParameters.N502BТумблерОсвещение = "false";
-            }
-            else
-            {
-                this.N502BТумблерОсвещение.BackgroundImage = ControlElementImages.tumblerType2Up;
-                N502BParameters.N502BТумблерОсвещение = "true";
-            }
+            N502BParameters.ТумблерОсвещение = !N502BParameters.ТумблерОсвещение;
+            ТумблерОсвещение.BackgroundImage = N502BParameters.ТумблерОсвещение
+                ? ControlElementImages.tumblerType2Up
+                : ControlElementImages.tumblerType2Down;
         }
 
-        private void N502BТумблерН13_1_Click(object sender, System.EventArgs e)
+        private void ТумблерН131_Click(object sender, System.EventArgs e)
         {
-            if (N502BParameters.N502BТумблерН13_1 == "true")
-            {
-                this.N502BТумблерН13_1.BackgroundImage = ControlElementImages.tumblerType2Down;
-                N502BParameters.N502BТумблерН13_1 = "false";
-            }
-            else
-            {
-                this.N502BТумблерН13_1.BackgroundImage = ControlElementImages.tumblerType2Up;
-                N502BParameters.N502BТумблерН13_1 = "true";
-            }
+            N502BParameters.ТумблерН131 = !N502BParameters.ТумблерН131;
+            ТумблерН131.BackgroundImage = N502BParameters.ТумблерН131
+                ? ControlElementImages.tumblerType2Up
+                : ControlElementImages.tumblerType2Down;
         }
 
-        private void N502BТумблерН13_2_Click(object sender, System.EventArgs e)
+        private void ТумблерН132_Click(object sender, System.EventArgs e)
         {
-            if (N502BParameters.N502BТумблерН13_2 == "true")
-            {
-                this.N502BТумблерН13_2.BackgroundImage = ControlElementImages.tumblerType2Down;
-                N502BParameters.N502BТумблерН13_2 = "false";
-            }
-            else
-            {
-                this.N502BТумблерН13_2.BackgroundImage = ControlElementImages.tumblerType2Up;
-                N502BParameters.N502BТумблерН13_2 = "true";
-            }
+            N502BParameters.ТумблерН132 = !N502BParameters.ТумблерН132;
+            ТумблерН132.BackgroundImage = N502BParameters.ТумблерН132
+                ? ControlElementImages.tumblerType2Up
+                : ControlElementImages.tumblerType2Down;
         }
 
-        private void N502BТумблерН15_Click(object sender, System.EventArgs e)
+        private void ТумблерН15_Click(object sender, System.EventArgs e)
         {
-            if (N502BParameters.N502BТумблерН15 == "true")
-            {
-                this.N502BТумблерН15.BackgroundImage = ControlElementImages.tumblerType2Down;
-                N502BParameters.N502BТумблерН15 = "false";
-            }
-            else
-            {
-                this.N502BТумблерН15.BackgroundImage = ControlElementImages.tumblerType2Up;
-                N502BParameters.N502BТумблерН15 = "true";
-            }
+            N502BParameters.ТумблерН15 = !N502BParameters.ТумблерН15;
+            ТумблерН15.BackgroundImage = N502BParameters.ТумблерН15
+                ? ControlElementImages.tumblerType2Up
+                : ControlElementImages.tumblerType2Down;
         }
 
-        private void N502BТумблерОсвещение1_MouseDown(object sender, MouseEventArgs e)
+        private void ТумблерОсвещение1_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            switch (e.Button)
             {
-                if (N502BParameters.N502BТумблерОсвещение1 == "полное")
-                {
-                    this.N502BТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerType5Middle;
-                    N502BParameters.N502BТумблерОсвещение1 = "откл";
-                }
-                else
-                    if (N502BParameters.N502BТумблерОсвещение1 == "откл")
+                case MouseButtons.Left:
+                    switch (N502BParameters.ТумблерОсвещение1)
                     {
-                        this.N502BТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerType5Down;
-                        N502BParameters.N502BТумблерОсвещение1 = "дежурное";
+                        case 1:
+                            ТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerType5Middle;
+                            N502BParameters.ТумблерОсвещение1 = 2;
+                            break;
+                        case 2:
+                            ТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerType5Down;
+                            N502BParameters.ТумблерОсвещение1 = 3;
+                            break;
                     }
-            }
-            else
-                if (e.Button == MouseButtons.Right)
-                {
-                    if (N502BParameters.N502BТумблерОсвещение1 == "дежурное")
+                    break;
+                case MouseButtons.Right:
+                    switch (N502BParameters.ТумблерОсвещение1)
                     {
-                        this.N502BТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerType5Middle;
-                        N502BParameters.N502BТумблерОсвещение1 = "откл";
+                        case 3:
+                            ТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerType5Middle;
+                            N502BParameters.ТумблерОсвещение1 = 2;
+                            break;
+                        case 2:
+                            ТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerType5Up;
+                            N502BParameters.ТумблерОсвещение1 = 1;
+                            break;
                     }
-                    else
-                        if (N502BParameters.N502BТумблерОсвещение1 == "откл")
-                        {
-                            this.N502BТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerType5Up;
-                            N502BParameters.N502BТумблерОсвещение1 = "полное";
-                        }
-                }
+                    break;
+            }
         }
 
-        private void N502BТумблерОсвещение2_MouseDown(object sender, MouseEventArgs e)
+        private void ТумблерОсвещение2_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            switch (e.Button)
             {
-                if (N502BParameters.N502BТумблерОсвещение2 == "полное")
-                {
-                    this.N502BТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerType5Middle;
-                    N502BParameters.N502BТумблерОсвещение2 = "откл";
-                }
-                else
-                    if (N502BParameters.N502BТумблерОсвещение2 == "откл")
+                case MouseButtons.Left:
+                    switch (N502BParameters.ТумблерОсвещение2)
                     {
-                        this.N502BТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerType5Down;
-                        N502BParameters.N502BТумблерОсвещение2 = "частичное";
+                        case 1:
+                            ТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerType5Middle;
+                            N502BParameters.ТумблерОсвещение2 = 2;
+                            break;
+                        case 2:
+                            ТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerType5Down;
+                            N502BParameters.ТумблерОсвещение2 = 3;
+                            break;
                     }
+                    break;
+                case MouseButtons.Right:
+                    switch (N502BParameters.ТумблерОсвещение2)
+                    {
+                        case 3:
+                            ТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerType5Middle;
+                            N502BParameters.ТумблерОсвещение2 = 2;
+                            break;
+                        case 2:
+                            ТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerType5Up;
+                            N502BParameters.ТумблерОсвещение2 = 1;
+                            break;
+                    }
+                    break;
             }
-            else
-                if (e.Button == MouseButtons.Right)
-                {
-                    if (N502BParameters.N502BТумблерОсвещение2 == "частичное")
-                    {
-                        this.N502BТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerType5Middle;
-                        N502BParameters.N502BТумблерОсвещение2 = "откл";
-                    }
-                    else
-                        if (N502BParameters.N502BТумблерОсвещение2 == "откл")
-                        {
-                            this.N502BТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerType5Up;
-                            N502BParameters.N502BТумблерОсвещение2 = "полное";
-                        }
-                }
         }
+
         #endregion
 
         #region Кнопки
         private void N502BКнопкаРБПСброс_MouseUp(object sender, MouseEventArgs e)
         {
-            this.N502BКнопкаРБПСброс.BackgroundImage = ControlElementImages.buttonRoundType3;
+            N502BКнопкаРБПСброс.BackgroundImage = ControlElementImages.buttonRoundType3;
         }
 
         private void N502BКнопкаРБПСброс_MouseDown(object sender, MouseEventArgs e)
         {
-            this.N502BКнопкаРБПСброс.BackgroundImage = null;
+            N502BКнопкаРБПСброс.BackgroundImage = null;
         }
 
         private void N502BКнопкаРБППроверка_MouseUp(object sender, MouseEventArgs e)
         {
-            this.N502BКнопкаРБППроверка.BackgroundImage = ControlElementImages.buttonRoundType3;
+            N502BКнопкаРБППроверка.BackgroundImage = ControlElementImages.buttonRoundType3;
         }
 
         private void N502BКнопкаРБППроверка_MouseDown(object sender, MouseEventArgs e)
         {
-            this.N502BКнопкаРБППроверка.BackgroundImage = null;
+            N502BКнопкаРБППроверка.BackgroundImage = null;
         }
 
         private void N502BКнопкаВклНагрузки_MouseUp(object sender, MouseEventArgs e)
         {
-            this.N502BКнопкаВклНагрузки.BackgroundImage = ControlElementImages.buttonRoundType3;
+            N502BКнопкаВклНагрузки.BackgroundImage = ControlElementImages.buttonRoundType3;
         }
 
         private void N502BКнопкаВклНагрузки_MouseDown(object sender, MouseEventArgs e)
         {
-            this.N502BКнопкаВклНагрузки.BackgroundImage = null;
+            N502BКнопкаВклНагрузки.BackgroundImage = null;
         }
         #endregion
 
         #region Переключатели
-        private void N502BПереключательСеть_Click(object sender, System.EventArgs e)
+
+        private void ПереключательСеть_Click(object sender, System.EventArgs e)
         {
-            if (N502BParameters.N502BПереключательСеть == "true")
+            if (N502BParameters.ПереключательСеть)
             {
-                this.N502BПереключательСеть.BackgroundImage = ControlElementImages.tumblerN502BPowerDown;
-                N502BParameters.N502BПереключательСеть = "false";
+                ПереключательСеть.BackgroundImage = ControlElementImages.tumblerN502BPowerDown;
+                N502BParameters.ПереключательСеть = false;
             }
             else
             {
-                this.N502BПереключательСеть.BackgroundImage = ControlElementImages.tumblerN502BPowerUp;
-                N502BParameters.N502BПереключательСеть = "true";
+                ПереключательСеть.BackgroundImage = ControlElementImages.tumblerN502BPowerUp;
+                N502BParameters.ПереключательСеть = true;
             }
         }
 
-        private void N502BПереключательНапряжениеButton_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательНапряжение_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                N502BParameters.N502BПереключательНапряжение += 1;
+                N502BParameters.ПереключательНапряжение += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                N502BParameters.N502BПереключательНапряжение -= 1;
+                N502BParameters.ПереключательНапряжение -= 1;
             }
 
-            var angle = N502BParameters.N502BПереключательНапряжение * 36 - 150;
-            if (N502BParameters.N502BПереключательНапряжение >= 4) angle += 48; ////Смещение
-            N502BПереключательНапряжение.BackgroundImage =
+            var angle = N502BParameters.ПереключательНапряжение * 36 - 150;
+            if (N502BParameters.ПереключательНапряжение >= 4) angle += 48;
+            ПереключательНапряжение.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
 
-        private void N502BПереключательФазировка_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательФазировка_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                N502BParameters.N502BПереключательФазировка += 1;
-                if (N502BParameters.N502BПереключательФазировка == 5) N502BParameters.N502BПереключательФазировка = 1;
+                N502BParameters.ПереключательФазировка += 1;
+                if (N502BParameters.ПереключательФазировка == 5) N502BParameters.ПереключательФазировка = 1;
             }
             if (e.Button == MouseButtons.Right)
             {
-                N502BParameters.N502BПереключательФазировка -= 1;
-                if (N502BParameters.N502BПереключательФазировка == 0) N502BParameters.N502BПереключательФазировка = 4;
+                N502BParameters.ПереключательФазировка -= 1;
+                if (N502BParameters.ПереключательФазировка == 0) N502BParameters.ПереключательФазировка = 4;
             }
-            var angle = N502BParameters.N502BПереключательФазировка * 90 - 180;
-            N502BПереключательФазировка.BackgroundImage =
+            var angle = N502BParameters.ПереключательФазировка * 90 - 180;
+            ПереключательФазировка.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType5, angle);
         }
 
-        private void N502BПереключательКонтрольНапряжения_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательКонтрольНапряжения_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                N502BParameters.N502BПереключательКонтрольНапряжения += 1;
+                N502BParameters.ПереключательКонтрольНапряжения += 1;
             }
             if (e.Button == MouseButtons.Right)
             {
-                N502BParameters.N502BПереключательКонтрольНапряжения -= 1;
+                N502BParameters.ПереключательКонтрольНапряжения -= 1;
             }
 
-            var angle = N502BParameters.N502BПереключательКонтрольНапряжения * 45 - 90;
-            N502BПереключательКонтрольНапряжения.BackgroundImage =
+            var angle = N502BParameters.ПереключательКонтрольНапряжения * 45 - 90;
+            ПереключательКонтрольНапряжения.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType1, angle);
         }
 
-        private void N502BПереключательТокНагрузкиИЗаряда_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательТокНагрузкиИЗаряда_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                N502BParameters.N502BПереключательТокНагрузкиИЗаряда += 1;
+                N502BParameters.ПереключательТокНагрузкиИЗаряда += 1;
             }
             if (e.Button == MouseButtons.Right)
             {
-                N502BParameters.N502BПереключательТокНагрузкиИЗаряда -= 1;
+                N502BParameters.ПереключательТокНагрузкиИЗаряда -= 1;
             }
 
-            var angle = N502BParameters.N502BПереключательТокНагрузкиИЗаряда * 40 - 180;
-            N502BПереключательТокНагрузкиИЗаряда.BackgroundImage =
+            var angle = N502BParameters.ПереключательТокНагрузкиИЗаряда * 40 - 180;
+            ПереключательТокНагрузкиИЗаряда.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType4, angle);
         }
+
         #endregion
 
         #region Инициализация
-        /// <summary>
-        /// Инициализация начальных положений тумблеров, а также
-        /// восстановление положений при повторном открытии формы
-        /// </summary>
+
         private void InitializeTumblersPosition()
         {
-            this.N502BТумблерЭлектрооборуд.BackgroundImage = N502BParameters.N502BТумблерЭлектрооборуд ?
+            ТумблерЭлектрооборудование.BackgroundImage = N502BParameters.ТумблерЭлектрооборудование ?
                 ControlElementImages.tumblerType2Up : ControlElementImages.tumblerType2Down;
 
-            this.N502BТумблерВыпрямитель27В.BackgroundImage = N502BParameters.N502BТумблерВыпрямитель27В ?
+            ТумблерВыпрямитель27В.BackgroundImage = N502BParameters.ТумблерВыпрямитель27В ?
                 ControlElementImages.tumblerType2Up : ControlElementImages.tumblerType2Down;
 
-            this.N502BТумблерОсвещение.BackgroundImage = N502BParameters.N502BТумблерОсвещение == "false" ?
+            ТумблерОсвещение.BackgroundImage = !N502BParameters.ТумблерОсвещение ?
                 ControlElementImages.tumblerType2Down : ControlElementImages.tumblerType2Up;
 
-            this.N502BТумблерН13_1.BackgroundImage = N502BParameters.N502BТумблерН13_1 == "false" ?
+            ТумблерН131.BackgroundImage = !N502BParameters.ТумблерН131 ?
                 ControlElementImages.tumblerType2Down : ControlElementImages.tumblerType2Up;
 
-            this.N502BТумблерН13_2.BackgroundImage = N502BParameters.N502BТумблерН13_2 == "false" ?
+            ТумблерН132.BackgroundImage = !N502BParameters.ТумблерН132 ?
                 ControlElementImages.tumblerType2Down : ControlElementImages.tumblerType2Up;
 
-            this.N502BТумблерН15.BackgroundImage = N502BParameters.N502BТумблерН15 == "false" ?
+            ТумблерН15.BackgroundImage = !N502BParameters.ТумблерН15 ?
                 ControlElementImages.tumblerType2Down : ControlElementImages.tumblerType2Up;
 
-            if (N502BParameters.N502BТумблерОсвещение1 == "откл")
-                this.N502BТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerType5Middle;
-            else if (N502BParameters.N502BТумблерОсвещение1 == "полное")
-                this.N502BТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerType5Up;
-            else
-                this.N502BТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerType5Down;
+            switch (N502BParameters.ТумблерОсвещение1)
+            {
+                case 2:
+                    ТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerType5Middle;
+                    break;
+                case 1:
+                    ТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerType5Up;
+                    break;
+                default:
+                    ТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerType5Down;
+                    break;
+            }
 
-            if (N502BParameters.N502BТумблерОсвещение2 == "откл")
-                this.N502BТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerType5Middle;
-            else if (N502BParameters.N502BТумблерОсвещение2 == "полное")
-                this.N502BТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerType5Up;
-            else
-                this.N502BТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerType5Down;
+            switch (N502BParameters.ТумблерОсвещение2)
+            {
+                case 2:
+                    ТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerType5Middle;
+                    break;
+                case 1:
+                    ТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerType5Up;
+                    break;
+                default:
+                    ТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerType5Down;
+                    break;
+            }
         }
 
-        /// <summary>
-        /// Инициализация начальных положений переключателей, а также
-        /// восстановление положений при повторном открытии формы
-        /// </summary>
         private void InitializeTogglesPosition()
         {
-            N502BПереключательСеть.BackgroundImage = N502BParameters.N502BПереключательСеть == "true"
+            ПереключательСеть.BackgroundImage = N502BParameters.ПереключательСеть
                 ? ControlElementImages.tumblerN502BPowerUp
                 : ControlElementImages.tumblerN502BPowerDown;
 
-            var angle = N502BParameters.N502BПереключательНапряжение * 36 - 150;
-            if (N502BParameters.N502BПереключательНапряжение >= 4) angle += 48;
-            N502BПереключательНапряжение.BackgroundImage =
+            var angle = N502BParameters.ПереключательНапряжение * 36 - 150;
+            if (N502BParameters.ПереключательНапряжение >= 4) angle += 48;
+            ПереключательНапряжение.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = N502BParameters.N502BПереключательФазировка * 90 - 180;
-            N502BПереключательФазировка.BackgroundImage =
+            angle = N502BParameters.ПереключательФазировка * 90 - 180;
+            ПереключательФазировка.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType5, angle);
 
-            angle = N502BParameters.N502BПереключательКонтрольНапряжения * 45 - 90;
-            N502BПереключательКонтрольНапряжения.BackgroundImage =
+            angle = N502BParameters.ПереключательКонтрольНапряжения * 45 - 90;
+            ПереключательКонтрольНапряжения.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType1, angle);
 
-            angle = N502BParameters.N502BПереключательТокНагрузкиИЗаряда * 40 - 180;
-            N502BПереключательТокНагрузкиИЗаряда.BackgroundImage =
+            angle = N502BParameters.ПереключательТокНагрузкиИЗаряда * 40 - 180;
+            ПереключательТокНагрузкиИЗаряда.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType4, angle);
         }
-
+        
         private void InitializeLamps()
         {
-            N502BЛампочкаСеть.BackgroundImage = N502BParameters.N502BЛампочкаСеть
-                    ? ControlElementImages.lampType12OnRed
-                    : null;
+            N502BЛампочкаСеть.BackgroundImage = N502BParameters.ЛампочкаСеть
+                ? ControlElementImages.lampType12OnRed
+                : null;
 
-            N502BЛампочкаСфазировано.BackgroundImage = N502BParameters.N502BЛампочкаСфазировано
-                    ? ControlElementImages.lampType12OnRed
-                    : null;
-
+            N502BЛампочкаСфазировано.BackgroundImage = N502BParameters.ЛампочкаСфазировано
+                ? ControlElementImages.lampType12OnRed
+                : null;
         }
-        #endregion
 
-        #region События
-        public delegate void VoidVoidSignature();
-        /// <summary>
-        /// Событие переключения тумблеров управления питанием
-        /// </summary>
-        public event VoidVoidSignature PowerTumblersChanged;
         #endregion
 
     }

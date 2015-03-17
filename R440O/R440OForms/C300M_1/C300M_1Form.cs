@@ -21,10 +21,10 @@ namespace R440O.R440OForms.C300M_1
         /// </summary>
         public C300M_1Form()
         {
-            this.InitializeComponent();
-            this.InitializeTogglesPosition();
-            this.InitializeButtonsPosition();
-            this.InitializeTumblersPosition();
+            InitializeComponent();
+            InitializeTogglesPosition();
+            InitializeButtonsPosition();
+            InitializeTumblersPosition();
         }
 
         #region Кнопки ВИД РАБОТЫ
@@ -649,7 +649,7 @@ namespace R440O.R440OForms.C300M_1
         }
         #endregion
 
-        #region Установка органов управления в положение их последней настройки
+        #region Инициализация
         /// <summary>
         /// Установка переключателей в положение последней их установки
         /// </summary>

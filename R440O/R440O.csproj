@@ -114,12 +114,12 @@
     <Compile Include="Parameters\AstraParameters.cs" />
     <Compile Include="Parameters\N15Parameters.cs" />
     <Compile Include="R440OForms\A1\A1Parameters.cs" />
-    <Compile Include="Parameters\N502BParameters.cs" />
-    <Compile Include="Parameters\NKN_2Parameters.cs" />
+    <Compile Include="R440OForms\N502B\N502BParameters.cs" />
+	<Compile Include="Parameters\NKN_2Parameters.cs" />
     <Compile Include="Parameters\NKN_1Parameters.cs" />
     <Compile Include="Parameters\P220_27G_2Parameters.cs" />
     <Compile Include="Parameters\P220_27G_3Parameters.cs" />
-    <Compile Include="Parameters\PowerCabelParameters.cs" />
+    <Compile Include="R440OForms\PowerCabel\PowerCabelParameters.cs" />
     <Compile Include="Parameters\Rubin_NParameters.cs" />
     <Compile Include="R440OForms\VoltageStabilizer\VoltageStabilizerParameters.cs" />
     <Compile Include="Parameters\WattmeterParameters.cs" />

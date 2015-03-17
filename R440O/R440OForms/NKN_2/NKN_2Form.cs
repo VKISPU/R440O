@@ -4,6 +4,8 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+using R440O.R440OForms.N502B;
+
 namespace R440O.R440OForms.NKN_2
 {
     using System.Windows.Forms;
@@ -49,7 +51,7 @@ namespace R440O.R440OForms.NKN_2
         /// </summary>
         public void TurnLamps()
         {
-            NKN_2Parameters.NKN_2ЛампочкаМУ = N502BParameters.N502BТумблерЭлектрооборуд && N502BParameters.N502BТумблерВыпрямитель27В;
+            NKN_2Parameters.NKN_2ЛампочкаМУ = N502BParameters.ТумблерЭлектрооборудование && N502BParameters.ТумблерВыпрямитель27В;
             NKN_2ЛампочкаМУ.BackgroundImage = NKN_2Parameters.NKN_2ЛампочкаМУ
                 ? ControlElementImages.lampType9OnGreen
                 : null;

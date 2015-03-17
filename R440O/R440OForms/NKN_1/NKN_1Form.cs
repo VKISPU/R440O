@@ -5,6 +5,7 @@
 //-----------------------------------------------------------------------
 
 using R440O.Parameters;
+using R440O.R440OForms.N502B;
 
 namespace R440O.R440OForms.NKN_1
 {
@@ -50,7 +51,7 @@ namespace R440O.R440OForms.NKN_1
         /// </summary>
         public void TurnLamps()
         {
-            NKN_1Parameters.NKN_1ЛампочкаМУ = N502BParameters.N502BТумблерЭлектрооборуд && N502BParameters.N502BТумблерВыпрямитель27В;
+            NKN_1Parameters.NKN_1ЛампочкаМУ = N502BParameters.ТумблерЭлектрооборудование && N502BParameters.ТумблерВыпрямитель27В;
             NKN_1ЛампочкаМУ.BackgroundImage = NKN_1Parameters.NKN_1ЛампочкаМУ
                 ? ControlElementImages.lampType9OnGreen
                 : null;

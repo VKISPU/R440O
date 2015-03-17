@@ -87,51 +87,6 @@ namespace R440O.R440OForms.R440O
                     }
 
                     break;
-                    case "N502BForm":
-                    {
-                        var newN502BForm = new N502BForm();
-                        var nkn1Form = (NKN_1Form)this.GetSpecificForm("NKN_1Form");
-                        if (nkn1Form != null)
-                        {
-                            newN502BForm.PowerTumblersChanged += nkn1Form.TurnLamps;
-                        }
-
-                        var nkn2Form = (NKN_2Form)this.GetSpecificForm("NKN_2Form");
-                        if (nkn2Form != null)
-                        {
-                            newN502BForm.PowerTumblersChanged += nkn2Form.TurnLamps;
-                        }
-
-                        newForm = newN502BForm;
-                    }
-
-                    break;
-                    case "NKN_1Form":
-                    {
-                        var newNkn1Form = new NKN_1Form();
-                        var n502BForm = (N502BForm)this.GetSpecificForm("N502BForm");
-                        if (n502BForm != null)
-                        {
-                            n502BForm.PowerTumblersChanged += newNkn1Form.TurnLamps;
-                        }
-
-                        newForm = newNkn1Form;
-                    }
-
-                    break;
-                    case "NKN_2Form":
-                    {
-                        var newNkn2Form = new NKN_2Form();
-                        var n502BForm = (N502BForm)this.GetSpecificForm("N502BForm");
-                        if (n502BForm != null)
-                        {
-                            n502BForm.PowerTumblersChanged += newNkn2Form.TurnLamps;
-                        }
-
-                        newForm = newNkn2Form;
-                    }
-
-                    break;
                 }
 
                 newForm.Show(this);
@@ -145,7 +100,7 @@ namespace R440O.R440OForms.R440O
         /// <summary>
         /// Возвращает форму по заданному имени
         /// </summary>
-        /// <param name="formName">Имя вормы</param>
+        /// <param name="formName">Имя формы</param>
         /// <returns>Объект формы</returns>
         private Form GetSpecificForm(string formName)
         {

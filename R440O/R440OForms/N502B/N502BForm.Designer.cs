@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             this.N502BPanel = new System.Windows.Forms.Panel();
+            this.N502BЛампочкаСфазировано = new System.Windows.Forms.PictureBox();
             this.N502BЛампочкаСеть = new System.Windows.Forms.PictureBox();
-            this.N502BПереключательТокНагрузкиИЗаряда = new System.Windows.Forms.Button();
-            this.N502BПереключательКонтрольНапряжения = new System.Windows.Forms.Button();
-            this.N502BПереключательФазировка = new System.Windows.Forms.Button();
-            this.N502BПереключательНапряжение = new System.Windows.Forms.Button();
-            this.N502BПереключательСеть = new System.Windows.Forms.Button();
+            this.ПереключательТокНагрузкиИЗаряда = new System.Windows.Forms.Button();
+            this.ПереключательКонтрольНапряжения = new System.Windows.Forms.Button();
+            this.ПереключательФазировка = new System.Windows.Forms.Button();
+            this.ПереключательНапряжение = new System.Windows.Forms.Button();
+            this.ПереключательСеть = new System.Windows.Forms.Button();
             this.N502BКнопкаВклНагрузки = new System.Windows.Forms.Button();
             this.N502BКнопкаРБППроверка = new System.Windows.Forms.Button();
             this.N502BКнопкаРБПСброс = new System.Windows.Forms.Button();
-            this.N502BТумблерОсвещение2 = new System.Windows.Forms.Button();
-            this.N502BТумблерОсвещение1 = new System.Windows.Forms.Button();
-            this.N502BТумблерН15 = new System.Windows.Forms.Button();
-            this.N502BТумблерН13_2 = new System.Windows.Forms.Button();
-            this.N502BТумблерН13_1 = new System.Windows.Forms.Button();
-            this.N502BТумблерОсвещение = new System.Windows.Forms.Button();
-            this.N502BТумблерВыпрямитель27В = new System.Windows.Forms.Button();
-            this.N502BТумблерЭлектрооборуд = new System.Windows.Forms.Button();
-            this.N502BЛампочкаСфазировано = new System.Windows.Forms.PictureBox();
+            this.ТумблерОсвещение2 = new System.Windows.Forms.Button();
+            this.ТумблерОсвещение1 = new System.Windows.Forms.Button();
+            this.ТумблерН15 = new System.Windows.Forms.Button();
+            this.ТумблерН132 = new System.Windows.Forms.Button();
+            this.ТумблерН131 = new System.Windows.Forms.Button();
+            this.ТумблерОсвещение = new System.Windows.Forms.Button();
+            this.ТумблерВыпрямитель27В = new System.Windows.Forms.Button();
+            this.ТумблерЭлектрооборудование = new System.Windows.Forms.Button();
             this.N502BPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.N502BЛампочкаСеть)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.N502BЛампочкаСфазировано)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N502BЛампочкаСеть)).BeginInit();
             this.SuspendLayout();
             // 
             // N502BPanel
@@ -58,26 +58,37 @@
             this.N502BPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.N502BPanel.Controls.Add(this.N502BЛампочкаСфазировано);
             this.N502BPanel.Controls.Add(this.N502BЛампочкаСеть);
-            this.N502BPanel.Controls.Add(this.N502BПереключательТокНагрузкиИЗаряда);
-            this.N502BPanel.Controls.Add(this.N502BПереключательКонтрольНапряжения);
-            this.N502BPanel.Controls.Add(this.N502BПереключательФазировка);
-            this.N502BPanel.Controls.Add(this.N502BПереключательНапряжение);
-            this.N502BPanel.Controls.Add(this.N502BПереключательСеть);
+            this.N502BPanel.Controls.Add(this.ПереключательТокНагрузкиИЗаряда);
+            this.N502BPanel.Controls.Add(this.ПереключательКонтрольНапряжения);
+            this.N502BPanel.Controls.Add(this.ПереключательФазировка);
+            this.N502BPanel.Controls.Add(this.ПереключательНапряжение);
+            this.N502BPanel.Controls.Add(this.ПереключательСеть);
             this.N502BPanel.Controls.Add(this.N502BКнопкаВклНагрузки);
             this.N502BPanel.Controls.Add(this.N502BКнопкаРБППроверка);
             this.N502BPanel.Controls.Add(this.N502BКнопкаРБПСброс);
-            this.N502BPanel.Controls.Add(this.N502BТумблерОсвещение2);
-            this.N502BPanel.Controls.Add(this.N502BТумблерОсвещение1);
-            this.N502BPanel.Controls.Add(this.N502BТумблерН15);
-            this.N502BPanel.Controls.Add(this.N502BТумблерН13_2);
-            this.N502BPanel.Controls.Add(this.N502BТумблерН13_1);
-            this.N502BPanel.Controls.Add(this.N502BТумблерОсвещение);
-            this.N502BPanel.Controls.Add(this.N502BТумблерВыпрямитель27В);
-            this.N502BPanel.Controls.Add(this.N502BТумблерЭлектрооборуд);
+            this.N502BPanel.Controls.Add(this.ТумблерОсвещение2);
+            this.N502BPanel.Controls.Add(this.ТумблерОсвещение1);
+            this.N502BPanel.Controls.Add(this.ТумблерН15);
+            this.N502BPanel.Controls.Add(this.ТумблерН132);
+            this.N502BPanel.Controls.Add(this.ТумблерН131);
+            this.N502BPanel.Controls.Add(this.ТумблерОсвещение);
+            this.N502BPanel.Controls.Add(this.ТумблерВыпрямитель27В);
+            this.N502BPanel.Controls.Add(this.ТумблерЭлектрооборудование);
             this.N502BPanel.Location = new System.Drawing.Point(0, 0);
             this.N502BPanel.Name = "N502BPanel";
             this.N502BPanel.Size = new System.Drawing.Size(749, 745);
             this.N502BPanel.TabIndex = 1;
+            // 
+            // N502BЛампочкаСфазировано
+            // 
+            this.N502BЛампочкаСфазировано.BackColor = System.Drawing.Color.Transparent;
+            this.N502BЛампочкаСфазировано.BackgroundImage = global::R440O.ControlElementImages.lampType12OnRed;
+            this.N502BЛампочкаСфазировано.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.N502BЛампочкаСфазировано.Location = new System.Drawing.Point(215, 51);
+            this.N502BЛампочкаСфазировано.Name = "N502BЛампочкаСфазировано";
+            this.N502BЛампочкаСфазировано.Size = new System.Drawing.Size(37, 36);
+            this.N502BЛампочкаСфазировано.TabIndex = 37;
+            this.N502BЛампочкаСфазировано.TabStop = false;
             // 
             // N502BЛампочкаСеть
             // 
@@ -90,85 +101,85 @@
             this.N502BЛампочкаСеть.TabIndex = 36;
             this.N502BЛампочкаСеть.TabStop = false;
             // 
-            // N502BПереключательТокНагрузкиИЗаряда
+            // ПереключательТокНагрузкиИЗаряда
             // 
-            this.N502BПереключательТокНагрузкиИЗаряда.BackColor = System.Drawing.Color.Transparent;
-            this.N502BПереключательТокНагрузкиИЗаряда.BackgroundImage = global::R440O.ControlElementImages.toggleType4;
-            this.N502BПереключательТокНагрузкиИЗаряда.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N502BПереключательТокНагрузкиИЗаряда.FlatAppearance.BorderSize = 0;
-            this.N502BПереключательТокНагрузкиИЗаряда.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N502BПереключательТокНагрузкиИЗаряда.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N502BПереключательТокНагрузкиИЗаряда.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N502BПереключательТокНагрузкиИЗаряда.Location = new System.Drawing.Point(571, 317);
-            this.N502BПереключательТокНагрузкиИЗаряда.Name = "N502BПереключательТокНагрузкиИЗаряда";
-            this.N502BПереключательТокНагрузкиИЗаряда.Size = new System.Drawing.Size(95, 95);
-            this.N502BПереключательТокНагрузкиИЗаряда.TabIndex = 35;
-            this.N502BПереключательТокНагрузкиИЗаряда.UseVisualStyleBackColor = false;
-            this.N502BПереключательТокНагрузкиИЗаряда.MouseUp += new System.Windows.Forms.MouseEventHandler(this.N502BПереключательТокНагрузкиИЗаряда_MouseUp);
+            this.ПереключательТокНагрузкиИЗаряда.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательТокНагрузкиИЗаряда.BackgroundImage = global::R440O.ControlElementImages.toggleType4;
+            this.ПереключательТокНагрузкиИЗаряда.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательТокНагрузкиИЗаряда.FlatAppearance.BorderSize = 0;
+            this.ПереключательТокНагрузкиИЗаряда.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательТокНагрузкиИЗаряда.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательТокНагрузкиИЗаряда.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательТокНагрузкиИЗаряда.Location = new System.Drawing.Point(571, 317);
+            this.ПереключательТокНагрузкиИЗаряда.Name = "ПереключательТокНагрузкиИЗаряда";
+            this.ПереключательТокНагрузкиИЗаряда.Size = new System.Drawing.Size(95, 95);
+            this.ПереключательТокНагрузкиИЗаряда.TabIndex = 35;
+            this.ПереключательТокНагрузкиИЗаряда.UseVisualStyleBackColor = false;
+            this.ПереключательТокНагрузкиИЗаряда.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательТокНагрузкиИЗаряда_MouseUp);
             // 
-            // N502BПереключательКонтрольНапряжения
+            // ПереключательКонтрольНапряжения
             // 
-            this.N502BПереключательКонтрольНапряжения.BackColor = System.Drawing.Color.Transparent;
-            this.N502BПереключательКонтрольНапряжения.BackgroundImage = global::R440O.ControlElementImages.toggleType1;
-            this.N502BПереключательКонтрольНапряжения.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N502BПереключательКонтрольНапряжения.FlatAppearance.BorderSize = 0;
-            this.N502BПереключательКонтрольНапряжения.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N502BПереключательКонтрольНапряжения.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N502BПереключательКонтрольНапряжения.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N502BПереключательКонтрольНапряжения.Location = new System.Drawing.Point(474, 262);
-            this.N502BПереключательКонтрольНапряжения.Name = "N502BПереключательКонтрольНапряжения";
-            this.N502BПереключательКонтрольНапряжения.Size = new System.Drawing.Size(93, 76);
-            this.N502BПереключательКонтрольНапряжения.TabIndex = 34;
-            this.N502BПереключательКонтрольНапряжения.UseVisualStyleBackColor = false;
-            this.N502BПереключательКонтрольНапряжения.MouseUp += new System.Windows.Forms.MouseEventHandler(this.N502BПереключательКонтрольНапряжения_MouseUp);
+            this.ПереключательКонтрольНапряжения.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательКонтрольНапряжения.BackgroundImage = global::R440O.ControlElementImages.toggleType1;
+            this.ПереключательКонтрольНапряжения.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательКонтрольНапряжения.FlatAppearance.BorderSize = 0;
+            this.ПереключательКонтрольНапряжения.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательКонтрольНапряжения.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательКонтрольНапряжения.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательКонтрольНапряжения.Location = new System.Drawing.Point(474, 262);
+            this.ПереключательКонтрольНапряжения.Name = "ПереключательКонтрольНапряжения";
+            this.ПереключательКонтрольНапряжения.Size = new System.Drawing.Size(93, 76);
+            this.ПереключательКонтрольНапряжения.TabIndex = 34;
+            this.ПереключательКонтрольНапряжения.UseVisualStyleBackColor = false;
+            this.ПереключательКонтрольНапряжения.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательКонтрольНапряжения_MouseUp);
             // 
-            // N502BПереключательФазировка
+            // ПереключательФазировка
             // 
-            this.N502BПереключательФазировка.BackColor = System.Drawing.Color.Transparent;
-            this.N502BПереключательФазировка.BackgroundImage = global::R440O.ControlElementImages.toggleType5;
-            this.N502BПереключательФазировка.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N502BПереключательФазировка.FlatAppearance.BorderSize = 0;
-            this.N502BПереключательФазировка.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N502BПереключательФазировка.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N502BПереключательФазировка.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N502BПереключательФазировка.Location = new System.Drawing.Point(260, 293);
-            this.N502BПереключательФазировка.Name = "N502BПереключательФазировка";
-            this.N502BПереключательФазировка.Size = new System.Drawing.Size(120, 120);
-            this.N502BПереключательФазировка.TabIndex = 33;
-            this.N502BПереключательФазировка.UseVisualStyleBackColor = false;
-            this.N502BПереключательФазировка.MouseUp += new System.Windows.Forms.MouseEventHandler(this.N502BПереключательФазировка_MouseUp);
+            this.ПереключательФазировка.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательФазировка.BackgroundImage = global::R440O.ControlElementImages.toggleType5;
+            this.ПереключательФазировка.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательФазировка.FlatAppearance.BorderSize = 0;
+            this.ПереключательФазировка.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательФазировка.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательФазировка.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательФазировка.Location = new System.Drawing.Point(260, 293);
+            this.ПереключательФазировка.Name = "ПереключательФазировка";
+            this.ПереключательФазировка.Size = new System.Drawing.Size(120, 120);
+            this.ПереключательФазировка.TabIndex = 33;
+            this.ПереключательФазировка.UseVisualStyleBackColor = false;
+            this.ПереключательФазировка.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательФазировка_MouseUp);
             // 
-            // N502BПереключательНапряжение
+            // ПереключательНапряжение
             // 
-            this.N502BПереключательНапряжение.BackColor = System.Drawing.Color.Transparent;
-            this.N502BПереключательНапряжение.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
-            this.N502BПереключательНапряжение.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N502BПереключательНапряжение.FlatAppearance.BorderSize = 0;
-            this.N502BПереключательНапряжение.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N502BПереключательНапряжение.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N502BПереключательНапряжение.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N502BПереключательНапряжение.Location = new System.Drawing.Point(107, 335);
-            this.N502BПереключательНапряжение.Name = "N502BПереключательНапряжение";
-            this.N502BПереключательНапряжение.Size = new System.Drawing.Size(88, 78);
-            this.N502BПереключательНапряжение.TabIndex = 32;
-            this.N502BПереключательНапряжение.UseVisualStyleBackColor = false;
-            this.N502BПереключательНапряжение.MouseUp += new System.Windows.Forms.MouseEventHandler(this.N502BПереключательНапряжениеButton_MouseUp);
+            this.ПереключательНапряжение.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательНапряжение.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.ПереключательНапряжение.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательНапряжение.FlatAppearance.BorderSize = 0;
+            this.ПереключательНапряжение.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательНапряжение.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательНапряжение.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательНапряжение.Location = new System.Drawing.Point(107, 335);
+            this.ПереключательНапряжение.Name = "ПереключательНапряжение";
+            this.ПереключательНапряжение.Size = new System.Drawing.Size(88, 78);
+            this.ПереключательНапряжение.TabIndex = 32;
+            this.ПереключательНапряжение.UseVisualStyleBackColor = false;
+            this.ПереключательНапряжение.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательНапряжение_MouseUp);
             // 
-            // N502BПереключательСеть
+            // ПереключательСеть
             // 
-            this.N502BПереключательСеть.BackColor = System.Drawing.Color.Transparent;
-            this.N502BПереключательСеть.BackgroundImage = global::R440O.ControlElementImages.tumblerN502BPowerDown;
-            this.N502BПереключательСеть.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N502BПереключательСеть.FlatAppearance.BorderSize = 0;
-            this.N502BПереключательСеть.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N502BПереключательСеть.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N502BПереключательСеть.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N502BПереключательСеть.Location = new System.Drawing.Point(0, 468);
-            this.N502BПереключательСеть.Name = "N502BПереключательСеть";
-            this.N502BПереключательСеть.Size = new System.Drawing.Size(45, 125);
-            this.N502BПереключательСеть.TabIndex = 31;
-            this.N502BПереключательСеть.UseVisualStyleBackColor = false;
-            this.N502BПереключательСеть.Click += new System.EventHandler(this.N502BПереключательСеть_Click);
+            this.ПереключательСеть.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательСеть.BackgroundImage = global::R440O.ControlElementImages.tumblerN502BPowerDown;
+            this.ПереключательСеть.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательСеть.FlatAppearance.BorderSize = 0;
+            this.ПереключательСеть.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательСеть.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательСеть.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательСеть.Location = new System.Drawing.Point(0, 468);
+            this.ПереключательСеть.Name = "ПереключательСеть";
+            this.ПереключательСеть.Size = new System.Drawing.Size(45, 125);
+            this.ПереключательСеть.TabIndex = 31;
+            this.ПереключательСеть.UseVisualStyleBackColor = false;
+            this.ПереключательСеть.Click += new System.EventHandler(this.ПереключательСеть_Click);
             // 
             // N502BКнопкаВклНагрузки
             // 
@@ -221,144 +232,133 @@
             this.N502BКнопкаРБПСброс.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N502BКнопкаРБПСброс_MouseDown);
             this.N502BКнопкаРБПСброс.MouseUp += new System.Windows.Forms.MouseEventHandler(this.N502BКнопкаРБПСброс_MouseUp);
             // 
-            // N502BТумблерОсвещение2
+            // ТумблерОсвещение2
             // 
-            this.N502BТумблерОсвещение2.BackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерОсвещение2.BackgroundImage = global::R440O.ControlElementImages.tumblerType5Middle;
-            this.N502BТумблерОсвещение2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N502BТумблерОсвещение2.FlatAppearance.BorderSize = 0;
-            this.N502BТумблерОсвещение2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерОсвещение2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерОсвещение2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N502BТумблерОсвещение2.Location = new System.Drawing.Point(589, 600);
-            this.N502BТумблерОсвещение2.Name = "N502BТумблерОсвещение2";
-            this.N502BТумблерОсвещение2.Size = new System.Drawing.Size(29, 36);
-            this.N502BТумблерОсвещение2.TabIndex = 27;
-            this.N502BТумблерОсвещение2.UseVisualStyleBackColor = false;
-            this.N502BТумблерОсвещение2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N502BТумблерОсвещение2_MouseDown);
+            this.ТумблерОсвещение2.BackColor = System.Drawing.Color.Transparent;
+            this.ТумблерОсвещение2.BackgroundImage = global::R440O.ControlElementImages.tumblerType5Middle;
+            this.ТумблерОсвещение2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ТумблерОсвещение2.FlatAppearance.BorderSize = 0;
+            this.ТумблерОсвещение2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерОсвещение2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерОсвещение2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТумблерОсвещение2.Location = new System.Drawing.Point(589, 600);
+            this.ТумблерОсвещение2.Name = "ТумблерОсвещение2";
+            this.ТумблерОсвещение2.Size = new System.Drawing.Size(29, 36);
+            this.ТумблерОсвещение2.TabIndex = 27;
+            this.ТумблерОсвещение2.UseVisualStyleBackColor = false;
+            this.ТумблерОсвещение2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ТумблерОсвещение2_MouseDown);
             // 
-            // N502BТумблерОсвещение1
+            // ТумблерОсвещение1
             // 
-            this.N502BТумблерОсвещение1.BackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерОсвещение1.BackgroundImage = global::R440O.ControlElementImages.tumblerType5Middle;
-            this.N502BТумблерОсвещение1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N502BТумблерОсвещение1.FlatAppearance.BorderSize = 0;
-            this.N502BТумблерОсвещение1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерОсвещение1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерОсвещение1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N502BТумблерОсвещение1.Location = new System.Drawing.Point(525, 600);
-            this.N502BТумблерОсвещение1.Name = "N502BТумблерОсвещение1";
-            this.N502BТумблерОсвещение1.Size = new System.Drawing.Size(29, 36);
-            this.N502BТумблерОсвещение1.TabIndex = 26;
-            this.N502BТумблерОсвещение1.UseVisualStyleBackColor = false;
-            this.N502BТумблерОсвещение1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N502BТумблерОсвещение1_MouseDown);
+            this.ТумблерОсвещение1.BackColor = System.Drawing.Color.Transparent;
+            this.ТумблерОсвещение1.BackgroundImage = global::R440O.ControlElementImages.tumblerType5Middle;
+            this.ТумблерОсвещение1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ТумблерОсвещение1.FlatAppearance.BorderSize = 0;
+            this.ТумблерОсвещение1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерОсвещение1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерОсвещение1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТумблерОсвещение1.Location = new System.Drawing.Point(525, 600);
+            this.ТумблерОсвещение1.Name = "ТумблерОсвещение1";
+            this.ТумблерОсвещение1.Size = new System.Drawing.Size(29, 36);
+            this.ТумблерОсвещение1.TabIndex = 26;
+            this.ТумблерОсвещение1.UseVisualStyleBackColor = false;
+            this.ТумблерОсвещение1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ТумблерОсвещение1_MouseDown);
             // 
-            // N502BТумблерН15
+            // ТумблерН15
             // 
-            this.N502BТумблерН15.BackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерН15.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Down;
-            this.N502BТумблерН15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N502BТумблерН15.FlatAppearance.BorderSize = 0;
-            this.N502BТумблерН15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерН15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерН15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N502BТумблерН15.Location = new System.Drawing.Point(432, 598);
-            this.N502BТумблерН15.Name = "N502BТумблерН15";
-            this.N502BТумблерН15.Size = new System.Drawing.Size(36, 56);
-            this.N502BТумблерН15.TabIndex = 25;
-            this.N502BТумблерН15.UseVisualStyleBackColor = false;
-            this.N502BТумблерН15.Click += new System.EventHandler(this.N502BТумблерН15_Click);
+            this.ТумблерН15.BackColor = System.Drawing.Color.Transparent;
+            this.ТумблерН15.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Down;
+            this.ТумблерН15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ТумблерН15.FlatAppearance.BorderSize = 0;
+            this.ТумблерН15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерН15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерН15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТумблерН15.Location = new System.Drawing.Point(432, 598);
+            this.ТумблерН15.Name = "ТумблерН15";
+            this.ТумблерН15.Size = new System.Drawing.Size(36, 56);
+            this.ТумблерН15.TabIndex = 25;
+            this.ТумблерН15.UseVisualStyleBackColor = false;
+            this.ТумблерН15.Click += new System.EventHandler(this.ТумблерН15_Click);
             // 
-            // N502BТумблерН13_2
+            // ТумблерН132
             // 
-            this.N502BТумблерН13_2.BackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерН13_2.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Down;
-            this.N502BТумблерН13_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N502BТумблерН13_2.FlatAppearance.BorderSize = 0;
-            this.N502BТумблерН13_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерН13_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерН13_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N502BТумблерН13_2.Location = new System.Drawing.Point(284, 598);
-            this.N502BТумблерН13_2.Name = "N502BТумблерН13_2";
-            this.N502BТумблерН13_2.Size = new System.Drawing.Size(36, 56);
-            this.N502BТумблерН13_2.TabIndex = 24;
-            this.N502BТумблерН13_2.UseVisualStyleBackColor = false;
-            this.N502BТумблерН13_2.Click += new System.EventHandler(this.N502BТумблерН13_2_Click);
+            this.ТумблерН132.BackColor = System.Drawing.Color.Transparent;
+            this.ТумблерН132.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Down;
+            this.ТумблерН132.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ТумблерН132.FlatAppearance.BorderSize = 0;
+            this.ТумблерН132.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерН132.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерН132.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТумблерН132.Location = new System.Drawing.Point(284, 598);
+            this.ТумблерН132.Name = "ТумблерН132";
+            this.ТумблерН132.Size = new System.Drawing.Size(36, 56);
+            this.ТумблерН132.TabIndex = 24;
+            this.ТумблерН132.UseVisualStyleBackColor = false;
+            this.ТумблерН132.Click += new System.EventHandler(this.ТумблерН132_Click);
             // 
-            // N502BТумблерН13_1
+            // ТумблерН131
             // 
-            this.N502BТумблерН13_1.BackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерН13_1.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Down;
-            this.N502BТумблерН13_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N502BТумблерН13_1.FlatAppearance.BorderSize = 0;
-            this.N502BТумблерН13_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерН13_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерН13_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N502BТумблерН13_1.Location = new System.Drawing.Point(135, 598);
-            this.N502BТумблерН13_1.Name = "N502BТумблерН13_1";
-            this.N502BТумблерН13_1.Size = new System.Drawing.Size(36, 56);
-            this.N502BТумблерН13_1.TabIndex = 23;
-            this.N502BТумблерН13_1.UseVisualStyleBackColor = false;
-            this.N502BТумблерН13_1.Click += new System.EventHandler(this.N502BТумблерН13_1_Click);
+            this.ТумблерН131.BackColor = System.Drawing.Color.Transparent;
+            this.ТумблерН131.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Down;
+            this.ТумблерН131.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ТумблерН131.FlatAppearance.BorderSize = 0;
+            this.ТумблерН131.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерН131.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерН131.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТумблерН131.Location = new System.Drawing.Point(135, 598);
+            this.ТумблерН131.Name = "ТумблерН131";
+            this.ТумблерН131.Size = new System.Drawing.Size(36, 56);
+            this.ТумблерН131.TabIndex = 23;
+            this.ТумблерН131.UseVisualStyleBackColor = false;
+            this.ТумблерН131.Click += new System.EventHandler(this.ТумблерН131_Click);
             // 
-            // N502BТумблерОсвещение
+            // ТумблерОсвещение
             // 
-            this.N502BТумблерОсвещение.BackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерОсвещение.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Down;
-            this.N502BТумблерОсвещение.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N502BТумблерОсвещение.FlatAppearance.BorderSize = 0;
-            this.N502BТумблерОсвещение.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерОсвещение.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерОсвещение.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N502BТумблерОсвещение.Location = new System.Drawing.Point(432, 468);
-            this.N502BТумблерОсвещение.Name = "N502BТумблерОсвещение";
-            this.N502BТумблерОсвещение.Size = new System.Drawing.Size(36, 56);
-            this.N502BТумблерОсвещение.TabIndex = 22;
-            this.N502BТумблерОсвещение.UseVisualStyleBackColor = false;
-            this.N502BТумблерОсвещение.Click += new System.EventHandler(this.N502BТумблерОсвещение_Click);
+            this.ТумблерОсвещение.BackColor = System.Drawing.Color.Transparent;
+            this.ТумблерОсвещение.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Down;
+            this.ТумблерОсвещение.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ТумблерОсвещение.FlatAppearance.BorderSize = 0;
+            this.ТумблерОсвещение.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерОсвещение.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерОсвещение.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТумблерОсвещение.Location = new System.Drawing.Point(432, 468);
+            this.ТумблерОсвещение.Name = "ТумблерОсвещение";
+            this.ТумблерОсвещение.Size = new System.Drawing.Size(36, 56);
+            this.ТумблерОсвещение.TabIndex = 22;
+            this.ТумблерОсвещение.UseVisualStyleBackColor = false;
+            this.ТумблерОсвещение.Click += new System.EventHandler(this.ТумблерОсвещение_Click);
             // 
-            // N502BТумблерВыпрямитель27В
+            // ТумблерВыпрямитель27В
             // 
-            this.N502BТумблерВыпрямитель27В.BackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерВыпрямитель27В.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Down;
-            this.N502BТумблерВыпрямитель27В.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N502BТумблерВыпрямитель27В.FlatAppearance.BorderSize = 0;
-            this.N502BТумблерВыпрямитель27В.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерВыпрямитель27В.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерВыпрямитель27В.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N502BТумблерВыпрямитель27В.Location = new System.Drawing.Point(285, 469);
-            this.N502BТумблерВыпрямитель27В.Name = "N502BТумблерВыпрямитель27В";
-            this.N502BТумблерВыпрямитель27В.Size = new System.Drawing.Size(36, 56);
-            this.N502BТумблерВыпрямитель27В.TabIndex = 21;
-            this.N502BТумблерВыпрямитель27В.UseVisualStyleBackColor = false;
-            this.N502BТумблерВыпрямитель27В.Click += new System.EventHandler(this.N502BТумблерВыпрямитель27В_Click);
+            this.ТумблерВыпрямитель27В.BackColor = System.Drawing.Color.Transparent;
+            this.ТумблерВыпрямитель27В.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Down;
+            this.ТумблерВыпрямитель27В.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ТумблерВыпрямитель27В.FlatAppearance.BorderSize = 0;
+            this.ТумблерВыпрямитель27В.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерВыпрямитель27В.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерВыпрямитель27В.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТумблерВыпрямитель27В.Location = new System.Drawing.Point(285, 469);
+            this.ТумблерВыпрямитель27В.Name = "ТумблерВыпрямитель27В";
+            this.ТумблерВыпрямитель27В.Size = new System.Drawing.Size(36, 56);
+            this.ТумблерВыпрямитель27В.TabIndex = 21;
+            this.ТумблерВыпрямитель27В.UseVisualStyleBackColor = false;
+            this.ТумблерВыпрямитель27В.Click += new System.EventHandler(this.ТумблерВыпрямитель27В_Click);
             // 
-            // N502BТумблерЭлектрооборуд
+            // ТумблерЭлектрооборудование
             // 
-            this.N502BТумблерЭлектрооборуд.BackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерЭлектрооборуд.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Down;
-            this.N502BТумблерЭлектрооборуд.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N502BТумблерЭлектрооборуд.FlatAppearance.BorderSize = 0;
-            this.N502BТумблерЭлектрооборуд.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерЭлектрооборуд.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N502BТумблерЭлектрооборуд.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N502BТумблерЭлектрооборуд.Location = new System.Drawing.Point(136, 468);
-            this.N502BТумблерЭлектрооборуд.Name = "N502BТумблерЭлектрооборуд";
-            this.N502BТумблерЭлектрооборуд.Size = new System.Drawing.Size(36, 56);
-            this.N502BТумблерЭлектрооборуд.TabIndex = 20;
-            this.N502BТумблерЭлектрооборуд.UseVisualStyleBackColor = false;
-            this.N502BТумблерЭлектрооборуд.Click += new System.EventHandler(this.N502BТумблерЭлектрооборуд_Click);
-            // 
-            // N502BЛампочкаСфазировано
-            // 
-            this.N502BЛампочкаСфазировано.BackColor = System.Drawing.Color.Transparent;
-            this.N502BЛампочкаСфазировано.BackgroundImage = global::R440O.ControlElementImages.lampType12OnRed;
-            this.N502BЛампочкаСфазировано.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N502BЛампочкаСфазировано.Location = new System.Drawing.Point(215, 51);
-            this.N502BЛампочкаСфазировано.Name = "N502BЛампочкаСфазировано";
-            this.N502BЛампочкаСфазировано.Size = new System.Drawing.Size(37, 36);
-            this.N502BЛампочкаСфазировано.TabIndex = 37;
-            this.N502BЛампочкаСфазировано.TabStop = false;
+            this.ТумблерЭлектрооборудование.BackColor = System.Drawing.Color.Transparent;
+            this.ТумблерЭлектрооборудование.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Down;
+            this.ТумблерЭлектрооборудование.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ТумблерЭлектрооборудование.FlatAppearance.BorderSize = 0;
+            this.ТумблерЭлектрооборудование.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерЭлектрооборудование.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерЭлектрооборудование.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТумблерЭлектрооборудование.Location = new System.Drawing.Point(136, 468);
+            this.ТумблерЭлектрооборудование.Name = "ТумблерЭлектрооборудование";
+            this.ТумблерЭлектрооборудование.Size = new System.Drawing.Size(36, 56);
+            this.ТумблерЭлектрооборудование.TabIndex = 20;
+            this.ТумблерЭлектрооборудование.UseVisualStyleBackColor = false;
+            this.ТумблерЭлектрооборудование.Click += new System.EventHandler(this.ТумблерЭлектрооборудование_Click);
             // 
             // N502BForm
             // 
@@ -372,8 +372,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Н502Б";
             this.N502BPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.N502BЛампочкаСеть)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.N502BЛампочкаСфазировано)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N502BЛампочкаСеть)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -381,22 +381,22 @@
         #endregion
 
         private System.Windows.Forms.Panel N502BPanel;
-        private System.Windows.Forms.Button N502BТумблерЭлектрооборуд;
-        private System.Windows.Forms.Button N502BТумблерВыпрямитель27В;
-        private System.Windows.Forms.Button N502BТумблерОсвещение;
-        private System.Windows.Forms.Button N502BТумблерН13_1;
-        private System.Windows.Forms.Button N502BТумблерН13_2;
-        private System.Windows.Forms.Button N502BТумблерН15;
-        private System.Windows.Forms.Button N502BТумблерОсвещение2;
-        private System.Windows.Forms.Button N502BТумблерОсвещение1;
+        private System.Windows.Forms.Button ТумблерЭлектрооборудование;
+        private System.Windows.Forms.Button ТумблерВыпрямитель27В;
+        private System.Windows.Forms.Button ТумблерОсвещение;
+        private System.Windows.Forms.Button ТумблерН131;
+        private System.Windows.Forms.Button ТумблерН132;
+        private System.Windows.Forms.Button ТумблерН15;
+        private System.Windows.Forms.Button ТумблерОсвещение2;
+        private System.Windows.Forms.Button ТумблерОсвещение1;
         private System.Windows.Forms.Button N502BКнопкаРБПСброс;
         private System.Windows.Forms.Button N502BКнопкаРБППроверка;
         private System.Windows.Forms.Button N502BКнопкаВклНагрузки;
-        private System.Windows.Forms.Button N502BПереключательСеть;
-        private System.Windows.Forms.Button N502BПереключательНапряжение;
-        private System.Windows.Forms.Button N502BПереключательФазировка;
-        private System.Windows.Forms.Button N502BПереключательКонтрольНапряжения;
-        private System.Windows.Forms.Button N502BПереключательТокНагрузкиИЗаряда;
+        private System.Windows.Forms.Button ПереключательСеть;
+        private System.Windows.Forms.Button ПереключательНапряжение;
+        private System.Windows.Forms.Button ПереключательФазировка;
+        private System.Windows.Forms.Button ПереключательКонтрольНапряжения;
+        private System.Windows.Forms.Button ПереключательТокНагрузкиИЗаряда;
         private System.Windows.Forms.PictureBox N502BЛампочкаСеть;
         private System.Windows.Forms.PictureBox N502BЛампочкаСфазировано;
 
