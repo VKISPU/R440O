@@ -57,38 +57,6 @@ namespace R440O.R440OForms.R440O
                 // ReSharper disable once AssignNullToNotNullAttribute by trycatch
                 var thisForm = Activator.CreateInstance(Type.GetType(typeName));
                 var newForm = (Form)thisForm;
-                
-                ////Подписка на события
-                switch (newForm.Name)
-                {
-                    case "A304Form":
-                    {
-                        var newA304Form = new A304Form();
-                        var n15Form = (N15Form)this.GetSpecificForm("N15Form");
-                        if (n15Form != null)
-                        {
-                            n15Form.A30412StateChange += newA304Form.TurnLampsEvent;
-                        }
-
-                        newForm = newA304Form;
-                    }
-
-                    break;
-                    case "N15Form":
-                    {
-                        var n15Form = new N15Form();
-                        var newA304Form = (A304Form)this.GetSpecificForm("A304Form");
-                        if (newA304Form != null)
-                        {
-                            n15Form.A30412StateChange += newA304Form.TurnLampsEvent;
-                        }
-
-                        newForm = n15Form;
-                    }
-
-                    break;
-                }
-
                 newForm.Show(this);
             }
             catch

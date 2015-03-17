@@ -184,11 +184,6 @@ namespace R440O.R440OForms.N15
                         this.Н15ЛампочкаА3042.BackgroundImage = null;
                     }
             }
-
-            if (this.A30412StateChange != null)
-            {
-                this.A30412StateChange();
-            }
             #endregion
 
             #region Н15ТумблерБМА_1
@@ -1213,11 +1208,6 @@ namespace R440O.R440OForms.N15
                     this.Н15ЛампочкаА3042.BackgroundImage = ControlElementImages.lampType5OnRed;
 
                     N15Parameters.Н15ЛампочкаА3041 = "false";
-                    this.Н15ЛампочкаА3041.BackgroundImage = null;
-                    if (this.A30412StateChange != null)
-                    {
-                        this.A30412StateChange();
-                    }
                 }
             }
             else
@@ -1231,10 +1221,6 @@ namespace R440O.R440OForms.N15
 
                     N15Parameters.Н15ЛампочкаА3042 = "false";
                     this.Н15ЛампочкаА3042.BackgroundImage = null;
-                    if (this.A30412StateChange != null)
-                    {
-                        this.A30412StateChange();
-                    }
                 }
             }
         }
@@ -1252,18 +1238,6 @@ namespace R440O.R440OForms.N15
                 локН15ТумблерАнтЭкв = "АНТ";
             }
         }
-
-        #region События
-        /// <summary>
-        /// Сигнатура void(void) для событий данной формы
-        /// </summary>
-        public delegate void VoidVoidSignature();
-
-        /// <summary>
-        /// Изменилось состояние блока A304
-        /// </summary>
-        public event VoidVoidSignature A30412StateChange; 
-        #endregion
 
         private void Н15ТумблерТлфТлгПрм_Click(object sender, EventArgs e)
         {
