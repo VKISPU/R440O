@@ -1,13 +1,6 @@
-﻿//-----------------------------------------------------------------------
-// <copyright file="VoltageStabilizerForm.cs" company="VKISPU">
-//      R440O station.
-// </copyright>
-//-----------------------------------------------------------------------
-
-namespace R440O.R440OForms.VoltageStabilizer
+﻿namespace R440O.R440OForms.VoltageStabilizer
 {
     using System.Windows.Forms;
-    using Parameters;
     using ThirdParty;
 
     /// <summary>
@@ -25,28 +18,29 @@ namespace R440O.R440OForms.VoltageStabilizer
             this.InitializeLamps();
         }
 
+        #region Обработка действий пользователя
         /// <summary>
         /// Обработка клика на кабельный вход 220В.
         /// Если питание отключено, оно будет установлено на 220В.
         /// Если питание установлено на 220В, то оно будет отключено.
         /// Если питание установлено на 380В, то оно будет переключено на 220В.
         /// </summary>
-        private void VoltageStabilizerКабельВход1_Click(object sender, System.EventArgs e)
+        private void КабельВход1_Click(object sender, System.EventArgs e)
         {
-            switch (VoltageStabilizerParameters.VoltageStabilizerКабельВход)
+            switch (VoltageStabilizerParameters.КабельВход)
             {
-                case "0":
-                    VoltageStabilizerКабельВход1.BackgroundImage = ControlElementImages.voltageStabilizerInput;
-                    VoltageStabilizerParameters.VoltageStabilizerКабельВход = "220";
+                case 0:
+                    КабельВход1.BackgroundImage = ControlElementImages.voltageStabilizerInput;
+                    VoltageStabilizerParameters.КабельВход = 220;
                     break;
-                case "220":
-                    VoltageStabilizerКабельВход1.BackgroundImage = null;
-                    VoltageStabilizerParameters.VoltageStabilizerКабельВход = "0";
+                case 220:
+                    КабельВход1.BackgroundImage = null;
+                    VoltageStabilizerParameters.КабельВход = 0;
                     break;
-                case "380":
-                    VoltageStabilizerКабельВход1.BackgroundImage = ControlElementImages.voltageStabilizerInput;
-                    VoltageStabilizerКабельВход2.BackgroundImage = null;
-                    VoltageStabilizerParameters.VoltageStabilizerКабельВход = "220";
+                case 380:
+                    КабельВход1.BackgroundImage = ControlElementImages.voltageStabilizerInput;
+                    КабельВход2.BackgroundImage = null;
+                    VoltageStabilizerParameters.КабельВход = 220;
                     break;
             }
         }
@@ -57,22 +51,22 @@ namespace R440O.R440OForms.VoltageStabilizer
         /// Если питание установлено на 380В, то оно будет отключено.
         /// Если питание установлено на 220В, то оно будет переключено на 380В.
         /// </summary>
-        private void VoltageStabilizerКабельВход2_Click(object sender, System.EventArgs e)
+        private void КабельВход2_Click(object sender, System.EventArgs e)
         {
-            switch (VoltageStabilizerParameters.VoltageStabilizerКабельВход)
+            switch (VoltageStabilizerParameters.КабельВход)
             {
-                case "0":
-                    VoltageStabilizerКабельВход2.BackgroundImage = ControlElementImages.voltageStabilizerInput;
-                    VoltageStabilizerParameters.VoltageStabilizerКабельВход = "380";
+                case 0:
+                    КабельВход2.BackgroundImage = ControlElementImages.voltageStabilizerInput;
+                    VoltageStabilizerParameters.КабельВход = 380;
                     break;
-                case "220":
-                    VoltageStabilizerКабельВход1.BackgroundImage = null;
-                    VoltageStabilizerКабельВход2.BackgroundImage = ControlElementImages.voltageStabilizerInput;
-                    VoltageStabilizerParameters.VoltageStabilizerКабельВход = "380";    
+                case 220:
+                    КабельВход1.BackgroundImage = null;
+                    КабельВход2.BackgroundImage = ControlElementImages.voltageStabilizerInput;
+                    VoltageStabilizerParameters.КабельВход = 380;
                     break;
-                case "380":
-                    VoltageStabilizerКабельВход2.BackgroundImage = null;
-                    VoltageStabilizerParameters.VoltageStabilizerКабельВход = "0";
+                case 380:
+                    КабельВход2.BackgroundImage = null;
+                    VoltageStabilizerParameters.КабельВход = 0;
                     break;
             }
         }
@@ -80,58 +74,72 @@ namespace R440O.R440OForms.VoltageStabilizer
         /// <summary>
         /// Переключатель КонтрольНапряжения
         /// </summary>
-        private void VoltageStabilizerПереключательКонтрольНапр_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательКонтрольНапр_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                VoltageStabilizerParameters.VoltageStabilizerПереключательКонтрольНапр += 1;
+                VoltageStabilizerParameters.ПереключательКонтрольНапр += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                VoltageStabilizerParameters.VoltageStabilizerПереключательКонтрольНапр -= 1;
+                VoltageStabilizerParameters.ПереключательКонтрольНапр -= 1;
             }
 
-            var angle = VoltageStabilizerParameters.VoltageStabilizerПереключательКонтрольНапр * 30 - 195;
-            VoltageStabilizerПереключательКонтрольНапр.BackgroundImage =
+            var angle = VoltageStabilizerParameters.ПереключательКонтрольНапр * 30 - 195;
+            ПереключательКонтрольНапр.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
         }
+        #endregion
 
+        #region Иницилизация ламп и переключателя
         /// <summary>
         /// Инициализация начальных положений переключателей, а также
         /// восстановление положений при повторном открытии формы
         /// </summary>
         private void InitializeTogglePosition()
         {
-            switch (VoltageStabilizerParameters.VoltageStabilizerКабельВход)
+            switch (VoltageStabilizerParameters.КабельВход)
             {
-                case "0":
-                    VoltageStabilizerКабельВход1.BackgroundImage = null;
-                    VoltageStabilizerКабельВход2.BackgroundImage = null;
+                case 0:
+                    КабельВход1.BackgroundImage = null;
+                    КабельВход2.BackgroundImage = null;
                     break;
-                case "220":
-                    VoltageStabilizerКабельВход1.BackgroundImage = ControlElementImages.voltageStabilizerInput;
-                    VoltageStabilizerКабельВход2.BackgroundImage = null;
+                case 220:
+                    КабельВход1.BackgroundImage = ControlElementImages.voltageStabilizerInput;
+                    КабельВход2.BackgroundImage = null;
                     break;
-                case "380":
-                    VoltageStabilizerКабельВход1.BackgroundImage = null;
-                    VoltageStabilizerКабельВход2.BackgroundImage = ControlElementImages.voltageStabilizerInput;
+                case 380:
+                    КабельВход1.BackgroundImage = null;
+                    КабельВход2.BackgroundImage = ControlElementImages.voltageStabilizerInput;
                     break;
             }
-            var angle = VoltageStabilizerParameters.VoltageStabilizerПереключательКонтрольНапр * 30 - 195;
-            VoltageStabilizerПереключательКонтрольНапр.BackgroundImage =
+            var angle = VoltageStabilizerParameters.ПереключательКонтрольНапр * 30 - 195;
+            ПереключательКонтрольНапр.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
         }
 
         private void InitializeLamps()
         {
-            VoltageStabilizerЛампочкаСетьВкл.BackgroundImage = VoltageStabilizerParameters.VoltageStabilizerЛампочкаСетьВкл
+            ЛампочкаСетьВкл.BackgroundImage = VoltageStabilizerParameters.ЛампочкаСетьВкл
                 ? ControlElementImages.lampType9OnGreen
                 : null;
 
-            VoltageStabilizerЛампочкаАвария.BackgroundImage = VoltageStabilizerParameters.VoltageStabilizerЛампочкаАвария
+            ЛампочкаАвария.BackgroundImage = VoltageStabilizerParameters.ЛампочкаАвария
                 ? ControlElementImages.lampType6OnRed
                 : null;
-        }
+        } 
+        #endregion
+
+        private void RefreshLamps()
+        {
+            ЛампочкаСетьВкл.BackgroundImage = VoltageStabilizerParameters.ЛампочкаСетьВкл
+                ? ControlElementImages.lampType9OnGreen
+                : null;
+
+            ЛампочкаАвария.BackgroundImage = VoltageStabilizerParameters.ЛампочкаАвария
+                ? ControlElementImages.lampType6OnRed
+                : null;
+        } 
     }
 }
