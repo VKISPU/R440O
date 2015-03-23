@@ -458,6 +458,16 @@ namespace R440O.R440OForms.N12S
 
                 //остановка таймера
                 timer.Stop();
+
+                timer.Tick -= timerAlphaReturnTo30_Tick;
+                timer.Tick -= timerAlphaReturn_Tick;
+                timer.Tick -= timerAlphaRight_Tick;
+                timer.Tick -= timerAlphaLeft_Tick;
+
+                timer.Tick -= timerBetaReturnTo30_Tick;
+                timer.Tick -= timerBetaReturn_Tick;
+                timer.Tick -= timerBetaRight_Tick;
+                timer.Tick -= timerBetaLeft_Tick;
             }
             else
             {

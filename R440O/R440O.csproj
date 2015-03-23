@@ -115,7 +115,7 @@
     <Compile Include="Parameters\N15Parameters.cs" />
     <Compile Include="R440OForms\A1\A1Parameters.cs" />
     <Compile Include="R440OForms\N502B\N502BParameters.cs" />
-	<Compile Include="Parameters\NKN_2Parameters.cs" />
+    <Compile Include="Parameters\NKN_2Parameters.cs" />
     <Compile Include="Parameters\NKN_1Parameters.cs" />
     <Compile Include="Parameters\P220_27G_2Parameters.cs" />
     <Compile Include="Parameters\P220_27G_3Parameters.cs" />
@@ -1080,6 +1080,9 @@
     <None Include="Resources\buttonRoundType7.png" />
     <None Include="Resources\buttonRoundType8.png" />
     <None Include="Resources\Arrow.png" />
+    <None Include="Resources\A306Output.png" />
+    <None Include="Resources\A306CabelNO.png" />
+    <None Include="Resources\A306Input.png" />
     <Content Include="Resources\buttonSquareBlack.png" />
     <Content Include="Resources\buttonSquareBlackLarge.png" />
     <None Include="Resources\buttonSquareBlack_small.png" />
