@@ -22,7 +22,7 @@ namespace R440O.R440OForms.N502B
             InitializeLamps();
             InitializeTumblersPosition();
             InitializeTogglesPosition();
-            PowerCabelForm.RefreshForm += InitializeLamps;
+            N502BParameters.RefreshForm += InitializeLamps;
         }
 
         #region Тумблеры
@@ -167,16 +167,13 @@ namespace R440O.R440OForms.N502B
         private void КнопкаВклНагрузки_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаВклНагрузки.BackgroundImage = null;
-            if (!(N502BParameters.ЛампочкаСеть & N502BParameters.ПереключательФазировка == 4 &
-                  N502BParameters.ПереключательСеть & VoltageStabilizerParameters.КабельВход == 380)) return;
-            N502BParameters.ЛампочкаСфазировано = true;
-
-            InitializeLamps();
+            N502BParameters.КнопкаВклНагрузки = true;
         }
 
         private void КнопкаВклНагрузки_MouseUp(object sender, MouseEventArgs e)
         {
             КнопкаВклНагрузки.BackgroundImage = ControlElementImages.buttonRoundType3;
+            N502BParameters.КнопкаВклНагрузки = false;
         }
         #endregion
 
@@ -188,8 +185,6 @@ namespace R440O.R440OForms.N502B
             {
                 ПереключательСеть.BackgroundImage = ControlElementImages.tumblerN502BPowerDown;
                 N502BParameters.ПереключательСеть = false;
-                N502BParameters.ЛампочкаСфазировано = false;
-                ЛампочкаСфазировано.BackgroundImage = null;
             }
             else
             {
@@ -231,16 +226,6 @@ namespace R440O.R440OForms.N502B
             var angle = N502BParameters.ПереключательФазировка * 90 - 180;
             ПереключательФазировка.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType5, angle);
-
-            if ((N502BParameters.ПереключательФазировка == 4 | N502BParameters.ПереключательФазировка == 2) & PowerCabelParameters.КабельСеть)
-            {
-                N502BParameters.ЛампочкаСеть = true;
-            }
-            else
-            {
-                N502BParameters.ЛампочкаСеть = false;
-            }
-            InitializeLamps();
         }
 
         private void ПереключательКонтрольНапряжения_MouseUp(object sender, MouseEventArgs e)

@@ -1,11 +1,38 @@
-﻿namespace R440O.R440OForms.N502B
+﻿using R440O.R440OForms.PowerCabel;
+using R440O.R440OForms.VoltageStabilizer;
+
+namespace R440O.R440OForms.N502B
 {
     public class N502BParameters
     {
         #region Лампочки
+        private static bool _лампочкаСеть;
 
-        public static bool ЛампочкаСеть;
-        public static bool ЛампочкаСфазировано;
+        public static bool ЛампочкаСеть
+        {
+            get { return _лампочкаСеть; }
+            set
+            {
+                _лампочкаСеть = value;
+                VoltageStabilizerParameters.ResetParameters();
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        private static bool _лампочкаСфазировано;
+        public static bool ЛампочкаСфазировано
+        {
+            get
+            {
+                return _лампочкаСфазировано;
+            }
+            set
+            {
+                _лампочкаСфазировано = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
         public static bool ЛампочкаРбпПроверка;
         public static bool ЛампочкаРбпПредохранитель;
 
@@ -36,7 +63,17 @@
 
         #region Переключатели
 
-        public static bool ПереключательСеть = false;
+        private static bool _переключательСеть;
+        public static bool ПереключательСеть
+        {
+            get { return _переключательСеть; }
+            set
+            {
+                _переключательСеть = value;
+                ResetParameters();
+                VoltageStabilizerParameters.ResetParameters();
+            }
+        }
 
         private static int _переключательНапряжение = 1;
         public static int ПереключательНапряжение
@@ -49,7 +86,11 @@
         public static int ПереключательФазировка
         {
             get { return _переключательФазировка; }
-            set { if (value >= 0 && value <= 5) _переключательФазировка = value; }
+            set
+            {
+                if (value >= 0 && value <= 5) _переключательФазировка = value;
+                ResetParameters();
+            }
         }
 
         private static int _переключательКонтрольНапряжения = 2;
@@ -66,5 +107,32 @@
             set { if (value > 0 && value < 9) _переключательТокНагрузкиИЗаряда = value; }
         }
         #endregion
+
+        private static bool _кнопкаВклНагрузки;
+
+        public static bool КнопкаВклНагрузки
+        {
+            get { return _кнопкаВклНагрузки; }
+            set
+            {
+                _кнопкаВклНагрузки = value;
+                if (value)
+                {
+                    ResetParameters();
+                }
+            }
+            
+        }
+
+        public delegate void VoidVoidSignature();
+        public static event VoidVoidSignature RefreshForm;
+
+        public static void ResetParameters()
+        {
+            ЛампочкаСеть = (ПереключательФазировка == 4 || ПереключательФазировка == 2) &&
+                            PowerCabelParameters.КабельСеть;
+            ЛампочкаСфазировано =  ПереключательФазировка == 4 && ЛампочкаСеть &&
+                                  ПереключательСеть && VoltageStabilizerParameters.КабельВход == 380 && КнопкаВклНагрузки;
+        }
     }
 }

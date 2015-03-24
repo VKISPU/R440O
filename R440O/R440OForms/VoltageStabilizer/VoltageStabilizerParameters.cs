@@ -109,6 +109,7 @@ namespace R440O.R440OForms.VoltageStabilizer
                 _кабельВход = value;
                 if (RefreshForm != null) RefreshForm();
                 ResetParameters();
+                N502BParameters.ResetParameters();
             }
         }
 
@@ -116,16 +117,12 @@ namespace R440O.R440OForms.VoltageStabilizer
 
         public static void ResetParameters()
         {
-            ЛампочкаСетьВкл = PowerCabelParameters.КабельСеть &&
-                               N502BParameters.ПереключательСеть &&
-                               (N502BParameters.ПереключательФазировка == 4 ||
-                                N502BParameters.ПереключательФазировка == 2)
+            ЛампочкаСетьВкл = N502BParameters.ПереключательСеть &&
+                             N502BParameters.ЛампочкаСеть
                                && _кабельВход == 380;
 
-            ЛампочкаАвария = PowerCabelParameters.КабельСеть &&
-                               N502BParameters.ПереключательСеть &&
-                               (N502BParameters.ПереключательФазировка == 4 ||
-                                N502BParameters.ПереключательФазировка == 2)
+            ЛампочкаАвария = N502BParameters.ПереключательСеть &&
+                             N502BParameters.ЛампочкаСеть
                                && _кабельВход == 220;
         }
 
