@@ -4,24 +4,10 @@
     {
         #region Лампочки
 
-        private static bool _лампочкаСеть = false;
-
-        public static bool ЛампочкаСеть
-        {
-            get { return _лампочкаСеть; }
-            set
-            {
-                _лампочкаСеть = value;
-                if (RefreshForm != null)
-                {
-                    RefreshForm();
-                }
-            }
-        }
-
-        public static bool ЛампочкаСфазировано = false;
-        public static bool ЛампочкаРбпПроверка = false;
-        public static bool ЛампочкаРбпПредохранитель = false;
+        public static bool ЛампочкаСеть;
+        public static bool ЛампочкаСфазировано;
+        public static bool ЛампочкаРбпПроверка;
+        public static bool ЛампочкаРбпПредохранитель;
 
         #endregion
 
@@ -80,9 +66,5 @@
             set { if (value > 0 && value < 9) _переключательТокНагрузкиИЗаряда = value; }
         }
         #endregion
-
-        public delegate void VoidVoidSignature();
-
-        public static event VoidVoidSignature RefreshForm;
     }
 }

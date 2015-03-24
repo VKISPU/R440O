@@ -10,6 +10,9 @@ namespace R440O.R440OForms.PowerCabel
     /// </summary>
     public partial class PowerCabelForm : Form
     {
+        public delegate void VoidVoidSignature();
+        public static event VoidVoidSignature RefreshForm;
+
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="PowerCabelForm"/>
         /// </summary>
@@ -28,6 +31,18 @@ namespace R440O.R440OForms.PowerCabel
                 : ControlElementImages.powerCabelEnter;
 
             PowerCabelParameters.КабельСеть = !PowerCabelParameters.КабельСеть;
+            if (PowerCabelParameters.КабельСеть)
+            {
+                if (N502BParameters.ПереключательФазировка != 4 & N502BParameters.ПереключательФазировка != 2) return;
+                N502BParameters.ЛампочкаСеть = true;
+            }
+            else
+            {
+                N502BParameters.ЛампочкаСеть = false;
+            }
+            N502BParameters.ЛампочкаСфазировано = false;
+            if (RefreshForm == null) return;
+            RefreshForm();
         }
         #endregion
 

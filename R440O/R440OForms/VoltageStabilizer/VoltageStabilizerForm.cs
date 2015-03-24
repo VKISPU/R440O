@@ -14,12 +14,11 @@
         /// </summary>
         public VoltageStabilizerForm()
         {
-            this.InitializeComponent();
-            this.InitializeTogglePosition();
-            this.InitializeLamps();
+            InitializeComponent();
+            InitializeTogglePosition();
+            InitializeLamps();
             VoltageStabilizerParameters.RefreshForm += RefreshForm;
-        }
-
+		}
         #region Обработка действий пользователя
 
         /// <summary>

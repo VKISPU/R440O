@@ -5,6 +5,7 @@
 //-----------------------------------------------------------------------
 
 using R440O.R440OForms.PowerCabel;
+using R440O.R440OForms.VoltageStabilizer;
 using R440O.ThirdParty;
 
 
@@ -14,13 +15,14 @@ namespace R440O.R440OForms.N502B
 
     public partial class N502BForm : Form
     {
+        
         public N502BForm()
         {
             InitializeComponent();
             InitializeLamps();
             InitializeTumblersPosition();
             InitializeTogglesPosition();
-            N502BParameters.RefreshForm += InitializeLamps;
+            PowerCabelForm.RefreshForm += InitializeLamps;
         }
 
         #region Тумблеры
@@ -162,14 +164,19 @@ namespace R440O.R440OForms.N502B
             N502BКнопкаРБППроверка.BackgroundImage = null;
         }
 
-        private void N502BКнопкаВклНагрузки_MouseUp(object sender, MouseEventArgs e)
+        private void КнопкаВклНагрузки_MouseDown(object sender, MouseEventArgs e)
         {
-            N502BКнопкаВклНагрузки.BackgroundImage = ControlElementImages.buttonRoundType3;
+            КнопкаВклНагрузки.BackgroundImage = null;
+            if (!(N502BParameters.ЛампочкаСеть & N502BParameters.ПереключательФазировка == 4 &
+                  N502BParameters.ПереключательСеть & VoltageStabilizerParameters.КабельВход == 380)) return;
+            N502BParameters.ЛампочкаСфазировано = true;
+
+            InitializeLamps();
         }
 
-        private void N502BКнопкаВклНагрузки_MouseDown(object sender, MouseEventArgs e)
+        private void КнопкаВклНагрузки_MouseUp(object sender, MouseEventArgs e)
         {
-            N502BКнопкаВклНагрузки.BackgroundImage = null;
+            КнопкаВклНагрузки.BackgroundImage = ControlElementImages.buttonRoundType3;
         }
         #endregion
 
@@ -181,6 +188,8 @@ namespace R440O.R440OForms.N502B
             {
                 ПереключательСеть.BackgroundImage = ControlElementImages.tumblerN502BPowerDown;
                 N502BParameters.ПереключательСеть = false;
+                N502BParameters.ЛампочкаСфазировано = false;
+                ЛампочкаСфазировано.BackgroundImage = null;
             }
             else
             {
@@ -222,6 +231,16 @@ namespace R440O.R440OForms.N502B
             var angle = N502BParameters.ПереключательФазировка * 90 - 180;
             ПереключательФазировка.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType5, angle);
+
+            if ((N502BParameters.ПереключательФазировка == 4 | N502BParameters.ПереключательФазировка == 2) & PowerCabelParameters.КабельСеть)
+            {
+                N502BParameters.ЛампочкаСеть = true;
+            }
+            else
+            {
+                N502BParameters.ЛампочкаСеть = false;
+            }
+            InitializeLamps();
         }
 
         private void ПереключательКонтрольНапряжения_MouseUp(object sender, MouseEventArgs e)
@@ -333,11 +352,11 @@ namespace R440O.R440OForms.N502B
         
         private void InitializeLamps()
         {
-            N502BЛампочкаСеть.BackgroundImage = N502BParameters.ЛампочкаСеть
+            ЛампочкаСеть.BackgroundImage = N502BParameters.ЛампочкаСеть
                 ? ControlElementImages.lampType12OnRed
                 : null;
 
-            N502BЛампочкаСфазировано.BackgroundImage = N502BParameters.ЛампочкаСфазировано
+            ЛампочкаСфазировано.BackgroundImage = N502BParameters.ЛампочкаСфазировано
                 ? ControlElementImages.lampType12OnRed
                 : null;
         }
