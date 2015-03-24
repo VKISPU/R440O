@@ -1,5 +1,6 @@
 ﻿namespace R440O.R440OForms.VoltageStabilizer
 {
+    using System.Drawing;
     using System.Windows.Forms;
     using ThirdParty;
 
@@ -16,9 +17,11 @@
             this.InitializeComponent();
             this.InitializeTogglePosition();
             this.InitializeLamps();
+            VoltageStabilizerParameters.RefreshForm += RefreshForm;
         }
 
         #region Обработка действий пользователя
+
         /// <summary>
         /// Обработка клика на кабельный вход 220В.
         /// Если питание отключено, оно будет установлено на 220В.
@@ -86,13 +89,15 @@
                 VoltageStabilizerParameters.ПереключательКонтрольНапр -= 1;
             }
 
-            var angle = VoltageStabilizerParameters.ПереключательКонтрольНапр * 30 - 195;
+            var angle = VoltageStabilizerParameters.ПереключательКонтрольНапр*30 - 195;
             ПереключательКонтрольНапр.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
         }
+
         #endregion
 
         #region Иницилизация ламп и переключателя
+
         /// <summary>
         /// Инициализация начальных положений переключателей, а также
         /// восстановление положений при повторном открытии формы
@@ -114,7 +119,7 @@
                     КабельВход2.BackgroundImage = ControlElementImages.voltageStabilizerInput;
                     break;
             }
-            var angle = VoltageStabilizerParameters.ПереключательКонтрольНапр * 30 - 195;
+            var angle = VoltageStabilizerParameters.ПереключательКонтрольНапр*30 - 195;
             ПереключательКонтрольНапр.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
         }
@@ -128,11 +133,13 @@
             ЛампочкаАвария.BackgroundImage = VoltageStabilizerParameters.ЛампочкаАвария
                 ? ControlElementImages.lampType6OnRed
                 : null;
-        } 
+        }
+
         #endregion
 
-        private void RefreshLamps()
+        private void RefreshForm()
         {
+            ИндикаторНапряжения.Invalidate();
             ЛампочкаСетьВкл.BackgroundImage = VoltageStabilizerParameters.ЛампочкаСетьВкл
                 ? ControlElementImages.lampType9OnGreen
                 : null;
@@ -140,6 +147,37 @@
             ЛампочкаАвария.BackgroundImage = VoltageStabilizerParameters.ЛампочкаАвария
                 ? ControlElementImages.lampType6OnRed
                 : null;
-        } 
+        }
+
+        #region Отрисовка индикатора напряжения
+
+        private void ИндикаторНапряжения_Paint(object sender, PaintEventArgs e)
+        {
+            switch (VoltageStabilizerParameters.ИндикаторНапряжение())
+            {
+                case 0:
+                    DrawLine(e.Graphics, 10, 50, 50, 80);
+                    break;
+                case 127:
+                    DrawLine(e.Graphics, 35, 40, 60, 80);
+                    break;
+                case 220:
+                    DrawLine(e.Graphics, 55, 30, 65, 80);
+                    break;
+                case 380:
+                    DrawLine(e.Graphics, 100, 30, 70, 80);
+                    break;
+            }
+        }
+
+        private void DrawLine(Graphics g, int x1, int y1, int x2, int y2)
+        {
+            var point1 = new Point(x1, y1);
+            var point2 = new Point(x2, y2);
+            var myPen = new Pen(Color.Black, 5);
+            g.DrawLine(myPen, point1, point2);
+        }
+
+        #endregion
     }
 }
