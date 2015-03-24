@@ -4,7 +4,9 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+using R440O.R440OForms.PowerCabel;
 using R440O.ThirdParty;
+
 
 namespace R440O.R440OForms.N502B
 {
@@ -18,6 +20,7 @@ namespace R440O.R440OForms.N502B
             InitializeLamps();
             InitializeTumblersPosition();
             InitializeTogglesPosition();
+            N502BParameters.RefreshForm += InitializeLamps;
         }
 
         #region Тумблеры

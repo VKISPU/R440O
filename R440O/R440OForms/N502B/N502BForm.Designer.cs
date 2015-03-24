@@ -380,25 +380,25 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel N502BPanel;
-        private System.Windows.Forms.Button ТумблерЭлектрооборудование;
-        private System.Windows.Forms.Button ТумблерВыпрямитель27В;
-        private System.Windows.Forms.Button ТумблерОсвещение;
-        private System.Windows.Forms.Button ТумблерН131;
-        private System.Windows.Forms.Button ТумблерН132;
-        private System.Windows.Forms.Button ТумблерН15;
-        private System.Windows.Forms.Button ТумблерОсвещение2;
-        private System.Windows.Forms.Button ТумблерОсвещение1;
-        private System.Windows.Forms.Button N502BКнопкаРБПСброс;
-        private System.Windows.Forms.Button N502BКнопкаРБППроверка;
-        private System.Windows.Forms.Button N502BКнопкаВклНагрузки;
-        private System.Windows.Forms.Button ПереключательСеть;
-        private System.Windows.Forms.Button ПереключательНапряжение;
-        private System.Windows.Forms.Button ПереключательФазировка;
-        private System.Windows.Forms.Button ПереключательКонтрольНапряжения;
-        private System.Windows.Forms.Button ПереключательТокНагрузкиИЗаряда;
-        private System.Windows.Forms.PictureBox N502BЛампочкаСеть;
-        private System.Windows.Forms.PictureBox N502BЛампочкаСфазировано;
+        public System.Windows.Forms.Panel N502BPanel;
+        public System.Windows.Forms.Button ТумблерЭлектрооборудование;
+        public System.Windows.Forms.Button ТумблерВыпрямитель27В;
+        public System.Windows.Forms.Button ТумблерОсвещение;
+        public System.Windows.Forms.Button ТумблерН131;
+        public System.Windows.Forms.Button ТумблерН132;
+        public System.Windows.Forms.Button ТумблерН15;
+        public System.Windows.Forms.Button ТумблерОсвещение2;
+        public System.Windows.Forms.Button ТумблерОсвещение1;
+        public System.Windows.Forms.Button N502BКнопкаРБПСброс;
+        public System.Windows.Forms.Button N502BКнопкаРБППроверка;
+        public System.Windows.Forms.Button N502BКнопкаВклНагрузки;
+        public System.Windows.Forms.Button ПереключательСеть;
+        public System.Windows.Forms.Button ПереключательНапряжение;
+        public System.Windows.Forms.Button ПереключательФазировка;
+        public System.Windows.Forms.Button ПереключательКонтрольНапряжения;
+        public System.Windows.Forms.Button ПереключательТокНагрузкиИЗаряда;
+        public System.Windows.Forms.PictureBox N502BЛампочкаСеть;
+        public System.Windows.Forms.PictureBox N502BЛампочкаСфазировано;
 
     }
 }
