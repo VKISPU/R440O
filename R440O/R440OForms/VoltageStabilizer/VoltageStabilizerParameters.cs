@@ -115,13 +115,13 @@ namespace R440O.R440OForms.VoltageStabilizer
 
         public static void ResetParameters()
         {
-            _лампочкаСетьВкл = PowerCabelParameters.КабельСеть &&
+            ЛампочкаСетьВкл = PowerCabelParameters.КабельСеть &&
                                N502BParameters.ПереключательСеть &&
                                (N502BParameters.ПереключательФазировка == 4 ||
                                 N502BParameters.ПереключательФазировка == 2)
                                && _кабельВход == 380;
 
-            _лампочкаАвария = PowerCabelParameters.КабельСеть &&
+            ЛампочкаАвария = PowerCabelParameters.КабельСеть &&
                                N502BParameters.ПереключательСеть &&
                                (N502BParameters.ПереключательФазировка == 4 ||
                                 N502BParameters.ПереключательФазировка == 2)
