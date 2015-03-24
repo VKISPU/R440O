@@ -68,7 +68,7 @@ namespace R440O.R440OForms.VoltageStabilizer
         {
             get
             {
-                if (КабельВход == 0) return 0;
+                if (!ЛампочкаСетьВкл) return 0;
                 switch (_переключательКонтрольНапр)
                 {
                     case 1:
@@ -107,6 +107,7 @@ namespace R440O.R440OForms.VoltageStabilizer
             set
             {
                 _кабельВход = value;
+                if (RefreshForm != null) RefreshForm();
                 ResetParameters();
             }
         }
