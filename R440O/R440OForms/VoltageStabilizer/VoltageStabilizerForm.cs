@@ -19,6 +19,7 @@
             InitializeLamps();
             VoltageStabilizerParameters.RefreshForm += RefreshForm;
 		}
+
         #region Обработка действий пользователя
 
         /// <summary>
@@ -152,7 +153,7 @@
 
         private void ИндикаторНапряжения_Paint(object sender, PaintEventArgs e)
         {
-            switch (VoltageStabilizerParameters.ИндикаторНапряжение())
+            switch (VoltageStabilizerParameters.ИндикаторНапряжение)
             {
                 case 0:
                     DrawLine(e.Graphics, 10, 50, 50, 80);

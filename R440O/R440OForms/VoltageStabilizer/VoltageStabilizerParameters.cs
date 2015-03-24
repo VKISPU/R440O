@@ -1,4 +1,7 @@
-﻿namespace R440O.R440OForms.VoltageStabilizer
+﻿using R440O.R440OForms.N502B;
+using R440O.R440OForms.PowerCabel;
+
+namespace R440O.R440OForms.VoltageStabilizer
 {
     public static class VoltageStabilizerParameters
     {
@@ -61,29 +64,32 @@
             }
         }
         
-        public static int ИндикаторНапряжение()
+        public static int ИндикаторНапряжение
         {
-            if (КабельВход == 0) return 0;
-            switch (_переключательКонтрольНапр)
+            get
             {
-                case 1:
-                case 2:
-                case 3:
-                    return 220;
-                case 4:
-                case 5:
-                case 6:
-                    return 220;
-                case 7:
-                case 8:
-                case 9:
-                    return КабельВход == 220 ? 0 : 380;
-                case 10:
-                case 11:
-                case 12:
-                    return 127;
+                if (КабельВход == 0) return 0;
+                switch (_переключательКонтрольНапр)
+                {
+                    case 1:
+                    case 2:
+                    case 3:
+                        return 220;
+                    case 4:
+                    case 5:
+                    case 6:
+                        return 220;
+                    case 7:
+                    case 8:
+                    case 9:
+                        return КабельВход == 220 ? 0 : 380;
+                    case 10:
+                    case 11:
+                    case 12:
+                        return 127;
+                }
+                return 0;
             }
-            return 0;
         }
 
         #endregion
@@ -101,12 +107,29 @@
             set
             {
                 _кабельВход = value;
-                if (RefreshForm != null) RefreshForm();
+                ResetParameters();
             }
         }
 
-        public delegate void VoidVoidSignature();
+        #region Обновление переменных и формы
 
-        public static event VoidVoidSignature RefreshForm;
+        public static void ResetParameters()
+        {
+            _лампочкаСетьВкл = PowerCabelParameters.КабельСеть &&
+                               N502BParameters.ПереключательСеть &&
+                               (N502BParameters.ПереключательФазировка == 4 ||
+                                N502BParameters.ПереключательФазировка == 2)
+                               && _кабельВход == 380;
+
+            _лампочкаАвария = PowerCabelParameters.КабельСеть &&
+                               N502BParameters.ПереключательСеть &&
+                               (N502BParameters.ПереключательФазировка == 4 ||
+                                N502BParameters.ПереключательФазировка == 2)
+                               && _кабельВход == 220;
+        }
+
+        public delegate void VoidVoidSignature();
+        public static event VoidVoidSignature RefreshForm; 
+        #endregion
     }
 }
