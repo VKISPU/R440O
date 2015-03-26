@@ -5,7 +5,6 @@
 //-----------------------------------------------------------------------
 
 using System;
-using System.Linq;
 using System.Reflection;
 
 namespace R440O.R440OForms.A403_1
@@ -24,461 +23,183 @@ namespace R440O.R440OForms.A403_1
         /// </summary>
         public A403_1Form()
         {
-            this.InitializeComponent();
-            this.InitializeTumblersPosition();
-            this.InitializeTogglesPosition();
-            this.InitializeButtonsPosition();
+            InitializeComponent();
+            InitializeTumblersPosition();
+            InitializeTogglesPosition();
+            InitializeButtonsPosition();
         }
 
         #region Тумблеры
-        private void A403_1ТумблерСеть_Click(object sender, System.EventArgs e)
+        private void ТумблерСеть_Click(object sender, System.EventArgs e)
         {
-            if (A403_1Parameters.A403_1ТумблерСеть == "сеть")
-            {
-                this.A403_1ТумблерСеть.BackgroundImage = ControlElementImages.tumblerType6Down;
-                A403_1Parameters.A403_1ТумблерСеть = "откл";
-            }
-            else
-            {
-                this.A403_1ТумблерСеть.BackgroundImage = ControlElementImages.tumblerType6Up;
-                A403_1Parameters.A403_1ТумблерСеть = "сеть";
-            }
+            A403_1Parameters.ТумблерСеть = !A403_1Parameters.ТумблерСеть;
+            ТумблерСеть.BackgroundImage = A403_1Parameters.ТумблерСеть
+                ? ControlElementImages.tumblerType6Up
+                : ControlElementImages.tumblerType6Down;
         }
 
-        private void A403_1ТумблерКомплект_Click(object sender, System.EventArgs e)
+        private void ТумблерКомплект_Click(object sender, System.EventArgs e)
         {
-            if (A403_1Parameters.A403_1ТумблерКомплект == "1")
-            {
-                this.A403_1ТумблерКомплект.BackgroundImage = ControlElementImages.tumblerType5Right;
-                A403_1Parameters.A403_1ТумблерКомплект = "2";
-            }
-            else
-            {
-                this.A403_1ТумблерКомплект.BackgroundImage = ControlElementImages.tumblerType5Left;
-                A403_1Parameters.A403_1ТумблерКомплект = "1";
-            }
+            A403_1Parameters.ТумблерКомплект = !A403_1Parameters.ТумблерКомплект;
+            ТумблерКомплект.BackgroundImage = A403_1Parameters.ТумблерКомплект
+                ? ControlElementImages.tumblerType5Left
+                : ControlElementImages.tumblerType5Right;
         }
 
-        private void A403_1ТумблерГотов_Click(object sender, System.EventArgs e)
+        private void ТумблерГотов_Click(object sender, System.EventArgs e)
         {
-            if (A403_1Parameters.A403_1ТумблерГотов == "готов")
-            {
-                this.A403_1ТумблерГотов.BackgroundImage = ControlElementImages.tumblerType4Down;
-                A403_1Parameters.A403_1ТумблерГотов = "откл";
-            }
-            else
-            {
-                this.A403_1ТумблерГотов.BackgroundImage = ControlElementImages.tumblerType4Up;
-                A403_1Parameters.A403_1ТумблерГотов = "готов";
-            }
+            A403_1Parameters.ТумблерГотов = !A403_1Parameters.ТумблерГотов;
+            ТумблерГотов.BackgroundImage = A403_1Parameters.ТумблерГотов
+                ? ControlElementImages.tumblerType4Up
+                : ControlElementImages.tumblerType4Down;
         }
 
-        private void A403_1ТумблерГруппа_Click(object sender, System.EventArgs e)
+        private void ТумблерГруппа_Click(object sender, System.EventArgs e)
         {
-            if (A403_1Parameters.A403_1ТумблерГруппа == "1группа")
-            {
-                this.A403_1ТумблерГруппа.BackgroundImage = ControlElementImages.tumblerType4Down;
-                A403_1Parameters.A403_1ТумблерГруппа = "2группа";
-            }
-            else
-            {
-                this.A403_1ТумблерГруппа.BackgroundImage = ControlElementImages.tumblerType4Up;
-                A403_1Parameters.A403_1ТумблерГруппа = "1группа";
-            }
+            A403_1Parameters.ТумблерГруппа = !A403_1Parameters.ТумблерГруппа;
+            A403_1ТумблерГруппа.BackgroundImage = A403_1Parameters.ТумблерГруппа
+                ? ControlElementImages.tumblerType4Up
+                : ControlElementImages.tumblerType4Down;
         }
 
-        private void A403_1ТумблерАвтКоррекция_Click(object sender, System.EventArgs e)
+        private void ТумблерАвтКоррекция_Click(object sender, System.EventArgs e)
         {
-            if (A403_1Parameters.A403_1ТумблерАвтКоррекция == "автКоррекция")
-            {
-                this.A403_1ТумблерАвтКоррекция.BackgroundImage = ControlElementImages.tumblerType4Down;
-                A403_1Parameters.A403_1ТумблерАвтКоррекция = "откл";
-            }
-            else
-            {
-                this.A403_1ТумблерАвтКоррекция.BackgroundImage = ControlElementImages.tumblerType4Up;
-                A403_1Parameters.A403_1ТумблерАвтКоррекция = "автКоррекция";
-            }
+            A403_1Parameters.ТумблерАвтКоррекция = !A403_1Parameters.ТумблерАвтКоррекция;
+            ТумблерАвтКоррекция.BackgroundImage = A403_1Parameters.ТумблерАвтКоррекция
+                ? ControlElementImages.tumblerType4Up
+                : ControlElementImages.tumblerType4Down;
         }
         #endregion
 
         #region Кнопки
 
+        #region Кнопки набора значений
         /// <summary>
         /// Универсальный метод обработки нажатий на кнопки набора значений
         /// </summary>
-        private void A403_1КнопкаНабора_MouseDown(object sender, MouseEventArgs e)
+        private void КнопкаНабора_MouseDown(object sender, MouseEventArgs e)
         {
             var button = sender as Button;
             button.BackgroundImage = null;
-            button.Text = string.Empty;    
+            button.Text = string.Empty;
         }
 
         /// <summary>
         /// Универсальный метод обработки нажатий на кнопки набора значений
         /// </summary>
-        private void A403_1КнопкаНабора_MouseUp(object sender, MouseEventArgs e)
+        private void КнопкаНабора_MouseUp(object sender, MouseEventArgs e)
         {
             var button = sender as Button;
-            //Названия всех кнопок отличаются лишь на один 12 символ (Исключение КнопкаМинус)
-            char number = button.Name[12];
+            //Названия всех кнопок отличаются лишь на один 6 символ (Исключение КнопкаМинус)
+            char number = button.Name[6];
             button.BackgroundImage = ControlElementImages.buttonSquareWhite;
-            //Восстановление текста надо кнопкой после отжатия (КнопкаМинус, как отдельный случай)
+            //Восстановление текста над кнопкой после отжатия (КнопкаМинус, как отдельный случай)
             button.Text = (number == 'М')
                         ? "-"
                         : Convert.ToString(number);
+
         }
+        #endregion
 
-        private void A403_1КнопкаАlpha_Lambda_Click(object sender, System.EventArgs e)
+        #region Кнопки выбора параметров
+        /// <summary>
+        /// Универсальный метод обработки нажатий на кнопки параметров
+        /// </summary>
+        private void КнопкаПараметры_Click(object sender, System.EventArgs e)
         {
-            this.A403_1КнопкаАlpha_Lambda.Visible = false;
-            A403_1Parameters.A403_1КнопкаАlpha_Lambda = true;
+            var button = sender as Button;
+            //Названия всех кнопок отличаются лишь на один 15 символ
+            int number = (int)Char.GetNumericValue(button.Name[15]);
 
-            switch (A403_1Parameters.A403_1ТумблерГруппа)
+            //Обнуляем все параметры и выставляем true у той кнопки которую нажали
+            for (int i = 0; i < A403_1Parameters.КнопкиПараметры.Length; i++)
+                A403_1Parameters.КнопкиПараметры[i] = false;
+            A403_1Parameters.КнопкиПараметры[number] = true;
+
+            //Идём по всем кнопкам параметров, чтобы выполнить анимацию
+            foreach (Control item in A403_1Panel.Controls)
             {
-                case "1группа": A403_1Parameters.A403_1TextParameter = "alpha";
-                    break;
-                case "2группа": A403_1Parameters.A403_1TextParameter = "lambda";
-                    break;
+                if (item.Name.Contains("КнопкаПараметры") && !item.Name.Contains("Сброс"))
+                    item.Visible = !(A403_1Parameters.КнопкиПараметры[(int)Char.GetNumericValue(item.Name[15])]);
             }
-
-            this.A403_1КнопкаEpsilon_Phi.Visible = true;
-            A403_1Parameters.A403_1КнопкаEpsilon_Phi = false;
-            this.A403_1КнопкаI_H.Visible = true;
-            A403_1Parameters.A403_1КнопкаI_H = false;
-            this.A403_1КнопкаOmega_N.Visible = true;
-            A403_1Parameters.A403_1КнопкаOmega_N = false;
-            this.A403_1КнопкаLambda0_f.Visible = true;
-            A403_1Parameters.A403_1КнопкаLambda0_f = false;
-            this.A403_1Кнопкаt0_K.Visible = true;
-            A403_1Parameters.A403_1Кнопкаt0_K = false;
-            this.A403_1КнопкаT_Kbeta.Visible = true;
-            A403_1Parameters.A403_1КнопкаT_Kbeta = false;
-            this.A403_1Кнопкаtсв_Yalpha.Visible = true;
-            A403_1Parameters.A403_1Кнопкаtсв_Yalpha = false;
-            this.A403_1Кнопкаtуст_Ybeta.Visible = true;
-            A403_1Parameters.A403_1Кнопкаtуст_Ybeta = false;
-        }
-
-        private void A403_1КнопкаEpsilon_Phi_Click(object sender, System.EventArgs e)
-        {
-            this.A403_1КнопкаEpsilon_Phi.Visible = false;
-            A403_1Parameters.A403_1КнопкаEpsilon_Phi = true;
-
-            switch (A403_1Parameters.A403_1ТумблерГруппа)
-            {
-                case "1группа": A403_1Parameters.A403_1TextParameter = "epsilon";
-                    break;
-                case "2группа": A403_1Parameters.A403_1TextParameter = "phi";
-                    break;
-            }
-
-            this.A403_1КнопкаАlpha_Lambda.Visible = true;
-            A403_1Parameters.A403_1КнопкаАlpha_Lambda = false;
-            this.A403_1КнопкаI_H.Visible = true;
-            A403_1Parameters.A403_1КнопкаI_H = false;
-            this.A403_1КнопкаOmega_N.Visible = true;
-            A403_1Parameters.A403_1КнопкаOmega_N = false;
-            this.A403_1КнопкаLambda0_f.Visible = true;
-            A403_1Parameters.A403_1КнопкаLambda0_f = false;
-            this.A403_1Кнопкаt0_K.Visible = true;
-            A403_1Parameters.A403_1Кнопкаt0_K = false;
-            this.A403_1КнопкаT_Kbeta.Visible = true;
-            A403_1Parameters.A403_1КнопкаT_Kbeta = false;
-            this.A403_1Кнопкаtсв_Yalpha.Visible = true;
-            A403_1Parameters.A403_1Кнопкаtсв_Yalpha = false;
-            this.A403_1Кнопкаtуст_Ybeta.Visible = true;
-            A403_1Parameters.A403_1Кнопкаtуст_Ybeta = false;
-        }
-
-        private void A403_1КнопкаI_H_Click(object sender, System.EventArgs e)
-        {
-            this.A403_1КнопкаI_H.Visible = false;
-            A403_1Parameters.A403_1КнопкаI_H = true;
-            switch (A403_1Parameters.A403_1ТумблерГруппа)
-            {
-                case "1группа": A403_1Parameters.A403_1TextParameter = "i";
-                    break;
-                case "2группа": A403_1Parameters.A403_1TextParameter = "H";
-                    break;
-            }
-
-            this.A403_1КнопкаАlpha_Lambda.Visible = true;
-            A403_1Parameters.A403_1КнопкаАlpha_Lambda = false;
-            this.A403_1КнопкаEpsilon_Phi.Visible = true;
-            A403_1Parameters.A403_1КнопкаEpsilon_Phi = false;
-            this.A403_1КнопкаOmega_N.Visible = true;
-            A403_1Parameters.A403_1КнопкаOmega_N = false;
-            this.A403_1КнопкаLambda0_f.Visible = true;
-            A403_1Parameters.A403_1КнопкаLambda0_f = false;
-            this.A403_1Кнопкаt0_K.Visible = true;
-            A403_1Parameters.A403_1Кнопкаt0_K = false;
-            this.A403_1КнопкаT_Kbeta.Visible = true;
-            A403_1Parameters.A403_1КнопкаT_Kbeta = false;
-            this.A403_1Кнопкаtсв_Yalpha.Visible = true;
-            A403_1Parameters.A403_1Кнопкаtсв_Yalpha = false;
-            this.A403_1Кнопкаtуст_Ybeta.Visible = true;
-            A403_1Parameters.A403_1Кнопкаtуст_Ybeta = false;
-        }
-
-        private void A403_1КнопкаOmega_N_Click(object sender, System.EventArgs e)
-        {
-            this.A403_1КнопкаOmega_N.Visible = false;
-            A403_1Parameters.A403_1КнопкаOmega_N = true;
-            switch (A403_1Parameters.A403_1ТумблерГруппа)
-            {
-                case "1группа": A403_1Parameters.A403_1TextParameter = "omega";
-                    break;
-                case "2группа": A403_1Parameters.A403_1TextParameter = "N";
-                    break;
-            }
-
-            this.A403_1КнопкаАlpha_Lambda.Visible = true;
-            A403_1Parameters.A403_1КнопкаАlpha_Lambda = false;
-            this.A403_1КнопкаEpsilon_Phi.Visible = true;
-            A403_1Parameters.A403_1КнопкаEpsilon_Phi = false;
-            this.A403_1КнопкаI_H.Visible = true;
-            A403_1Parameters.A403_1КнопкаI_H = false;
-            this.A403_1КнопкаLambda0_f.Visible = true;
-            A403_1Parameters.A403_1КнопкаLambda0_f = false;
-            this.A403_1Кнопкаt0_K.Visible = true;
-            A403_1Parameters.A403_1Кнопкаt0_K = false;
-            this.A403_1КнопкаT_Kbeta.Visible = true;
-            A403_1Parameters.A403_1КнопкаT_Kbeta = false;
-            this.A403_1Кнопкаtсв_Yalpha.Visible = true;
-            A403_1Parameters.A403_1Кнопкаtсв_Yalpha = false;
-            this.A403_1Кнопкаtуст_Ybeta.Visible = true;
-            A403_1Parameters.A403_1Кнопкаtуст_Ybeta = false;
-        }
-
-        private void A403_1КнопкаLambda0_f_Click(object sender, System.EventArgs e)
-        {
-            this.A403_1КнопкаLambda0_f.Visible = false;
-            A403_1Parameters.A403_1КнопкаLambda0_f = true;
-            switch (A403_1Parameters.A403_1ТумблерГруппа)
-            {
-                case "1группа": A403_1Parameters.A403_1TextParameter = "lambda0";
-                    break;
-                case "2группа": A403_1Parameters.A403_1TextParameter = "f";
-                    break;
-            }
-
-            this.A403_1КнопкаАlpha_Lambda.Visible = true;
-            A403_1Parameters.A403_1КнопкаАlpha_Lambda = false;
-            this.A403_1КнопкаEpsilon_Phi.Visible = true;
-            A403_1Parameters.A403_1КнопкаEpsilon_Phi = false;
-            this.A403_1КнопкаI_H.Visible = true;
-            A403_1Parameters.A403_1КнопкаI_H = false;
-            this.A403_1КнопкаOmega_N.Visible = true;
-            A403_1Parameters.A403_1КнопкаOmega_N = false;
-            this.A403_1Кнопкаt0_K.Visible = true;
-            A403_1Parameters.A403_1Кнопкаt0_K = false;
-            this.A403_1КнопкаT_Kbeta.Visible = true;
-            A403_1Parameters.A403_1КнопкаT_Kbeta = false;
-            this.A403_1Кнопкаtсв_Yalpha.Visible = true;
-            A403_1Parameters.A403_1Кнопкаtсв_Yalpha = false;
-            this.A403_1Кнопкаtуст_Ybeta.Visible = true;
-            A403_1Parameters.A403_1Кнопкаtуст_Ybeta = false;
-        }
-
-        private void A403_1Кнопкаt0_K_Click(object sender, System.EventArgs e)
-        {
-            A403_1Parameters.A403_1Кнопкаt0_K = true;
-            this.A403_1Кнопкаt0_K.Visible = false;
-            switch (A403_1Parameters.A403_1ТумблерГруппа)
-            {
-                case "1группа": A403_1Parameters.A403_1TextParameter = "t0";
-                    break;
-                case "2группа": A403_1Parameters.A403_1TextParameter = "K";
-                    break;
-            }
-
-            this.A403_1КнопкаАlpha_Lambda.Visible = true;
-            A403_1Parameters.A403_1КнопкаАlpha_Lambda = false;
-            this.A403_1КнопкаEpsilon_Phi.Visible = true;
-            A403_1Parameters.A403_1КнопкаEpsilon_Phi = false;
-            this.A403_1КнопкаI_H.Visible = true;
-            A403_1Parameters.A403_1КнопкаI_H = false;
-            this.A403_1КнопкаOmega_N.Visible = true;
-            A403_1Parameters.A403_1КнопкаOmega_N = false;
-            this.A403_1КнопкаLambda0_f.Visible = true;
-            A403_1Parameters.A403_1КнопкаLambda0_f = false;
-            this.A403_1КнопкаT_Kbeta.Visible = true;
-            A403_1Parameters.A403_1КнопкаT_Kbeta = false;
-            this.A403_1Кнопкаtсв_Yalpha.Visible = true;
-            A403_1Parameters.A403_1Кнопкаtсв_Yalpha = false;
-            this.A403_1Кнопкаtуст_Ybeta.Visible = true;
-            A403_1Parameters.A403_1Кнопкаtуст_Ybeta = false;
-        }
-
-        private void A403_1КнопкаT_Kbeta_Click(object sender, System.EventArgs e)
-        {
-            A403_1Parameters.A403_1КнопкаT_Kbeta = true;
-            this.A403_1КнопкаT_Kbeta.Visible = false;
-            switch (A403_1Parameters.A403_1ТумблерГруппа)
-            {
-                case "1группа": A403_1Parameters.A403_1TextParameter = "T";
-                    break;
-                case "2группа": A403_1Parameters.A403_1TextParameter = "Kbeta";
-                    break;
-            }
-
-            this.A403_1КнопкаАlpha_Lambda.Visible = true;
-            A403_1Parameters.A403_1КнопкаАlpha_Lambda = false;
-            this.A403_1КнопкаEpsilon_Phi.Visible = true;
-            A403_1Parameters.A403_1КнопкаEpsilon_Phi = false;
-            this.A403_1КнопкаI_H.Visible = true;
-            A403_1Parameters.A403_1КнопкаI_H = false;
-            this.A403_1КнопкаOmega_N.Visible = true;
-            A403_1Parameters.A403_1КнопкаOmega_N = false;
-            this.A403_1КнопкаLambda0_f.Visible = true;
-            A403_1Parameters.A403_1КнопкаLambda0_f = false;
-            this.A403_1Кнопкаt0_K.Visible = true;
-            A403_1Parameters.A403_1Кнопкаt0_K = false;
-            this.A403_1Кнопкаtсв_Yalpha.Visible = true;
-            A403_1Parameters.A403_1Кнопкаtсв_Yalpha = false;
-            this.A403_1Кнопкаtуст_Ybeta.Visible = true;
-            A403_1Parameters.A403_1Кнопкаtуст_Ybeta = false;
-        }
-
-        private void A403_1Кнопкаtсв_Yalpha_Click(object sender, System.EventArgs e)
-        {
-            A403_1Parameters.A403_1Кнопкаtсв_Yalpha = true;
-            this.A403_1Кнопкаtсв_Yalpha.Visible = false;
-            switch (A403_1Parameters.A403_1ТумблерГруппа)
-            {
-                case "1группа": A403_1Parameters.A403_1TextParameter = "tсв";
-                    break;
-                case "2группа": A403_1Parameters.A403_1TextParameter = "Yalpha";
-                    break;
-            }
-
-            this.A403_1КнопкаАlpha_Lambda.Visible = true;
-            A403_1Parameters.A403_1КнопкаАlpha_Lambda = false;
-            this.A403_1КнопкаEpsilon_Phi.Visible = true;
-            A403_1Parameters.A403_1КнопкаEpsilon_Phi = false;
-            this.A403_1КнопкаI_H.Visible = true;
-            A403_1Parameters.A403_1КнопкаI_H = false;
-            this.A403_1КнопкаOmega_N.Visible = true;
-            A403_1Parameters.A403_1КнопкаOmega_N = false;
-            this.A403_1КнопкаLambda0_f.Visible = true;
-            A403_1Parameters.A403_1КнопкаLambda0_f = false;
-            this.A403_1Кнопкаt0_K.Visible = true;
-            A403_1Parameters.A403_1Кнопкаt0_K = false;
-            this.A403_1КнопкаT_Kbeta.Visible = true;
-            A403_1Parameters.A403_1КнопкаT_Kbeta = false;
-            this.A403_1Кнопкаtуст_Ybeta.Visible = true;
-            A403_1Parameters.A403_1Кнопкаtуст_Ybeta = false;
-        }
-
-        private void A403_1Кнопкаtуст_Ybeta_Click(object sender, System.EventArgs e)
-        {
-
-            this.A403_1Кнопкаtуст_Ybeta.Visible = false;
-            A403_1Parameters.A403_1Кнопкаtуст_Ybeta = true;
-            switch (A403_1Parameters.A403_1ТумблерГруппа)
-            {
-                case "1группа": A403_1Parameters.A403_1TextParameter = "tуст";
-                    break;
-                case "2группа": A403_1Parameters.A403_1TextParameter = "Ybeta";
-                    break;
-            }
-
-            this.A403_1КнопкаАlpha_Lambda.Visible = true;
-            A403_1Parameters.A403_1КнопкаАlpha_Lambda = false;
-            this.A403_1КнопкаEpsilon_Phi.Visible = true;
-            A403_1Parameters.A403_1КнопкаEpsilon_Phi = false;
-            this.A403_1КнопкаI_H.Visible = true;
-            A403_1Parameters.A403_1КнопкаI_H = false;
-            this.A403_1КнопкаOmega_N.Visible = true;
-            A403_1Parameters.A403_1КнопкаOmega_N = false;
-            this.A403_1КнопкаLambda0_f.Visible = true;
-            A403_1Parameters.A403_1КнопкаLambda0_f = false;
-            this.A403_1Кнопкаt0_K.Visible = true;
-            A403_1Parameters.A403_1Кнопкаt0_K = false;
-            this.A403_1КнопкаT_Kbeta.Visible = true;
-            A403_1Parameters.A403_1КнопкаT_Kbeta = false;
-            this.A403_1Кнопкаtсв_Yalpha.Visible = true;
-            A403_1Parameters.A403_1Кнопкаtсв_Yalpha = false;
-
         }
 
         private void A403_1КнопкаСброс_MouseDown(object sender, MouseEventArgs e)
         {
-            this.A403_1КнопкаСброс.BackgroundImage = null;
+            this.КнопкаПараметрыСброс.BackgroundImage = null;
         }
 
         private void A403_1КнопкаСброс_MouseUp(object sender, MouseEventArgs e)
         {
-            this.A403_1КнопкаСброс.BackgroundImage = ControlElementImages.buttonSquareLightBlue;
-            A403_1Parameters.A403_1TextParameter = string.Empty;
+            this.КнопкаПараметрыСброс.BackgroundImage = ControlElementImages.buttonSquareLightBlue;
 
-            this.A403_1КнопкаАlpha_Lambda.Visible = true;
-            A403_1Parameters.A403_1КнопкаАlpha_Lambda = false;
-            this.A403_1КнопкаEpsilon_Phi.Visible = true;
-            A403_1Parameters.A403_1КнопкаEpsilon_Phi = false;
-            this.A403_1КнопкаI_H.Visible = true;
-            A403_1Parameters.A403_1КнопкаI_H = false;
-            this.A403_1КнопкаOmega_N.Visible = true;
-            A403_1Parameters.A403_1КнопкаOmega_N = false;
-            this.A403_1КнопкаLambda0_f.Visible = true;
-            A403_1Parameters.A403_1КнопкаLambda0_f = false;
-            this.A403_1Кнопкаt0_K.Visible = true;
-            A403_1Parameters.A403_1Кнопкаt0_K = false;
-            this.A403_1КнопкаT_Kbeta.Visible = true;
-            A403_1Parameters.A403_1КнопкаT_Kbeta = false;
-            this.A403_1Кнопкаtсв_Yalpha.Visible = true;
-            A403_1Parameters.A403_1Кнопкаtсв_Yalpha = false;
-            this.A403_1Кнопкаtуст_Ybeta.Visible = true;
-            A403_1Parameters.A403_1Кнопкаtуст_Ybeta = false;
+            //Сброс параметров и отжатие всех кнопок
+            for (int i = 0; i < A403_1Parameters.КнопкиПараметры.Length; i++)
+                A403_1Parameters.КнопкиПараметры[i] = false;
+
+            foreach (Control item in A403_1Panel.Controls)
+            {
+                if (item.Name.Contains("КнопкаПараметры") && !item.Name.Contains("Сброс"))
+                    item.Visible = true;
+            }
 
         }
+        #endregion
 
+        private void A403_1КнопкаУстВремени_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.КнопкаУстВремени.BackgroundImage = ControlElementImages.buttonSquareLightBlue;
+        }
+
+        private void A403_1КнопкаУстВремени_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.КнопкаУстВремени.BackgroundImage = null;
+        }
         #endregion
 
         #region Переключатели
-        private void A403_1ПереключательРежимРаботы_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательРежимРаботы_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                A403_1Parameters.A403_1ПереключательРежимРаботы += 1;
+                A403_1Parameters.ПереключательРежимРаботы += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                A403_1Parameters.A403_1ПереключательРежимРаботы -= 1;
+                A403_1Parameters.ПереключательРежимРаботы -= 1;
             }
 
-            var angle = A403_1Parameters.A403_1ПереключательРежимРаботы * 34 - 165;
-            A403_1ПереключательРежимРаботы.BackgroundImage =
+            var angle = A403_1Parameters.ПереключательРежимРаботы * 34 - 165;
+            ПереключательРежимРаботы.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
 
-        private void A403_1ПереключательПроверка_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательПроверка_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                A403_1Parameters.A403_1ПереключательПроверка += 1;
+                A403_1Parameters.ПереключательПроверка += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                A403_1Parameters.A403_1ПереключательПроверка -= 1;
+                A403_1Parameters.ПереключательПроверка -= 1;
             }
 
-            var angle = A403_1Parameters.A403_1ПереключательПроверка * 32 - 185;
+            var angle = A403_1Parameters.ПереключательПроверка * 32 - 185;
             ////Смещение т.к форма не хорошо нарисована
-            if (A403_1Parameters.A403_1ПереключательПроверка <= 6)
+            if (A403_1Parameters.ПереключательПроверка <= 6)
             {
                 angle -= 6;
             }
 
-            if (A403_1Parameters.A403_1ПереключательПроверка == 4 || A403_1Parameters.A403_1ПереключательПроверка == 5)
+            if (A403_1Parameters.ПереключательПроверка == 4 || A403_1Parameters.ПереключательПроверка == 5)
             {
                 angle -= 6;
             }
 
-            A403_1ПереключательПроверка.BackgroundImage =
+            ПереключательПроверка.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
         #endregion
@@ -486,84 +207,48 @@ namespace R440O.R440OForms.A403_1
         #region Инициализация
         private void InitializeTumblersPosition()
         {
-            this.A403_1ТумблерСеть.BackgroundImage = A403_1Parameters.A403_1ТумблерСеть == "откл"
-                ? ControlElementImages.tumblerType6Down : ControlElementImages.tumblerType6Up;
+            ТумблерСеть.BackgroundImage = A403_1Parameters.ТумблерСеть
+                ? ControlElementImages.tumblerType6Up
+                : ControlElementImages.tumblerType6Down;
 
-            this.A403_1ТумблерГотов.BackgroundImage = A403_1Parameters.A403_1ТумблерГотов == "откл"
-                ? ControlElementImages.tumblerType4Down : ControlElementImages.tumblerType4Up;
+            ТумблерКомплект.BackgroundImage = A403_1Parameters.ТумблерКомплект
+                 ? ControlElementImages.tumblerType5Left
+                 : ControlElementImages.tumblerType5Right;
 
-            this.A403_1ТумблерКомплект.BackgroundImage = A403_1Parameters.A403_1ТумблерКомплект == "1"
-                ? ControlElementImages.tumblerType5Left : ControlElementImages.tumblerType5Right;
+            ТумблерГотов.BackgroundImage = A403_1Parameters.ТумблерГотов
+                ? ControlElementImages.tumblerType4Up
+                : ControlElementImages.tumblerType4Down;
 
-            this.A403_1ТумблерГруппа.BackgroundImage = A403_1Parameters.A403_1ТумблерГруппа == "2группа"
-                ? ControlElementImages.tumblerType4Down : ControlElementImages.tumblerType4Up;
+            A403_1ТумблерГруппа.BackgroundImage = A403_1Parameters.ТумблерГруппа
+                ? ControlElementImages.tumblerType4Up
+                : ControlElementImages.tumblerType4Down;
 
-            this.A403_1ТумблерАвтКоррекция.BackgroundImage = A403_1Parameters.A403_1ТумблерАвтКоррекция == "откл"
-                ? ControlElementImages.tumblerType4Down : ControlElementImages.tumblerType4Up;
+            ТумблерАвтКоррекция.BackgroundImage = A403_1Parameters.ТумблерАвтКоррекция
+                ? ControlElementImages.tumblerType4Up
+                : ControlElementImages.tumblerType4Down;
         }
 
         private void InitializeTogglesPosition()
         {
-            var angle = A403_1Parameters.A403_1ПереключательРежимРаботы * 34 - 165;
-            A403_1ПереключательРежимРаботы.BackgroundImage =
+            var angle = A403_1Parameters.ПереключательРежимРаботы * 34 - 165;
+            ПереключательРежимРаботы.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = A403_1Parameters.A403_1ПереключательПроверка * 32 - 185;
-            A403_1ПереключательПроверка.BackgroundImage =
+            angle = A403_1Parameters.ПереключательПроверка * 32 - 185;
+            ПереключательПроверка.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
 
         private void InitializeButtonsPosition()
         {
-            if (A403_1Parameters.A403_1КнопкаАlpha_Lambda)
-                A403_1КнопкаАlpha_Lambda.Visible = false;
-            else A403_1КнопкаАlpha_Lambda.Visible = true;
-
-            if (A403_1Parameters.A403_1КнопкаEpsilon_Phi)
-                A403_1КнопкаEpsilon_Phi.Visible = false;
-            else A403_1КнопкаEpsilon_Phi.Visible = true;
-
-            if (A403_1Parameters.A403_1КнопкаI_H)
-                A403_1КнопкаI_H.Visible = false;
-            else A403_1КнопкаI_H.Visible = true;
-
-            if (A403_1Parameters.A403_1КнопкаOmega_N)
-                A403_1КнопкаOmega_N.Visible = false;
-            else A403_1КнопкаOmega_N.Visible = true;
-
-            if (A403_1Parameters.A403_1КнопкаLambda0_f)
-                A403_1КнопкаLambda0_f.Visible = false;
-            else A403_1КнопкаLambda0_f.Visible = true;
-
-            if (A403_1Parameters.A403_1Кнопкаt0_K)
-                A403_1Кнопкаt0_K.Visible = false;
-            else A403_1Кнопкаt0_K.Visible = true;
-
-            if (A403_1Parameters.A403_1КнопкаT_Kbeta)
-                A403_1КнопкаT_Kbeta.Visible = false;
-            else A403_1КнопкаT_Kbeta.Visible = true;
-
-            if (A403_1Parameters.A403_1Кнопкаtсв_Yalpha)
-                A403_1Кнопкаtсв_Yalpha.Visible = false;
-            else A403_1Кнопкаtсв_Yalpha.Visible = true;
-
-            if (A403_1Parameters.A403_1Кнопкаtуст_Ybeta)
-                A403_1Кнопкаtуст_Ybeta.Visible = false;
-            else A403_1Кнопкаtуст_Ybeta.Visible = true;
-
-
-
+            foreach (Control item in A403_1Panel.Controls)
+            {
+                if (item.Name.Contains("КнопкаПараметры") && !item.Name.Contains("Сброс"))
+                    item.Visible = !(A403_1Parameters.КнопкиПараметры[(int)Char.GetNumericValue(item.Name[15])]);
+            }
         }
         #endregion
 
-        private void A403_1КнопкаУстВремени_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.A403_1КнопкаУстВремени.BackgroundImage = ControlElementImages.buttonSquareLightBlue;
-        }
 
-        private void A403_1КнопкаУстВремени_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.A403_1КнопкаУстВремени.BackgroundImage = null;
-        }
     }
 }

@@ -15,7 +15,7 @@ namespace R440O.R440OForms.N502B
 
     public partial class N502BForm : Form
     {
-        
+
         public N502BForm()
         {
             InitializeComponent();
@@ -334,7 +334,7 @@ namespace R440O.R440OForms.N502B
             ПереключательТокНагрузкиИЗаряда.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType4, angle);
         }
-        
+
         private void InitializeLamps()
         {
             ЛампочкаСеть.BackgroundImage = N502BParameters.ЛампочкаСеть

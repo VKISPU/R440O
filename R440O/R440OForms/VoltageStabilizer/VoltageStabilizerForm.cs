@@ -18,7 +18,7 @@
             InitializeTogglePosition();
             InitializeLamps();
             VoltageStabilizerParameters.RefreshForm += RefreshForm;
-		}
+        }
 
         #region Обработка действий пользователя
 
@@ -89,7 +89,7 @@
                 VoltageStabilizerParameters.ПереключательКонтрольНапр -= 1;
             }
 
-            var angle = VoltageStabilizerParameters.ПереключательКонтрольНапр*30 - 195;
+            var angle = VoltageStabilizerParameters.ПереключательКонтрольНапр * 30 - 195;
             ПереключательКонтрольНапр.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
         }
@@ -119,7 +119,7 @@
                     КабельВход2.BackgroundImage = ControlElementImages.voltageStabilizerInput;
                     break;
             }
-            var angle = VoltageStabilizerParameters.ПереключательКонтрольНапр*30 - 195;
+            var angle = VoltageStabilizerParameters.ПереключательКонтрольНапр * 30 - 195;
             ПереключательКонтрольНапр.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
         }
@@ -127,7 +127,7 @@
         private void InitializeLamps()
         {
             ЛампочкаСетьВкл.BackgroundImage = VoltageStabilizerParameters.ЛампочкаСетьВкл
-                ? ControlElementImages.lampType9OnGreen
+                ? ControlElementImages.lampType10OnGreen
                 : null;
 
             ЛампочкаАвария.BackgroundImage = VoltageStabilizerParameters.ЛампочкаАвария
@@ -141,7 +141,7 @@
         {
             ИндикаторНапряжения.Invalidate();
             ЛампочкаСетьВкл.BackgroundImage = VoltageStabilizerParameters.ЛампочкаСетьВкл
-                ? ControlElementImages.lampType9OnGreen
+                ? ControlElementImages.lampType10OnGreen
                 : null;
 
             ЛампочкаАвария.BackgroundImage = VoltageStabilizerParameters.ЛампочкаАвария

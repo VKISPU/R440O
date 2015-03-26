@@ -84,7 +84,7 @@
             this.ЛампочкаСфазировано.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаСфазировано.BackgroundImage = global::R440O.ControlElementImages.lampType12OnRed;
             this.ЛампочкаСфазировано.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаСфазировано.Location = new System.Drawing.Point(215, 51);
+            this.ЛампочкаСфазировано.Location = new System.Drawing.Point(216, 51);
             this.ЛампочкаСфазировано.Name = "ЛампочкаСфазировано";
             this.ЛампочкаСфазировано.Size = new System.Drawing.Size(37, 36);
             this.ЛампочкаСфазировано.TabIndex = 37;
@@ -95,7 +95,7 @@
             this.ЛампочкаСеть.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаСеть.BackgroundImage = global::R440O.ControlElementImages.lampType12OnRed;
             this.ЛампочкаСеть.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаСеть.Location = new System.Drawing.Point(119, 50);
+            this.ЛампочкаСеть.Location = new System.Drawing.Point(119, 51);
             this.ЛампочкаСеть.Name = "ЛампочкаСеть";
             this.ЛампочкаСеть.Size = new System.Drawing.Size(37, 36);
             this.ЛампочкаСеть.TabIndex = 36;

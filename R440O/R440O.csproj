@@ -63,7 +63,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ControlElementImages.resx</DependentUpon>
     </Compile>
-    <Compile Include="Parameters\A403_1Parameters.cs" />
+    <Compile Include="R440OForms\A403_1\A403_1Parameters.cs" />
     <Compile Include="Parameters\B1_1Parameters.cs" />
     <Compile Include="Parameters\B1_2Parameters.cs" />
     <Compile Include="Parameters\B2_1Parameters.cs" />
@@ -110,7 +110,7 @@
     <Compile Include="Parameters\A205M_2Parameters.cs" />
     <Compile Include="Parameters\A304Parameters.cs" />
     <Compile Include="Parameters\A306Parameters.cs" />
-    <Compile Include="Parameters\A403_3Parameters.cs" />
+    <Compile Include="R440OForms\A403_3\A403_3Parameters.cs" />
     <Compile Include="Parameters\AstraParameters.cs" />
     <Compile Include="Parameters\N15Parameters.cs" />
     <Compile Include="R440OForms\A1\A1Parameters.cs" />

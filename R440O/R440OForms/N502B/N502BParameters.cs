@@ -121,7 +121,7 @@ namespace R440O.R440OForms.N502B
                     ResetParameters();
                 }
             }
-            
+
         }
 
         public delegate void VoidVoidSignature();
@@ -129,9 +129,8 @@ namespace R440O.R440OForms.N502B
 
         public static void ResetParameters()
         {
-            ЛампочкаСеть = (ПереключательФазировка == 4 || ПереключательФазировка == 2) &&
-                            PowerCabelParameters.КабельСеть;
-            ЛампочкаСфазировано =  ПереключательФазировка == 4 && ЛампочкаСеть &&
+            ЛампочкаСеть = PowerCabelParameters.КабельСеть;
+            ЛампочкаСфазировано = ПереключательФазировка == 4 && ЛампочкаСеть &&
                                   ПереключательСеть && VoltageStabilizerParameters.КабельВход == 380 && КнопкаВклНагрузки;
         }
     }

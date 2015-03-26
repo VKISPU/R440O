@@ -28,7 +28,7 @@ namespace R440O.R440OForms.VoltageStabilizer
                 _лампочкаАвария = value;
                 if (RefreshForm != null) RefreshForm();
             }
-        } 
+        }
         #endregion
 
         #region Контроль Напряжения
@@ -63,7 +63,7 @@ namespace R440O.R440OForms.VoltageStabilizer
                 if (RefreshForm != null) RefreshForm();
             }
         }
-        
+
         public static int ИндикаторНапряжение
         {
             get
@@ -127,7 +127,7 @@ namespace R440O.R440OForms.VoltageStabilizer
         }
 
         public delegate void VoidVoidSignature();
-        public static event VoidVoidSignature RefreshForm; 
+        public static event VoidVoidSignature RefreshForm;
         #endregion
     }
 }

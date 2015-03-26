@@ -7,26 +7,12 @@ namespace R440O.R440OForms.A306
 {
     using System.Windows.Forms;
     using Parameters;
+
     /// <summary>
     /// Форма блока А306
     /// </summary>
     public partial class A306Form : Form
     {
-        #region Specific Grid
-        //private int[,] A306ExitsNo =
-        //{
-        //    { 130, 210 }, { 180, 210 }, { 235, 210 }, { 290, 210 },
-        //    { 345, 210 }, { 400, 210 }, { 455, 210 }, { 510, 210 },
-        //    { 565, 210 }, { 615, 210 }
-        //};
-
-        //private int[,] A306Exits =
-        //{
-        //    { 105, 250 }, { 157, 250 }, { 210, 250 }, { 265, 250 },
-        //    { 317, 250 }, { 373, 250 }, { 430, 250 }, { 480, 250 },
-        //    { 537, 250 }, { 587, 250 }, { 636, 250 }
-        //}; 
-        #endregion
 
         private int Выход = 0;
 
@@ -44,108 +30,110 @@ namespace R440O.R440OForms.A306
         /// </summary>
         private void InitializeTumblers()
         {
-            A306ТумблерДистанцМестн.BackgroundImage = A306Parameters.A306ТумблерДистанцМестн ? ControlElementImages.tumblerType4Up : ControlElementImages.tumblerType4Down;
-            A306ТумблерВклВыкл.BackgroundImage = A306Parameters.A306ТумблерВклВыкл ? ControlElementImages.tumblerType4Up : ControlElementImages.tumblerType4Down;
+            A306ТумблерДистанцМестн.BackgroundImage = A306Parameters.A306ТумблерДистанцМестн
+                ? ControlElementImages.tumblerType4Up
+                : ControlElementImages.tumblerType4Down;
+            A306ТумблерВклВыкл.BackgroundImage = A306Parameters.A306ТумблерВклВыкл
+                ? ControlElementImages.tumblerType4Up
+                : ControlElementImages.tumblerType4Down;
         }
 
         private void A306ТумблерДистанцМестн_Click(object sender, System.EventArgs e)
         {
             A306Parameters.A306ТумблерДистанцМестн = !A306Parameters.A306ТумблерДистанцМестн;
-            A306ТумблерДистанцМестн.BackgroundImage = A306Parameters.A306ТумблерДистанцМестн ? ControlElementImages.tumblerType4Up : ControlElementImages.tumblerType4Down;
+            A306ТумблерДистанцМестн.BackgroundImage = A306Parameters.A306ТумблерДистанцМестн
+                ? ControlElementImages.tumblerType4Up
+                : ControlElementImages.tumblerType4Down;
         }
 
         private void A306ТумблерВклВыкл_Click(object sender, System.EventArgs e)
         {
             A306Parameters.A306ТумблерВклВыкл = !A306Parameters.A306ТумблерВклВыкл;
-            A306ТумблерВклВыкл.BackgroundImage = A306Parameters.A306ТумблерВклВыкл ? ControlElementImages.tumblerType4Up : ControlElementImages.tumblerType4Down;
+            A306ТумблерВклВыкл.BackgroundImage = A306Parameters.A306ТумблерВклВыкл
+                ? ControlElementImages.tumblerType4Up
+                : ControlElementImages.tumblerType4Down;
         }
 
-        #region Drag&Drop for PictureBox
-        //private int _xPos;
-        //private int _yPos;
-        //private bool _dragging;
+        private void DrawLine(Point onePoint, Point twoPoint)
+        {
+            var myPen = new Pen(Color.Gray, 10);
+            var panelGraphics = A306Panel.CreateGraphics();
+            panelGraphics.DrawLine(myPen, onePoint, twoPoint);
+            myPen.Dispose();
+            panelGraphics.Dispose();
+        }
 
-        //private void pb_MouseDown(object sender, MouseEventArgs e)
-        //{
-        //   if (e.Button != MouseButtons.Left) return;
-        //    _dragging = true;
-        //    _xPos = e.X;
-        //    _yPos = e.Y;
-        //}
+        private void RefreshCabels()
+        {
+            foreach (Control item in A306Panel.Controls)
+            {
+                if (item.Name.Contains("A306ВыходКаналов"))
+                {
+                    if (A306Parameters.A306ВыходыКаналов[
+                        int.Parse(Convert.ToString(Convert.ToString(item.Name[16]) + Convert.ToString(item.Name[17]))) -
+                        1] != 0)
+                        {
+                            foreach (Control item2 in A306Panel.Controls)
+                            {
+                                if (item2.Name.Contains("A306Выход" + A306Parameters.A306ВыходыКаналов
+                                    [int.Parse(Convert.ToString(Convert.ToString(item.Name[16]) + 
+                                    Convert.ToString(item.Name[17]))) - 1]))
+                                {
+                                    var onePoint = new Point(item.Left + item.Width/2, item.Top + item.Height - 5);
+                                    var twoPoint = new Point(item2.Left + item2.Width/2, item2.Top + 5);
+                                    DrawLine(onePoint, twoPoint);
+                                }
 
-        //private void pb_MouseMove(object sender, MouseEventArgs e)
-        //{
-        //    var pBox = sender as PictureBox;
-        //    if (!_dragging || null == pBox) return;
-        //    pBox.Top = e.Y + pBox.Top - _yPos;
-        //    pBox.Left = e.X + pBox.Left - _xPos;
-        //}
+                                else if (item2.Name.Contains("A306ВходNO_" + (A306Parameters.A306ВыходыКаналов
+                                    [int.Parse(Convert.ToString(Convert.ToString(item.Name[16]) +
+                                    Convert.ToString(item.Name[17])))-1] - 10) ))
+                                {
+                                    var onePoint = new Point(item.Left + item.Width / 2, item.Bottom - 5);
+                                    var twoPoint = new Point(item2.Left + item2.Width / 2, item.Bottom+10);
+                                    var threePoint = new Point(item.Left + item.Width / 2, item.Bottom + 11); 
+                                    DrawLine(onePoint, threePoint);
+                                    DrawLine(threePoint, twoPoint);
+                                    DrawLine(new Point(item.Left + item.Width / 2 + 5, item.Bottom + 11), 
+                                        new Point(item.Left + item.Width / 2 - 5, item.Bottom + 11));
+                                    DrawLine(new Point(item2.Left + item2.Width / 2 - 5, item2.Bottom + 5),
+                                        new Point(item2.Left + item2.Width / 2 + 5,item2.Bottom + 5));
+                                }
+                            }
+                        }
+                }
+                else if (item.Name.Contains("A306ВыходNO"))
+                {
+                    if (A306Parameters.A306ВыходыNO[
+                         int.Parse(Convert.ToString(item.Name[11])) - 1] != 0)
+                    {
+                        foreach (Control item2 in A306Panel.Controls)
+                        {
+                            if (item2.Name.Contains("A306Выход" + A306Parameters.A306ВыходыNO
+                                [int.Parse(Convert.ToString(item.Name[11])) - 1]))
+                            {
+                                var onePoint = new Point(item.Left + item.Width / 2, item.Top + item.Height - 5);
+                                var twoPoint = new Point(item2.Left + item2.Width / 2, item2.Top + 5);
+                                DrawLine(onePoint, twoPoint);
+                            }
 
-        //private void pb_MouseUp(object sender, MouseEventArgs e)
-        //{
-        //    var pBox = sender as PictureBox;
-        //    if (null == pBox) return;
-        //    _dragging = false;
-        //    if (pBox.Name.Contains("cabelOutput"))
-        //    {
-        //        var cell = SnapToGrid(pBox.Left + pBox.Width / 2, pBox.Top + pBox.Height / 2, A306ExitsNo);
-        //        if (cell != -1)
-        //        {
-        //            pBox.Left = A306ExitsNo[cell, 0];
-        //            pBox.Top = A306ExitsNo[cell, 1];
-        //        }
-
-        //        cell = SnapToGrid(pBox.Left + pBox.Width / 2, pBox.Top + pBox.Height / 2, A306Exits);
-        //        if (cell != -1)
-        //        {
-        //            pBox.Left = A306Exits[cell, 0];
-        //            pBox.Top = A306Exits[cell, 1];
-        //        }
-
-        //        this.RefreshCabels(1);
-        //    }
-        //}
-
-        //private int SnapToGrid(int x, int y, int[,] array)
-        //{
-        //    for (var i = 0; i < array.Length / 2; i++)
-        //    {
-        //        if (array[i, 0] < x && x < array[i, 0] + 50
-        //            && array[i, 1] < y && y < array[i, 1] + 50)
-        //        {
-        //            return i;
-        //        }
-        //    }
-        //    return -1;
-        //} 
-
-        //private void RefreshCabels(int cabelNumber)
-        //{
-        //    var onePoint = new Point(0,0);
-        //    var twoPoint = new Point(0,0);
-        //    switch(cabelNumber)
-        //    {
-        //        case 1:
-        //        {
-        //            onePoint = new Point((cabelOutput.Left + cabelOutput.Right) / 2, (cabelOutput.Top + cabelOutput.Bottom) / 2);
-        //            twoPoint = new Point((cabelOutput2.Left + cabelOutput2.Right) / 2, (cabelOutput2.Top + cabelOutput2.Bottom) / 2);}
-        //            break;
-        //    }
-
-        //    A306Panel.BackgroundImage = BackgroundImages.A306;
-        //    Application.DoEvents();
-        //    DrawLine(onePoint, twoPoint);
-        //}
-
-        //private void DrawLine(Point onePoint, Point twoPoint)
-        //{
-        //    var myPen = new Pen(Color.DarkKhaki, 5);
-        //    var panelGraphics = A306Panel.CreateGraphics();
-        //    panelGraphics.DrawLine(myPen, onePoint, twoPoint);
-        //    myPen.Dispose();
-        //    panelGraphics.Dispose();
-        //}
-        #endregion
+                            else if (item2.Name.Contains("A306ВходNO_" + (A306Parameters.A306ВыходыNO
+                                [int.Parse(Convert.ToString(item.Name[11])) - 1] - 10)))
+                            {
+                                var onePoint = new Point(item.Left + item.Width / 2, item.Bottom - 5);
+                                var twoPoint = new Point(item2.Left + item2.Width / 2, item.Bottom + 10);
+                                var threePoint = new Point(item.Left + item.Width / 2, item.Bottom + 11);
+                                DrawLine(onePoint, threePoint);
+                                DrawLine(threePoint, twoPoint);
+                                DrawLine(new Point(item.Left + item.Width / 2 + 5, item.Bottom + 11),
+                                    new Point(item.Left + item.Width / 2 - 5, item.Bottom + 11));
+                                DrawLine(new Point(item2.Left + item2.Width / 2 - 5, item2.Bottom + 5),
+                                    new Point(item2.Left + item2.Width / 2 + 5, item2.Bottom + 5));
+                            }
+                        }
+                    } 
+                }
+            }
+        }
 
         /// <summary>
         /// Универсальный метод обработки нажатий на выходы каналов
@@ -155,16 +143,24 @@ namespace R440O.R440OForms.A306
             var button = sender as Button;
             if (button.Name.Length >= 16)
             {
-                char numberOfButton = button.Name[16];
+                int numberOfButton =
+                    int.Parse(Convert.ToString(Convert.ToString(button.Name[16]) + Convert.ToString(button.Name[17])));
+
                 foreach (Control item in A306Panel.Controls)
                 {
-                    if (item.Name.Contains("A306ВыходКаналов" + numberOfButton))
+                    if (item.Name.Contains("A306ВыходКаналов" + Char.GetNumericValue(button.Name[16])
+                                           + Char.GetNumericValue(button.Name[17])))
                     {
-                        if (A306Parameters.A306ВыходыКаналов[numberOfButton - 49] == 0 && Выход > 0)
+                        if (A306Parameters.A306ВыходыКаналов[numberOfButton - 1] == 0 && Выход > 0)
                         {
                             button.BackgroundImage = ControlElementImages.A306CabelInput;
-                            A306Parameters.A306ВыходыКаналов[numberOfButton - 49] = Выход;
-                            button.Text = Convert.ToString(Выход);
+                            A306Parameters.A306ВыходыКаналов[numberOfButton - 1] = Выход;
+                            button.Text = (Выход > 10)
+                                ? Convert.ToString("NO" + Выход%10)
+                                : Convert.ToString(Выход);
+
+                            RefreshCabels();
+
                             Выход = 0;
                             break;
                         }
@@ -172,8 +168,11 @@ namespace R440O.R440OForms.A306
                         {
                             button.BackgroundImage = null;
                             button.Text = "";
-                            Выход = A306Parameters.A306ВыходыКаналов[numberOfButton - 49];
-                            A306Parameters.A306ВыходыКаналов[numberOfButton - 49] = 0;
+                            Выход = A306Parameters.A306ВыходыКаналов[numberOfButton - 1];
+                            A306Parameters.A306ВыходыКаналов[numberOfButton - 1] = 0;
+
+                            A306Panel.Refresh();
+                            RefreshCabels();
                             break;
                         }
                     }
@@ -205,36 +204,89 @@ namespace R440O.R440OForms.A306
                             button.BackgroundImage = null;
                             Выход = 0;
                             button.Text = "";
+
+                            for (int i = 0; i < A306Parameters.A306ВыходыКаналов.Length; i++)
+                            {
+                                if (A306Parameters.A306ВыходыКаналов[i] == numberOfButton - 48)
+                                {
+                                    A306Parameters.A306ВыходыКаналов[i] = 0;
+                                    A306Panel.Refresh();
+                                    RefreshCabels();
+
+                                    foreach (Control item3 in A306Panel.Controls)
+                                    {
+                                        string s=Convert.ToString(i+1);
+                                        if (i < 10) s = "0" + (i+1);
+                                        if (item3.Name.Contains("A306ВыходКаналов" + s))
+                                        {
+                                            item3.BackgroundImage = null;
+                                            item3.Text = "";
+                                        }
+                                    }
+                                }
+                            }
+
+                            for (int i = 0; i < A306Parameters.A306ВыходыNO.Length; i++)
+                            {
+                                if (A306Parameters.A306ВыходыNO[i] == numberOfButton - 48)
+                                {
+                                    A306Parameters.A306ВыходыNO[i] = 0;
+                                    A306Panel.Refresh();
+                                    RefreshCabels();
+
+                                    foreach (Control item3 in A306Panel.Controls)
+                                    {
+                                        if (item3.Name.Contains("A306ВыходNO" + (i + 1)))
+                                        {
+                                            item3.BackgroundImage = null;
+                                            item3.Text = "";
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
             }
         }
 
-        private void A306Входы_Click(object sender, EventArgs e)
+        private void A306ВыходыNO_Click(object sender, EventArgs e)
         {
             var button = sender as Button;
-            if (button.Name.Length >= 8)
+            if (button.Name.Length >= 11)
             {
-                char numberOfButton = button.Name[8];
+                int numberOfButton =
+                    int.Parse(Convert.ToString(button.Name[11]));
+
                 foreach (Control item in A306Panel.Controls)
                 {
-                    if (item.Name.Contains("A306Вход" + numberOfButton))
+                    if (item.Name.Contains("A306ВыходNO" + Char.GetNumericValue(button.Name[11])))
                     {
-                        if (A306Parameters.A306Входы[numberOfButton - 49] == 0 && Выход > 0)
+                        if (A306Parameters.A306ВыходыNO[numberOfButton - 1] == 0 && Выход > 0)
                         {
-                            button.BackgroundImage = ControlElementImages.A306CabelInput;
-                            A306Parameters.A306Входы[numberOfButton - 49] = Выход;
-                            button.Text = Convert.ToString(Выход);
-                            Выход = 0;
-                            break;
+                            if ((numberOfButton > 4 && Выход == 12)) break;
+                            if (numberOfButton <= 4 && Выход == 11) break;
+
+                                button.BackgroundImage = ControlElementImages.A306CabelInput;
+                                A306Parameters.A306ВыходыNO[numberOfButton - 1] = Выход;
+                                button.Text = (Выход > 10)
+                                    ? Convert.ToString("NO" + Выход % 10)
+                                    : Convert.ToString(Выход);
+
+                                RefreshCabels();
+
+                                Выход = 0;
+                                break;
                         }
                         else
                         {
                             button.BackgroundImage = null;
                             button.Text = "";
-                            Выход = A306Parameters.A306Входы[numberOfButton - 49];
-                            A306Parameters.A306Входы[numberOfButton - 49] = 0;
+                            Выход = A306Parameters.A306ВыходыNO[numberOfButton - 1];
+                            A306Parameters.A306ВыходыNO[numberOfButton - 1] = 0;
+
+                            A306Panel.Refresh();
+                            RefreshCabels();
                             break;
                         }
                     }
@@ -242,5 +294,38 @@ namespace R440O.R440OForms.A306
             }
         }
 
+        private void A306ВходNO_1_Click(object sender, EventArgs e)
+        {
+            A306Parameters.A306ВходNO_1 = !A306Parameters.A306ВходNO_1;
+            if (A306Parameters.A306ВходNO_1)
+            {
+                A306ВходNO_1.BackgroundImage = ControlElementImages.A306CabelInput;
+                Выход = 11;
+                A306ВходNO_1.Text = "NO1";
+            }
+            else
+            {
+                A306ВходNO_1.BackgroundImage = null;
+                Выход = 0;
+                A306ВходNO_1.Text = "";
+            }
+        }
+
+        private void A306ВходNO_2_Click(object sender, EventArgs e)
+        {
+            A306Parameters.A306ВходNO_2 = !A306Parameters.A306ВходNO_2;
+            if (A306Parameters.A306ВходNO_2)
+            {
+                A306ВходNO_2.BackgroundImage = ControlElementImages.A306CabelInput;
+                Выход = 12;
+                A306ВходNO_2.Text = "NO2";
+            }
+            else
+            {
+                A306ВходNO_2.BackgroundImage = null; 
+                Выход = 0;
+                A306ВходNO_2.Text = "";
+            }
+        }
     }
 }
