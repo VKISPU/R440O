@@ -156,28 +156,19 @@
             switch (VoltageStabilizerParameters.ИндикаторНапряжение)
             {
                 case 0:
-                    DrawLine(e.Graphics, 10, 50, 50, 80);
+                    TransformImageHelper.DrawLine(e.Graphics, 10, 50, 50, 80);
                     break;
                 case 127:
-                    DrawLine(e.Graphics, 35, 40, 60, 80);
+                    TransformImageHelper.DrawLine(e.Graphics, 35, 40, 60, 80);
                     break;
                 case 220:
-                    DrawLine(e.Graphics, 55, 30, 65, 80);
+                    TransformImageHelper.DrawLine(e.Graphics, 55, 30, 65, 80);
                     break;
                 case 380:
-                    DrawLine(e.Graphics, 100, 30, 70, 80);
+                    TransformImageHelper.DrawLine(e.Graphics, 100, 30, 70, 80);
                     break;
             }
         }
-
-        private void DrawLine(Graphics g, int x1, int y1, int x2, int y2)
-        {
-            var point1 = new Point(x1, y1);
-            var point2 = new Point(x2, y2);
-            var myPen = new Pen(Color.Black, 5);
-            g.DrawLine(myPen, point1, point2);
-        }
-
         #endregion
     }
 }

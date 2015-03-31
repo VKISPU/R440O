@@ -1,4 +1,5 @@
-﻿using R440O.R440OForms.NKN_1;
+﻿using R440O.R440OForms.A205M_1;
+using R440O.R440OForms.NKN_1;
 using R440O.R440OForms.NKN_2;
 using R440O.R440OForms.PowerCabel;
 using R440O.R440OForms.VoltageStabilizer;
@@ -33,6 +34,7 @@ namespace R440O.R440OForms.N502B
                 _лампочкаСфазировано = value;
                 NKN_1Parameters.ResetParameters();
                 NKN_2Parameters.ResetParameters();
+                A205M_1Parameters.RefreshIndicators();
                 if (RefreshForm != null) RefreshForm();
             }
         }
@@ -54,6 +56,7 @@ namespace R440O.R440OForms.N502B
                 _тумблерЭлектрооборудование = value;
                 NKN_1Parameters.ResetParameters();
                 NKN_2Parameters.ResetParameters();
+                A205M_1Parameters.RefreshIndicators();
             }
         }
 
@@ -68,6 +71,7 @@ namespace R440O.R440OForms.N502B
                 _тумблерВыпрямитель27В = value;
                 NKN_1Parameters.ResetParameters();
                 NKN_2Parameters.ResetParameters();
+                A205M_1Parameters.RefreshIndicators();
             }
         }
         public static bool ТумблерОсвещение = false;

@@ -8,7 +8,7 @@ namespace R440O.ThirdParty
     /// <summary>
     /// Класс предоставляющий методы для трансформирования изображений
     /// </summary>
-    public class TransformImageHelper
+    public static class TransformImageHelper
     {
         /// <summary>
         /// Rotates the image by angle.
@@ -50,6 +50,22 @@ namespace R440O.ThirdParty
             var angle = Math.Acos(cosB) * 180 / Math.PI;
             if (pointX < centerX) angle = -angle;
             return (int)angle;
+        }
+
+        /// <summary>
+        /// Drawing black line on picturebox
+        /// </summary>
+        /// <param name="g">Object for painting</param>
+        /// <param name="x1">X coordinate of first point</param>
+        /// <param name="y1">Ycoordinate of first point</param>
+        /// <param name="x2">X coordinate of second point</param>
+        /// <param name="y2">Y coordinate of second point</param>
+        public static void DrawLine(Graphics g, int x1, int y1, int x2, int y2)
+        {
+            var point1 = new Point(x1, y1);
+            var point2 = new Point(x2, y2);
+            var myPen = new Pen(Color.Black, 5);
+            g.DrawLine(myPen, point1, point2);
         }
     }
 }

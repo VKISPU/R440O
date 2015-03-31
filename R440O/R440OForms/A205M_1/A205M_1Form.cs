@@ -21,72 +21,72 @@ namespace R440O.R440OForms.A205M_1
         public A205M_1Form()
         {
             this.InitializeComponent();
-            this.InitializeToggles();
+            A205M_1Parameters.RefreshForm += RefreshFrom;
+            RefreshFrom();
         }
 
-        private void InitializeToggles()
+        private void RefreshFrom()
         {
-            A205M_1ТумблерКЭД.BackgroundImage = A205M_1Parameters.A205M_1ТумблерКЭД
+            ИндикаторКонтроль.Invalidate();
+
+            ТумблерКЭД.BackgroundImage = A205M_1Parameters.ТумблерКЭД
                 ? ControlElementImages.tumblerType6Up
                 : ControlElementImages.tumblerType6Down;
             
-            var angle = A205M_1Parameters.A205M_1ПереключательВолнаX10000 * 35 - 90;
-            A205M_1ПереключательВолнаX10000.BackgroundImage =
+            var angle = A205M_1Parameters.ПереключательВолнаX10000 * 35 - 90;
+            ПереключательВолнаX10000.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
-            angle = A205M_1Parameters.A205M_1ПереключательВолнаX1000 * 35 - 160;
-            A205M_1ПереключательВолнаX1000.BackgroundImage =
+            angle = A205M_1Parameters.ПереключательВолнаX1000 * 35 - 160;
+            ПереключательВолнаX1000.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
-            angle = A205M_1Parameters.A205M_1ПереключательВолнаX100 * 35 - 160;
-            A205M_1ПереключательВолнаX100.BackgroundImage =
+            angle = A205M_1Parameters.ПереключательВолнаX100 * 35 - 160;
+            ПереключательВолнаX100.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
-            angle = A205M_1Parameters.A205M_1ПереключательВолнаX10 * 35 - 160;
-            A205M_1ПереключательВолнаX10.BackgroundImage =
+            angle = A205M_1Parameters.ПереключательВолнаX10 * 35 - 160;
+            ПереключательВолнаX10.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
-            angle = A205M_1Parameters.A205M_1ПереключательВолнаX1 * 35 - 160;
-            A205M_1ПереключательВолнаX1.BackgroundImage =
+            angle = A205M_1Parameters.ПереключательВолнаX1 * 35 - 160;
+            ПереключательВолнаX1.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
-            angle = A205M_1Parameters.A205M_1ПереключательКонтроль * 30 - 180;
-            A205M_1ПереключательКонтроль.BackgroundImage =
+            angle = A205M_1Parameters.ПереключательКонтроль * 30 - 180;
+            ПереключательКонтроль.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
-            angle = A205M_1Parameters.A205M_1ПереключательВидРаботы * 30 - 75;
-            A205M_1ПереключательВидРаботы.BackgroundImage =
+            angle = A205M_1Parameters.ПереключательВидРаботы * 30 - 75;
+            ПереключательВидРаботы.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
-            angle = A205M_1Parameters.A205M_1ПереключательВходЧТ * 30 - 60;
-            A205M_1ПереключательВходЧТ.BackgroundImage =
+            angle = A205M_1Parameters.ПереключательВходЧТ * 30 - 60;
+            ПереключательВходЧТ.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
         }
 
         private void A205M_1ПереключательКЭД_Click(object sender, System.EventArgs e)
         {
-            A205M_1Parameters.A205M_1ТумблерКЭД = ! A205M_1Parameters.A205M_1ТумблерКЭД;
-            A205M_1ТумблерКЭД.BackgroundImage = A205M_1Parameters.A205M_1ТумблерКЭД
-                ? ControlElementImages.tumblerType6Up
-                : ControlElementImages.tumblerType6Down;
+            A205M_1Parameters.ТумблерКЭД = ! A205M_1Parameters.ТумблерКЭД;
         }
 
         #region Отображение на дисплее текущей выбранной волны
         private void A205M_1КнопкаОтсчет_MouseDown(object sender, MouseEventArgs e)
         {
-            A205M_1КнопкаОтсчет.BackgroundImage = null;
-            A205M_1Дисплей.Text = A205M_1Parameters.A205M_1ПереключательВолнаX10000 + "  " +
-                                  A205M_1Parameters.A205M_1ПереключательВолнаX1000 + "  " +
-                                  A205M_1Parameters.A205M_1ПереключательВолнаX100 + "  " +
-                                  A205M_1Parameters.A205M_1ПереключательВолнаX10 + "  " +
-                                  A205M_1Parameters.A205M_1ПереключательВолнаX1;
+            КнопкаОтсчет.BackgroundImage = null;
+            Дисплей.Text = A205M_1Parameters.ПереключательВолнаX10000 + "  " +
+                                  A205M_1Parameters.ПереключательВолнаX1000 + "  " +
+                                  A205M_1Parameters.ПереключательВолнаX100 + "  " +
+                                  A205M_1Parameters.ПереключательВолнаX10 + "  " +
+                                  A205M_1Parameters.ПереключательВолнаX1;
 
         }
 
         private void A205M_1КнопкаОтсчет_MouseUp(object sender, MouseEventArgs e)
         {
-            A205M_1КнопкаОтсчет.BackgroundImage = ControlElementImages.buttonRoundType6;
-            A205M_1Дисплей.Text = string.Empty;
+            КнопкаОтсчет.BackgroundImage = ControlElementImages.buttonRoundType6;
+            Дисплей.Text = string.Empty;
         } 
         #endregion
 
@@ -95,85 +95,65 @@ namespace R440O.R440OForms.A205M_1
         {
             if (e.Button == MouseButtons.Left)
             {
-                A205M_1Parameters.A205M_1ПереключательВолнаX10000 += 1;
+                A205M_1Parameters.ПереключательВолнаX10000 += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                A205M_1Parameters.A205M_1ПереключательВолнаX10000 -= 1;
+                A205M_1Parameters.ПереключательВолнаX10000 -= 1;
             }
-
-            var angle = A205M_1Parameters.A205M_1ПереключательВолнаX10000 * 35 - 90;
-            A205M_1ПереключательВолнаX10000.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
         }
 
         private void A205M_1ПереключательВолнаX1000_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                A205M_1Parameters.A205M_1ПереключательВолнаX1000 += 1;
+                A205M_1Parameters.ПереключательВолнаX1000 += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                A205M_1Parameters.A205M_1ПереключательВолнаX1000 -= 1;
+                A205M_1Parameters.ПереключательВолнаX1000 -= 1;
             }
-
-            var angle = A205M_1Parameters.A205M_1ПереключательВолнаX1000 * 35 - 160;
-            A205M_1ПереключательВолнаX1000.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
         }
 
         private void A205M_1ПереключательВолнаX100_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                A205M_1Parameters.A205M_1ПереключательВолнаX100 += 1;
+                A205M_1Parameters.ПереключательВолнаX100 += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                A205M_1Parameters.A205M_1ПереключательВолнаX100 -= 1;
+                A205M_1Parameters.ПереключательВолнаX100 -= 1;
             }
-
-            var angle = A205M_1Parameters.A205M_1ПереключательВолнаX100 * 35 - 160;
-            A205M_1ПереключательВолнаX100.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
         }
 
         private void A205M_1ПереключательВолнаX10_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                A205M_1Parameters.A205M_1ПереключательВолнаX10 += 1;
+                A205M_1Parameters.ПереключательВолнаX10 += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                A205M_1Parameters.A205M_1ПереключательВолнаX10 -= 1;
+                A205M_1Parameters.ПереключательВолнаX10 -= 1;
             }
-
-            var angle = A205M_1Parameters.A205M_1ПереключательВолнаX10 * 35 - 160;
-            A205M_1ПереключательВолнаX10.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
         }
 
         private void A205M_1ПереключательВолнаX1_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                A205M_1Parameters.A205M_1ПереключательВолнаX1 += 1;
+                A205M_1Parameters.ПереключательВолнаX1 += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                A205M_1Parameters.A205M_1ПереключательВолнаX1 -= 1;
+                A205M_1Parameters.ПереключательВолнаX1 -= 1;
             }
-
-            var angle = A205M_1Parameters.A205M_1ПереключательВолнаX1 * 35 - 160;
-            A205M_1ПереключательВолнаX1.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
         } 
         #endregion
 
@@ -182,52 +162,53 @@ namespace R440O.R440OForms.A205M_1
         {
             if (e.Button == MouseButtons.Left)
             {
-                A205M_1Parameters.A205M_1ПереключательКонтроль += 1;
+                A205M_1Parameters.ПереключательКонтроль += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                A205M_1Parameters.A205M_1ПереключательКонтроль -= 1;
+                A205M_1Parameters.ПереключательКонтроль -= 1;
             }
-
-            var angle = A205M_1Parameters.A205M_1ПереключательКонтроль * 30 - 180;
-            A205M_1ПереключательКонтроль.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
         }
 
         private void A205M_1ПереключательВидРаботы_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                A205M_1Parameters.A205M_1ПереключательВидРаботы += 1;
+                A205M_1Parameters.ПереключательВидРаботы += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                A205M_1Parameters.A205M_1ПереключательВидРаботы -= 1;
+                A205M_1Parameters.ПереключательВидРаботы -= 1;
             }
-
-            var angle = A205M_1Parameters.A205M_1ПереключательВидРаботы * 30 - 75;
-            A205M_1ПереключательВидРаботы.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
         }
 
         private void A205M_1ПереключательВходЧТ_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                A205M_1Parameters.A205M_1ПереключательВходЧТ += 1;
+                A205M_1Parameters.ПереключательВходЧТ += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                A205M_1Parameters.A205M_1ПереключательВходЧТ -= 1;
+                A205M_1Parameters.ПереключательВходЧТ -= 1;
             }
-
-            var angle = A205M_1Parameters.A205M_1ПереключательВходЧТ * 30 - 60;
-            A205M_1ПереключательВходЧТ.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
         } 
         #endregion
+
+        private void ИндикаторКонтроль_Paint(object sender, PaintEventArgs e)
+        {
+            switch (A205M_1Parameters.ИндикаторКонтроль)
+            {
+                case 0:
+                    TransformImageHelper.DrawLine(e.Graphics, 10, 40, 60, 80);
+                    break;
+                case 27:
+                    TransformImageHelper.DrawLine(e.Graphics, 65, 20, 60, 80);
+                    break;
+            }
+        }
     }
 }

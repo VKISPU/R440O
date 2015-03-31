@@ -106,8 +106,8 @@
     <Compile Include="Parameters\C300PM_2Parameters.cs" />
     <Compile Include="Parameters\C300PM_1Parameters.cs" />
     <Compile Include="Parameters\N18_MParameters.cs" />
-    <Compile Include="Parameters\A205M_1Parameters.cs" />
-    <Compile Include="Parameters\A205M_2Parameters.cs" />
+    <Compile Include="R440OForms\A205M_1\A205M_1Parameters.cs" />
+    <Compile Include="R440OForms\A205M_2\A205M_2Parameters.cs" />
     <Compile Include="Parameters\A304Parameters.cs" />
     <Compile Include="Parameters\A306Parameters.cs" />
     <Compile Include="R440OForms\A403_3\A403_3Parameters.cs" />
