@@ -158,6 +158,8 @@ namespace R440O.R440OForms.N502B
                 {
                     ResetParameters();
                 }
+                if (RefreshForm != null)
+                    RefreshForm();
             }
 
         }
@@ -166,23 +168,38 @@ namespace R440O.R440OForms.N502B
         {
             get
             {
-                if (VoltageStabilizerParameters.КабельВход == 0 && ЛампочкаСеть && ПереключательСеть &&
-                    (ПереключательФазировка == 2 || ПереключательФазировка == 4))
+                if (VoltageStabilizerParameters.КабельВход != 0 && ЛампочкаСеть && ПереключательСеть &&
+                    КнопкаВклНагрузки && ПереключательФазировка == 2)
                 {
-                        switch (ПереключательНапряжение)
-                        {
-                            case 1:
-                            case 2:
-                            case 3:
-                                return 380;
-                            case 4:
-                            case 5:
-                            case 6:
-                                return 0;
-                        }
+                    switch (ПереключательНапряжение)
+                    {
+                        case 1:
+                        case 2:
+                        case 3:
+                            return VoltageStabilizerParameters.КабельВход;
+                        case 4:
+                        case 5:
+                        case 6:
+                            return 220;
+                    }
                 }
                 if (VoltageStabilizerParameters.КабельВход != 0 && ЛампочкаСеть && ПереключательСеть &&
                     ЛампочкаСфазировано)
+                {
+                    switch (ПереключательНапряжение)
+                    {
+                        case 1:
+                        case 2:
+                        case 3:
+                            return VoltageStabilizerParameters.КабельВход;
+                        case 4:
+                        case 5:
+                        case 6:
+                            return 220;
+                    }
+                }
+                if (ЛампочкаСеть && ПереключательСеть &&
+                    (ПереключательФазировка == 2 || ПереключательФазировка == 4))
                 {
                     switch (ПереключательНапряжение)
                     {
@@ -193,7 +210,7 @@ namespace R440O.R440OForms.N502B
                         case 4:
                         case 5:
                         case 6:
-                            return 220;
+                            return 0;
                     }
                 }
                 return 0;
