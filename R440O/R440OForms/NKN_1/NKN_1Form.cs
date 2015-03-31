@@ -1,13 +1,4 @@
-﻿//-----------------------------------------------------------------------
-// <copyright file="NKN_1Form.cs" company="VKISPU">
-//      R440O station.
-// </copyright>
-//-----------------------------------------------------------------------
-
-using R440O.Parameters;
-using R440O.R440OForms.N502B;
-
-namespace R440O.R440OForms.NKN_1
+﻿namespace R440O.R440OForms.NKN_1
 {
     using System.Windows.Forms;
 

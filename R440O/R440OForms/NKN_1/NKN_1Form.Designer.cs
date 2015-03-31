@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.NKN_1Panel = new System.Windows.Forms.Panel();
+            this.Panel = new System.Windows.Forms.Panel();
             this.ЛампочкиФаз = new System.Windows.Forms.Panel();
             this.ЛампочкаФаза3 = new System.Windows.Forms.PictureBox();
             this.ЛампочкаФаза2 = new System.Windows.Forms.PictureBox();
@@ -36,7 +36,7 @@
             this.Кнопка220Вкл = new System.Windows.Forms.Button();
             this.Кнопка220Откл = new System.Windows.Forms.Button();
             this.ЛампочкаМУ = new System.Windows.Forms.PictureBox();
-            this.NKN_1Panel.SuspendLayout();
+            this.Panel.SuspendLayout();
             this.ЛампочкиФаз.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаФаза3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаФаза2)).BeginInit();
@@ -44,18 +44,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаМУ)).BeginInit();
             this.SuspendLayout();
             // 
-            // NKN_1Panel
+            // Panel
             // 
-            this.NKN_1Panel.BackgroundImage = global::R440O.BackgroundImages.NKN;
-            this.NKN_1Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.NKN_1Panel.Controls.Add(this.ЛампочкиФаз);
-            this.NKN_1Panel.Controls.Add(this.Кнопка220Вкл);
-            this.NKN_1Panel.Controls.Add(this.Кнопка220Откл);
-            this.NKN_1Panel.Controls.Add(this.ЛампочкаМУ);
-            this.NKN_1Panel.Location = new System.Drawing.Point(0, 0);
-            this.NKN_1Panel.Name = "NKN_1Panel";
-            this.NKN_1Panel.Size = new System.Drawing.Size(953, 626);
-            this.NKN_1Panel.TabIndex = 0;
+            this.Panel.BackgroundImage = global::R440O.BackgroundImages.NKN;
+            this.Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Panel.Controls.Add(this.ЛампочкиФаз);
+            this.Panel.Controls.Add(this.Кнопка220Вкл);
+            this.Panel.Controls.Add(this.Кнопка220Откл);
+            this.Panel.Controls.Add(this.ЛампочкаМУ);
+            this.Panel.Location = new System.Drawing.Point(0, 0);
+            this.Panel.Name = "Panel";
+            this.Panel.Size = new System.Drawing.Size(953, 626);
+            this.Panel.TabIndex = 0;
             // 
             // ЛампочкиФаз
             // 
@@ -145,12 +145,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 621);
-            this.Controls.Add(this.NKN_1Panel);
+            this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "NKN_1Form";
             this.Text = "НКН-1";
-            this.NKN_1Panel.ResumeLayout(false);
+            this.Panel.ResumeLayout(false);
             this.ЛампочкиФаз.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаФаза3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаФаза2)).EndInit();
@@ -162,7 +162,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel NKN_1Panel;
+        private System.Windows.Forms.Panel Panel;
         private System.Windows.Forms.PictureBox ЛампочкаМУ;
         private System.Windows.Forms.Button Кнопка220Вкл;
         private System.Windows.Forms.Button Кнопка220Откл;
