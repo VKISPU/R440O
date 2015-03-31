@@ -181,6 +181,21 @@ namespace R440O.R440OForms.N502B
                                 return 0;
                         }
                 }
+                if (VoltageStabilizerParameters.КабельВход != 0 && ЛампочкаСеть && ПереключательСеть &&
+                    ЛампочкаСфазировано)
+                {
+                    switch (ПереключательНапряжение)
+                    {
+                        case 1:
+                        case 2:
+                        case 3:
+                            return 380;
+                        case 4:
+                        case 5:
+                        case 6:
+                            return 220;
+                    }
+                }
                 return 0;
             }
         }
