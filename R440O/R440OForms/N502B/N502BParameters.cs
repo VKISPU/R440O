@@ -111,7 +111,13 @@ namespace R440O.R440OForms.N502B
         public static int ПереключательНапряжение
         {
             get { return _переключательНапряжение; }
-            set { if (value > 0 && value < 7) _переключательНапряжение = value; }
+            set
+            {
+                if (value > 0 && value < 7) 
+                    _переключательНапряжение = value;
+                if (RefreshForm != null)
+                    RefreshForm();
+            }
         }
 
         private static int _переключательФазировка = 1;
@@ -154,6 +160,29 @@ namespace R440O.R440OForms.N502B
                 }
             }
 
+        }
+
+        public static int ИндикаторНапряжение
+        {
+            get
+            {
+                if (VoltageStabilizerParameters.КабельВход == 0 && ЛампочкаСеть && ПереключательСеть &&
+                    (ПереключательФазировка == 2 || ПереключательФазировка == 4))
+                {
+                        switch (ПереключательНапряжение)
+                        {
+                            case 1:
+                            case 2:
+                            case 3:
+                                return 380;
+                            case 4:
+                            case 5:
+                            case 6:
+                                return 0;
+                        }
+                }
+                return 0;
+            }
         }
 
         public delegate void VoidVoidSignature();

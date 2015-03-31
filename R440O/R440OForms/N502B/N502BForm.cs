@@ -4,6 +4,7 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+using System.Drawing;
 using R440O.R440OForms.PowerCabel;
 using R440O.R440OForms.VoltageStabilizer;
 using R440O.ThirdParty;
@@ -23,6 +24,7 @@ namespace R440O.R440OForms.N502B
             InitializeTumblersPosition();
             InitializeTogglesPosition();
             N502BParameters.RefreshForm += InitializeLamps;
+            N502BParameters.RefreshForm += ИндикаторНапряжение.Invalidate;
         }
 
         #region Тумблеры
@@ -262,6 +264,32 @@ namespace R440O.R440OForms.N502B
 
         #endregion
 
+        #region Отрисовка индикатора напряжения
+        private void DrawLine(Graphics g, int x1, int y1, int x2, int y2)
+        {
+            var point1 = new Point(x1, y1);
+            var point2 = new Point(x2, y2);
+            var myPen = new Pen(Color.Black, 5);
+            g.DrawLine(myPen, point1, point2);
+        }
+
+        private void ИндикаторНапряжение_Paint(object sender, PaintEventArgs e)
+        {
+            switch (N502BParameters.ИндикаторНапряжение)
+            {
+                case 0:
+                    DrawLine(e.Graphics, 10, 40, 45, 55);
+                    break;
+                case 220:
+                    DrawLine(e.Graphics, 20, 20, 45, 55);
+                    break;
+                case 380:
+                    DrawLine(e.Graphics, 60, 20, 45, 55);
+                    break;
+            }
+        }
+        #endregion
+
         #region Инициализация
 
         private void InitializeTumblersPosition()
@@ -347,6 +375,8 @@ namespace R440O.R440OForms.N502B
         }
 
         #endregion
+
+        
 
     }
 }
