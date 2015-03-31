@@ -22,83 +22,51 @@ namespace R440O.R440OForms.NKN_1
         public NKN_1Form()
         {
             this.InitializeComponent();
-            this.InitializeLamps();
+            NKN_1Parameters.RefreshForm += RefreshForm;
+            RefreshForm();
         }
 
         /// <summary>
-        /// Инициализация начальных положений - сейчас не учтено дистанционное включение
+        /// Инициализация начальных положений
         /// </summary>
-        private void InitializeLamps()
+        private void RefreshForm()
         {
-            this.TurnLamps();
-            if (NKN_1Parameters.NKN_1ЛампочкаМУ)
-            {
-               NKN_1ЛампочкаФаза1.BackgroundImage = NKN_1Parameters.NKN_1ЛампочкиФаз[0]
-                    ? ControlElementImages.lampType9OnGreen
-                    : null;
-                NKN_1ЛампочкаФаза2.BackgroundImage = NKN_1Parameters.NKN_1ЛампочкиФаз[1]
-                    ? ControlElementImages.lampType9OnGreen
-                    : null;
-                NKN_1ЛампочкаФаза3.BackgroundImage = NKN_1Parameters.NKN_1ЛампочкиФаз[2]
-                    ? ControlElementImages.lampType9OnGreen
-                    : null;
-            }
-        }
-
-        #region Переключение состояния ламп
-        /// <summary>
-        /// Включает или выключает блок - отображается состоянием лампочки
-        /// </summary>
-        public void TurnLamps()
-        {
-            NKN_1Parameters.NKN_1ЛампочкаМУ = N502BParameters.ТумблерЭлектрооборудование && N502BParameters.ТумблерВыпрямитель27В;
-            NKN_1ЛампочкаМУ.BackgroundImage = NKN_1Parameters.NKN_1ЛампочкаМУ
+            ЛампочкаМУ.BackgroundImage = NKN_1Parameters.ЛампочкаМУ
+                ? ControlElementImages.lampType9OnGreen
+                : null;
+            if (!NKN_1Parameters.ЛампочкаМУ) return;
+            ЛампочкаФаза1.BackgroundImage = NKN_1Parameters.ЛампочкиФаз[0]
+                ? ControlElementImages.lampType9OnGreen
+                : null;
+            ЛампочкаФаза2.BackgroundImage = NKN_1Parameters.ЛампочкиФаз[1]
+                ? ControlElementImages.lampType9OnGreen
+                : null;
+            ЛампочкаФаза3.BackgroundImage = NKN_1Parameters.ЛампочкиФаз[2]
                 ? ControlElementImages.lampType9OnGreen
                 : null;
         }
 
-        public void TurnLamps(bool on)
-        {
-            if (NKN_1Parameters.NKN_1ЛампочкаМУ && (N15Parameters.Н15ЛампочкаППВВкл1 != "true") && (N15Parameters.Н15ЛампочкаППВРабота1 != "true"))
-            {
-                for (var i = 0; i < NKN_1Parameters.NKN_1ЛампочкиФаз.Length; i++)
-                {
-                    NKN_1Parameters.NKN_1ЛампочкиФаз[i] = on;
-                }
-                NKN_1ЛампочкаФаза1.BackgroundImage = NKN_1Parameters.NKN_1ЛампочкиФаз[0]
-                    ? ControlElementImages.lampType9OnGreen
-                    : null;
-                NKN_1ЛампочкаФаза2.BackgroundImage = NKN_1Parameters.NKN_1ЛампочкиФаз[1]
-                    ? ControlElementImages.lampType9OnGreen
-                    : null;
-                NKN_1ЛампочкаФаза3.BackgroundImage = NKN_1Parameters.NKN_1ЛампочкиФаз[2]
-                    ? ControlElementImages.lampType9OnGreen
-                    : null;
-            }
-        } 
-        #endregion
-
         #region Кнопки местного включения блока
-        private void NKN_1Кнопка220Вкл_MouseDown(object sender, MouseEventArgs e)
+        private void Кнопка220Вкл_MouseDown(object sender, MouseEventArgs e)
         {
-            NKN_1Кнопка220Вкл.BackgroundImage = ControlElementImages.buttonRoundType4;
+            Кнопка220Вкл.BackgroundImage = ControlElementImages.buttonRoundType4;
         }
 
-        private void NKN_1Кнопка220Вкл_MouseUp(object sender, MouseEventArgs e)
+        private void Кнопка220Вкл_MouseUp(object sender, MouseEventArgs e)
         {
-            NKN_1Кнопка220Вкл.BackgroundImage = null;
-            this.TurnLamps(true);
+            Кнопка220Вкл.BackgroundImage = null;
+            NKN_1Parameters.ChangeLampsStateTo(true);
         }
 
-        private void NKN_1Кнопка220Откл_MouseDown(object sender, MouseEventArgs e)
+        private void Кнопка220Откл_MouseDown(object sender, MouseEventArgs e)
         {
-            NKN_1Кнопка220Откл.BackgroundImage = ControlElementImages.buttonRoundType4;
+            Кнопка220Откл.BackgroundImage = ControlElementImages.buttonRoundType4;
         }
 
-        private void NKN_1Кнопка220Откл_MouseUp(object sender, MouseEventArgs e)
+        private void Кнопка220Откл_MouseUp(object sender, MouseEventArgs e)
         {
-            NKN_1Кнопка220Откл.BackgroundImage = null;
-            this.TurnLamps(false);
+            Кнопка220Откл.BackgroundImage = null;
+            NKN_1Parameters.ChangeLampsStateTo(false);
         } 
         #endregion
     }

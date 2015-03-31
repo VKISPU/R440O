@@ -1,4 +1,5 @@
-﻿using R440O.R440OForms.PowerCabel;
+﻿using R440O.R440OForms.NKN_1;
+using R440O.R440OForms.PowerCabel;
 using R440O.R440OForms.VoltageStabilizer;
 
 namespace R440O.R440OForms.N502B
@@ -29,6 +30,7 @@ namespace R440O.R440OForms.N502B
             set
             {
                 _лампочкаСфазировано = value;
+                NKN_1Parameters.ResetParameters();
                 if (RefreshForm != null) RefreshForm();
             }
         }
@@ -40,8 +42,30 @@ namespace R440O.R440OForms.N502B
 
         #region Тумблеры
 
-        public static bool ТумблерЭлектрооборудование = false;
-        public static bool ТумблерВыпрямитель27В = false;
+        private static bool _тумблерЭлектрооборудование;
+
+        public static bool ТумблерЭлектрооборудование
+        {
+            get { return _тумблерЭлектрооборудование; }
+            set
+            {
+                _тумблерЭлектрооборудование = value;
+                NKN_1Parameters.ResetParameters();
+            }
+        }
+
+
+        private static bool _тумблерВыпрямитель27В;
+
+        public static bool ТумблерВыпрямитель27В
+        {
+            get { return _тумблерВыпрямитель27В; }
+            set
+            {
+                _тумблерВыпрямитель27В = value;
+                NKN_1Parameters.ResetParameters();
+            }
+        }
         public static bool ТумблерОсвещение = false;
         public static bool ТумблерН131 = false;
         public static bool ТумблерН132 = false;

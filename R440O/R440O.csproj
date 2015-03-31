@@ -115,8 +115,8 @@
     <Compile Include="Parameters\N15Parameters.cs" />
     <Compile Include="R440OForms\A1\A1Parameters.cs" />
     <Compile Include="R440OForms\N502B\N502BParameters.cs" />
-    <Compile Include="Parameters\NKN_2Parameters.cs" />
-    <Compile Include="Parameters\NKN_1Parameters.cs" />
+    <Compile Include="R440OForms\NKN_2\NKN_2Parameters.cs" />
+    <Compile Include="R440OForms\NKN_1\NKN_1Parameters.cs" />
     <Compile Include="Parameters\P220_27G_2Parameters.cs" />
     <Compile Include="Parameters\P220_27G_3Parameters.cs" />
     <Compile Include="R440OForms\PowerCabel\PowerCabelParameters.cs" />
