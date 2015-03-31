@@ -20,6 +20,7 @@ namespace R440O
         [STAThread]
         private static void Main()
         {
+            //ParametersConfig.SetParameters();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new R440OForms.R440O.R440OForm());
