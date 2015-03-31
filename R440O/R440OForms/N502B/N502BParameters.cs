@@ -1,4 +1,6 @@
-﻿using R440O.R440OForms.A205M_1;
+﻿using System;
+using System.Windows.Forms;
+using R440O.R440OForms.A205M_1;
 using R440O.R440OForms.NKN_1;
 using R440O.R440OForms.NKN_2;
 using R440O.R440OForms.PowerCabel;
@@ -57,6 +59,8 @@ namespace R440O.R440OForms.N502B
                 NKN_1Parameters.ResetParameters();
                 NKN_2Parameters.ResetParameters();
                 A205M_1Parameters.RefreshIndicators();
+                if (RefreshForm != null)
+                    RefreshForm();
             }
         }
 
@@ -148,14 +152,25 @@ namespace R440O.R440OForms.N502B
         public static int ПереключательКонтрольНапряжения
         {
             get { return _переключательКонтрольНапряжения; }
-            set { if (value > 0 && value < 4) _переключательКонтрольНапряжения = value; }
+            set
+            {
+                if (value > 0 && value < 4) _переключательКонтрольНапряжения = value;
+                if (RefreshForm != null)
+                    RefreshForm();
+            }
         }
 
         private static int _переключательТокНагрузкиИЗаряда = 1;
         public static int ПереключательТокНагрузкиИЗаряда
         {
             get { return _переключательТокНагрузкиИЗаряда; }
-            set { if (value > 0 && value < 9) _переключательТокНагрузкиИЗаряда = value; }
+            set
+            {
+                if (value > 0 && value < 9) _переключательТокНагрузкиИЗаряда = value;
+                if (RefreshForm != null)
+                    RefreshForm();
+
+            }
         }
         #endregion
 
@@ -226,6 +241,29 @@ namespace R440O.R440OForms.N502B
                             return 0;
                     }
                 }
+                return 0;
+            }
+        }
+
+        public static int ИндикаторКонтрольНапряжения
+        {
+            get
+            {
+                if (ЛампочкаСфазировано && ПереключательКонтрольНапряжения == 1 && ТумблерЭлектрооборудование)
+                    return 30;
+                if (ЛампочкаСфазировано && ПереключательКонтрольНапряжения == 3 && ТумблерЭлектрооборудование)
+                {
+                    if (ПереключательТокНагрузкиИЗаряда == 2)
+                    {
+                        return 30;
+                    }
+                    if (ПереключательТокНагрузкиИЗаряда == 3)
+                    {
+                        return 20;
+                    }
+                    return ПереключательТокНагрузкиИЗаряда * 10 - 10;
+                }
+                    
                 return 0;
             }
         }

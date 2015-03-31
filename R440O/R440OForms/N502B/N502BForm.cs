@@ -25,6 +25,8 @@ namespace R440O.R440OForms.N502B
             InitializeTogglesPosition();
             N502BParameters.RefreshForm += InitializeLamps;
             N502BParameters.RefreshForm += ИндикаторНапряжение.Invalidate;
+            N502BParameters.RefreshForm += ИндикаторКонтрольНапряжения.Invalidate;
+
         }
 
         #region Тумблеры
@@ -264,7 +266,6 @@ namespace R440O.R440OForms.N502B
 
         #endregion
 
-        #region Отрисовка индикатора напряжения
         private void DrawLine(Graphics g, int x1, int y1, int x2, int y2)
         {
             var point1 = new Point(x1, y1);
@@ -273,6 +274,7 @@ namespace R440O.R440OForms.N502B
             g.DrawLine(myPen, point1, point2);
         }
 
+        #region Отрисовка индикатора напряжения
         private void ИндикаторНапряжение_Paint(object sender, PaintEventArgs e)
         {
             switch (N502BParameters.ИндикаторНапряжение)
@@ -289,6 +291,40 @@ namespace R440O.R440OForms.N502B
             }
         }
         #endregion
+
+        private void ИндикаторКонтрольНапряжения_Paint(object sender, PaintEventArgs e)
+        {
+            switch (N502BParameters.ИндикаторКонтрольНапряжения)
+            {
+                case 0:
+                    DrawLine(e.Graphics, 0, 40, 45, 70);
+                    break;
+                case 10:
+                    DrawLine(e.Graphics, 10, 35, 45, 70);
+                    break;
+                case 20:
+                    DrawLine(e.Graphics, 20, 30, 45, 70);
+                    break;
+                case 30:
+                    DrawLine(e.Graphics, 30, 25, 45, 70);
+                    break;
+                case 40:
+                    DrawLine(e.Graphics, 40, 20, 45, 70);
+                    break;
+                case 50:
+                    DrawLine(e.Graphics, 50, 25, 45, 70);
+                    break;
+                case 60:
+                    DrawLine(e.Graphics, 60, 25, 45, 70);
+                    break;
+                case 70:
+                    DrawLine(e.Graphics, 70, 30, 45, 70);
+                    break;
+                case 80:
+                    DrawLine(e.Graphics, 80, 35, 45, 70);
+                    break;
+            }
+        }
 
         #region Инициализация
 
@@ -375,6 +411,8 @@ namespace R440O.R440OForms.N502B
         }
 
         #endregion
+
+        
 
         
 

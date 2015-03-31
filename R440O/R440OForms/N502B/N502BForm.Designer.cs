@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.N502BPanel = new System.Windows.Forms.Panel();
+            this.ИндикаторНапряжение = new System.Windows.Forms.PictureBox();
             this.ЛампочкаСфазировано = new System.Windows.Forms.PictureBox();
             this.ЛампочкаСеть = new System.Windows.Forms.PictureBox();
             this.ПереключательТокНагрузкиИЗаряда = new System.Windows.Forms.Button();
@@ -47,17 +48,19 @@
             this.ТумблерОсвещение = new System.Windows.Forms.Button();
             this.ТумблерВыпрямитель27В = new System.Windows.Forms.Button();
             this.ТумблерЭлектрооборудование = new System.Windows.Forms.Button();
-            this.ИндикаторНапряжение = new System.Windows.Forms.PictureBox();
+            this.ИндикаторКонтрольНапряжения = new System.Windows.Forms.PictureBox();
             this.N502BPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторНапряжение)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСфазировано)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСеть)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторНапряжение)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторКонтрольНапряжения)).BeginInit();
             this.SuspendLayout();
             // 
             // N502BPanel
             // 
             this.N502BPanel.BackgroundImage = global::R440O.BackgroundImages.N502B;
             this.N502BPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.N502BPanel.Controls.Add(this.ИндикаторКонтрольНапряжения);
             this.N502BPanel.Controls.Add(this.ИндикаторНапряжение);
             this.N502BPanel.Controls.Add(this.ЛампочкаСфазировано);
             this.N502BPanel.Controls.Add(this.ЛампочкаСеть);
@@ -81,6 +84,16 @@
             this.N502BPanel.Name = "N502BPanel";
             this.N502BPanel.Size = new System.Drawing.Size(749, 745);
             this.N502BPanel.TabIndex = 1;
+            // 
+            // ИндикаторНапряжение
+            // 
+            this.ИндикаторНапряжение.BackColor = System.Drawing.Color.Transparent;
+            this.ИндикаторНапряжение.Location = new System.Drawing.Point(94, 140);
+            this.ИндикаторНапряжение.Name = "ИндикаторНапряжение";
+            this.ИндикаторНапряжение.Size = new System.Drawing.Size(85, 58);
+            this.ИндикаторНапряжение.TabIndex = 39;
+            this.ИндикаторНапряжение.TabStop = false;
+            this.ИндикаторНапряжение.Paint += new System.Windows.Forms.PaintEventHandler(this.ИндикаторНапряжение_Paint);
             // 
             // ЛампочкаСфазировано
             // 
@@ -363,15 +376,15 @@
             this.ТумблерЭлектрооборудование.UseVisualStyleBackColor = false;
             this.ТумблерЭлектрооборудование.Click += new System.EventHandler(this.ТумблерЭлектрооборудование_Click);
             // 
-            // ИндикаторНапряжение
+            // ИндикаторКонтрольНапряжения
             // 
-            this.ИндикаторНапряжение.BackColor = System.Drawing.Color.Transparent;
-            this.ИндикаторНапряжение.Location = new System.Drawing.Point(94, 140);
-            this.ИндикаторНапряжение.Name = "ИндикаторНапряжение";
-            this.ИндикаторНапряжение.Size = new System.Drawing.Size(85, 58);
-            this.ИндикаторНапряжение.TabIndex = 39;
-            this.ИндикаторНапряжение.TabStop = false;
-            this.ИндикаторНапряжение.Paint += new System.Windows.Forms.PaintEventHandler(this.ИндикаторНапряжение_Paint);
+            this.ИндикаторКонтрольНапряжения.BackColor = System.Drawing.Color.Transparent;
+            this.ИндикаторКонтрольНапряжения.Location = new System.Drawing.Point(474, 131);
+            this.ИндикаторКонтрольНапряжения.Name = "ИндикаторКонтрольНапряжения";
+            this.ИндикаторКонтрольНапряжения.Size = new System.Drawing.Size(102, 67);
+            this.ИндикаторКонтрольНапряжения.TabIndex = 40;
+            this.ИндикаторКонтрольНапряжения.TabStop = false;
+            this.ИндикаторКонтрольНапряжения.Paint += new System.Windows.Forms.PaintEventHandler(this.ИндикаторКонтрольНапряжения_Paint);
             // 
             // N502BForm
             // 
@@ -385,9 +398,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Н502Б";
             this.N502BPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторНапряжение)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСфазировано)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСеть)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторНапряжение)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторКонтрольНапряжения)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -414,6 +428,7 @@
         public System.Windows.Forms.PictureBox ЛампочкаСеть;
         public System.Windows.Forms.PictureBox ЛампочкаСфазировано;
         private System.Windows.Forms.PictureBox ИндикаторНапряжение;
+        private System.Windows.Forms.PictureBox ИндикаторКонтрольНапряжения;
 
     }
 }
