@@ -25,7 +25,6 @@
             ЛампочкаМУ.BackgroundImage = NKN_1Parameters.ЛампочкаМУ
                 ? ControlElementImages.lampType9OnGreen
                 : null;
-            if (!NKN_1Parameters.ЛампочкаМУ) return;
             ЛампочкаФаза1.BackgroundImage = NKN_1Parameters.ЛампочкиФаз[0]
                 ? ControlElementImages.lampType9OnGreen
                 : null;
@@ -46,7 +45,7 @@
         private void Кнопка220Вкл_MouseUp(object sender, MouseEventArgs e)
         {
             Кнопка220Вкл.BackgroundImage = null;
-            NKN_1Parameters.ChangeLampsStateTo(true);
+            NKN_1Parameters.Питание220Включено = true;
         }
 
         private void Кнопка220Откл_MouseDown(object sender, MouseEventArgs e)
@@ -57,7 +56,7 @@
         private void Кнопка220Откл_MouseUp(object sender, MouseEventArgs e)
         {
             Кнопка220Откл.BackgroundImage = null;
-            NKN_1Parameters.ChangeLampsStateTo(false);
+            NKN_1Parameters.Питание220Включено = false;
         } 
         #endregion
     }

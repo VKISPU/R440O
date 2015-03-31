@@ -74,10 +74,23 @@ namespace R440O.R440OForms.N502B
                 A205M_1Parameters.RefreshIndicators();
             }
         }
+
+        private static bool _тумблерН15;
+        public static bool ТумблерН15 
+        {
+            get { return _тумблерН15; }
+            set
+            {
+                _тумблерН15 = value;
+                NKN_1Parameters.ResetParameters();
+                NKN_2Parameters.ResetParameters();
+            }
+        }
+
         public static bool ТумблерОсвещение = false;
         public static bool ТумблерН131 = false;
         public static bool ТумблерН132 = false;
-        public static bool ТумблерН15 = false;
+        
 
         /// <summary>
         /// Тип: string

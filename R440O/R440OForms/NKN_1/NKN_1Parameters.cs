@@ -1,5 +1,4 @@
-﻿using R440O.Parameters;
-using R440O.R440OForms.N502B;
+﻿using R440O.R440OForms.N502B;
 
 namespace R440O.R440OForms.NKN_1
 {
@@ -8,36 +7,53 @@ namespace R440O.R440OForms.NKN_1
     /// </summary>
     public static class NKN_1Parameters
     {
-        private static bool _лампочкаМУ;
+        #region Питание блока
+        private static bool _питание220Включено;
+        public static bool Питание220Включено
+        {
+            get { return _питание220Включено; }
+            set
+            {
+                _питание220Включено = value;
+                ResetParameters();
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
 
+        private static bool _лампочкаМУ;
         /// <summary>
         /// Лампочка показывающая включено ли питание
         /// </summary>
         public static bool ЛампочкаМУ
         {
-            get { return _лампочкаМУ;}
+            get { return _лампочкаМУ; }
             set
             {
                 _лампочкаМУ = value;
                 if (RefreshForm != null) RefreshForm();
             }
-        }
+        } 
+        #endregion
 
-
-        private static bool[] _лампочкиФаз = {false, false, false};
-
+        #region Лампочки Фаз
         /// <summary>
         /// Лампочки показывающие есть ли питание на данной фазе
         /// </summary>
-        public static bool[] ЛампочкиФаз
+        public static bool[] ЛампочкиФаз = { false, false, false };
+
+        /// <summary>
+        /// Переключение всех лампочек фаз в одно из состояний
+        /// </summary>
+        /// <param name="isEnable">Новое состояние лампочек</param>
+        private static void ChangeLampsStateTo(bool isEnable)
         {
-            get { return _лампочкиФаз; }
-            set
+            for (var i = 0; i < ЛампочкиФаз.Length; i++)
             {
-                _лампочкиФаз = value;
-                if (RefreshForm != null) RefreshForm();
+                ЛампочкиФаз[i] = isEnable;
             }
-        }
+            if (RefreshForm != null) RefreshForm();
+        } 
+        #endregion
 
         public delegate void VoidVoidSignature();
         public static event VoidVoidSignature RefreshForm;
@@ -47,17 +63,7 @@ namespace R440O.R440OForms.NKN_1
             ЛампочкаМУ = (N502BParameters.ЛампочкаСфазировано
                           && N502BParameters.ТумблерЭлектрооборудование
                           && N502BParameters.ТумблерВыпрямитель27В);
-        }
-
-        public static void ChangeLampsStateTo(bool isEnable)
-        {
-            if (ЛампочкаМУ && (N15Parameters.Н15ЛампочкаППВВкл1 != "true") && (N15Parameters.Н15ЛампочкаППВРабота1 != "true"))
-            {
-                for (var i = 0; i < ЛампочкиФаз.Length; i++)
-                {
-                    ЛампочкиФаз[i] = isEnable;
-                }
-            }
+            ChangeLampsStateTo((_лампочкаМУ && _питание220Включено && N502BParameters.ТумблерН15));
         }
     }
 }

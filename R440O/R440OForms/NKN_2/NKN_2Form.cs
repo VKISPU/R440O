@@ -8,7 +8,7 @@
     public partial class NKN_2Form : Form
     {
         /// <summary>
-        /// Инициализирует новый экземпляр класса <see cref="NKN_1Form"/>
+        /// Инициализирует новый экземпляр класса <see cref="NKN_2Form"/>
         /// </summary>
         public NKN_2Form()
         {
@@ -25,7 +25,6 @@
             ЛампочкаМУ.BackgroundImage = NKN_2Parameters.ЛампочкаМУ
                 ? ControlElementImages.lampType9OnGreen
                 : null;
-            if (!NKN_2Parameters.ЛампочкаМУ) return;
             ЛампочкаФаза1.BackgroundImage = NKN_2Parameters.ЛампочкиФаз[0]
                 ? ControlElementImages.lampType9OnGreen
                 : null;
@@ -46,7 +45,7 @@
         private void Кнопка220Вкл_MouseUp(object sender, MouseEventArgs e)
         {
             Кнопка220Вкл.BackgroundImage = null;
-            NKN_2Parameters.ChangeLampsStateTo(true);
+            NKN_2Parameters.Питание220Включено = true;
         }
 
         private void Кнопка220Откл_MouseDown(object sender, MouseEventArgs e)
@@ -57,7 +56,7 @@
         private void Кнопка220Откл_MouseUp(object sender, MouseEventArgs e)
         {
             Кнопка220Откл.BackgroundImage = null;
-            NKN_2Parameters.ChangeLampsStateTo(false);
+            NKN_2Parameters.Питание220Включено = false;
         }
         #endregion
     }
