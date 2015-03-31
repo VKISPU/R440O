@@ -141,7 +141,7 @@
         {
             ИндикаторНапряжения.Invalidate();
             ЛампочкаСетьВкл.BackgroundImage = VoltageStabilizerParameters.ЛампочкаСетьВкл
-                ? ControlElementImages.lampType10OnGreen
+                ? ControlElementImages.lampType13OnGreen
                 : null;
 
             ЛампочкаАвария.BackgroundImage = VoltageStabilizerParameters.ЛампочкаАвария

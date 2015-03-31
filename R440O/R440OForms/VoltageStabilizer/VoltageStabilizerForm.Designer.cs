@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.VoltageStabilizerPanel = new System.Windows.Forms.Panel();
+            this.ИндикаторНапряжения = new System.Windows.Forms.PictureBox();
             this.ЛампочкаАвария = new System.Windows.Forms.PictureBox();
             this.ЛампочкаСетьВкл = new System.Windows.Forms.PictureBox();
             this.ПереключательКонтрольНапр = new System.Windows.Forms.Button();
             this.КабельВход2 = new System.Windows.Forms.Button();
             this.КабельВход1 = new System.Windows.Forms.Button();
-            this.ИндикаторНапряжения = new System.Windows.Forms.PictureBox();
             this.VoltageStabilizerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторНапряжения)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаАвария)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСетьВкл)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторНапряжения)).BeginInit();
             this.SuspendLayout();
             // 
             // VoltageStabilizerPanel
@@ -56,21 +56,31 @@
             this.VoltageStabilizerPanel.Size = new System.Drawing.Size(1092, 773);
             this.VoltageStabilizerPanel.TabIndex = 0;
             // 
+            // ИндикаторНапряжения
+            // 
+            this.ИндикаторНапряжения.BackColor = System.Drawing.Color.Transparent;
+            this.ИндикаторНапряжения.Location = new System.Drawing.Point(335, 35);
+            this.ИндикаторНапряжения.Name = "ИндикаторНапряжения";
+            this.ИндикаторНапряжения.Size = new System.Drawing.Size(134, 86);
+            this.ИндикаторНапряжения.TabIndex = 37;
+            this.ИндикаторНапряжения.TabStop = false;
+            this.ИндикаторНапряжения.Paint += new System.Windows.Forms.PaintEventHandler(this.ИндикаторНапряжения_Paint);
+            // 
             // ЛампочкаАвария
             // 
             this.ЛампочкаАвария.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаАвария.BackgroundImage = global::R440O.ControlElementImages.lampType6OnRed;
             this.ЛампочкаАвария.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаАвария.Location = new System.Drawing.Point(646, 10);
+            this.ЛампочкаАвария.Location = new System.Drawing.Point(645, 9);
             this.ЛампочкаАвария.Name = "ЛампочкаАвария";
-            this.ЛампочкаАвария.Size = new System.Drawing.Size(51, 45);
+            this.ЛампочкаАвария.Size = new System.Drawing.Size(52, 47);
             this.ЛампочкаАвария.TabIndex = 36;
             this.ЛампочкаАвария.TabStop = false;
             // 
             // ЛампочкаСетьВкл
             // 
             this.ЛампочкаСетьВкл.BackColor = System.Drawing.Color.Transparent;
-            this.ЛампочкаСетьВкл.BackgroundImage = global::R440O.ControlElementImages.lampType10OnGreen;
+            this.ЛампочкаСетьВкл.BackgroundImage = global::R440O.ControlElementImages.lampType13OnGreen;
             this.ЛампочкаСетьВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ЛампочкаСетьВкл.Location = new System.Drawing.Point(582, 14);
             this.ЛампочкаСетьВкл.Name = "ЛампочкаСетьВкл";
@@ -125,21 +135,11 @@
             this.КабельВход1.UseVisualStyleBackColor = false;
             this.КабельВход1.Click += new System.EventHandler(this.КабельВход1_Click);
             // 
-            // ИндикаторНапряжения
-            // 
-            this.ИндикаторНапряжения.BackColor = System.Drawing.Color.Transparent;
-            this.ИндикаторНапряжения.Location = new System.Drawing.Point(335, 35);
-            this.ИндикаторНапряжения.Name = "ИндикаторНапряжения";
-            this.ИндикаторНапряжения.Size = new System.Drawing.Size(134, 86);
-            this.ИндикаторНапряжения.TabIndex = 37;
-            this.ИндикаторНапряжения.TabStop = false;
-            this.ИндикаторНапряжения.Paint += new System.Windows.Forms.PaintEventHandler(this.ИндикаторНапряжения_Paint);
-            // 
             // VoltageStabilizerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1093, 741);
+            this.ClientSize = new System.Drawing.Size(1093, 733);
             this.Controls.Add(this.VoltageStabilizerPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -147,9 +147,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "СТАБИЛИЗАТОР НАПРЯЖЕНИЯ";
             this.VoltageStabilizerPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторНапряжения)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаАвария)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСетьВкл)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторНапряжения)).EndInit();
             this.ResumeLayout(false);
 
         }
