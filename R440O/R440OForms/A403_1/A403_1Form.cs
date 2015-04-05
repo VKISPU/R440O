@@ -98,6 +98,44 @@ namespace R440O.R440OForms.A403_1
                         ? "-"
                         : Convert.ToString(number);
 
+            //Отображение на дисплее
+            bool minus = false;
+            if (A403_1Parameters.Значение != "") 
+                minus = A403_1Parameters.Значение[0] == '-';
+            string displayString = (minus)
+                ? A403_1Parameters.Значение.Remove(0, 1)
+                : A403_1Parameters.Значение;
+
+            //if (displayString.Length >= 6 && button.Text != "-") displayString = displayString.Remove(0, 1);
+            if (displayString.Length >= 6 && button.Text != "-") return;
+
+            if (button.Text == "-")
+            {
+                if (minus)
+                {
+                    A403M_1Дисплей.Text = FormatString(displayString);
+                    A403_1Parameters.Значение = displayString;
+                }
+                else
+                {
+                    A403M_1Дисплей.Text = "*  " + FormatString(displayString);
+                    A403_1Parameters.Значение = "-" + displayString;
+                }
+            }
+            else
+            {
+                displayString += number;
+                if (minus)
+                {
+                    A403M_1Дисплей.Text = "*  " + FormatString(displayString);
+                    A403_1Parameters.Значение = "-" + displayString;
+                }
+                else
+                {
+                    A403M_1Дисплей.Text = FormatString(displayString);
+                    A403_1Parameters.Значение = displayString;
+                }
+            }
         }
         #endregion
 
@@ -140,7 +178,17 @@ namespace R440O.R440OForms.A403_1
             foreach (Control item in A403_1Panel.Controls)
             {
                 if (item.Name.Contains("КнопкаПараметры") && !item.Name.Contains("Сброс"))
+                {
+                    //И запоминаем значения с табло
+                    if (item.Visible == false)
+                    {
+                        A403_1Parameters.ДисплейЗначения[(A403_1Parameters.ТумблерГруппа) ? 0 : 1,
+                            int.Parse(item.Name[15].ToString())] = A403_1Parameters.Значение;
+                        A403_1Parameters.Значение = "";
+                    }
+
                     item.Visible = true;
+                }
             }
 
         }
@@ -246,9 +294,34 @@ namespace R440O.R440OForms.A403_1
                 if (item.Name.Contains("КнопкаПараметры") && !item.Name.Contains("Сброс"))
                     item.Visible = !(A403_1Parameters.КнопкиПараметры[(int)Char.GetNumericValue(item.Name[15])]);
             }
+
         }
         #endregion
 
-
+        /// <summary>
+        /// функция форматирования для табло
+        /// </summary>
+        private string FormatString(string inputStr)
+        {
+            switch (inputStr.Length)
+            {
+                case 1: 
+                    return ("_  _  _  _  _  " + inputStr);
+                case 2: 
+                    return ("_  _  _  _  " + inputStr[0] + "  " + inputStr[1]);
+                case 3:
+                    return ("_  _  _  " + inputStr[0] + "  " + inputStr[1] + "  " + inputStr[2]);
+                case 4:
+                    return ("_  _  " + inputStr[0] + "  " + inputStr[1] + "  " + inputStr[2] + "  " + inputStr[3]);
+                case 5:
+                    return ("_  " + inputStr[0] + "  " + inputStr[1] + "  " + inputStr[2] +
+                        "  " + inputStr[3] + "  " + inputStr[4] );
+                case 6:
+                    return (inputStr[0] + "  " + inputStr[1] + "  " + inputStr[2] + "  " + 
+                        inputStr[3] + "  " + inputStr[4] + "  " + inputStr[5]);
+            } 
+            return "";
+        }
+        
     }
 }

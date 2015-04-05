@@ -186,18 +186,18 @@ namespace R440O.R440OForms.A306
             var button = sender as Button;
             if (button.Name.Length >= 9)
             {
-                char numberOfButton = button.Name[9];
+                int numberOfButton = int.Parse(Convert.ToString(button.Name[9])); ;
                 foreach (Control item in A306Panel.Controls)
                 {
                     if (item.Name.Contains("A306Выход" + numberOfButton))
                     {
-                        A306Parameters.A306Выходы[numberOfButton - 49] = !A306Parameters.A306Выходы[numberOfButton - 49];
+                        A306Parameters.A306Выходы[numberOfButton] = !A306Parameters.A306Выходы[numberOfButton];
 
-                        if (A306Parameters.A306Выходы[numberOfButton - 49])
+                        if (A306Parameters.A306Выходы[numberOfButton])
                         {
                             button.BackgroundImage = ControlElementImages.A306CabelOutput;
-                            Выход = numberOfButton - 48;
-                            button.Text = Convert.ToString(numberOfButton - 48);
+                            Выход = numberOfButton;
+                            button.Text = Convert.ToString(numberOfButton);
                         }
                         else
                         {
@@ -205,45 +205,7 @@ namespace R440O.R440OForms.A306
                             Выход = 0;
                             button.Text = "";
 
-                            for (int i = 0; i < A306Parameters.A306ВыходыКаналов.Length; i++)
-                            {
-                                if (A306Parameters.A306ВыходыКаналов[i] == numberOfButton - 48)
-                                {
-                                    A306Parameters.A306ВыходыКаналов[i] = 0;
-                                    A306Panel.Refresh();
-                                    RefreshCabels();
-
-                                    foreach (Control item3 in A306Panel.Controls)
-                                    {
-                                        string s=Convert.ToString(i+1);
-                                        if (i < 10) s = "0" + (i+1);
-                                        if (item3.Name.Contains("A306ВыходКаналов" + s))
-                                        {
-                                            item3.BackgroundImage = null;
-                                            item3.Text = "";
-                                        }
-                                    }
-                                }
-                            }
-
-                            for (int i = 0; i < A306Parameters.A306ВыходыNO.Length; i++)
-                            {
-                                if (A306Parameters.A306ВыходыNO[i] == numberOfButton - 48)
-                                {
-                                    A306Parameters.A306ВыходыNO[i] = 0;
-                                    A306Panel.Refresh();
-                                    RefreshCabels();
-
-                                    foreach (Control item3 in A306Panel.Controls)
-                                    {
-                                        if (item3.Name.Contains("A306ВыходNO" + (i + 1)))
-                                        {
-                                            item3.BackgroundImage = null;
-                                            item3.Text = "";
-                                        }
-                                    }
-                                }
-                            }
+                            disposeCabels(numberOfButton);
                         }
                     }
                 }
@@ -255,8 +217,7 @@ namespace R440O.R440OForms.A306
             var button = sender as Button;
             if (button.Name.Length >= 11)
             {
-                int numberOfButton =
-                    int.Parse(Convert.ToString(button.Name[11]));
+                int numberOfButton = int.Parse(Convert.ToString(button.Name[11]));
 
                 foreach (Control item in A306Panel.Controls)
                 {
@@ -308,6 +269,7 @@ namespace R440O.R440OForms.A306
                 A306ВходNO_1.BackgroundImage = null;
                 Выход = 0;
                 A306ВходNO_1.Text = "";
+                disposeCabels(11);
             }
         }
 
@@ -325,6 +287,51 @@ namespace R440O.R440OForms.A306
                 A306ВходNO_2.BackgroundImage = null; 
                 Выход = 0;
                 A306ВходNO_2.Text = "";
+
+                disposeCabels(12);
+            }
+        }
+
+        private void disposeCabels(int buttonNumber)
+        {
+            for (int i = 0; i < A306Parameters.A306ВыходыКаналов.Length; i++)
+            {
+                if (A306Parameters.A306ВыходыКаналов[i] == buttonNumber)
+                {
+                    A306Parameters.A306ВыходыКаналов[i] = 0;
+                    A306Panel.Refresh();
+                    RefreshCabels();
+
+                    foreach (Control item3 in A306Panel.Controls)
+                    {
+                        string s = Convert.ToString(i + 1);
+                        if (i < 10) s = "0" + (i + 1);
+                        if (item3.Name.Contains("A306ВыходКаналов" + s))
+                        {
+                            item3.BackgroundImage = null;
+                            item3.Text = "";
+                        }
+                    }
+                }
+            }
+
+            for (int i = 0; i < A306Parameters.A306ВыходыNO.Length; i++)
+            {
+                if (A306Parameters.A306ВыходыNO[i] == buttonNumber)
+                {
+                    A306Parameters.A306ВыходыNO[i] = 0;
+                    A306Panel.Refresh();
+                    RefreshCabels();
+
+                    foreach (Control item3 in A306Panel.Controls)
+                    {
+                        if (item3.Name.Contains("A306ВыходNO" + (i + 1)))
+                        {
+                            item3.BackgroundImage = null;
+                            item3.Text = "";
+                        }
+                    }
+                }
             }
         }
     }

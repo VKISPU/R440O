@@ -7,12 +7,12 @@
 namespace R440O.R440OForms.C300M_1
 {
     using System.Windows.Forms;
-    using Parameters;
     using ThirdParty;
     using System.Reflection;
+    using System;
 
     /// <summary>
-    /// Форма блока С300М-1
+    /// Форма блока С300М_1
     /// </summary>
     public partial class C300M_1Form : Form
     {
@@ -28,623 +28,195 @@ namespace R440O.R440OForms.C300M_1
         }
 
         #region Кнопки ВИД РАБОТЫ
-        private void Ц300М_1КнопкаВидРаботы0d025_Click(object sender, System.EventArgs e)
+        /// <summary>
+        /// Универсальный метод обработки нажатий на кнопки вида работы
+        /// </summary>
+        private void КнопкаВидРаботы_Click(object sender, System.EventArgs e)
         {
-            this.Ц300М_1КнопкаВидРаботы0d025.Visible = false;
-            C300M_1Parameters.Ц300М_1КнопкаВидРаботы0d025 = "true";
+            var button = sender as Button;
+            //Названия всех кнопок отличаются лишь на один 15 символ
+            int number = (int)Char.GetNumericValue(button.Name[15]);
 
-            foreach (Control control in C300M_1Panel.Controls)
-            {
-                if (control.Name.Contains("КнопкаВидРаботы") && control.Name != "Ц300М_1КнопкаВидРаботы0d025")
-                {
-                    control.Visible = true;
-                }
-            }
+            //Обнуляем все параметры и выставляем true у той кнопки которую нажали
+            for (int i = 0; i < C300M_1Parameters.КнопкиВидРаботы.Length; i++)
+                C300M_1Parameters.КнопкиВидРаботы[i] = false;
+            C300M_1Parameters.КнопкиВидРаботы[number] = true;
 
-            PropertyInfo[] propertyList = typeof(C300M_1Parameters).GetProperties();
-            foreach (PropertyInfo property in propertyList)
+            //Идём по всем кнопкам параметров, чтобы выполнить анимацию
+            foreach (Control item in C300M_1Panel.Controls)
             {
-                if (property.Name.Contains("КнопкаВидРаботы") && property.Name != "Ц300М_1КнопкаВидРаботы0d025")
-                {
-                    property.SetValue(null, "false");
-                }
+                if (item.Name.Contains("КнопкаВидРаботы") && !item.Name.Contains("Сброс"))
+                    item.Visible = !(C300M_1Parameters.КнопкиВидРаботы[(int)Char.GetNumericValue(item.Name[15])]);
             }
         }
 
-        private void Ц300М_1КнопкаВидРаботы0d05_Click(object sender, System.EventArgs e)
+        private void КнопкаВидРаботыСброс_MouseDown(object sender, MouseEventArgs e)
         {
-            this.Ц300М_1КнопкаВидРаботы0d05.Visible = false;
-            C300M_1Parameters.Ц300М_1КнопкаВидРаботы0d05 = "true";
 
-            foreach (Control control in C300M_1Panel.Controls)
-            {
-                if (control.Name.Contains("КнопкаВидРаботы") && control.Name != "Ц300М_1КнопкаВидРаботы0d05")
-                {
-                    control.Visible = true;
-                }
-            }
+            this.КнопкаВидРаботыСброс.BackgroundImage = null;
+            this.КнопкаВидРаботыСброс.Text = "";
 
-            PropertyInfo[] propertyList = typeof(C300M_1Parameters).GetProperties();
-            foreach (PropertyInfo property in propertyList)
+            C300M_1Parameters.КнопкаВидРаботыСброс = true;
+
+            //Сброс параметров и отжатие всех кнопок
+            for (int i = 0; i < C300M_1Parameters.КнопкиВидРаботы.Length; i++)
+                C300M_1Parameters.КнопкиВидРаботы[i] = false;
+
+            foreach (Control item in C300M_1Panel.Controls)
             {
-                if (property.Name.Contains("КнопкаВидРаботы") && property.Name != "Ц300М_1КнопкаВидРаботы0d05")
-                {
-                    property.SetValue(null, "false");
-                }
+                if (item.Name.Contains("КнопкаВидРаботы") && !item.Name.Contains("Сброс"))
+                    item.Visible = true;
             }
         }
 
-        private void Ц300М_1КнопкаВидРаботы0d1_Click(object sender, System.EventArgs e)
+        private void КнопкаВидРаботыСброс_MouseUp(object sender, MouseEventArgs e)
         {
-            this.Ц300М_1КнопкаВидРаботы0d1.Visible = false;
-            C300M_1Parameters.Ц300М_1КнопкаВидРаботы0d1 = "true";
-
-            foreach (Control control in C300M_1Panel.Controls)
-            {
-                if (control.Name.Contains("КнопкаВидРаботы") && control.Name != "Ц300М_1КнопкаВидРаботы0d1")
-                {
-                    control.Visible = true;
-                }
-            }
-
-            PropertyInfo[] propertyList = typeof(C300M_1Parameters).GetProperties();
-            foreach (PropertyInfo property in propertyList)
-            {
-                if (property.Name.Contains("КнопкаВидРаботы") && property.Name != "Ц300М_1КнопкаВидРаботы0d1")
-                {
-                    property.SetValue(null, "false");
-                }
-            }
-        }
-
-        private void Ц300М_1КнопкаВидРаботы1d2_Click(object sender, System.EventArgs e)
-        {
-            this.Ц300М_1КнопкаВидРаботы1d2.Visible = false;
-            C300M_1Parameters.Ц300М_1КнопкаВидРаботы1d2 = "true";
-
-            foreach (Control control in C300M_1Panel.Controls)
-            {
-                if (control.Name.Contains("КнопкаВидРаботы") && control.Name != "Ц300М_1КнопкаВидРаботы1d2")
-                {
-                    control.Visible = true;
-                }
-            }
-
-            PropertyInfo[] propertyList = typeof(C300M_1Parameters).GetProperties();
-            foreach (PropertyInfo property in propertyList)
-            {
-                if (property.Name.Contains("КнопкаВидРаботы") && property.Name != "Ц300М_1КнопкаВидРаботы1d2")
-                {
-                    property.SetValue(null, "false");
-                }
-            }
-        }
-
-        private void Ц300М_1КнопкаВидРаботы2d4_Click(object sender, System.EventArgs e)
-        {
-            this.Ц300М_1КнопкаВидРаботы2d4.Visible = false;
-            C300M_1Parameters.Ц300М_1КнопкаВидРаботы2d4 = "true";
-
-            foreach (Control control in C300M_1Panel.Controls)
-            {
-                if (control.Name.Contains("КнопкаВидРаботы") && control.Name != "Ц300М_1КнопкаВидРаботы2d4")
-                {
-                    control.Visible = true;
-                }
-            }
-
-            PropertyInfo[] propertyList = typeof(C300M_1Parameters).GetProperties();
-            foreach (PropertyInfo property in propertyList)
-            {
-                if (property.Name.Contains("КнопкаВидРаботы") && property.Name != "Ц300М_1КнопкаВидРаботы2d4")
-                {
-                    property.SetValue(null, "false");
-                }
-            }
-        }
-
-        private void Ц300М_1КнопкаВидРаботы4d8_Click(object sender, System.EventArgs e)
-        {
-            this.Ц300М_1КнопкаВидРаботы4d8.Visible = false;
-            C300M_1Parameters.Ц300М_1КнопкаВидРаботы4d8 = "true";
-
-            foreach (Control control in C300M_1Panel.Controls)
-            {
-                if (control.Name.Contains("КнопкаВидРаботы") && control.Name != "Ц300М_1КнопкаВидРаботы4d8")
-                {
-                    control.Visible = true;
-                }
-            }
-
-            PropertyInfo[] propertyList = typeof(C300M_1Parameters).GetProperties();
-            foreach (PropertyInfo property in propertyList)
-            {
-                if (property.Name.Contains("КнопкаВидРаботы") && property.Name != "Ц300М_1КнопкаВидРаботы4d8")
-                {
-                    property.SetValue(null, "false");
-                }
-            }
-        }
-
-        private void Ц300М_1КнопкаВидРаботы48_Click(object sender, System.EventArgs e)
-        {
-            this.Ц300М_1КнопкаВидРаботы48.Visible = false;
-            C300M_1Parameters.Ц300М_1КнопкаВидРаботы48 = "true";
-
-            foreach (Control control in C300M_1Panel.Controls)
-            {
-                if (control.Name.Contains("КнопкаВидРаботы") && control.Name != "Ц300М_1КнопкаВидРаботы48")
-                {
-                    control.Visible = true;
-                }
-            }
-
-            PropertyInfo[] propertyList = typeof(C300M_1Parameters).GetProperties();
-            foreach (PropertyInfo property in propertyList)
-            {
-                if (property.Name.Contains("КнопкаВидРаботы") && property.Name != "Ц300М_1КнопкаВидРаботы48")
-                {
-                    property.SetValue(null, "false");
-                }
-            }
-        }
-
-        private void Ц300М_1КнопкаВидРаботы96144_Click(object sender, System.EventArgs e)
-        {
-            this.Ц300М_1КнопкаВидРаботы96144.Visible = false;
-            C300M_1Parameters.Ц300М_1КнопкаВидРаботы96144 = "true";
-
-            foreach (Control control in C300M_1Panel.Controls)
-            {
-                if (control.Name.Contains("КнопкаВидРаботы") && control.Name != "Ц300М_1КнопкаВидРаботы96144")
-                {
-                    control.Visible = true;
-                }
-            }
-
-            PropertyInfo[] propertyList = typeof(C300M_1Parameters).GetProperties();
-            foreach (PropertyInfo property in propertyList)
-            {
-                if (property.Name.Contains("КнопкаВидРаботы") && property.Name != "Ц300М_1КнопкаВидРаботы96144")
-                {
-                    property.SetValue(null, "false");
-                }
-            }
-        }
-
-        private void Ц300М_1КнопкаВидРаботы240_Click(object sender, System.EventArgs e)
-        {
-            this.Ц300М_1КнопкаВидРаботы240.Visible = false;
-            C300M_1Parameters.Ц300М_1КнопкаВидРаботы240 = "true";
-
-            foreach (Control control in C300M_1Panel.Controls)
-            {
-                if (control.Name.Contains("КнопкаВидРаботы") && control.Name != "Ц300М_1КнопкаВидРаботы240")
-                {
-                    control.Visible = true;
-                }
-            }
-
-            PropertyInfo[] propertyList = typeof(C300M_1Parameters).GetProperties();
-            foreach (PropertyInfo property in propertyList)
-            {
-                if (property.Name.Contains("КнопкаВидРаботы") && property.Name != "Ц300М_1КнопкаВидРаботы240")
-                {
-                    property.SetValue(null, "false");
-                }
-            }
-        }
-
-        private void Ц300М_1КнопкаВидРаботы480_Click(object sender, System.EventArgs e)
-        {
-            this.Ц300М_1КнопкаВидРаботы480.Visible = false;
-            C300M_1Parameters.Ц300М_1КнопкаВидРаботы480 = "true";
-
-            foreach (Control control in C300M_1Panel.Controls)
-            {
-                if (control.Name.Contains("КнопкаВидРаботы") && control.Name != "Ц300М_1КнопкаВидРаботы480")
-                {
-                    control.Visible = true;
-                }
-            }
-
-            PropertyInfo[] propertyList = typeof(C300M_1Parameters).GetProperties();
-            foreach (PropertyInfo property in propertyList)
-            {
-                if (property.Name.Contains("КнопкаВидРаботы") && property.Name != "Ц300М_1КнопкаВидРаботы480")
-                {
-                    property.SetValue(null, "false");
-                }
-            }
-        }
-
-        private void Ц300М_1КнопкаВидРаботыСброс_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.Ц300М_1КнопкаВидРаботыСброс.BackgroundImage = null;
-            this.Ц300М_1КнопкаВидРаботыСброс.Text = "";
-            C300M_1Parameters.Ц300М_1КнопкаВидРаботыСброс = "true";
-
-            foreach (Control control in C300M_1Panel.Controls)
-            {
-                if (control.Name.Contains("КнопкаВидРаботы"))
-                {
-                    control.Visible = true;
-                }
-            }
-
-            PropertyInfo[] propertyList = typeof(C300M_1Parameters).GetProperties();
-            foreach (PropertyInfo property in propertyList)
-            {
-                if (property.Name.Contains("КнопкаВидРаботы"))
-                {
-                    property.SetValue(null, "false");
-                }
-            }
-        }
-
-        private void Ц300М_1КнопкаВидРаботыСброс_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.Ц300М_1КнопкаВидРаботыСброс.BackgroundImage = ControlElementImages.buttonSquareWhite;
-            this.Ц300М_1КнопкаВидРаботыСброс.Text = "Сброс";
-            C300M_1Parameters.Ц300М_1КнопкаВидРаботыСброс = "false";
+            this.КнопкаВидРаботыСброс.BackgroundImage = ControlElementImages.buttonSquareWhite;
+            this.КнопкаВидРаботыСброс.Text = "СБРОС";
+            C300M_1Parameters.КнопкаВидРаботыСброс = false;
         }
         #endregion
 
         #region Кнопки КОНТРОЛЬ РЕЖИМА
-        private void Ц300М_1КнопкаКонтрольРежимаУрСигн_Click(object sender, System.EventArgs e)
+
+        private void КнопкаКонтрольРежима_Click(object sender, System.EventArgs e)
         {
-            this.Ц300М_1КнопкаКонтрольРежимаУрСигн.Visible = false;
-            C300M_1Parameters.Ц300М_1КнопкаКонтрольРежимаУрСигн = "true";
+            var button = sender as Button;
+            //Названия всех кнопок отличаются лишь на один 20 символ
+            int number = (int)Char.GetNumericValue(button.Name[20]);
 
-            foreach (Control control in C300M_1Panel.Controls)
-            {
-                if (control.Name.Contains("КнопкаКонтрольРежима") && control.Name != "Ц300М_1КнопкаКонтрольРежимаУрСигн")
-                {
-                    control.Visible = true;
-                }
-            }
+            //Обнуляем все параметры и выставляем true у той кнопки которую нажали
+            for (int i = 0; i < C300M_1Parameters.КнопкиКонтрольРежима.Length; i++)
+                C300M_1Parameters.КнопкиКонтрольРежима[i] = false;
+            C300M_1Parameters.КнопкиКонтрольРежима[number] = true;
 
-            PropertyInfo[] propertyList = typeof(C300M_1Parameters).GetProperties();
-            foreach (PropertyInfo property in propertyList)
+            //Идём по всем кнопкам параметров, чтобы выполнить анимацию
+            foreach (Control item in C300M_1Panel.Controls)
             {
-                if (property.Name.Contains("КнопкаКонтрольРежима") && property.Name != "Ц300М_1КнопкаКонтрольРежимаУрСигн")
-                {
-                    property.SetValue(null, "false");
-                }
+                if (item.Name.Contains("КнопкаКонтрольРежима") && !item.Name.Contains("Минус27"))
+                    item.Visible = !(C300M_1Parameters.КнопкиКонтрольРежима[(int)Char.GetNumericValue(item.Name[20])]);
             }
         }
 
-        private void Ц300М_1КнопкаКонтрольРежимаУрШума_Click(object sender, System.EventArgs e)
+        private void КнопкаКонтрольРежимаМинус27_MouseDown(object sender, MouseEventArgs e)
         {
-            this.Ц300М_1КнопкаКонтрольРежимаУрШума.Visible = false;
-            C300M_1Parameters.Ц300М_1КнопкаКонтрольРежимаУрШума = "true";
+            КнопкаКонтрольРежимаМинус27.BackgroundImage = null;
+            КнопкаКонтрольРежимаМинус27.Text = "";
+            C300M_1Parameters.КнопкаКонтрольРежимаМинус27 = true;
 
-            foreach (Control control in C300M_1Panel.Controls)
-            {
-                if (control.Name.Contains("КнопкаКонтрольРежима") && control.Name != "Ц300М_1КнопкаКонтрольРежимаУрШума")
-                {
-                    control.Visible = true;
-                }
-            }
+            //Сброс параметров и отжатие всех кнопок
+            for (int i = 0; i < C300M_1Parameters.КнопкиКонтрольРежима.Length; i++)
+                C300M_1Parameters.КнопкиКонтрольРежима[i] = false;
 
-            PropertyInfo[] propertyList = typeof(C300M_1Parameters).GetProperties();
-            foreach (PropertyInfo property in propertyList)
+            foreach (Control item in C300M_1Panel.Controls)
             {
-                if (property.Name.Contains("КнопкаКонтрольРежима") && property.Name != "Ц300М_1КнопкаКонтрольРежимаУрШума")
-                {
-                    property.SetValue(null, "false");
-                }
+                if (item.Name.Contains("КнопкаКонтрольРежима") && !item.Name.Contains("Минус27"))
+                    item.Visible = true;
             }
         }
 
-        private void Ц300М_1КнопкаКонтрольРежима0АПЧ_Click(object sender, System.EventArgs e)
+        private void КнопкаКонтрольРежимаМинус27_MouseUp(object sender, MouseEventArgs e)
         {
-            this.Ц300М_1КнопкаКонтрольРежима0АПЧ.Visible = false;
-            C300M_1Parameters.Ц300М_1КнопкаКонтрольРежима0АПЧ = "true";
-
-            foreach (Control control in C300M_1Panel.Controls)
-            {
-                if (control.Name.Contains("КнопкаКонтрольРежима") && control.Name != "Ц300М_1КнопкаКонтрольРежима0АПЧ")
-                {
-                    control.Visible = true;
-                }
-            }
-
-            PropertyInfo[] propertyList = typeof(C300M_1Parameters).GetProperties();
-            foreach (PropertyInfo property in propertyList)
-            {
-                if (property.Name.Contains("КнопкаКонтрольРежима") && property.Name != "Ц300М_1КнопкаКонтрольРежима0АПЧ")
-                {
-                    property.SetValue(null, "false");
-                }
-            }
-        }
-
-        private void Ц300М_1КнопкаКонтрольРежимаПоиск_Click(object sender, System.EventArgs e)
-        {
-            this.Ц300М_1КнопкаКонтрольРежимаПоиск.Visible = false;
-            C300M_1Parameters.Ц300М_1КнопкаКонтрольРежимаПоиск = "true";
-
-            foreach (Control control in C300M_1Panel.Controls)
-            {
-                if (control.Name.Contains("КнопкаКонтрольРежима") && control.Name != "Ц300М_1КнопкаКонтрольРежимаПоиск")
-                {
-                    control.Visible = true;
-                }
-            }
-
-            PropertyInfo[] propertyList = typeof(C300M_1Parameters).GetProperties();
-            foreach (PropertyInfo property in propertyList)
-            {
-                if (property.Name.Contains("КнопкаКонтрольРежима") && property.Name != "Ц300М_1КнопкаКонтрольРежимаПоиск")
-                {
-                    property.SetValue(null, "false");
-                }
-            }
-        }
-
-        private void Ц300М_1КнопкаКонтрольРежимаГЕТ_2_Click(object sender, System.EventArgs e)
-        {
-            this.Ц300М_1КнопкаКонтрольРежимаГЕТ_2.Visible = false;
-            C300M_1Parameters.Ц300М_1КнопкаКонтрольРежимаГЕТ_2 = "true";
-
-            foreach (Control control in C300M_1Panel.Controls)
-            {
-                if (control.Name.Contains("КнопкаКонтрольРежима") && control.Name != "Ц300М_1КнопкаКонтрольРежимаГЕТ_2")
-                {
-                    control.Visible = true;
-                }
-            }
-
-            PropertyInfo[] propertyList = typeof(C300M_1Parameters).GetProperties();
-            foreach (PropertyInfo property in propertyList)
-            {
-                if (property.Name.Contains("КнопкаКонтрольРежима") && property.Name != "Ц300М_1КнопкаКонтрольРежимаГЕТ_2")
-                {
-                    property.SetValue(null, "false");
-                }
-            }
-        }
-
-        private void Ц300М_1КнопкаКонтрольРежимаПлюс5_Click(object sender, System.EventArgs e)
-        {
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс5.Visible = false;
-            C300M_1Parameters.Ц300М_1КнопкаКонтрольРежимаПлюс5 = "true";
-
-            foreach (Control control in C300M_1Panel.Controls)
-            {
-                if (control.Name.Contains("КнопкаКонтрольРежима") && control.Name != "Ц300М_1КнопкаКонтрольРежимаПлюс5")
-                {
-                    control.Visible = true;
-                }
-            }
-
-            PropertyInfo[] propertyList = typeof(C300M_1Parameters).GetProperties();
-            foreach (PropertyInfo property in propertyList)
-            {
-                if (property.Name.Contains("КнопкаКонтрольРежима") && property.Name != "Ц300М_1КнопкаКонтрольРежимаПлюс5")
-                {
-                    property.SetValue(null, "false");
-                }
-            }
-        }
-
-        private void Ц300М_1КнопкаКонтрольРежимаПлюс6d3_Click(object sender, System.EventArgs e)
-        {
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс6d3.Visible = false;
-            C300M_1Parameters.Ц300М_1КнопкаКонтрольРежимаПлюс6d3 = "true";
-
-            foreach (Control control in C300M_1Panel.Controls)
-            {
-                if (control.Name.Contains("КнопкаКонтрольРежима") && control.Name != "Ц300М_1КнопкаКонтрольРежимаПлюс6d3")
-                {
-                    control.Visible = true;
-                }
-            }
-
-            PropertyInfo[] propertyList = typeof(C300M_1Parameters).GetProperties();
-            foreach (PropertyInfo property in propertyList)
-            {
-                if (property.Name.Contains("КнопкаКонтрольРежима") && property.Name != "Ц300М_1КнопкаКонтрольРежимаПлюс6d3")
-                {
-                    property.SetValue(null, "false");
-                }
-            }
-        }
-
-        private void Ц300М_1КнопкаКонтрольРежимаПлюс27_Click(object sender, System.EventArgs e)
-        {
-            this.Ц300М_1КнопкаКонтрольРежимаПлюс27.Visible = false;
-            C300M_1Parameters.Ц300М_1КнопкаКонтрольРежимаПлюс27 = "true";
-
-            foreach (Control control in C300M_1Panel.Controls)
-            {
-                if (control.Name.Contains("КнопкаКонтрольРежима") && control.Name != "Ц300М_1КнопкаКонтрольРежимаПлюс27")
-                {
-                    control.Visible = true;
-                }
-            }
-
-            PropertyInfo[] propertyList = typeof(C300M_1Parameters).GetProperties();
-            foreach (PropertyInfo property in propertyList)
-            {
-                if (property.Name.Contains("КнопкаКонтрольРежима") && property.Name != "Ц300М_1КнопкаКонтрольРежимаПлюс27")
-                {
-                    property.SetValue(null, "false");
-                }
-            }
-        }
-
-        private void Ц300М_1КнопкаКонтрольРежимаМинус5_Click(object sender, System.EventArgs e)
-        {
-            this.Ц300М_1КнопкаКонтрольРежимаМинус5.Visible = false;
-            C300M_1Parameters.Ц300М_1КнопкаКонтрольРежимаМинус5 = "true";
-
-            foreach (Control control in C300M_1Panel.Controls)
-            {
-                if (control.Name.Contains("КнопкаКонтрольРежима") && control.Name != "Ц300М_1КнопкаКонтрольРежимаМинус5")
-                {
-                    control.Visible = true;
-                }
-            }
-
-            PropertyInfo[] propertyList = typeof(C300M_1Parameters).GetProperties();
-            foreach (PropertyInfo property in propertyList)
-            {
-                if (property.Name.Contains("КнопкаКонтрольРежима") && property.Name != "Ц300М_1КнопкаКонтрольРежимаМинус5")
-                {
-                    property.SetValue(null, "false");
-                }
-            }
-        }
-
-        private void Ц300М_1КнопкаКонтрольРежимаМинус12d8_Click(object sender, System.EventArgs e)
-        {
-            this.Ц300М_1КнопкаКонтрольРежимаМинус12d8.Visible = false;
-            C300M_1Parameters.Ц300М_1КнопкаКонтрольРежимаМинус12d8 = "true";
-
-            foreach (Control control in C300M_1Panel.Controls)
-            {
-                if (control.Name.Contains("КнопкаКонтрольРежима") && control.Name != "Ц300М_1КнопкаКонтрольРежимаМинус12d8")
-                {
-                    control.Visible = true;
-                }
-            }
-
-            PropertyInfo[] propertyList = typeof(C300M_1Parameters).GetProperties();
-            foreach (PropertyInfo property in propertyList)
-            {
-                if (property.Name.Contains("КнопкаКонтрольРежима") && property.Name != "Ц300М_1КнопкаКонтрольРежимаМинус12d8")
-                {
-                    property.SetValue(null, "false");
-                }
-            }
-        }
-
-        private void Ц300М_1КнопкаКонтрольРежимаМинус27_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.Ц300М_1КнопкаКонтрольРежимаМинус27.BackgroundImage = null;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус27.Text = "";
-            C300M_1Parameters.Ц300М_1КнопкаКонтрольРежимаМинус27 = "true";
-
-            foreach (Control control in C300M_1Panel.Controls)
-            {
-                if (control.Name.Contains("КнопкаКонтрольРежима") && control.Name != "Ц300М_1КнопкаКонтрольРежимаМинус27")
-                {
-                    control.Visible = true;
-                }
-            }
-
-            PropertyInfo[] propertyList = typeof(C300M_1Parameters).GetProperties();
-            foreach (PropertyInfo property in propertyList)
-            {
-                if (property.Name.Contains("КнопкаКонтрольРежима") && property.Name != "Ц300М_1КнопкаКонтрольРежимаМинус27")
-                {
-                    property.SetValue(null, "false");
-                }
-            }
-        }
-
-        private void Ц300М_1КнопкаКонтрольРежимаМинус27_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.Ц300М_1КнопкаКонтрольРежимаМинус27.BackgroundImage = ControlElementImages.buttonSquareWhite;
-            this.Ц300М_1КнопкаКонтрольРежимаМинус27.Text = "-27";
-            C300M_1Parameters.Ц300М_1КнопкаКонтрольРежимаМинус27 = "false";
+            КнопкаКонтрольРежимаМинус27.BackgroundImage = ControlElementImages.buttonSquareWhite;
+            КнопкаКонтрольРежимаМинус27.Text = "-27";
+            C300M_1Parameters.КнопкаКонтрольРежимаМинус27 = false;
         }
         #endregion
 
         #region Кнопка Индикация волны
-        private void Ц300М_1КнопкаИндикацияВолны_MouseDown(object sender, MouseEventArgs e)
+        private void КнопкаИндикацияВолны_MouseDown(object sender, MouseEventArgs e)
         {
-            this.Ц300М_1КнопкаИндикацияВолны.BackgroundImage = null;
-            C300M_1Parameters.Ц300М_1КнопкаИндикацияВолны = "true";
-            Ц300М_1ИндикаторВолна1000.Text = System.Convert.ToString(C300M_1Parameters.Ц300М_1ПереключательВолна1000);
-            Ц300М_1ИндикаторВолна1000.Visible = true;
-            Ц300М_1ИндикаторВолна100.Text = System.Convert.ToString(C300M_1Parameters.Ц300М_1ПереключательВолна100);
-            Ц300М_1ИндикаторВолна100.Visible = true;
-            Ц300М_1ИндикаторВолна10.Text = System.Convert.ToString(C300M_1Parameters.Ц300М_1ПереключательВолна10);
-            Ц300М_1ИндикаторВолна10.Visible = true;
-            Ц300М_1ИндикаторВолна1.Text = System.Convert.ToString(C300M_1Parameters.Ц300М_1ПереключательВолна1);
-            Ц300М_1ИндикаторВолна1.Visible = true;
+            this.КнопкаИндикацияВолны.BackgroundImage = null;
+            ИндикаторВолна1000.Text = (C300M_1Parameters.ПереключательВолна1000 <= 4)
+            ? System.Convert.ToString(C300M_1Parameters.ПереключательВолна1000)
+            : "4";
+            ИндикаторВолна1000.Visible = true;
+            ИндикаторВолна100.Text = System.Convert.ToString(C300M_1Parameters.ПереключательВолна100);
+            ИндикаторВолна100.Visible = true;
+            ИндикаторВолна10.Text = System.Convert.ToString(C300M_1Parameters.ПереключательВолна10);
+            ИндикаторВолна10.Visible = true;
+            ИндикаторВолна1.Text = System.Convert.ToString(C300M_1Parameters.ПереключательВолна1);
+            ИндикаторВолна1.Visible = true;
+            C300M_1Parameters.КнопкаИндикацияВолны = true;
         }
 
-        private void Ц300М_1КнопкаИндикацияВолны_MouseUp(object sender, MouseEventArgs e)
+        private void КнопкаИндикацияВолны_MouseUp(object sender, MouseEventArgs e)
         {
-            this.Ц300М_1КнопкаИндикацияВолны.BackgroundImage = ControlElementImages.buttonSquareWhite;
-            C300M_1Parameters.Ц300М_1КнопкаИндикацияВолны = "false";
-            Ц300М_1ИндикаторВолна1000.Visible = false;
-            Ц300М_1ИндикаторВолна100.Visible = false;
-            Ц300М_1ИндикаторВолна10.Visible = false;
-            Ц300М_1ИндикаторВолна1.Visible = false;
+            this.КнопкаИндикацияВолны.BackgroundImage = ControlElementImages.buttonSquareWhite;
+            ИндикаторВолна1000.Visible = false;
+            ИндикаторВолна100.Visible = false;
+            ИндикаторВолна10.Visible = false;
+            ИндикаторВолна1.Visible = false;
+            C300M_1Parameters.КнопкаИндикацияВолны = false;
         }
         #endregion
 
         #region Переключатели Волна
-        private void Ц300М_1ПереключательВолна1000_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательВолна1000_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                C300M_1Parameters.Ц300М_1ПереключательВолна1000 += 1;
+                C300M_1Parameters.ПереключательВолна1000 += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                C300M_1Parameters.Ц300М_1ПереключательВолна1000 -= 1;
+                C300M_1Parameters.ПереключательВолна1000 -= 1;
             }
 
-            var angle = C300M_1Parameters.Ц300М_1ПереключательВолна1000 * 30 - 135;
-            Ц300М_1ПереключательВолна1000.BackgroundImage =
+            var angle = C300M_1Parameters.ПереключательВолна1000 * 30 - 135;
+            ПереключательВолна1000.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
         }
 
-        private void Ц300М_1ПереключательВолна100_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательВолна100_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                C300M_1Parameters.Ц300М_1ПереключательВолна100 += 1;
+                C300M_1Parameters.ПереключательВолна100 += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                C300M_1Parameters.Ц300М_1ПереключательВолна100 -= 1;
+                C300M_1Parameters.ПереключательВолна100 -= 1;
             }
 
-            var angle = C300M_1Parameters.Ц300М_1ПереключательВолна100 * 30 - 135;
-            Ц300М_1ПереключательВолна100.BackgroundImage =
+            var angle = C300M_1Parameters.ПереключательВолна100 * 30 - 135;
+            ПереключательВолна100.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
         }
 
-        private void Ц300М_1ПереключательВолна10_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательВолна10_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                C300M_1Parameters.Ц300М_1ПереключательВолна10 += 1;
+                C300M_1Parameters.ПереключательВолна10 += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                C300M_1Parameters.Ц300М_1ПереключательВолна10 -= 1;
+                C300M_1Parameters.ПереключательВолна10 -= 1;
             }
 
-            var angle = C300M_1Parameters.Ц300М_1ПереключательВолна10 * 30 - 135;
-            Ц300М_1ПереключательВолна10.BackgroundImage =
+            var angle = C300M_1Parameters.ПереключательВолна10 * 30 - 135;
+            ПереключательВолна10.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
         }
 
-        private void Ц300М_1ПереключательВолна1_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательВолна1_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                C300M_1Parameters.Ц300М_1ПереключательВолна1 += 1;
+                C300M_1Parameters.ПереключательВолна1 += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                C300M_1Parameters.Ц300М_1ПереключательВолна1 -= 1;
+                C300M_1Parameters.ПереключательВолна1 -= 1;
             }
 
-            var angle = C300M_1Parameters.Ц300М_1ПереключательВолна1 * 30 - 135;
-            Ц300М_1ПереключательВолна1.BackgroundImage =
+            var angle = C300M_1Parameters.ПереключательВолна1 * 30 - 135;
+            ПереключательВолна1.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
         }
         #endregion
@@ -680,19 +252,14 @@ namespace R440O.R440OForms.C300M_1
         {
             foreach (Control item in C300M_1Panel.Controls)
             {
-                if (item.Name.Contains("Кнопка"))
-                {
-                    PropertyInfo[] fieldList = typeof(C300M_1Parameters).GetProperties();
-                    foreach (PropertyInfo property in fieldList)
-                    {
-                        if (item.Name == property.Name)
-                        {
-                            string value = System.Convert.ToString(property.GetValue(null));
-                            item.Visible = (value != "true") ? true : false;
-                            break;
-                        }
-                    }
-                }
+                if (item.Name.Contains("КнопкаВидРаботы") && !item.Name.Contains("Сброс"))
+                    item.Visible = !(C300M_1Parameters.КнопкиВидРаботы[(int)Char.GetNumericValue(item.Name[15])]);
+            }
+
+            foreach (Control item in C300M_1Panel.Controls)
+            {
+                if (item.Name.Contains("КнопкаКонтрольРежима") && !item.Name.Contains("Минус27"))
+                    item.Visible = !(C300M_1Parameters.КнопкиКонтрольРежима[(int)Char.GetNumericValue(item.Name[20])]);
             }
         }
 
@@ -701,213 +268,163 @@ namespace R440O.R440OForms.C300M_1
         /// </summary>
         private void InitializeTumblersPosition()
         {
-            this.Ц300М_1ТумблерВведениеЧТОФТ.BackgroundImage = C300M_1Parameters.Ц300М_1ТумблерВведениеЧТОФТ == "ЧТ"
+            ТумблерУправление.BackgroundImage = C300M_1Parameters.ТумблерУправление
+                ? ControlElementImages.tumblerType4Up
+                : ControlElementImages.tumblerType4Down;
+
+            ТумблерВведение.BackgroundImage = C300M_1Parameters.ТумблерВведение
                 ? ControlElementImages.tumblerType3Up
                 : ControlElementImages.tumblerType3Down;
 
-            this.Ц300М_1ТумблерПоискБлокировкаВклОткл.BackgroundImage = C300M_1Parameters.Ц300М_1ТумблерПоискБлокировкаВклОткл == "Вкл"
+            ТумблерБлокировка.BackgroundImage = C300M_1Parameters.ТумблерБлокировка
                 ? ControlElementImages.tumblerType3Up
                 : ControlElementImages.tumblerType3Down;
 
-            this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.BackgroundImage = C300M_1Parameters.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн == "Автоматич"
+            ТумблерВидВключения.BackgroundImage = C300M_1Parameters.ТумблерВидВключения
                 ? ControlElementImages.tumblerType3Up
                 : ControlElementImages.tumblerType3Down;
 
-            this.Ц300М_1ТумблерПоискС_АналСимметрОткл.BackgroundImage = C300M_1Parameters.Ц300М_1ТумблерПоискС_АналСимметрОткл == "Симметр"
+            ТумблерАнализСимметрии.BackgroundImage = C300M_1Parameters.ТумблерАнализСимметрии
                 ? ControlElementImages.tumblerType3Up
                 : ControlElementImages.tumblerType3Down;
 
-            this.Ц300М_1ТумблерАСЧОткл.BackgroundImage = C300M_1Parameters.Ц300М_1ТумблерАСЧОткл == "АСЧ"
+            ТумблерАСЧ.BackgroundImage = C300M_1Parameters.ТумблерАСЧ
                 ? ControlElementImages.tumblerType3Up
                 : ControlElementImages.tumblerType3Down;
 
-            this.Ц300М_1ТумблерАРУРРУ.BackgroundImage = C300M_1Parameters.Ц300М_1ТумблерАРУРРУ == "АРУ"
+            ТумблерРегулировкаУровня.BackgroundImage = C300M_1Parameters.ТумблерРегулировкаУровня
                 ? ControlElementImages.tumblerType3Up
                 : ControlElementImages.tumblerType3Down;
 
-            this.Ц300М_1ТумблерЧТОФТ.BackgroundImage = C300M_1Parameters.Ц300М_1ТумблерЧТОФТ == "ЧТ"
+            ТумблерВидМодуляции.BackgroundImage = C300M_1Parameters.ТумблерВидМодуляции
                 ? ControlElementImages.tumblerType3Up
                 : ControlElementImages.tumblerType3Down;
 
-            this.Ц300М_1ТумблерПоискПределы.BackgroundImage = C300M_1Parameters.Ц300М_1ТумблерПоискПределы == "300"
-                ? ControlElementImages.tumblerType3Left
-                : ControlElementImages.tumblerType3Right;
+            ТумблерПределы.BackgroundImage = C300M_1Parameters.ТумблерПределы
+                ? ControlElementImages.tumblerType3Right
+                : ControlElementImages.tumblerType3Left;
 
         }
         #endregion
 
         #region Тумблеры
-        private void Ц300М_1ТумблерВведениеЧТОФТ_Click(object sender, System.EventArgs e)
+        private void ТумблерВведение_Click(object sender, System.EventArgs e)
         {
-            if (C300M_1Parameters.Ц300М_1ТумблерВведениеЧТОФТ == "ЧТ")
-            {
-                this.Ц300М_1ТумблерВведениеЧТОФТ.BackgroundImage = ControlElementImages.tumblerType3Down;
-                C300M_1Parameters.Ц300М_1ТумблерВведениеЧТОФТ = "ОФТ";
-            }
-            else
-            {
-                this.Ц300М_1ТумблерВведениеЧТОФТ.BackgroundImage = ControlElementImages.tumblerType3Up;
-                C300M_1Parameters.Ц300М_1ТумблерВведениеЧТОФТ = "ЧТ";
-            }
+            C300M_1Parameters.ТумблерВведение = !C300M_1Parameters.ТумблерВведение;
+            this.ТумблерВведение.BackgroundImage = C300M_1Parameters.ТумблерВведение
+                ? ControlElementImages.tumblerType3Up
+                : ControlElementImages.tumblerType3Down;
         }
 
-        private void Ц300М_1ТумблерПоискБлокировкаВклОткл_Click(object sender, System.EventArgs e)
+        private void ТумблерБлокировка_Click(object sender, System.EventArgs e)
         {
-            if (C300M_1Parameters.Ц300М_1ТумблерПоискБлокировкаВклОткл == "Вкл")
-            {
-                this.Ц300М_1ТумблерПоискБлокировкаВклОткл.BackgroundImage = ControlElementImages.tumblerType3Down;
-                C300M_1Parameters.Ц300М_1ТумблерПоискБлокировкаВклОткл = "Откл";
-            }
-            else
-            {
-                this.Ц300М_1ТумблерПоискБлокировкаВклОткл.BackgroundImage = ControlElementImages.tumblerType3Up;
-                C300M_1Parameters.Ц300М_1ТумблерПоискБлокировкаВклОткл = "Вкл";
-            }
+            C300M_1Parameters.ТумблерБлокировка = !C300M_1Parameters.ТумблерБлокировка;
+            ТумблерБлокировка.BackgroundImage = C300M_1Parameters.ТумблерБлокировка
+                ? ControlElementImages.tumblerType3Up
+                : ControlElementImages.tumblerType3Down;
         }
 
-        private void Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн_Click(object sender, System.EventArgs e)
+        private void ТумблерВидВключения_Click(object sender, System.EventArgs e)
         {
-            if (C300M_1Parameters.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн == "Автоматич")
-            {
-                this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.BackgroundImage = ControlElementImages.tumblerType3Down;
-                C300M_1Parameters.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн = "Ручн";
-            }
-            else
-            {
-                this.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн.BackgroundImage = ControlElementImages.tumblerType3Up;
-                C300M_1Parameters.Ц300М_1ТумблерПоискВид_ВклАвтоматичРучн = "Автоматич";
-            }
+            C300M_1Parameters.ТумблерВидВключения = !C300M_1Parameters.ТумблерВидВключения;
+            ТумблерВидВключения.BackgroundImage = C300M_1Parameters.ТумблерВидВключения
+                ? ControlElementImages.tumblerType3Up
+                : ControlElementImages.tumblerType3Down;
         }
 
-        private void Ц300М_1ТумблерПоискС_АналСимметрОткл_Click(object sender, System.EventArgs e)
+        private void ТумблерАнализСимметрии_Click(object sender, System.EventArgs e)
         {
-            if (C300M_1Parameters.Ц300М_1ТумблерПоискС_АналСимметрОткл == "Симметр")
-            {
-                this.Ц300М_1ТумблерПоискС_АналСимметрОткл.BackgroundImage = ControlElementImages.tumblerType3Down;
-                C300M_1Parameters.Ц300М_1ТумблерПоискС_АналСимметрОткл = "Откл";
-            }
-            else
-            {
-                this.Ц300М_1ТумблерПоискС_АналСимметрОткл.BackgroundImage = ControlElementImages.tumblerType3Up;
-                C300M_1Parameters.Ц300М_1ТумблерПоискС_АналСимметрОткл = "Симметр";
-            }
+            C300M_1Parameters.ТумблерАнализСимметрии = !C300M_1Parameters.ТумблерАнализСимметрии;
+            ТумблерАнализСимметрии.BackgroundImage = C300M_1Parameters.ТумблерАнализСимметрии
+                ? ControlElementImages.tumblerType3Up
+                : ControlElementImages.tumblerType3Down;
         }
 
-        private void Ц300М_1ТумблерАСЧОткл_Click(object sender, System.EventArgs e)
+        private void ТумблерАСЧ_Click(object sender, System.EventArgs e)
         {
-            if (C300M_1Parameters.Ц300М_1ТумблерАСЧОткл == "АСЧ")
-            {
-                this.Ц300М_1ТумблерАСЧОткл.BackgroundImage = ControlElementImages.tumblerType3Down;
-                C300M_1Parameters.Ц300М_1ТумблерАСЧОткл = "Откл";
-            }
-            else
-            {
-                this.Ц300М_1ТумблерАСЧОткл.BackgroundImage = ControlElementImages.tumblerType3Up;
-                C300M_1Parameters.Ц300М_1ТумблерАСЧОткл = "АСЧ";
-            }
+            C300M_1Parameters.ТумблерАСЧ = !C300M_1Parameters.ТумблерАСЧ;
+            ТумблерАСЧ.BackgroundImage = C300M_1Parameters.ТумблерАСЧ
+                ? ControlElementImages.tumblerType3Up
+                : ControlElementImages.tumblerType3Down;
         }
 
-        private void Ц300М_1ТумблерАРУРРУ_Click(object sender, System.EventArgs e)
+        private void ТумблерРегулировкаУровня_Click(object sender, System.EventArgs e)
         {
-            if (C300M_1Parameters.Ц300М_1ТумблерАРУРРУ == "АРУ")
-            {
-                this.Ц300М_1ТумблерАРУРРУ.BackgroundImage = ControlElementImages.tumblerType3Down;
-                C300M_1Parameters.Ц300М_1ТумблерАРУРРУ = "РРУ";
-            }
-            else
-            {
-                this.Ц300М_1ТумблерАРУРРУ.BackgroundImage = ControlElementImages.tumblerType3Up;
-                C300M_1Parameters.Ц300М_1ТумблерАРУРРУ = "АРУ";
-            }
+            C300M_1Parameters.ТумблерРегулировкаУровня = !C300M_1Parameters.ТумблерРегулировкаУровня;
+            ТумблерРегулировкаУровня.BackgroundImage = C300M_1Parameters.ТумблерРегулировкаУровня
+                ? ControlElementImages.tumblerType3Up
+                : ControlElementImages.tumblerType3Down;
         }
 
-        private void Ц300М_1ТумблерЧТОФТ_Click(object sender, System.EventArgs e)
+        private void ТумблерВидМодуляции_Click(object sender, System.EventArgs e)
         {
-            if (C300M_1Parameters.Ц300М_1ТумблерЧТОФТ == "ЧТ")
-            {
-                this.Ц300М_1ТумблерЧТОФТ.BackgroundImage = ControlElementImages.tumblerType3Down;
-                C300M_1Parameters.Ц300М_1ТумблерЧТОФТ = "ОФТ";
-            }
-            else
-            {
-                this.Ц300М_1ТумблерЧТОФТ.BackgroundImage = ControlElementImages.tumblerType3Up;
-                C300M_1Parameters.Ц300М_1ТумблерЧТОФТ = "ЧТ";
-            }
+            C300M_1Parameters.ТумблерВидМодуляции = !C300M_1Parameters.ТумблерВидМодуляции;
+            ТумблерВидМодуляции.BackgroundImage = C300M_1Parameters.ТумблерВидМодуляции
+                ? ControlElementImages.tumblerType3Up
+                : ControlElementImages.tumblerType3Down;
         }
 
-        private void Ц300М_1ТумблерПоискПределы_Click(object sender, System.EventArgs e)
+        private void ТумблерПределы_Click(object sender, System.EventArgs e)
         {
-            if (C300M_1Parameters.Ц300М_1ТумблерПоискПределы == "300")
-            {
-                this.Ц300М_1ТумблерПоискПределы.BackgroundImage = ControlElementImages.tumblerType3Right;
-                C300M_1Parameters.Ц300М_1ТумблерПоискПределы = "60";
-            }
-            else
-            {
-                this.Ц300М_1ТумблерПоискПределы.BackgroundImage = ControlElementImages.tumblerType3Left;
-                C300M_1Parameters.Ц300М_1ТумблерПоискПределы = "300";
-            }
+            C300M_1Parameters.ТумблерПределы = !C300M_1Parameters.ТумблерПределы;
+            ТумблерПределы.BackgroundImage = C300M_1Parameters.ТумблерПределы
+                ? ControlElementImages.tumblerType3Right
+                : ControlElementImages.tumblerType3Left;
         }
 
-        private void Ц300М_1ТумблерУправление_Click(object sender, System.EventArgs e)
+        private void ТумблерУправление_Click(object sender, System.EventArgs e)
         {
-            if (C300M_1Parameters.Ц300М_1ТумблерУправление == "Местное")
-            {
-                this.Ц300М_1ТумблерУправление.BackgroundImage = ControlElementImages.tumblerType4Up;
-                C300M_1Parameters.Ц300М_1ТумблерУправление = "Дистанц";
-            }
-            else
-            {
-                this.Ц300М_1ТумблерУправление.BackgroundImage = ControlElementImages.tumblerType4Down;
-                C300M_1Parameters.Ц300М_1ТумблерУправление = "Местное";
-            }
+            C300M_1Parameters.ТумблерУправление = !C300M_1Parameters.ТумблерУправление;
+            ТумблерУправление.BackgroundImage = C300M_1Parameters.ТумблерУправление
+                ? ControlElementImages.tumblerType4Up
+                : ControlElementImages.tumblerType4Down;
         }
         #endregion
 
         #region Кнопки ПИТАНИЕ
-        private void Ц300М_1КнопкаПитаниеВкл_MouseDown(object sender, MouseEventArgs e)
+        private void КнопкаПитаниеВкл_MouseDown(object sender, MouseEventArgs e)
         {
-            Ц300М_1КнопкаПитаниеВкл.BackgroundImage = null;
-            Ц300М_1КнопкаПитаниеВкл.Text = "";
-            C300M_1Parameters.Ц300М_1КнопкаПитаниеВкл = "true";
+            КнопкаПитаниеВкл.BackgroundImage = null;
+            КнопкаПитаниеВкл.Text = "";
+            C300M_1Parameters.КнопкаПитаниеВкл = true;
         }
 
-        private void Ц300М_1КнопкаПитаниеВкл_MouseUp(object sender, MouseEventArgs e)
+        private void КнопкаПитаниеВкл_MouseUp(object sender, MouseEventArgs e)
         {
-            Ц300М_1КнопкаПитаниеВкл.BackgroundImage = ControlElementImages.buttonSquareWhite;
-            Ц300М_1КнопкаПитаниеВкл.Text = "ВКЛ";
-            C300M_1Parameters.Ц300М_1КнопкаПитаниеВкл = "false";
+            КнопкаПитаниеВкл.BackgroundImage = ControlElementImages.buttonSquareWhite;
+            КнопкаПитаниеВкл.Text = "ВКЛ";
+            C300M_1Parameters.КнопкаПитаниеВкл = false;
         }
 
-        private void Ц300М_1КнопкаПитаниеВыкл_MouseDown(object sender, MouseEventArgs e)
+        private void КнопкаПитаниеВыкл_MouseDown(object sender, MouseEventArgs e)
         {
-            Ц300М_1КнопкаПитаниеВыкл.BackgroundImage = null;
-            Ц300М_1КнопкаПитаниеВыкл.Text = "";
-            C300M_1Parameters.Ц300М_1КнопкаПитаниеВыкл = "true";
+            КнопкаПитаниеВыкл.BackgroundImage = null;
+            КнопкаПитаниеВыкл.Text = "";
+            C300M_1Parameters.КнопкаПитаниеВыкл = true;
         }
 
-        private void Ц300М_1КнопкаПитаниеВыкл_MouseUp(object sender, MouseEventArgs e)
+        private void КнопкаПитаниеВыкл_MouseUp(object sender, MouseEventArgs e)
         {
-            Ц300М_1КнопкаПитаниеВыкл.BackgroundImage = ControlElementImages.buttonSquareWhite;
-            Ц300М_1КнопкаПитаниеВыкл.Text = "ОТКЛ";
-            C300M_1Parameters.Ц300М_1КнопкаПитаниеВыкл = "false";
+            КнопкаПитаниеВыкл.BackgroundImage = ControlElementImages.buttonSquareWhite;
+            КнопкаПитаниеВыкл.Text = "ОТКЛ";
+            C300M_1Parameters.КнопкаПитаниеВыкл = false;
         }
         #endregion
 
         #region Кнопка ПОИСК
-        private void Ц300М_1КнопкаПоискВкл_MouseDown(object sender, MouseEventArgs e)
+        private void КнопкаПоиск_MouseDown(object sender, MouseEventArgs e)
         {
-            Ц300М_1КнопкаПоискВкл.BackgroundImage = null;
-            Ц300М_1КнопкаПоискВкл.Text = "";
-            C300M_1Parameters.Ц300М_1КнопкаПоискВкл = "true";
+            КнопкаПоиск.BackgroundImage = null;
+            КнопкаПоиск.Text = "";
+            C300M_1Parameters.КнопкаПоиск = true;
         }
         #endregion
 
-        private void Ц300М_1КнопкаПоискВкл_MouseUp(object sender, MouseEventArgs e)
+        private void КнопкаПоиск_MouseUp(object sender, MouseEventArgs e)
         {
-            Ц300М_1КнопкаПоискВкл.BackgroundImage = ControlElementImages.buttonSquareWhite;
-            Ц300М_1КнопкаПоискВкл.Text = "ВКЛ";
-            C300M_1Parameters.Ц300М_1КнопкаПоискВкл = "false";
+            КнопкаПоиск.BackgroundImage = ControlElementImages.buttonSquareWhite;
+            КнопкаПоиск.Text = "ВКЛ";
+            C300M_1Parameters.КнопкаПоиск = false;
         }
     }
 }

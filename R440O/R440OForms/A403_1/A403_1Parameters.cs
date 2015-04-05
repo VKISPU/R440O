@@ -107,14 +107,14 @@
         #endregion
 
         #region Табло
-        private static int _значение = 0;
-        public static int Значение { get { return _значение; } set { _значение = value; } }
+        private static string _значение = "";
+        public static string Значение { get { return _значение; } set { _значение = value; } }
 
         /// <summary>
         /// Матрица для хранения введённых значений на дисплее, 1 строка соответствует значениям 1 группы переменных, а 2 для 2 группы.
         /// </summary>
-        public static int[,] ДисплейЗначения = {  { 0, 0, 0, 0, 0, 0, 0, 0, 0},
-                                                  { 0, 0, 0, 0, 0, 0, 0, 0, 0}    };
+        public static string[,] ДисплейЗначения = {  { "", "", "", "", "", "", "", "", ""},
+                                                  { "", "", "", "", "", "", "", "", ""}    };
         #endregion
     }
 }

@@ -548,9 +548,9 @@
             this.A306Выход1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.A306Выход1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.A306Выход1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.A306Выход1.Location = new System.Drawing.Point(122, 663);
+            this.A306Выход1.Location = new System.Drawing.Point(122, 661);
             this.A306Выход1.Name = "A306Выход1";
-            this.A306Выход1.Size = new System.Drawing.Size(49, 30);
+            this.A306Выход1.Size = new System.Drawing.Size(49, 32);
             this.A306Выход1.TabIndex = 57;
             this.A306Выход1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.A306Выход1.UseVisualStyleBackColor = false;

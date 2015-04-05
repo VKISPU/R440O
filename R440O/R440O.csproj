@@ -71,9 +71,6 @@
     <Compile Include="Parameters\B2_2Parameters.cs" />
     <Compile Include="Parameters\B3_1Parameters.cs" />
     <Compile Include="Parameters\C1_67Parameters.cs" />
-    <Compile Include="Parameters\C300M_2Parameters.cs" />
-    <Compile Include="Parameters\C300M_3Parameterscs.cs" />
-    <Compile Include="Parameters\C300M_4Parameters.cs" />
     <Compile Include="Parameters\K05M_02InsideParameters.cs" />
     <Compile Include="Parameters\K05M_01InsideParameters.cs" />
     <Compile Include="Parameters\K03M_02InsideParameters.cs" />
@@ -101,7 +98,6 @@
     <Compile Include="Parameters\BMA_M_2Parameters.cs" />
     <Compile Include="Parameters\BMA_M_1Parameters.cs" />
     <Compile Include="Parameters\BMBParameters.cs" />
-    <Compile Include="Parameters\C300M_1Parameters.cs" />
     <Compile Include="Parameters\DAB_5Parameters.cs" />
     <Compile Include="Parameters\C300PM_3Parameters.cs" />
     <Compile Include="Parameters\C300PM_2Parameters.cs" />
@@ -115,6 +111,10 @@
     <Compile Include="Parameters\AstraParameters.cs" />
     <Compile Include="Parameters\N15Parameters.cs" />
     <Compile Include="R440OForms\A1\A1Parameters.cs" />
+    <Compile Include="R440OForms\C300M_1\C300M_1Parameters.cs" />
+    <Compile Include="R440OForms\C300M_2\C300M_2Parameters.cs" />
+    <Compile Include="R440OForms\C300M_3\C300M_3Parameterscs.cs" />
+    <Compile Include="R440OForms\C300M_4\C300M_4Parameters.cs" />
     <Compile Include="R440OForms\N502B\N502BParameters.cs" />
     <Compile Include="R440OForms\NKN_2\NKN_2Parameters.cs" />
     <Compile Include="R440OForms\NKN_1\NKN_1Parameters.cs" />
@@ -1084,6 +1084,7 @@
     <None Include="Resources\A306Output.png" />
     <None Include="Resources\A306CabelNO.png" />
     <None Include="Resources\A306Input.png" />
+    <None Include="Resources\arrow2.png" />
     <Content Include="Resources\buttonSquareBlack.png" />
     <Content Include="Resources\buttonSquareBlackLarge.png" />
     <None Include="Resources\buttonSquareBlack_small.png" />
