@@ -5,8 +5,6 @@
 //-----------------------------------------------------------------------
 
 using System.Drawing;
-using R440O.R440OForms.PowerCabel;
-using R440O.R440OForms.VoltageStabilizer;
 using R440O.ThirdParty;
 
 

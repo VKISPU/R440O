@@ -29,44 +29,44 @@
         private void InitializeComponent()
         {
             this.BMBPanel = new System.Windows.Forms.Panel();
+            this.BMBЛампочкаНаправление4 = new System.Windows.Forms.PictureBox();
+            this.BMBЛампочкаНаправление3 = new System.Windows.Forms.PictureBox();
+            this.BMBЛампочкаНаправление2 = new System.Windows.Forms.PictureBox();
+            this.BMBЛампочкаНаправление1 = new System.Windows.Forms.PictureBox();
+            this.BMBЛампочкаРезервВкл = new System.Windows.Forms.PictureBox();
             this.BMBЛампочкаПриемВызова = new System.Windows.Forms.PictureBox();
             this.BMBИндикаторПриемКоманды = new System.Windows.Forms.Label();
             this.BMBИндикаторНаборКоманды = new System.Windows.Forms.Label();
-            this.BMBЛампочкаДК = new System.Windows.Forms.PictureBox();
-            this.BMBЛампочкаТЧ = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаДк = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаТч = new System.Windows.Forms.PictureBox();
             this.BMBПереключательНаправление = new System.Windows.Forms.Button();
             this.BMBПереключательПодключениеРезерва = new System.Windows.Forms.Button();
-            this.BMBПереключательРаботаКонтроль = new System.Windows.Forms.Button();
-            this.BMBКнопкаЗвСигнал = new System.Windows.Forms.Button();
-            this.BMBКнопкаПитание = new System.Windows.Forms.Button();
-            this.BMBКнопкаСлСвязь = new System.Windows.Forms.Button();
-            this.BMBКнопкаПередачаВызоваТЧ = new System.Windows.Forms.Button();
-            this.BMBКнопкаПередачаВызоваДК = new System.Windows.Forms.Button();
-            this.BMBКнопкаПередачаКоманды = new System.Windows.Forms.Button();
-            this.BMBКнопкаНаборКоманды4 = new System.Windows.Forms.Button();
-            this.BMBКнопкаНаборКоманды0 = new System.Windows.Forms.Button();
-            this.BMBКнопкаНаборКоманды9 = new System.Windows.Forms.Button();
-            this.BMBКнопкаНаборКоманды8 = new System.Windows.Forms.Button();
-            this.BMBКнопкаНаборКоманды7 = new System.Windows.Forms.Button();
-            this.BMBКнопкаНаборКоманды6 = new System.Windows.Forms.Button();
-            this.BMBКнопкаНаборКоманды5 = new System.Windows.Forms.Button();
-            this.BMBКнопкаНаборКоманды3 = new System.Windows.Forms.Button();
-            this.BMBКнопкаНаборКоманды2 = new System.Windows.Forms.Button();
-            this.BMBКнопкаНаборКоманды1 = new System.Windows.Forms.Button();
-            this.BMBЛампочкаРезервВкл = new System.Windows.Forms.PictureBox();
-            this.BMBЛампочкаНаправление1 = new System.Windows.Forms.PictureBox();
-            this.BMBЛампочкаНаправление2 = new System.Windows.Forms.PictureBox();
-            this.BMBЛампочкаНаправление3 = new System.Windows.Forms.PictureBox();
-            this.BMBЛампочкаНаправление4 = new System.Windows.Forms.PictureBox();
+            this.ПереключательРаботаКонтроль = new System.Windows.Forms.Button();
+            this.КнопкаЗвСигнал = new System.Windows.Forms.Button();
+            this.КнопкаПитание = new System.Windows.Forms.Button();
+            this.КнопкаСлСвязь = new System.Windows.Forms.Button();
+            this.КнопкаПередачаВызоваТч = new System.Windows.Forms.Button();
+            this.КнопкаПередачаВызоваДк = new System.Windows.Forms.Button();
+            this.КнопкаПередачаКоманды = new System.Windows.Forms.Button();
+            this.КнопкаНаборКоманды4 = new System.Windows.Forms.Button();
+            this.КнопкаНаборКоманды0 = new System.Windows.Forms.Button();
+            this.КнопкаНаборКоманды9 = new System.Windows.Forms.Button();
+            this.КнопкаНаборКоманды8 = new System.Windows.Forms.Button();
+            this.КнопкаНаборКоманды7 = new System.Windows.Forms.Button();
+            this.КнопкаНаборКоманды6 = new System.Windows.Forms.Button();
+            this.КнопкаНаборКоманды5 = new System.Windows.Forms.Button();
+            this.КнопкаНаборКоманды3 = new System.Windows.Forms.Button();
+            this.КнопкаНаборКоманды2 = new System.Windows.Forms.Button();
+            this.КнопкаНаборКоманды1 = new System.Windows.Forms.Button();
             this.BMBPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаПриемВызова)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаДК)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаТЧ)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаРезервВкл)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаРезервВкл)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаПриемВызова)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаДк)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаТч)).BeginInit();
             this.SuspendLayout();
             // 
             // BMBPanel
@@ -81,31 +81,81 @@
             this.BMBPanel.Controls.Add(this.BMBЛампочкаПриемВызова);
             this.BMBPanel.Controls.Add(this.BMBИндикаторПриемКоманды);
             this.BMBPanel.Controls.Add(this.BMBИндикаторНаборКоманды);
-            this.BMBPanel.Controls.Add(this.BMBЛампочкаДК);
-            this.BMBPanel.Controls.Add(this.BMBЛампочкаТЧ);
+            this.BMBPanel.Controls.Add(this.ЛампочкаДк);
+            this.BMBPanel.Controls.Add(this.ЛампочкаТч);
             this.BMBPanel.Controls.Add(this.BMBПереключательНаправление);
             this.BMBPanel.Controls.Add(this.BMBПереключательПодключениеРезерва);
-            this.BMBPanel.Controls.Add(this.BMBПереключательРаботаКонтроль);
-            this.BMBPanel.Controls.Add(this.BMBКнопкаЗвСигнал);
-            this.BMBPanel.Controls.Add(this.BMBКнопкаПитание);
-            this.BMBPanel.Controls.Add(this.BMBКнопкаСлСвязь);
-            this.BMBPanel.Controls.Add(this.BMBКнопкаПередачаВызоваТЧ);
-            this.BMBPanel.Controls.Add(this.BMBКнопкаПередачаВызоваДК);
-            this.BMBPanel.Controls.Add(this.BMBКнопкаПередачаКоманды);
-            this.BMBPanel.Controls.Add(this.BMBКнопкаНаборКоманды4);
-            this.BMBPanel.Controls.Add(this.BMBКнопкаНаборКоманды0);
-            this.BMBPanel.Controls.Add(this.BMBКнопкаНаборКоманды9);
-            this.BMBPanel.Controls.Add(this.BMBКнопкаНаборКоманды8);
-            this.BMBPanel.Controls.Add(this.BMBКнопкаНаборКоманды7);
-            this.BMBPanel.Controls.Add(this.BMBКнопкаНаборКоманды6);
-            this.BMBPanel.Controls.Add(this.BMBКнопкаНаборКоманды5);
-            this.BMBPanel.Controls.Add(this.BMBКнопкаНаборКоманды3);
-            this.BMBPanel.Controls.Add(this.BMBКнопкаНаборКоманды2);
-            this.BMBPanel.Controls.Add(this.BMBКнопкаНаборКоманды1);
+            this.BMBPanel.Controls.Add(this.ПереключательРаботаКонтроль);
+            this.BMBPanel.Controls.Add(this.КнопкаЗвСигнал);
+            this.BMBPanel.Controls.Add(this.КнопкаПитание);
+            this.BMBPanel.Controls.Add(this.КнопкаСлСвязь);
+            this.BMBPanel.Controls.Add(this.КнопкаПередачаВызоваТч);
+            this.BMBPanel.Controls.Add(this.КнопкаПередачаВызоваДк);
+            this.BMBPanel.Controls.Add(this.КнопкаПередачаКоманды);
+            this.BMBPanel.Controls.Add(this.КнопкаНаборКоманды4);
+            this.BMBPanel.Controls.Add(this.КнопкаНаборКоманды0);
+            this.BMBPanel.Controls.Add(this.КнопкаНаборКоманды9);
+            this.BMBPanel.Controls.Add(this.КнопкаНаборКоманды8);
+            this.BMBPanel.Controls.Add(this.КнопкаНаборКоманды7);
+            this.BMBPanel.Controls.Add(this.КнопкаНаборКоманды6);
+            this.BMBPanel.Controls.Add(this.КнопкаНаборКоманды5);
+            this.BMBPanel.Controls.Add(this.КнопкаНаборКоманды3);
+            this.BMBPanel.Controls.Add(this.КнопкаНаборКоманды2);
+            this.BMBPanel.Controls.Add(this.КнопкаНаборКоманды1);
             this.BMBPanel.Location = new System.Drawing.Point(0, 0);
             this.BMBPanel.Name = "BMBPanel";
             this.BMBPanel.Size = new System.Drawing.Size(954, 458);
             this.BMBPanel.TabIndex = 1;
+            // 
+            // BMBЛампочкаНаправление4
+            // 
+            this.BMBЛампочкаНаправление4.BackColor = System.Drawing.Color.Transparent;
+            this.BMBЛампочкаНаправление4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BMBЛампочкаНаправление4.Location = new System.Drawing.Point(534, 172);
+            this.BMBЛампочкаНаправление4.Name = "BMBЛампочкаНаправление4";
+            this.BMBЛампочкаНаправление4.Size = new System.Drawing.Size(27, 25);
+            this.BMBЛампочкаНаправление4.TabIndex = 83;
+            this.BMBЛампочкаНаправление4.TabStop = false;
+            // 
+            // BMBЛампочкаНаправление3
+            // 
+            this.BMBЛампочкаНаправление3.BackColor = System.Drawing.Color.Transparent;
+            this.BMBЛампочкаНаправление3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BMBЛампочкаНаправление3.Location = new System.Drawing.Point(509, 172);
+            this.BMBЛампочкаНаправление3.Name = "BMBЛампочкаНаправление3";
+            this.BMBЛампочкаНаправление3.Size = new System.Drawing.Size(27, 25);
+            this.BMBЛампочкаНаправление3.TabIndex = 82;
+            this.BMBЛампочкаНаправление3.TabStop = false;
+            // 
+            // BMBЛампочкаНаправление2
+            // 
+            this.BMBЛампочкаНаправление2.BackColor = System.Drawing.Color.Transparent;
+            this.BMBЛампочкаНаправление2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BMBЛампочкаНаправление2.Location = new System.Drawing.Point(484, 172);
+            this.BMBЛампочкаНаправление2.Name = "BMBЛампочкаНаправление2";
+            this.BMBЛампочкаНаправление2.Size = new System.Drawing.Size(27, 25);
+            this.BMBЛампочкаНаправление2.TabIndex = 81;
+            this.BMBЛампочкаНаправление2.TabStop = false;
+            // 
+            // BMBЛампочкаНаправление1
+            // 
+            this.BMBЛампочкаНаправление1.BackColor = System.Drawing.Color.Transparent;
+            this.BMBЛампочкаНаправление1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BMBЛампочкаНаправление1.Location = new System.Drawing.Point(460, 172);
+            this.BMBЛампочкаНаправление1.Name = "BMBЛампочкаНаправление1";
+            this.BMBЛампочкаНаправление1.Size = new System.Drawing.Size(27, 25);
+            this.BMBЛампочкаНаправление1.TabIndex = 80;
+            this.BMBЛампочкаНаправление1.TabStop = false;
+            // 
+            // BMBЛампочкаРезервВкл
+            // 
+            this.BMBЛампочкаРезервВкл.BackColor = System.Drawing.Color.Transparent;
+            this.BMBЛампочкаРезервВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BMBЛампочкаРезервВкл.Location = new System.Drawing.Point(283, 79);
+            this.BMBЛампочкаРезервВкл.Name = "BMBЛампочкаРезервВкл";
+            this.BMBЛампочкаРезервВкл.Size = new System.Drawing.Size(86, 52);
+            this.BMBЛампочкаРезервВкл.TabIndex = 79;
+            this.BMBЛампочкаРезервВкл.TabStop = false;
             // 
             // BMBЛампочкаПриемВызова
             // 
@@ -142,25 +192,25 @@
             this.BMBИндикаторНаборКоманды.Text = "  ";
             this.BMBИндикаторНаборКоманды.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // BMBЛампочкаДК
+            // ЛампочкаДк
             // 
-            this.BMBЛампочкаДК.BackColor = System.Drawing.Color.Transparent;
-            this.BMBЛампочкаДК.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBЛампочкаДК.Location = new System.Drawing.Point(562, 92);
-            this.BMBЛампочкаДК.Name = "BMBЛампочкаДК";
-            this.BMBЛампочкаДК.Size = new System.Drawing.Size(27, 25);
-            this.BMBЛампочкаДК.TabIndex = 75;
-            this.BMBЛампочкаДК.TabStop = false;
+            this.ЛампочкаДк.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаДк.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ЛампочкаДк.Location = new System.Drawing.Point(562, 92);
+            this.ЛампочкаДк.Name = "ЛампочкаДк";
+            this.ЛампочкаДк.Size = new System.Drawing.Size(27, 25);
+            this.ЛампочкаДк.TabIndex = 75;
+            this.ЛампочкаДк.TabStop = false;
             // 
-            // BMBЛампочкаТЧ
+            // ЛампочкаТч
             // 
-            this.BMBЛампочкаТЧ.BackColor = System.Drawing.Color.Transparent;
-            this.BMBЛампочкаТЧ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBЛампочкаТЧ.Location = new System.Drawing.Point(431, 92);
-            this.BMBЛампочкаТЧ.Name = "BMBЛампочкаТЧ";
-            this.BMBЛампочкаТЧ.Size = new System.Drawing.Size(27, 25);
-            this.BMBЛампочкаТЧ.TabIndex = 74;
-            this.BMBЛампочкаТЧ.TabStop = false;
+            this.ЛампочкаТч.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаТч.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ЛампочкаТч.Location = new System.Drawing.Point(431, 92);
+            this.ЛампочкаТч.Name = "ЛампочкаТч";
+            this.ЛампочкаТч.Size = new System.Drawing.Size(27, 25);
+            this.ЛампочкаТч.TabIndex = 74;
+            this.ЛампочкаТч.TabStop = false;
             // 
             // BMBПереключательНаправление
             // 
@@ -194,386 +244,334 @@
             this.BMBПереключательПодключениеРезерва.UseVisualStyleBackColor = false;
             this.BMBПереключательПодключениеРезерва.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMBПереключательПодключениеРезерва_MouseUp);
             // 
-            // BMBПереключательРаботаКонтроль
+            // ПереключательРаботаКонтроль
             // 
-            this.BMBПереключательРаботаКонтроль.BackColor = System.Drawing.Color.Transparent;
-            this.BMBПереключательРаботаКонтроль.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
-            this.BMBПереключательРаботаКонтроль.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBПереключательРаботаКонтроль.FlatAppearance.BorderSize = 0;
-            this.BMBПереключательРаботаКонтроль.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMBПереключательРаботаКонтроль.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMBПереключательРаботаКонтроль.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMBПереключательРаботаКонтроль.Location = new System.Drawing.Point(135, 206);
-            this.BMBПереключательРаботаКонтроль.Name = "BMBПереключательРаботаКонтроль";
-            this.BMBПереключательРаботаКонтроль.Size = new System.Drawing.Size(65, 65);
-            this.BMBПереключательРаботаКонтроль.TabIndex = 71;
-            this.BMBПереключательРаботаКонтроль.UseVisualStyleBackColor = false;
-            this.BMBПереключательРаботаКонтроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMBПереключательРаботаКонтроль_MouseUp);
+            this.ПереключательРаботаКонтроль.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательРаботаКонтроль.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.ПереключательРаботаКонтроль.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательРаботаКонтроль.FlatAppearance.BorderSize = 0;
+            this.ПереключательРаботаКонтроль.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательРаботаКонтроль.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательРаботаКонтроль.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательРаботаКонтроль.Location = new System.Drawing.Point(135, 206);
+            this.ПереключательРаботаКонтроль.Name = "ПереключательРаботаКонтроль";
+            this.ПереключательРаботаКонтроль.Size = new System.Drawing.Size(65, 65);
+            this.ПереключательРаботаКонтроль.TabIndex = 71;
+            this.ПереключательРаботаКонтроль.UseVisualStyleBackColor = false;
+            this.ПереключательРаботаКонтроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательРаботаКонтроль_MouseUp);
             // 
-            // BMBКнопкаЗвСигнал
+            // КнопкаЗвСигнал
             // 
-            this.BMBКнопкаЗвСигнал.BackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаЗвСигнал.BackgroundImage = global::R440O.ControlElementImages.buttonSquareGreen;
-            this.BMBКнопкаЗвСигнал.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBКнопкаЗвСигнал.FlatAppearance.BorderSize = 0;
-            this.BMBКнопкаЗвСигнал.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаЗвСигнал.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаЗвСигнал.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMBКнопкаЗвСигнал.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BMBКнопкаЗвСигнал.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BMBКнопкаЗвСигнал.Location = new System.Drawing.Point(103, 285);
-            this.BMBКнопкаЗвСигнал.Name = "BMBКнопкаЗвСигнал";
-            this.BMBКнопкаЗвСигнал.Size = new System.Drawing.Size(54, 52);
-            this.BMBКнопкаЗвСигнал.TabIndex = 70;
-            this.BMBКнопкаЗвСигнал.Text = " ЗВ СИГН";
-            this.BMBКнопкаЗвСигнал.UseVisualStyleBackColor = false;
-            this.BMBКнопкаЗвСигнал.Click += new System.EventHandler(this.BMBКнопкаЗвСигнал_Click);
+            this.КнопкаЗвСигнал.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаЗвСигнал.BackgroundImage = global::R440O.ControlElementImages.buttonSquareGreen;
+            this.КнопкаЗвСигнал.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.КнопкаЗвСигнал.FlatAppearance.BorderSize = 0;
+            this.КнопкаЗвСигнал.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаЗвСигнал.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаЗвСигнал.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаЗвСигнал.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.КнопкаЗвСигнал.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.КнопкаЗвСигнал.Location = new System.Drawing.Point(103, 285);
+            this.КнопкаЗвСигнал.Name = "КнопкаЗвСигнал";
+            this.КнопкаЗвСигнал.Size = new System.Drawing.Size(54, 52);
+            this.КнопкаЗвСигнал.TabIndex = 70;
+            this.КнопкаЗвСигнал.Text = " ЗВ СИГН";
+            this.КнопкаЗвСигнал.UseVisualStyleBackColor = false;
+            this.КнопкаЗвСигнал.Click += new System.EventHandler(this.КнопкаЗвСигнал_Click);
             // 
-            // BMBКнопкаПитание
+            // КнопкаПитание
             // 
-            this.BMBКнопкаПитание.BackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаПитание.BackgroundImage = global::R440O.ControlElementImages.buttonSquareGreen;
-            this.BMBКнопкаПитание.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBКнопкаПитание.FlatAppearance.BorderSize = 0;
-            this.BMBКнопкаПитание.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаПитание.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаПитание.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMBКнопкаПитание.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BMBКнопкаПитание.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BMBКнопкаПитание.Location = new System.Drawing.Point(177, 284);
-            this.BMBКнопкаПитание.Name = "BMBКнопкаПитание";
-            this.BMBКнопкаПитание.Size = new System.Drawing.Size(54, 52);
-            this.BMBКнопкаПитание.TabIndex = 69;
-            this.BMBКнопкаПитание.Text = "ВКЛ";
-            this.BMBКнопкаПитание.UseVisualStyleBackColor = false;
-            this.BMBКнопкаПитание.Click += new System.EventHandler(this.BMBКнопкаПитание_Click);
+            this.КнопкаПитание.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаПитание.BackgroundImage = global::R440O.ControlElementImages.buttonSquareGreen;
+            this.КнопкаПитание.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.КнопкаПитание.FlatAppearance.BorderSize = 0;
+            this.КнопкаПитание.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаПитание.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаПитание.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаПитание.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.КнопкаПитание.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.КнопкаПитание.Location = new System.Drawing.Point(177, 284);
+            this.КнопкаПитание.Name = "КнопкаПитание";
+            this.КнопкаПитание.Size = new System.Drawing.Size(54, 52);
+            this.КнопкаПитание.TabIndex = 69;
+            this.КнопкаПитание.Text = "ВКЛ";
+            this.КнопкаПитание.UseVisualStyleBackColor = false;
+            this.КнопкаПитание.Click += new System.EventHandler(this.КнопкаПитание_Click);
             // 
-            // BMBКнопкаСлСвязь
+            // КнопкаСлСвязь
             // 
-            this.BMBКнопкаСлСвязь.BackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаСлСвязь.BackgroundImage = global::R440O.ControlElementImages.buttonSquareYellow1;
-            this.BMBКнопкаСлСвязь.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBКнопкаСлСвязь.FlatAppearance.BorderSize = 0;
-            this.BMBКнопкаСлСвязь.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаСлСвязь.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаСлСвязь.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMBКнопкаСлСвязь.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BMBКнопкаСлСвязь.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BMBКнопкаСлСвязь.Location = new System.Drawing.Point(294, 284);
-            this.BMBКнопкаСлСвязь.Name = "BMBКнопкаСлСвязь";
-            this.BMBКнопкаСлСвязь.Size = new System.Drawing.Size(54, 52);
-            this.BMBКнопкаСлСвязь.TabIndex = 68;
-            this.BMBКнопкаСлСвязь.Text = "ВКЛ";
-            this.BMBКнопкаСлСвязь.UseVisualStyleBackColor = false;
-            this.BMBКнопкаСлСвязь.Click += new System.EventHandler(this.BMBКнопкаСлСвязь_Click);
+            this.КнопкаСлСвязь.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаСлСвязь.BackgroundImage = global::R440O.ControlElementImages.buttonSquareYellow1;
+            this.КнопкаСлСвязь.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.КнопкаСлСвязь.FlatAppearance.BorderSize = 0;
+            this.КнопкаСлСвязь.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаСлСвязь.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаСлСвязь.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаСлСвязь.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.КнопкаСлСвязь.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.КнопкаСлСвязь.Location = new System.Drawing.Point(294, 284);
+            this.КнопкаСлСвязь.Name = "КнопкаСлСвязь";
+            this.КнопкаСлСвязь.Size = new System.Drawing.Size(54, 52);
+            this.КнопкаСлСвязь.TabIndex = 68;
+            this.КнопкаСлСвязь.Text = "ВКЛ";
+            this.КнопкаСлСвязь.UseVisualStyleBackColor = false;
+            this.КнопкаСлСвязь.Click += new System.EventHandler(this.КнопкаСлСвязь_Click);
             // 
-            // BMBКнопкаПередачаВызоваТЧ
+            // КнопкаПередачаВызоваТч
             // 
-            this.BMBКнопкаПередачаВызоваТЧ.BackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаПередачаВызоваТЧ.BackgroundImage = global::R440O.ControlElementImages.buttonSquareYellow1;
-            this.BMBКнопкаПередачаВызоваТЧ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBКнопкаПередачаВызоваТЧ.FlatAppearance.BorderSize = 0;
-            this.BMBКнопкаПередачаВызоваТЧ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаПередачаВызоваТЧ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаПередачаВызоваТЧ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMBКнопкаПередачаВызоваТЧ.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BMBКнопкаПередачаВызоваТЧ.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BMBКнопкаПередачаВызоваТЧ.Location = new System.Drawing.Point(436, 284);
-            this.BMBКнопкаПередачаВызоваТЧ.Name = "BMBКнопкаПередачаВызоваТЧ";
-            this.BMBКнопкаПередачаВызоваТЧ.Size = new System.Drawing.Size(54, 52);
-            this.BMBКнопкаПередачаВызоваТЧ.TabIndex = 67;
-            this.BMBКнопкаПередачаВызоваТЧ.Text = "ТЧ";
-            this.BMBКнопкаПередачаВызоваТЧ.UseVisualStyleBackColor = false;
-            this.BMBКнопкаПередачаВызоваТЧ.Click += new System.EventHandler(this.BMBКнопкаПередачаВызоваТЧ_Click);
+            this.КнопкаПередачаВызоваТч.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаПередачаВызоваТч.BackgroundImage = global::R440O.ControlElementImages.buttonSquareYellow1;
+            this.КнопкаПередачаВызоваТч.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.КнопкаПередачаВызоваТч.FlatAppearance.BorderSize = 0;
+            this.КнопкаПередачаВызоваТч.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаПередачаВызоваТч.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаПередачаВызоваТч.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаПередачаВызоваТч.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.КнопкаПередачаВызоваТч.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.КнопкаПередачаВызоваТч.Location = new System.Drawing.Point(436, 284);
+            this.КнопкаПередачаВызоваТч.Name = "КнопкаПередачаВызоваТч";
+            this.КнопкаПередачаВызоваТч.Size = new System.Drawing.Size(54, 52);
+            this.КнопкаПередачаВызоваТч.TabIndex = 67;
+            this.КнопкаПередачаВызоваТч.Text = "ТЧ";
+            this.КнопкаПередачаВызоваТч.UseVisualStyleBackColor = false;
+            this.КнопкаПередачаВызоваТч.Click += new System.EventHandler(this.КнопкаПередачаВызоваТч_Click);
             // 
-            // BMBКнопкаПередачаВызоваДК
+            // КнопкаПередачаВызоваДк
             // 
-            this.BMBКнопкаПередачаВызоваДК.BackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаПередачаВызоваДК.BackgroundImage = global::R440O.ControlElementImages.buttonSquareYellow1;
-            this.BMBКнопкаПередачаВызоваДК.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBКнопкаПередачаВызоваДК.FlatAppearance.BorderSize = 0;
-            this.BMBКнопкаПередачаВызоваДК.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаПередачаВызоваДК.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаПередачаВызоваДК.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMBКнопкаПередачаВызоваДК.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BMBКнопкаПередачаВызоваДК.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BMBКнопкаПередачаВызоваДК.Location = new System.Drawing.Point(523, 284);
-            this.BMBКнопкаПередачаВызоваДК.Name = "BMBКнопкаПередачаВызоваДК";
-            this.BMBКнопкаПередачаВызоваДК.Size = new System.Drawing.Size(54, 52);
-            this.BMBКнопкаПередачаВызоваДК.TabIndex = 66;
-            this.BMBКнопкаПередачаВызоваДК.Text = "ДК";
-            this.BMBКнопкаПередачаВызоваДК.UseVisualStyleBackColor = false;
-            this.BMBКнопкаПередачаВызоваДК.Click += new System.EventHandler(this.BMBКнопкаПередачаВызоваДК_Click);
+            this.КнопкаПередачаВызоваДк.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаПередачаВызоваДк.BackgroundImage = global::R440O.ControlElementImages.buttonSquareYellow1;
+            this.КнопкаПередачаВызоваДк.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.КнопкаПередачаВызоваДк.FlatAppearance.BorderSize = 0;
+            this.КнопкаПередачаВызоваДк.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаПередачаВызоваДк.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаПередачаВызоваДк.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаПередачаВызоваДк.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.КнопкаПередачаВызоваДк.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.КнопкаПередачаВызоваДк.Location = new System.Drawing.Point(523, 284);
+            this.КнопкаПередачаВызоваДк.Name = "КнопкаПередачаВызоваДк";
+            this.КнопкаПередачаВызоваДк.Size = new System.Drawing.Size(54, 52);
+            this.КнопкаПередачаВызоваДк.TabIndex = 66;
+            this.КнопкаПередачаВызоваДк.Text = "ДК";
+            this.КнопкаПередачаВызоваДк.UseVisualStyleBackColor = false;
+            this.КнопкаПередачаВызоваДк.Click += new System.EventHandler(this.КнопкаПередачаВызоваДк_Click);
             // 
-            // BMBКнопкаПередачаКоманды
+            // КнопкаПередачаКоманды
             // 
-            this.BMBКнопкаПередачаКоманды.BackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаПередачаКоманды.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlue;
-            this.BMBКнопкаПередачаКоманды.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBКнопкаПередачаКоманды.FlatAppearance.BorderSize = 0;
-            this.BMBКнопкаПередачаКоманды.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаПередачаКоманды.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаПередачаКоманды.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMBКнопкаПередачаКоманды.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BMBКнопкаПередачаКоманды.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BMBКнопкаПередачаКоманды.Location = new System.Drawing.Point(743, 365);
-            this.BMBКнопкаПередачаКоманды.Name = "BMBКнопкаПередачаКоманды";
-            this.BMBКнопкаПередачаКоманды.Size = new System.Drawing.Size(54, 52);
-            this.BMBКнопкаПередачаКоманды.TabIndex = 65;
-            this.BMBКнопкаПередачаКоманды.Text = "ВКЛ";
-            this.BMBКнопкаПередачаКоманды.UseVisualStyleBackColor = false;
-            this.BMBКнопкаПередачаКоманды.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BMBКнопкаПередачаКоманды_MouseDown);
-            this.BMBКнопкаПередачаКоманды.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMBКнопкаПередачаКоманды_MouseUp);
+            this.КнопкаПередачаКоманды.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаПередачаКоманды.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlue;
+            this.КнопкаПередачаКоманды.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.КнопкаПередачаКоманды.FlatAppearance.BorderSize = 0;
+            this.КнопкаПередачаКоманды.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаПередачаКоманды.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаПередачаКоманды.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаПередачаКоманды.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.КнопкаПередачаКоманды.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.КнопкаПередачаКоманды.Location = new System.Drawing.Point(743, 365);
+            this.КнопкаПередачаКоманды.Name = "КнопкаПередачаКоманды";
+            this.КнопкаПередачаКоманды.Size = new System.Drawing.Size(54, 52);
+            this.КнопкаПередачаКоманды.TabIndex = 65;
+            this.КнопкаПередачаКоманды.Text = "ВКЛ";
+            this.КнопкаПередачаКоманды.UseVisualStyleBackColor = false;
             // 
-            // BMBКнопкаНаборКоманды4
+            // КнопкаНаборКоманды4
             // 
-            this.BMBКнопкаНаборКоманды4.BackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды4.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlue;
-            this.BMBКнопкаНаборКоманды4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBКнопкаНаборКоманды4.FlatAppearance.BorderSize = 0;
-            this.BMBКнопкаНаборКоманды4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMBКнопкаНаборКоманды4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BMBКнопкаНаборКоманды4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BMBКнопкаНаборКоманды4.Location = new System.Drawing.Point(798, 216);
-            this.BMBКнопкаНаборКоманды4.Name = "BMBКнопкаНаборКоманды4";
-            this.BMBКнопкаНаборКоманды4.Size = new System.Drawing.Size(54, 52);
-            this.BMBКнопкаНаборКоманды4.TabIndex = 64;
-            this.BMBКнопкаНаборКоманды4.Text = "4";
-            this.BMBКнопкаНаборКоманды4.UseVisualStyleBackColor = false;
-            this.BMBКнопкаНаборКоманды4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BMBКнопкаНаборКоманды4_MouseDown);
-            this.BMBКнопкаНаборКоманды4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMBКнопкаНаборКоманды4_MouseUp);
+            this.КнопкаНаборКоманды4.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды4.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlue;
+            this.КнопкаНаборКоманды4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.КнопкаНаборКоманды4.FlatAppearance.BorderSize = 0;
+            this.КнопкаНаборКоманды4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаНаборКоманды4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.КнопкаНаборКоманды4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.КнопкаНаборКоманды4.Location = new System.Drawing.Point(798, 216);
+            this.КнопкаНаборКоманды4.Name = "КнопкаНаборКоманды4";
+            this.КнопкаНаборКоманды4.Size = new System.Drawing.Size(54, 52);
+            this.КнопкаНаборКоманды4.TabIndex = 64;
+            this.КнопкаНаборКоманды4.Text = "4";
+            this.КнопкаНаборКоманды4.UseVisualStyleBackColor = false;
+            this.КнопкаНаборКоманды4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды4_MouseDown);
+            this.КнопкаНаборКоманды4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды4_MouseUp);
             // 
-            // BMBКнопкаНаборКоманды0
+            // КнопкаНаборКоманды0
             // 
-            this.BMBКнопкаНаборКоманды0.BackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды0.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlue;
-            this.BMBКнопкаНаборКоманды0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBКнопкаНаборКоманды0.FlatAppearance.BorderSize = 0;
-            this.BMBКнопкаНаборКоманды0.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды0.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMBКнопкаНаборКоманды0.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BMBКнопкаНаборКоманды0.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BMBКнопкаНаборКоманды0.Location = new System.Drawing.Point(852, 285);
-            this.BMBКнопкаНаборКоманды0.Name = "BMBКнопкаНаборКоманды0";
-            this.BMBКнопкаНаборКоманды0.Size = new System.Drawing.Size(54, 52);
-            this.BMBКнопкаНаборКоманды0.TabIndex = 63;
-            this.BMBКнопкаНаборКоманды0.Text = "0";
-            this.BMBКнопкаНаборКоманды0.UseVisualStyleBackColor = false;
-            this.BMBКнопкаНаборКоманды0.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BMBКнопкаНаборКоманды0_MouseDown);
-            this.BMBКнопкаНаборКоманды0.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMBКнопкаНаборКоманды0_MouseUp);
+            this.КнопкаНаборКоманды0.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды0.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlue;
+            this.КнопкаНаборКоманды0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.КнопкаНаборКоманды0.FlatAppearance.BorderSize = 0;
+            this.КнопкаНаборКоманды0.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды0.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаНаборКоманды0.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.КнопкаНаборКоманды0.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.КнопкаНаборКоманды0.Location = new System.Drawing.Point(852, 285);
+            this.КнопкаНаборКоманды0.Name = "КнопкаНаборКоманды0";
+            this.КнопкаНаборКоманды0.Size = new System.Drawing.Size(54, 52);
+            this.КнопкаНаборКоманды0.TabIndex = 63;
+            this.КнопкаНаборКоманды0.Text = "0";
+            this.КнопкаНаборКоманды0.UseVisualStyleBackColor = false;
+            this.КнопкаНаборКоманды0.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды0_MouseDown);
+            this.КнопкаНаборКоманды0.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды0_MouseUp);
             // 
-            // BMBКнопкаНаборКоманды9
+            // КнопкаНаборКоманды9
             // 
-            this.BMBКнопкаНаборКоманды9.BackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды9.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlue;
-            this.BMBКнопкаНаборКоманды9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBКнопкаНаборКоманды9.FlatAppearance.BorderSize = 0;
-            this.BMBКнопкаНаборКоманды9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMBКнопкаНаборКоманды9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BMBКнопкаНаборКоманды9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BMBКнопкаНаборКоманды9.Location = new System.Drawing.Point(798, 285);
-            this.BMBКнопкаНаборКоманды9.Name = "BMBКнопкаНаборКоманды9";
-            this.BMBКнопкаНаборКоманды9.Size = new System.Drawing.Size(54, 52);
-            this.BMBКнопкаНаборКоманды9.TabIndex = 62;
-            this.BMBКнопкаНаборКоманды9.Text = "9";
-            this.BMBКнопкаНаборКоманды9.UseVisualStyleBackColor = false;
-            this.BMBКнопкаНаборКоманды9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BMBКнопкаНаборКоманды9_MouseDown);
-            this.BMBКнопкаНаборКоманды9.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMBКнопкаНаборКоманды9_MouseUp);
+            this.КнопкаНаборКоманды9.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды9.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlue;
+            this.КнопкаНаборКоманды9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.КнопкаНаборКоманды9.FlatAppearance.BorderSize = 0;
+            this.КнопкаНаборКоманды9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаНаборКоманды9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.КнопкаНаборКоманды9.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.КнопкаНаборКоманды9.Location = new System.Drawing.Point(798, 285);
+            this.КнопкаНаборКоманды9.Name = "КнопкаНаборКоманды9";
+            this.КнопкаНаборКоманды9.Size = new System.Drawing.Size(54, 52);
+            this.КнопкаНаборКоманды9.TabIndex = 62;
+            this.КнопкаНаборКоманды9.Text = "9";
+            this.КнопкаНаборКоманды9.UseVisualStyleBackColor = false;
+            this.КнопкаНаборКоманды9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды9_MouseDown);
+            this.КнопкаНаборКоманды9.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды9_MouseUp);
             // 
-            // BMBКнопкаНаборКоманды8
+            // КнопкаНаборКоманды8
             // 
-            this.BMBКнопкаНаборКоманды8.BackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды8.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlue;
-            this.BMBКнопкаНаборКоманды8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBКнопкаНаборКоманды8.FlatAppearance.BorderSize = 0;
-            this.BMBКнопкаНаборКоманды8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMBКнопкаНаборКоманды8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BMBКнопкаНаборКоманды8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BMBКнопкаНаборКоманды8.Location = new System.Drawing.Point(743, 285);
-            this.BMBКнопкаНаборКоманды8.Name = "BMBКнопкаНаборКоманды8";
-            this.BMBКнопкаНаборКоманды8.Size = new System.Drawing.Size(54, 52);
-            this.BMBКнопкаНаборКоманды8.TabIndex = 61;
-            this.BMBКнопкаНаборКоманды8.Text = "8";
-            this.BMBКнопкаНаборКоманды8.UseVisualStyleBackColor = false;
-            this.BMBКнопкаНаборКоманды8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BMBКнопкаНаборКоманды8_MouseDown);
-            this.BMBКнопкаНаборКоманды8.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMBКнопкаНаборКоманды8_MouseUp);
+            this.КнопкаНаборКоманды8.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды8.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlue;
+            this.КнопкаНаборКоманды8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.КнопкаНаборКоманды8.FlatAppearance.BorderSize = 0;
+            this.КнопкаНаборКоманды8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаНаборКоманды8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.КнопкаНаборКоманды8.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.КнопкаНаборКоманды8.Location = new System.Drawing.Point(743, 285);
+            this.КнопкаНаборКоманды8.Name = "КнопкаНаборКоманды8";
+            this.КнопкаНаборКоманды8.Size = new System.Drawing.Size(54, 52);
+            this.КнопкаНаборКоманды8.TabIndex = 61;
+            this.КнопкаНаборКоманды8.Text = "8";
+            this.КнопкаНаборКоманды8.UseVisualStyleBackColor = false;
+            this.КнопкаНаборКоманды8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды8_MouseDown);
+            this.КнопкаНаборКоманды8.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды8_MouseUp);
             // 
-            // BMBКнопкаНаборКоманды7
+            // КнопкаНаборКоманды7
             // 
-            this.BMBКнопкаНаборКоманды7.BackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды7.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlue;
-            this.BMBКнопкаНаборКоманды7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBКнопкаНаборКоманды7.FlatAppearance.BorderSize = 0;
-            this.BMBКнопкаНаборКоманды7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMBКнопкаНаборКоманды7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BMBКнопкаНаборКоманды7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BMBКнопкаНаборКоманды7.Location = new System.Drawing.Point(688, 285);
-            this.BMBКнопкаНаборКоманды7.Name = "BMBКнопкаНаборКоманды7";
-            this.BMBКнопкаНаборКоманды7.Size = new System.Drawing.Size(54, 52);
-            this.BMBКнопкаНаборКоманды7.TabIndex = 60;
-            this.BMBКнопкаНаборКоманды7.Text = "7";
-            this.BMBКнопкаНаборКоманды7.UseVisualStyleBackColor = false;
-            this.BMBКнопкаНаборКоманды7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BMBКнопкаНаборКоманды7_MouseDown);
-            this.BMBКнопкаНаборКоманды7.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMBКнопкаНаборКоманды7_MouseUp);
+            this.КнопкаНаборКоманды7.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды7.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlue;
+            this.КнопкаНаборКоманды7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.КнопкаНаборКоманды7.FlatAppearance.BorderSize = 0;
+            this.КнопкаНаборКоманды7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаНаборКоманды7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.КнопкаНаборКоманды7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.КнопкаНаборКоманды7.Location = new System.Drawing.Point(688, 285);
+            this.КнопкаНаборКоманды7.Name = "КнопкаНаборКоманды7";
+            this.КнопкаНаборКоманды7.Size = new System.Drawing.Size(54, 52);
+            this.КнопкаНаборКоманды7.TabIndex = 60;
+            this.КнопкаНаборКоманды7.Text = "7";
+            this.КнопкаНаборКоманды7.UseVisualStyleBackColor = false;
+            this.КнопкаНаборКоманды7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды7_MouseDown);
+            this.КнопкаНаборКоманды7.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды7_MouseUp);
             // 
-            // BMBКнопкаНаборКоманды6
+            // КнопкаНаборКоманды6
             // 
-            this.BMBКнопкаНаборКоманды6.BackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды6.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlue;
-            this.BMBКнопкаНаборКоманды6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBКнопкаНаборКоманды6.FlatAppearance.BorderSize = 0;
-            this.BMBКнопкаНаборКоманды6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMBКнопкаНаборКоманды6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BMBКнопкаНаборКоманды6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BMBКнопкаНаборКоманды6.Location = new System.Drawing.Point(632, 285);
-            this.BMBКнопкаНаборКоманды6.Name = "BMBКнопкаНаборКоманды6";
-            this.BMBКнопкаНаборКоманды6.Size = new System.Drawing.Size(54, 52);
-            this.BMBКнопкаНаборКоманды6.TabIndex = 59;
-            this.BMBКнопкаНаборКоманды6.Text = "6";
-            this.BMBКнопкаНаборКоманды6.UseVisualStyleBackColor = false;
-            this.BMBКнопкаНаборКоманды6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BMBКнопкаНаборКоманды6_MouseDown);
-            this.BMBКнопкаНаборКоманды6.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMBКнопкаНаборКоманды6_MouseUp);
+            this.КнопкаНаборКоманды6.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды6.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlue;
+            this.КнопкаНаборКоманды6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.КнопкаНаборКоманды6.FlatAppearance.BorderSize = 0;
+            this.КнопкаНаборКоманды6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаНаборКоманды6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.КнопкаНаборКоманды6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.КнопкаНаборКоманды6.Location = new System.Drawing.Point(632, 285);
+            this.КнопкаНаборКоманды6.Name = "КнопкаНаборКоманды6";
+            this.КнопкаНаборКоманды6.Size = new System.Drawing.Size(54, 52);
+            this.КнопкаНаборКоманды6.TabIndex = 59;
+            this.КнопкаНаборКоманды6.Text = "6";
+            this.КнопкаНаборКоманды6.UseVisualStyleBackColor = false;
+            this.КнопкаНаборКоманды6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды6_MouseDown);
+            this.КнопкаНаборКоманды6.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды6_MouseUp);
             // 
-            // BMBКнопкаНаборКоманды5
+            // КнопкаНаборКоманды5
             // 
-            this.BMBКнопкаНаборКоманды5.BackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды5.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlue;
-            this.BMBКнопкаНаборКоманды5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBКнопкаНаборКоманды5.FlatAppearance.BorderSize = 0;
-            this.BMBКнопкаНаборКоманды5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMBКнопкаНаборКоманды5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BMBКнопкаНаборКоманды5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BMBКнопкаНаборКоманды5.Location = new System.Drawing.Point(852, 216);
-            this.BMBКнопкаНаборКоманды5.Name = "BMBКнопкаНаборКоманды5";
-            this.BMBКнопкаНаборКоманды5.Size = new System.Drawing.Size(54, 52);
-            this.BMBКнопкаНаборКоманды5.TabIndex = 58;
-            this.BMBКнопкаНаборКоманды5.Text = "5";
-            this.BMBКнопкаНаборКоманды5.UseVisualStyleBackColor = false;
-            this.BMBКнопкаНаборКоманды5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BMBКнопкаНаборКоманды5_MouseDown);
-            this.BMBКнопкаНаборКоманды5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMBКнопкаНаборКоманды5_MouseUp);
+            this.КнопкаНаборКоманды5.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды5.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlue;
+            this.КнопкаНаборКоманды5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.КнопкаНаборКоманды5.FlatAppearance.BorderSize = 0;
+            this.КнопкаНаборКоманды5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаНаборКоманды5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.КнопкаНаборКоманды5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.КнопкаНаборКоманды5.Location = new System.Drawing.Point(852, 216);
+            this.КнопкаНаборКоманды5.Name = "КнопкаНаборКоманды5";
+            this.КнопкаНаборКоманды5.Size = new System.Drawing.Size(54, 52);
+            this.КнопкаНаборКоманды5.TabIndex = 58;
+            this.КнопкаНаборКоманды5.Text = "5";
+            this.КнопкаНаборКоманды5.UseVisualStyleBackColor = false;
+            this.КнопкаНаборКоманды5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды5_MouseDown);
+            this.КнопкаНаборКоманды5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды5_MouseUp);
             // 
-            // BMBКнопкаНаборКоманды3
+            // КнопкаНаборКоманды3
             // 
-            this.BMBКнопкаНаборКоманды3.BackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды3.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlue;
-            this.BMBКнопкаНаборКоманды3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBКнопкаНаборКоманды3.FlatAppearance.BorderSize = 0;
-            this.BMBКнопкаНаборКоманды3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMBКнопкаНаборКоманды3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BMBКнопкаНаборКоманды3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BMBКнопкаНаборКоманды3.Location = new System.Drawing.Point(743, 216);
-            this.BMBКнопкаНаборКоманды3.Name = "BMBКнопкаНаборКоманды3";
-            this.BMBКнопкаНаборКоманды3.Size = new System.Drawing.Size(54, 52);
-            this.BMBКнопкаНаборКоманды3.TabIndex = 57;
-            this.BMBКнопкаНаборКоманды3.Text = "3";
-            this.BMBКнопкаНаборКоманды3.UseVisualStyleBackColor = false;
-            this.BMBКнопкаНаборКоманды3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BMBКнопкаНаборКоманды3_MouseDown);
-            this.BMBКнопкаНаборКоманды3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMBКнопкаНаборКоманды3_MouseUp);
+            this.КнопкаНаборКоманды3.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды3.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlue;
+            this.КнопкаНаборКоманды3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.КнопкаНаборКоманды3.FlatAppearance.BorderSize = 0;
+            this.КнопкаНаборКоманды3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаНаборКоманды3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.КнопкаНаборКоманды3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.КнопкаНаборКоманды3.Location = new System.Drawing.Point(743, 216);
+            this.КнопкаНаборКоманды3.Name = "КнопкаНаборКоманды3";
+            this.КнопкаНаборКоманды3.Size = new System.Drawing.Size(54, 52);
+            this.КнопкаНаборКоманды3.TabIndex = 57;
+            this.КнопкаНаборКоманды3.Text = "3";
+            this.КнопкаНаборКоманды3.UseVisualStyleBackColor = false;
+            this.КнопкаНаборКоманды3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды3_MouseDown);
+            this.КнопкаНаборКоманды3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды3_MouseUp);
             // 
-            // BMBКнопкаНаборКоманды2
+            // КнопкаНаборКоманды2
             // 
-            this.BMBКнопкаНаборКоманды2.BackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды2.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlue;
-            this.BMBКнопкаНаборКоманды2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBКнопкаНаборКоманды2.FlatAppearance.BorderSize = 0;
-            this.BMBКнопкаНаборКоманды2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMBКнопкаНаборКоманды2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BMBКнопкаНаборКоманды2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BMBКнопкаНаборКоманды2.Location = new System.Drawing.Point(687, 216);
-            this.BMBКнопкаНаборКоманды2.Name = "BMBКнопкаНаборКоманды2";
-            this.BMBКнопкаНаборКоманды2.Size = new System.Drawing.Size(54, 52);
-            this.BMBКнопкаНаборКоманды2.TabIndex = 56;
-            this.BMBКнопкаНаборКоманды2.Text = "2";
-            this.BMBКнопкаНаборКоманды2.UseVisualStyleBackColor = false;
-            this.BMBКнопкаНаборКоманды2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BMBКнопкаНаборКоманды2_MouseDown);
-            this.BMBКнопкаНаборКоманды2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMBКнопкаНаборКоманды2_MouseUp);
+            this.КнопкаНаборКоманды2.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды2.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlue;
+            this.КнопкаНаборКоманды2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.КнопкаНаборКоманды2.FlatAppearance.BorderSize = 0;
+            this.КнопкаНаборКоманды2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаНаборКоманды2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.КнопкаНаборКоманды2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.КнопкаНаборКоманды2.Location = new System.Drawing.Point(687, 216);
+            this.КнопкаНаборКоманды2.Name = "КнопкаНаборКоманды2";
+            this.КнопкаНаборКоманды2.Size = new System.Drawing.Size(54, 52);
+            this.КнопкаНаборКоманды2.TabIndex = 56;
+            this.КнопкаНаборКоманды2.Text = "2";
+            this.КнопкаНаборКоманды2.UseVisualStyleBackColor = false;
+            this.КнопкаНаборКоманды2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды2_MouseDown);
+            this.КнопкаНаборКоманды2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды2_MouseUp);
             // 
-            // BMBКнопкаНаборКоманды1
+            // КнопкаНаборКоманды1
             // 
-            this.BMBКнопкаНаборКоманды1.BackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды1.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlue;
-            this.BMBКнопкаНаборКоманды1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBКнопкаНаборКоманды1.FlatAppearance.BorderSize = 0;
-            this.BMBКнопкаНаборКоманды1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMBКнопкаНаборКоманды1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMBКнопкаНаборКоманды1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BMBКнопкаНаборКоманды1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BMBКнопкаНаборКоманды1.Location = new System.Drawing.Point(631, 216);
-            this.BMBКнопкаНаборКоманды1.Name = "BMBКнопкаНаборКоманды1";
-            this.BMBКнопкаНаборКоманды1.Size = new System.Drawing.Size(54, 52);
-            this.BMBКнопкаНаборКоманды1.TabIndex = 55;
-            this.BMBКнопкаНаборКоманды1.Text = "1";
-            this.BMBКнопкаНаборКоманды1.UseVisualStyleBackColor = false;
-            this.BMBКнопкаНаборКоманды1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BMBКнопкаНаборКоманды1_MouseDown);
-            this.BMBКнопкаНаборКоманды1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMBКнопкаНаборКоманды1_MouseUp);
-            // 
-            // BMBЛампочкаРезервВкл
-            // 
-            this.BMBЛампочкаРезервВкл.BackColor = System.Drawing.Color.Transparent;
-            this.BMBЛампочкаРезервВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBЛампочкаРезервВкл.Location = new System.Drawing.Point(283, 79);
-            this.BMBЛампочкаРезервВкл.Name = "BMBЛампочкаРезервВкл";
-            this.BMBЛампочкаРезервВкл.Size = new System.Drawing.Size(86, 52);
-            this.BMBЛампочкаРезервВкл.TabIndex = 79;
-            this.BMBЛампочкаРезервВкл.TabStop = false;
-            // 
-            // BMBЛампочкаНаправление1
-            // 
-            this.BMBЛампочкаНаправление1.BackColor = System.Drawing.Color.Transparent;
-            this.BMBЛампочкаНаправление1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBЛампочкаНаправление1.Location = new System.Drawing.Point(460, 172);
-            this.BMBЛампочкаНаправление1.Name = "BMBЛампочкаНаправление1";
-            this.BMBЛампочкаНаправление1.Size = new System.Drawing.Size(27, 25);
-            this.BMBЛампочкаНаправление1.TabIndex = 80;
-            this.BMBЛампочкаНаправление1.TabStop = false;
-            // 
-            // BMBЛампочкаНаправление2
-            // 
-            this.BMBЛампочкаНаправление2.BackColor = System.Drawing.Color.Transparent;
-            this.BMBЛампочкаНаправление2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBЛампочкаНаправление2.Location = new System.Drawing.Point(484, 172);
-            this.BMBЛампочкаНаправление2.Name = "BMBЛампочкаНаправление2";
-            this.BMBЛампочкаНаправление2.Size = new System.Drawing.Size(27, 25);
-            this.BMBЛампочкаНаправление2.TabIndex = 81;
-            this.BMBЛампочкаНаправление2.TabStop = false;
-            // 
-            // BMBЛампочкаНаправление3
-            // 
-            this.BMBЛампочкаНаправление3.BackColor = System.Drawing.Color.Transparent;
-            this.BMBЛампочкаНаправление3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBЛампочкаНаправление3.Location = new System.Drawing.Point(509, 172);
-            this.BMBЛампочкаНаправление3.Name = "BMBЛампочкаНаправление3";
-            this.BMBЛампочкаНаправление3.Size = new System.Drawing.Size(27, 25);
-            this.BMBЛампочкаНаправление3.TabIndex = 82;
-            this.BMBЛампочкаНаправление3.TabStop = false;
-            // 
-            // BMBЛампочкаНаправление4
-            // 
-            this.BMBЛампочкаНаправление4.BackColor = System.Drawing.Color.Transparent;
-            this.BMBЛампочкаНаправление4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMBЛампочкаНаправление4.Location = new System.Drawing.Point(534, 172);
-            this.BMBЛампочкаНаправление4.Name = "BMBЛампочкаНаправление4";
-            this.BMBЛампочкаНаправление4.Size = new System.Drawing.Size(27, 25);
-            this.BMBЛампочкаНаправление4.TabIndex = 83;
-            this.BMBЛампочкаНаправление4.TabStop = false;
+            this.КнопкаНаборКоманды1.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды1.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlue;
+            this.КнопкаНаборКоманды1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.КнопкаНаборКоманды1.FlatAppearance.BorderSize = 0;
+            this.КнопкаНаборКоманды1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаНаборКоманды1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаНаборКоманды1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.КнопкаНаборКоманды1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.КнопкаНаборКоманды1.Location = new System.Drawing.Point(631, 216);
+            this.КнопкаНаборКоманды1.Name = "КнопкаНаборКоманды1";
+            this.КнопкаНаборКоманды1.Size = new System.Drawing.Size(54, 52);
+            this.КнопкаНаборКоманды1.TabIndex = 55;
+            this.КнопкаНаборКоманды1.Text = "1";
+            this.КнопкаНаборКоманды1.UseVisualStyleBackColor = false;
+            this.КнопкаНаборКоманды1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды1_MouseDown);
+            this.КнопкаНаборКоманды1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды1_MouseUp);
             // 
             // BMBForm
             // 
@@ -588,14 +586,14 @@
             this.Text = "БМБ";
             this.BMBPanel.ResumeLayout(false);
             this.BMBPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаПриемВызова)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаДК)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаТЧ)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаРезервВкл)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаРезервВкл)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаПриемВызова)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаДк)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаТч)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -603,27 +601,27 @@
         #endregion
 
         private System.Windows.Forms.Panel BMBPanel;
-        private System.Windows.Forms.Button BMBКнопкаНаборКоманды1;
-        private System.Windows.Forms.Button BMBКнопкаНаборКоманды4;
-        private System.Windows.Forms.Button BMBКнопкаНаборКоманды0;
-        private System.Windows.Forms.Button BMBКнопкаНаборКоманды9;
-        private System.Windows.Forms.Button BMBКнопкаНаборКоманды8;
-        private System.Windows.Forms.Button BMBКнопкаНаборКоманды7;
-        private System.Windows.Forms.Button BMBКнопкаНаборКоманды6;
-        private System.Windows.Forms.Button BMBКнопкаНаборКоманды5;
-        private System.Windows.Forms.Button BMBКнопкаНаборКоманды3;
-        private System.Windows.Forms.Button BMBКнопкаНаборКоманды2;
-        private System.Windows.Forms.Button BMBКнопкаПередачаКоманды;
-        private System.Windows.Forms.Button BMBКнопкаПередачаВызоваТЧ;
-        private System.Windows.Forms.Button BMBКнопкаПередачаВызоваДК;
-        private System.Windows.Forms.Button BMBКнопкаСлСвязь;
-        private System.Windows.Forms.Button BMBКнопкаЗвСигнал;
-        private System.Windows.Forms.Button BMBКнопкаПитание;
+        private System.Windows.Forms.Button КнопкаНаборКоманды1;
+        private System.Windows.Forms.Button КнопкаНаборКоманды4;
+        private System.Windows.Forms.Button КнопкаНаборКоманды0;
+        private System.Windows.Forms.Button КнопкаНаборКоманды9;
+        private System.Windows.Forms.Button КнопкаНаборКоманды8;
+        private System.Windows.Forms.Button КнопкаНаборКоманды7;
+        private System.Windows.Forms.Button КнопкаНаборКоманды6;
+        private System.Windows.Forms.Button КнопкаНаборКоманды5;
+        private System.Windows.Forms.Button КнопкаНаборКоманды3;
+        private System.Windows.Forms.Button КнопкаНаборКоманды2;
+        private System.Windows.Forms.Button КнопкаПередачаКоманды;
+        private System.Windows.Forms.Button КнопкаПередачаВызоваТч;
+        private System.Windows.Forms.Button КнопкаПередачаВызоваДк;
+        private System.Windows.Forms.Button КнопкаСлСвязь;
+        private System.Windows.Forms.Button КнопкаЗвСигнал;
+        private System.Windows.Forms.Button КнопкаПитание;
         private System.Windows.Forms.Button BMBПереключательНаправление;
         private System.Windows.Forms.Button BMBПереключательПодключениеРезерва;
-        private System.Windows.Forms.Button BMBПереключательРаботаКонтроль;
-        private System.Windows.Forms.PictureBox BMBЛампочкаДК;
-        private System.Windows.Forms.PictureBox BMBЛампочкаТЧ;
+        private System.Windows.Forms.Button ПереключательРаботаКонтроль;
+        private System.Windows.Forms.PictureBox ЛампочкаДк;
+        private System.Windows.Forms.PictureBox ЛампочкаТч;
         private System.Windows.Forms.Label BMBИндикаторПриемКоманды;
         private System.Windows.Forms.Label BMBИндикаторНаборКоманды;
         private System.Windows.Forms.PictureBox BMBЛампочкаПриемВызова;
