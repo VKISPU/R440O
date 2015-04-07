@@ -14,47 +14,49 @@
         public A205M_1Form()
         {
             this.InitializeComponent();
-            A205M_1Parameters.RefreshForm += RefreshFrom;
-            RefreshFrom();
+            A205M_1Parameters.RefreshForm += RefreshForm;
+            RefreshForm();
         }
 
-        private void RefreshFrom()
+        #region Инициализация элементов управления формы
+
+        private void RefreshForm()
         {
             ИндикаторКонтроль.Invalidate();
 
             ТумблерКЭД.BackgroundImage = A205M_1Parameters.ТумблерКЭД
                 ? ControlElementImages.tumblerType6Up
                 : ControlElementImages.tumblerType6Down;
-            
-            var angle = A205M_1Parameters.ПереключательВолнаX10000 * 35 - 90;
+
+            var angle = A205M_1Parameters.ПереключательВолнаX10000*35 - 90;
             ПереключательВолнаX10000.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
-            angle = A205M_1Parameters.ПереключательВолнаX1000 * 35 - 160;
+            angle = A205M_1Parameters.ПереключательВолнаX1000*35 - 160;
             ПереключательВолнаX1000.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
-            angle = A205M_1Parameters.ПереключательВолнаX100 * 35 - 160;
+            angle = A205M_1Parameters.ПереключательВолнаX100*35 - 160;
             ПереключательВолнаX100.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
-            angle = A205M_1Parameters.ПереключательВолнаX10 * 35 - 160;
+            angle = A205M_1Parameters.ПереключательВолнаX10*35 - 160;
             ПереключательВолнаX10.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
-            angle = A205M_1Parameters.ПереключательВолнаX1 * 35 - 160;
+            angle = A205M_1Parameters.ПереключательВолнаX1*35 - 160;
             ПереключательВолнаX1.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
-            angle = A205M_1Parameters.ПереключательКонтроль * 30 - 180;
+            angle = A205M_1Parameters.ПереключательКонтроль*30 - 180;
             ПереключательКонтроль.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
-            angle = A205M_1Parameters.ПереключательВидРаботы * 30 - 75;
+            angle = A205M_1Parameters.ПереключательВидРаботы*30 - 75;
             ПереключательВидРаботы.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
-            angle = A205M_1Parameters.ПереключательВходЧТ * 30 - 60;
+            angle = A205M_1Parameters.ПереключательВходЧТ*30 - 60;
             ПереключательВходЧТ.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
@@ -63,20 +65,36 @@
                 : null;
         }
 
+        private void ИндикаторКонтроль_Paint(object sender, PaintEventArgs e)
+        {
+            switch (A205M_1Parameters.ИндикаторКонтроль)
+            {
+                case 0:
+                    TransformImageHelper.DrawLine(e.Graphics, 10, 40, 60, 80);
+                    break;
+                case 27:
+                    TransformImageHelper.DrawLine(e.Graphics, 65, 20, 60, 80);
+                    break;
+            }
+        }
+
+        #endregion
+
         private void A205M_1ПереключательКЭД_Click(object sender, System.EventArgs e)
         {
-            A205M_1Parameters.ТумблерКЭД = ! A205M_1Parameters.ТумблерКЭД;
+            A205M_1Parameters.ТумблерКЭД = !A205M_1Parameters.ТумблерКЭД;
         }
 
         #region Отображение на дисплее текущей выбранной волны
+
         private void A205M_1КнопкаОтсчет_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаОтсчет.BackgroundImage = null;
             Дисплей.Text = A205M_1Parameters.ПереключательВолнаX10000 + "  " +
-                                  A205M_1Parameters.ПереключательВолнаX1000 + "  " +
-                                  A205M_1Parameters.ПереключательВолнаX100 + "  " +
-                                  A205M_1Parameters.ПереключательВолнаX10 + "  " +
-                                  A205M_1Parameters.ПереключательВолнаX1;
+                           A205M_1Parameters.ПереключательВолнаX1000 + "  " +
+                           A205M_1Parameters.ПереключательВолнаX100 + "  " +
+                           A205M_1Parameters.ПереключательВолнаX10 + "  " +
+                           A205M_1Parameters.ПереключательВолнаX1;
 
         }
 
@@ -84,10 +102,12 @@
         {
             КнопкаОтсчет.BackgroundImage = ControlElementImages.buttonRoundType6;
             Дисплей.Text = string.Empty;
-        } 
+        }
+
         #endregion
 
         #region Установка переключателей волны
+
         private void A205M_1ПереключательВолнаX10000_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -151,10 +171,12 @@
             {
                 A205M_1Parameters.ПереключательВолнаX1 -= 1;
             }
-        } 
+        }
+
         #endregion
 
         #region Переключатели контроля, вида работы, входы чт
+
         private void A205M_1ПереключательКонтроль_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -192,20 +214,8 @@
             {
                 A205M_1Parameters.ПереключательВходЧТ -= 1;
             }
-        } 
-        #endregion
-
-        private void ИндикаторКонтроль_Paint(object sender, PaintEventArgs e)
-        {
-            switch (A205M_1Parameters.ИндикаторКонтроль)
-            {
-                case 0:
-                    TransformImageHelper.DrawLine(e.Graphics, 10, 40, 60, 80);
-                    break;
-                case 27:
-                    TransformImageHelper.DrawLine(e.Graphics, 65, 20, 60, 80);
-                    break;
-            }
         }
+
+        #endregion
     }
 }

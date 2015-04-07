@@ -1,163 +1,237 @@
-﻿namespace R440O.Parameters
+﻿using R440O.R440OForms.N18_M;
+using R440O.R440OForms.N502B;
+using R440O.R440OForms.NKN_2;
+
+namespace R440O.R440OForms.A205M_2
 {
     public class A205M_2Parameters
     {
 
         #region Private fields
-        private static int _а205M_2ПереключательВолнаX10000 = 0;
-        private static int _а205M_2ПереключательВолнаХ1000 = 0;
-        private static int _а205M_2ПереключательВолнаХ100 = 0;
-        private static int _а205M_2ПереключательВолнаХ10 = 0;
-        private static int _а205M_2ПереключательВолнаХ1 = 0;
-        private static int _а205M_2ПереключательКонтроль = 1;
-        private static int _а205M_2ПереключательВидРаботы = 1;
-        private static int _а205M_2ПереключательВходЧТ = 1;
+        private static int _переключательВолнаX10000 = 0;
+        private static int _переключательВолнаХ1000 = 0;
+        private static int _переключательВолнаХ100 = 0;
+        private static int _переключательВолнаХ10 = 0;
+        private static int _переключательВолнаХ1 = 0;
+        private static int _переключательКонтроль = 1;
+        private static int _переключательВидРаботы = 1;
+        private static int _переключательВходЧТ = 1;
         #endregion
 
+        #region Работа блока
         ////Лампочки
-        public static bool A205M_2ЛампочкаНормРаб;
-        public static bool A205M_2ЛампочкаПерегрев;
+        private static bool _лампочкаНормРаб;
+        public static bool ЛампочкаНормРаб
+        {
+            get { return _лампочкаНормРаб; }
+            set
+            {
+                _лампочкаНормРаб = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
 
+        public static bool ЛампочкаПерегрев;
+
+        private static bool _тумблерКЭД;
         ////Тумблеры
         /// <summary>
         /// Получает или задает положение тумблера КЭД
         /// </summary>
-        public static bool A205M_2ТумблерКЭД = false;
-
-        //Переключатели
-        #region Переключатели волны
-        public static int A205M_2ПереключательВолнаX10000
+        public static bool ТумблерКЭД
         {
-            get { return _а205M_2ПереключательВолнаX10000; }
+            get { return _тумблерКЭД; }
+            set
+            {
+                _тумблерКЭД = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+        #endregion
+
+        #region Переключатели волны
+        public static int ПереключательВолнаX10000
+        {
+            get { return _переключательВолнаX10000; }
 
             set
             {
                 if (value > -1 && value < 6)
                 {
-                    _а205M_2ПереключательВолнаX10000 = value;
+                    _переключательВолнаX10000 = value;
+                    if (RefreshForm != null) RefreshForm();
                 }
             }
         }
 
-        public static int A205M_2ПереключательВолнаX1000
+        public static int ПереключательВолнаX1000
         {
-            get { return _а205M_2ПереключательВолнаХ1000; }
+            get { return _переключательВолнаХ1000; }
 
             set
             {
                 if (value > -1 && value < 10)
                 {
-                    _а205M_2ПереключательВолнаХ1000 = value;
+                    _переключательВолнаХ1000 = value;
+                    if (RefreshForm != null) RefreshForm();
                 }
             }
         }
 
-        public static int A205M_2ПереключательВолнаX100
+        public static int ПереключательВолнаX100
         {
-            get { return _а205M_2ПереключательВолнаХ100; }
+            get { return _переключательВолнаХ100; }
 
             set
             {
                 if (value > -1 && value < 10)
                 {
-                    _а205M_2ПереключательВолнаХ100 = value;
+                    _переключательВолнаХ100 = value;
+                    if (RefreshForm != null) RefreshForm();
                 }
             }
         }
 
-        public static int A205M_2ПереключательВолнаX10
+        public static int ПереключательВолнаX10
         {
-            get { return _а205M_2ПереключательВолнаХ10; }
+            get { return _переключательВолнаХ10; }
 
             set
             {
                 if (value > -1 && value < 10)
                 {
-                    _а205M_2ПереключательВолнаХ10 = value;
+                    _переключательВолнаХ10 = value;
+                    if (RefreshForm != null) RefreshForm();
                 }
             }
         }
 
-        public static int A205M_2ПереключательВолнаX1
+        public static int ПереключательВолнаX1
         {
-            get { return _а205M_2ПереключательВолнаХ1; }
+            get { return _переключательВолнаХ1; }
 
             set
             {
                 if (value > -1 && value < 10)
                 {
-                    _а205M_2ПереключательВолнаХ1 = value;
+                    _переключательВолнаХ1 = value;
+                    if (RefreshForm != null) RefreshForm();
                 }
             }
         }
         #endregion
 
-        #region ПереключательКонтроль
-        public static int A205M_2ПереключательКонтроль
+        #region Контроль блока
+        public static int ПереключательКонтроль
         {
-            get { return _а205M_2ПереключательКонтроль; }
+            get { return _переключательКонтроль; }
 
             set
             {
                 if (value > 0 && value < 11)
                 {
-                    _а205M_2ПереключательКонтроль = value;
+                    _переключательКонтроль = value;
+                    if (RefreshForm != null) RefreshForm();
                 }
             }
         }
 
-        public static string[,] A205M_2ЗначенияПереключательКонтроль = { { "ППВ", "0" },
-            { "ГИ", "0" },
-            { "Д", "0" },
-            { "ОГ", "0" },
-            { "СЧ1", "0" },
-            { "СЧ2", "0" },
-            { "НП", "0" },
-            { "ВЫХ-85", "0" },
-            { "ЧТ-ВТ", "0" },
-            { "ВБВ", "0" }
-        };
+        /// <summary>
+        /// 1 - ППВ,
+        /// 2 - ГИ1,
+        /// 3 - Д,
+        /// 4 - ОГ,
+        /// 5 - СЧ1,
+        /// 6 - СЧ2,
+        /// 7 - НП,
+        /// 8 - ВЫХ-85,
+        /// 9 - ЧТ-ВТ,
+        /// 10 - ВБВ
+        /// </summary>
+        public static int ИндикаторКонтроль
+        {
+            get
+            {
+                if ((N502BParameters.ЛампочкаСфазировано
+                     && N502BParameters.ТумблерЭлектрооборудование
+                     && N502BParameters.ТумблерВыпрямитель27В))
+                {
+                    switch (_переключательКонтроль)
+                    {
+                        case 4:
+                        case 7:
+                            return 27;
+                        case 1:
+                        case 2:
+                        case 3:
+                        case 5:
+                        case 6:
+                        case 8:
+                        case 9:
+                        case 10:
+                            return ЛампочкаНормРаб ? 27 : 0;
+                    }
+                }
+                return 0;
+            }
+        }
         #endregion
 
         #region ПереключательВидРаботы
-        public static int A205M_2ПереключательВидРаботы
+        /// <summary>
+        /// 1 - ЧТ-200,
+        /// 2 - ЧТ-20,
+        /// 3 - ОФТ2,4-5,2,
+        /// 4 - ОФТ48
+        /// </summary>
+        public static int ПереключательВидРаботы
         {
-            get { return _а205M_2ПереключательВидРаботы; }
+            get { return _переключательВидРаботы; }
 
             set
             {
                 if (value > 0 && value < 5)
                 {
-                    _а205M_2ПереключательВидРаботы = value;
+                    _переключательВидРаботы = value;
+                    if (RefreshForm != null) RefreshForm();
                 }
             }
         }
-
-        public static string[] A205M_2ЗначенияПереключательВидРаботы =
-        {
-            "ЧТ-200", 
-            "ЧТ-20", 
-            "ОФТ2,4-5,2", 
-            "ОФТ48"
-        };
         #endregion
 
         #region ПереключательВходЧТ
-        public static int A205M_2ПереключательВходЧТ
+        public static int ПереключательВходЧТ
         {
-            get { return _а205M_2ПереключательВходЧТ; }
+            get { return _переключательВходЧТ; }
 
             set
             {
                 if (value > 0 && value < 4)
                 {
-                    _а205M_2ПереключательВходЧТ = value;
+                    _переключательВходЧТ = value;
+                    if (RefreshForm != null) RefreshForm();
                 }
             }
         }
         #endregion
 
-        //Индикатор
-        private static int A205M_2ИндикаторКонтроль;
+        #region Обновление переменных и формы
+
+        public static void ResetParameters()
+        {
+            ЛампочкаНормРаб = NKN_2Parameters.ЛампочкиФаз[0] && (N18_MParameters.N18MПереключательВходК121 == 1);
+        }
+
+        /// <summary>
+        /// Обновление показателей индикаторов
+        /// </summary>
+        public static void RefreshIndicators()
+        {
+            if (RefreshForm != null) RefreshForm();
+        }
+
+        public delegate void VoidVoidSignature();
+        public static event VoidVoidSignature RefreshForm;
+        #endregion
     }
 }

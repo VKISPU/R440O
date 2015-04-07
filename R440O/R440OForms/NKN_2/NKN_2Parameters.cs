@@ -1,4 +1,5 @@
-﻿using R440O.R440OForms.N502B;
+﻿using R440O.R440OForms.A205M_2;
+using R440O.R440OForms.N502B;
 
 namespace R440O.R440OForms.NKN_2
 {
@@ -51,6 +52,7 @@ namespace R440O.R440OForms.NKN_2
             {
                 ЛампочкиФаз[i] = isEnable;
             }
+            A205M_2Parameters.ResetParameters();
             if (RefreshForm != null) RefreshForm();
         }
         #endregion
