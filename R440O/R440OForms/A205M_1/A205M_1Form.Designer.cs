@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.Panel = new System.Windows.Forms.Panel();
+            this.ПереключательВолнаX1000 = new System.Windows.Forms.Button();
             this.ИндикаторКонтроль = new System.Windows.Forms.PictureBox();
             this.ЛампочкаПерегрев = new System.Windows.Forms.PictureBox();
             this.ЛампочкаНормРаб = new System.Windows.Forms.PictureBox();
@@ -39,7 +40,6 @@
             this.ПереключательВолнаX1 = new System.Windows.Forms.Button();
             this.ПереключательВолнаX10 = new System.Windows.Forms.Button();
             this.ПереключательВолнаX100 = new System.Windows.Forms.Button();
-            this.ПереключательВолнаX1000 = new System.Windows.Forms.Button();
             this.ПереключательВолнаX10000 = new System.Windows.Forms.Button();
             this.КнопкаОтсчет = new System.Windows.Forms.Button();
             this.ТумблерКЭД = new System.Windows.Forms.Button();
@@ -72,6 +72,22 @@
             this.Panel.Size = new System.Drawing.Size(1099, 428);
             this.Panel.TabIndex = 0;
             // 
+            // ПереключательВолнаX1000
+            // 
+            this.ПереключательВолнаX1000.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательВолнаX1000.BackgroundImage = global::R440O.ControlElementImages.toggleType6;
+            this.ПереключательВолнаX1000.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательВолнаX1000.FlatAppearance.BorderSize = 0;
+            this.ПереключательВолнаX1000.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательВолнаX1000.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательВолнаX1000.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательВолнаX1000.Location = new System.Drawing.Point(434, 151);
+            this.ПереключательВолнаX1000.Name = "ПереключательВолнаX1000";
+            this.ПереключательВолнаX1000.Size = new System.Drawing.Size(100, 100);
+            this.ПереключательВолнаX1000.TabIndex = 2;
+            this.ПереключательВолнаX1000.UseVisualStyleBackColor = false;
+            this.ПереключательВолнаX1000.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_1ПереключательВолнаX1000_MouseUp);
+            // 
             // ИндикаторКонтроль
             // 
             this.ИндикаторКонтроль.BackColor = System.Drawing.Color.Transparent;
@@ -96,10 +112,11 @@
             // ЛампочкаНормРаб
             // 
             this.ЛампочкаНормРаб.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаНормРаб.BackgroundImage = global::R440O.ControlElementImages.lampType13OnGreen;
             this.ЛампочкаНормРаб.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаНормРаб.Location = new System.Drawing.Point(829, 66);
+            this.ЛампочкаНормРаб.Location = new System.Drawing.Point(826, 63);
             this.ЛампочкаНормРаб.Name = "ЛампочкаНормРаб";
-            this.ЛампочкаНормРаб.Size = new System.Drawing.Size(32, 31);
+            this.ЛампочкаНормРаб.Size = new System.Drawing.Size(35, 35);
             this.ЛампочкаНормРаб.TabIndex = 63;
             this.ЛампочкаНормРаб.TabStop = false;
             // 
@@ -213,22 +230,6 @@
             this.ПереключательВолнаX100.TabIndex = 2;
             this.ПереключательВолнаX100.UseVisualStyleBackColor = false;
             this.ПереключательВолнаX100.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_1ПереключательВолнаX100_MouseUp);
-            // 
-            // ПереключательВолнаX1000
-            // 
-            this.ПереключательВолнаX1000.BackColor = System.Drawing.Color.Transparent;
-            this.ПереключательВолнаX1000.BackgroundImage = global::R440O.ControlElementImages.toggleType6;
-            this.ПереключательВолнаX1000.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ПереключательВолнаX1000.FlatAppearance.BorderSize = 0;
-            this.ПереключательВолнаX1000.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.ПереключательВолнаX1000.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.ПереключательВолнаX1000.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ПереключательВолнаX1000.Location = new System.Drawing.Point(434, 151);
-            this.ПереключательВолнаX1000.Name = "ПереключательВолнаX1000";
-            this.ПереключательВолнаX1000.Size = new System.Drawing.Size(100, 100);
-            this.ПереключательВолнаX1000.TabIndex = 2;
-            this.ПереключательВолнаX1000.UseVisualStyleBackColor = false;
-            this.ПереключательВолнаX1000.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_1ПереключательВолнаX1000_MouseUp);
             // 
             // ПереключательВолнаX10000
             // 

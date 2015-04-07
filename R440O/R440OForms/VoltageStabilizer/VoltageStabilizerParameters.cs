@@ -38,6 +38,17 @@ namespace R440O.R440OForms.VoltageStabilizer
         /// </summary>
         private static int _переключательКонтрольНапр = 1;
 
+        public static int ПереключательКонтрольНапр
+        {
+            get { return _переключательКонтрольНапр; }
+
+            set
+            {
+                if (value > 0 && value < 13) _переключательКонтрольНапр = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
         /// <summary>
         /// Названия положений:
         /// 1 - линейное_ca,
@@ -53,17 +64,6 @@ namespace R440O.R440OForms.VoltageStabilizer
         /// 11 - фазное_0b,
         /// 12 - фазное_0a
         /// </summary>
-        public static int ПереключательКонтрольНапр
-        {
-            get { return _переключательКонтрольНапр; }
-
-            set
-            {
-                if (value > 0 && value < 13) _переключательКонтрольНапр = value;
-                if (RefreshForm != null) RefreshForm();
-            }
-        }
-
         public static int ИндикаторНапряжение
         {
             get

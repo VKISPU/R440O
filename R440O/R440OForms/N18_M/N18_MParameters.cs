@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using R440O.R440OForms.A205M_1;
 
-namespace R440O.Parameters
+namespace R440O.R440OForms.N18_M
 {
     class N18_MParameters
     {
@@ -234,29 +230,24 @@ namespace R440O.Parameters
         #endregion
 
         #region N18_MПереключательВходК1_2_1
+        private static int _n18MПереключательВходК121 = 1;
+        
         /// <summary>
         /// Положение переключателя ВходК1-2-1
+        /// 1 - откл,
+        /// 2 - бма-1,
+        /// 3 - бма-2,
+        /// 4 - щв
         /// </summary>
-        private static int _N18_MПереключательВходК1_2_1 = 3;
-
-        public static int N18_MПереключательВходК1_2_1
+        public static int N18MПереключательВходК121
         {
-            get { return _N18_MПереключательВходК1_2_1; }
+            get { return _n18MПереключательВходК121; }
             set
             {
-                if (value > 0 && value < 5) _N18_MПереключательВходК1_2_1 = value;
+                if (value > 0 && value < 5) _n18MПереключательВходК121 = value;
+                A205M_1Parameters.ResetParameters();
             }
         }
-
-        /// <summary>
-        /// Названия положений переключателя ВходК1-2-1
-        /// </summary>
-        private static string[] N18_MПоложенияПереключательВходК1_2_1 = {
-            "откл",
-            "бма-1",
-            "бма-2",
-            "щв"
-        };
         #endregion
 
         #region ПереключательПРМ1

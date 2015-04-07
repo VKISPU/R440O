@@ -122,15 +122,15 @@ namespace R440O.R440OForms.N18_M
         {
             if (e.Button == MouseButtons.Left)
             {
-                N18_MParameters.N18_MПереключательВходК1_2_1 += 1;
+                N18_MParameters.N18MПереключательВходК121 += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                N18_MParameters.N18_MПереключательВходК1_2_1 -= 1;
+                N18_MParameters.N18MПереключательВходК121 -= 1;
             }
 
-            var angle = N18_MParameters.N18_MПереключательВходК1_2_1 * 40 - 120;
+            var angle = N18_MParameters.N18MПереключательВходК121 * 40 - 120;
             N18_MПереключательВходК1_2_1.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
@@ -285,7 +285,7 @@ namespace R440O.R440OForms.N18_M
             N18_MПереключательПРМ2.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = N18_MParameters.N18_MПереключательВходК1_2_1 * 40 - 120;
+            angle = N18_MParameters.N18MПереключательВходК121 * 40 - 120;
             N18_MПереключательВходК1_2_1.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 

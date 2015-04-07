@@ -1,13 +1,6 @@
-﻿//-----------------------------------------------------------------------
-// <copyright file="A205M_1Form.cs" company="VKISPU">
-//      R440O station.
-// </copyright>
-//-----------------------------------------------------------------------
-
-namespace R440O.R440OForms.A205M_1
+﻿namespace R440O.R440OForms.A205M_1
 {
     using System.Windows.Forms;
-    using Parameters;
     using ThirdParty;
 
     /// <summary>
@@ -64,6 +57,10 @@ namespace R440O.R440OForms.A205M_1
             angle = A205M_1Parameters.ПереключательВходЧТ * 30 - 60;
             ПереключательВходЧТ.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
+
+            ЛампочкаНормРаб.BackgroundImage = A205M_1Parameters.ЛампочкаНормРаб
+                ? ControlElementImages.lampType13OnGreen
+                : null;
         }
 
         private void A205M_1ПереключательКЭД_Click(object sender, System.EventArgs e)

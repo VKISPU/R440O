@@ -1,4 +1,6 @@
-﻿using R440O.R440OForms.N502B;
+﻿using R440O.R440OForms.N18_M;
+using R440O.R440OForms.N502B;
+using R440O.R440OForms.NKN_1;
 
 namespace R440O.R440OForms.A205M_1
 {
@@ -15,9 +17,20 @@ namespace R440O.R440OForms.A205M_1
         private static int _переключательВидРаботы = 1;
         private static int _переключательВходЧТ = 1;
         #endregion
-        
+
+        #region Работа блока
         ////Лампочки
-        public static bool ЛампочкаНормРаб;
+        private static bool _лампочкаНормРаб;
+        public static bool ЛампочкаНормРаб
+        {
+            get { return _лампочкаНормРаб; }
+            set
+            {
+                _лампочкаНормРаб = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
         public static bool ЛампочкаПерегрев;
 
         private static bool _тумблерКЭД;
@@ -27,13 +40,14 @@ namespace R440O.R440OForms.A205M_1
         /// </summary>
         public static bool ТумблерКЭД
         {
-            get { return _тумблерКЭД;}
+            get { return _тумблерКЭД; }
             set
             {
                 _тумблерКЭД = value;
                 if (RefreshForm != null) RefreshForm();
             }
-        }
+        } 
+        #endregion
 
         #region Переключатели волны
         public static int ПереключательВолнаX10000
@@ -107,19 +121,7 @@ namespace R440O.R440OForms.A205M_1
         } 
         #endregion
 
-        #region ПереключательКонтроль
-        /// <summary>
-        /// 1 - ППВ,
-        /// 2 - ГИ1,
-        /// 3 - Д,
-        /// 4 - ОГ,
-        /// 5 - СЧ1,
-        /// 6 - СЧ2,
-        /// 7 - НП,
-        /// 8 - ВЫХ-85,
-        /// 9 - ЧТ-ВТ,
-        /// 10 - ВБВ
-        /// </summary>
+        #region Контроль блока
         public static int ПереключательКонтроль
         {
             get { return _переключательКонтроль; }
@@ -134,30 +136,41 @@ namespace R440O.R440OForms.A205M_1
             }
         }
 
+        /// <summary>
+        /// 1 - ППВ,
+        /// 2 - ГИ1,
+        /// 3 - Д,
+        /// 4 - ОГ,
+        /// 5 - СЧ1,
+        /// 6 - СЧ2,
+        /// 7 - НП,
+        /// 8 - ВЫХ-85,
+        /// 9 - ЧТ-ВТ,
+        /// 10 - ВБВ
+        /// </summary>
         public static int ИндикаторКонтроль
         {
             get
             {
-                if (!(N502BParameters.ЛампочкаСфазировано
-                          && N502BParameters.ТумблерЭлектрооборудование
-                          && N502BParameters.ТумблерВыпрямитель27В)) return 0;
-                switch (_переключательКонтроль)
+                if ((N502BParameters.ЛампочкаСфазировано
+                     && N502BParameters.ТумблерЭлектрооборудование
+                     && N502BParameters.ТумблерВыпрямитель27В))
                 {
-                    case 1:
-                    case 2:
-                    case 3:
-                        return 0;
-                    case 4:
-                        return 27;
-                    case 5:
-                    case 6:
-                        return 0;
-                    case 7:
-                        return 27;
-                    case 8:
-                    case 9:
-                    case 10:
-                        return 0;
+                    switch (_переключательКонтроль)
+                    {
+                        case 4:
+                        case 7:
+                            return 27;
+                        case 1:
+                        case 2:
+                        case 3:
+                        case 5:
+                        case 6:
+                        case 8:
+                        case 9:
+                        case 10:
+                            return ЛампочкаНормРаб ? 27 : 0;
+                    }
                 }
                 return 0;
             }
@@ -206,7 +219,7 @@ namespace R440O.R440OForms.A205M_1
 
         public static void ResetParameters()
         {
-            
+            ЛампочкаНормРаб = NKN_1Parameters.ЛампочкиФаз[0] && (N18_MParameters.N18MПереключательВходК121 == 1);
         }
 
         /// <summary>
