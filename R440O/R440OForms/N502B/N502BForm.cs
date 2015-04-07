@@ -26,6 +26,7 @@ namespace R440O.R440OForms.N502B
             N502BParameters.RefreshForm += InitializeLamps;
             N502BParameters.RefreshForm += ИндикаторНапряжение.Invalidate;
             N502BParameters.RefreshForm += ИндикаторКонтрольНапряжения.Invalidate;
+            N502BParameters.RefreshForm += ИндикаторТокНагрузкиИЗаряда.Invalidate;
 
         }
 
@@ -412,9 +413,21 @@ namespace R440O.R440OForms.N502B
 
         #endregion
 
-        
+        private void ИндикаторТокНагрузкиИЗаряда_Paint(object sender, PaintEventArgs e)
+        {
+            if (N502BParameters.ПереключательТокНагрузкиИЗаряда < 5)
+            {
+                DrawLine(e.Graphics, N502BParameters.ИндикаторТокНагрузкиИЗаряда, 40 - N502BParameters.ИндикаторТокНагрузкиИЗаряда, 45, 70);
+            }
+            else
+            {
+                DrawLine(e.Graphics, N502BParameters.ИндикаторТокНагрузкиИЗаряда, 40 - N502BParameters.ИндикаторТокНагрузкиИЗаряда / 2, 45, 70);
+            }
+        }
 
-        
+
+
+
 
     }
 }

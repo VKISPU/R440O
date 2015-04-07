@@ -268,6 +268,19 @@ namespace R440O.R440OForms.N502B
             }
         }
 
+        public static int ИндикаторТокНагрузкиИЗаряда
+        {
+            get
+            {
+                if (ЛампочкаСфазировано && ТумблерЭлектрооборудование)
+                {
+                    return ПереключательТокНагрузкиИЗаряда * 5;
+                }
+                    
+                return 0;
+            }
+        }
+
         public delegate void VoidVoidSignature();
         public static event VoidVoidSignature RefreshForm;
 
