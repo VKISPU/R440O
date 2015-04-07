@@ -4,6 +4,8 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+using R440O.R440OForms.N15;
+
 namespace R440O.R440OForms.A304
 {
     using System.Windows.Forms;
@@ -59,9 +61,9 @@ namespace R440O.R440OForms.A304
             }
             else
             {
-                A304Parameters.A304Комплект1 = N15Parameters.Н15ТумблерА30412 == "1";
+                A304Parameters.A304Комплект1 = N15Parameters.ТумблерА30412;
 
-                A304Лампочка1К.BackgroundImage = N15Parameters.Н15ТумблерА30412 == "1"
+                A304Лампочка1К.BackgroundImage = N15Parameters.ТумблерА30412
                     ? ControlElementImages.lampType10OnGreen
                     : null;
             }
@@ -74,8 +76,8 @@ namespace R440O.R440OForms.A304
             }
             else
             {
-                A304Parameters.A304Комплект2 = N15Parameters.Н15ТумблерА30412 == "2";
-                A304Лампочка2К.BackgroundImage = N15Parameters.Н15ТумблерА30412 == "2"
+                A304Parameters.A304Комплект2 = !N15Parameters.ТумблерА30412;
+                A304Лампочка2К.BackgroundImage = !N15Parameters.ТумблерА30412
                     ? ControlElementImages.lampType10OnGreen
                     : null;
             }
@@ -312,7 +314,7 @@ namespace R440O.R440OForms.A304
             {
                 case 1:
                 {
-                    A304Parameters.A304Комплект1 = N15Parameters.Н15ТумблерА30412 == "1" && N15Parameters.Н15ЛампочкаМШУ == "true";
+                    A304Parameters.A304Комплект1 = N15Parameters.ТумблерА30412 && N15Parameters.ЛампочкаМШУ;
                     A304Лампочка1К.BackgroundImage = A304Parameters.A304Комплект1
                         ? ControlElementImages.lampType10OnGreen
                         : null;
@@ -320,7 +322,7 @@ namespace R440O.R440OForms.A304
                     break;
                 case 2:
                 {
-                    A304Parameters.A304Комплект2 = N15Parameters.Н15ТумблерА30412 == "2" && N15Parameters.Н15ЛампочкаМШУ == "true";
+                    A304Parameters.A304Комплект2 = !N15Parameters.ТумблерА30412 && N15Parameters.ЛампочкаМШУ;
                     A304Лампочка2К.BackgroundImage = A304Parameters.A304Комплект2
                         ? ControlElementImages.lampType10OnGreen
                         : null;

@@ -1,0 +1,335 @@
+﻿using System.Runtime.CompilerServices;
+
+namespace R440O.R440OForms.N15
+{
+    public static class N15LocalParameters
+    {
+        public static bool _локТумблерЦ300М1;
+        public static bool _локТумблерЦ300М2;
+        public static bool _локТумблерЦ300М3;
+        public static bool _локТумблерЦ300М4;
+        public static bool _локТумблерН12С;
+        public static bool _локТумблерМШУ;
+        public static bool _локТумблерБМА_1;
+        public static bool _локТумблерБМА_2;
+        public static bool _локТумблерА205;
+        public static bool _локТумблерА20512;
+        public static bool _локТумблерАФСС;
+        public static bool _локТумблерА1;
+        public static bool _локТумблерА403;
+        public static bool _локТумблерК1_1;
+        public static bool _локТумблерК1_2;
+        public static bool _локТумблерА30412;
+        public static bool _локТумблерБ1_1;
+        public static bool _локТумблерБ1_2;
+        public static bool _локТумблерБ2_1;
+        public static bool _локТумблерБ2_2;
+        public static bool _локТумблерБ3_1;
+        public static bool _локТумблерБ3_2;
+        public static bool _локТумблерДАБ_5;
+        public static bool _локТумблерР_Н;
+        public static bool _локТумблерАнтЭкв;
+        public static bool _локТумблерТлфТлгПрм;
+        public static bool _локТумблерТлфТлгПрд;
+        public static bool _локКнопкаН131;
+        public static bool _локКнопкаН132;
+        public static bool _локКнопкаН1312;
+        ////Тумблеры
+        public static bool локТумблерЦ300М1
+        {
+            get { return _локТумблерЦ300М1; }
+            set
+            {
+                _локТумблерЦ300М1 = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool локТумблерЦ300М2
+        {
+            get { return _локТумблерЦ300М2; }
+            set
+            {
+                _локТумблерЦ300М2 = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool локТумблерЦ300М3
+        {
+            get { return _локТумблерЦ300М3; }
+            set
+            {
+                _локТумблерЦ300М3 = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool локТумблерЦ300М4
+        {
+            get { return _локТумблерЦ300М4; }
+            set
+            {
+                _локТумблерЦ300М4 = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool локТумблерН12С
+        {
+            get { return _локТумблерН12С; }
+            set
+            {
+                _локТумблерН12С = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool локТумблерМШУ
+        {
+            get { return _локТумблерМШУ; }
+            set
+            {
+                _локТумблерМШУ = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool локТумблерБМА_1
+        {
+            get { return _локТумблерБМА_1; }
+            set
+            {
+                _локТумблерБМА_1 = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool локТумблерБМА_2
+        {
+            get { return _локТумблерБМА_2; }
+            set
+            {
+                _локТумблерБМА_2 = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool локТумблерА205
+        {
+            get
+            {
+                return _локТумблерА205;
+            }
+            set { _локТумблерА205 = value; if (RefreshForm != null) RefreshForm(); }
+        }
+
+        public static bool локТумблерА20512
+        {
+            get { return _локТумблерА20512; }
+            set
+            {
+                _локТумблерА20512 = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool локТумблерАФСС
+        {
+            get { return _локТумблерАФСС; }
+            set
+            {
+                _локТумблерАФСС = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool локТумблерА1
+        {
+            get { return _локТумблерА1; }
+            set
+            {
+                _локТумблерА1 = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool локТумблерА403
+        {
+            get { return _локТумблерА403; }
+            set
+            {
+                _локТумблерА403 = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool локТумблерК1_1
+        {
+            get { return _локТумблерК1_1; }
+            set
+            {
+                _локТумблерК1_1 = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool локТумблерК1_2
+        {
+            get { return _локТумблерК1_2; }
+            set { _локТумблерК1_2 = value; if (RefreshForm != null) RefreshForm(); }
+        }
+
+        public static bool локТумблерА30412
+        {
+            get { return _локТумблерА30412; }
+            set { _локТумблерА30412 = value; if (RefreshForm != null) RefreshForm(); }
+        }
+
+        public static bool локТумблерБ1_1
+        {
+            get { return _локТумблерБ1_1; }
+            set
+            {
+                _локТумблерБ1_1 = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool локТумблерБ1_2
+        {
+            get { return _локТумблерБ1_2; }
+            set
+            {
+                _локТумблерБ1_2 = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool локТумблерБ2_1
+        {
+            get { return _локТумблерБ2_1; }
+            set
+            {
+                _локТумблерБ2_1 = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool локТумблерБ2_2
+        {
+            get { return _локТумблерБ2_2; }
+            set
+            {
+                _локТумблерБ2_2 = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool локТумблерБ3_1
+        {
+            get { return _локТумблерБ3_1; }
+            set
+            {
+                _локТумблерБ3_1 = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool локТумблерБ3_2
+        {
+            get { return _локТумблерБ3_2; }
+            set
+            {
+                _локТумблерБ3_2 = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool локТумблерДАБ_5
+        {
+            get { return _локТумблерДАБ_5; }
+            set
+            {
+                _локТумблерДАБ_5 = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool локТумблерР_Н
+        {
+            get { return _локТумблерР_Н; }
+            set
+            {
+                _локТумблерР_Н = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool локТумблерАнтЭкв
+        {
+            get { return _локТумблерАнтЭкв; }
+            set
+            {
+                _локТумблерАнтЭкв = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool локТумблерТлфТлгПрм
+        {
+            get { return _локТумблерТлфТлгПрм; }
+            set
+            {
+                _локТумблерТлфТлгПрм = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool локТумблерТлфТлгПрд
+        {
+            get { return _локТумблерТлфТлгПрд; }
+            set
+            {
+                _локТумблерТлфТлгПрд = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        ////Кнопки
+        public static bool локКнопкаН13_1
+        {
+            get { return _локКнопкаН131; }
+            set
+            {
+                _локКнопкаН131 = value;
+            }
+        }
+
+        public static bool локКнопкаН13_2
+        {
+            get { return _локКнопкаН132; }
+            set
+            {
+                _локКнопкаН132 = value;
+            }
+        }
+
+        public static bool локКнопкаН13_12
+        {
+            get { return _локКнопкаН1312; }
+            set
+            {
+                _локКнопкаН1312 = value;
+            }
+        }
+
+        public static void ResetParameters()
+        {
+        }
+
+        public delegate void VoidVoidSignature();
+
+        public static event VoidVoidSignature RefreshForm;
+    }
+}
