@@ -1,6 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-
-namespace R440O.R440OForms.N15
+﻿namespace R440O.R440OForms.N15
 {
     public static class N15LocalParameters
     {
@@ -31,9 +29,6 @@ namespace R440O.R440OForms.N15
         public static bool _локТумблерАнтЭкв;
         public static bool _локТумблерТлфТлгПрм;
         public static bool _локТумблерТлфТлгПрд;
-        public static bool _локКнопкаН131;
-        public static bool _локКнопкаН132;
-        public static bool _локКнопкаН1312;
         ////Тумблеры
         public static bool локТумблерЦ300М1
         {
@@ -41,7 +36,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _локТумблерЦ300М1 = value;
-                if (RefreshForm != null) RefreshForm();
+                if (RefreshFormElement != null) RefreshFormElement("ТумблерЦ300М1");
             }
         }
 
@@ -51,7 +46,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _локТумблерЦ300М2 = value;
-                if (RefreshForm != null) RefreshForm();
+                if (RefreshFormElement != null) RefreshFormElement("ТумблерЦ300М2");
             }
         }
 
@@ -61,7 +56,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _локТумблерЦ300М3 = value;
-                if (RefreshForm != null) RefreshForm();
+                if (RefreshFormElement != null) RefreshFormElement("ТумблерЦ300М3");
             }
         }
 
@@ -71,7 +66,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _локТумблерЦ300М4 = value;
-                if (RefreshForm != null) RefreshForm();
+                if (RefreshFormElement != null) RefreshFormElement("ТумблерЦ300М4");
             }
         }
 
@@ -81,7 +76,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _локТумблерН12С = value;
-                if (RefreshForm != null) RefreshForm();
+                if (RefreshFormElement != null) RefreshFormElement("ТумблерН12С");
             }
         }
 
@@ -91,7 +86,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _локТумблерМШУ = value;
-                if (RefreshForm != null) RefreshForm();
+                if (RefreshFormElement != null) RefreshFormElement("ТумблерМШУ");
             }
         }
 
@@ -101,7 +96,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _локТумблерБМА_1 = value;
-                if (RefreshForm != null) RefreshForm();
+                if (RefreshFormElement != null) RefreshFormElement("ТумблерБМА_1");
             }
         }
 
@@ -111,7 +106,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _локТумблерБМА_2 = value;
-                if (RefreshForm != null) RefreshForm();
+                if (RefreshFormElement != null) RefreshFormElement("ТумблерБМА_2");
             }
         }
 
@@ -121,7 +116,7 @@ namespace R440O.R440OForms.N15
             {
                 return _локТумблерА205;
             }
-            set { _локТумблерА205 = value; if (RefreshForm != null) RefreshForm(); }
+            set { _локТумблерА205 = value; if (RefreshFormElement != null) RefreshFormElement("ТумблерА205"); }
         }
 
         public static bool локТумблерА20512
@@ -130,7 +125,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _локТумблерА20512 = value;
-                if (RefreshForm != null) RefreshForm();
+                if (RefreshFormElement != null) RefreshFormElement("ТумблерА20512");
             }
         }
 
@@ -140,7 +135,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _локТумблерАФСС = value;
-                if (RefreshForm != null) RefreshForm();
+                if (RefreshFormElement != null) RefreshFormElement("ТумблерАФСС");
             }
         }
 
@@ -150,7 +145,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _локТумблерА1 = value;
-                if (RefreshForm != null) RefreshForm();
+                if (RefreshFormElement != null) RefreshFormElement("ТумблерА1");
             }
         }
 
@@ -160,7 +155,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _локТумблерА403 = value;
-                if (RefreshForm != null) RefreshForm();
+                if (RefreshFormElement != null) RefreshFormElement("ТумблерА403");
             }
         }
 
@@ -170,20 +165,20 @@ namespace R440O.R440OForms.N15
             set
             {
                 _локТумблерК1_1 = value;
-                if (RefreshForm != null) RefreshForm();
+                if (RefreshFormElement != null) RefreshFormElement("ТумблерК1_1");
             }
         }
 
         public static bool локТумблерК1_2
         {
             get { return _локТумблерК1_2; }
-            set { _локТумблерК1_2 = value; if (RefreshForm != null) RefreshForm(); }
+            set { _локТумблерК1_2 = value; if (RefreshFormElement != null) RefreshFormElement("ТумблерК1_2"); }
         }
 
         public static bool локТумблерА30412
         {
             get { return _локТумблерА30412; }
-            set { _локТумблерА30412 = value; if (RefreshForm != null) RefreshForm(); }
+            set { _локТумблерА30412 = value; if (RefreshFormElement != null) RefreshFormElement("ТумблерА30412"); }
         }
 
         public static bool локТумблерБ1_1
@@ -192,7 +187,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _локТумблерБ1_1 = value;
-                if (RefreshForm != null) RefreshForm();
+                if (RefreshFormElement != null) RefreshFormElement("ТумблерБ1_1");
             }
         }
 
@@ -202,7 +197,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _локТумблерБ1_2 = value;
-                if (RefreshForm != null) RefreshForm();
+                if (RefreshFormElement != null) RefreshFormElement("ТумблерБ1_2");
             }
         }
 
@@ -212,7 +207,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _локТумблерБ2_1 = value;
-                if (RefreshForm != null) RefreshForm();
+                if (RefreshFormElement != null) RefreshFormElement("ТумблерБ2_1");
             }
         }
 
@@ -222,7 +217,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _локТумблерБ2_2 = value;
-                if (RefreshForm != null) RefreshForm();
+                if (RefreshFormElement != null) RefreshFormElement("ТумблерБ2_2");
             }
         }
 
@@ -232,7 +227,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _локТумблерБ3_1 = value;
-                if (RefreshForm != null) RefreshForm();
+                if (RefreshFormElement != null) RefreshFormElement("ТумблерБ3_1");
             }
         }
 
@@ -242,7 +237,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _локТумблерБ3_2 = value;
-                if (RefreshForm != null) RefreshForm();
+                if (RefreshFormElement != null) RefreshFormElement("ТумблерБ3_2");
             }
         }
 
@@ -252,7 +247,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _локТумблерДАБ_5 = value;
-                if (RefreshForm != null) RefreshForm();
+                if (RefreshFormElement != null) RefreshFormElement("ТумблерДАБ_5");
             }
         }
 
@@ -262,7 +257,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _локТумблерР_Н = value;
-                if (RefreshForm != null) RefreshForm();
+                if (RefreshFormElement != null) RefreshFormElement("ТумблерР_Н");
             }
         }
 
@@ -272,7 +267,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _локТумблерАнтЭкв = value;
-                if (RefreshForm != null) RefreshForm();
+                if (RefreshFormElement != null) RefreshFormElement("ТумблерАнтЭкв");
             }
         }
 
@@ -282,7 +277,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _локТумблерТлфТлгПрм = value;
-                if (RefreshForm != null) RefreshForm();
+                if (RefreshFormElement != null) RefreshFormElement("ТумблерТлфТлгПрм");
             }
         }
 
@@ -292,35 +287,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _локТумблерТлфТлгПрд = value;
-                if (RefreshForm != null) RefreshForm();
-            }
-        }
-
-        ////Кнопки
-        public static bool локКнопкаН13_1
-        {
-            get { return _локКнопкаН131; }
-            set
-            {
-                _локКнопкаН131 = value;
-            }
-        }
-
-        public static bool локКнопкаН13_2
-        {
-            get { return _локКнопкаН132; }
-            set
-            {
-                _локКнопкаН132 = value;
-            }
-        }
-
-        public static bool локКнопкаН13_12
-        {
-            get { return _локКнопкаН1312; }
-            set
-            {
-                _локКнопкаН1312 = value;
+                if (RefreshFormElement != null) RefreshFormElement("ТумблерТлфТлгПрд");
             }
         }
 
@@ -328,8 +295,8 @@ namespace R440O.R440OForms.N15
         {
         }
 
-        public delegate void VoidVoidSignature();
+        public delegate void VoidStringSignature(string parameterName);
 
-        public static event VoidVoidSignature RefreshForm;
+        public static event VoidStringSignature RefreshFormElement;
     }
 }

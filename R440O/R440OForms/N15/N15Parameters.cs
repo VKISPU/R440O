@@ -1,7 +1,4 @@
-﻿using System;
-using System.Timers;
-
-namespace R440O.R440OForms.N15
+﻿namespace R440O.R440OForms.N15
 {
     public static class N15Parameters
     {
@@ -181,11 +178,33 @@ namespace R440O.R440OForms.N15
 
         #endregion
 
-        #region Тумблеры
+        #region Тумблеры левая часть
 
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
+        private static bool _тумблерЦ300М1;
+        private static bool _тумблерЦ300М2;
+        private static bool _тумблерЦ300М3;
+        private static bool _тумблерЦ300М4;
+        private static bool _тумблерН12С;
+        private static bool _тумблерМшу;
+        private static bool _тумблерБма1;
+        private static bool _тумблерБма2;
+        private static bool _тумблерА205;
+        private static bool _тумблерА20512;
+        private static bool _тумблерА30412;
+        private static bool _тумблерАфсс;
+        private static bool _тумблерА1;
+        private static bool _тумблерА403;
+        private static bool _тумблерК11;
+        private static bool _тумблерК12;
+        private static bool _тумблерБ11;
+        private static bool _тумблерБ12;
+        private static bool _тумблерБ21;
+        private static bool _тумблерБ22;
+        private static bool _тумблерБ31;
+        private static bool _тумблерБ32;
+        private static bool _тумблерДаб5;
+        private static bool _тумблерРН;
+        
         public static bool ТумблерЦ300М1
         {
             get { return _тумблерЦ300М1; }
@@ -195,12 +214,7 @@ namespace R440O.R440OForms.N15
                 if (RefreshForm != null) RefreshForm();
             }
         }
-
-        private static bool _тумблерЦ300М1;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
+        
         public static bool ТумблерЦ300М2
         {
             get { return _тумблерЦ300М2; }
@@ -210,12 +224,7 @@ namespace R440O.R440OForms.N15
                 if (RefreshForm != null) RefreshForm();
             }
         }
-
-        private static bool _тумблерЦ300М2;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
+        
         public static bool ТумблерЦ300М3
         {
             get { return _тумблерЦ300М3; }
@@ -225,12 +234,7 @@ namespace R440O.R440OForms.N15
                 if (RefreshForm != null) RefreshForm();
             }
         }
-
-        private static bool _тумблерЦ300М3;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
+        
         public static bool ТумблерЦ300М4
         {
             get { return _тумблерЦ300М4; }
@@ -240,12 +244,7 @@ namespace R440O.R440OForms.N15
                 if (RefreshForm != null) RefreshForm();
             }
         }
-
-        private static bool _тумблерЦ300М4;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
+        
         public static bool ТумблерН12С
         {
             get { return _тумблерН12С; }
@@ -255,12 +254,7 @@ namespace R440O.R440OForms.N15
                 if (RefreshForm != null) RefreshForm();
             }
         }
-
-        private static bool _тумблерН12С;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
+        
         public static bool ТумблерМШУ
         {
             get { return _тумблерМшу; }
@@ -270,12 +264,7 @@ namespace R440O.R440OForms.N15
                 if (RefreshForm != null) RefreshForm();
             }
         }
-
-        private static bool _тумблерМшу;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
+        
         public static bool ТумблерБМА_1
         {
             get { return _тумблерБма1; }
@@ -286,244 +275,183 @@ namespace R440O.R440OForms.N15
             }
         }
 
-        private static bool _тумблерБма1;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
         public static bool ТумблерБМА_2
         {
             get { return _тумблерБма2; }
             set { _тумблерБма2 = value; if (RefreshForm != null) RefreshForm(); }
         }
-
-        private static bool _тумблерБма2;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
+        
         public static bool ТумблерА205
         {
             get { return _тумблерА205; }
             set { _тумблерА205 = value; if (RefreshForm != null) RefreshForm(); }
         }
-
-        private static bool _тумблерА205;
-
-        /// <summary>
-        /// Возможные состояния: true - 1, false - 2
-        /// </summary>
+        
         public static bool ТумблерА20512
         {
             get { return _тумблерА20512; }
             set { _тумблерА20512 = value; if (RefreshForm != null) RefreshForm(); }
         }
-
-        private static bool _тумблерА20512;
-
-        /// <summary>
-        /// Возможные состояния: true - 1, false - 2
-        /// </summary>
+        
         public static bool ТумблерА30412
         {
-            get { return _ТумблерА30412; }
+            get { return _тумблерА30412; }
             set
             {
-                _ТумблерА30412 = value;
+                _тумблерА30412 = value;
                 if (RefreshForm != null) RefreshForm();
             }
         }
-
-        private static bool _ТумблерА30412;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
+        
         public static bool ТумблерАФСС
         {
-            get { return _ТумблерАФСС; }
-            set { _ТумблерАФСС = value; if (RefreshForm != null) RefreshForm(); }
+            get { return _тумблерАфсс; }
+            set { _тумблерАфсс = value; if (RefreshForm != null) RefreshForm(); }
         }
-
-        private static bool _ТумблерАФСС;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
+        
         public static bool ТумблерА1
         {
-            get { return _ТумблерА1; }
-            set { _ТумблерА1 = value; if (RefreshForm != null) RefreshForm(); }
+            get { return _тумблерА1; }
+            set { _тумблерА1 = value; if (RefreshForm != null) RefreshForm(); }
         }
 
-        private static bool _ТумблерА1;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
         public static bool ТумблерА403
         {
-            get { return _ТумблерА403; }
-            set { _ТумблерА403 = value; if (RefreshForm != null) RefreshForm(); }
+            get { return _тумблерА403; }
+            set { _тумблерА403 = value; if (RefreshForm != null) RefreshForm(); }
         }
 
-        private static bool _ТумблерА403;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
         public static bool ТумблерК1_1
         {
-            get { return _ТумблерК1_1; }
-            set { _ТумблерК1_1 = value; if (RefreshForm != null) RefreshForm(); }
+            get { return _тумблерК11; }
+            set { _тумблерК11 = value; if (RefreshForm != null) RefreshForm(); }
         }
 
-        private static bool _ТумблерК1_1;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
         public static bool ТумблерК1_2
         {
-            get { return _ТумблерК1_2; }
-            set { _ТумблерК1_2 = value; if (RefreshForm != null) RefreshForm(); }
+            get { return _тумблерК12; }
+            set { _тумблерК12 = value; if (RefreshForm != null) RefreshForm(); }
         }
-
-        private static bool _ТумблерК1_2;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
+        
         public static bool ТумблерБ1_1
         {
-            get { return _ТумблерБ1_1; }
-            set { _ТумблерБ1_1 = value; if (RefreshForm != null) RefreshForm(); }
+            get { return _тумблерБ11; }
+            set { _тумблерБ11 = value; if (RefreshForm != null) RefreshForm(); }
         }
-
-        private static bool _ТумблерБ1_1;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
+        
         public static bool ТумблерБ1_2
         {
-            get { return _ТумблерБ1_2; }
-            set { _ТумблерБ1_2 = value; if (RefreshForm != null) RefreshForm(); }
+            get { return _тумблерБ12; }
+            set { _тумблерБ12 = value; if (RefreshForm != null) RefreshForm(); }
         }
-
-        private static bool _ТумблерБ1_2;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
+        
         public static bool ТумблерБ2_1
         {
-            get { return _ТумблерБ2_1; }
-            set { _ТумблерБ2_1 = value; if (RefreshForm != null) RefreshForm(); }
+            get { return _тумблерБ21; }
+            set { _тумблерБ21 = value; if (RefreshForm != null) RefreshForm(); }
         }
-
-        private static bool _ТумблерБ2_1;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
+        
         public static bool ТумблерБ2_2
         {
-            get { return _ТумблерБ2_2; }
-            set { _ТумблерБ2_2 = value; if (RefreshForm != null) RefreshForm(); }
+            get { return _тумблерБ22; }
+            set { _тумблерБ22 = value; if (RefreshForm != null) RefreshForm(); }
         }
-
-        private static bool _ТумблерБ2_2;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
+        
         public static bool ТумблерБ3_1
         {
-            get { return _ТумблерБ3_1; }
-            set { _ТумблерБ3_1 = value; if (RefreshForm != null) RefreshForm(); }
+            get { return _тумблерБ31; }
+            set { _тумблерБ31 = value; if (RefreshForm != null) RefreshForm(); }
         }
-
-        private static bool _ТумблерБ3_1;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
+        
         public static bool ТумблерБ3_2
         {
-            get { return _ТумблерБ3_2; }
-            set { _ТумблерБ3_2 = value; if (RefreshForm != null) RefreshForm(); }
+            get { return _тумблерБ32; }
+            set { _тумблерБ32 = value; if (RefreshForm != null) RefreshForm(); }
         }
-
-        private static bool _ТумблерБ3_2;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
+        
         public static bool ТумблерДАБ_5
         {
-            get { return _ТумблерДАБ_5; }
-            set { _ТумблерДАБ_5 = value; if (RefreshForm != null) RefreshForm(); }
+            get { return _тумблерДаб5; }
+            set { _тумблерДаб5 = value; if (RefreshForm != null) RefreshForm(); }
         }
-
-        private static bool _ТумблерДАБ_5;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
+        
         public static bool ТумблерР_Н
         {
-            get { return _ТумблерР_Н; }
-            set { _ТумблерР_Н = value; if (RefreshForm != null) RefreshForm(); }
+            get { return _тумблерРН; }
+            set { _тумблерРН = value; if (RefreshForm != null) RefreshForm(); }
+        }
+        
+        #endregion
+
+        #region Тумблеры правая часть
+
+        private static bool _тумблерА503Б;
+        private static bool _тумблерФаза;
+        private static bool _тумблерУров1;
+        private static bool _тумблерУров2;
+        private static bool _тумблерАнтЭкв;
+        private static bool _тумблерТлфТлгПрм;
+        private static bool _тумблерТлфТлгПрд;
+        private static bool _тумблер5МГц25МГц3;
+        
+        public static bool ТумблерА503Б
+        {
+            get { return _тумблерА503Б; }
+            set { _тумблерА503Б = value; if (RefreshForm != null) RefreshForm(); }
         }
 
-        private static bool _ТумблерР_Н;
+        public static bool ТумблерФаза
+        {
+            get { return _тумблерФаза; }
+            set { _тумблерФаза = value; if (RefreshForm != null) RefreshForm(); }
+        }
 
-        public static bool ТумблерА503Б { get; set; }
-        public static bool ТумблерФаза { get; set; }
-        public static bool ТумблерУров1 { get; set; }
-        public static bool ТумблерУров2 { get; set; }
+        public static bool ТумблерУров1
+        {
+            get { return _тумблерУров1; }
+            set { _тумблерУров1 = value; if (RefreshForm != null) RefreshForm(); }
+        }
 
-        /// <summary>
-        /// Возможные состояния: true - АНТ, false - ЭКВ
-        /// </summary>
+        public static bool ТумблерУров2
+        {
+            get { return _тумблерУров2; }
+            set { _тумблерУров2 = value; if (RefreshForm != null) RefreshForm(); }
+        }
+
         public static bool ТумблерАнтЭкв
         {
-            get { return _ТумблерАнтЭкв; }
-            set { _ТумблерАнтЭкв = value; if (RefreshForm != null) RefreshForm(); }
+            get { return _тумблерАнтЭкв; }
+            set { _тумблерАнтЭкв = value; if (RefreshForm != null) RefreshForm(); }
         }
-
-        private static bool _ТумблерАнтЭкв;
-
-        /// <summary>
-        /// Возможные состояния: true - ТЛФ, false - ТЛГ
-        /// </summary>
+        
         public static bool ТумблерТлфТлгПрм
         {
-            get { return _ТумблерТлфТлгПрм; }
-            set { _ТумблерТлфТлгПрм = value; if (RefreshForm != null) RefreshForm(); }
+            get { return _тумблерТлфТлгПрм; }
+            set { _тумблерТлфТлгПрм = value; if (RefreshForm != null) RefreshForm(); }
         }
-
-        private static bool _ТумблерТлфТлгПрм;
-
-        /// <summary>
-        /// Возможные состояния: true - ТЛФ, false - ТЛГ
-        /// </summary>
+        
         public static bool ТумблерТлфТлгПрд
         {
-            get { return _ТумблерТлфТлгПрд; }
-            set { _ТумблерТлфТлгПрд = value; if (RefreshForm != null) RefreshForm(); }
+            get { return _тумблерТлфТлгПрд; }
+            set { _тумблерТлфТлгПрд = value; if (RefreshForm != null) RefreshForm(); }
         }
 
-        private static bool _ТумблерТлфТлгПрд;
-
-        public static bool Тумблер5мГц25мГц3 { get; set; }
+        public static bool Тумблер5мГц25мГц3
+        {
+            get { return _тумблер5МГц25МГц3; }
+            set { _тумблер5МГц25МГц3 = value; if (RefreshForm != null) RefreshForm(); }
+        }
 
         #endregion
 
-        #region Лампочки
+        #region Лампочки верхняя часть
 
-        public static bool ЛампочкаЦ300МВкл1 { get; set; }
+        public static bool ЛампочкаЦ300МВкл1
+        {
+            get { return _лампочкаЦ300МВкл1; }
+            set { _лампочкаЦ300МВкл1 = value; }
+        }
+
         public static bool ЛампочкаЦ300МВкл2 { get; set; }
         public static bool ЛампочкаЦ300МВкл3 { get; set; }
         public static bool ЛампочкаЦ300МВкл4 { get; set; }
@@ -544,47 +472,30 @@ namespace R440O.R440OForms.N15
         public static bool ЛампочкаУМ1Работа1 { get; set; }
         public static bool ЛампочкаУМ1Работа2 { get; set; }
 
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
+
+        private static bool _лампочкаЦ300МВкл1;
+
+        #endregion
+
+        #region Лампочки левая часть
         public static bool ЛампочкаН12С
         {
-            get { return _ЛампочкаН12С; }
-            set { _ЛампочкаН12С = value; }
+            get { return _лампочкаН12С; }
+            set { _лампочкаН12С = value; }
         }
-
-        private static bool _ЛампочкаН12С;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
-        private static bool _ЛампочкаМШУ;
-
-        private static bool _лампочкаН16Н131;
-        private static bool _лампочкаН16Н132;
-        private static bool _лампочкаН16Н1312;
 
         public static bool ЛампочкаМШУ
         {
-            get { return _ЛампочкаМШУ; }
-            set { _ЛампочкаМШУ = value; }
+            get { return _лампочкаМШУ; }
+            set { _лампочкаМШУ = value; }
         }
 
         public static bool ЛампочкаБМА_1 { get; set; }
         public static bool ЛампочкаБМА_2 { get; set; }
         public static bool Лампочка27В { get; set; }
         public static bool ЛампочкаБП { get; set; }
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
         public static bool ЛампочкаАФСС { get; set; }
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
         public static bool ЛампочкаА1 { get; set; }
-
         public static bool ЛампочкаА403Вкл { get; set; }
         public static bool ЛампочкаА403Неиспр { get; set; }
         public static bool ЛампочкаП220272 { get; set; }
@@ -600,6 +511,10 @@ namespace R440O.R440OForms.N15
         public static bool ЛампочкаБ3_2 { get; set; }
         public static bool ЛампочкаДАБ_5 { get; set; }
         public static bool ЛампочкаР_Н { get; set; }
+
+        #endregion
+
+        #region Лампочки правая часть
 
         public static bool ЛампочкаН16Н13_1
         {
@@ -630,6 +545,12 @@ namespace R440O.R440OForms.N15
         public static bool ЛампочкаА503Б { get; set; }
         public static bool ЛампочкаАнт { get; set; }
         public static bool ЛампочкаЭкв { get; set; }
+
+        private static bool _лампочкаН12С;
+        private static bool _лампочкаМШУ;
+        private static bool _лампочкаН16Н131;
+        private static bool _лампочкаН16Н132;
+        private static bool _лампочкаН16Н1312;
 
         #endregion
 

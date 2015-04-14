@@ -24,45 +24,30 @@ namespace R440O.R440OForms.N15
         public N15Form()
         {
             this.InitializeComponent();
-            N15Parameters.RefreshForm += RefreshForm;
-            N15LocalParameters.RefreshForm += RefreshForm;
-            RefreshForm();
+            N15Parameters.RefreshForm += InitializeForm;
+            N15LocalParameters.RefreshFormElement += RefreshFormElement;
+            InitializeForm();
         }
 
-        #region Обновление элементов управления
-        private void RefreshForm()
-        {
-            RefreshButtons();
-            RefreshTumblers();
-            RefreshLamps();
-        }
+        #region Инициализация элементов управления
 
-        /// <summary>
-        /// Уставнавливает настоящие настройки станции в соответствии с включенными тумблерами
-        /// </summary>
-        private void ResetCurrentParameters()
+        private void InitializeForm()
         {
-            var parametersList = typeof(N15Parameters).GetProperties();
-            var localParametersList = typeof(N15LocalParameters).GetProperties();
-            foreach (var localProperty in localParametersList)
-            {
-                foreach (var property in parametersList.Where(property => localProperty.Name.Contains(property.Name)))
-                {
-                    property.SetValue(this, localProperty.GetValue(this));
-                }
-            }
+            InitializeButtons();
+            InitializeTumblers();
+            InitializeLamps();
         }
 
         /// <summary>
         /// Установка кнопок в положение последней их установки
         /// </summary>
-        private void RefreshButtons()
+        private void InitializeButtons()
         {
             foreach (Control item in Panel.Controls)
             {
                 if (!item.Name.Contains("Кнопка")) continue;
                 var fieldList = typeof(N15Parameters).GetProperties();
-                foreach (var property in fieldList.Where(property =>item.Name == property.Name))
+                foreach (var property in fieldList.Where(property => item.Name == property.Name))
                 {
                     var val = !(bool)property.GetValue(null);
                     item.Visible = val;
@@ -86,13 +71,13 @@ namespace R440O.R440OForms.N15
         /// <summary>
         /// Установка тумблеров в положение последней их установки
         /// </summary>
-        private void RefreshTumblers()
+        private void InitializeTumblers()
         {
             foreach (Control item in Panel.Controls)
             {
                 if (!item.Name.Contains("Тумблер")) continue;
                 var propertyList = typeof(N15LocalParameters).GetProperties();
-                foreach (var property in propertyList.Where(property => ("лок"+item.Name) == property.Name))
+                foreach (var property in propertyList.Where(property => ("лок" + item.Name) == property.Name))
                 {
                     if (item.Name.Contains("ТумблерА20512") ||
                         item.Name.Contains("ТумблерАнтЭкв") ||
@@ -116,28 +101,75 @@ namespace R440O.R440OForms.N15
         /// <summary>
         /// Установка лампочек в положение последней их установки
         /// </summary>
-        private void RefreshLamps()
+        private void InitializeLamps()
         {
             foreach (Control item in Panel.Controls)
             {
                 if (!item.Name.Contains("Лампочка")) continue;
-                var fieldList = typeof (N15Parameters).GetProperties();
+                var fieldList = typeof(N15Parameters).GetProperties();
                 foreach (var property in fieldList.Where(property => item.Name == property.Name))
                 {
                     if (item.Name.Contains("Ц300М") || item.Name.Contains("ППВ") || item.Name.Contains("А205") ||
                         item.Name.Contains("УМ1"))
                     {
-                        item.BackgroundImage = (bool) property.GetValue(null)
+                        item.BackgroundImage = (bool)property.GetValue(null)
                             ? ControlElementImages.lampType8OnRed
                             : null;
                     }
                     else
                     {
-                        item.BackgroundImage = (bool) property.GetValue(null)
+                        item.BackgroundImage = (bool)property.GetValue(null)
                             ? ControlElementImages.lampType5OnRed
                             : null;
                     }
                     break;
+                }
+            }
+        }
+        #endregion
+
+        #region Обновление элементов управления
+
+        private void RefreshFormElement(string parameterName)
+        {
+            var item = Panel.Controls.Find(parameterName, false)[0];
+            if (item == null) return;
+            if (!item.Name.Contains("Тумблер")) return;
+
+            var propertyList = typeof (N15LocalParameters).GetProperties();
+            foreach (var property in propertyList.Where(property => ("лок" + item.Name) == property.Name))
+            {
+                if (item.Name.Contains("ТумблерА20512") ||
+                    item.Name.Contains("ТумблерАнтЭкв") ||
+                    item.Name.Contains("ТумблерТлфТлгПрм") ||
+                    item.Name.Contains("ТумблерТлфТлгПрд"))
+                {
+                    item.BackgroundImage = (bool) property.GetValue(null)
+                        ? ControlElementImages.tumblerType4Up
+                        : ControlElementImages.tumblerType4Down;
+                }
+                else
+                {
+                    item.BackgroundImage = (bool) property.GetValue(null)
+                        ? ControlElementImages.tumblerType3Up
+                        : ControlElementImages.tumblerType3Down;
+                }
+            }
+        }
+        
+
+        /// <summary>
+        /// Уставнавливает настоящие настройки станции в соответствии с включенными тумблерами
+        /// </summary>
+        private void ResetCurrentParameters()
+        {
+            var parametersList = typeof(N15Parameters).GetProperties();
+            var localParametersList = typeof(N15LocalParameters).GetProperties();
+            foreach (var localProperty in localParametersList)
+            {
+                foreach (var property in parametersList.Where(property => localProperty.Name.Contains(property.Name)))
+                {
+                    property.SetValue(this, localProperty.GetValue(this));
                 }
             }
         }
@@ -271,7 +303,7 @@ namespace R440O.R440OForms.N15
             this.КнопкаН13_2.Visible = true;
             this.КнопкаН13_12.Visible = true;
 
-            if (N15LocalParameters.локКнопкаН13_2 == false && N15LocalParameters.локКнопкаН13_12 == false)
+            if (N15Parameters.КнопкаН13_2 == false && N15Parameters.КнопкаН13_12 == false)
             {
                 await Task.Delay(300);
                 this.ЛампочкаН16Н13_1.BackgroundImage = ControlElementImages.lampType5OnRed;
@@ -287,9 +319,9 @@ namespace R440O.R440OForms.N15
                 this.ЛампочкаН16Н13_12.BackgroundImage = null;
             }
 
-            N15LocalParameters.локКнопкаН13_1 = true;
-            N15LocalParameters.локКнопкаН13_2 = false;
-            N15LocalParameters.локКнопкаН13_12 = false;
+            N15Parameters.КнопкаН13_1 = true;
+            N15Parameters.КнопкаН13_2 = false;
+            N15Parameters.КнопкаН13_12 = false;
 
             N15Parameters.ЛампочкаН16Н13_1 = true;
             N15Parameters.ЛампочкаН16Н13_2 = false;
@@ -303,7 +335,7 @@ namespace R440O.R440OForms.N15
             this.КнопкаН13_1.Visible = true;
             this.КнопкаН13_12.Visible = true;
 
-            if (N15LocalParameters.локКнопкаН13_1 == false && N15LocalParameters.локКнопкаН13_12 == false)
+            if (N15Parameters.КнопкаН13_1 == false && N15Parameters.КнопкаН13_12 == false)
             {
                 await Task.Delay(300);
                 this.ЛампочкаН16Н13_2.BackgroundImage = ControlElementImages.lampType5OnRed;
@@ -319,9 +351,9 @@ namespace R440O.R440OForms.N15
                 this.ЛампочкаН16Н13_1.BackgroundImage = null;
             }
 
-            N15LocalParameters.локКнопкаН13_1 = false;
-            N15LocalParameters.локКнопкаН13_2 = true;
-            N15LocalParameters.локКнопкаН13_12 = false;
+            N15Parameters.КнопкаН13_1 = false;
+            N15Parameters.КнопкаН13_2 = true;
+            N15Parameters.КнопкаН13_12 = false;
 
             N15Parameters.ЛампочкаН16Н13_1 = false;
             N15Parameters.ЛампочкаН16Н13_2 = true;
@@ -335,7 +367,7 @@ namespace R440O.R440OForms.N15
             this.КнопкаН13_1.Visible = true;
             this.КнопкаН13_2.Visible = true;
 
-            if (N15LocalParameters.локКнопкаН13_1 == false && N15LocalParameters.локКнопкаН13_2 == false)
+            if (N15Parameters.КнопкаН13_1 == false && N15Parameters.КнопкаН13_2 == false)
             {
                 await Task.Delay(300);
                 this.ЛампочкаН16Н13_12.BackgroundImage = ControlElementImages.lampType5OnRed;
@@ -351,9 +383,9 @@ namespace R440O.R440OForms.N15
                 this.ЛампочкаН16Н13_2.BackgroundImage = null;
             }
 
-            N15LocalParameters.локКнопкаН13_1 = false;
-            N15LocalParameters.локКнопкаН13_2 = false;
-            N15LocalParameters.локКнопкаН13_12 = true;
+            N15Parameters.КнопкаН13_1 = false;
+            N15Parameters.КнопкаН13_2 = false;
+            N15Parameters.КнопкаН13_12 = true;
 
             N15Parameters.ЛампочкаН16Н13_1 = false;
             N15Parameters.ЛампочкаН16Н13_2 = false;
@@ -375,9 +407,9 @@ namespace R440O.R440OForms.N15
             this.ЛампочкаН16Н13_2.BackgroundImage = null;
             this.ЛампочкаН16Н13_12.BackgroundImage = null;
 
-            N15LocalParameters.локКнопкаН13_1 = false;
-            N15LocalParameters.локКнопкаН13_2 = false;
-            N15LocalParameters.локКнопкаН13_12 = false;
+            N15Parameters.КнопкаН13_1 = false;
+            N15Parameters.КнопкаН13_2 = false;
+            N15Parameters.КнопкаН13_12 = false;
 
             N15Parameters.ЛампочкаН16Н13_1 = false;
             N15Parameters.ЛампочкаН16Н13_2 = false;
