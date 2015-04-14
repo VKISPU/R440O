@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using R440O.Parameters;
 using R440O.R440OForms.A205M_1;
+using R440O.R440OForms.N15;
 using R440O.R440OForms.NKN_1;
 using R440O.R440OForms.NKN_2;
 using R440O.R440OForms.PowerCabel;
@@ -38,6 +39,7 @@ namespace R440O.R440OForms.N502B
                 NKN_1Parameters.ResetParameters();
                 NKN_2Parameters.ResetParameters();
                 BMBParameters.ResetParameters();
+                N15Parameters.ResetParameters();
                 A205M_1Parameters.RefreshIndicators();
                 if (RefreshForm != null) RefreshForm();
             }
@@ -60,6 +62,7 @@ namespace R440O.R440OForms.N502B
                 _тумблерЭлектрооборудование = value;
                 NKN_1Parameters.ResetParameters();
                 NKN_2Parameters.ResetParameters();
+                N15Parameters.ResetParameters();
                 A205M_1Parameters.RefreshIndicators();
                 if (RefreshForm != null)
                     RefreshForm();
@@ -77,6 +80,7 @@ namespace R440O.R440OForms.N502B
                 _тумблерВыпрямитель27В = value;
                 NKN_1Parameters.ResetParameters();
                 NKN_2Parameters.ResetParameters();
+                N15Parameters.ResetParameters();
                 A205M_1Parameters.RefreshIndicators();
                 BMBParameters.ResetParameters();
             }

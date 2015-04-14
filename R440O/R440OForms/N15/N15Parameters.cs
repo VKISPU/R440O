@@ -1,4 +1,6 @@
-﻿namespace R440O.R440OForms.N15
+﻿using R440O.R440OForms.N502B;
+
+namespace R440O.R440OForms.N15
 {
     public static class N15Parameters
     {
@@ -478,6 +480,32 @@
         #endregion
 
         #region Лампочки левая часть
+
+        private static bool _лампочкаН12С;
+        private static bool _лампочкаМШУ;
+        private static bool _лампочкаБма1;
+        private static bool _лампочкаБма2;
+        private static bool _лампочка27В;
+        private static bool _лампочкаН15Бп;
+        private static bool _лампочкаАфсс;
+        private static bool _лампочкаА1;
+        private static bool _лампочкаА403Вкл;
+        private static bool _лампочкаА403Неиспр;
+        private static bool _лампочкаП220272;
+        private static bool _лампочкаП220273;
+        private static bool _лампочкаА306;
+        private static bool _лампочкаА3041;
+        private static bool _лампочкаА3042;
+        private static bool _лампочкаБ11;
+        private static bool _лампочкаБ12;
+        private static bool _лампочкаБ21;
+        private static bool _лампочкаБ22;
+        private static bool _лампочкаБ31;
+        private static bool _лампочкаБ32;
+        private static bool _лампочкаДаб5;
+        private static bool _лампочкаРН;
+
+
         public static bool ЛампочкаН12С
         {
             get { return _лампочкаН12С; }
@@ -490,27 +518,131 @@
             set { _лампочкаМШУ = value; }
         }
 
-        public static bool ЛампочкаБМА_1 { get; set; }
-        public static bool ЛампочкаБМА_2 { get; set; }
-        public static bool Лампочка27В { get; set; }
-        public static bool ЛампочкаБП { get; set; }
-        public static bool ЛампочкаАФСС { get; set; }
-        public static bool ЛампочкаА1 { get; set; }
-        public static bool ЛампочкаА403Вкл { get; set; }
-        public static bool ЛампочкаА403Неиспр { get; set; }
-        public static bool ЛампочкаП220272 { get; set; }
-        public static bool ЛампочкаП220273 { get; set; }
-        public static bool ЛампочкаА306 { get; set; }
-        public static bool ЛампочкаА3041 { get; set; }
-        public static bool ЛампочкаА3042 { get; set; }
-        public static bool ЛампочкаБ1_1 { get; set; }
-        public static bool ЛампочкаБ1_2 { get; set; }
-        public static bool ЛампочкаБ2_1 { get; set; }
-        public static bool ЛампочкаБ2_2 { get; set; }
-        public static bool ЛампочкаБ3_1 { get; set; }
-        public static bool ЛампочкаБ3_2 { get; set; }
-        public static bool ЛампочкаДАБ_5 { get; set; }
-        public static bool ЛампочкаР_Н { get; set; }
+        public static bool ЛампочкаБМА_1
+        {
+            get { return _лампочкаБма1; }
+            set { _лампочкаБма1 = value; }
+        }
+
+        public static bool ЛампочкаБМА_2
+        {
+            get { return _лампочкаБма2; }
+            set { _лампочкаБма2 = value; }
+        }
+
+        public static bool Лампочка27В
+        {
+            get { return _лампочка27В; }
+            set { _лампочка27В = value; if (RefreshForm != null) RefreshForm(); }
+        }
+
+        public static bool ЛампочкаН15БП
+        {
+            get { return _лампочкаН15Бп; }
+            set { _лампочкаН15Бп = value; if (RefreshForm != null) RefreshForm(); }
+        }
+
+        public static bool ЛампочкаАФСС
+        {
+            get { return _лампочкаАфсс; }
+            set { _лампочкаАфсс = value; }
+        }
+
+        public static bool ЛампочкаА1
+        {
+            get { return _лампочкаА1; }
+            set { _лампочкаА1 = value; }
+        }
+
+        public static bool ЛампочкаА403Вкл
+        {
+            get { return _лампочкаА403Вкл; }
+            set { _лампочкаА403Вкл = value; }
+        }
+
+        public static bool ЛампочкаА403Неиспр
+        {
+            get { return _лампочкаА403Неиспр; }
+            set { _лампочкаА403Неиспр = value; }
+        }
+
+        public static bool ЛампочкаП220272
+        {
+            get { return _лампочкаП220272; }
+            set { _лампочкаП220272 = value; }
+        }
+
+        public static bool ЛампочкаП220273
+        {
+            get { return _лампочкаП220273; }
+            set { _лампочкаП220273 = value; }
+        }
+
+        public static bool ЛампочкаА306
+        {
+            get { return _лампочкаА306; }
+            set { _лампочкаА306 = value; }
+        }
+
+        public static bool ЛампочкаА3041
+        {
+            get { return _лампочкаА3041; }
+            set { _лампочкаА3041 = value; }
+        }
+
+        public static bool ЛампочкаА3042
+        {
+            get { return _лампочкаА3042; }
+            set { _лампочкаА3042 = value; }
+        }
+
+        public static bool ЛампочкаБ1_1
+        {
+            get { return _лампочкаБ11; }
+            set { _лампочкаБ11 = value; }
+        }
+
+        public static bool ЛампочкаБ1_2
+        {
+            get { return _лампочкаБ12; }
+            set { _лампочкаБ12 = value; }
+        }
+
+        public static bool ЛампочкаБ2_1
+        {
+            get { return _лампочкаБ21; }
+            set { _лампочкаБ21 = value; }
+        }
+
+        public static bool ЛампочкаБ2_2
+        {
+            get { return _лампочкаБ22; }
+            set { _лампочкаБ22 = value; }
+        }
+
+        public static bool ЛампочкаБ3_1
+        {
+            get { return _лампочкаБ31; }
+            set { _лампочкаБ31 = value; }
+        }
+
+        public static bool ЛампочкаБ3_2
+        {
+            get { return _лампочкаБ32; }
+            set { _лампочкаБ32 = value; }
+        }
+
+        public static bool ЛампочкаДАБ_5
+        {
+            get { return _лампочкаДаб5; }
+            set { _лампочкаДаб5 = value; }
+        }
+
+        public static bool ЛампочкаР_Н
+        {
+            get { return _лампочкаРН; }
+            set { _лампочкаРН = value; }
+        }
 
         #endregion
 
@@ -546,8 +678,6 @@
         public static bool ЛампочкаАнт { get; set; }
         public static bool ЛампочкаЭкв { get; set; }
 
-        private static bool _лампочкаН12С;
-        private static bool _лампочкаМШУ;
         private static bool _лампочкаН16Н131;
         private static bool _лампочкаН16Н132;
         private static bool _лампочкаН16Н1312;
@@ -556,6 +686,12 @@
 
         public static void ResetParameters()
         {
+            Лампочка27В = (N502BParameters.ЛампочкаСфазировано
+                          && N502BParameters.ТумблерЭлектрооборудование
+                          && N502BParameters.ТумблерВыпрямитель27В);
+            ЛампочкаН15БП = (N502BParameters.ЛампочкаСфазировано
+                          && N502BParameters.ТумблерЭлектрооборудование
+                          && N502BParameters.ТумблерВыпрямитель27В);
         }
 
         public delegate void VoidVoidSignature();
