@@ -25,7 +25,6 @@ namespace R440O.R440OForms.N502B
             N502BParameters.RefreshForm += ИндикаторНапряжение.Invalidate;
             N502BParameters.RefreshForm += ИндикаторКонтрольНапряжения.Invalidate;
             N502BParameters.RefreshForm += ИндикаторТокНагрузкиИЗаряда.Invalidate;
-
         }
 
         #region Тумблеры

@@ -107,7 +107,7 @@
     <Compile Include="R440OForms\A205M_1\A205M_1Parameters.cs" />
     <Compile Include="R440OForms\A205M_2\A205M_2Parameters.cs" />
     <Compile Include="Parameters\A304Parameters.cs" />
-    <Compile Include="Parameters\A306Parameters.cs" />
+    <Compile Include="R440OForms\A306\A306Parameters.cs" />
     <Compile Include="R440OForms\A403_3\A403_3Parameters.cs" />
     <Compile Include="Parameters\AstraParameters.cs" />
     <Compile Include="R440OForms\N15\N15Parameters.cs" />
@@ -1086,6 +1086,7 @@
     <None Include="Resources\A306CabelNO.png" />
     <None Include="Resources\A306Input.png" />
     <None Include="Resources\arrow2.png" />
+    <None Include="Resources\A306Cabel.png" />
     <Content Include="Resources\buttonSquareBlack.png" />
     <Content Include="Resources\buttonSquareBlackLarge.png" />
     <None Include="Resources\buttonSquareBlack_small.png" />

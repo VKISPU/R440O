@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.A403_1Panel = new System.Windows.Forms.Panel();
-            this.A403M_1Дисплей = new System.Windows.Forms.Button();
+            this.Дисплей = new System.Windows.Forms.Button();
             this.ЛампочкаКомплект2 = new System.Windows.Forms.PictureBox();
             this.ЛампочкаКомплект1 = new System.Windows.Forms.PictureBox();
             this.ЛампочкаНеисправностьРИ = new System.Windows.Forms.PictureBox();
@@ -76,7 +76,7 @@
             // 
             this.A403_1Panel.BackgroundImage = global::R440O.BackgroundImages.A403_1;
             this.A403_1Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.A403_1Panel.Controls.Add(this.A403M_1Дисплей);
+            this.A403_1Panel.Controls.Add(this.Дисплей);
             this.A403_1Panel.Controls.Add(this.ЛампочкаКомплект2);
             this.A403_1Panel.Controls.Add(this.ЛампочкаКомплект1);
             this.A403_1Panel.Controls.Add(this.ЛампочкаНеисправностьРИ);
@@ -116,21 +116,21 @@
             this.A403_1Panel.Size = new System.Drawing.Size(684, 578);
             this.A403_1Panel.TabIndex = 0;
             // 
-            // A403M_1Дисплей
+            // Дисплей
             // 
-            this.A403M_1Дисплей.BackColor = System.Drawing.Color.Transparent;
-            this.A403M_1Дисплей.FlatAppearance.BorderSize = 0;
-            this.A403M_1Дисплей.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.A403M_1Дисплей.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.A403M_1Дисплей.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.A403M_1Дисплей.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.A403M_1Дисплей.ForeColor = System.Drawing.Color.Red;
-            this.A403M_1Дисплей.Location = new System.Drawing.Point(248, 315);
-            this.A403M_1Дисплей.Name = "A403M_1Дисплей";
-            this.A403M_1Дисплей.Size = new System.Drawing.Size(130, 25);
-            this.A403M_1Дисплей.TabIndex = 64;
-            this.A403M_1Дисплей.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.A403M_1Дисплей.UseVisualStyleBackColor = false;
+            this.Дисплей.BackColor = System.Drawing.Color.Transparent;
+            this.Дисплей.FlatAppearance.BorderSize = 0;
+            this.Дисплей.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Дисплей.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Дисплей.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Дисплей.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Дисплей.ForeColor = System.Drawing.Color.Red;
+            this.Дисплей.Location = new System.Drawing.Point(248, 315);
+            this.Дисплей.Name = "Дисплей";
+            this.Дисплей.Size = new System.Drawing.Size(130, 25);
+            this.Дисплей.TabIndex = 64;
+            this.Дисплей.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Дисплей.UseVisualStyleBackColor = false;
             // 
             // ЛампочкаКомплект2
             // 
@@ -771,6 +771,6 @@
         private System.Windows.Forms.PictureBox ЛампочкаКомплект1;
         private System.Windows.Forms.PictureBox ЛампочкаНеисправностьРИ;
         private System.Windows.Forms.PictureBox ЛампочкаНеисправностьФС;
-        private System.Windows.Forms.Button A403M_1Дисплей;
+        private System.Windows.Forms.Button Дисплей;
     }
 }
