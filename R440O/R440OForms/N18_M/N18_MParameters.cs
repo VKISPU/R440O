@@ -1,4 +1,6 @@
 ﻿using R440O.R440OForms.A205M_1;
+using R440O.R440OForms.A205M_2;
+using R440O.R440OForms.N15;
 
 namespace R440O.R440OForms.N18_M
 {
@@ -246,6 +248,8 @@ namespace R440O.R440OForms.N18_M
             {
                 if (value > 0 && value < 5) _n18MПереключательВходК121 = value;
                 A205M_1Parameters.ResetParameters();
+                A205M_2Parameters.ResetParameters();
+                N15Parameters.ResetParameters();
             }
         }
         #endregion

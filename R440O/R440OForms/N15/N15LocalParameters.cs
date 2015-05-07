@@ -10,7 +10,7 @@
         public static bool _локТумблерМШУ;
         public static bool _локТумблерБМА_1;
         public static bool _локТумблерБМА_2;
-        public static bool _локТумблерА205;
+        public static bool _локТумблерА205Base; //чтобы при записи локальных параметров в него не записывалось значение _локТумблерА20512
         public static bool _локТумблерА20512;
         public static bool _локТумблерАФСС;
         public static bool _локТумблерА1;
@@ -110,13 +110,18 @@
             }
         }
 
-        public static bool локТумблерА205
+        public static bool локТумблерА205Base
         {
             get
             {
-                return _локТумблерА205;
+                return _локТумблерА205Base;
             }
-            set { _локТумблерА205 = value; if (RefreshFormElement != null) RefreshFormElement("ТумблерА205"); }
+            set
+            {
+                _локТумблерА205Base = value;
+                N15Parameters.ResetParameters();
+                if (RefreshFormElement != null) RefreshFormElement("ТумблерА205Base");
+            }
         }
 
         public static bool локТумблерА20512
@@ -125,6 +130,7 @@
             set
             {
                 _локТумблерА20512 = value;
+                N15Parameters.ResetParameters();
                 if (RefreshFormElement != null) RefreshFormElement("ТумблерА20512");
             }
         }

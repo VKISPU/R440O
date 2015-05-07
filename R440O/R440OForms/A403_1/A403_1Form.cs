@@ -218,6 +218,12 @@ namespace R440O.R440OForms.A403_1
             else
                 Дисплей.Text = "";
 
+            //отобразим значение
+            if (Array.IndexOf(A403_1Parameters.КнопкиПараметры, true) != -1
+                && A403_1Parameters.ТумблерСеть && A403_1Parameters.Значение == "")
+                Дисплей.Text = FormatString(A403_1Parameters.ДисплейЗначения[(A403_1Parameters.ТумблерГруппа) ? 0 : 1,
+                    Array.IndexOf(A403_1Parameters.КнопкиПараметры, true)]);
+
             ЛампочкаКомплект1.BackgroundImage = A403_1Parameters.ЛампочкаКомплект1
                 ? ControlElementImages.lampType12OnRed
                 : null;

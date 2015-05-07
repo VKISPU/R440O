@@ -110,7 +110,7 @@ namespace R440O.R440OForms.N15
                 foreach (var property in fieldList.Where(property => item.Name == property.Name))
                 {
                     if (item.Name.Contains("Ц300М") || item.Name.Contains("ППВ") || item.Name.Contains("А205") ||
-                        item.Name.Contains("УМ1"))
+                        item.Name.Contains("УМ1") || item.Name.Contains("A205"))
                     {
                         item.BackgroundImage = (bool)property.GetValue(null)
                             ? ControlElementImages.lampType8OnRed
@@ -187,6 +187,7 @@ namespace R440O.R440OForms.N15
         {
             this.КнопкаСтанцияВкл.BackgroundImage = ControlElementImages.buttonN15On;
             ResetCurrentParameters();
+            N15Parameters.ResetParameters();
         }
 
         private void Н15КнопкаСтанцияВыкл_MouseDown(object sender, MouseEventArgs e)

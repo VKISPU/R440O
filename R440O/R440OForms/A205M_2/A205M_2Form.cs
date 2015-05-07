@@ -1,12 +1,4 @@
-﻿//-----------------------------------------------------------------------
-// <copyright file="A205M_2Form.cs" company="VKISPU">
-//      R440O station.
-// </copyright>
-//-----------------------------------------------------------------------
-
-using R440O.R440OForms.A205M_1;
-
-namespace R440O.R440OForms.A205M_2
+﻿namespace R440O.R440OForms.A205M_2
 {
     using System.Windows.Forms;
     using ThirdParty;
@@ -27,15 +19,19 @@ namespace R440O.R440OForms.A205M_2
         }
 
         #region Инициализация элементов управления формы
+
         private void RefreshForm()
         {
-            ИндикаторКонтроль.Invalidate();
+            var angle = A205M_2Parameters.ИндикаторКонтроль * 2.2F - 55;
+            ИндикаторКонтроль.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
 
-            ТумблерКЭД.BackgroundImage = A205M_1Parameters.ТумблерКЭД
+
+            ТумблерКЭД.BackgroundImage = A205M_2Parameters.ТумблерКЭД
                 ? ControlElementImages.tumblerType6Up
                 : ControlElementImages.tumblerType6Down;
 
-            var angle = A205M_2Parameters.ПереключательВолнаX10000 * 35 - 90;
+            angle = A205M_2Parameters.ПереключательВолнаX10000 * 35 - 90;
             ПереключательВолнаX10000.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
@@ -72,28 +68,16 @@ namespace R440O.R440OForms.A205M_2
                 : null;
         }
 
-        private void ИндикаторКонтроль_Paint(object sender, PaintEventArgs e)
-        {
-            switch (A205M_2Parameters.ИндикаторКонтроль)
-            {
-                case 0:
-                    TransformImageHelper.DrawLine(e.Graphics, 10, 40, 60, 80);
-                    break;
-                case 27:
-                    TransformImageHelper.DrawLine(e.Graphics, 65, 20, 60, 80);
-                    break;
-            }
-        } 
         #endregion
 
-        private void ПереключательКЭД_Click(object sender, System.EventArgs e)
+        private void A205M_2ПереключательКЭД_Click(object sender, System.EventArgs e)
         {
-            A205M_1Parameters.ТумблерКЭД = !A205M_1Parameters.ТумблерКЭД;
+            A205M_2Parameters.ТумблерКЭД = !A205M_2Parameters.ТумблерКЭД;
         }
 
         #region Отображение на дисплее текущей выбранной волны
 
-        private void КнопкаОтсчет_MouseDown(object sender, MouseEventArgs e)
+        private void A205M_2КнопкаОтсчет_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаОтсчет.BackgroundImage = null;
             Дисплей.Text = A205M_2Parameters.ПереключательВолнаX10000 + "  " +
@@ -104,7 +88,7 @@ namespace R440O.R440OForms.A205M_2
 
         }
 
-        private void КнопкаОтсчет_MouseUp(object sender, MouseEventArgs e)
+        private void A205M_2КнопкаОтсчет_MouseUp(object sender, MouseEventArgs e)
         {
             КнопкаОтсчет.BackgroundImage = ControlElementImages.buttonRoundType6;
             Дисплей.Text = string.Empty;
@@ -114,56 +98,112 @@ namespace R440O.R440OForms.A205M_2
 
         #region Установка переключателей волны
 
-        private void ПереключательВолнаX10000_MouseUp(object sender, MouseEventArgs e)
+        private void A205M_2ПереключательВолнаX10000_MouseUp(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left) A205M_2Parameters.ПереключательВолнаX10000 += 1;
-            if (e.Button == MouseButtons.Right) A205M_2Parameters.ПереключательВолнаX10000 -= 1;
+            if (e.Button == MouseButtons.Left)
+            {
+                A205M_2Parameters.ПереключательВолнаX10000 += 1;
+            }
+
+            if (e.Button == MouseButtons.Right)
+            {
+                A205M_2Parameters.ПереключательВолнаX10000 -= 1;
+            }
         }
 
-        private void ПереключательВолнаX1000_MouseUp(object sender, MouseEventArgs e)
+        private void A205M_2ПереключательВолнаX1000_MouseUp(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left) A205M_2Parameters.ПереключательВолнаX1000 += 1;
-            if (e.Button == MouseButtons.Right) A205M_2Parameters.ПереключательВолнаX1000 -= 1;
+            if (e.Button == MouseButtons.Left)
+            {
+                A205M_2Parameters.ПереключательВолнаX1000 += 1;
+            }
+
+            if (e.Button == MouseButtons.Right)
+            {
+                A205M_2Parameters.ПереключательВолнаX1000 -= 1;
+            }
         }
 
-        private void ПереключательВолнаX100_MouseUp(object sender, MouseEventArgs e)
+        private void A205M_2ПереключательВолнаX100_MouseUp(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left) A205M_2Parameters.ПереключательВолнаX100 += 1;
-            if (e.Button == MouseButtons.Right) A205M_2Parameters.ПереключательВолнаX100 -= 1;
+            if (e.Button == MouseButtons.Left)
+            {
+                A205M_2Parameters.ПереключательВолнаX100 += 1;
+            }
+
+            if (e.Button == MouseButtons.Right)
+            {
+                A205M_2Parameters.ПереключательВолнаX100 -= 1;
+            }
         }
 
-        private void ПереключательВолнаX10_MouseUp(object sender, MouseEventArgs e)
+        private void A205M_2ПереключательВолнаX10_MouseUp(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left) A205M_2Parameters.ПереключательВолнаX10 += 1;
-            if (e.Button == MouseButtons.Right) A205M_2Parameters.ПереключательВолнаX10 -= 1;
+            if (e.Button == MouseButtons.Left)
+            {
+                A205M_2Parameters.ПереключательВолнаX10 += 1;
+            }
+
+            if (e.Button == MouseButtons.Right)
+            {
+                A205M_2Parameters.ПереключательВолнаX10 -= 1;
+            }
         }
 
-        private void ПереключательВолнаX1_MouseUp(object sender, MouseEventArgs e)
+        private void A205M_2ПереключательВолнаX1_MouseUp(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left) A205M_2Parameters.ПереключательВолнаX1 += 1;
-            if (e.Button == MouseButtons.Right) A205M_2Parameters.ПереключательВолнаX1 -= 1;
+            if (e.Button == MouseButtons.Left)
+            {
+                A205M_2Parameters.ПереключательВолнаX1 += 1;
+            }
+
+            if (e.Button == MouseButtons.Right)
+            {
+                A205M_2Parameters.ПереключательВолнаX1 -= 1;
+            }
         }
 
         #endregion
 
         #region Переключатели контроля, вида работы, входы чт
 
-        private void ПереключательКонтроль_MouseUp(object sender, MouseEventArgs e)
+        private void A205M_2ПереключательКонтроль_MouseUp(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left) A205M_2Parameters.ПереключательКонтроль += 1;
-            if (e.Button == MouseButtons.Right) A205M_2Parameters.ПереключательКонтроль -= 1;
+            if (e.Button == MouseButtons.Left)
+            {
+                A205M_2Parameters.ПереключательКонтроль += 1;
+            }
+
+            if (e.Button == MouseButtons.Right)
+            {
+                A205M_2Parameters.ПереключательКонтроль -= 1;
+            }
         }
 
-        private void ПереключательВидРаботы_MouseUp(object sender, MouseEventArgs e)
+        private void A205M_2ПереключательВидРаботы_MouseUp(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left) A205M_2Parameters.ПереключательВидРаботы += 1;
-            if (e.Button == MouseButtons.Right) A205M_2Parameters.ПереключательВидРаботы -= 1;
+            if (e.Button == MouseButtons.Left)
+            {
+                A205M_2Parameters.ПереключательВидРаботы += 1;
+            }
+
+            if (e.Button == MouseButtons.Right)
+            {
+                A205M_2Parameters.ПереключательВидРаботы -= 1;
+            }
         }
 
         private void A205M_2ПереключательВходЧТ_MouseUp(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left) A205M_2Parameters.ПереключательВходЧТ += 1;
-            if (e.Button == MouseButtons.Right) A205M_2Parameters.ПереключательВходЧТ -= 1;
+            if (e.Button == MouseButtons.Left)
+            {
+                A205M_2Parameters.ПереключательВходЧТ += 1;
+            }
+
+            if (e.Button == MouseButtons.Right)
+            {
+                A205M_2Parameters.ПереключательВходЧТ -= 1;
+            }
         }
 
         #endregion

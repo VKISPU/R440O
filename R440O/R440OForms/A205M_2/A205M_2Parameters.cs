@@ -1,5 +1,7 @@
-﻿using R440O.R440OForms.N18_M;
+﻿using System.Resources;
+using R440O.R440OForms.N18_M;
 using R440O.R440OForms.N502B;
+using R440O.R440OForms.NKN_1;
 using R440O.R440OForms.NKN_2;
 
 namespace R440O.R440OForms.A205M_2
@@ -159,17 +161,22 @@ namespace R440O.R440OForms.A205M_2
                     switch (_переключательКонтроль)
                     {
                         case 4:
+                            return 20;
                         case 7:
-                            return 27;
+                            return 30;
                         case 1:
+                            return NKN_2Parameters.ЛампочкиФаз[0] ? 20 : 0;
                         case 2:
+                            return NKN_2Parameters.ЛампочкиФаз[0] ? 26 : 0;
                         case 3:
+                            return ЛампочкаНормРаб ? 20 : 0;
                         case 5:
                         case 6:
                         case 8:
                         case 9:
+                            return NKN_2Parameters.ЛампочкиФаз[0] ? 24 : 0;
                         case 10:
-                            return ЛампочкаНормРаб ? 27 : 0;
+                            return ЛампочкаНормРаб ? 24 : 0;
                     }
                 }
                 return 0;

@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(A205M_2Form));
             this.Panel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ПереключательВолнаX1000 = new System.Windows.Forms.Button();
             this.ЛампочкаПерегрев = new System.Windows.Forms.PictureBox();
             this.ЛампочкаНормРаб = new System.Windows.Forms.PictureBox();
@@ -44,6 +46,7 @@
             this.ТумблерКЭД = new System.Windows.Forms.Button();
             this.ИндикаторКонтроль = new System.Windows.Forms.PictureBox();
             this.Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПерегрев)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаНормРаб)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторКонтроль)).BeginInit();
@@ -53,7 +56,7 @@
             // 
             this.Panel.BackgroundImage = global::R440O.BackgroundImages.A205M;
             this.Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Panel.Controls.Add(this.ИндикаторКонтроль);
+            this.Panel.Controls.Add(this.pictureBox1);
             this.Panel.Controls.Add(this.ПереключательВолнаX1000);
             this.Panel.Controls.Add(this.ЛампочкаПерегрев);
             this.Panel.Controls.Add(this.ЛампочкаНормРаб);
@@ -67,10 +70,21 @@
             this.Panel.Controls.Add(this.ПереключательВолнаX10000);
             this.Panel.Controls.Add(this.КнопкаОтсчет);
             this.Panel.Controls.Add(this.ТумблерКЭД);
+            this.Panel.Controls.Add(this.ИндикаторКонтроль);
             this.Panel.Location = new System.Drawing.Point(0, 0);
             this.Panel.Name = "Panel";
             this.Panel.Size = new System.Drawing.Size(1099, 428);
             this.Panel.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(229, 112);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(145, 62);
+            this.pictureBox1.TabIndex = 66;
+            this.pictureBox1.TabStop = false;
             // 
             // ПереключательВолнаX1000
             // 
@@ -86,7 +100,7 @@
             this.ПереключательВолнаX1000.Size = new System.Drawing.Size(100, 100);
             this.ПереключательВолнаX1000.TabIndex = 2;
             this.ПереключательВолнаX1000.UseVisualStyleBackColor = false;
-            this.ПереключательВолнаX1000.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательВолнаX1000_MouseUp);
+            this.ПереключательВолнаX1000.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_2ПереключательВолнаX1000_MouseUp);
             // 
             // ЛампочкаПерегрев
             // 
@@ -105,7 +119,7 @@
             this.ЛампочкаНормРаб.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ЛампочкаНормРаб.Location = new System.Drawing.Point(826, 63);
             this.ЛампочкаНормРаб.Name = "ЛампочкаНормРаб";
-            this.ЛампочкаНормРаб.Size = new System.Drawing.Size(40, 40);
+            this.ЛампочкаНормРаб.Size = new System.Drawing.Size(35, 35);
             this.ЛампочкаНормРаб.TabIndex = 63;
             this.ЛампочкаНормРаб.TabStop = false;
             // 
@@ -123,7 +137,7 @@
             this.ПереключательКонтроль.Size = new System.Drawing.Size(100, 100);
             this.ПереключательКонтроль.TabIndex = 4;
             this.ПереключательКонтроль.UseVisualStyleBackColor = false;
-            this.ПереключательКонтроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательКонтроль_MouseUp);
+            this.ПереключательКонтроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_2ПереключательКонтроль_MouseUp);
             // 
             // ПереключательВходЧТ
             // 
@@ -155,7 +169,7 @@
             this.ПереключательВидРаботы.Size = new System.Drawing.Size(100, 100);
             this.ПереключательВидРаботы.TabIndex = 4;
             this.ПереключательВидРаботы.UseVisualStyleBackColor = false;
-            this.ПереключательВидРаботы.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательВидРаботы_MouseUp);
+            this.ПереключательВидРаботы.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_2ПереключательВидРаботы_MouseUp);
             // 
             // Дисплей
             // 
@@ -186,7 +200,7 @@
             this.ПереключательВолнаX1.Size = new System.Drawing.Size(100, 100);
             this.ПереключательВолнаX1.TabIndex = 2;
             this.ПереключательВолнаX1.UseVisualStyleBackColor = false;
-            this.ПереключательВолнаX1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательВолнаX1_MouseUp);
+            this.ПереключательВолнаX1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_2ПереключательВолнаX1_MouseUp);
             // 
             // ПереключательВолнаX10
             // 
@@ -202,7 +216,7 @@
             this.ПереключательВолнаX10.Size = new System.Drawing.Size(100, 100);
             this.ПереключательВолнаX10.TabIndex = 2;
             this.ПереключательВолнаX10.UseVisualStyleBackColor = false;
-            this.ПереключательВолнаX10.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательВолнаX10_MouseUp);
+            this.ПереключательВолнаX10.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_2ПереключательВолнаX10_MouseUp);
             // 
             // ПереключательВолнаX100
             // 
@@ -218,7 +232,7 @@
             this.ПереключательВолнаX100.Size = new System.Drawing.Size(100, 100);
             this.ПереключательВолнаX100.TabIndex = 2;
             this.ПереключательВолнаX100.UseVisualStyleBackColor = false;
-            this.ПереключательВолнаX100.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательВолнаX100_MouseUp);
+            this.ПереключательВолнаX100.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_2ПереключательВолнаX100_MouseUp);
             // 
             // ПереключательВолнаX10000
             // 
@@ -234,7 +248,7 @@
             this.ПереключательВолнаX10000.Size = new System.Drawing.Size(100, 100);
             this.ПереключательВолнаX10000.TabIndex = 2;
             this.ПереключательВолнаX10000.UseVisualStyleBackColor = false;
-            this.ПереключательВолнаX10000.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательВолнаX10000_MouseUp);
+            this.ПереключательВолнаX10000.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_2ПереключательВолнаX10000_MouseUp);
             // 
             // КнопкаОтсчет
             // 
@@ -249,8 +263,8 @@
             this.КнопкаОтсчет.Size = new System.Drawing.Size(53, 55);
             this.КнопкаОтсчет.TabIndex = 1;
             this.КнопкаОтсчет.UseVisualStyleBackColor = false;
-            this.КнопкаОтсчет.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаОтсчет_MouseDown);
-            this.КнопкаОтсчет.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаОтсчет_MouseUp);
+            this.КнопкаОтсчет.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A205M_2КнопкаОтсчет_MouseDown);
+            this.КнопкаОтсчет.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_2КнопкаОтсчет_MouseUp);
             // 
             // ТумблерКЭД
             // 
@@ -265,18 +279,18 @@
             this.ТумблерКЭД.Size = new System.Drawing.Size(63, 68);
             this.ТумблерКЭД.TabIndex = 0;
             this.ТумблерКЭД.UseVisualStyleBackColor = false;
-            this.ТумблерКЭД.Click += new System.EventHandler(this.ПереключательКЭД_Click);
+            this.ТумблерКЭД.Click += new System.EventHandler(this.A205M_2ПереключательКЭД_Click);
             // 
             // ИндикаторКонтроль
             // 
             this.ИндикаторКонтроль.BackColor = System.Drawing.Color.Transparent;
+            this.ИндикаторКонтроль.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ИндикаторКонтроль.BackgroundImage")));
             this.ИндикаторКонтроль.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ИндикаторКонтроль.Location = new System.Drawing.Point(241, 40);
+            this.ИндикаторКонтроль.Location = new System.Drawing.Point(249, 66);
             this.ИндикаторКонтроль.Name = "ИндикаторКонтроль";
-            this.ИндикаторКонтроль.Size = new System.Drawing.Size(120, 73);
-            this.ИндикаторКонтроль.TabIndex = 66;
+            this.ИндикаторКонтроль.Size = new System.Drawing.Size(110, 110);
+            this.ИндикаторКонтроль.TabIndex = 82;
             this.ИндикаторКонтроль.TabStop = false;
-            this.ИндикаторКонтроль.Paint += new System.Windows.Forms.PaintEventHandler(this.ИндикаторКонтроль_Paint);
             // 
             // A205M_2Form
             // 
@@ -288,8 +302,9 @@
             this.MaximizeBox = false;
             this.Name = "A205M_2Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "A-205M-2";
+            this.Text = "A-205M-1";
             this.Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПерегрев)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаНормРаб)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторКонтроль)).EndInit();
@@ -313,6 +328,7 @@
         private System.Windows.Forms.Button ПереключательВходЧТ;
         private System.Windows.Forms.PictureBox ЛампочкаПерегрев;
         private System.Windows.Forms.PictureBox ЛампочкаНормРаб;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox ИндикаторКонтроль;
     }
 }

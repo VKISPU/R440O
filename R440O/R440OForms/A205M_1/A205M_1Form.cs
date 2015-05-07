@@ -22,13 +22,16 @@
 
         private void RefreshForm()
         {
-            ИндикаторКонтроль.Invalidate();
+            var angle = A205M_1Parameters.ИндикаторКонтроль * 2.2F - 55;
+            ИндикаторКонтроль.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
+
 
             ТумблерКЭД.BackgroundImage = A205M_1Parameters.ТумблерКЭД
                 ? ControlElementImages.tumblerType6Up
                 : ControlElementImages.tumblerType6Down;
 
-            var angle = A205M_1Parameters.ПереключательВолнаX10000*35 - 90;
+            angle = A205M_1Parameters.ПереключательВолнаX10000*35 - 90;
             ПереключательВолнаX10000.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
@@ -63,19 +66,6 @@
             ЛампочкаНормРаб.BackgroundImage = A205M_1Parameters.ЛампочкаНормРаб
                 ? ControlElementImages.lampType13OnGreen
                 : null;
-        }
-
-        private void ИндикаторКонтроль_Paint(object sender, PaintEventArgs e)
-        {
-            switch (A205M_1Parameters.ИндикаторКонтроль)
-            {
-                case 0:
-                    TransformImageHelper.DrawLine(e.Graphics, 10, 40, 60, 80);
-                    break;
-                case 27:
-                    TransformImageHelper.DrawLine(e.Graphics, 65, 20, 60, 80);
-                    break;
-            }
         }
 
         #endregion
