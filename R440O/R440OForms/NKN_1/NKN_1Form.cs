@@ -57,7 +57,7 @@
         {
             Кнопка220Откл.BackgroundImage = null;
             NKN_1Parameters.Питание220Включено = false;
-        } 
+        }
         #endregion
     }
 }

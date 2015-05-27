@@ -1,10 +1,9 @@
 ﻿namespace R440O.R440OForms.C300PM_2
 {
     using System.Windows.Forms;
-    using Parameters;
 
     /// <summary>
-    /// Форма блока С300ПМ-2
+    /// Форма блока С300ПМ-1
     /// </summary>
     public partial class C300PM_2Form : Form
     {
@@ -13,8 +12,10 @@
         /// </summary>
         public C300PM_2Form()
         {
-            this.InitializeComponent(); 
-            this.InitializeLamps();
+            this.InitializeComponent();
+            C300PM_2Parameters.RefreshForm += this.InitializeLamps;
+
+            InitializeLamps();
         }
 
         /// <summary>
@@ -22,10 +23,10 @@
         /// </summary>
         private void InitializeLamps()
         {
-            C300PM_2Лампочка2К.BackgroundImage = C300PM_2Parameters.C300PM_2Комплект1
+            ЛампочкаКомплект1.BackgroundImage = C300PM_2Parameters.ЛампочкаКомплект1
                 ? ControlElementImages.lampType10OnGreen
                 : null;
-            C300PM_2Лампочка1К.BackgroundImage = C300PM_2Parameters.C300PM_2Комплект2
+            ЛампочкаКомплект2.BackgroundImage = C300PM_2Parameters.ЛампочкаКомплект2
                 ? ControlElementImages.lampType10OnGreen
                 : null;
         }

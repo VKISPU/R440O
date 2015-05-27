@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Threading;
-using R440O.R440OForms.N15;
 using R440O.R440OForms.C300PM_2;
+using R440O.R440OForms.N15;
 using R440O.R440OForms.N502B;
 
-namespace R440O.R440OForms.C300M_4
+namespace R440O.R440OForms.C300M_3
 {
-    class C300M_4Parameters
+    class C300M_3Parameters
     {
         #region Таймер
         public static bool TimerOn = false;
@@ -378,7 +377,7 @@ namespace R440O.R440OForms.C300M_4
                               && N502BParameters.ТумблерЭлектрооборудование && N502BParameters.ТумблерВыпрямитель27В
                               && N502BParameters.ТумблерН15 &&
                               ((!ТумблерУправление && КнопкаПитаниеВкл) ||
-                               (ТумблерУправление && N15Parameters.ТумблерЦ300М4));
+                               (ТумблерУправление && N15Parameters.ТумблерЦ300М3));
 
             ЛампочкаПоиск = ЛампочкаПитание && !ЛампочкаСигнал;
         }

@@ -25,7 +25,6 @@ namespace R440O.R440OForms.N15
         {
             this.InitializeComponent();
             N15Parameters.RefreshForm += InitializeForm;
-            N15LocalParameters.RefreshFormElement += RefreshFormElement;
             InitializeForm();
         }
 
@@ -136,7 +135,7 @@ namespace R440O.R440OForms.N15
             if (item == null) return;
             if (!item.Name.Contains("“умблер")) return;
 
-            var propertyList = typeof (N15LocalParameters).GetProperties();
+            var propertyList = typeof(N15LocalParameters).GetProperties();
             foreach (var property in propertyList.Where(property => ("лок" + item.Name) == property.Name))
             {
                 if (item.Name.Contains("“умблерј20512") ||
@@ -144,19 +143,19 @@ namespace R440O.R440OForms.N15
                     item.Name.Contains("“умблер“лф“лгѕрм") ||
                     item.Name.Contains("“умблер“лф“лгѕрд"))
                 {
-                    item.BackgroundImage = (bool) property.GetValue(null)
+                    item.BackgroundImage = (bool)property.GetValue(null)
                         ? ControlElementImages.tumblerType4Up
                         : ControlElementImages.tumblerType4Down;
                 }
                 else
                 {
-                    item.BackgroundImage = (bool) property.GetValue(null)
+                    item.BackgroundImage = (bool)property.GetValue(null)
                         ? ControlElementImages.tumblerType3Up
                         : ControlElementImages.tumblerType3Down;
                 }
             }
         }
-        
+
 
         /// <summary>
         /// ”ставнавливает насто€щие настройки станции в соответствии с включенными тумблерами
@@ -431,6 +430,7 @@ namespace R440O.R440OForms.N15
             var localParameter = typeof(N15LocalParameters).GetProperty("лок" + button.Name);
             var newValue = !(bool)localParameter.GetValue(null);
             localParameter.SetValue(null, newValue);
+            RefreshFormElement(button.Name);
         }
     }
 }

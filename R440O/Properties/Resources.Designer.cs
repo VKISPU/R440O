@@ -59,23 +59,5 @@ namespace R440O.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на ВКЛ.
-        /// </summary>
-        internal static string stringВКЛ {
-            get {
-                return ResourceManager.GetString("stringВКЛ", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на ОТКЛ.
-        /// </summary>
-        internal static string stringОТКЛ {
-            get {
-                return ResourceManager.GetString("stringОТКЛ", resourceCulture);
-            }
-        }
     }
 }

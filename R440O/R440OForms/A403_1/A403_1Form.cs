@@ -30,11 +30,6 @@ namespace R440O.R440OForms.A403_1
             InitializeComponent();
             RefreshForm();
             A403_1Parameters.RefreshForm += RefreshForm;
-
-            A403_1Parameters.timer.Enabled = true;
-            A403_1Parameters.timer.Tick += A403_1Parameters.timer_Tick;
-            A403_1Parameters.timer.Interval = 1000;
-            A403_1Parameters.timer.Start();
         }
 
         #region Тумблеры

@@ -36,7 +36,6 @@
             set
             {
                 _локТумблерЦ300М1 = value;
-                if (RefreshFormElement != null) RefreshFormElement("ТумблерЦ300М1");
             }
         }
 
@@ -46,7 +45,6 @@
             set
             {
                 _локТумблерЦ300М2 = value;
-                if (RefreshFormElement != null) RefreshFormElement("ТумблерЦ300М2");
             }
         }
 
@@ -56,7 +54,6 @@
             set
             {
                 _локТумблерЦ300М3 = value;
-                if (RefreshFormElement != null) RefreshFormElement("ТумблерЦ300М3");
             }
         }
 
@@ -66,7 +63,6 @@
             set
             {
                 _локТумблерЦ300М4 = value;
-                if (RefreshFormElement != null) RefreshFormElement("ТумблерЦ300М4");
             }
         }
 
@@ -76,7 +72,6 @@
             set
             {
                 _локТумблерН12С = value;
-                if (RefreshFormElement != null) RefreshFormElement("ТумблерН12С");
             }
         }
 
@@ -86,7 +81,6 @@
             set
             {
                 _локТумблерМШУ = value;
-                if (RefreshFormElement != null) RefreshFormElement("ТумблерМШУ");
             }
         }
 
@@ -96,7 +90,6 @@
             set
             {
                 _локТумблерБМА_1 = value;
-                if (RefreshFormElement != null) RefreshFormElement("ТумблерБМА_1");
             }
         }
 
@@ -106,7 +99,6 @@
             set
             {
                 _локТумблерБМА_2 = value;
-                if (RefreshFormElement != null) RefreshFormElement("ТумблерБМА_2");
             }
         }
 
@@ -120,7 +112,6 @@
             {
                 _локТумблерА205Base = value;
                 N15Parameters.ResetParameters();
-                if (RefreshFormElement != null) RefreshFormElement("ТумблерА205Base");
             }
         }
 
@@ -131,7 +122,6 @@
             {
                 _локТумблерА20512 = value;
                 N15Parameters.ResetParameters();
-                if (RefreshFormElement != null) RefreshFormElement("ТумблерА20512");
             }
         }
 
@@ -141,7 +131,6 @@
             set
             {
                 _локТумблерАФСС = value;
-                if (RefreshFormElement != null) RefreshFormElement("ТумблерАФСС");
             }
         }
 
@@ -151,7 +140,6 @@
             set
             {
                 _локТумблерА1 = value;
-                if (RefreshFormElement != null) RefreshFormElement("ТумблерА1");
             }
         }
 
@@ -161,7 +149,6 @@
             set
             {
                 _локТумблерА403 = value;
-                if (RefreshFormElement != null) RefreshFormElement("ТумблерА403");
             }
         }
 
@@ -170,21 +157,15 @@
             get { return _локТумблерК1_1; }
             set
             {
-                _локТумблерК1_1 = value;
-                if (RefreshFormElement != null) RefreshFormElement("ТумблерК1_1");
-            }
+                _локТумблерК1_1 = value;            }
         }
 
-        public static bool локТумблерК1_2
-        {
-            get { return _локТумблерК1_2; }
-            set { _локТумблерК1_2 = value; if (RefreshFormElement != null) RefreshFormElement("ТумблерК1_2"); }
-        }
+        public static bool локТумблерК1_2 { get; set; }
 
         public static bool локТумблерА30412
         {
-            get { return _локТумблерА30412; }
-            set { _локТумблерА30412 = value; if (RefreshFormElement != null) RefreshFormElement("ТумблерА30412"); }
+              get { return _локТумблерА30412; }
+            set { _локТумблерА30412 = value; N15Parameters.ResetParameters(); A304.A304Parameters.ResetParameters(); }
         }
 
         public static bool локТумблерБ1_1
@@ -193,7 +174,6 @@
             set
             {
                 _локТумблерБ1_1 = value;
-                if (RefreshFormElement != null) RefreshFormElement("ТумблерБ1_1");
             }
         }
 
@@ -203,7 +183,6 @@
             set
             {
                 _локТумблерБ1_2 = value;
-                if (RefreshFormElement != null) RefreshFormElement("ТумблерБ1_2");
             }
         }
 
@@ -213,7 +192,6 @@
             set
             {
                 _локТумблерБ2_1 = value;
-                if (RefreshFormElement != null) RefreshFormElement("ТумблерБ2_1");
             }
         }
 
@@ -223,7 +201,6 @@
             set
             {
                 _локТумблерБ2_2 = value;
-                if (RefreshFormElement != null) RefreshFormElement("ТумблерБ2_2");
             }
         }
 
@@ -233,7 +210,6 @@
             set
             {
                 _локТумблерБ3_1 = value;
-                if (RefreshFormElement != null) RefreshFormElement("ТумблерБ3_1");
             }
         }
 
@@ -243,7 +219,6 @@
             set
             {
                 _локТумблерБ3_2 = value;
-                if (RefreshFormElement != null) RefreshFormElement("ТумблерБ3_2");
             }
         }
 
@@ -253,7 +228,6 @@
             set
             {
                 _локТумблерДАБ_5 = value;
-                if (RefreshFormElement != null) RefreshFormElement("ТумблерДАБ_5");
             }
         }
 
@@ -263,7 +237,6 @@
             set
             {
                 _локТумблерР_Н = value;
-                if (RefreshFormElement != null) RefreshFormElement("ТумблерР_Н");
             }
         }
 
@@ -273,7 +246,6 @@
             set
             {
                 _локТумблерАнтЭкв = value;
-                if (RefreshFormElement != null) RefreshFormElement("ТумблерАнтЭкв");
             }
         }
 
@@ -283,7 +255,6 @@
             set
             {
                 _локТумблерТлфТлгПрм = value;
-                if (RefreshFormElement != null) RefreshFormElement("ТумблерТлфТлгПрм");
             }
         }
 
@@ -293,16 +264,11 @@
             set
             {
                 _локТумблерТлфТлгПрд = value;
-                if (RefreshFormElement != null) RefreshFormElement("ТумблерТлфТлгПрд");
             }
         }
 
         public static void ResetParameters()
         {
         }
-
-        public delegate void VoidStringSignature(string parameterName);
-
-        public static event VoidStringSignature RefreshFormElement;
     }
 }

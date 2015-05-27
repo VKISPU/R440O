@@ -24,7 +24,7 @@ namespace R440O
             //Устанавливаем переключатели
             N502BParameters.ТумблерЭлектрооборудование = true;
             N502BParameters.ТумблерВыпрямитель27В = true;
-            //N502BParameters.ТумблерН15 = true;
+            N502BParameters.ТумблерН15 = true;
         }
     }
 }

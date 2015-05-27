@@ -1,13 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using R440O.R440OForms.N15;
+using R440O.R440OForms.C300PM_1;
+using R440O.R440OForms.N502B;
 
 namespace R440O.R440OForms.C300M_1
 {
     class C300M_1Parameters
     {
+        #region Таймер
+        public static bool TimerOn = false;
+        public static bool OnLeft = false;
+        #endregion
+
+        static System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+
         #region Кнопки ВИД РАБОТЫ
         /// <summary>
         /// Названия кнопок:
@@ -22,8 +28,23 @@ namespace R440O.R440OForms.C300M_1
         /// 8 - 240,
         /// 9 - 480.
         /// </summary>
-        private static bool[] _кнопкиВидРаботы = { false, false, false, false, false, false, false, false, false, false};
-        public static bool[] КнопкиВидРаботы { get { return _кнопкиВидРаботы; } set { _кнопкиВидРаботы = value; } }
+        public static bool[] КнопкиВидРаботы = { false, false, false, false, false, false, false, false, false, false };
+        public static int КнопкаВидРаботы
+        {
+            get { return _кнопкаВидРаботы; }
+            set
+            {
+                _кнопкаВидРаботы = value;
+                for (int i = 0; i < КнопкиВидРаботы.Length; i++)
+                    КнопкиВидРаботы[i] = false;
+                КнопкиВидРаботы[_кнопкаВидРаботы] = true;
+
+                TimerSet();
+                RefreshForm();
+            }
+        }
+
+        private static int _кнопкаВидРаботы = -1;
 
         /// <summary>
         /// Кнопка Сброс, отжимает все кнопки Вида Работы
@@ -32,7 +53,14 @@ namespace R440O.R440OForms.C300M_1
         public static bool КнопкаВидРаботыСброс
         {
             get { return _кнопкаВидРаботыСброс; }
-            set { _кнопкаВидРаботыСброс = value; }
+            set
+            {
+                _кнопкаВидРаботыСброс = value;
+                for (int i = 0; i < КнопкиВидРаботы.Length; i++)
+                    КнопкиВидРаботы[i] = false;
+
+                RefreshForm();
+            }
         }
         #endregion
 
@@ -50,8 +78,24 @@ namespace R440O.R440OForms.C300M_1
         /// 8 - -5,
         /// 9 - -12.6.
         /// </summary>
-        public static bool[] КнопкиКонтрольРежима { get { return _кнопкиКонтрольРежима; } set { _кнопкиКонтрольРежима = value; } }
-        private static bool[] _кнопкиКонтрольРежима = { false, false, false, false, false, false, false, false, false, false };
+
+        public static bool[] КнопкиКонтрольРежима = { false, false, false, false, false, false, false, false, false, false };
+        public static int КнопкаКонтрольРежима
+        {
+            get { return _кнопкаКонтрольРежима; }
+            set
+            {
+                _кнопкаКонтрольРежима = value;
+
+                for (int i = 0; i < КнопкиКонтрольРежима.Length; i++)
+                    КнопкиКонтрольРежима[i] = false;
+                КнопкиКонтрольРежима[_кнопкаКонтрольРежима] = true;
+
+                RefreshForm();
+            }
+        }
+        private static int _кнопкаКонтрольРежима = -1;
+
 
         /// <summary>
         /// Кнопка -27, отжимает все кнопки Контроля Режима
@@ -59,7 +103,14 @@ namespace R440O.R440OForms.C300M_1
         public static bool КнопкаКонтрольРежимаМинус27
         {
             get { return _кнопкаКонтрольРежимаМинус27; }
-            set { _кнопкаКонтрольРежимаМинус27 = value; }
+            set
+            {
+                _кнопкаКонтрольРежимаМинус27 = value;
+                for (int i = 0; i < КнопкиКонтрольРежима.Length; i++)
+                    КнопкиКонтрольРежима[i] = false;
+
+                RefreshForm();
+            }
         }
         private static bool _кнопкаКонтрольРежимаМинус27;
         #endregion
@@ -68,20 +119,36 @@ namespace R440O.R440OForms.C300M_1
         /// <summary>
         /// Возможные состояния: true, false
         /// </summary>
-        public static bool КнопкаПитаниеВкл 
-        { 
+        public static bool КнопкаПитаниеВкл
+        {
             get { return _кнопкаПитаниеВкл; }
-            set { _кнопкаПитаниеВкл = value; }
+            set
+            {
+                _кнопкаПитаниеВкл = value;
+                if (value)
+                {
+                    ResetParameters();
+                    RefreshForm();
+                }
+            }
         }
         private static bool _кнопкаПитаниеВкл;
 
         /// <summary>
         /// Возможные состояния: true, false
         /// </summary>
-        public static bool КнопкаПитаниеВыкл 
+        public static bool КнопкаПитаниеВыкл
         {
             get { return _кнопкаПитаниеВыкл; }
-            set { _кнопкаПитаниеВыкл = value; }
+            set
+            {
+                _кнопкаПитаниеВыкл = value;
+                if (value)
+                {
+                    ResetParameters();
+                    RefreshForm();
+                }
+            }
         }
         private static bool _кнопкаПитаниеВыкл;
         #endregion
@@ -90,14 +157,18 @@ namespace R440O.R440OForms.C300M_1
         public static bool КнопкаПоиск
         {
             get { return _кнопкаПоиск; }
-            set { _кнопкаПоиск = value; }
+            set
+            {
+                _кнопкаПоиск = value;
+                if (value) Search();
+            }
         }
         private static bool _кнопкаПоиск;
 
         public static bool КнопкаИндикацияВолны
         {
             get { return _кнопкаИндикацияВолны; }
-            set { _кнопкаИндикацияВолны = value; }
+            set { if (ЛампочкаПитание) _кнопкаИндикацияВолны = value; }
         }
         private static bool _кнопкаИндикацияВолны;
         #endregion
@@ -118,6 +189,7 @@ namespace R440O.R440OForms.C300M_1
                 if (value >= 0 && value <= 9)
                 {
                     _переключательВолна1000 = value;
+                    if (RefreshForm != null) RefreshForm();
                 }
             }
         }
@@ -138,6 +210,7 @@ namespace R440O.R440OForms.C300M_1
                 if (value >= 0 && value <= 9)
                 {
                     _переключательВолна100 = value;
+                    if (RefreshForm != null) RefreshForm();
                 }
             }
         }
@@ -158,6 +231,7 @@ namespace R440O.R440OForms.C300M_1
                 if (value >= 0 && value <= 9)
                 {
                     _переключательВолна10 = value;
+                    if (RefreshForm != null) RefreshForm();
                 }
             }
         }
@@ -178,6 +252,7 @@ namespace R440O.R440OForms.C300M_1
                 if (value >= 0 && value <= 9)
                 {
                     _переключательВолна1 = value;
+                    if (RefreshForm != null) RefreshForm();
                 }
             }
         }
@@ -188,64 +263,301 @@ namespace R440O.R440OForms.C300M_1
         /// <summary>
         /// Возможные состояния: true - Дистанционное; false - Местное;
         /// </summary>
-        public static bool ТумблерУправление { get { return _тумблерУправление; } set { _тумблерУправление = value; } }
+        public static bool ТумблерУправление { get { return _тумблерУправление; } set { _тумблерУправление = value; ResetParameters(); if (RefreshForm != null) RefreshForm(); } }
         private static bool _тумблерУправление = false;
 
 
         /// <summary>
         /// Возможные состояния: true - ЧТ, false - ОФТ
         /// </summary>
-        public static bool ТумблерВведение { get { return _тумблерВведение; } set { _тумблерВведение = value; } }
+        public static bool ТумблерВведение { get { return _тумблерВведение; } set { _тумблерВведение = value; if (RefreshForm != null) RefreshForm(); } }
         private static bool _тумблерВведение = false;
 
         /// <summary>
         /// Возможные состояния: true - Вкл, false - Откл
         /// </summary>
-        public static bool ТумблерБлокировка { get { return _тумблерБлокировка; } set { _тумблерБлокировка = value; } }
+        public static bool ТумблерБлокировка { get { return _тумблерБлокировка; } set { _тумблерБлокировка = value; Search(); if (RefreshForm != null) RefreshForm(); } }
         private static bool _тумблерБлокировка = false;
 
         /// <summary>
         /// Возможные состояния: true - Автоматическое, false - Ручное
         /// </summary>
-        public static bool ТумблерВидВключения { get { return _тумблерВидВключения; } set { _тумблерВидВключения = value; } }
+        public static bool ТумблерВидВключения { get { return _тумблерВидВключения; } set { _тумблерВидВключения = value; if (RefreshForm != null) RefreshForm(); } }
         private static bool _тумблерВидВключения = false;
 
         /// <summary>
         /// Возможные состояния: true - С анализом симметрии, false - Откл
         /// </summary>
-        public static bool ТумблерАнализСимметрии { get { return _тумблерАнализСимметрии; } set { _тумблерАнализСимметрии = value; } }
+        public static bool ТумблерАнализСимметрии { get { return _тумблерАнализСимметрии; } set { _тумблерАнализСимметрии = value; if (RefreshForm != null) RefreshForm(); } }
         private static bool _тумблерАнализСимметрии = false;
 
         /// <summary>
         /// Возможные состояния: true - Автоматическое слежение частоты, false - Откл
         /// </summary>
-        public static bool ТумблерАСЧ { get { return _тумблерАСЧ; } set { _тумблерАСЧ = value; } }
+        public static bool ТумблерАСЧ { get { return _тумблерАСЧ; } set { _тумблерАСЧ = value; if (RefreshForm != null) RefreshForm(); } }
         private static bool _тумблерАСЧ = false;
 
         /// <summary>
         /// Возможные состояния: true - Автоматическая регулировка уровня, false - Ручная регулировка уровня
         /// </summary>
-        public static bool ТумблерРегулировкаУровня { get { return _тумблерРегулировкаУровня; } set { _тумблерРегулировкаУровня = value; } }
+        public static bool ТумблерРегулировкаУровня { get { return _тумблерРегулировкаУровня; } set { _тумблерРегулировкаУровня = value; if (RefreshForm != null) RefreshForm(); } }
         private static bool _тумблерРегулировкаУровня = false;
 
         /// <summary>
         /// Возможные состояния: true - ЧТ, false - ОФТ
         /// </summary>
-        public static bool ТумблерВидМодуляции { get { return _тумблерВидМодуляции; } set { _тумблерВидМодуляции = value; } }
+        public static bool ТумблерВидМодуляции { get { return _тумблерВидМодуляции; } set { _тумблерВидМодуляции = value; if (RefreshForm != null) RefreshForm(); } }
         private static bool _тумблерВидМодуляции = false;
 
         /// <summary>
         /// Возможные состояния: true - +-60, false - +-300
         /// </summary>
-        public static bool ТумблерПределы { get { return _тумблерПределы; } set { _тумблерПределы = value; } }
+        public static bool ТумблерПределы { get { return _тумблерПределы; } set { _тумблерПределы = value; if (RefreshForm != null) RefreshForm(); } }
         private static bool _тумблерПределы = false;
         #endregion
 
         #region Лампочки
-        public static bool ЛампочкаСигнал = false;
-        public static bool ЛампочкаПитание = false;
-        public static bool ЛампочкаПоиск = false;
+        private static bool _лампочкаСигнал;
+        public static bool ЛампочкаСигнал
+        {
+            get { return _лампочкаСигнал; }
+            set
+            {
+                _лампочкаСигнал = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        private static bool _лампочкаПитание;
+        public static bool ЛампочкаПитание
+        {
+            get { return _лампочкаПитание; }
+            set
+            {
+                _лампочкаПитание = value;
+                C300PM_1Parameters.ResetParameters();
+                if (!value)
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        private static bool _лампочкаПоиск;
+        public static bool ЛампочкаПоиск
+        {
+            get { return _лампочкаПоиск; }
+            set
+            {
+                _лампочкаПоиск = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
         #endregion
 
+        #region Индикатор
+        private static float _индикаторСигнал = 0;
+        public static float ИндикаторСигнал
+        {
+            get
+            {
+                Search();
+                if (N502BParameters.ТумблерВыпрямитель27В && N502BParameters.ЛампочкаСфазировано && N502BParameters.ТумблерЭлектрооборудование)
+                    if (N502BParameters.ТумблерН15)
+                    {
+                        if (ЛампочкаПитание)
+                        {
+                            if (timer.Enabled) return _индикаторСигнал;
+                            else
+                            switch (Array.IndexOf(КнопкиКонтрольРежима, true))
+                            {
+                                case 0:
+                                    return (ЛампочкаСигнал)
+                                        ? _индикаторСигнал = 50
+                                        : _индикаторСигнал = 0;
+                                case 1:
+                                    if (ТумблерРегулировкаУровня)
+                                        return (Array.IndexOf(КнопкиВидРаботы, true) == -1)
+                                            ? _индикаторСигнал = 50
+                                            : _индикаторСигнал = 30;
+                                    else
+                                        return (Array.IndexOf(КнопкиВидРаботы, true) == -1)
+                                           ? _индикаторСигнал = 30
+                                           : _индикаторСигнал = 50;
+                                case 2:
+                                    return _индикаторСигнал = 0;
+                                case 3:
+                                    return _индикаторСигнал;
+                                case 4:
+                                    return _индикаторСигнал = 30;
+                                case 5:
+                                case 6:
+                                case 7:
+                                    return _индикаторСигнал = 41;
+                                case 8:
+                                case 9:
+                                    return _индикаторСигнал = -43;
+                                default:
+                                    return КнопкаКонтрольРежимаМинус27
+                                        ? _индикаторСигнал = -43
+                                        : _индикаторСигнал = 0;
+                            }
+                        }
+                        else
+                        {
+                            return КнопкиКонтрольРежима[7]
+                                ? _индикаторСигнал = 41
+                                : _индикаторСигнал = 0;
+                        }
+                    }
+                    else
+                    {
+                        return _индикаторСигнал = 0;
+                    }
+
+                return _индикаторСигнал;
+            }
+            set
+            {
+                if (value >= -51 && value <= 51) _индикаторСигнал = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+        #endregion
+
+        public static void ResetParameters()
+        {
+            ЛампочкаПитание = N502BParameters.ЛампочкаСфазировано
+                              && N502BParameters.ТумблерЭлектрооборудование && N502BParameters.ТумблерВыпрямитель27В
+                              && N502BParameters.ТумблерН15 &&
+                              ((!ТумблерУправление && КнопкаПитаниеВкл) ||
+                               (ТумблерУправление && N15Parameters.ТумблерЦ300М1));
+
+            ЛампочкаПоиск = ЛампочкаПитание && !ЛампочкаСигнал;
+        }
+
+        //public static void RefreshIndicators()
+        //{
+        //    Search();
+        //    if (N502BParameters.ТумблерВыпрямитель27В && N502BParameters.ЛампочкаСфазировано && N502BParameters.ТумблерЭлектрооборудование)
+        //        if (N502BParameters.ТумблерН15)
+        //        {          
+        //            if (ЛампочкаПитание)
+        //            {
+        //                switch (Array.IndexOf(КнопкиКонтрольРежима, true))
+        //                {
+        //                    case 0:
+        //                        ИндикаторСигнал = (ЛампочкаСигнал)
+        //                            ? 50
+        //                            : 0;
+        //                        break;
+        //                    case 1:
+        //                        if (ТумблерРегулировкаУровня)
+        //                            ИндикаторСигнал = (Array.IndexOf(КнопкиВидРаботы, true) == -1)
+        //                                ? 50
+        //                                : 30;
+        //                        else
+        //                            ИндикаторСигнал = (Array.IndexOf(КнопкиВидРаботы, true) == -1)
+        //                               ? 30
+        //                               : 50;
+        //                        break;
+        //                    case 2:
+        //                        ИндикаторСигнал = 0;
+        //                        break;
+        //                    case 3:
+        //                        break;
+        //                    case 4:
+        //                        ИндикаторСигнал = 30;
+        //                        break;
+        //                    case 5:
+        //                    case 6:
+        //                    case 7:
+        //                        ИндикаторСигнал = 41;
+        //                        break;
+        //                    case 8:
+        //                    case 9:
+        //                        ИндикаторСигнал = -43;
+        //                        break;
+        //                    default:
+        //                        ИндикаторСигнал = (КнопкаКонтрольРежимаМинус27)
+        //                            ? -43
+        //                            : 0;
+        //                        break;
+        //                }
+        //            }
+        //            else
+        //            {
+        //                ИндикаторСигнал = (КнопкиКонтрольРежима[7])
+        //                ? 41
+        //                : 0;
+        //            }
+        //        }
+        //        else
+        //        {
+        //            ИндикаторСигнал = 0;
+        //        }
+        //    else ИндикаторСигнал = 0;
+
+        //    if (RefreshForm != null) RefreshForm();
+        //}
+
+        [STAThread]
+        private static void Search()
+        {
+            timer.Tick -= timer_Tick;
+            timer.Stop();
+            if (ЛампочкаПитание && ((Array.IndexOf(КнопкиКонтрольРежима, true) == 3) || (КнопкаПоиск)))
+            {
+                if (!ТумблерБлокировка)
+                {
+                    timer.Enabled = true;
+                    TimerSet();
+                    timer.Tick += timer_Tick;
+                    timer.Start();
+                }
+                else timer.Enabled = false;
+            }
+            else timer.Enabled = false;
+        }
+
+        static void timer_Tick(object sender, EventArgs e)
+        {
+            int Predel1 = (ТумблерПределы)
+               ? -35
+               : -50;
+            int Predel2 = (ТумблерПределы)
+               ? -20
+               : 50;
+
+            if (OnLeft)
+            {
+                ИндикаторСигнал -= 0.3F;
+                if (ИндикаторСигнал < Predel1)
+                    OnLeft = false;
+            }
+            else
+            {
+                ИндикаторСигнал += 0.3F;
+                if (ИндикаторСигнал > Predel2)
+                    OnLeft = true;
+            }
+
+            //***Условие на поиск сигнала***//
+            RefreshForm();
+        }
+
+
+        //Изменение скорости работы таймера
+        static void TimerSet()
+        {
+            if(timer.Enabled)
+            {
+                if (Array.IndexOf(КнопкиВидРаботы, true) == -1)
+                    timer.Interval = 10;
+                else timer.Interval = 100 - Array.IndexOf(КнопкиВидРаботы, true) * 10;
+            }
+        }
+
+
+        public delegate void VoidVoidSignature();
+        public static event VoidVoidSignature RefreshForm;
     }
 }

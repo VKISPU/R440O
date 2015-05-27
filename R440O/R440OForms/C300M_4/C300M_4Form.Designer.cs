@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(C300M_4Form));
             this.C300M_4Panel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ИндикаторСигнала = new System.Windows.Forms.PictureBox();
             this.ТумблерУправление = new System.Windows.Forms.Button();
             this.ЛампочкаПоиск = new System.Windows.Forms.PictureBox();
@@ -78,6 +78,7 @@
             this.КнопкаВидРаботы1 = new System.Windows.Forms.Button();
             this.КнопкаВидРаботы0 = new System.Windows.Forms.Button();
             this.C300M_4Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторСигнала)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПоиск)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПитание)).BeginInit();
@@ -88,6 +89,7 @@
             // 
             this.C300M_4Panel.BackgroundImage = global::R440O.BackgroundImages.C300M;
             this.C300M_4Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.C300M_4Panel.Controls.Add(this.pictureBox1);
             this.C300M_4Panel.Controls.Add(this.ИндикаторСигнала);
             this.C300M_4Panel.Controls.Add(this.ТумблерУправление);
             this.C300M_4Panel.Controls.Add(this.ЛампочкаПоиск);
@@ -140,12 +142,20 @@
             this.C300M_4Panel.Size = new System.Drawing.Size(1100, 430);
             this.C300M_4Panel.TabIndex = 1;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Location = new System.Drawing.Point(693, 109);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 82;
+            this.pictureBox1.TabStop = false;
+            // 
             // ИндикаторСигнала
             // 
             this.ИндикаторСигнала.BackColor = System.Drawing.Color.Transparent;
-            this.ИндикаторСигнала.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ИндикаторСигнала.BackgroundImage")));
-            this.ИндикаторСигнала.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ИндикаторСигнала.Location = new System.Drawing.Point(688, 52);
+            this.ИндикаторСигнала.BackgroundImage = global::R440O.ControlElementImages.arrow2;
+            this.ИндикаторСигнала.Location = new System.Drawing.Point(688, 58);
             this.ИндикаторСигнала.Name = "ИндикаторСигнала";
             this.ИндикаторСигнала.Size = new System.Drawing.Size(110, 110);
             this.ИндикаторСигнала.TabIndex = 81;
@@ -170,30 +180,30 @@
             // ЛампочкаПоиск
             // 
             this.ЛампочкаПоиск.BackColor = System.Drawing.Color.Transparent;
-            this.ЛампочкаПоиск.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ЛампочкаПоиск.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ЛампочкаПоиск.Location = new System.Drawing.Point(844, 120);
             this.ЛампочкаПоиск.Name = "ЛампочкаПоиск";
-            this.ЛампочкаПоиск.Size = new System.Drawing.Size(27, 25);
+            this.ЛампочкаПоиск.Size = new System.Drawing.Size(30, 30);
             this.ЛампочкаПоиск.TabIndex = 77;
             this.ЛампочкаПоиск.TabStop = false;
             // 
             // ЛампочкаПитание
             // 
             this.ЛампочкаПитание.BackColor = System.Drawing.Color.Transparent;
-            this.ЛампочкаПитание.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ЛампочкаПитание.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ЛампочкаПитание.Location = new System.Drawing.Point(844, 47);
             this.ЛампочкаПитание.Name = "ЛампочкаПитание";
-            this.ЛампочкаПитание.Size = new System.Drawing.Size(27, 25);
+            this.ЛампочкаПитание.Size = new System.Drawing.Size(30, 30);
             this.ЛампочкаПитание.TabIndex = 76;
             this.ЛампочкаПитание.TabStop = false;
             // 
             // ЛампочкаСигнал
             // 
             this.ЛампочкаСигнал.BackColor = System.Drawing.Color.Transparent;
-            this.ЛампочкаСигнал.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ЛампочкаСигнал.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ЛампочкаСигнал.Location = new System.Drawing.Point(533, 33);
             this.ЛампочкаСигнал.Name = "ЛампочкаСигнал";
-            this.ЛампочкаСигнал.Size = new System.Drawing.Size(27, 25);
+            this.ЛампочкаСигнал.Size = new System.Drawing.Size(30, 30);
             this.ЛампочкаСигнал.TabIndex = 75;
             this.ЛампочкаСигнал.TabStop = false;
             // 
@@ -547,7 +557,7 @@
             this.КнопкаКонтрольРежима9.Name = "КнопкаКонтрольРежима9";
             this.КнопкаКонтрольРежима9.Size = new System.Drawing.Size(35, 35);
             this.КнопкаКонтрольРежима9.TabIndex = 30;
-            this.КнопкаКонтрольРежима9.Text = "-12,8";
+            this.КнопкаКонтрольРежима9.Text = "-12,6";
             this.КнопкаКонтрольРежима9.UseVisualStyleBackColor = false;
             this.КнопкаКонтрольРежима9.Click += new System.EventHandler(this.КнопкаКонтрольРежима_Click);
             // 
@@ -932,9 +942,10 @@
             this.MaximizeBox = false;
             this.Name = "C300M_4Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ц300M-1";
+            this.Text = "Ц300M-4";
             this.C300M_4Panel.ResumeLayout(false);
             this.C300M_4Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторСигнала)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПоиск)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПитание)).EndInit();
@@ -992,6 +1003,7 @@
         private System.Windows.Forms.PictureBox ЛампочкаПитание;
         private System.Windows.Forms.PictureBox ЛампочкаСигнал;
         private System.Windows.Forms.Button ТумблерУправление;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox ИндикаторСигнала;
     }
 }

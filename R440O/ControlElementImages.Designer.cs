@@ -73,16 +73,6 @@ namespace R440O {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap A306CabelInput {
-            get {
-                object obj = ResourceManager.GetObject("A306CabelInput", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap A306CabelNO {
             get {
                 object obj = ResourceManager.GetObject("A306CabelNO", resourceCulture);
@@ -93,9 +83,19 @@ namespace R440O {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap A306CabelOutput {
+        internal static System.Drawing.Bitmap A306Input {
             get {
-                object obj = ResourceManager.GetObject("A306CabelOutput", resourceCulture);
+                object obj = ResourceManager.GetObject("A306Input", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A306Output {
+            get {
+                object obj = ResourceManager.GetObject("A306Output", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

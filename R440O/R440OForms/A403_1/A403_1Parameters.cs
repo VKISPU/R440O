@@ -20,9 +20,9 @@ namespace R440O.R440OForms.A403_1
             {
                 if (Array.IndexOf(КнопкиПараметры, true) == -1)
                 {
-                    Значение = (Time/3600/10).ToString() + (Time/3600%10) +
-                               (Time/60%60/10) + (Time/60%60%10) +
-                               (Time%60/10) + (Time%60%10);
+                    Значение = (Time / 3600 / 10).ToString() + (Time / 3600 % 10) +
+                               (Time / 60 % 60 / 10) + (Time / 60 % 60 % 10) +
+                               (Time % 60 / 10) + (Time % 60 % 10);
                     if (RefreshForm != null) RefreshForm();
                 }
                 Time++;
@@ -64,6 +64,21 @@ namespace R440O.R440OForms.A403_1
             set
             {
                 _тумблерСеть = value;
+
+                if (value)
+                {
+                    timer.Enabled = true;
+                    timer.Tick += timer_Tick;
+                    timer.Interval = 1000;
+                    timer.Start();
+                }
+                else
+                {
+                    timer.Enabled = false;
+                    timer.Tick -= timer_Tick;
+                    timer.Stop();
+                }
+
                 ResetParameters();
                 if (RefreshForm != null) RefreshForm();
             }
@@ -248,7 +263,7 @@ namespace R440O.R440OForms.A403_1
                     switch (Значение.Length)
                     {
                         case 1:
-                            if (Значение[0] != '-' && (Array.IndexOf(КнопкиПараметры, true)==2 ||
+                            if (Значение[0] != '-' && (Array.IndexOf(КнопкиПараметры, true) == 2 ||
                                 Array.IndexOf(КнопкиПараметры, true) == 3) && !ТумблерГруппа)
                                 ДисплейЗначения[(ТумблерГруппа) ? 0 : 1,
                                     Array.IndexOf(КнопкиПараметры, true)] = Значение;
@@ -290,9 +305,9 @@ namespace R440O.R440OForms.A403_1
         public static string Значение
         {
             get { return _значение; }
-            set 
+            set
             {
-                if ( ТумблерСеть || (!ТумблерСеть && value==""))
+                if (ТумблерСеть || (!ТумблерСеть && value == ""))
                     if (value.Length == 0)
                     {
                         _значение = value;
@@ -307,7 +322,7 @@ namespace R440O.R440OForms.A403_1
                             _значение = value;
                             if (RefreshForm != null) RefreshForm();
                         }
-                    }            
+                    }
                     else if ((value[0] == '-' && value.Length <= 7) || (value[0] != '-' && value.Length <= 6))
                     {
                         _значение = value;

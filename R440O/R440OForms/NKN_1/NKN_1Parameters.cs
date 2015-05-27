@@ -19,6 +19,9 @@ namespace R440O.R440OForms.NKN_1
                 _питание220Включено = value;
                 ResetParameters();
                 if (RefreshForm != null) RefreshForm();
+
+                //N15Parameters.A205Distanse1 = false;
+                N15Parameters.ResetParameters();
             }
         }
 
@@ -34,7 +37,7 @@ namespace R440O.R440OForms.NKN_1
                 _лампочкаМУ = value;
                 if (RefreshForm != null) RefreshForm();
             }
-        } 
+        }
         #endregion
 
         #region Лампочки Фаз
@@ -55,7 +58,7 @@ namespace R440O.R440OForms.NKN_1
             }
             A205M_1Parameters.ResetParameters();
             if (RefreshForm != null) RefreshForm();
-        } 
+        }
         #endregion
 
         public delegate void VoidVoidSignature();
@@ -66,8 +69,8 @@ namespace R440O.R440OForms.NKN_1
             ЛампочкаМУ = (N502BParameters.ЛампочкаСфазировано
                           && N502BParameters.ТумблерЭлектрооборудование
                           && N502BParameters.ТумблерВыпрямитель27В);
-            ChangeLampsStateTo((_лампочкаМУ && _питание220Включено && N502BParameters.ТумблерН15)
-                || (_лампочкаМУ && N15Parameters.ТумблерА205Base && N15Parameters.ТумблерА20512 && N502BParameters.ТумблерН15));
+
+            ChangeLampsStateTo(_лампочкаМУ && _питание220Включено && N502BParameters.ТумблерН15);
         }
     }
 }

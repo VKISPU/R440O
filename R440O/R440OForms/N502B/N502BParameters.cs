@@ -2,11 +2,16 @@
 using System.Windows.Forms;
 using R440O.Parameters;
 using R440O.R440OForms.A205M_1;
-using R440O.R440OForms.N15;
 using R440O.R440OForms.NKN_1;
 using R440O.R440OForms.NKN_2;
 using R440O.R440OForms.PowerCabel;
 using R440O.R440OForms.VoltageStabilizer;
+using R440O.R440OForms.C300M_1;
+using R440O.R440OForms.C300M_2;
+using R440O.R440OForms.C300M_3;
+using R440O.R440OForms.C300M_4;
+using R440O.R440OForms.A304;
+using R440O.R440OForms.N15;
 
 namespace R440O.R440OForms.N502B
 {
@@ -39,8 +44,17 @@ namespace R440O.R440OForms.N502B
                 NKN_1Parameters.ResetParameters();
                 NKN_2Parameters.ResetParameters();
                 BMBParameters.ResetParameters();
-                N15Parameters.ResetParameters();
                 A205M_1Parameters.RefreshIndicators();
+                C300M_1Parameters.ResetParameters();
+                C300M_2Parameters.ResetParameters();
+                C300M_3Parameters.ResetParameters();
+                C300M_4Parameters.ResetParameters();
+                C300M_2Parameters.RefreshIndicators();
+                C300M_3Parameters.RefreshIndicators();
+                C300M_4Parameters.RefreshIndicators();
+                N15Parameters.ResetParameters();
+
+                A304Parameters.ResetParameters();
                 if (RefreshForm != null) RefreshForm();
             }
         }
@@ -60,10 +74,22 @@ namespace R440O.R440OForms.N502B
             set
             {
                 _тумблерЭлектрооборудование = value;
+
+                if (!value) NKN_1Parameters.Питание220Включено = false;
+                if (!value) NKN_2Parameters.Питание220Включено = false;
+
                 NKN_1Parameters.ResetParameters();
                 NKN_2Parameters.ResetParameters();
                 N15Parameters.ResetParameters();
-                A205M_1Parameters.RefreshIndicators();
+                C300M_1Parameters.ResetParameters();
+                C300M_2Parameters.ResetParameters();
+                C300M_3Parameters.ResetParameters();
+                C300M_4Parameters.ResetParameters();
+                C300M_2Parameters.RefreshIndicators();
+                C300M_3Parameters.RefreshIndicators();
+                C300M_4Parameters.RefreshIndicators();
+
+                A304Parameters.ResetParameters();
                 if (RefreshForm != null)
                     RefreshForm();
             }
@@ -78,11 +104,20 @@ namespace R440O.R440OForms.N502B
             set
             {
                 _тумблерВыпрямитель27В = value;
+
+                if (!value) NKN_1Parameters.Питание220Включено = false;
+                if (!value) NKN_2Parameters.Питание220Включено = false;
+
                 NKN_1Parameters.ResetParameters();
                 NKN_2Parameters.ResetParameters();
                 N15Parameters.ResetParameters();
-                A205M_1Parameters.RefreshIndicators();
                 BMBParameters.ResetParameters();
+                C300M_1Parameters.ResetParameters();
+                C300M_2Parameters.ResetParameters();
+                C300M_3Parameters.ResetParameters();
+                C300M_4Parameters.ResetParameters();
+
+                A304Parameters.ResetParameters();
             }
         }
 
@@ -93,8 +128,19 @@ namespace R440O.R440OForms.N502B
             set
             {
                 _тумблерН15 = value;
+
+                if (!value) NKN_1Parameters.Питание220Включено = false;
+                if (!value) NKN_2Parameters.Питание220Включено = false;
+
                 NKN_1Parameters.ResetParameters();
                 NKN_2Parameters.ResetParameters();
+                N15Parameters.ResetParameters();
+                C300M_1Parameters.ResetParameters();
+                C300M_2Parameters.ResetParameters();
+                C300M_3Parameters.ResetParameters();
+                C300M_4Parameters.ResetParameters();
+
+                A304Parameters.ResetParameters();
             }
         }
 

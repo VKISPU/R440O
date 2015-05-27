@@ -1,4 +1,5 @@
-﻿using R440O.R440OForms.A205M_2;
+﻿using System.Diagnostics.Eventing.Reader;
+using R440O.R440OForms.A205M_2;
 using R440O.R440OForms.N15;
 using R440O.R440OForms.N502B;
 
@@ -19,6 +20,10 @@ namespace R440O.R440OForms.NKN_2
                 _питание220Включено = value;
                 ResetParameters();
                 if (RefreshForm != null) RefreshForm();
+
+                //N15Parameters.A205Distanse2 = false;
+                N15Parameters.ResetParameters();
+
             }
         }
 
@@ -66,8 +71,7 @@ namespace R440O.R440OForms.NKN_2
             ЛампочкаМУ = (N502BParameters.ЛампочкаСфазировано
                           && N502BParameters.ТумблерЭлектрооборудование
                           && N502BParameters.ТумблерВыпрямитель27В);
-            ChangeLampsStateTo((_лампочкаМУ && _питание220Включено && N502BParameters.ТумблерН15)
-                || (_лампочкаМУ && N15Parameters.ТумблерА205Base && !N15Parameters.ТумблерА20512 && N502BParameters.ТумблерН15));
+            ChangeLampsStateTo(_лампочкаМУ && _питание220Включено && N502BParameters.ТумблерН15);
         }
     }
 }

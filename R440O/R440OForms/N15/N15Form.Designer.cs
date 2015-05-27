@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.Panel = new System.Windows.Forms.Panel();
+            this.ЛампочкаA205Неиспр2 = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаA205Неиспр1 = new System.Windows.Forms.PictureBox();
             this.OpenInsideButtonRight = new System.Windows.Forms.Button();
             this.OpenInsideButtonLeft = new System.Windows.Forms.Button();
             this.ТумблерТлфТлгПрд = new System.Windows.Forms.Button();
@@ -126,9 +128,9 @@
             this.КнопкаПРМНаведениеЦ300М1 = new System.Windows.Forms.Button();
             this.КнопкаСтанцияВыкл = new System.Windows.Forms.Button();
             this.КнопкаСтанцияВкл = new System.Windows.Forms.Button();
-            this.ЛампочкаA205Неиспр2 = new System.Windows.Forms.PictureBox();
-            this.ЛампочкаA205Неиспр1 = new System.Windows.Forms.PictureBox();
             this.Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаA205Неиспр2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаA205Неиспр1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаДАБ_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаА403Вкл)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаН13_2ПолноеВкл)).BeginInit();
@@ -184,8 +186,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаП220272)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаМШУ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаН12С)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаA205Неиспр2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаA205Неиспр1)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel
@@ -295,6 +295,26 @@
             this.Panel.Name = "Panel";
             this.Panel.Size = new System.Drawing.Size(1042, 503);
             this.Panel.TabIndex = 2;
+            // 
+            // ЛампочкаA205Неиспр2
+            // 
+            this.ЛампочкаA205Неиспр2.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаA205Неиспр2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ЛампочкаA205Неиспр2.Location = new System.Drawing.Point(549, 139);
+            this.ЛампочкаA205Неиспр2.Name = "ЛампочкаA205Неиспр2";
+            this.ЛампочкаA205Неиспр2.Size = new System.Drawing.Size(14, 15);
+            this.ЛампочкаA205Неиспр2.TabIndex = 74;
+            this.ЛампочкаA205Неиспр2.TabStop = false;
+            // 
+            // ЛампочкаA205Неиспр1
+            // 
+            this.ЛампочкаA205Неиспр1.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаA205Неиспр1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ЛампочкаA205Неиспр1.Location = new System.Drawing.Point(523, 139);
+            this.ЛампочкаA205Неиспр1.Name = "ЛампочкаA205Неиспр1";
+            this.ЛампочкаA205Неиспр1.Size = new System.Drawing.Size(14, 15);
+            this.ЛампочкаA205Неиспр1.TabIndex = 73;
+            this.ЛампочкаA205Неиспр1.TabStop = false;
             // 
             // OpenInsideButtonRight
             // 
@@ -556,7 +576,7 @@
             // 
             this.ЛампочкаУМ1Работа1.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаУМ1Работа1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаУМ1Работа1.Location = new System.Drawing.Point(522, 156);
+            this.ЛампочкаУМ1Работа1.Location = new System.Drawing.Point(523, 156);
             this.ЛампочкаУМ1Работа1.Name = "ЛампочкаУМ1Работа1";
             this.ЛампочкаУМ1Работа1.Size = new System.Drawing.Size(14, 15);
             this.ЛампочкаУМ1Работа1.TabIndex = 60;
@@ -576,7 +596,7 @@
             // 
             this.ЛампочкаППВРабота1.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаППВРабота1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаППВРабота1.Location = new System.Drawing.Point(522, 121);
+            this.ЛампочкаППВРабота1.Location = new System.Drawing.Point(523, 121);
             this.ЛампочкаППВРабота1.Name = "ЛампочкаППВРабота1";
             this.ЛампочкаППВРабота1.Size = new System.Drawing.Size(14, 15);
             this.ЛампочкаППВРабота1.TabIndex = 58;
@@ -596,7 +616,7 @@
             // 
             this.ЛампочкаППВВкл1.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаППВВкл1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаППВВкл1.Location = new System.Drawing.Point(522, 103);
+            this.ЛампочкаППВВкл1.Location = new System.Drawing.Point(523, 104);
             this.ЛампочкаППВВкл1.Name = "ЛампочкаППВВкл1";
             this.ЛампочкаППВВкл1.Size = new System.Drawing.Size(14, 15);
             this.ЛампочкаППВВкл1.TabIndex = 56;
@@ -1541,26 +1561,6 @@
             this.КнопкаСтанцияВкл.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаСтанцияВкл_MouseDown);
             this.КнопкаСтанцияВкл.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаСтанцияВкл_MouseUp);
             // 
-            // ЛампочкаA205Неиспр2
-            // 
-            this.ЛампочкаA205Неиспр2.BackColor = System.Drawing.Color.Transparent;
-            this.ЛампочкаA205Неиспр2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаA205Неиспр2.Location = new System.Drawing.Point(549, 139);
-            this.ЛампочкаA205Неиспр2.Name = "ЛампочкаA205Неиспр2";
-            this.ЛампочкаA205Неиспр2.Size = new System.Drawing.Size(14, 15);
-            this.ЛампочкаA205Неиспр2.TabIndex = 74;
-            this.ЛампочкаA205Неиспр2.TabStop = false;
-            // 
-            // ЛампочкаA205Неиспр1
-            // 
-            this.ЛампочкаA205Неиспр1.BackColor = System.Drawing.Color.Transparent;
-            this.ЛампочкаA205Неиспр1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаA205Неиспр1.Location = new System.Drawing.Point(522, 139);
-            this.ЛампочкаA205Неиспр1.Name = "ЛампочкаA205Неиспр1";
-            this.ЛампочкаA205Неиспр1.Size = new System.Drawing.Size(14, 15);
-            this.ЛампочкаA205Неиспр1.TabIndex = 73;
-            this.ЛампочкаA205Неиспр1.TabStop = false;
-            // 
             // N15Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1573,6 +1573,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Н15";
             this.Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаA205Неиспр2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаA205Неиспр1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаДАБ_5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаА403Вкл)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаН13_2ПолноеВкл)).EndInit();
@@ -1628,8 +1630,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаП220272)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаМШУ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаН12С)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаA205Неиспр2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаA205Неиспр1)).EndInit();
             this.ResumeLayout(false);
 
         }

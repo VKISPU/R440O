@@ -31,35 +31,35 @@
                 ? ControlElementImages.tumblerType6Up
                 : ControlElementImages.tumblerType6Down;
 
-            angle = A205M_1Parameters.ПереключательВолнаX10000*35 - 90;
+            angle = A205M_1Parameters.ПереключательВолнаX10000 * 35 - 90;
             ПереключательВолнаX10000.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
-            angle = A205M_1Parameters.ПереключательВолнаX1000*35 - 160;
+            angle = A205M_1Parameters.ПереключательВолнаX1000 * 35 - 160;
             ПереключательВолнаX1000.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
-            angle = A205M_1Parameters.ПереключательВолнаX100*35 - 160;
+            angle = A205M_1Parameters.ПереключательВолнаX100 * 35 - 160;
             ПереключательВолнаX100.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
-            angle = A205M_1Parameters.ПереключательВолнаX10*35 - 160;
+            angle = A205M_1Parameters.ПереключательВолнаX10 * 35 - 160;
             ПереключательВолнаX10.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
-            angle = A205M_1Parameters.ПереключательВолнаX1*35 - 160;
+            angle = A205M_1Parameters.ПереключательВолнаX1 * 35 - 160;
             ПереключательВолнаX1.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
-            angle = A205M_1Parameters.ПереключательКонтроль*30 - 180;
+            angle = A205M_1Parameters.ПереключательКонтроль * 30 - 180;
             ПереключательКонтроль.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
-            angle = A205M_1Parameters.ПереключательВидРаботы*30 - 75;
+            angle = A205M_1Parameters.ПереключательВидРаботы * 30 - 75;
             ПереключательВидРаботы.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
-            angle = A205M_1Parameters.ПереключательВходЧТ*30 - 60;
+            angle = A205M_1Parameters.ПереключательВходЧТ * 30 - 60;
             ПереключательВходЧТ.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
@@ -80,6 +80,7 @@
         private void A205M_1КнопкаОтсчет_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаОтсчет.BackgroundImage = null;
+            if(NKN_1.NKN_1Parameters.ЛампочкиФаз[0])
             Дисплей.Text = A205M_1Parameters.ПереключательВолнаX10000 + "  " +
                            A205M_1Parameters.ПереключательВолнаX1000 + "  " +
                            A205M_1Parameters.ПереключательВолнаX100 + "  " +

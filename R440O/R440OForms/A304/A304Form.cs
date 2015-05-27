@@ -24,113 +24,45 @@ namespace R440O.R440OForms.A304
         public A304Form()
         {
             this.InitializeComponent();
-            this.InitializeTogglePosition();
-            this.InitializeTumblers();
-            this.InitializeLamps();
-            this.InitializeControl();
+            A304Parameters.RefreshForm += RefreshForm;
+
+            RefreshForm();
         }
 
         #region Инициализация состояний элементов управления
-
-        /// <summary>
-        /// Инициализировать положения тумблеров
-        /// </summary>
-        private void InitializeTumblers()
+        private void RefreshForm()
         {
-            this.A304ТумблерМестноеДистанц_1.BackgroundImage = A304Parameters.A304ТумблерМестноеДистанц_1 == "местное"
-                ? ControlElementImages.tumblerType6Down
-                : ControlElementImages.tumblerType6Up;
-            this.A304ТумблерМестноеДистанц_2.BackgroundImage = A304Parameters.A304ТумблерМестноеДистанц_2 == "местное"
-                ? ControlElementImages.tumblerType6Down
-                : ControlElementImages.tumblerType6Up;
-            this.A304Тумблер1К2К.BackgroundImage = A304Parameters.A304Тумблер1К2К == 1
+            //Инициализация тумблеров
+            this.ТумблерУправление1.BackgroundImage = A304Parameters.ТумблерУправление1
+                ? ControlElementImages.tumblerType6Up
+                : ControlElementImages.tumblerType6Down;
+            this.ТумблерУправление2.BackgroundImage = A304Parameters.ТумблерУправление2
+                ? ControlElementImages.tumblerType6Up
+                : ControlElementImages.tumblerType6Down;
+            this.ТумблерКомплект.BackgroundImage = A304Parameters.ТумблерКомплект
                 ? ControlElementImages.tumblerType1Left
                 : ControlElementImages.tumblerType1Right;
-        }
 
-        /// <summary>
-        /// Инициализировать состояния тумблеров
-        /// </summary>
-        private void InitializeLamps()
-        {
-            if (A304Parameters.A304ТумблерМестноеДистанц_1 == "местное")
-            {
-                A304Лампочка1К.BackgroundImage = A304Parameters.A304Комплект1
-                    ? ControlElementImages.lampType10OnGreen
-                    : null;
-            }
-            else
-            {
-                A304Parameters.A304Комплект1 = N15Parameters.ТумблерА30412;
+            // Инициализация лампочек
+            Лампочка1К.BackgroundImage = A304Parameters.Лампочка1К
+                ? ControlElementImages.lampType10OnGreen
+                : null;
 
-                A304Лампочка1К.BackgroundImage = N15Parameters.ТумблерА30412
-                    ? ControlElementImages.lampType10OnGreen
-                    : null;
-            }
+            Лампочка2К.BackgroundImage = A304Parameters.Лампочка2К
+                ? ControlElementImages.lampType10OnGreen
+                : null;
 
-            if (A304Parameters.A304ТумблерМестноеДистанц_2 == "местное")
-            {
-                A304Лампочка2К.BackgroundImage = A304Parameters.A304Комплект2
-                    ? ControlElementImages.lampType10OnGreen
-                    : null;
-            }
-            else
-            {
-                A304Parameters.A304Комплект2 = !N15Parameters.ТумблерА30412;
-                A304Лампочка2К.BackgroundImage = !N15Parameters.ТумблерА30412
-                    ? ControlElementImages.lampType10OnGreen
-                    : null;
-            }
-        }
-
-        /// <summary>
-        /// Задание начальных положений переключателей
-        /// </summary>
-        private void InitializeTogglePosition()
-        {
-            var angle = A304Parameters.A304ПереключательВыборСтвола * 26 - 145;
-            A304ПереключательВыборСтвола.BackgroundImage =
+            var angle = A304Parameters.ПереключательВыборСтвола * 26 - 120;
+            ПереключательВыборСтвола.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
 
-            angle = A304Parameters.A304ПереключательКонтроль * 30 - 150;
-            A304ПереключательКонтрольButton.BackgroundImage =
+            angle = A304Parameters.ПереключательКонтроль * 30 - 120;
+            ПереключательКонтроль.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
-        }
 
-        /// <summary>
-        /// Установка стрелки в нужное положение
-        /// </summary>
-        private void InitializeControl()
-        {
-            int isEnableKit;
-            if ((A304Parameters.A304Тумблер1К2К == 1 && A304Parameters.A304Комплект1) ||
-                (A304Parameters.A304Тумблер1К2К == 2 && A304Parameters.A304Комплект2))
-            {
-                isEnableKit = 1;
-            }
-            else
-            {
-                isEnableKit = 2;
-            }
-
-            switch (A304Parameters.A304ЗначенияПереключательКонтроль[A304Parameters.A304ПереключательКонтроль - 1, isEnableKit])
-            {
-                case "-1":
-                {
-                    A304СтрелкаКонтроляНапряжения.BackgroundImage = ControlElementImages.arrowLeft;
-                }
-                    break;
-                case "0":
-                {
-                    A304СтрелкаКонтроляНапряжения.BackgroundImage = ControlElementImages.arrowNormal;
-                }
-                    break;
-                case "1":
-                {
-                    A304СтрелкаКонтроляНапряжения.BackgroundImage = ControlElementImages.arrowRight;
-                }
-                    break;
-            }
+            angle = A304Parameters.ИндикаторНапряжение;
+            ИндикаторНапряжение.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
         }
 
         #endregion
@@ -140,198 +72,85 @@ namespace R440O.R440OForms.A304
         /// <summary>
         /// Перключение типа подачи питания для первого комплекта оборудования
         /// </summary>
-        private void A304ТумблерМестноеДистанц_1_Click(object sender, System.EventArgs e)
+        private void ТумблерУправление1_Click(object sender, System.EventArgs e)
         {
-            if (A304Parameters.A304ТумблерМестноеДистанц_1 == "дистанц")
-            {
-                this.A304ТумблерМестноеДистанц_1.BackgroundImage = ControlElementImages.tumblerType6Down;
-                A304Parameters.A304ТумблерМестноеДистанц_1 = "местное";
-            }
-            else
-            {
-                this.A304ТумблерМестноеДистанц_1.BackgroundImage = ControlElementImages.tumblerType6Up;
-                A304Parameters.A304ТумблерМестноеДистанц_1 = "дистанц";
-            }
-            this.TurnLamps(1);
+            A304Parameters.ТумблерУправление1 = !A304Parameters.ТумблерУправление1;
         }
 
         /// <summary>
         /// Перключение типа подачи питания для второго комплекта оборудования
         /// </summary>
-        private void A304ТумблерМестноеДистанц_2_Click(object sender, System.EventArgs e)
+        private void ТумблерУправление2_Click(object sender, System.EventArgs e)
         {
-            if (A304Parameters.A304ТумблерМестноеДистанц_2 == "дистанц")
-            {
-                this.A304ТумблерМестноеДистанц_2.BackgroundImage = ControlElementImages.tumblerType6Down;
-                A304Parameters.A304ТумблерМестноеДистанц_2 = "местное";
-            }
-            else
-            {
-                this.A304ТумблерМестноеДистанц_2.BackgroundImage = ControlElementImages.tumblerType6Up;
-                A304Parameters.A304ТумблерМестноеДистанц_2 = "дистанц";
-            }
-            this.TurnLamps(2);
+            A304Parameters.ТумблерУправление2 = !A304Parameters.ТумблерУправление2;
         }
 
         /// <summary>
         /// Перключение между комплектами оборудования
         /// </summary>
-        private void A304Тумблер1К2К_Click(object sender, System.EventArgs e)
+        private void ТумблерКомплект_Click(object sender, System.EventArgs e)
         {
-            if (A304Parameters.A304Тумблер1К2К == 1)
-            {
-                this.A304Тумблер1К2К.BackgroundImage = ControlElementImages.tumblerType1Right;
-                A304Parameters.A304Тумблер1К2К = 2;
-            }
-            else
-            {
-                this.A304Тумблер1К2К.BackgroundImage = ControlElementImages.tumblerType1Left;
-                A304Parameters.A304Тумблер1К2К = 1;
-            }
-            this.InitializeControl();
+            A304Parameters.ТумблерКомплект = !A304Parameters.ТумблерКомплект;
         }
 
         #endregion
 
         #region Кнопки включения питания
-
         //// Включение местного питания 1 комплекта
-        private void A304Кнопка1КВкл_MouseDown(object sender, MouseEventArgs e)
+        private void Кнопка1КВкл_MouseDown(object sender, MouseEventArgs e)
         {
-            this.A304Кнопка1КВкл.BackgroundImage = null;
-            this.A304Кнопка1КВкл.Text = string.Empty;
+            this.Кнопка1КВкл.BackgroundImage = null;
+            this.Кнопка1КВкл.Text = string.Empty;
+            A304Parameters.Кнопка1К = true;
         }
 
-        private void A304Кнопка1КВкл_MouseUp(object sender, MouseEventArgs e)
+        private void Кнопка1КВкл_MouseUp(object sender, MouseEventArgs e)
         {
-            this.A304Кнопка1КВкл.BackgroundImage = ControlElementImages.buttonSquareGrey;
-            this.A304Кнопка1КВкл.Text = Resources.stringВКЛ;
-            if (A304Parameters.A304ТумблерМестноеДистанц_1 == "местное")
-            {
-                A304Parameters.A304Комплект1 = true;
-                this.TurnLamps();
-            }
+            this.Кнопка1КВкл.BackgroundImage = ControlElementImages.buttonSquareGrey;
+            this.Кнопка1КВкл.Text = "ВКЛ";
         }
 
         //// Включение местного питания 2 комплекта
-        private void A304Кнопка2КВкл_MouseDown(object sender, MouseEventArgs e)
+        private void Кнопка2КВкл_MouseDown(object sender, MouseEventArgs e)
         {
-            this.A304Кнопка2КВкл.BackgroundImage = null;
-            this.A304Кнопка2КВкл.Text = string.Empty;
+            this.Кнопка2КВкл.BackgroundImage = null;
+            this.Кнопка2КВкл.Text = string.Empty;
+            A304Parameters.Кнопка2К = true;
         }
 
-        private void A304Кнопка2КВкл_MouseUp(object sender, MouseEventArgs e)
+        private void Кнопка2КВкл_MouseUp(object sender, MouseEventArgs e)
         {
-            this.A304Кнопка2КВкл.BackgroundImage = ControlElementImages.buttonSquareGrey;
-            this.A304Кнопка2КВкл.Text = Resources.stringВКЛ;
-            if (A304Parameters.A304ТумблерМестноеДистанц_2 == "местное")
-            {
-                A304Parameters.A304Комплект2 = true;
-                this.TurnLamps();
-            }
+            this.Кнопка2КВкл.BackgroundImage = ControlElementImages.buttonSquareGrey;
+            this.Кнопка2КВкл.Text = "ВКЛ";
         }
 
         //// Выключение местного питания 1 комплекта
-        private void A304Кнопка1КОткл_MouseDown(object sender, MouseEventArgs e)
+        private void Кнопка1КОткл_MouseDown(object sender, MouseEventArgs e)
         {
-            this.A304Кнопка1КОткл.BackgroundImage = null;
-            this.A304Кнопка1КОткл.Text = string.Empty;
+            this.Кнопка1КОткл.BackgroundImage = null;
+            this.Кнопка1КОткл.Text = string.Empty;
+            A304Parameters.Кнопка1К = false;
         }
 
-        private void A304Кнопка1КОткл_MouseUp(object sender, MouseEventArgs e)
+        private void Кнопка1КОткл_MouseUp(object sender, MouseEventArgs e)
         {
-            this.A304Кнопка1КОткл.BackgroundImage = ControlElementImages.buttonSquareGrey;
-            this.A304Кнопка1КОткл.Text = Resources.stringОТКЛ;
-            if (A304Parameters.A304ТумблерМестноеДистанц_1 == "местное")
-            {
-                A304Parameters.A304Комплект1 = false;
-                this.TurnLamps();
-            }
+            this.Кнопка1КОткл.BackgroundImage = ControlElementImages.buttonSquareGrey;
+            this.Кнопка1КОткл.Text = "ОТКЛ";
         }
 
         //// Выключение местного питания 2 комплекта
-        private void A304Кнопка2КОткл_MouseDown(object sender, MouseEventArgs e)
+        private void Кнопка2КОткл_MouseDown(object sender, MouseEventArgs e)
         {
-            this.A304Кнопка2КОткл.BackgroundImage = null;
-            this.A304Кнопка2КОткл.Text = string.Empty;
+            this.Кнопка2КОткл.BackgroundImage = null;
+            this.Кнопка2КОткл.Text = string.Empty;
+            A304Parameters.Кнопка2К = false;
         }
 
-        private void A304Кнопка2КОткл_MouseUp(object sender, MouseEventArgs e)
+        private void Кнопка2КОткл_MouseUp(object sender, MouseEventArgs e)
         {
-            this.A304Кнопка2КОткл.BackgroundImage = ControlElementImages.buttonSquareGrey;
-            this.A304Кнопка2КОткл.Text = Resources.stringОТКЛ;
-            if (A304Parameters.A304ТумблерМестноеДистанц_2 == "местное")
-            {
-                A304Parameters.A304Комплект2 = false;
-                this.TurnLamps();
-            }
+            this.Кнопка2КОткл.BackgroundImage = ControlElementImages.buttonSquareGrey;
+            this.Кнопка2КОткл.Text = "ОТКЛ";
         }
-
-        #endregion
-
-        #region Контроль за включенным комплектом оборудования(Лампочки)
-
-        /// <summary>
-        /// Дистанционное переключение комплектов
-        /// </summary>
-        public void TurnLampsEvent()
-        {
-            if (A304Parameters.A304ТумблерМестноеДистанц_1 == "дистанц")
-            {
-                this.TurnLamps(1);
-            }
-
-            if (A304Parameters.A304ТумблерМестноеДистанц_2 == "дистанц")
-            {
-                this.TurnLamps(2);
-            }
-
-            this.InitializeControl();
-        }
-
-        /// <summary>
-        /// Переключает комплекты(лампочки) в соотвествии с нажатыми кнопками, когда способ упрваления питанием - местный
-        /// </summary>
-        private void TurnLamps()
-        {
-            A304Лампочка1К.BackgroundImage = A304Parameters.A304Комплект1
-                ? ControlElementImages.lampType10OnGreen
-                : null;
-            A304Лампочка2К.BackgroundImage = A304Parameters.A304Комплект2
-                ? ControlElementImages.lampType10OnGreen
-                : null;
-            this.InitializeControl();
-        }
-
-        /// <summary>
-        /// Переключает комплекты(лампочки) при изменении положения тумблеров
-        /// Если тип управления питанием - дистанционный, комплекты(лампочки) включаются в соответствии с выбранным на блоке Н-15
-        /// </summary>
-        /// <param name="numberOfKit">Номер комплекта в котором для которого переключается тумблер управления питанием</param>
-        private void TurnLamps(int numberOfKit)
-        {
-            switch (numberOfKit)
-            {
-                case 1:
-                {
-                    A304Parameters.A304Комплект1 = N15Parameters.ТумблерА30412 && N15Parameters.ЛампочкаМШУ;
-                    A304Лампочка1К.BackgroundImage = A304Parameters.A304Комплект1
-                        ? ControlElementImages.lampType10OnGreen
-                        : null;
-                }
-                    break;
-                case 2:
-                {
-                    A304Parameters.A304Комплект2 = !N15Parameters.ТумблерА30412 && N15Parameters.ЛампочкаМШУ;
-                    A304Лампочка2К.BackgroundImage = A304Parameters.A304Комплект2
-                        ? ControlElementImages.lampType10OnGreen
-                        : null;
-                }
-                    break;
-            }
-            this.InitializeControl();
-        }
-
         #endregion
 
         #region Изменение положения переключателей выбора ствола и контроля
@@ -339,61 +158,34 @@ namespace R440O.R440OForms.A304
         /// <summary>
         /// Выбор ствола
         /// </summary>
-        private void A304ПереключательВыборСтвола_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательВыборСтвола_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                A304Parameters.A304ПереключательВыборСтвола += 1;
+                A304Parameters.ПереключательВыборСтвола += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                A304Parameters.A304ПереключательВыборСтвола -= 1;
+                A304Parameters.ПереключательВыборСтвола -= 1;
             }
-
-            var angle = A304Parameters.A304ПереключательВыборСтвола * 26 - 145;
-            A304ПереключательВыборСтвола.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
         }
 
         /// <summary>
         /// Выбор питающего напряжения для контроля
         /// </summary>
-        private void A304ПереключательКонтрольButton_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательКонтроль_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                A304Parameters.A304ПереключательКонтроль += 1;
+                A304Parameters.ПереключательКонтроль += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                A304Parameters.A304ПереключательКонтроль -= 1;
-            }
-
-            var angle = A304Parameters.A304ПереключательКонтроль * 30 - 150;
-            A304ПереключательКонтрольButton.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
-
-            this.InitializeControl();
-        }
-
-        /// <summary>
-        /// Выбор питающего напряжения для контроля
-        /// </summary>
-        private void A304ПереключательКонтрольButton_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left && A304Parameters.A304ПереключательКонтроль < 9)
-            {
-                A304СтрелкаКонтроляНапряжения.BackgroundImage = ControlElementImages.arrowNormal;
-            }
-
-            if (e.Button == MouseButtons.Right && A304Parameters.A304ПереключательКонтроль > 1)
-            {
-                A304СтрелкаКонтроляНапряжения.BackgroundImage = ControlElementImages.arrowNormal;
+                A304Parameters.ПереключательКонтроль -= 1;
             }
         }
-
         #endregion
     }
 }

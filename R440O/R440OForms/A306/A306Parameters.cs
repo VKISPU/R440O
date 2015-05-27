@@ -28,7 +28,7 @@ namespace R440O.Parameters
             {
                 _лампочкаНО1Вкл = value;
                 if (RefreshForm != null) RefreshForm();
-            }  
+            }
         }
 
         private static bool _лампочкаНО2Вкл = false;

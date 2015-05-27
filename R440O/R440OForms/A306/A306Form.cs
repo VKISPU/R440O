@@ -56,11 +56,11 @@ namespace R440O.R440OForms.A306
             {
                 if (item.Name.Contains("ВходКанала"))
                 {
-                    if (A306Parameters.Входы[(int) Char.GetNumericValue(item.Name[10])])
+                    if (A306Parameters.Входы[(int)Char.GetNumericValue(item.Name[10])])
                     {
                         item.Visible = true;
-                        item.BackgroundImage = ControlElementImages.A306CabelInput;
-                        item.Text = (char.GetNumericValue(item.Name[10])+1).ToString();
+                        item.BackgroundImage = ControlElementImages.A306Input;
+                        item.Text = (char.GetNumericValue(item.Name[10]) + 1).ToString();
                     }
                     else
                     {
@@ -72,10 +72,10 @@ namespace R440O.R440OForms.A306
                 else
                     if (item.Name.Contains("ВходNO"))
                     {
-                        if (A306Parameters.Входы[(int)Char.GetNumericValue(item.Name[7])+3])
+                        if (A306Parameters.Входы[(int)Char.GetNumericValue(item.Name[7]) + 3])
                         {
                             item.Visible = true;
-                            item.BackgroundImage = ControlElementImages.A306CabelInput;
+                            item.BackgroundImage = ControlElementImages.A306Input;
                             item.Text = "" + char.GetNumericValue(item.Name[7]);
                         }
                         else
@@ -96,7 +96,7 @@ namespace R440O.R440OForms.A306
                         int.Parse(Convert.ToString(Convert.ToString(item.Name[5]) + Convert.ToString(item.Name[6])));
                     if (A306Parameters.Выходы[index] != -1)
                     {
-                        item.BackgroundImage = ControlElementImages.A306CabelInput;
+                        item.BackgroundImage = ControlElementImages.A306Input;
                         if (A306Parameters.Выходы[index] <= 3)
                             item.Text = (A306Parameters.Выходы[index] + 1).ToString();
                         else
@@ -126,7 +126,7 @@ namespace R440O.R440OForms.A306
         #endregion
 
 
-    
+
         private void Выходы_Click(object sender, EventArgs e)
         {
             var button = sender as Button;
@@ -175,7 +175,7 @@ namespace R440O.R440OForms.A306
             var button = sender as Button;
             //выделим визуально
             FontChange(button, "ВходNO_2", "ВходКанала");
-            A306Parameters.АктивныйВход = 4; 
+            A306Parameters.АктивныйВход = 4;
         }
 
         private void ВходNO_2_Click(object sender, EventArgs e)
@@ -268,7 +268,7 @@ namespace R440O.R440OForms.A306
                         if (A306Parameters.Выходы[index] == 4)
                         {
                             НО1.Visible = true;
-                            НО1.BackgroundImage = ControlElementImages.A306CabelInput;
+                            НО1.BackgroundImage = ControlElementImages.A306Input;
                             НО1Своб.Visible = false;
                             var Point0 = new Point(НО1.Left + 10, НО1.Bottom);
                             var Point1 = new Point(НО1.Left + 10, НО1.Bottom + 50);
@@ -299,10 +299,10 @@ namespace R440O.R440OForms.A306
                         else if (A306Parameters.Выходы[index] == 5)
                         {
                             НО2.Visible = true;
-                            НО2.BackgroundImage = ControlElementImages.A306CabelInput;
+                            НО2.BackgroundImage = ControlElementImages.A306Input;
                             НО2Своб.Visible = false;
                             var Point0 = new Point(НО2.Left + 10, НО2.Bottom);
-                            var Point1 = new Point(НО2.Left + 10, НО2.Bottom + 70); 
+                            var Point1 = new Point(НО2.Left + 10, НО2.Bottom + 70);
                             var Point1_1 = ((index >= 6 && index <= 10) || index >= 15)
                                 ? new Point(НО2.Left + 10, НО2.Bottom + 70)
                                 : new Point(НО2.Left + 20, НО2.Bottom + 70);

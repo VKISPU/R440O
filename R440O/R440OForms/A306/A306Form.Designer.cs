@@ -116,7 +116,7 @@
             // НО2
             // 
             this.НО2.BackColor = System.Drawing.Color.Transparent;
-            this.НО2.BackgroundImage = global::R440O.ControlElementImages.A306CabelInput;
+            this.НО2.BackgroundImage = global::R440O.ControlElementImages.A306Input;
             this.НО2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.НО2.FlatAppearance.BorderSize = 0;
             this.НО2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -175,7 +175,7 @@
             // ВходКанала3
             // 
             this.ВходКанала3.BackColor = System.Drawing.Color.Transparent;
-            this.ВходКанала3.BackgroundImage = global::R440O.ControlElementImages.A306CabelInput;
+            this.ВходКанала3.BackgroundImage = global::R440O.ControlElementImages.A306Input;
             this.ВходКанала3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ВходКанала3.FlatAppearance.BorderSize = 0;
             this.ВходКанала3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -195,7 +195,7 @@
             // ВходКанала2
             // 
             this.ВходКанала2.BackColor = System.Drawing.Color.Transparent;
-            this.ВходКанала2.BackgroundImage = global::R440O.ControlElementImages.A306CabelInput;
+            this.ВходКанала2.BackgroundImage = global::R440O.ControlElementImages.A306Input;
             this.ВходКанала2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ВходКанала2.FlatAppearance.BorderSize = 0;
             this.ВходКанала2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -215,7 +215,7 @@
             // ВходКанала1
             // 
             this.ВходКанала1.BackColor = System.Drawing.Color.Transparent;
-            this.ВходКанала1.BackgroundImage = global::R440O.ControlElementImages.A306CabelInput;
+            this.ВходКанала1.BackgroundImage = global::R440O.ControlElementImages.A306Input;
             this.ВходКанала1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ВходКанала1.FlatAppearance.BorderSize = 0;
             this.ВходКанала1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -505,7 +505,7 @@
             // ВходNO_2
             // 
             this.ВходNO_2.BackColor = System.Drawing.Color.Transparent;
-            this.ВходNO_2.BackgroundImage = global::R440O.ControlElementImages.A306CabelInput;
+            this.ВходNO_2.BackgroundImage = global::R440O.ControlElementImages.A306Input;
             this.ВходNO_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ВходNO_2.FlatAppearance.BorderSize = 0;
             this.ВходNO_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -526,7 +526,7 @@
             // ВходNO_1
             // 
             this.ВходNO_1.BackColor = System.Drawing.Color.Transparent;
-            this.ВходNO_1.BackgroundImage = global::R440O.ControlElementImages.A306CabelInput;
+            this.ВходNO_1.BackgroundImage = global::R440O.ControlElementImages.A306Input;
             this.ВходNO_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ВходNO_1.FlatAppearance.BorderSize = 0;
             this.ВходNO_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -619,7 +619,7 @@
             // ВходКанала0
             // 
             this.ВходКанала0.BackColor = System.Drawing.Color.Transparent;
-            this.ВходКанала0.BackgroundImage = global::R440O.ControlElementImages.A306CabelInput;
+            this.ВходКанала0.BackgroundImage = global::R440O.ControlElementImages.A306Input;
             this.ВходКанала0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ВходКанала0.FlatAppearance.BorderSize = 0;
             this.ВходКанала0.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -702,7 +702,7 @@
             // НО1
             // 
             this.НО1.BackColor = System.Drawing.Color.Transparent;
-            this.НО1.BackgroundImage = global::R440O.ControlElementImages.A306CabelInput;
+            this.НО1.BackgroundImage = global::R440O.ControlElementImages.A306Input;
             this.НО1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.НО1.FlatAppearance.BorderSize = 0;
             this.НО1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;

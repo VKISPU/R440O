@@ -5,17 +5,35 @@ using R440O.R440OForms.N18_M;
 using R440O.R440OForms.N502B;
 using R440O.R440OForms.NKN_1;
 using R440O.R440OForms.NKN_2;
+using R440O.R440OForms.C300M_1;
+using R440O.R440OForms.C300M_2;
+using R440O.R440OForms.C300M_3;
+using R440O.R440OForms.C300M_4;
+using R440O.R440OForms.A304;
+using R440O.R440OForms.A306;
 
 namespace R440O.R440OForms.N15
 {
     public static class N15Parameters
     {
+        //public static bool A205Distanse1 = false;
+        //public static bool A205Distanse2 = false;
         #region Кнопки
-
         /// <summary>
         /// Возможные состояния: true, false
         /// </summary>
-        public static bool КнопкаСтанцияВкл { get; set; }
+        public static bool КнопкаСтанцияВкл
+        {
+            get
+            {
+                return _станцияВкл; 
+            }
+            set
+            {
+                _станцияВкл = value;
+            } 
+        }
+        public static bool _станцияВкл;
 
         public static bool КнопкаСтанцияВыкл { get; set; }
 
@@ -212,7 +230,7 @@ namespace R440O.R440OForms.N15
         private static bool _тумблерБ32;
         private static bool _тумблерДаб5;
         private static bool _тумблерРН;
-        
+
         public static bool ТумблерЦ300М1
         {
             get { return _тумблерЦ300М1; }
@@ -220,9 +238,10 @@ namespace R440O.R440OForms.N15
             {
                 _тумблерЦ300М1 = value;
                 if (RefreshForm != null) RefreshForm();
+                C300M_1Parameters.ResetParameters();
             }
         }
-        
+
         public static bool ТумблерЦ300М2
         {
             get { return _тумблерЦ300М2; }
@@ -230,9 +249,10 @@ namespace R440O.R440OForms.N15
             {
                 _тумблерЦ300М2 = value;
                 if (RefreshForm != null) RefreshForm();
+                C300M_2Parameters.ResetParameters();
             }
         }
-        
+
         public static bool ТумблерЦ300М3
         {
             get { return _тумблерЦ300М3; }
@@ -240,9 +260,10 @@ namespace R440O.R440OForms.N15
             {
                 _тумблерЦ300М3 = value;
                 if (RefreshForm != null) RefreshForm();
+                C300M_3Parameters.ResetParameters();
             }
         }
-        
+
         public static bool ТумблерЦ300М4
         {
             get { return _тумблерЦ300М4; }
@@ -250,9 +271,10 @@ namespace R440O.R440OForms.N15
             {
                 _тумблерЦ300М4 = value;
                 if (RefreshForm != null) RefreshForm();
+                C300M_4Parameters.ResetParameters();
             }
         }
-        
+
         public static bool ТумблерН12С
         {
             get { return _тумблерН12С; }
@@ -262,7 +284,7 @@ namespace R440O.R440OForms.N15
                 if (RefreshForm != null) RefreshForm();
             }
         }
-        
+
         public static bool ТумблерМШУ
         {
             get { return _тумблерМшу; }
@@ -270,9 +292,12 @@ namespace R440O.R440OForms.N15
             {
                 _тумблерМшу = value;
                 if (RefreshForm != null) RefreshForm();
+
+                ResetParameters();
+                A304Parameters.ResetParameters();
             }
         }
-        
+
         public static bool ТумблерБМА_1
         {
             get { return _тумблерБма1; }
@@ -288,25 +313,34 @@ namespace R440O.R440OForms.N15
             get { return _тумблерБма2; }
             set { _тумблерБма2 = value; if (RefreshForm != null) RefreshForm(); }
         }
-        
+
         public static bool ТумблерА205Base
         {
             get { return _тумблерА205Base; }
             set { _тумблерА205Base = value; if (RefreshForm != null) RefreshForm(); }
         }
-        
+
         public static bool ТумблерА20512
         {
             get { return _тумблерА20512; }
             set
             {
-                _тумблерА20512 = value; 
+                _тумблерА20512 = value;
+
+                NKN_1Parameters.Питание220Включено = value && NKN_1Parameters.ЛампочкаМУ && ТумблерА205Base 
+                    && ТумблерА20512 && N502BParameters.ТумблерН15;
+                //A205Distanse1 = NKN_1Parameters.Питание220Включено;
+
+                NKN_2Parameters.Питание220Включено = !value && NKN_2Parameters.ЛампочкаМУ && ТумблерА205Base 
+                    && !ТумблерА20512 && N502BParameters.ТумблерН15;
+                //A205Distanse2 = NKN_2Parameters.Питание220Включено;
+
                 NKN_1Parameters.ResetParameters();
                 NKN_2Parameters.ResetParameters();
                 if (RefreshForm != null) RefreshForm();
             }
         }
-        
+
         public static bool ТумблерА30412
         {
             get { return _тумблерА30412; }
@@ -314,15 +348,16 @@ namespace R440O.R440OForms.N15
             {
                 _тумблерА30412 = value;
                 if (RefreshForm != null) RefreshForm();
+                A304Parameters.ResetParameters();
             }
         }
-        
+
         public static bool ТумблерАФСС
         {
             get { return _тумблерАфсс; }
             set { _тумблерАфсс = value; if (RefreshForm != null) RefreshForm(); }
         }
-        
+
         public static bool ТумблерА1
         {
             get { return _тумблерА1; }
@@ -346,55 +381,55 @@ namespace R440O.R440OForms.N15
             get { return _тумблерК12; }
             set { _тумблерК12 = value; if (RefreshForm != null) RefreshForm(); }
         }
-        
+
         public static bool ТумблерБ1_1
         {
             get { return _тумблерБ11; }
             set { _тумблерБ11 = value; if (RefreshForm != null) RefreshForm(); }
         }
-        
+
         public static bool ТумблерБ1_2
         {
             get { return _тумблерБ12; }
             set { _тумблерБ12 = value; if (RefreshForm != null) RefreshForm(); }
         }
-        
+
         public static bool ТумблерБ2_1
         {
             get { return _тумблерБ21; }
             set { _тумблерБ21 = value; if (RefreshForm != null) RefreshForm(); }
         }
-        
+
         public static bool ТумблерБ2_2
         {
             get { return _тумблерБ22; }
             set { _тумблерБ22 = value; if (RefreshForm != null) RefreshForm(); }
         }
-        
+
         public static bool ТумблерБ3_1
         {
             get { return _тумблерБ31; }
             set { _тумблерБ31 = value; if (RefreshForm != null) RefreshForm(); }
         }
-        
+
         public static bool ТумблерБ3_2
         {
             get { return _тумблерБ32; }
             set { _тумблерБ32 = value; if (RefreshForm != null) RefreshForm(); }
         }
-        
+
         public static bool ТумблерДАБ_5
         {
             get { return _тумблерДаб5; }
             set { _тумблерДаб5 = value; if (RefreshForm != null) RefreshForm(); }
         }
-        
+
         public static bool ТумблерР_Н
         {
             get { return _тумблерРН; }
             set { _тумблерРН = value; if (RefreshForm != null) RefreshForm(); }
         }
-        
+
         #endregion
 
         #region Тумблеры правая часть
@@ -407,7 +442,7 @@ namespace R440O.R440OForms.N15
         private static bool _тумблерТлфТлгПрм;
         private static bool _тумблерТлфТлгПрд;
         private static bool _тумблер5МГц25МГц3;
-        
+
         public static bool ТумблерА503Б
         {
             get { return _тумблерА503Б; }
@@ -437,13 +472,13 @@ namespace R440O.R440OForms.N15
             get { return _тумблерАнтЭкв; }
             set { _тумблерАнтЭкв = value; if (RefreshForm != null) RefreshForm(); }
         }
-        
+
         public static bool ТумблерТлфТлгПрм
         {
             get { return _тумблерТлфТлгПрм; }
             set { _тумблерТлфТлгПрм = value; if (RefreshForm != null) RefreshForm(); }
         }
-        
+
         public static bool ТумблерТлфТлгПрд
         {
             get { return _тумблерТлфТлгПрд; }
@@ -671,7 +706,7 @@ namespace R440O.R440OForms.N15
         public static bool ЛампочкаН16Н13_1
         {
             get { return _лампочкаН16Н131; }
-            set { _лампочкаН16Н131 = value;}
+            set { _лампочкаН16Н131 = value; }
         }
 
         public static bool ЛампочкаН16Н13_2
@@ -709,6 +744,12 @@ namespace R440O.R440OForms.N15
             Лампочка27В = (N502BParameters.ЛампочкаСфазировано
                           && N502BParameters.ТумблерЭлектрооборудование
                           && N502BParameters.ТумблерВыпрямитель27В);
+
+            ЛампочкаМШУ = Лампочка27В && ТумблерМШУ;
+            ЛампочкаА306 = ЛампочкаМШУ;
+            ЛампочкаА3041 = ЛампочкаМШУ && A304Parameters.Лампочка1К;
+            ЛампочкаА3042 = ЛампочкаМШУ && A304Parameters.Лампочка2К;
+
             ЛампочкаН15БП = (N502BParameters.ЛампочкаСфазировано
                           && N502BParameters.ТумблерЭлектрооборудование
                           && N502BParameters.ТумблерВыпрямитель27В);
@@ -720,14 +761,16 @@ namespace R440O.R440OForms.N15
                 ((NKN_2Parameters.ЛампочкаМУ && NKN_2Parameters.Питание220Включено && N502BParameters.ТумблерН15)
                 || (NKN_2Parameters.ЛампочкаМУ && ТумблерА205Base && !ТумблерА20512));
 
-            ЛампочкаУМ1Работа1 = (ТумблерА205Base && ТумблерА20512 && !ЛампочкаA205Неиспр1 && N502BParameters.ТумблерН15);
-            ЛампочкаУМ1Работа2 = (ТумблерА205Base && !ТумблерА20512 && !ЛампочкаA205Неиспр2 && N502BParameters.ТумблерН15);
-
             ЛампочкаППВРабота1 = A205M_1Parameters.ЛампочкаНормРаб;
             ЛампочкаППВВкл1 = NKN_1Parameters.ЛампочкиФаз[0];
 
             ЛампочкаППВРабота2 = A205M_2Parameters.ЛампочкаНормРаб;
             ЛампочкаППВВкл2 = NKN_2Parameters.ЛампочкиФаз[0];
+
+            //ЛампочкаУМ1Работа1 = (ТумблерА205Base && ТумблерА20512 && !ЛампочкаA205Неиспр1 && ЛампочкаППВВкл1 && A205Distanse1);
+            //ЛампочкаУМ1Работа2 = (ТумблерА205Base && !ТумблерА20512 && !ЛампочкаA205Неиспр2 && ЛампочкаППВВкл2 && A205Distanse2);
+            ЛампочкаУМ1Работа1 = (ТумблерА205Base && ТумблерА20512 && !ЛампочкаA205Неиспр1 && ЛампочкаППВВкл1);
+            ЛампочкаУМ1Работа2 = (ТумблерА205Base && !ТумблерА20512 && !ЛампочкаA205Неиспр2 && ЛампочкаППВВкл2);
 
             if (RefreshForm != null) RefreshForm();
         }

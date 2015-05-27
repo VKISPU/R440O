@@ -25,8 +25,9 @@ namespace R440O.R440OForms.R440O
         /// </summary>
         public R440OForm()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
+
         /// <summary>
         /// Открытие формы блока в соотвествии с нажатой кнопкой
         /// </summary>

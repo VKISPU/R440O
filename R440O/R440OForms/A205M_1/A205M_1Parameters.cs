@@ -47,7 +47,7 @@ namespace R440O.R440OForms.A205M_1
                 _тумблерКЭД = value;
                 if (RefreshForm != null) RefreshForm();
             }
-        } 
+        }
         #endregion
 
         #region Переключатели волны
@@ -119,7 +119,7 @@ namespace R440O.R440OForms.A205M_1
                     if (RefreshForm != null) RefreshForm();
                 }
             }
-        } 
+        }
         #endregion
 
         #region Контроль блока
