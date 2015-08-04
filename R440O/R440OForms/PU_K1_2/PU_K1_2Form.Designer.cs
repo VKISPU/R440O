@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.PU_K1_2Panel = new System.Windows.Forms.Panel();
+            this.PU_K1_2ТумблерВентВкл = new System.Windows.Forms.Button();
             this.PU_K1_2ПереключательНапряжение = new System.Windows.Forms.Button();
             this.PU_K1_2ПереключательКаналы = new System.Windows.Forms.Button();
             this.PU_K1_2СтрелкаКонтроляНапряжения = new System.Windows.Forms.PictureBox();
             this.PU_K1_2ТумблерПитание = new System.Windows.Forms.Button();
             this.PU_K1_2ЛампочкаCеть = new System.Windows.Forms.PictureBox();
-            this.PU_K1_2ТумблерВентВкл = new System.Windows.Forms.Button();
             this.PU_K1_2Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PU_K1_2СтрелкаКонтроляНапряжения)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PU_K1_2ЛампочкаCеть)).BeginInit();
@@ -54,6 +54,22 @@
             this.PU_K1_2Panel.Name = "PU_K1_2Panel";
             this.PU_K1_2Panel.Size = new System.Drawing.Size(989, 189);
             this.PU_K1_2Panel.TabIndex = 2;
+            // 
+            // PU_K1_2ТумблерВентВкл
+            // 
+            this.PU_K1_2ТумблерВентВкл.BackColor = System.Drawing.Color.Transparent;
+            this.PU_K1_2ТумблерВентВкл.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
+            this.PU_K1_2ТумблерВентВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.PU_K1_2ТумблерВентВкл.FlatAppearance.BorderSize = 0;
+            this.PU_K1_2ТумблерВентВкл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.PU_K1_2ТумблерВентВкл.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.PU_K1_2ТумблерВентВкл.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PU_K1_2ТумблерВентВкл.Location = new System.Drawing.Point(863, 80);
+            this.PU_K1_2ТумблерВентВкл.Name = "PU_K1_2ТумблерВентВкл";
+            this.PU_K1_2ТумблерВентВкл.Size = new System.Drawing.Size(39, 65);
+            this.PU_K1_2ТумблерВентВкл.TabIndex = 63;
+            this.PU_K1_2ТумблерВентВкл.UseVisualStyleBackColor = false;
+            this.PU_K1_2ТумблерВентВкл.Click += new System.EventHandler(this.PU_K1_2ТумблерВентВкл_Click);
             // 
             // PU_K1_2ПереключательНапряжение
             // 
@@ -123,22 +139,6 @@
             this.PU_K1_2ЛампочкаCеть.TabIndex = 33;
             this.PU_K1_2ЛампочкаCеть.TabStop = false;
             // 
-            // PU_K1_2ТумблерВентВкл
-            // 
-            this.PU_K1_2ТумблерВентВкл.BackColor = System.Drawing.Color.Transparent;
-            this.PU_K1_2ТумблерВентВкл.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
-            this.PU_K1_2ТумблерВентВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.PU_K1_2ТумблерВентВкл.FlatAppearance.BorderSize = 0;
-            this.PU_K1_2ТумблерВентВкл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.PU_K1_2ТумблерВентВкл.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.PU_K1_2ТумблерВентВкл.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PU_K1_2ТумблерВентВкл.Location = new System.Drawing.Point(863, 80);
-            this.PU_K1_2ТумблерВентВкл.Name = "PU_K1_2ТумблерВентВкл";
-            this.PU_K1_2ТумблерВентВкл.Size = new System.Drawing.Size(39, 65);
-            this.PU_K1_2ТумблерВентВкл.TabIndex = 63;
-            this.PU_K1_2ТумблерВентВкл.UseVisualStyleBackColor = false;
-            this.PU_K1_2ТумблерВентВкл.Click += new System.EventHandler(this.PU_K1_2ТумблерВентВкл_Click);
-            // 
             // PU_K1_2Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -149,7 +149,7 @@
             this.MaximizeBox = false;
             this.Name = "PU_K1_2Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ПУЛЬТ УПРАВЛЕНИЯ К1-1";
+            this.Text = "ПУЛЬТ УПРАВЛЕНИЯ К1-2";
             this.PU_K1_2Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PU_K1_2СтрелкаКонтроляНапряжения)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PU_K1_2ЛампочкаCеть)).EndInit();

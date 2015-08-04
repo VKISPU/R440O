@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.BMA_M_2Panel = new System.Windows.Forms.Panel();
+            this.BMA_M_2ЛампочкаНеисправно = new System.Windows.Forms.PictureBox();
+            this.BMA_M_2ЛампочкаИсправно = new System.Windows.Forms.PictureBox();
+            this.BMA_M_2ЛампочкаДист = new System.Windows.Forms.PictureBox();
+            this.BMA_M_2ЛампочкаРРР = new System.Windows.Forms.PictureBox();
             this.BMA_M_2ЛампочкаКонтрольНорм = new System.Windows.Forms.PictureBox();
             this.BMA_M_2ЛампочкаКонтрольНенорм = new System.Windows.Forms.PictureBox();
             this.BMA_M_2ЛампочкаКонтрольКомпл = new System.Windows.Forms.PictureBox();
@@ -71,11 +75,11 @@
             this.BMA_M_2ПереключательРежимРаботы = new System.Windows.Forms.Button();
             this.BMA_M_2ПереключательРекурента = new System.Windows.Forms.Button();
             this.BMA_M_2ПереключательКонтроль = new System.Windows.Forms.Button();
-            this.BMA_M_2ЛампочкаРРР = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаДист = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаИсправно = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаНеисправно = new System.Windows.Forms.PictureBox();
             this.BMA_M_2Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаНеисправно)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаИсправно)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаДист)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаРРР)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаКонтрольНорм)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаКонтрольНенорм)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаКонтрольКомпл)).BeginInit();
@@ -104,10 +108,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаДК)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаФЗ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаТЧБ)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаРРР)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаДист)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаИсправно)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаНеисправно)).BeginInit();
             this.SuspendLayout();
             // 
             // BMA_M_2Panel
@@ -164,6 +164,46 @@
             this.BMA_M_2Panel.Name = "BMA_M_2Panel";
             this.BMA_M_2Panel.Size = new System.Drawing.Size(954, 626);
             this.BMA_M_2Panel.TabIndex = 1;
+            // 
+            // BMA_M_2ЛампочкаНеисправно
+            // 
+            this.BMA_M_2ЛампочкаНеисправно.BackColor = System.Drawing.Color.Transparent;
+            this.BMA_M_2ЛампочкаНеисправно.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BMA_M_2ЛампочкаНеисправно.Location = new System.Drawing.Point(154, 104);
+            this.BMA_M_2ЛампочкаНеисправно.Name = "BMA_M_2ЛампочкаНеисправно";
+            this.BMA_M_2ЛампочкаНеисправно.Size = new System.Drawing.Size(72, 27);
+            this.BMA_M_2ЛампочкаНеисправно.TabIndex = 93;
+            this.BMA_M_2ЛампочкаНеисправно.TabStop = false;
+            // 
+            // BMA_M_2ЛампочкаИсправно
+            // 
+            this.BMA_M_2ЛампочкаИсправно.BackColor = System.Drawing.Color.Transparent;
+            this.BMA_M_2ЛампочкаИсправно.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BMA_M_2ЛампочкаИсправно.Location = new System.Drawing.Point(155, 81);
+            this.BMA_M_2ЛампочкаИсправно.Name = "BMA_M_2ЛампочкаИсправно";
+            this.BMA_M_2ЛампочкаИсправно.Size = new System.Drawing.Size(72, 27);
+            this.BMA_M_2ЛампочкаИсправно.TabIndex = 92;
+            this.BMA_M_2ЛампочкаИсправно.TabStop = false;
+            // 
+            // BMA_M_2ЛампочкаДист
+            // 
+            this.BMA_M_2ЛампочкаДист.BackColor = System.Drawing.Color.Transparent;
+            this.BMA_M_2ЛампочкаДист.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BMA_M_2ЛампочкаДист.Location = new System.Drawing.Point(581, 104);
+            this.BMA_M_2ЛампочкаДист.Name = "BMA_M_2ЛампочкаДист";
+            this.BMA_M_2ЛампочкаДист.Size = new System.Drawing.Size(72, 27);
+            this.BMA_M_2ЛампочкаДист.TabIndex = 91;
+            this.BMA_M_2ЛампочкаДист.TabStop = false;
+            // 
+            // BMA_M_2ЛампочкаРРР
+            // 
+            this.BMA_M_2ЛампочкаРРР.BackColor = System.Drawing.Color.Transparent;
+            this.BMA_M_2ЛампочкаРРР.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BMA_M_2ЛампочкаРРР.Location = new System.Drawing.Point(581, 81);
+            this.BMA_M_2ЛампочкаРРР.Name = "BMA_M_2ЛампочкаРРР";
+            this.BMA_M_2ЛампочкаРРР.Size = new System.Drawing.Size(72, 27);
+            this.BMA_M_2ЛампочкаРРР.TabIndex = 90;
+            this.BMA_M_2ЛампочкаРРР.TabStop = false;
             // 
             // BMA_M_2ЛампочкаКонтрольНорм
             // 
@@ -684,46 +724,6 @@
             this.BMA_M_2ПереключательКонтроль.UseVisualStyleBackColor = false;
             this.BMA_M_2ПереключательКонтроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMA_M_2ПереключательКонтроль_MouseUp);
             // 
-            // BMA_M_2ЛампочкаРРР
-            // 
-            this.BMA_M_2ЛампочкаРРР.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаРРР.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаРРР.Location = new System.Drawing.Point(581, 81);
-            this.BMA_M_2ЛампочкаРРР.Name = "BMA_M_2ЛампочкаРРР";
-            this.BMA_M_2ЛампочкаРРР.Size = new System.Drawing.Size(72, 27);
-            this.BMA_M_2ЛампочкаРРР.TabIndex = 90;
-            this.BMA_M_2ЛампочкаРРР.TabStop = false;
-            // 
-            // BMA_M_2ЛампочкаДист
-            // 
-            this.BMA_M_2ЛампочкаДист.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаДист.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаДист.Location = new System.Drawing.Point(581, 104);
-            this.BMA_M_2ЛампочкаДист.Name = "BMA_M_2ЛампочкаДист";
-            this.BMA_M_2ЛампочкаДист.Size = new System.Drawing.Size(72, 27);
-            this.BMA_M_2ЛампочкаДист.TabIndex = 91;
-            this.BMA_M_2ЛампочкаДист.TabStop = false;
-            // 
-            // BMA_M_2ЛампочкаИсправно
-            // 
-            this.BMA_M_2ЛампочкаИсправно.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаИсправно.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаИсправно.Location = new System.Drawing.Point(155, 81);
-            this.BMA_M_2ЛампочкаИсправно.Name = "BMA_M_2ЛампочкаИсправно";
-            this.BMA_M_2ЛампочкаИсправно.Size = new System.Drawing.Size(72, 27);
-            this.BMA_M_2ЛампочкаИсправно.TabIndex = 92;
-            this.BMA_M_2ЛампочкаИсправно.TabStop = false;
-            // 
-            // BMA_M_2ЛампочкаНеисправно
-            // 
-            this.BMA_M_2ЛампочкаНеисправно.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаНеисправно.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаНеисправно.Location = new System.Drawing.Point(154, 104);
-            this.BMA_M_2ЛампочкаНеисправно.Name = "BMA_M_2ЛампочкаНеисправно";
-            this.BMA_M_2ЛампочкаНеисправно.Size = new System.Drawing.Size(72, 27);
-            this.BMA_M_2ЛампочкаНеисправно.TabIndex = 93;
-            this.BMA_M_2ЛампочкаНеисправно.TabStop = false;
-            // 
             // BMA_M_2Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -734,8 +734,12 @@
             this.MaximizeBox = false;
             this.Name = "BMA_M_2Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "БМА-M/1";
+            this.Text = "БМА-M/2";
             this.BMA_M_2Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаНеисправно)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаИсправно)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаДист)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаРРР)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаКонтрольНорм)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаКонтрольНенорм)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаКонтрольКомпл)).EndInit();
@@ -764,10 +768,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаДК)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаФЗ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаТЧБ)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаРРР)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаДист)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаИсправно)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаНеисправно)).EndInit();
             this.ResumeLayout(false);
 
         }

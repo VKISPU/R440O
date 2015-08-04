@@ -86,7 +86,7 @@
             this.MaximizeBox = false;
             this.Name = "PowerCabelForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ЩИТ ЭЛЕКТРОПИТАНИЯ";
+            this.Text = "КАБЕЛЬ ЭЛЕКТРОПИТАНИЯ";
             this.PowerCabelPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 

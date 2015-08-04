@@ -74,5 +74,9 @@ namespace R440O.R440OForms.R440O
         {
             return (from form in OwnedForms.Where(form => form.Name == formName) let specificForm = new Form() select form).FirstOrDefault();
         }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+        }
     }
 }

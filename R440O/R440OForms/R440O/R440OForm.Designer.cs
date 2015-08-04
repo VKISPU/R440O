@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.R440OPanel = new System.Windows.Forms.Panel();
             this.R440OButtonOrderScheme = new System.Windows.Forms.Button();
             this.R440OButtonWattmeter = new System.Windows.Forms.Button();
@@ -87,6 +88,7 @@
             this.R440OButtonA1 = new System.Windows.Forms.Button();
             this.R440OButtonA205M_2 = new System.Windows.Forms.Button();
             this.R440OButtonA205M_1 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.R440OPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -184,6 +186,7 @@
             this.R440OButtonWattmeter.Name = "R440OButtonWattmeter";
             this.R440OButtonWattmeter.Size = new System.Drawing.Size(50, 39);
             this.R440OButtonWattmeter.TabIndex = 57;
+            this.toolTip1.SetToolTip(this.R440OButtonWattmeter, "БЛОК ВАТТМЕТРА ИЗМЕРИТЕЛЬНЫЙ Я2М-66");
             this.R440OButtonWattmeter.UseVisualStyleBackColor = false;
             this.R440OButtonWattmeter.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -198,6 +201,7 @@
             this.R440OButtonK06M_02.Name = "R440OButtonK06M_02";
             this.R440OButtonK06M_02.Size = new System.Drawing.Size(34, 49);
             this.R440OButtonK06M_02.TabIndex = 56;
+            this.toolTip1.SetToolTip(this.R440OButtonK06M_02, "К06-2");
             this.R440OButtonK06M_02.UseVisualStyleBackColor = false;
             this.R440OButtonK06M_02.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -212,6 +216,7 @@
             this.R440OButtonK06M_01.Name = "R440OButtonK06M_01";
             this.R440OButtonK06M_01.Size = new System.Drawing.Size(34, 51);
             this.R440OButtonK06M_01.TabIndex = 55;
+            this.toolTip1.SetToolTip(this.R440OButtonK06M_01, "К06М-1");
             this.R440OButtonK06M_01.UseVisualStyleBackColor = false;
             this.R440OButtonK06M_01.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -226,6 +231,7 @@
             this.R440OButtonK05M_01.Name = "R440OButtonK05M_01";
             this.R440OButtonK05M_01.Size = new System.Drawing.Size(34, 51);
             this.R440OButtonK05M_01.TabIndex = 54;
+            this.toolTip1.SetToolTip(this.R440OButtonK05M_01, "К05М-1");
             this.R440OButtonK05M_01.UseVisualStyleBackColor = false;
             this.R440OButtonK05M_01.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -240,6 +246,7 @@
             this.R440OButtonK05M_02.Name = "R440OButtonK05M_02";
             this.R440OButtonK05M_02.Size = new System.Drawing.Size(34, 51);
             this.R440OButtonK05M_02.TabIndex = 53;
+            this.toolTip1.SetToolTip(this.R440OButtonK05M_02, "К05-2");
             this.R440OButtonK05M_02.UseVisualStyleBackColor = false;
             this.R440OButtonK05M_02.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -254,6 +261,7 @@
             this.R440OButtonK04M_02.Name = "R440OButtonK04M_02";
             this.R440OButtonK04M_02.Size = new System.Drawing.Size(34, 49);
             this.R440OButtonK04M_02.TabIndex = 52;
+            this.toolTip1.SetToolTip(this.R440OButtonK04M_02, "К04-2");
             this.R440OButtonK04M_02.UseVisualStyleBackColor = false;
             this.R440OButtonK04M_02.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -268,6 +276,7 @@
             this.R440OButtonK04M_01.Name = "R440OButtonK04M_01";
             this.R440OButtonK04M_01.Size = new System.Drawing.Size(34, 49);
             this.R440OButtonK04M_01.TabIndex = 51;
+            this.toolTip1.SetToolTip(this.R440OButtonK04M_01, "К04М-1");
             this.R440OButtonK04M_01.UseVisualStyleBackColor = false;
             this.R440OButtonK04M_01.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -282,6 +291,7 @@
             this.R440OButtonK03M_02.Name = "R440OButtonK03M_02";
             this.R440OButtonK03M_02.Size = new System.Drawing.Size(34, 49);
             this.R440OButtonK03M_02.TabIndex = 50;
+            this.toolTip1.SetToolTip(this.R440OButtonK03M_02, "К03-2");
             this.R440OButtonK03M_02.UseVisualStyleBackColor = false;
             this.R440OButtonK03M_02.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -296,6 +306,7 @@
             this.R440OButtonK03M_01.Name = "R440OButtonK03M_01";
             this.R440OButtonK03M_01.Size = new System.Drawing.Size(34, 49);
             this.R440OButtonK03M_01.TabIndex = 49;
+            this.toolTip1.SetToolTip(this.R440OButtonK03M_01, "К03М-1");
             this.R440OButtonK03M_01.UseVisualStyleBackColor = false;
             this.R440OButtonK03M_01.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -310,6 +321,7 @@
             this.R440OButtonK02M_02.Name = "R440OButtonK02M_02";
             this.R440OButtonK02M_02.Size = new System.Drawing.Size(34, 49);
             this.R440OButtonK02M_02.TabIndex = 48;
+            this.toolTip1.SetToolTip(this.R440OButtonK02M_02, "К02-2");
             this.R440OButtonK02M_02.UseVisualStyleBackColor = false;
             this.R440OButtonK02M_02.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -324,6 +336,7 @@
             this.R440OButtonK02M_01.Name = "R440OButtonK02M_01";
             this.R440OButtonK02M_01.Size = new System.Drawing.Size(34, 49);
             this.R440OButtonK02M_01.TabIndex = 47;
+            this.toolTip1.SetToolTip(this.R440OButtonK02M_01, "К02М-1");
             this.R440OButtonK02M_01.UseVisualStyleBackColor = false;
             this.R440OButtonK02M_01.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -338,6 +351,7 @@
             this.R440OButtonK01M_02.Name = "R440OButtonK01M_02";
             this.R440OButtonK01M_02.Size = new System.Drawing.Size(34, 45);
             this.R440OButtonK01M_02.TabIndex = 46;
+            this.toolTip1.SetToolTip(this.R440OButtonK01M_02, "К01-2");
             this.R440OButtonK01M_02.UseVisualStyleBackColor = false;
             this.R440OButtonK01M_02.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -352,6 +366,7 @@
             this.R440OButtonK01M_01.Name = "R440OButtonK01M_01";
             this.R440OButtonK01M_01.Size = new System.Drawing.Size(34, 45);
             this.R440OButtonK01M_01.TabIndex = 45;
+            this.toolTip1.SetToolTip(this.R440OButtonK01M_01, "К01М-1");
             this.R440OButtonK01M_01.UseVisualStyleBackColor = false;
             this.R440OButtonK01M_01.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -366,6 +381,7 @@
             this.R440OButtonB3_2.Name = "R440OButtonB3_2";
             this.R440OButtonB3_2.Size = new System.Drawing.Size(129, 45);
             this.R440OButtonB3_2.TabIndex = 44;
+            this.toolTip1.SetToolTip(this.R440OButtonB3_2, "Б3-2");
             this.R440OButtonB3_2.UseVisualStyleBackColor = false;
             this.R440OButtonB3_2.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -380,6 +396,7 @@
             this.R440OButtonB3_1.Name = "R440OButtonB3_1";
             this.R440OButtonB3_1.Size = new System.Drawing.Size(129, 42);
             this.R440OButtonB3_1.TabIndex = 43;
+            this.toolTip1.SetToolTip(this.R440OButtonB3_1, "Б3-1");
             this.R440OButtonB3_1.UseVisualStyleBackColor = false;
             this.R440OButtonB3_1.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -394,6 +411,7 @@
             this.R440OButtonB2_2.Name = "R440OButtonB2_2";
             this.R440OButtonB2_2.Size = new System.Drawing.Size(129, 41);
             this.R440OButtonB2_2.TabIndex = 42;
+            this.toolTip1.SetToolTip(this.R440OButtonB2_2, "Б2-2");
             this.R440OButtonB2_2.UseVisualStyleBackColor = false;
             this.R440OButtonB2_2.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -408,6 +426,7 @@
             this.R440OButtonB2_1.Name = "R440OButtonB2_1";
             this.R440OButtonB2_1.Size = new System.Drawing.Size(129, 41);
             this.R440OButtonB2_1.TabIndex = 41;
+            this.toolTip1.SetToolTip(this.R440OButtonB2_1, "Б2-1");
             this.R440OButtonB2_1.UseVisualStyleBackColor = false;
             this.R440OButtonB2_1.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -422,6 +441,7 @@
             this.R440OButtonB1_2.Name = "R440OButtonB1_2";
             this.R440OButtonB1_2.Size = new System.Drawing.Size(129, 40);
             this.R440OButtonB1_2.TabIndex = 40;
+            this.toolTip1.SetToolTip(this.R440OButtonB1_2, "Б1-2");
             this.R440OButtonB1_2.UseVisualStyleBackColor = false;
             this.R440OButtonB1_2.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -436,6 +456,7 @@
             this.R440OButtonPowerShield.Name = "R440OButtonPowerShield";
             this.R440OButtonPowerShield.Size = new System.Drawing.Size(99, 79);
             this.R440OButtonPowerShield.TabIndex = 39;
+            this.toolTip1.SetToolTip(this.R440OButtonPowerShield, "ЩИТ ЭЛЕКТРОПИТАНИЯ");
             this.R440OButtonPowerShield.UseVisualStyleBackColor = false;
             this.R440OButtonPowerShield.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -450,6 +471,7 @@
             this.R440OButtonNKN_2.Name = "R440OButtonNKN_2";
             this.R440OButtonNKN_2.Size = new System.Drawing.Size(69, 54);
             this.R440OButtonNKN_2.TabIndex = 38;
+            this.toolTip1.SetToolTip(this.R440OButtonNKN_2, "НКН-2");
             this.R440OButtonNKN_2.UseVisualStyleBackColor = false;
             this.R440OButtonNKN_2.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -464,6 +486,7 @@
             this.R440OButtonNKN_1.Name = "R440OButtonNKN_1";
             this.R440OButtonNKN_1.Size = new System.Drawing.Size(69, 55);
             this.R440OButtonNKN_1.TabIndex = 37;
+            this.toolTip1.SetToolTip(this.R440OButtonNKN_1, "НКН-1");
             this.R440OButtonNKN_1.UseVisualStyleBackColor = false;
             this.R440OButtonNKN_1.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -478,6 +501,7 @@
             this.R440OButtonN18_M.Name = "R440OButtonN18_M";
             this.R440OButtonN18_M.Size = new System.Drawing.Size(99, 114);
             this.R440OButtonN18_M.TabIndex = 36;
+            this.toolTip1.SetToolTip(this.R440OButtonN18_M, "Н18-М");
             this.R440OButtonN18_M.UseVisualStyleBackColor = false;
             this.R440OButtonN18_M.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -492,6 +516,7 @@
             this.R440OButtonN16.Name = "R440OButtonN16";
             this.R440OButtonN16.Size = new System.Drawing.Size(137, 55);
             this.R440OButtonN16.TabIndex = 35;
+            this.toolTip1.SetToolTip(this.R440OButtonN16, "Н16");
             this.R440OButtonN16.UseVisualStyleBackColor = false;
             this.R440OButtonN16.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -506,6 +531,7 @@
             this.R440OButtonN13_2.Name = "R440OButtonN13_2";
             this.R440OButtonN13_2.Size = new System.Drawing.Size(137, 55);
             this.R440OButtonN13_2.TabIndex = 34;
+            this.toolTip1.SetToolTip(this.R440OButtonN13_2, "Н13-2");
             this.R440OButtonN13_2.UseVisualStyleBackColor = false;
             this.R440OButtonN13_2.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -520,6 +546,7 @@
             this.R440OButtonN13_1.Name = "R440OButtonN13_1";
             this.R440OButtonN13_1.Size = new System.Drawing.Size(137, 55);
             this.R440OButtonN13_1.TabIndex = 33;
+            this.toolTip1.SetToolTip(this.R440OButtonN13_1, "Н13-1");
             this.R440OButtonN13_1.UseVisualStyleBackColor = false;
             this.R440OButtonN13_1.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -534,6 +561,7 @@
             this.R440OButtonA403_3.Name = "R440OButtonA403_3";
             this.R440OButtonA403_3.Size = new System.Drawing.Size(57, 46);
             this.R440OButtonA403_3.TabIndex = 32;
+            this.toolTip1.SetToolTip(this.R440OButtonA403_3, "А403-3");
             this.R440OButtonA403_3.UseVisualStyleBackColor = false;
             this.R440OButtonA403_3.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -562,6 +590,7 @@
             this.R440OButtonC1_67.Name = "R440OButtonC1_67";
             this.R440OButtonC1_67.Size = new System.Drawing.Size(56, 50);
             this.R440OButtonC1_67.TabIndex = 30;
+            this.toolTip1.SetToolTip(this.R440OButtonC1_67, "Ц1-67");
             this.R440OButtonC1_67.UseVisualStyleBackColor = false;
             this.R440OButtonC1_67.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -576,6 +605,7 @@
             this.R440OButtonC300PM_3.Name = "R440OButtonC300PM_3";
             this.R440OButtonC300PM_3.Size = new System.Drawing.Size(56, 50);
             this.R440OButtonC300PM_3.TabIndex = 29;
+            this.toolTip1.SetToolTip(this.R440OButtonC300PM_3, "Ц300ПМ-3");
             this.R440OButtonC300PM_3.UseVisualStyleBackColor = false;
             this.R440OButtonC300PM_3.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -590,6 +620,7 @@
             this.R440OButtonC300PM_2.Name = "R440OButtonC300PM_2";
             this.R440OButtonC300PM_2.Size = new System.Drawing.Size(56, 46);
             this.R440OButtonC300PM_2.TabIndex = 28;
+            this.toolTip1.SetToolTip(this.R440OButtonC300PM_2, "Ц300ПМ-2");
             this.R440OButtonC300PM_2.UseVisualStyleBackColor = false;
             this.R440OButtonC300PM_2.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -604,6 +635,7 @@
             this.R440OButtonPU_K1_2.Name = "R440OButtonPU_K1_2";
             this.R440OButtonPU_K1_2.Size = new System.Drawing.Size(82, 16);
             this.R440OButtonPU_K1_2.TabIndex = 27;
+            this.toolTip1.SetToolTip(this.R440OButtonPU_K1_2, "ПУЛЬТ УПРАВЛЕНИЯ К1-2");
             this.R440OButtonPU_K1_2.UseVisualStyleBackColor = false;
             this.R440OButtonPU_K1_2.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -618,6 +650,7 @@
             this.R440OButtonPU_K1_1.Name = "R440OButtonPU_K1_1";
             this.R440OButtonPU_K1_1.Size = new System.Drawing.Size(82, 16);
             this.R440OButtonPU_K1_1.TabIndex = 26;
+            this.toolTip1.SetToolTip(this.R440OButtonPU_K1_1, "ПУЛЬТ УПРАВЛЕНИЯ К1-1");
             this.R440OButtonPU_K1_1.UseVisualStyleBackColor = false;
             this.R440OButtonPU_K1_1.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -632,6 +665,7 @@
             this.R440OButtonRubin_N.Name = "R440OButtonRubin_N";
             this.R440OButtonRubin_N.Size = new System.Drawing.Size(78, 51);
             this.R440OButtonRubin_N.TabIndex = 25;
+            this.toolTip1.SetToolTip(this.R440OButtonRubin_N, "РУБИН-Н");
             this.R440OButtonRubin_N.UseVisualStyleBackColor = false;
             this.R440OButtonRubin_N.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -646,6 +680,7 @@
             this.R440OButtonVoltageStabilizer.Name = "R440OButtonVoltageStabilizer";
             this.R440OButtonVoltageStabilizer.Size = new System.Drawing.Size(138, 105);
             this.R440OButtonVoltageStabilizer.TabIndex = 24;
+            this.toolTip1.SetToolTip(this.R440OButtonVoltageStabilizer, "СТАБИЛИЗАТОР НАПРЯЖЕНИЯ");
             this.R440OButtonVoltageStabilizer.UseVisualStyleBackColor = false;
             this.R440OButtonVoltageStabilizer.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -660,6 +695,7 @@
             this.R440OButtonP220_27G_3.Name = "R440OButtonP220_27G_3";
             this.R440OButtonP220_27G_3.Size = new System.Drawing.Size(129, 42);
             this.R440OButtonP220_27G_3.TabIndex = 23;
+            this.toolTip1.SetToolTip(this.R440OButtonP220_27G_3, "П220/27Г-3");
             this.R440OButtonP220_27G_3.UseVisualStyleBackColor = false;
             this.R440OButtonP220_27G_3.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -674,6 +710,7 @@
             this.R440OButtonP220_27G_2.Name = "R440OButtonP220_27G_2";
             this.R440OButtonP220_27G_2.Size = new System.Drawing.Size(129, 42);
             this.R440OButtonP220_27G_2.TabIndex = 22;
+            this.toolTip1.SetToolTip(this.R440OButtonP220_27G_2, "П220/27Г-2");
             this.R440OButtonP220_27G_2.UseVisualStyleBackColor = false;
             this.R440OButtonP220_27G_2.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -688,6 +725,7 @@
             this.R440OButtonBMB.Name = "R440OButtonBMB";
             this.R440OButtonBMB.Size = new System.Drawing.Size(108, 51);
             this.R440OButtonBMB.TabIndex = 21;
+            this.toolTip1.SetToolTip(this.R440OButtonBMB, "БМБ");
             this.R440OButtonBMB.UseVisualStyleBackColor = false;
             this.R440OButtonBMB.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -702,6 +740,7 @@
             this.R440OButtonBMA_M_2.Name = "R440OButtonBMA_M_2";
             this.R440OButtonBMA_M_2.Size = new System.Drawing.Size(82, 51);
             this.R440OButtonBMA_M_2.TabIndex = 20;
+            this.toolTip1.SetToolTip(this.R440OButtonBMA_M_2, "БМА-М/2");
             this.R440OButtonBMA_M_2.UseVisualStyleBackColor = false;
             this.R440OButtonBMA_M_2.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -716,6 +755,7 @@
             this.R440OButtonBMA_M_1.Name = "R440OButtonBMA_M_1";
             this.R440OButtonBMA_M_1.Size = new System.Drawing.Size(84, 51);
             this.R440OButtonBMA_M_1.TabIndex = 19;
+            this.toolTip1.SetToolTip(this.R440OButtonBMA_M_1, "БМА-М/1");
             this.R440OButtonBMA_M_1.UseVisualStyleBackColor = false;
             this.R440OButtonBMA_M_1.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -730,6 +770,7 @@
             this.R440OButtonAstra.Name = "R440OButtonAstra";
             this.R440OButtonAstra.Size = new System.Drawing.Size(64, 43);
             this.R440OButtonAstra.TabIndex = 18;
+            this.toolTip1.SetToolTip(this.R440OButtonAstra, "АСТРА");
             this.R440OButtonAstra.UseVisualStyleBackColor = false;
             this.R440OButtonAstra.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -744,6 +785,7 @@
             this.R440OButtonC300PM_1.Name = "R440OButtonC300PM_1";
             this.R440OButtonC300PM_1.Size = new System.Drawing.Size(56, 50);
             this.R440OButtonC300PM_1.TabIndex = 17;
+            this.toolTip1.SetToolTip(this.R440OButtonC300PM_1, "Ц300ПМ-1");
             this.R440OButtonC300PM_1.UseVisualStyleBackColor = false;
             this.R440OButtonC300PM_1.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -758,6 +800,7 @@
             this.R440OButtonC300M_4.Name = "R440OButtonC300M_4";
             this.R440OButtonC300M_4.Size = new System.Drawing.Size(120, 50);
             this.R440OButtonC300M_4.TabIndex = 16;
+            this.toolTip1.SetToolTip(this.R440OButtonC300M_4, "Ц300М-4");
             this.R440OButtonC300M_4.UseVisualStyleBackColor = false;
             this.R440OButtonC300M_4.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -772,6 +815,7 @@
             this.R440OButtonC300M_3.Name = "R440OButtonC300M_3";
             this.R440OButtonC300M_3.Size = new System.Drawing.Size(120, 50);
             this.R440OButtonC300M_3.TabIndex = 15;
+            this.toolTip1.SetToolTip(this.R440OButtonC300M_3, "Ц300М-3");
             this.R440OButtonC300M_3.UseVisualStyleBackColor = false;
             this.R440OButtonC300M_3.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -786,6 +830,7 @@
             this.R440OButtonC300M_2.Name = "R440OButtonC300M_2";
             this.R440OButtonC300M_2.Size = new System.Drawing.Size(120, 50);
             this.R440OButtonC300M_2.TabIndex = 14;
+            this.toolTip1.SetToolTip(this.R440OButtonC300M_2, "Ц300М-2");
             this.R440OButtonC300M_2.UseVisualStyleBackColor = false;
             this.R440OButtonC300M_2.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -800,6 +845,7 @@
             this.R440OButtonC300M_1.Name = "R440OButtonC300M_1";
             this.R440OButtonC300M_1.Size = new System.Drawing.Size(120, 50);
             this.R440OButtonC300M_1.TabIndex = 13;
+            this.toolTip1.SetToolTip(this.R440OButtonC300M_1, "Ц300М-1");
             this.R440OButtonC300M_1.UseVisualStyleBackColor = false;
             this.R440OButtonC300M_1.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -814,6 +860,7 @@
             this.R440OButtonKontur_P3.Name = "R440OButtonKontur_P3";
             this.R440OButtonKontur_P3.Size = new System.Drawing.Size(142, 58);
             this.R440OButtonKontur_P3.TabIndex = 12;
+            this.toolTip1.SetToolTip(this.R440OButtonKontur_P3, "КОНТУР-П");
             this.R440OButtonKontur_P3.UseVisualStyleBackColor = false;
             this.R440OButtonKontur_P3.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -828,6 +875,7 @@
             this.R440OButtonA306.Name = "R440OButtonA306";
             this.R440OButtonA306.Size = new System.Drawing.Size(95, 58);
             this.R440OButtonA306.TabIndex = 11;
+            this.toolTip1.SetToolTip(this.R440OButtonA306, "А306");
             this.R440OButtonA306.UseVisualStyleBackColor = false;
             this.R440OButtonA306.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -842,6 +890,7 @@
             this.R440OButtonDAB_5.Name = "R440OButtonDAB_5";
             this.R440OButtonDAB_5.Size = new System.Drawing.Size(142, 41);
             this.R440OButtonDAB_5.TabIndex = 10;
+            this.toolTip1.SetToolTip(this.R440OButtonDAB_5, "ДАБ-5");
             this.R440OButtonDAB_5.UseVisualStyleBackColor = false;
             this.R440OButtonDAB_5.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -856,6 +905,7 @@
             this.R440OButtonPowerCabel.Name = "R440OButtonPowerCabel";
             this.R440OButtonPowerCabel.Size = new System.Drawing.Size(99, 79);
             this.R440OButtonPowerCabel.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.R440OButtonPowerCabel, "КАБЕЛЬ ЭЛЕКТРОПИТАНИЯ");
             this.R440OButtonPowerCabel.UseVisualStyleBackColor = false;
             this.R440OButtonPowerCabel.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -870,6 +920,7 @@
             this.R440OButtonN12S.Name = "R440OButtonN12S";
             this.R440OButtonN12S.Size = new System.Drawing.Size(88, 57);
             this.R440OButtonN12S.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.R440OButtonN12S, "Н12С");
             this.R440OButtonN12S.UseVisualStyleBackColor = false;
             this.R440OButtonN12S.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -884,6 +935,7 @@
             this.R440OButtonN15.Name = "R440OButtonN15";
             this.R440OButtonN15.Size = new System.Drawing.Size(156, 57);
             this.R440OButtonN15.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.R440OButtonN15, "Н15");
             this.R440OButtonN15.UseVisualStyleBackColor = false;
             this.R440OButtonN15.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -898,6 +950,7 @@
             this.R440OButtonN502B.Name = "R440OButtonN502B";
             this.R440OButtonN502B.Size = new System.Drawing.Size(93, 102);
             this.R440OButtonN502B.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.R440OButtonN502B, "Н502-Б");
             this.R440OButtonN502B.UseVisualStyleBackColor = false;
             this.R440OButtonN502B.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -912,6 +965,7 @@
             this.R440OButtonB1_1.Name = "R440OButtonB1_1";
             this.R440OButtonB1_1.Size = new System.Drawing.Size(129, 46);
             this.R440OButtonB1_1.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.R440OButtonB1_1, "Б1-1");
             this.R440OButtonB1_1.UseVisualStyleBackColor = false;
             this.R440OButtonB1_1.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -926,6 +980,7 @@
             this.R440OButtonA304.Name = "R440OButtonA304";
             this.R440OButtonA304.Size = new System.Drawing.Size(69, 55);
             this.R440OButtonA304.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.R440OButtonA304, "А304");
             this.R440OButtonA304.UseVisualStyleBackColor = false;
             this.R440OButtonA304.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -940,6 +995,7 @@
             this.R440OButtonA1.Name = "R440OButtonA1";
             this.R440OButtonA1.Size = new System.Drawing.Size(129, 45);
             this.R440OButtonA1.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.R440OButtonA1, "А1");
             this.R440OButtonA1.UseVisualStyleBackColor = false;
             this.R440OButtonA1.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -954,6 +1010,7 @@
             this.R440OButtonA205M_2.Name = "R440OButtonA205M_2";
             this.R440OButtonA205M_2.Size = new System.Drawing.Size(132, 53);
             this.R440OButtonA205M_2.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.R440OButtonA205M_2, "А205М-2");
             this.R440OButtonA205M_2.UseVisualStyleBackColor = false;
             this.R440OButtonA205M_2.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -968,8 +1025,15 @@
             this.R440OButtonA205M_1.Name = "R440OButtonA205M_1";
             this.R440OButtonA205M_1.Size = new System.Drawing.Size(137, 55);
             this.R440OButtonA205M_1.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.R440OButtonA205M_1, "А205М-1");
             this.R440OButtonA205M_1.UseVisualStyleBackColor = false;
             this.R440OButtonA205M_1.Click += new System.EventHandler(this.R440OButtonCommon_Click);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.OwnerDraw = true;
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
             // R440OForm
             // 
@@ -1046,6 +1110,7 @@
         private System.Windows.Forms.Button R440OButtonK06M_01;
         private System.Windows.Forms.Button R440OButtonWattmeter;
         private System.Windows.Forms.Button R440OButtonOrderScheme;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
