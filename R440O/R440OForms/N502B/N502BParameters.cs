@@ -49,6 +49,7 @@ namespace R440O.R440OForms.N502B
                 C300M_2Parameters.ResetParameters();
                 C300M_3Parameters.ResetParameters();
                 C300M_4Parameters.ResetParameters();
+                C300M_1Parameters.RefreshIndicators();
                 C300M_2Parameters.RefreshIndicators();
                 C300M_3Parameters.RefreshIndicators();
                 C300M_4Parameters.RefreshIndicators();
