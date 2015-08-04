@@ -1,6 +1,5 @@
 ﻿namespace R440O.R440OForms.VoltageStabilizer
 {
-    using System.Drawing;
     using System.Windows.Forms;
     using ThirdParty;
 
@@ -15,9 +14,8 @@
         public VoltageStabilizerForm()
         {
             InitializeComponent();
-            InitializeTogglePosition();
-            InitializeLamps();
             VoltageStabilizerParameters.RefreshForm += RefreshForm;
+            RefreshForm();
         }
 
         #region Обработка действий пользователя
@@ -33,17 +31,11 @@
             switch (VoltageStabilizerParameters.КабельВход)
             {
                 case 0:
-                    КабельВход1.BackgroundImage = ControlElementImages.voltageStabilizerInput;
+                case 380:
                     VoltageStabilizerParameters.КабельВход = 220;
                     break;
                 case 220:
-                    КабельВход1.BackgroundImage = null;
                     VoltageStabilizerParameters.КабельВход = 0;
-                    break;
-                case 380:
-                    КабельВход1.BackgroundImage = ControlElementImages.voltageStabilizerInput;
-                    КабельВход2.BackgroundImage = null;
-                    VoltageStabilizerParameters.КабельВход = 220;
                     break;
             }
         }
@@ -59,17 +51,9 @@
             switch (VoltageStabilizerParameters.КабельВход)
             {
                 case 0:
-                    КабельВход2.BackgroundImage = ControlElementImages.voltageStabilizerInput;
-                    VoltageStabilizerParameters.КабельВход = 380;
+                case 220: VoltageStabilizerParameters.КабельВход = 380;
                     break;
-                case 220:
-                    КабельВход1.BackgroundImage = null;
-                    КабельВход2.BackgroundImage = ControlElementImages.voltageStabilizerInput;
-                    VoltageStabilizerParameters.КабельВход = 380;
-                    break;
-                case 380:
-                    КабельВход2.BackgroundImage = null;
-                    VoltageStabilizerParameters.КабельВход = 0;
+                case 380: VoltageStabilizerParameters.КабельВход = 0;
                     break;
             }
         }
@@ -79,30 +63,13 @@
         /// </summary>
         private void ПереключательКонтрольНапр_MouseUp(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                VoltageStabilizerParameters.ПереключательКонтрольНапр += 1;
-            }
-
-            if (e.Button == MouseButtons.Right)
-            {
-                VoltageStabilizerParameters.ПереключательКонтрольНапр -= 1;
-            }
-
-            var angle = VoltageStabilizerParameters.ПереключательКонтрольНапр * 30 - 195;
-            ПереключательКонтрольНапр.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
+            if (e.Button == MouseButtons.Left) VoltageStabilizerParameters.ПереключательКонтрольНапр += 1;
+            if (e.Button == MouseButtons.Right) VoltageStabilizerParameters.ПереключательКонтрольНапр -= 1;
         }
 
         #endregion
 
-        #region Иницилизация ламп и переключателя
-
-        /// <summary>
-        /// Инициализация начальных положений переключателей, а также
-        /// восстановление положений при повторном открытии формы
-        /// </summary>
-        private void InitializeTogglePosition()
+        private void RefreshForm()
         {
             switch (VoltageStabilizerParameters.КабельВход)
             {
@@ -122,24 +89,8 @@
             var angle = VoltageStabilizerParameters.ПереключательКонтрольНапр * 30 - 195;
             ПереключательКонтрольНапр.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
-        }
-
-        private void InitializeLamps()
-        {
-            ЛампочкаСетьВкл.BackgroundImage = VoltageStabilizerParameters.ЛампочкаСетьВкл
-                ? ControlElementImages.lampType10OnGreen
-                : null;
-
-            ЛампочкаАвария.BackgroundImage = VoltageStabilizerParameters.ЛампочкаАвария
-                ? ControlElementImages.lampType6OnRed
-                : null;
-        }
-
-        #endregion
-
-        private void RefreshForm()
-        {
             ИндикаторНапряжения.Invalidate();
+
             ЛампочкаСетьВкл.BackgroundImage = VoltageStabilizerParameters.ЛампочкаСетьВкл
                 ? ControlElementImages.lampType13OnGreen
                 : null;
