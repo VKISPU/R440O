@@ -86,6 +86,7 @@ namespace R440O.R440OForms.N502B
                 C300M_2Parameters.ResetParameters();
                 C300M_3Parameters.ResetParameters();
                 C300M_4Parameters.ResetParameters();
+                C300M_1Parameters.RefreshIndicators();
                 C300M_2Parameters.RefreshIndicators();
                 C300M_3Parameters.RefreshIndicators();
                 C300M_4Parameters.RefreshIndicators();
@@ -119,11 +120,14 @@ namespace R440O.R440OForms.N502B
                 C300M_4Parameters.ResetParameters();
 
                 A304Parameters.ResetParameters();
+
+                if (RefreshForm != null)
+                    RefreshForm();
             }
         }
 
         private static bool _тумблерН15;
-        public static bool ТумблерН15 
+        public static bool ТумблерН15
         {
             get { return _тумблерН15; }
             set
@@ -142,26 +146,78 @@ namespace R440O.R440OForms.N502B
                 C300M_4Parameters.ResetParameters();
 
                 A304Parameters.ResetParameters();
+
+                if (RefreshForm != null)
+                    RefreshForm();
             }
         }
 
-        public static bool ТумблерОсвещение = false;
-        public static bool ТумблерН131 = false;
-        public static bool ТумблерН132 = false;
-        
+        private static bool _тумблерОсвещение = false;
+        private static bool _тумблерН131 = false;
+        private static bool _тумблерН132 = false;
+        private static int _тумблерОсвещение1 = 2;
+        private static int _тумблерОсвещение2 = 2;
+
+        public static bool ТумблерОсвещение
+        {
+            get { return _тумблерОсвещение; }
+            set
+            {
+                _тумблерОсвещение = value;
+                if (RefreshForm != null)
+                    RefreshForm();
+            }
+        }
+
+        public static bool ТумблерН131
+        {
+            get { return _тумблерН131; }
+            set
+            {
+                _тумблерН131 = value;
+                if (RefreshForm != null)
+                    RefreshForm();
+            }
+        }
+
+        public static bool ТумблерН132
+        {
+            get { return _тумблерН132; }
+            set
+            {
+                _тумблерН132 = value;
+                if (RefreshForm != null)
+                    RefreshForm();
+            }
+        }
 
         /// <summary>
-        /// Тип: string
         /// Возможные состояния: 1 - Полное, 2 - Откл, 3- Дежурное
         /// </summary>
-        public static int ТумблерОсвещение1 = 2;
+        public static int ТумблерОсвещение1
+        {
+            get { return _тумблерОсвещение1; }
+            set
+            {
+                _тумблерОсвещение1 = value;
+                if (RefreshForm != null)
+                    RefreshForm();
+            }
+        }
 
         /// <summary>
-        /// Тип: string
         /// Возможные состояния: 1- Полное, 2- Откл, 3- Частичное
         /// </summary>
-        public static int ТумблерОсвещение2 = 2;
-
+        public static int ТумблерОсвещение2
+        {
+            get { return _тумблерОсвещение2; }
+            set
+            {
+                _тумблерОсвещение2 = value;
+                if (RefreshForm != null)
+                    RefreshForm();
+            }
+        }
         #endregion
 
         #region Переключатели
@@ -175,6 +231,8 @@ namespace R440O.R440OForms.N502B
                 _переключательСеть = value;
                 ResetParameters();
                 VoltageStabilizerParameters.ResetParameters();
+                if (RefreshForm != null)
+                    RefreshForm();
             }
         }
 
@@ -184,7 +242,7 @@ namespace R440O.R440OForms.N502B
             get { return _переключательНапряжение; }
             set
             {
-                if (value > 0 && value < 7) 
+                if (value > 0 && value < 7)
                     _переключательНапряжение = value;
                 if (RefreshForm != null)
                     RefreshForm();
@@ -199,6 +257,8 @@ namespace R440O.R440OForms.N502B
             {
                 if (value >= 0 && value <= 5) _переключательФазировка = value;
                 ResetParameters();
+                if (RefreshForm != null)
+                    RefreshForm();
             }
         }
 
@@ -211,6 +271,7 @@ namespace R440O.R440OForms.N502B
                 if (value > 0 && value < 4) _переключательКонтрольНапряжения = value;
                 if (RefreshForm != null)
                     RefreshForm();
+
             }
         }
 
@@ -317,7 +378,7 @@ namespace R440O.R440OForms.N502B
                     }
                     return ПереключательТокНагрузкиИЗаряда * 10 - 10;
                 }
-                    
+
                 return 0;
             }
         }
@@ -330,7 +391,7 @@ namespace R440O.R440OForms.N502B
                 {
                     return ПереключательТокНагрузкиИЗаряда * 5;
                 }
-                    
+
                 return 0;
             }
         }

@@ -18,14 +18,11 @@ namespace R440O.R440OForms.N502B
         public N502BForm()
         {
             InitializeComponent();
-            InitializeLamps();
-            InitializeTumblersPosition();
-            InitializeTogglesPosition();
-            N502BParameters.RefreshForm += InitializeLamps;
+            N502BParameters.RefreshForm += RefreshForm;
             N502BParameters.RefreshForm += ИндикаторНапряжение.Invalidate;
             N502BParameters.RefreshForm += ИндикаторКонтрольНапряжения.Invalidate;
             N502BParameters.RefreshForm += ИндикаторТокНагрузкиИЗаряда.Invalidate;
-
+            RefreshForm();
         }
 
         #region Тумблеры
@@ -33,49 +30,31 @@ namespace R440O.R440OForms.N502B
         private void ТумблерЭлектрооборудование_Click(object sender, System.EventArgs e)
         {
             N502BParameters.ТумблерЭлектрооборудование = !N502BParameters.ТумблерЭлектрооборудование;
-            ТумблерЭлектрооборудование.BackgroundImage = N502BParameters.ТумблерЭлектрооборудование
-                ? ControlElementImages.tumblerType2Up
-                : ControlElementImages.tumblerType2Down;
         }
 
         private void ТумблерВыпрямитель27В_Click(object sender, System.EventArgs e)
         {
             N502BParameters.ТумблерВыпрямитель27В = !N502BParameters.ТумблерВыпрямитель27В;
-            ТумблерВыпрямитель27В.BackgroundImage = N502BParameters.ТумблерВыпрямитель27В
-                ? ControlElementImages.tumblerType2Up
-                : ControlElementImages.tumblerType2Down;
         }
 
         private void ТумблерОсвещение_Click(object sender, System.EventArgs e)
         {
             N502BParameters.ТумблерОсвещение = !N502BParameters.ТумблерОсвещение;
-            ТумблерОсвещение.BackgroundImage = N502BParameters.ТумблерОсвещение
-                ? ControlElementImages.tumblerType2Up
-                : ControlElementImages.tumblerType2Down;
         }
 
         private void ТумблерН131_Click(object sender, System.EventArgs e)
         {
             N502BParameters.ТумблерН131 = !N502BParameters.ТумблерН131;
-            ТумблерН131.BackgroundImage = N502BParameters.ТумблерН131
-                ? ControlElementImages.tumblerType2Up
-                : ControlElementImages.tumblerType2Down;
         }
 
         private void ТумблерН132_Click(object sender, System.EventArgs e)
         {
             N502BParameters.ТумблерН132 = !N502BParameters.ТумблерН132;
-            ТумблерН132.BackgroundImage = N502BParameters.ТумблерН132
-                ? ControlElementImages.tumblerType2Up
-                : ControlElementImages.tumblerType2Down;
         }
 
         private void ТумблерН15_Click(object sender, System.EventArgs e)
         {
             N502BParameters.ТумблерН15 = !N502BParameters.ТумблерН15;
-            ТумблерН15.BackgroundImage = N502BParameters.ТумблерН15
-                ? ControlElementImages.tumblerType2Up
-                : ControlElementImages.tumblerType2Down;
         }
 
         private void ТумблерОсвещение1_MouseDown(object sender, MouseEventArgs e)
@@ -86,11 +65,9 @@ namespace R440O.R440OForms.N502B
                     switch (N502BParameters.ТумблерОсвещение1)
                     {
                         case 1:
-                            ТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerType5Middle;
                             N502BParameters.ТумблерОсвещение1 = 2;
                             break;
                         case 2:
-                            ТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerType5Down;
                             N502BParameters.ТумблерОсвещение1 = 3;
                             break;
                     }
@@ -99,11 +76,9 @@ namespace R440O.R440OForms.N502B
                     switch (N502BParameters.ТумблерОсвещение1)
                     {
                         case 3:
-                            ТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerType5Middle;
                             N502BParameters.ТумблерОсвещение1 = 2;
                             break;
                         case 2:
-                            ТумблерОсвещение1.BackgroundImage = ControlElementImages.tumblerType5Up;
                             N502BParameters.ТумблерОсвещение1 = 1;
                             break;
                     }
@@ -119,11 +94,9 @@ namespace R440O.R440OForms.N502B
                     switch (N502BParameters.ТумблерОсвещение2)
                     {
                         case 1:
-                            ТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerType5Middle;
                             N502BParameters.ТумблерОсвещение2 = 2;
                             break;
                         case 2:
-                            ТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerType5Down;
                             N502BParameters.ТумблерОсвещение2 = 3;
                             break;
                     }
@@ -132,11 +105,9 @@ namespace R440O.R440OForms.N502B
                     switch (N502BParameters.ТумблерОсвещение2)
                     {
                         case 3:
-                            ТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerType5Middle;
                             N502BParameters.ТумблерОсвещение2 = 2;
                             break;
                         case 2:
-                            ТумблерОсвещение2.BackgroundImage = ControlElementImages.tumblerType5Up;
                             N502BParameters.ТумблерОсвещение2 = 1;
                             break;
                     }
@@ -265,69 +236,16 @@ namespace R440O.R440OForms.N502B
 
         #endregion
 
-        private void DrawLine(Graphics g, int x1, int y1, int x2, int y2)
+        #region Обновление формы
+
+        private void RefreshForm()
         {
-            var point1 = new Point(x1, y1);
-            var point2 = new Point(x2, y2);
-            var myPen = new Pen(Color.Black, 5);
-            g.DrawLine(myPen, point1, point2);
+            this.RefreshLamps();
+            this.RefreshTogglesPosition();
+            this.RefreshTumblersPosition();
         }
 
-        #region Отрисовка индикатора напряжения
-        private void ИндикаторНапряжение_Paint(object sender, PaintEventArgs e)
-        {
-            switch (N502BParameters.ИндикаторНапряжение)
-            {
-                case 0:
-                    DrawLine(e.Graphics, 10, 40, 45, 55);
-                    break;
-                case 220:
-                    DrawLine(e.Graphics, 20, 20, 45, 55);
-                    break;
-                case 380:
-                    DrawLine(e.Graphics, 60, 20, 45, 55);
-                    break;
-            }
-        }
-        #endregion
-
-        private void ИндикаторКонтрольНапряжения_Paint(object sender, PaintEventArgs e)
-        {
-            switch (N502BParameters.ИндикаторКонтрольНапряжения)
-            {
-                case 0:
-                    DrawLine(e.Graphics, 0, 40, 45, 70);
-                    break;
-                case 10:
-                    DrawLine(e.Graphics, 10, 35, 45, 70);
-                    break;
-                case 20:
-                    DrawLine(e.Graphics, 20, 30, 45, 70);
-                    break;
-                case 30:
-                    DrawLine(e.Graphics, 30, 25, 45, 70);
-                    break;
-                case 40:
-                    DrawLine(e.Graphics, 40, 20, 45, 70);
-                    break;
-                case 50:
-                    DrawLine(e.Graphics, 50, 25, 45, 70);
-                    break;
-                case 60:
-                    DrawLine(e.Graphics, 60, 25, 45, 70);
-                    break;
-                case 70:
-                    DrawLine(e.Graphics, 70, 30, 45, 70);
-                    break;
-                case 80:
-                    DrawLine(e.Graphics, 80, 35, 45, 70);
-                    break;
-            }
-        }
-
-        #region Инициализация
-
-        private void InitializeTumblersPosition()
+        private void RefreshTumblersPosition()
         {
             ТумблерЭлектрооборудование.BackgroundImage = N502BParameters.ТумблерЭлектрооборудование ?
                 ControlElementImages.tumblerType2Up : ControlElementImages.tumblerType2Down;
@@ -374,7 +292,7 @@ namespace R440O.R440OForms.N502B
             }
         }
 
-        private void InitializeTogglesPosition()
+        private void RefreshTogglesPosition()
         {
             ПереключательСеть.BackgroundImage = N502BParameters.ПереключательСеть
                 ? ControlElementImages.tumblerN502BPowerUp
@@ -398,7 +316,7 @@ namespace R440O.R440OForms.N502B
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType4, angle);
         }
 
-        private void InitializeLamps()
+        private void RefreshLamps()
         {
             ЛампочкаСеть.BackgroundImage = N502BParameters.ЛампочкаСеть
                 ? ControlElementImages.lampType12OnRed
@@ -411,6 +329,65 @@ namespace R440O.R440OForms.N502B
 
         #endregion
 
+        private void DrawLine(Graphics g, int x1, int y1, int x2, int y2)
+        {
+            var point1 = new Point(x1, y1);
+            var point2 = new Point(x2, y2);
+            var myPen = new Pen(Color.Black, 5);
+            g.DrawLine(myPen, point1, point2);
+        }
+
+        #region Отрисовка индикаторов
+        private void ИндикаторНапряжение_Paint(object sender, PaintEventArgs e)
+        {
+            switch (N502BParameters.ИндикаторНапряжение)
+            {
+                case 0:
+                    DrawLine(e.Graphics, 10, 40, 45, 55);
+                    break;
+                case 220:
+                    DrawLine(e.Graphics, 20, 20, 45, 55);
+                    break;
+                case 380:
+                    DrawLine(e.Graphics, 60, 20, 45, 55);
+                    break;
+            }
+        }
+
+        private void ИндикаторКонтрольНапряжения_Paint(object sender, PaintEventArgs e)
+        {
+            switch (N502BParameters.ИндикаторКонтрольНапряжения)
+            {
+                case 0:
+                    DrawLine(e.Graphics, 0, 40, 45, 70);
+                    break;
+                case 10:
+                    DrawLine(e.Graphics, 10, 35, 45, 70);
+                    break;
+                case 20:
+                    DrawLine(e.Graphics, 20, 30, 45, 70);
+                    break;
+                case 30:
+                    DrawLine(e.Graphics, 30, 25, 45, 70);
+                    break;
+                case 40:
+                    DrawLine(e.Graphics, 40, 20, 45, 70);
+                    break;
+                case 50:
+                    DrawLine(e.Graphics, 50, 25, 45, 70);
+                    break;
+                case 60:
+                    DrawLine(e.Graphics, 60, 25, 45, 70);
+                    break;
+                case 70:
+                    DrawLine(e.Graphics, 70, 30, 45, 70);
+                    break;
+                case 80:
+                    DrawLine(e.Graphics, 80, 35, 45, 70);
+                    break;
+            }
+        }
+
         private void ИндикаторТокНагрузкиИЗаряда_Paint(object sender, PaintEventArgs e)
         {
             if (N502BParameters.ПереключательТокНагрузкиИЗаряда < 5)
@@ -422,10 +399,6 @@ namespace R440O.R440OForms.N502B
                 DrawLine(e.Graphics, N502BParameters.ИндикаторТокНагрузкиИЗаряда, 40 - N502BParameters.ИндикаторТокНагрузкиИЗаряда / 2, 45, 70);
             }
         }
-
-
-
-
-
+        #endregion
     }
 }
