@@ -23,13 +23,7 @@ namespace R440O.R440OForms.C300M_1
         {
             InitializeComponent();
             C300M_1Parameters.RefreshForm += RefreshForm;
-
             RefreshForm();
-        }
-
-        private void timerSearch_Tick(object sender, EventArgs e)
-        {
-
         }
 
         #region Кнопки ВИД РАБОТЫ
@@ -61,7 +55,6 @@ namespace R440O.R440OForms.C300M_1
         #endregion
 
         #region Кнопки КОНТРОЛЬ РЕЖИМА
-
         private void КнопкаКонтрольРежима_Click(object sender, System.EventArgs e)
         {
             var button = sender as Button;
@@ -188,7 +181,6 @@ namespace R440O.R440OForms.C300M_1
         #endregion
 
         #region Инициализация
-
         private void RefreshForm()
         {
             var angle = C300M_1Parameters.ИндикаторСигнал * 1.15F;
@@ -362,7 +354,6 @@ namespace R440O.R440OForms.C300M_1
             КнопкаПоиск.Text = "";
             C300M_1Parameters.КнопкаПоиск = true;
         }
-        #endregion
 
         private void КнопкаПоиск_MouseUp(object sender, MouseEventArgs e)
         {
@@ -370,5 +361,6 @@ namespace R440O.R440OForms.C300M_1
             КнопкаПоиск.Text = "ВКЛ";
             C300M_1Parameters.КнопкаПоиск = false;
         }
+        #endregion
     }
 }

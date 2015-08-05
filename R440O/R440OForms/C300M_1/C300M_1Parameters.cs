@@ -2,18 +2,12 @@
 using R440O.R440OForms.N15;
 using R440O.R440OForms.C300PM_1;
 using R440O.R440OForms.N502B;
+using System.Windows.Forms;
 
 namespace R440O.R440OForms.C300M_1
 {
     class C300M_1Parameters
     {
-        #region Таймер
-        public static bool TimerOn = false;
-        public static bool OnLeft = false;
-        #endregion
-
-        static System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
-
         #region Кнопки ВИД РАБОТЫ
         /// <summary>
         /// Названия кнопок:
@@ -39,7 +33,7 @@ namespace R440O.R440OForms.C300M_1
                     КнопкиВидРаботы[i] = false;
                 КнопкиВидРаботы[_кнопкаВидРаботы] = true;
 
-                TimerSet();
+                SetArrowIndicatorSpeed();
                 RefreshForm();
             }
         }
@@ -91,6 +85,7 @@ namespace R440O.R440OForms.C300M_1
                     КнопкиКонтрольРежима[i] = false;
                 КнопкиКонтрольРежима[_кнопкаКонтрольРежима] = true;
 
+                Search();
                 RefreshForm();
             }
         }
@@ -108,7 +103,7 @@ namespace R440O.R440OForms.C300M_1
                 _кнопкаКонтрольРежимаМинус27 = value;
                 for (int i = 0; i < КнопкиКонтрольРежима.Length; i++)
                     КнопкиКонтрольРежима[i] = false;
-
+                Search();
                 RefreshForm();
             }
         }
@@ -160,7 +155,7 @@ namespace R440O.R440OForms.C300M_1
             set
             {
                 _кнопкаПоиск = value;
-                if (value) Search();
+                Search();
             }
         }
         private static bool _кнопкаПоиск;
@@ -337,7 +332,7 @@ namespace R440O.R440OForms.C300M_1
                 _лампочкаПитание = value;
                 C300PM_1Parameters.ResetParameters();
                 if (!value)
-                if (RefreshForm != null) RefreshForm();
+                    if (RefreshForm != null) RefreshForm();
             }
         }
 
@@ -354,70 +349,69 @@ namespace R440O.R440OForms.C300M_1
         #endregion
 
         #region Индикатор
-        private static float _индикаторСигнал = 0;
+        private static float _ИндикаторСигнал = 0;
         public static float ИндикаторСигнал
         {
             get
             {
-                Search();
                 if (N502BParameters.ТумблерВыпрямитель27В && N502BParameters.ЛампочкаСфазировано && N502BParameters.ТумблерЭлектрооборудование)
                     if (N502BParameters.ТумблерН15)
                     {
                         if (ЛампочкаПитание)
                         {
-                            if (timer.Enabled) return _индикаторСигнал;
+                            if (timer.Enabled) return _ИндикаторСигнал;
                             else
-                            switch (Array.IndexOf(КнопкиКонтрольРежима, true))
-                            {
-                                case 0:
-                                    return (ЛампочкаСигнал)
-                                        ? _индикаторСигнал = 50
-                                        : _индикаторСигнал = 0;
-                                case 1:
-                                    if (ТумблерРегулировкаУровня)
-                                        return (Array.IndexOf(КнопкиВидРаботы, true) == -1)
-                                            ? _индикаторСигнал = 50
-                                            : _индикаторСигнал = 30;
-                                    else
-                                        return (Array.IndexOf(КнопкиВидРаботы, true) == -1)
-                                           ? _индикаторСигнал = 30
-                                           : _индикаторСигнал = 50;
-                                case 2:
-                                    return _индикаторСигнал = 0;
-                                case 3:
-                                    return _индикаторСигнал;
-                                case 4:
-                                    return _индикаторСигнал = 30;
-                                case 5:
-                                case 6:
-                                case 7:
-                                    return _индикаторСигнал = 41;
-                                case 8:
-                                case 9:
-                                    return _индикаторСигнал = -43;
-                                default:
-                                    return КнопкаКонтрольРежимаМинус27
-                                        ? _индикаторСигнал = -43
-                                        : _индикаторСигнал = 0;
-                            }
+                                switch (Array.IndexOf(КнопкиКонтрольРежима, true))
+                                {
+                                    case 0:
+                                        return (ЛампочкаСигнал)
+                                            ? _ИндикаторСигнал = 50
+                                            : _ИндикаторСигнал = 0;
+                                    case 1:
+                                        if (ТумблерРегулировкаУровня)
+                                            return (Array.IndexOf(КнопкиВидРаботы, true) == -1)
+                                                ? _ИндикаторСигнал = 50
+                                                : _ИндикаторСигнал = 30;
+                                        else
+                                            return (Array.IndexOf(КнопкиВидРаботы, true) == -1)
+                                               ? _ИндикаторСигнал = 30
+                                               : _ИндикаторСигнал = 50;
+                                    case 2:
+                                        return _ИндикаторСигнал = 0;
+                                    case 3:
+                                        return _ИндикаторСигнал;
+                                    case 4:
+                                        return _ИндикаторСигнал = 30;
+                                    case 5:
+                                    case 6:
+                                    case 7:
+                                        return _ИндикаторСигнал = 41;
+                                    case 8:
+                                    case 9:
+                                        return _ИндикаторСигнал = -43;
+                                    default:
+                                        return КнопкаКонтрольРежимаМинус27
+                                            ? _ИндикаторСигнал = -43
+                                            : _ИндикаторСигнал = 0;
+                                }
                         }
                         else
                         {
                             return КнопкиКонтрольРежима[7]
-                                ? _индикаторСигнал = 41
-                                : _индикаторСигнал = 0;
+                                ? _ИндикаторСигнал = 41
+                                : _ИндикаторСигнал = 0;
                         }
                     }
                     else
                     {
-                        return _индикаторСигнал = 0;
+                        return _ИндикаторСигнал = 0;
                     }
 
-                return _индикаторСигнал;
+                return _ИндикаторСигнал;
             }
             set
             {
-                if (value >= -51 && value <= 51) _индикаторСигнал = value;
+                if (value >= -51 && value <= 51) _ИндикаторСигнал = value;
                 if (RefreshForm != null) RefreshForm();
             }
         }
@@ -436,7 +430,6 @@ namespace R440O.R440OForms.C300M_1
 
         public static void RefreshIndicators()
         {
-            Search();
             if (N502BParameters.ТумблерВыпрямитель27В && N502BParameters.ЛампочкаСфазировано && N502BParameters.ТумблерЭлектрооборудование)
                 if (N502BParameters.ТумблерН15)
                 {
@@ -445,24 +438,16 @@ namespace R440O.R440OForms.C300M_1
                         switch (Array.IndexOf(КнопкиКонтрольРежима, true))
                         {
                             case 0:
-                                ИндикаторСигнал = (ЛампочкаСигнал)
-                                    ? 50
-                                    : 0;
+                                ИндикаторСигнал = (ЛампочкаСигнал) ? 50 : 0;
                                 break;
                             case 1:
                                 if (ТумблерРегулировкаУровня)
-                                    ИндикаторСигнал = (Array.IndexOf(КнопкиВидРаботы, true) == -1)
-                                        ? 50
-                                        : 30;
+                                    ИндикаторСигнал = (Array.IndexOf(КнопкиВидРаботы, true) == -1) ? 50 : 30;
                                 else
-                                    ИндикаторСигнал = (Array.IndexOf(КнопкиВидРаботы, true) == -1)
-                                       ? 30
-                                       : 50;
+                                    ИндикаторСигнал = (Array.IndexOf(КнопкиВидРаботы, true) == -1) ? 30 : 50;
                                 break;
                             case 2:
                                 ИндикаторСигнал = 0;
-                                break;
-                            case 3:
                                 break;
                             case 4:
                                 ИндикаторСигнал = 30;
@@ -477,17 +462,13 @@ namespace R440O.R440OForms.C300M_1
                                 ИндикаторСигнал = -43;
                                 break;
                             default:
-                                ИндикаторСигнал = (КнопкаКонтрольРежимаМинус27)
-                                    ? -43
-                                    : 0;
+                                ИндикаторСигнал = (КнопкаКонтрольРежимаМинус27) ? -43 : 0;
                                 break;
                         }
                     }
                     else
                     {
-                        ИндикаторСигнал = (КнопкиКонтрольРежима[7])
-                        ? 41
-                        : 0;
+                        ИндикаторСигнал = (КнопкиКонтрольРежима[7]) ? 41 : 0;
                     }
                 }
                 else
@@ -499,45 +480,49 @@ namespace R440O.R440OForms.C300M_1
             if (RefreshForm != null) RefreshForm();
         }
 
+        #region Таймер
+        //Инициализация таймера
+        private static Timer timer = new Timer();
+        private static bool СтрелкаДвижетсяНалево = false;
+        
+        //Поиск значения индикатора (Движение стрелки)
         [STAThread]
         private static void Search()
         {
-            timer.Tick -= timer_Tick;
+            //Полная остановка таймера с отпиской метода установки условий поиска
+            timer.Tick -= SetSearchConditions;
             timer.Stop();
+            timer.Enabled = false;
+
             if (ЛампочкаПитание && ((Array.IndexOf(КнопкиКонтрольРежима, true) == 3) || (КнопкаПоиск)))
             {
                 if (!ТумблерБлокировка)
                 {
                     timer.Enabled = true;
-                    TimerSet();
-                    timer.Tick += timer_Tick;
+                    SetArrowIndicatorSpeed();
+                    timer.Tick += SetSearchConditions;
                     timer.Start();
-                }
-                else timer.Enabled = false;
+                }                
             }
-            else timer.Enabled = false;
         }
 
-        static void timer_Tick(object sender, EventArgs e)
+        //Установка условий поиска
+        static void SetSearchConditions(object sender, EventArgs e)
         {
-            int Predel1 = (ТумблерПределы)
-               ? -35
-               : -50;
-            int Predel2 = (ТумблерПределы)
-               ? -20
-               : 50;
+            int ЛеваяГраница = (ТумблерПределы) ? -35 : -50;
+            int ПраваяГраница = (ТумблерПределы) ? -20 : 50;
 
-            if (OnLeft)
+            if (СтрелкаДвижетсяНалево)
             {
                 ИндикаторСигнал -= 0.3F;
-                if (ИндикаторСигнал < Predel1)
-                    OnLeft = false;
+                if (ИндикаторСигнал < ЛеваяГраница)
+                    СтрелкаДвижетсяНалево = false;
             }
             else
             {
                 ИндикаторСигнал += 0.3F;
-                if (ИндикаторСигнал > Predel2)
-                    OnLeft = true;
+                if (ИндикаторСигнал > ПраваяГраница)
+                    СтрелкаДвижетсяНалево = true;               
             }
 
             //***Условие на поиск сигнала***//
@@ -545,17 +530,17 @@ namespace R440O.R440OForms.C300M_1
         }
 
 
-        //Изменение скорости работы таймера
-        static void TimerSet()
+        //Изменение скорости движения стрелки индикатора
+        static void SetArrowIndicatorSpeed()
         {
-            if(timer.Enabled)
+            if (timer.Enabled)
             {
                 if (Array.IndexOf(КнопкиВидРаботы, true) == -1)
                     timer.Interval = 10;
                 else timer.Interval = 100 - Array.IndexOf(КнопкиВидРаботы, true) * 10;
             }
         }
-
+        #endregion
 
         public delegate void VoidVoidSignature();
         public static event VoidVoidSignature RefreshForm;
