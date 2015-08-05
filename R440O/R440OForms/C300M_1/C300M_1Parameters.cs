@@ -33,9 +33,11 @@ namespace R440O.R440OForms.C300M_1
                 for (int i = 0; i < КнопкиВидРаботы.Length; i++)
                     КнопкиВидРаботы[i] = false;
                 КнопкиВидРаботы[_кнопкаВидРаботы] = true;
-
-                SetArrowIndicatorSpeed();
-                Search();
+                if (!ЛампочкаСигнал)
+                {
+                    SetArrowIndicatorSpeed();
+                    Search();
+                }
                 if (RefreshForm != null) RefreshForm();
             }
         }
