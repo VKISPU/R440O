@@ -20,5 +20,10 @@
         /// </summary>
         public double Speed;
 
+        /// <summary>
+        /// Уровень передачи сигнала.
+        /// </summary>
+        public double Level;
+
     }
 }

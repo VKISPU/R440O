@@ -6,8 +6,6 @@
 
 using System;
 using System.Linq;
-using System.Reflection;
-using System.Runtime.InteropServices;
 using R440O.Parameters;
 using R440O.ThirdParty;
 
@@ -20,6 +18,7 @@ namespace R440O.R440OForms.C1_67
     /// </summary>
     public partial class C1_67Form : Form
     {
+        #region Инициализация формы
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="C1_67Form"/>
         /// </summary>
@@ -103,6 +102,30 @@ namespace R440O.R440OForms.C1_67
 
         }
 
+        private void InitializeTumblersPosition()
+        {
+            this.C1_67_N19ТумблерВклВыкл.BackgroundImage = C1_67Parameters.C1_67_N19ТумблерВклВыкл == false
+                ? ControlElementImages.tumblerType4Down
+                : ControlElementImages.tumblerType4Up;
+
+            this.C1_67_N19Тумблер200_20.BackgroundImage = C1_67Parameters.C1_67_N19Тумблер200_20 == "20"
+                ? ControlElementImages.tumblerType4Down
+                : ControlElementImages.tumblerType4Up;
+
+            this.C1_67ТумблерСеть.BackgroundImage = C1_67Parameters.C1_67ТумблерСеть == false
+                ? ControlElementImages.tumblerType4Down
+                : ControlElementImages.tumblerType4Up;
+
+            this.C1_67ТумблерX1X02.BackgroundImage = C1_67Parameters.C1_67ТумблерX1X02 == "X02"
+                ? ControlElementImages.tumblerType4Down
+                : ControlElementImages.tumblerType4Up;
+
+            this.C1_67Тумблер2kHz.BackgroundImage = C1_67Parameters.C1_67Тумблер2kHz == false
+                ? ControlElementImages.tumblerType4Left
+                : ControlElementImages.tumblerType4Right;
+        } 
+        #endregion
+
         #region Тумблеры
         private void C1_67_N19ТумблерВклВыкл_Click(object sender, System.EventArgs e)
         {
@@ -174,29 +197,6 @@ namespace R440O.R440OForms.C1_67
             }
         }
         #endregion
-
-        private void InitializeTumblersPosition()
-        {
-            this.C1_67_N19ТумблерВклВыкл.BackgroundImage = C1_67Parameters.C1_67_N19ТумблерВклВыкл == false
-                ? ControlElementImages.tumblerType4Down
-                : ControlElementImages.tumblerType4Up;
-
-            this.C1_67_N19Тумблер200_20.BackgroundImage = C1_67Parameters.C1_67_N19Тумблер200_20 == "20"
-                ? ControlElementImages.tumblerType4Down
-                : ControlElementImages.tumblerType4Up;
-
-            this.C1_67ТумблерСеть.BackgroundImage = C1_67Parameters.C1_67ТумблерСеть == false
-                ? ControlElementImages.tumblerType4Down
-                : ControlElementImages.tumblerType4Up;
-
-            this.C1_67ТумблерX1X02.BackgroundImage = C1_67Parameters.C1_67ТумблерX1X02 == "X02"
-                ? ControlElementImages.tumblerType4Down
-                : ControlElementImages.tumblerType4Up;
-
-            this.C1_67Тумблер2kHz.BackgroundImage = C1_67Parameters.C1_67Тумблер2kHz == false
-                ? ControlElementImages.tumblerType4Left
-                : ControlElementImages.tumblerType4Right;
-        }
 
         #region Переключатели
         private void C1_67_N19ПереключательВыборПриемника_MouseUp(object sender, MouseEventArgs e)
@@ -320,6 +320,7 @@ namespace R440O.R440OForms.C1_67
         }
         #endregion
 
+        #region Переключатели синхронизации
         private void C1_67ПереключательСинхронизация1_1_Click(object sender, EventArgs e)
         {
             if (C1_67Parameters.C1_67ПереключательСинхронизация1 != 1)
@@ -414,6 +415,7 @@ namespace R440O.R440OForms.C1_67
                 C1_67ПереключательСинхронизация2_1.BackgroundImage = null;
                 C1_67Parameters.C1_67ПереключательСинхронизация2 = 4;
             }
-        }
+        } 
+        #endregion
     }
 }

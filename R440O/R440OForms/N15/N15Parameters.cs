@@ -545,6 +545,7 @@ namespace R440O.R440OForms.N15
         private static bool _лампочкаДаб5;
         private static bool _лампочкаРН;
         private static bool _лампочкаА503Б;
+        private static double _регуляторУровень = -120;
 
 
         public static bool ЛампочкаН12С
@@ -715,6 +716,12 @@ namespace R440O.R440OForms.N15
         public static bool ЛампочкаЭкв { get; set; }
 
         #endregion
+
+        public static double РегуляторУровень
+        {
+            get { return _регуляторУровень; }
+            set { if (value > -120 && value < 120)_регуляторУровень = value; }
+        }
 
         public static void ResetParameters()
         {

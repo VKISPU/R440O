@@ -8,7 +8,9 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using R440O.InternalBlocks;
+using R440O.Parameters;
 using R440O.R440OForms.N15Inside;
+using R440O.ThirdParty;
 
 namespace R440O.R440OForms.N15
 {
@@ -37,6 +39,10 @@ namespace R440O.R440OForms.N15
             InitializeButtons();
             InitializeTumblers();
             InitializeLamps();
+
+            N15–егул€тор”ровень.BackgroundImage = TransformImageHelper.RotateImageByAngle(
+                    ControlElementImages.revolverRoundSmall,
+                    (float)N15Parameters.–егул€тор”ровень);
         }
 
         /// <summary>
@@ -429,6 +435,32 @@ namespace R440O.R440OForms.N15
         {
             this. нопка—брос.BackgroundImage = null;
             this. нопка—брос.Text = string.Empty;
+        }
+        #endregion
+
+        #region ¬ращатели
+
+        private static bool isManipulation;
+
+        private void N15–егул€тор_MouseDown(object sender, MouseEventArgs e)
+        {
+            isManipulation = true;
+        }
+
+        private void N15–егул€тор_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (!isManipulation) return;
+            var button = sender as Button;
+            var angle = TransformImageHelper.CalculateAngle(button.Width, button.Height, e);
+            N15Parameters.–егул€тор”ровень = angle;
+            button.BackgroundImage = TransformImageHelper.RotateImageByAngle(
+                    ControlElementImages.revolverRoundSmall,
+                    (float)N15Parameters.–егул€тор”ровень);
+        }
+
+        private void N15–егул€тор_MouseUp(object sender, MouseEventArgs e)
+        {
+            isManipulation = false;
         }
         #endregion
 
