@@ -1,4 +1,5 @@
-﻿using R440O.Parameters;
+﻿using R440O.InternalBlocks;
+using R440O.Parameters;
 using R440O.R440OForms.A205M_1;
 using R440O.R440OForms.A205M_2;
 using R440O.R440OForms.N18_M;
@@ -543,6 +544,7 @@ namespace R440O.R440OForms.N15
         private static bool _лампочкаБ32;
         private static bool _лампочкаДаб5;
         private static bool _лампочкаРН;
+        private static bool _лампочкаА503Б;
 
 
         public static bool ЛампочкаН12С
@@ -702,7 +704,13 @@ namespace R440O.R440OForms.N15
         public static bool ЛампочкаН13_2Неисправность { get; set; }
         public static bool Лампочка5мГц2 { get; set; }
         public static bool Лампочка5мГц3 { get; set; }
-        public static bool ЛампочкаА503Б { get; set; }
+
+        public static bool ЛампочкаА503Б
+        {
+            get { return _лампочкаА503Б; }
+            set { _лампочкаА503Б = value; }
+        }
+
         public static bool ЛампочкаАнт { get; set; }
         public static bool ЛампочкаЭкв { get; set; }
 

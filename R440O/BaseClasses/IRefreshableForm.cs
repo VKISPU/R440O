@@ -1,4 +1,4 @@
-﻿namespace R440O
+﻿namespace R440O.BaseClasses
 {
     public interface IRefreshableForm
     {

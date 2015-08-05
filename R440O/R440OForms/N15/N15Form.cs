@@ -7,6 +7,7 @@
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using R440O.InternalBlocks;
 using R440O.R440OForms.N15Inside;
 
 namespace R440O.R440OForms.N15
@@ -193,6 +194,7 @@ namespace R440O.R440OForms.N15
             this.КнопкаСтанцияВкл.BackgroundImage = ControlElementImages.buttonN15On;
             ResetCurrentParameters();
             N15Parameters.ResetParameters();
+            var d = MSHUParameters.ВыходнойСигнал;
         }
 
         private void Н15КнопкаСтанцияВыкл_MouseDown(object sender, MouseEventArgs e)

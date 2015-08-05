@@ -1,6 +1,7 @@
 ﻿namespace R440O.R440OForms.VoltageStabilizer
 {
     using System.Windows.Forms;
+    using BaseClasses;
     using ThirdParty;
 
     /// <summary>

@@ -63,6 +63,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ControlElementImages.resx</DependentUpon>
     </Compile>
+    <Compile Include="InternalBlocks\A503BParameters.cs" />
+    <Compile Include="InternalBlocks\MSHUParameters.cs" />
     <Compile Include="ParametersConfig.cs" />
     <Compile Include="R440OForms\A403_1\A403_1Parameters.cs" />
     <Compile Include="Parameters\B1_1Parameters.cs" />
@@ -525,7 +527,8 @@
     <Compile Include="R440OForms\C300PM_1\C300PM_1Form.Designer.cs">
       <DependentUpon>C300PM_1Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="IRefreshableForm.cs" />
+    <Compile Include="BaseClasses\IRefreshableForm.cs" />
+    <Compile Include="BaseClasses\SignalArgs.cs" />
     <Compile Include="ThirdParty\TransformImageHelper.cs" />
     <EmbeddedResource Include="BackgroundImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>

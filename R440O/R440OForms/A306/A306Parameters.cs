@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.Eventing.Reader;
 using R440O.R440OForms.N15;
 using R440O.R440OForms.N502B;
 
@@ -8,7 +6,7 @@ namespace R440O.Parameters
 {
     public class A306Parameters
     {
-        ////Лампочки
+        #region Лампочки
         private static bool _лампочкаСетьВкл = false;
         public static bool ЛампочкаСетьВкл
         {
@@ -40,9 +38,11 @@ namespace R440O.Parameters
                 _лампочкаНО2Вкл = value;
                 if (RefreshForm != null) RefreshForm();
             }
-        }
+        } 
+        #endregion
 
-        ////Тумблеры
+        #region Тумблеры
+
         /// <summary>
         /// Положение переключателя  определяющее тип питания блока. true - дистанционное, false - местное
         /// </summary>
@@ -71,8 +71,10 @@ namespace R440O.Parameters
                 if (RefreshForm != null) RefreshForm();
             }
         }
-        private static bool _тумблерВклВыкл;
+        private static bool _тумблерВклВыкл; 
+        #endregion
 
+        #region Коммутация
         public static bool ВходNO_1 = false;
         public static bool ВходNO_2 = false;
 
@@ -146,7 +148,8 @@ namespace R440O.Parameters
                     ResetParameters();
                 }
             }
-        }
+        } 
+        #endregion
 
         public delegate void VoidVoidSignature();
 
