@@ -61,8 +61,8 @@
             this.R440OButtonC1_67 = new System.Windows.Forms.Button();
             this.R440OButtonC300PM_3 = new System.Windows.Forms.Button();
             this.R440OButtonC300PM_2 = new System.Windows.Forms.Button();
-            this.R440OButtonPU_K1_2 = new System.Windows.Forms.Button();
             this.R440OButtonPU_K1_1 = new System.Windows.Forms.Button();
+            this.R440OButtonPU_K1_2 = new System.Windows.Forms.Button();
             this.R440OButtonRubin_N = new System.Windows.Forms.Button();
             this.R440OButtonVoltageStabilizer = new System.Windows.Forms.Button();
             this.R440OButtonP220_27G_3 = new System.Windows.Forms.Button();
@@ -127,8 +127,8 @@
             this.R440OPanel.Controls.Add(this.R440OButtonC1_67);
             this.R440OPanel.Controls.Add(this.R440OButtonC300PM_3);
             this.R440OPanel.Controls.Add(this.R440OButtonC300PM_2);
-            this.R440OPanel.Controls.Add(this.R440OButtonPU_K1_2);
             this.R440OPanel.Controls.Add(this.R440OButtonPU_K1_1);
+            this.R440OPanel.Controls.Add(this.R440OButtonPU_K1_2);
             this.R440OPanel.Controls.Add(this.R440OButtonRubin_N);
             this.R440OPanel.Controls.Add(this.R440OButtonVoltageStabilizer);
             this.R440OPanel.Controls.Add(this.R440OButtonP220_27G_3);
@@ -576,6 +576,7 @@
             this.R440OButtonA403_1.Name = "R440OButtonA403_1";
             this.R440OButtonA403_1.Size = new System.Drawing.Size(22, 57);
             this.R440OButtonA403_1.TabIndex = 31;
+            this.toolTip1.SetToolTip(this.R440OButtonA403_1, "А403-1");
             this.R440OButtonA403_1.UseVisualStyleBackColor = false;
             this.R440OButtonA403_1.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -590,7 +591,7 @@
             this.R440OButtonC1_67.Name = "R440OButtonC1_67";
             this.R440OButtonC1_67.Size = new System.Drawing.Size(56, 50);
             this.R440OButtonC1_67.TabIndex = 30;
-            this.toolTip1.SetToolTip(this.R440OButtonC1_67, "Ц1-67");
+            this.toolTip1.SetToolTip(this.R440OButtonC1_67, "С1-67");
             this.R440OButtonC1_67.UseVisualStyleBackColor = false;
             this.R440OButtonC1_67.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
@@ -624,21 +625,6 @@
             this.R440OButtonC300PM_2.UseVisualStyleBackColor = false;
             this.R440OButtonC300PM_2.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
-            // R440OButtonPU_K1_2
-            // 
-            this.R440OButtonPU_K1_2.BackColor = System.Drawing.Color.Transparent;
-            this.R440OButtonPU_K1_2.FlatAppearance.BorderSize = 0;
-            this.R440OButtonPU_K1_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.R440OButtonPU_K1_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.R440OButtonPU_K1_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.R440OButtonPU_K1_2.Location = new System.Drawing.Point(3, 25);
-            this.R440OButtonPU_K1_2.Name = "R440OButtonPU_K1_2";
-            this.R440OButtonPU_K1_2.Size = new System.Drawing.Size(82, 16);
-            this.R440OButtonPU_K1_2.TabIndex = 27;
-            this.toolTip1.SetToolTip(this.R440OButtonPU_K1_2, "ПУЛЬТ УПРАВЛЕНИЯ К1-2");
-            this.R440OButtonPU_K1_2.UseVisualStyleBackColor = false;
-            this.R440OButtonPU_K1_2.Click += new System.EventHandler(this.R440OButtonCommon_Click);
-            // 
             // R440OButtonPU_K1_1
             // 
             this.R440OButtonPU_K1_1.BackColor = System.Drawing.Color.Transparent;
@@ -646,13 +632,28 @@
             this.R440OButtonPU_K1_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.R440OButtonPU_K1_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.R440OButtonPU_K1_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.R440OButtonPU_K1_1.Location = new System.Drawing.Point(3, 203);
+            this.R440OButtonPU_K1_1.Location = new System.Drawing.Point(3, 25);
             this.R440OButtonPU_K1_1.Name = "R440OButtonPU_K1_1";
             this.R440OButtonPU_K1_1.Size = new System.Drawing.Size(82, 16);
-            this.R440OButtonPU_K1_1.TabIndex = 26;
+            this.R440OButtonPU_K1_1.TabIndex = 27;
             this.toolTip1.SetToolTip(this.R440OButtonPU_K1_1, "ПУЛЬТ УПРАВЛЕНИЯ К1-1");
             this.R440OButtonPU_K1_1.UseVisualStyleBackColor = false;
             this.R440OButtonPU_K1_1.Click += new System.EventHandler(this.R440OButtonCommon_Click);
+            // 
+            // R440OButtonPU_K1_2
+            // 
+            this.R440OButtonPU_K1_2.BackColor = System.Drawing.Color.Transparent;
+            this.R440OButtonPU_K1_2.FlatAppearance.BorderSize = 0;
+            this.R440OButtonPU_K1_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.R440OButtonPU_K1_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.R440OButtonPU_K1_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.R440OButtonPU_K1_2.Location = new System.Drawing.Point(3, 203);
+            this.R440OButtonPU_K1_2.Name = "R440OButtonPU_K1_2";
+            this.R440OButtonPU_K1_2.Size = new System.Drawing.Size(82, 16);
+            this.R440OButtonPU_K1_2.TabIndex = 26;
+            this.toolTip1.SetToolTip(this.R440OButtonPU_K1_2, "ПУЛЬТ УПРАВЛЕНИЯ К1-2");
+            this.R440OButtonPU_K1_2.UseVisualStyleBackColor = false;
+            this.R440OButtonPU_K1_2.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
             // R440OButtonRubin_N
             // 
@@ -1077,8 +1078,8 @@
         private System.Windows.Forms.Button R440OButtonP220_27G_3;
         private System.Windows.Forms.Button R440OButtonVoltageStabilizer;
         private System.Windows.Forms.Button R440OButtonRubin_N;
-        private System.Windows.Forms.Button R440OButtonPU_K1_1;
         private System.Windows.Forms.Button R440OButtonPU_K1_2;
+        private System.Windows.Forms.Button R440OButtonPU_K1_1;
         private System.Windows.Forms.Button R440OButtonC300PM_2;
         private System.Windows.Forms.Button R440OButtonC300PM_3;
         private System.Windows.Forms.Button R440OButtonC1_67;
