@@ -35,7 +35,8 @@ namespace R440O.R440OForms.C300M_1
                 КнопкиВидРаботы[_кнопкаВидРаботы] = true;
 
                 SetArrowIndicatorSpeed();
-                RefreshForm();
+                Search();
+                if (RefreshForm != null) RefreshForm();
             }
         }
 
@@ -53,8 +54,8 @@ namespace R440O.R440OForms.C300M_1
                 _кнопкаВидРаботыСброс = value;
                 for (int i = 0; i < КнопкиВидРаботы.Length; i++)
                     КнопкиВидРаботы[i] = false;
-
-                RefreshForm();
+                Search();
+                if (RefreshForm != null) RefreshForm();
             }
         }
         #endregion
@@ -85,7 +86,7 @@ namespace R440O.R440OForms.C300M_1
                 for (int i = 0; i < КнопкиКонтрольРежима.Length; i++)
                     КнопкиКонтрольРежима[i] = false;
                 КнопкиКонтрольРежима[_кнопкаКонтрольРежима] = true;
-
+                ЛампочкаСигнал = false;
                 Search();
                 RefreshForm();
             }
@@ -104,6 +105,7 @@ namespace R440O.R440OForms.C300M_1
                 _кнопкаКонтрольРежимаМинус27 = value;
                 for (int i = 0; i < КнопкиКонтрольРежима.Length; i++)
                     КнопкиКонтрольРежима[i] = false;
+                ЛампочкаСигнал = false;
                 Search();
                 RefreshForm();
             }
@@ -124,7 +126,8 @@ namespace R440O.R440OForms.C300M_1
                 if (value)
                 {
                     ResetParameters();
-                    RefreshForm();
+                    Search();
+                    if (RefreshForm != null) RefreshForm();
                 }
             }
         }
@@ -139,11 +142,8 @@ namespace R440O.R440OForms.C300M_1
             set
             {
                 _кнопкаПитаниеВыкл = value;
-                if (value)
-                {
-                    ResetParameters();
-                    RefreshForm();
-                }
+                ResetParameters();
+                RefreshForm();
             }
         }
         private static bool _кнопкаПитаниеВыкл;
@@ -156,6 +156,7 @@ namespace R440O.R440OForms.C300M_1
             set
             {
                 _кнопкаПоиск = value;
+                if (!value) ЛампочкаПоиск = false;
                 Search();
             }
         }
@@ -396,7 +397,10 @@ namespace R440O.R440OForms.C300M_1
                                                ? _ИндикаторСигнал = 30
                                                : _ИндикаторСигнал = 50;
                                     case 2:
-                                        return _ИндикаторСигнал = 0;
+                                        if (!ТумблерРегулировкаУровня)
+                                            return _ИндикаторСигнал = 50;
+                                        else
+                                            break;
                                     case 3:
                                         return _ИндикаторСигнал;
                                     case 4:
@@ -443,8 +447,7 @@ namespace R440O.R440OForms.C300M_1
                               && N502BParameters.ТумблерН15 &&
                               ((!ТумблерУправление && КнопкаПитаниеВкл) ||
                                (ТумблерУправление && N15Parameters.ТумблерЦ300М1));
-
-            ЛампочкаПоиск = ЛампочкаПитание && !ЛампочкаСигнал;
+            ЛампочкаСигнал = КнопкаПоиск && ЛампочкаПитание;
         }
 
         public static void RefreshIndicators()
@@ -515,7 +518,7 @@ namespace R440O.R440OForms.C300M_1
 
             if (ЛампочкаПитание && ((Array.IndexOf(КнопкиКонтрольРежима, true) == 3) || (КнопкаПоиск)))
             {
-                if (!ТумблерБлокировка)
+                if (!ТумблерБлокировка && Array.IndexOf(КнопкиВидРаботы, true) != -1)
                 {
                     timer.Enabled = true;
                     SetArrowIndicatorSpeed();
@@ -535,22 +538,25 @@ namespace R440O.R440OForms.C300M_1
                 //Поиск в режиме ОФТ 2.4 - 5.2
                 if (ПроверкаПоМаломуШлейфу())
                 {
-                    if (A205M_1Parameters.ПереключательВидРаботы == 3 && (!ТумблерВведение || !ТумблерВидМодуляции))
+                    if ((A205M_1Parameters.ПереключательВидРаботы == 3 || A205M_1Parameters.ПереключательВидРаботы == 4)
+                        && (!ТумблерВведение || !ТумблерВидМодуляции))
                     {
                         if (ИндикаторСигнал < 2 && ИндикаторСигнал > -2)
                         {
                             ЛампочкаСигнал = true;
+                            СтрелкаДвижетсяНалево = false;
                             timer.Stop();
                         }
                     }
                     else
-                        if (A205M_1Parameters.ПереключательВидРаботы == 1)
+                        if (A205M_1Parameters.ПереключательВидРаботы == 1 || A205M_1Parameters.ПереключательВидРаботы == 2)
                         {
                             if (ТумблерВведение && ТумблерВидМодуляции)
                             {
                                 if (ИндикаторСигнал < 2 && ИндикаторСигнал > -2)
                                 {
                                     ЛампочкаСигнал = true;
+                                    СтрелкаДвижетсяНалево = false;
                                     timer.Stop();
                                 }
                             }
@@ -559,11 +565,16 @@ namespace R440O.R440OForms.C300M_1
                                 if (ИндикаторСигнал < 22 && ИндикаторСигнал > 18 || ИндикаторСигнал < -8 && ИндикаторСигнал > -12)
                                 {
                                     ЛампочкаСигнал = true;
+                                    СтрелкаДвижетсяНалево = false;
                                     timer.Stop();
                                 }
                             }
                         }
                 }
+            }
+            else
+            {
+                ЛампочкаПоиск = true;
             }
 
             RefreshForm();
@@ -594,9 +605,7 @@ namespace R440O.R440OForms.C300M_1
         {
             if (timer.Enabled)
             {
-                if (Array.IndexOf(КнопкиВидРаботы, true) == -1)
-                    timer.Interval = 10;
-                else timer.Interval = 100 - Array.IndexOf(КнопкиВидРаботы, true) * 10;
+                timer.Interval = 100 - Array.IndexOf(КнопкиВидРаботы, true) * 10;
             }
         }
         #endregion
