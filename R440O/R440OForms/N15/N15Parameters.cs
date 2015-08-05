@@ -1,4 +1,4 @@
-﻿using System.Windows.Forms;
+﻿using R440O.Parameters;
 using R440O.R440OForms.A205M_1;
 using R440O.R440OForms.A205M_2;
 using R440O.R440OForms.N18_M;
@@ -16,8 +16,6 @@ namespace R440O.R440OForms.N15
 {
     public static class N15Parameters
     {
-        //public static bool A205Distanse1 = false;
-        //public static bool A205Distanse2 = false;
         #region Кнопки
         /// <summary>
         /// Возможные состояния: true, false
@@ -26,12 +24,12 @@ namespace R440O.R440OForms.N15
         {
             get
             {
-                return _станцияВкл; 
+                return _станцияВкл;
             }
             set
             {
                 _станцияВкл = value;
-            } 
+            }
         }
         public static bool _станцияВкл;
 
@@ -317,7 +315,13 @@ namespace R440O.R440OForms.N15
         public static bool ТумблерА205Base
         {
             get { return _тумблерА205Base; }
-            set { _тумблерА205Base = value; if (RefreshForm != null) RefreshForm(); }
+            set
+            {
+                _тумблерА205Base = value;
+                NKN_1Parameters.ResetParameters();
+                NKN_2Parameters.ResetParameters();
+                if (RefreshForm != null) RefreshForm();
+            }
         }
 
         public static bool ТумблерА20512
@@ -326,15 +330,6 @@ namespace R440O.R440OForms.N15
             set
             {
                 _тумблерА20512 = value;
-
-                NKN_1Parameters.Питание220Включено = value && NKN_1Parameters.ЛампочкаМУ && ТумблерА205Base 
-                    && ТумблерА20512 && N502BParameters.ТумблерН15;
-                //A205Distanse1 = NKN_1Parameters.Питание220Включено;
-
-                NKN_2Parameters.Питание220Включено = !value && NKN_2Parameters.ЛампочкаМУ && ТумблерА205Base 
-                    && !ТумблерА20512 && N502BParameters.ТумблерН15;
-                //A205Distanse2 = NKN_2Parameters.Питание220Включено;
-
                 NKN_1Parameters.ResetParameters();
                 NKN_2Parameters.ResetParameters();
                 if (RefreshForm != null) RefreshForm();
@@ -570,7 +565,11 @@ namespace R440O.R440OForms.N15
         public static bool ЛампочкаМШУ
         {
             get { return _лампочкаМШУ; }
-            set { _лампочкаМШУ = value; }
+            set
+            {
+                _лампочкаМШУ = value;
+                A306Parameters.ResetParameters();
+            }
         }
 
         public static bool ЛампочкаБМА_1
@@ -767,8 +766,6 @@ namespace R440O.R440OForms.N15
             ЛампочкаППВРабота2 = A205M_2Parameters.ЛампочкаНормРаб;
             ЛампочкаППВВкл2 = NKN_2Parameters.ЛампочкиФаз[0];
 
-            //ЛампочкаУМ1Работа1 = (ТумблерА205Base && ТумблерА20512 && !ЛампочкаA205Неиспр1 && ЛампочкаППВВкл1 && A205Distanse1);
-            //ЛампочкаУМ1Работа2 = (ТумблерА205Base && !ТумблерА20512 && !ЛампочкаA205Неиспр2 && ЛампочкаППВВкл2 && A205Distanse2);
             ЛампочкаУМ1Работа1 = (ТумблерА205Base && ТумблерА20512 && !ЛампочкаA205Неиспр1 && ЛампочкаППВВкл1);
             ЛампочкаУМ1Работа2 = (ТумблерА205Base && !ТумблерА20512 && !ЛампочкаA205Неиспр2 && ЛампочкаППВВкл2);
 

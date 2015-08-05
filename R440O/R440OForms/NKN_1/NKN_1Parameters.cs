@@ -17,10 +17,7 @@ namespace R440O.R440OForms.NKN_1
             set
             {
                 _питание220Включено = value;
-                ResetParameters();
                 if (RefreshForm != null) RefreshForm();
-
-                //N15Parameters.A205Distanse1 = false;
                 N15Parameters.ResetParameters();
             }
         }
@@ -69,6 +66,11 @@ namespace R440O.R440OForms.NKN_1
             ЛампочкаМУ = (N502BParameters.ЛампочкаСфазировано
                           && N502BParameters.ТумблерЭлектрооборудование
                           && N502BParameters.ТумблерВыпрямитель27В);
+
+            Питание220Включено = N15Parameters.ТумблерА20512
+                && ЛампочкаМУ
+                && N15Parameters.ТумблерА205Base
+                && N502BParameters.ТумблерН15;
 
             ChangeLampsStateTo(_лампочкаМУ && _питание220Включено && N502BParameters.ТумблерН15);
         }
