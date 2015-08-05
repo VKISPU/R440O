@@ -1,8 +1,7 @@
-﻿using R440O.R440OForms.N502B;
-using R440O.R440OForms.PowerCabel;
-
-namespace R440O.R440OForms.VoltageStabilizer
+﻿namespace R440O.R440OForms.VoltageStabilizer
 {
+    using N502B;
+
     public static class VoltageStabilizerParameters
     {
         #region Лампочки
@@ -126,8 +125,8 @@ namespace R440O.R440OForms.VoltageStabilizer
                                && _кабельВход == 220;
         }
 
-        public delegate void VoidVoidSignature();
-        public static event VoidVoidSignature RefreshForm;
+        public delegate void ParameterChangedHandler();
+        public static event ParameterChangedHandler RefreshForm;
         #endregion
     }
 }

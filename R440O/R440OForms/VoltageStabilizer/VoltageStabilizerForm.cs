@@ -6,7 +6,7 @@
     /// <summary>
     /// Форма блока стабилизатор напряжения
     /// </summary>
-    public partial class VoltageStabilizerForm : Form
+    public partial class VoltageStabilizerForm : Form, IRefreshableForm
     {
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="VoltageStabilizerForm"/>
@@ -14,8 +14,8 @@
         public VoltageStabilizerForm()
         {
             InitializeComponent();
-            VoltageStabilizerParameters.RefreshForm += RefreshForm;
-            RefreshForm();
+            VoltageStabilizerParameters.RefreshForm += RefreshElements;
+            RefreshElements();
         }
 
         #region Обработка действий пользователя
@@ -69,7 +69,7 @@
 
         #endregion
 
-        private void RefreshForm()
+        public void RefreshElements()
         {
             switch (VoltageStabilizerParameters.КабельВход)
             {

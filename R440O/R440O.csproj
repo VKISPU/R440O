@@ -525,6 +525,9 @@
     <Compile Include="R440OForms\C300PM_1\C300PM_1Form.Designer.cs">
       <DependentUpon>C300PM_1Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="RefreshableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ThirdParty\TransformImageHelper.cs" />
     <EmbeddedResource Include="BackgroundImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
