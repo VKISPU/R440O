@@ -5,6 +5,7 @@
 //-----------------------------------------------------------------------
 
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using R440O.R440OForms.N15Inside;
 
@@ -24,13 +25,13 @@ namespace R440O.R440OForms.N15
         public N15Form()
         {
             this.InitializeComponent();
-            N15Parameters.RefreshForm += InitializeForm;
-            InitializeForm();
+            N15Parameters.RefreshForm += RefreshForm;
+            RefreshForm();
         }
 
         #region Инициализация элементов управления
 
-        private void InitializeForm()
+        private void RefreshForm()
         {
             InitializeButtons();
             InitializeTumblers();
@@ -72,10 +73,11 @@ namespace R440O.R440OForms.N15
         /// </summary>
         private void InitializeTumblers()
         {
+            PropertyInfo[] propertyList;
             foreach (Control item in Panel.Controls)
             {
                 if (!item.Name.Contains("Тумблер")) continue;
-                var propertyList = typeof(N15LocalParameters).GetProperties();
+                propertyList = typeof(N15LocalParameters).GetProperties();
                 foreach (var property in propertyList.Where(property => ("лок" + item.Name) == property.Name))
                 {
                     if (item.Name.Contains("ТумблерА20512") ||
@@ -95,6 +97,10 @@ namespace R440O.R440OForms.N15
                     }
                 }
             }
+
+            //// Тумблеры работающие без нажатия кнопки ВКЛ
+            ТумблерА503Б.BackgroundImage = N15Parameters.ТумблерА503Б ? ControlElementImages.tumblerType3Up
+                            : ControlElementImages.tumblerType3Down;
         }
 
         /// <summary>
@@ -431,6 +437,11 @@ namespace R440O.R440OForms.N15
             var newValue = !(bool)localParameter.GetValue(null);
             localParameter.SetValue(null, newValue);
             RefreshFormElement(button.Name);
+        }
+
+        private void ТумблерА503Б_Click(object sender, EventArgs e)
+        {
+            N15Parameters.ТумблерА503Б = !N15Parameters.ТумблерА503Б;
         }
     }
 }

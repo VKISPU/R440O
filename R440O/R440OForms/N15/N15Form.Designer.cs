@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.Panel = new System.Windows.Forms.Panel();
-            this.ЛампочкаA205Неиспр2 = new System.Windows.Forms.PictureBox();
-            this.ЛампочкаA205Неиспр1 = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаА205Неиспр2 = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаА205Неиспр1 = new System.Windows.Forms.PictureBox();
             this.OpenInsideButtonRight = new System.Windows.Forms.Button();
             this.OpenInsideButtonLeft = new System.Windows.Forms.Button();
             this.ТумблерТлфТлгПрд = new System.Windows.Forms.Button();
@@ -128,9 +128,10 @@
             this.КнопкаПРМНаведениеЦ300М1 = new System.Windows.Forms.Button();
             this.КнопкаСтанцияВыкл = new System.Windows.Forms.Button();
             this.КнопкаСтанцияВкл = new System.Windows.Forms.Button();
+            this.ТумблерА503Б = new System.Windows.Forms.Button();
             this.Panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаA205Неиспр2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаA205Неиспр1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаА205Неиспр2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаА205Неиспр1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаДАБ_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаА403Вкл)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаН13_2ПолноеВкл)).BeginInit();
@@ -192,8 +193,8 @@
             // 
             this.Panel.BackgroundImage = global::R440O.BackgroundImages.N15;
             this.Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Panel.Controls.Add(this.ЛампочкаA205Неиспр2);
-            this.Panel.Controls.Add(this.ЛампочкаA205Неиспр1);
+            this.Panel.Controls.Add(this.ЛампочкаА205Неиспр2);
+            this.Panel.Controls.Add(this.ЛампочкаА205Неиспр1);
             this.Panel.Controls.Add(this.OpenInsideButtonRight);
             this.Panel.Controls.Add(this.OpenInsideButtonLeft);
             this.Panel.Controls.Add(this.ТумблерТлфТлгПрд);
@@ -269,6 +270,7 @@
             this.Panel.Controls.Add(this.ТумблерАФСС);
             this.Panel.Controls.Add(this.ТумблерК1_2);
             this.Panel.Controls.Add(this.ТумблерК1_1);
+            this.Panel.Controls.Add(this.ТумблерА503Б);
             this.Panel.Controls.Add(this.ТумблерА205Base);
             this.Panel.Controls.Add(this.ТумблерБМА_2);
             this.Panel.Controls.Add(this.ТумблерБМА_1);
@@ -296,25 +298,25 @@
             this.Panel.Size = new System.Drawing.Size(1042, 503);
             this.Panel.TabIndex = 2;
             // 
-            // ЛампочкаA205Неиспр2
+            // ЛампочкаА205Неиспр2
             // 
-            this.ЛампочкаA205Неиспр2.BackColor = System.Drawing.Color.Transparent;
-            this.ЛампочкаA205Неиспр2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаA205Неиспр2.Location = new System.Drawing.Point(549, 139);
-            this.ЛампочкаA205Неиспр2.Name = "ЛампочкаA205Неиспр2";
-            this.ЛампочкаA205Неиспр2.Size = new System.Drawing.Size(14, 15);
-            this.ЛампочкаA205Неиспр2.TabIndex = 74;
-            this.ЛампочкаA205Неиспр2.TabStop = false;
+            this.ЛампочкаА205Неиспр2.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаА205Неиспр2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ЛампочкаА205Неиспр2.Location = new System.Drawing.Point(549, 139);
+            this.ЛампочкаА205Неиспр2.Name = "ЛампочкаА205Неиспр2";
+            this.ЛампочкаА205Неиспр2.Size = new System.Drawing.Size(14, 15);
+            this.ЛампочкаА205Неиспр2.TabIndex = 74;
+            this.ЛампочкаА205Неиспр2.TabStop = false;
             // 
-            // ЛампочкаA205Неиспр1
+            // ЛампочкаА205Неиспр1
             // 
-            this.ЛампочкаA205Неиспр1.BackColor = System.Drawing.Color.Transparent;
-            this.ЛампочкаA205Неиспр1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаA205Неиспр1.Location = new System.Drawing.Point(523, 139);
-            this.ЛампочкаA205Неиспр1.Name = "ЛампочкаA205Неиспр1";
-            this.ЛампочкаA205Неиспр1.Size = new System.Drawing.Size(14, 15);
-            this.ЛампочкаA205Неиспр1.TabIndex = 73;
-            this.ЛампочкаA205Неиспр1.TabStop = false;
+            this.ЛампочкаА205Неиспр1.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаА205Неиспр1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ЛампочкаА205Неиспр1.Location = new System.Drawing.Point(523, 139);
+            this.ЛампочкаА205Неиспр1.Name = "ЛампочкаА205Неиспр1";
+            this.ЛампочкаА205Неиспр1.Size = new System.Drawing.Size(14, 15);
+            this.ЛампочкаА205Неиспр1.TabIndex = 73;
+            this.ЛампочкаА205Неиспр1.TabStop = false;
             // 
             // OpenInsideButtonRight
             // 
@@ -1561,6 +1563,22 @@
             this.КнопкаСтанцияВкл.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаСтанцияВкл_MouseDown);
             this.КнопкаСтанцияВкл.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаСтанцияВкл_MouseUp);
             // 
+            // ТумблерА503Б
+            // 
+            this.ТумблерА503Б.BackColor = System.Drawing.Color.Transparent;
+            this.ТумблерА503Б.BackgroundImage = global::R440O.ControlElementImages.tumblerType3Down;
+            this.ТумблерА503Б.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ТумблерА503Б.FlatAppearance.BorderSize = 0;
+            this.ТумблерА503Б.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерА503Б.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерА503Б.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТумблерА503Б.Location = new System.Drawing.Point(847, 313);
+            this.ТумблерА503Б.Name = "ТумблерА503Б";
+            this.ТумблерА503Б.Size = new System.Drawing.Size(24, 29);
+            this.ТумблерА503Б.TabIndex = 21;
+            this.ТумблерА503Б.UseVisualStyleBackColor = false;
+            this.ТумблерА503Б.Click += new System.EventHandler(this.ТумблерА503Б_Click);
+            // 
             // N15Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1573,8 +1591,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Н15";
             this.Panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаA205Неиспр2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаA205Неиспр1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаА205Неиспр2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаА205Неиспр1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаДАБ_5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаА403Вкл)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаН13_2ПолноеВкл)).EndInit();
@@ -1734,7 +1752,8 @@
         private System.Windows.Forms.PictureBox ЛампочкаЦ300МНеиспр3;
         private System.Windows.Forms.PictureBox ЛампочкаЦ300МНеиспр2;
         private System.Windows.Forms.PictureBox ЛампочкаЦ300МНеиспр1;
-        private System.Windows.Forms.PictureBox ЛампочкаA205Неиспр2;
-        private System.Windows.Forms.PictureBox ЛампочкаA205Неиспр1;
+        private System.Windows.Forms.PictureBox ЛампочкаА205Неиспр2;
+        private System.Windows.Forms.PictureBox ЛампочкаА205Неиспр1;
+        private System.Windows.Forms.Button ТумблерА503Б;
     }
 }

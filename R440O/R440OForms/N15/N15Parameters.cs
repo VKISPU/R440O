@@ -441,7 +441,12 @@ namespace R440O.R440OForms.N15
         public static bool ТумблерА503Б
         {
             get { return _тумблерА503Б; }
-            set { _тумблерА503Б = value; if (RefreshForm != null) RefreshForm(); }
+            set
+            {
+                _тумблерА503Б = value;
+                ResetParameters();
+                if (RefreshForm != null) RefreshForm();
+            }
         }
 
         public static bool ТумблерФаза
@@ -490,20 +495,7 @@ namespace R440O.R440OForms.N15
 
         #region Лампочки верхняя часть
 
-        public static bool ЛампочкаЦ300МВкл1
-        {
-            get { return _лампочкаЦ300МВкл1; }
-            set { _лампочкаЦ300МВкл1 = value; }
-        }
-
-        public static bool ЛампочкаA205Неиспр1
-        {
-            get { return _лампочкаA205Неиспр1; }
-            set { _лампочкаA205Неиспр1 = value; }
-        }
-        private static bool _лампочкаA205Неиспр1;
-
-        public static bool ЛампочкаA205Неиспр2 { get; set; }
+        public static bool ЛампочкаЦ300МВкл1 { get; set; }
         public static bool ЛампочкаЦ300МВкл2 { get; set; }
         public static bool ЛампочкаЦ300МВкл3 { get; set; }
         public static bool ЛампочкаЦ300МВкл4 { get; set; }
@@ -523,9 +515,6 @@ namespace R440O.R440OForms.N15
         public static bool ЛампочкаА205Неиспр2 { get; set; }
         public static bool ЛампочкаУМ1Работа1 { get; set; }
         public static bool ЛампочкаУМ1Работа2 { get; set; }
-
-
-        private static bool _лампочкаЦ300МВкл1;
 
         #endregion
 
@@ -702,24 +691,9 @@ namespace R440O.R440OForms.N15
 
         #region Лампочки правая часть
 
-        public static bool ЛампочкаН16Н13_1
-        {
-            get { return _лампочкаН16Н131; }
-            set { _лампочкаН16Н131 = value; }
-        }
-
-        public static bool ЛампочкаН16Н13_2
-        {
-            get { return _лампочкаН16Н132; }
-            set { _лампочкаН16Н132 = value; }
-        }
-
-        public static bool ЛампочкаН16Н13_12
-        {
-            get { return _лампочкаН16Н1312; }
-            set { _лампочкаН16Н1312 = value; }
-        }
-
+        public static bool ЛампочкаН16Н13_1 { get; set; }
+        public static bool ЛампочкаН16Н13_2 { get; set; }
+        public static bool ЛампочкаН16Н13_12 { get; set; }
         public static bool ЛампочкаН13_11Ступень { get; set; }
         public static bool ЛампочкаН13_21Ступень { get; set; }
         public static bool ЛампочкаН13_1ПолноеВкл { get; set; }
@@ -731,10 +705,6 @@ namespace R440O.R440OForms.N15
         public static bool ЛампочкаА503Б { get; set; }
         public static bool ЛампочкаАнт { get; set; }
         public static bool ЛампочкаЭкв { get; set; }
-
-        private static bool _лампочкаН16Н131;
-        private static bool _лампочкаН16Н132;
-        private static bool _лампочкаН16Н1312;
 
         #endregion
 
@@ -753,10 +723,10 @@ namespace R440O.R440OForms.N15
                           && N502BParameters.ТумблерЭлектрооборудование
                           && N502BParameters.ТумблерВыпрямитель27В);
 
-            ЛампочкаA205Неиспр1 = (N18_MParameters.N18MПереключательВходК121 != 1) &&
+            ЛампочкаА205Неиспр1 = (N18_MParameters.N18MПереключательВходК121 != 1) &&
                 ((NKN_1Parameters.ЛампочкаМУ && NKN_1Parameters.Питание220Включено && N502BParameters.ТумблерН15)
                 || (NKN_1Parameters.ЛампочкаМУ && ТумблерА205Base && ТумблерА20512));
-            ЛампочкаA205Неиспр2 = (N18_MParameters.N18MПереключательВходК121 != 1) &&
+            ЛампочкаА205Неиспр2 = (N18_MParameters.N18MПереключательВходК121 != 1) &&
                 ((NKN_2Parameters.ЛампочкаМУ && NKN_2Parameters.Питание220Включено && N502BParameters.ТумблерН15)
                 || (NKN_2Parameters.ЛампочкаМУ && ТумблерА205Base && !ТумблерА20512));
 
@@ -766,8 +736,10 @@ namespace R440O.R440OForms.N15
             ЛампочкаППВРабота2 = A205M_2Parameters.ЛампочкаНормРаб;
             ЛампочкаППВВкл2 = NKN_2Parameters.ЛампочкиФаз[0];
 
-            ЛампочкаУМ1Работа1 = (ТумблерА205Base && ТумблерА20512 && !ЛампочкаA205Неиспр1 && ЛампочкаППВВкл1);
-            ЛампочкаУМ1Работа2 = (ТумблерА205Base && !ТумблерА20512 && !ЛампочкаA205Неиспр2 && ЛампочкаППВВкл2);
+            ЛампочкаУМ1Работа1 = (ТумблерА205Base && ТумблерА20512 && !ЛампочкаА205Неиспр1 && ЛампочкаППВВкл1);
+            ЛампочкаУМ1Работа2 = (ТумблерА205Base && !ТумблерА20512 && !ЛампочкаА205Неиспр2 && ЛампочкаППВВкл2);
+
+            ЛампочкаА503Б = Лампочка27В && ТумблерА503Б;
 
             if (RefreshForm != null) RefreshForm();
         }

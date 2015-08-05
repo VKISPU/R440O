@@ -266,9 +266,5 @@
                 _локТумблерТлфТлгПрд = value;
             }
         }
-
-        public static void ResetParameters()
-        {
-        }
     }
 }

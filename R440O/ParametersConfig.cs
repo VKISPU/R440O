@@ -42,6 +42,7 @@ namespace R440O
             N15LocalParameters._локТумблерМШУ = true;
             N15LocalParameters._локТумблерА20512 = true;
             N15LocalParameters._локТумблерА205Base = true;
+            N15Parameters.ТумблерА503Б = true;
 
             // Настройка А-205
             A205M_1Parameters.ПереключательВидРаботы = 3;
