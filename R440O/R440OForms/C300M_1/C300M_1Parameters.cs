@@ -2,6 +2,7 @@
 using R440O.R440OForms.N15;
 using R440O.R440OForms.C300PM_1;
 using R440O.R440OForms.N502B;
+using R440O.R440OForms.A205M_1;
 using System.Windows.Forms;
 
 namespace R440O.R440OForms.C300M_1
@@ -265,7 +266,16 @@ namespace R440O.R440OForms.C300M_1
         /// <summary>
         /// Возможные состояния: true - ЧТ, false - ОФТ
         /// </summary>
-        public static bool ТумблерВведение { get { return _тумблерВведение; } set { _тумблерВведение = value; if (RefreshForm != null) RefreshForm(); } }
+        public static bool ТумблерВведение
+        {
+            get { return _тумблерВведение; }
+            set
+            {
+                _тумблерВведение = value;
+                Search();
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
         private static bool _тумблерВведение = false;
 
         /// <summary>
@@ -301,7 +311,16 @@ namespace R440O.R440OForms.C300M_1
         /// <summary>
         /// Возможные состояния: true - ЧТ, false - ОФТ
         /// </summary>
-        public static bool ТумблерВидМодуляции { get { return _тумблерВидМодуляции; } set { _тумблерВидМодуляции = value; if (RefreshForm != null) RefreshForm(); } }
+        public static bool ТумблерВидМодуляции
+        {
+            get { return _тумблерВидМодуляции; }
+            set
+            {
+                _тумблерВидМодуляции = value;
+                Search();
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
         private static bool _тумблерВидМодуляции = false;
 
         /// <summary>
@@ -480,14 +499,14 @@ namespace R440O.R440OForms.C300M_1
             if (RefreshForm != null) RefreshForm();
         }
 
-        #region Таймер
+        #region Таймер и Поиск
         //Инициализация таймера
         private static Timer timer = new Timer();
         private static bool СтрелкаДвижетсяНалево = false;
-        
+
         //Поиск значения индикатора (Движение стрелки)
         [STAThread]
-        private static void Search()
+        public static void Search()
         {
             //Полная остановка таймера с отпиской метода установки условий поиска
             timer.Tick -= SetSearchConditions;
@@ -502,12 +521,55 @@ namespace R440O.R440OForms.C300M_1
                     SetArrowIndicatorSpeed();
                     timer.Tick += SetSearchConditions;
                     timer.Start();
-                }                
+                }
             }
         }
 
         //Установка условий поиска
         static void SetSearchConditions(object sender, EventArgs e)
+        {
+            SetSearchInterval();
+            ЛампочкаСигнал = false;
+            if (!КнопкаПоиск)
+            {
+                //Поиск в режиме ОФТ 2.4 - 5.2
+                if (ПроверкаПоМаломуШлейфу())
+                {
+                    if (A205M_1Parameters.ПереключательВидРаботы == 3 && (!ТумблерВведение || !ТумблерВидМодуляции))
+                    {
+                        if (ИндикаторСигнал < 2 && ИндикаторСигнал > -2)
+                        {
+                            ЛампочкаСигнал = true;
+                            timer.Stop();
+                        }
+                    }
+                    else
+                        if (A205M_1Parameters.ПереключательВидРаботы == 1)
+                        {
+                            if (ТумблерВведение && ТумблерВидМодуляции)
+                            {
+                                if (ИндикаторСигнал < 2 && ИндикаторСигнал > -2)
+                                {
+                                    ЛампочкаСигнал = true;
+                                    timer.Stop();
+                                }
+                            }
+                            else
+                            {
+                                if (ИндикаторСигнал < 22 && ИндикаторСигнал > 18 || ИндикаторСигнал < -8 && ИндикаторСигнал > -12)
+                                {
+                                    ЛампочкаСигнал = true;
+                                    timer.Stop();
+                                }
+                            }
+                        }
+                }
+            }
+
+            RefreshForm();
+        }
+
+        private static void SetSearchInterval()
         {
             int ЛеваяГраница = (ТумблерПределы) ? -35 : -50;
             int ПраваяГраница = (ТумблерПределы) ? -20 : 50;
@@ -522,11 +584,8 @@ namespace R440O.R440OForms.C300M_1
             {
                 ИндикаторСигнал += 0.3F;
                 if (ИндикаторСигнал > ПраваяГраница)
-                    СтрелкаДвижетсяНалево = true;               
+                    СтрелкаДвижетсяНалево = true;
             }
-
-            //***Условие на поиск сигнала***//
-            RefreshForm();
         }
 
 
@@ -541,6 +600,11 @@ namespace R440O.R440OForms.C300M_1
             }
         }
         #endregion
+
+        private static bool ПроверкаПоМаломуШлейфу()
+        {
+            return true;
+        }
 
         public delegate void VoidVoidSignature();
         public static event VoidVoidSignature RefreshForm;
