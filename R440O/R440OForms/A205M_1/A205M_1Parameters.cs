@@ -29,6 +29,7 @@ namespace R440O.R440OForms.A205M_1
             set
             {
                 _лампочкаНормРаб = value;
+                C300M_1Parameters.Search();
                 if (RefreshForm != null) RefreshForm();
             }
         }

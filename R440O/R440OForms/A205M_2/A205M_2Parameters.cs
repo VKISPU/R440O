@@ -3,6 +3,7 @@ using R440O.R440OForms.N18_M;
 using R440O.R440OForms.N502B;
 using R440O.R440OForms.NKN_1;
 using R440O.R440OForms.NKN_2;
+using R440O.R440OForms.C300M_1;
 
 namespace R440O.R440OForms.A205M_2
 {
@@ -29,6 +30,7 @@ namespace R440O.R440OForms.A205M_2
             set
             {
                 _лампочкаНормРаб = value;
+                C300M_1Parameters.Search();
                 if (RefreshForm != null) RefreshForm();
             }
         }
@@ -200,6 +202,7 @@ namespace R440O.R440OForms.A205M_2
                 if (value > 0 && value < 5)
                 {
                     _переключательВидРаботы = value;
+                    C300M_1Parameters.Search();
                     if (RefreshForm != null) RefreshForm();
                 }
             }
