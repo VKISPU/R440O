@@ -53,8 +53,7 @@ namespace R440O.InternalBlocks
                                   A205M_1Parameters.ПереключательВолнаX100*100 +
                                   A205M_1Parameters.ПереключательВолнаX10*10 +
                                   A205M_1Parameters.ПереключательВолнаX1 - WaveShift;
-                    signal.Level = Math.Abs(N15Parameters.РегуляторУровень*20/120);
-                    if (N15Parameters.РегуляторУровень > 0) signal.Level += 20;
+                    signal.Level = (50*(N15Parameters.РегуляторУровень + 120)/240);
                     return signal;
 
                 }

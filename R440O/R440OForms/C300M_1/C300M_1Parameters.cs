@@ -5,6 +5,7 @@ using R440O.R440OForms.N502B;
 using R440O.R440OForms.A205M_1;
 using R440O.R440OForms.A205M_2;
 using System.Windows.Forms;
+using R440O.InternalBlocks;
 using R440O.Parameters;
 
 namespace R440O.R440OForms.C300M_1
@@ -12,6 +13,39 @@ namespace R440O.R440OForms.C300M_1
     class C300M_1Parameters
     {
         #region Кнопки ВИД РАБОТЫ
+
+        public static double ТекущаяСкоростьРаботы
+        {
+            get
+            {
+                var speed = .0;
+                switch (_кнопкаВидРаботы)
+                {
+                    case 0: speed = 0.025;
+                        break;
+                    case 1: speed = 0.25;
+                        break;
+                    case 2: speed = 0.1;
+                        break;
+                    case 3: speed = 1.2;
+                        break;
+                    case 4: speed = 2.4;
+                        break;
+                    case 5: speed = 4.8;
+                        break;
+                    case 6: speed = 48;
+                        break;
+                    case 7: speed = 96;
+                        break;
+                    case 8: speed = 240;
+                        break;
+                    case 9: speed = 480;
+                        break;
+                }
+                return speed;
+            }
+        }
+
         /// <summary>
         /// Названия кнопок:
         /// 0 - 0.025,
@@ -25,14 +59,14 @@ namespace R440O.R440OForms.C300M_1
         /// 8 - 240,
         /// 9 - 480.
         /// </summary>
-        public static bool[] КнопкиВидРаботы = { false, false, false, false, false, false, false, false, false, false };
+        public static bool[] КнопкиВидРаботы = new bool[10];
         public static int КнопкаВидРаботы
         {
             get { return _кнопкаВидРаботы; }
             set
             {
                 _кнопкаВидРаботы = value;
-                for (int i = 0; i < КнопкиВидРаботы.Length; i++)
+                for (var i = 0; i < КнопкиВидРаботы.Length; i++)
                     КнопкиВидРаботы[i] = false;
                 КнопкиВидРаботы[_кнопкаВидРаботы] = true;
                 SetArrowIndicatorSpeed();
@@ -76,7 +110,7 @@ namespace R440O.R440OForms.C300M_1
         /// 9 - -12.6.
         /// </summary>
 
-        public static bool[] КнопкиКонтрольРежима = { false, false, false, false, false, false, false, false, false, false };
+        public static bool[] КнопкиКонтрольРежима = new bool[10];
         public static int КнопкаКонтрольРежима
         {
             get { return _кнопкаКонтрольРежима; }
@@ -408,17 +442,17 @@ namespace R440O.R440OForms.C300M_1
                                 switch (Array.IndexOf(КнопкиКонтрольРежима, true))
                                 {
                                     case 0:
-                                        return (ЛампочкаСигнал)
-                                            ? _ИндикаторСигнал = 50
+                                        return (A306Parameters.ВыходнойСигнал1 != null)
+                                            ? _ИндикаторСигнал = (float)A306Parameters.ВыходнойСигнал1.Level
                                             : _ИндикаторСигнал = 0;
                                     case 1:
-                                        if (ТумблерРегулировкаУровня)
+                                        if (ТумблерРегулировкаУровня && A306Parameters.ВыходнойСигнал1 != null)
                                             return (Array.IndexOf(КнопкиВидРаботы, true) == -1)
                                                 ? _ИндикаторСигнал = 50
-                                                : _ИндикаторСигнал = 30;
+                                                : _ИндикаторСигнал = 50 - (float)A306Parameters.ВыходнойСигнал1.Level;
                                         else
-                                            return (Array.IndexOf(КнопкиВидРаботы, true) == -1)
-                                               ? _ИндикаторСигнал = 30
+                                            return (Array.IndexOf(КнопкиВидРаботы, true) == -1 && A306Parameters.ВыходнойСигнал1 != null)
+                                               ? _ИндикаторСигнал = 50 - (float)A306Parameters.ВыходнойСигнал1.Level
                                                : _ИндикаторСигнал = 50;
                                     case 2:
                                         if (!ТумблерРегулировкаУровня)
@@ -695,7 +729,8 @@ namespace R440O.R440OForms.C300M_1
                 && signal.Level > 10
                 && signal.Wave == Волна 
                 && signal.Modulation == ТумблерВведениеString 
-                && signal.Modulation == ТумблерВидМодуляцииString) return true;
+                && signal.Modulation == ТумблерВидМодуляцииString
+                && (Math.Abs(signal.Speed - ТекущаяСкоростьРаботы) <= 4.0)) return true;
             return false;
         }
 

@@ -47,7 +47,6 @@ namespace R440O
 
             // Настройка А-205
             A205M_1Parameters.ПереключательВидРаботы = 3;
-
             A205M_1Parameters.ПереключательВолнаX1000 = 6;
             A205M_1Parameters.ПереключательВолнаX100 = 6;
             A205M_1Parameters.ПереключательВолнаX10 = 0;
@@ -63,8 +62,9 @@ namespace R440O
             A306Parameters.ЦелевойВыход = 0;
 
             // Настройка Ц300М-1
+
             C300M_1Parameters.ТумблерУправление = true;
-            C300M_1Parameters.КнопкиВидРаботы[4] = true;
+            C300M_1Parameters.КнопкаВидРаботы = 5;
             C300M_1Parameters.ПереключательВолна1000 = 0;
             C300M_1Parameters.ПереключательВолна100 = 1;
             C300M_1Parameters.ПереключательВолна10 = 0;

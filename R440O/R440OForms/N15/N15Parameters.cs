@@ -723,7 +723,11 @@ namespace R440O.R440OForms.N15
         public static double РегуляторУровень
         {
             get { return _регуляторУровень; }
-            set { if (value > -120 && value < 120)_регуляторУровень = value; }
+            set
+            {
+                if (value > -120 && value < 120)_регуляторУровень = value; 
+                C300M_1Parameters.ResetParameters();
+            }
         }
 
         public static void ResetParameters()
