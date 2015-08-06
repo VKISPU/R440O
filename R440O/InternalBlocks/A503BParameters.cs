@@ -1,4 +1,5 @@
-﻿using R440O.BaseClasses;
+﻿using System;
+using R440O.BaseClasses;
 using R440O.R440OForms.A205M_1;
 using R440O.R440OForms.N15;
 
@@ -52,6 +53,8 @@ namespace R440O.InternalBlocks
                                   A205M_1Parameters.ПереключательВолнаX100*100 +
                                   A205M_1Parameters.ПереключательВолнаX10*10 +
                                   A205M_1Parameters.ПереключательВолнаX1 - WaveShift;
+                    signal.Level = Math.Abs(N15Parameters.РегуляторУровень*20/120);
+                    if (N15Parameters.РегуляторУровень > 0) signal.Level += 20;
                     return signal;
 
                 }

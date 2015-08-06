@@ -43,6 +43,7 @@ namespace R440O
             N15LocalParameters._локТумблерА20512 = true;
             N15LocalParameters._локТумблерА205Base = true;
             N15Parameters.ТумблерА503Б = true;
+            N15Parameters.РегуляторУровень = 100;
 
             // Настройка А-205
             A205M_1Parameters.ПереключательВидРаботы = 3;
@@ -53,7 +54,7 @@ namespace R440O
             A205M_1Parameters.ПереключательВолнаX1 = 0;
 
             // Настройка А-304
-            A304Parameters.ПереключательВыборСтвола = 2;
+            A304Parameters.ПереключательВыборСтвола = 1;
 
             // Настройка А-306
 
@@ -63,6 +64,7 @@ namespace R440O
 
             // Настройка Ц300М-1
             C300M_1Parameters.ТумблерУправление = true;
+            C300M_1Parameters.КнопкиВидРаботы[4] = true;
             C300M_1Parameters.ПереключательВолна1000 = 0;
             C300M_1Parameters.ПереключательВолна100 = 1;
             C300M_1Parameters.ПереключательВолна10 = 0;

@@ -5,6 +5,7 @@ using R440O.R440OForms.N502B;
 using R440O.R440OForms.A205M_1;
 using R440O.R440OForms.A205M_2;
 using System.Windows.Forms;
+using R440O.Parameters;
 
 namespace R440O.R440OForms.C300M_1
 {
@@ -171,6 +172,18 @@ namespace R440O.R440OForms.C300M_1
         #endregion
 
         #region Переключатели ВОЛНА
+
+        public static int Волна
+        {
+            get
+            {
+                return _переключательВолна1000 * 1000
+                    + _переключательВолна100 * 100
+                    + _переключательВолна10 * 10
+                    + _переключательВолна1;
+            }
+        }
+
         /// <summary>
         /// 0 - 4
         /// </summary>
@@ -190,7 +203,7 @@ namespace R440O.R440OForms.C300M_1
                 }
             }
         }
-        private static int _переключательВолна1000 = 0;
+        private static int _переключательВолна1000;
 
         /// <summary>
         /// 0 - 9
@@ -211,7 +224,7 @@ namespace R440O.R440OForms.C300M_1
                 }
             }
         }
-        private static int _переключательВолна100 = 0;
+        private static int _переключательВолна100;
 
         /// <summary>
         /// 0 - 9
@@ -232,7 +245,7 @@ namespace R440O.R440OForms.C300M_1
                 }
             }
         }
-        private static int _переключательВолна10 = 0;
+        private static int _переключательВолна10;
 
         /// <summary>
         /// 0 - 9
@@ -263,7 +276,6 @@ namespace R440O.R440OForms.C300M_1
         public static bool ТумблерУправление { get { return _тумблерУправление; } set { _тумблерУправление = value; ResetParameters(); if (RefreshForm != null) RefreshForm(); } }
         private static bool _тумблерУправление = false;
 
-
         /// <summary>
         /// Возможные состояния: true - ЧТ, false - ОФТ
         /// </summary>
@@ -277,7 +289,13 @@ namespace R440O.R440OForms.C300M_1
                 if (RefreshForm != null) RefreshForm();
             }
         }
-        private static bool _тумблерВведение = false;
+
+        public static string ТумблерВведениеString
+        {
+            get { return _тумблерВведение ? "ЧТ" : "ОФТ"; }
+        }
+
+        private static bool _тумблерВведение;
 
         /// <summary>
         /// Возможные состояния: true - Вкл, false - Откл
@@ -322,6 +340,12 @@ namespace R440O.R440OForms.C300M_1
                 if (RefreshForm != null) RefreshForm();
             }
         }
+
+        public static string ТумблерВидМодуляцииString
+        {
+            get { return _тумблерВидМодуляции ? "ЧТ" : "ОФТ"; }
+        }
+
         private static bool _тумблерВидМодуляции = false;
 
         /// <summary>
@@ -666,7 +690,13 @@ namespace R440O.R440OForms.C300M_1
 
         private static bool ПроверкаПоМаломуШлейфу()
         {
-            return true;
+            var signal = A306Parameters.ВыходнойСигнал1;
+            if (signal != null
+                && signal.Level > 10
+                && signal.Wave == Волна 
+                && signal.Modulation == ТумблерВведениеString 
+                && signal.Modulation == ТумблерВидМодуляцииString) return true;
+            return false;
         }
 
         public delegate void VoidVoidSignature();

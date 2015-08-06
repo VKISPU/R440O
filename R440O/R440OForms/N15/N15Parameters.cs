@@ -717,6 +717,9 @@ namespace R440O.R440OForms.N15
 
         #endregion
 
+        /// <summary>
+        /// Угол от -120 до 120
+        /// </summary>
         public static double РегуляторУровень
         {
             get { return _регуляторУровень; }

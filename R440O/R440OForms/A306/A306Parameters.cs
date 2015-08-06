@@ -1,4 +1,6 @@
 ﻿using System;
+using R440O.BaseClasses;
+using R440O.InternalBlocks;
 using R440O.R440OForms.N15;
 using R440O.R440OForms.N502B;
 
@@ -6,6 +8,56 @@ namespace R440O.Parameters
 {
     public class A306Parameters
     {
+        #region Выход блока
+        public static SignalArgs ВыходнойСигнал1
+        {
+            get
+            {
+                return IsRightSet(0) ? MSHUParameters.ВыходнойСигнал : null;
+            }
+        }
+
+        public static SignalArgs ВыходнойСигнал2
+        {
+            get
+            {
+                return IsRightSet(1) ? MSHUParameters.ВыходнойСигнал : null;
+            }
+        }
+        public static SignalArgs ВыходнойСигнал3
+        {
+            get
+            {
+                return IsRightSet(2) ? MSHUParameters.ВыходнойСигнал : null;
+            }
+        }
+        public static SignalArgs ВыходнойСигнал4
+        {
+            get
+            {
+                return IsRightSet(3) ? MSHUParameters.ВыходнойСигнал : null;
+            }
+        }
+        /// <summary>
+        /// Проверка правильно ли подключён кабель к приемнику.
+        /// </summary>
+        /// <param name="output"></param>
+        /// <returns></returns>
+        private static bool IsRightSet(int output)
+        {
+            if (MSHUParameters.ВыходнойСигнал != null)
+            {
+                var rightOutput = MSHUParameters.ВыходнойСигнал.Wave/500;
+                if (Выходы[rightOutput] == output) return true;
+                if ((Выходы[11] == output || Выходы[12] == output || Выходы[13] == output || Выходы[14] == output) &&
+                    Выходы[rightOutput] == 4) return true;
+                if ((Выходы[15] == output || Выходы[16] == output || Выходы[17] == output || Выходы[18] == output) &&
+                    Выходы[rightOutput] == 5) return true;
+            }
+            return false;
+        } 
+        #endregion
+
         #region Лампочки
         private static bool _лампочкаСетьВкл = false;
         public static bool ЛампочкаСетьВкл
@@ -131,7 +183,7 @@ namespace R440O.Parameters
         }
 
         /// <summary>
-        /// с 0 по 3 - входы каналов, 5 - вход НО1, 6 - вход НО2
+        /// с 0 по 3 - входы каналов, 4 - вход НО1, 5 - вход НО2
         /// true - кабель не воткнут, висит на планке
         /// </summary>
         public static bool[] Входы = { true, true, true, true, true, true };
