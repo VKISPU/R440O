@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using R440O.R440OForms.N502B;
-
-namespace R440O.Parameters
+﻿namespace R440O.R440OForms.BMB
 {
-    class BMBParameters
+    using N502B;
+    using СостоянияЭлементов.БМБ;
+
+    static class BMBParameters
     {
         #region ПереключательРаботаКонтроль
         public static int ПереключательРаботаКонтроль
@@ -15,7 +11,7 @@ namespace R440O.Parameters
             get { return _переключательРаботаКонтроль; }
             set
             {
-                if (value > 0 && value < 3) 
+                if (value > 0 && value < 3)
                     _переключательРаботаКонтроль = value;
                 ResetParameters();
             }
@@ -35,16 +31,17 @@ namespace R440O.Parameters
             set
             {
                 if (value > 0 && value < 4) _BMBПереключательПодключениеРезерва = value;
+                if (RefreshForm != null) { RefreshForm(); }
             }
         }
 
         /// <summary>
         /// Названия положений переключателя подключение резерва
         /// </summary>
-        private static string[] BMBПоложенияПереключательПодключениеРезерва = {
-            "1",
-            "2",
-            "3"
+        private static int[] BMBПоложенияПереключательПодключениеРезерва = {
+            1,
+            2,
+            3
         };
         #endregion
 
@@ -60,102 +57,128 @@ namespace R440O.Parameters
             set
             {
                 if (value > 0 && value < 5) _BMBПереключательНаправление = value;
+                if (RefreshForm != null) { RefreshForm(); }
             }
         }
 
         /// <summary>
         /// Названия положений переключателя направления
         /// </summary>
-        private static string[] BMBПоложенияПереключательНаправление = {
-            "1",
-            "2",
-            "3",
-            "4"
+        private static int[] BMBПоложенияПереключательНаправление = {
+            1,
+            2,
+            3,
+            4
         };
         #endregion
 
         #region Кнопки
-        public static bool КнопкаПередачаВызоваТч
+
+        public static Кнопка КнопкаПередачаВызоваТч
         {
-            get { return _кнопкаПередачаВызоваТч; }
+            get
+            {
+                return N502BParameters.ТумблерВыпрямитель27В
+                       && N502BParameters.ЛампочкаСфазировано 
+                       && КнопкаПитание == Кнопка.Горит 
+                       && _кнопкаПередачаВызоваТч == Кнопка.Нажата
+                    ? Кнопка.Горит
+                    : _кнопкаПередачаВызоваТч;
+            }
             set
             {
                 _кнопкаПередачаВызоваТч = value;
-                ResetParameters();
+                if (RefreshForm != null) RefreshForm();
             }
         }
-        private static bool _кнопкаПередачаВызоваТч;
 
-        public static bool КнопкаПередачаВызоваДк
+        private static Кнопка _кнопкаПередачаВызоваТч;
+
+        public static Кнопка КнопкаПередачаВызоваДк
         {
-            get { return _кнопкаПередачаВызоваДк; }
+            get
+            {
+                return N502BParameters.ТумблерВыпрямитель27В
+                       && N502BParameters.ЛампочкаСфазировано 
+                       && КнопкаПитание == Кнопка.Горит
+                       && _кнопкаПередачаВызоваДк == Кнопка.Нажата
+                    ? Кнопка.Горит
+                    : _кнопкаПередачаВызоваДк;
+            }
             set
             {
                 _кнопкаПередачаВызоваДк = value;
-                ResetParameters();
+                if (RefreshForm != null) RefreshForm();
             }
         }
-        private static bool _кнопкаПередачаВызоваДк;
+        private static Кнопка _кнопкаПередачаВызоваДк;
 
-        public static bool КнопкаСлСвязь
+        public static Кнопка КнопкаСлСвязь
         {
-            get { return _кнопкаСлСвязь; }
+            get
+            {
+                return N502BParameters.ТумблерВыпрямитель27В
+                       && N502BParameters.ЛампочкаСфазировано
+                       && КнопкаПитание == Кнопка.Горит
+                       && _кнопкаСлСвязь == Кнопка.Нажата
+                    ? Кнопка.Горит
+                    : _кнопкаСлСвязь;
+            }
             set
             {
                 _кнопкаСлСвязь = value;
-                ResetParameters();
+                if (RefreshForm != null) RefreshForm();
             }
         }
-        private static bool _кнопкаСлСвязь;
+        private static Кнопка _кнопкаСлСвязь;
 
-        public static bool КнопкаПитание
+        public static Кнопка КнопкаПитание
         {
-            get { return _кнопкаПитание; }
+            get
+            {
+                return N502BParameters.ТумблерВыпрямитель27В
+                     && N502BParameters.ЛампочкаСфазировано
+                     && _кнопкаПитание == Кнопка.Нажата
+                  ? Кнопка.Горит
+                  : _кнопкаПитание;
+            }
             set
             {
                 _кнопкаПитание = value;
-                ResetParameters();
+                if (RefreshForm != null) RefreshForm();
             }
         }
-        private static bool _кнопкаПитание;
+        private static Кнопка _кнопкаПитание;
 
-        public static bool КнопкаЗвСигнал
+        public static Кнопка КнопкаЗвСигнал
         {
             get { return _кнопкаЗвСигнал; }
             set
             {
                 _кнопкаЗвСигнал = value;
-                ResetParameters();
+                if (RefreshForm != null) RefreshForm();
             }
         }
-        private static bool _кнопкаЗвСигнал;
+        private static Кнопка _кнопкаЗвСигнал;
         #endregion
 
         #region Лампочки
         public static bool ЛампочкаДк
         {
-            get { return _лампочкаДк; }
-            set
+            get
             {
-                _лампочкаДк = value;
-                if (RefreshForm != null)
-                {
-                    RefreshForm();
-                }
+                return КнопкаПитание == Кнопка.Горит && КнопкаПередачаВызоваДк == Кнопка.Горит &&
+                       ПереключательРаботаКонтроль == 2;
             }
         }
         private static bool _лампочкаДк;
 
         public static bool ЛампочкаТч
         {
-            get { return _лампочкаТч; }
-            set
+            get
             {
-                _лампочкаТч = value;
-                if (RefreshForm != null)
-                {
-                    RefreshForm();
-                }
+                return КнопкаПитание == Кнопка.Горит && КнопкаПередачаВызоваТч == Кнопка.Горит &&
+                       ПереключательРаботаКонтроль == 2;
             }
         }
         private static bool _лампочкаТч;
@@ -170,10 +193,7 @@ namespace R440O.Parameters
 
         public static void ResetParameters()
         {
-            ЛампочкаДк = КнопкаПитание && КнопкаПередачаВызоваДк && N502BParameters.ТумблерВыпрямитель27В 
-                && N502BParameters.ЛампочкаСфазировано && ПереключательРаботаКонтроль == 2;
-            ЛампочкаТч = КнопкаПитание && КнопкаПередачаВызоваТч && N502BParameters.ТумблерВыпрямитель27В
-                && N502BParameters.ЛампочкаСфазировано && ПереключательРаботаКонтроль == 2;
+            if (RefreshForm != null) RefreshForm();
         }
 
         public delegate void VoidVoidSignature();

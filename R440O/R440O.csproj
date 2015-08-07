@@ -531,6 +531,7 @@
     <Compile Include="BaseClasses\IRefreshableForm.cs" />
     <Compile Include="BaseClasses\SignalArgs.cs" />
     <Compile Include="ThirdParty\TransformImageHelper.cs" />
+    <Compile Include="СостоянияЭлементов\БМБ.cs" />
     <EmbeddedResource Include="BackgroundImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>

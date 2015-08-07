@@ -9,6 +9,7 @@ using R440O.R440OForms.C300M_2;
 using R440O.R440OForms.C300M_3;
 using R440O.R440OForms.C300M_4;
 using R440O.R440OForms.A304;
+using R440O.R440OForms.BMB;
 using R440O.R440OForms.N15;
 
 namespace R440O.R440OForms.N502B

@@ -11,6 +11,19 @@ namespace R440O.ThirdParty
     public static class TransformImageHelper
     {
         /// <summary>
+        /// Scale the image by size.
+        /// </summary>
+        public static Bitmap Scale(System.Drawing.Image oldBitmap, float size)
+        {
+            var newBitmap = new Bitmap(oldBitmap.Width, oldBitmap.Height);
+            var graphics = Graphics.FromImage(newBitmap);
+            graphics.ScaleTransform(size, size);
+            graphics.DrawImage(oldBitmap, new Point(5, 5));
+            return newBitmap;
+        }
+
+
+        /// <summary>
         /// Rotates the image by angle.
         /// </summary>
         /// <param name="oldBitmap">The old bitmap.</param>
