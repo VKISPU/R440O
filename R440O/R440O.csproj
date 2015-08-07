@@ -63,6 +63,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ControlElementImages.resx</DependentUpon>
     </Compile>
+    <Compile Include="СостоянияЭлементов\БМА_М.cs" />
     <Compile Include="InternalBlocks\A503BParameters.cs" />
     <Compile Include="InternalBlocks\MSHUParameters.cs" />
     <Compile Include="ParametersConfig.cs" />
@@ -98,7 +99,7 @@
     <Compile Include="Parameters\PU_K1_1Parameters.cs" />
     <Compile Include="Parameters\B3_2Parameters.cs" />
     <Compile Include="Parameters\BMA_M_2Parameters.cs" />
-    <Compile Include="Parameters\BMA_M_1Parameters.cs" />
+    <Compile Include="R440OForms\BMA_M_1\BMA_M_1Parameters.cs" />
     <Compile Include="R440OForms\BMB\BMBParameters.cs" />
     <Compile Include="Parameters\DAB_5Parameters.cs" />
     <Compile Include="R440OForms\C300M_2\C300M_2Parameters.cs" />

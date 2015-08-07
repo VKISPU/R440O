@@ -9,6 +9,7 @@ namespace R440O.R440OForms.BMA_M_1
     using System.Windows.Forms;
     using Parameters;
     using ThirdParty;
+
     /// <summary>
     /// Форма блока БМА-М-1
     /// </summary>
@@ -28,15 +29,15 @@ namespace R440O.R440OForms.BMA_M_1
         {
             if (e.Button == MouseButtons.Left)
             {
-                BMA_M_1Parameters.BMA_M_1ПереключательКонтроль += 1;
+                BMA_M_1Parameters.ПереключательКонтроль += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                BMA_M_1Parameters.BMA_M_1ПереключательКонтроль -= 1;
+                BMA_M_1Parameters.ПереключательКонтроль -= 1;
             }
 
-            var angle = BMA_M_1Parameters.BMA_M_1ПереключательКонтроль * 30 - 100;
+            var angle = (int)BMA_M_1Parameters.ПереключательКонтроль * 30 - 100;
             BMA_M_1ПереключательКонтроль.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
@@ -45,15 +46,15 @@ namespace R440O.R440OForms.BMA_M_1
         {
             if (e.Button == MouseButtons.Left)
             {
-                BMA_M_1Parameters.BMA_M_1ПереключательРекурента += 1;
+                BMA_M_1Parameters.ПереключательРекуррента += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                BMA_M_1Parameters.BMA_M_1ПереключательРекурента -= 1;
+                BMA_M_1Parameters.ПереключательРекуррента -= 1;
             }
 
-            var angle = BMA_M_1Parameters.BMA_M_1ПереключательРекурента * 30 - 70;
+            var angle = (int)BMA_M_1Parameters.ПереключательРекуррента * 30 - 70;
             BMA_M_1ПереключательРекурента.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
@@ -62,15 +63,15 @@ namespace R440O.R440OForms.BMA_M_1
         {
             if (e.Button == MouseButtons.Left)
             {
-                BMA_M_1Parameters.BMA_M_1ПереключательРежимРаботы += 1;
+                BMA_M_1Parameters.ПереключательРежимРаботы += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                BMA_M_1Parameters.BMA_M_1ПереключательРежимРаботы -= 1;
+                BMA_M_1Parameters.ПереключательРежимРаботы -= 1;
             }
 
-            var angle = BMA_M_1Parameters.BMA_M_1ПереключательРежимРаботы * 30 - 70;
+            var angle = (int)BMA_M_1Parameters.ПереключательРежимРаботы * 30 - 70;
             BMA_M_1ПереключательРежимРаботы.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
@@ -79,15 +80,15 @@ namespace R440O.R440OForms.BMA_M_1
         {
             if (e.Button == MouseButtons.Left)
             {
-                BMA_M_1Parameters.BMA_M_1ПереключательКоррАЧХ += 1;
+                BMA_M_1Parameters.ПереключательКоррАЧХ += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                BMA_M_1Parameters.BMA_M_1ПереключательКоррАЧХ -= 1;
+                BMA_M_1Parameters.ПереключательКоррАЧХ -= 1;
             }
 
-            var angle = BMA_M_1Parameters.BMA_M_1ПереключательКоррАЧХ * 30 - 100;
+            var angle = (int)BMA_M_1Parameters.ПереключательКоррАЧХ * 30 - 100;
             BMA_M_1ПереключательКоррАЧХ.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
@@ -96,15 +97,15 @@ namespace R440O.R440OForms.BMA_M_1
         {
             if (e.Button == MouseButtons.Left)
             {
-                BMA_M_1Parameters.BMA_M_1ПереключательЧастотаВызова += 1;
+                BMA_M_1Parameters.ПереключательЧастотаВызова += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                BMA_M_1Parameters.BMA_M_1ПереключательЧастотаВызова -= 1;
+                BMA_M_1Parameters.ПереключательЧастотаВызова -= 1;
             }
 
-            var angle = BMA_M_1Parameters.BMA_M_1ПереключательЧастотаВызова * 30 - 70;
+            var angle = (int)BMA_M_1Parameters.ПереключательЧастотаВызова * 30 - 70;
             BMA_M_1ПереключательЧастотаВызова.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
@@ -113,15 +114,15 @@ namespace R440O.R440OForms.BMA_M_1
         {
             if (e.Button == MouseButtons.Left)
             {
-                BMA_M_1Parameters.BMA_M_1ПереключательУровниСигналаПрдПрм += 1;
+                BMA_M_1Parameters.ПереключательУровниСигналаПрдПрм += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                BMA_M_1Parameters.BMA_M_1ПереключательУровниСигналаПрдПрм -= 1;
+                BMA_M_1Parameters.ПереключательУровниСигналаПрдПрм -= 1;
             }
 
-            var angle = BMA_M_1Parameters.BMA_M_1ПереключательУровниСигналаПрдПрм * 30 - 70;
+            var angle = (int)BMA_M_1Parameters.ПереключательУровниСигналаПрдПрм * 30 - 70;
             BMA_M_1ПереключательУровниСигналаПрдПрм.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
@@ -130,15 +131,15 @@ namespace R440O.R440OForms.BMA_M_1
         {
             if (e.Button == MouseButtons.Left)
             {
-                BMA_M_1Parameters.BMA_M_1ПереключательРежимы += 1;
+                BMA_M_1Parameters.ПереключательРежимы += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                BMA_M_1Parameters.BMA_M_1ПереключательРежимы -= 1;
+                BMA_M_1Parameters.ПереключательРежимы -= 1;
             }
 
-            var angle = BMA_M_1Parameters.BMA_M_1ПереключательРежимы * 30 - 70;
+            var angle = (int)BMA_M_1Parameters.ПереключательРежимы * 30 - 70;
             BMA_M_1ПереключательРежимы.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
@@ -147,15 +148,15 @@ namespace R440O.R440OForms.BMA_M_1
         {
             if (e.Button == MouseButtons.Left)
             {
-                BMA_M_1Parameters.BMA_M_1ПереключательЗапретЗапроса += 1;
+                BMA_M_1Parameters.ПереключательЗапретЗапроса += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                BMA_M_1Parameters.BMA_M_1ПереключательЗапретЗапроса -= 1;
+                BMA_M_1Parameters.ПереключательЗапретЗапроса -= 1;
             }
 
-            var angle = BMA_M_1Parameters.BMA_M_1ПереключательЗапретЗапроса * 30 - 45;
+            var angle = (int)BMA_M_1Parameters.ПереключательЗапретЗапроса * 30 - 45;
             BMA_M_1ПереключательЗапретЗапроса.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
@@ -164,25 +165,24 @@ namespace R440O.R440OForms.BMA_M_1
         {
             if (e.Button == MouseButtons.Left)
             {
-                BMA_M_1Parameters.BMA_M_1ПереключательКоррКанала += 1;
+                BMA_M_1Parameters.ПереключательКоррКанала += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                BMA_M_1Parameters.BMA_M_1ПереключательКоррКанала -= 1;
+                BMA_M_1Parameters.ПереключательКоррКанала -= 1;
             }
 
-            var angle = BMA_M_1Parameters.BMA_M_1ПереключательКоррКанала * 30 - 45;
+            var angle = (int)BMA_M_1Parameters.ПереключательКоррКанала * 30 - 45;
             BMA_M_1ПереключательКоррКанала.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
         #endregion
 
-
         #region Кнопки
         private void BMA_M_1КнопкаШлейфТЧ_Click(object sender, System.EventArgs e)
         {
-            if (BMA_M_1Parameters.BMA_M_1КнопкаШлейфТЧ)
+            if (BMA_M_1Parameters.КнопкаШлейфТЧ)
             {
                 this.BMA_M_1КнопкаШлейфТЧ.BackgroundImage = ControlElementImages.buttonSquareYellow;
                 this.BMA_M_1КнопкаШлейфТЧ.Text = "ТЧ";
@@ -192,12 +192,12 @@ namespace R440O.R440OForms.BMA_M_1
                 this.BMA_M_1КнопкаШлейфТЧ.BackgroundImage = null;
                 this.BMA_M_1КнопкаШлейфТЧ.Text = string.Empty;
             }
-            BMA_M_1Parameters.BMA_M_1КнопкаШлейфТЧ = !BMA_M_1Parameters.BMA_M_1КнопкаШлейфТЧ;
+            BMA_M_1Parameters.КнопкаШлейфТЧ = !BMA_M_1Parameters.КнопкаШлейфТЧ;
         }
 
         private void BMA_M_1КнопкаШлейфДК_Click(object sender, System.EventArgs e)
         {
-            if (BMA_M_1Parameters.BMA_M_1КнопкаШлейфДК)
+            if (BMA_M_1Parameters.КнопкаШлейфДК)
             {
                 this.BMA_M_1КнопкаШлейфДК.BackgroundImage = ControlElementImages.buttonSquareYellow;
                 this.BMA_M_1КнопкаШлейфДК.Text = "ДК";
@@ -207,7 +207,7 @@ namespace R440O.R440OForms.BMA_M_1
                 this.BMA_M_1КнопкаШлейфДК.BackgroundImage = null;
                 this.BMA_M_1КнопкаШлейфДК.Text = string.Empty;
             }
-            BMA_M_1Parameters.BMA_M_1КнопкаШлейфДК = !BMA_M_1Parameters.BMA_M_1КнопкаШлейфДК;
+            BMA_M_1Parameters.КнопкаШлейфДК = !BMA_M_1Parameters.КнопкаШлейфДК;
         }
 
         private void BMA_M_1КнопкаПроверка_MouseUp(object sender, MouseEventArgs e)
@@ -228,10 +228,10 @@ namespace R440O.R440OForms.BMA_M_1
             this.BMA_M_1КнопкаПитаниеВЫКЛ.Text = string.Empty;
             this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = null;
 
-            if (BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВКЛ)
+            if (BMA_M_1Parameters.КнопкаПитаниеВКЛ)
             {
-                BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВЫКЛ = true;
-                BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВКЛ = false;
+                BMA_M_1Parameters.КнопкаПитаниеВЫКЛ = true;
+                BMA_M_1Parameters.КнопкаПитаниеВКЛ = false;
                 this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
             }
         }
@@ -239,12 +239,12 @@ namespace R440O.R440OForms.BMA_M_1
         private void BMA_M_1КнопкаПитаниеВЫКЛ_MouseUp(object sender, MouseEventArgs e)
         {
             this.BMA_M_1КнопкаПитаниеВЫКЛ.Text = "ВЫКЛ";
-            if (BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВЫКЛ)
+            if (BMA_M_1Parameters.КнопкаПитаниеВЫКЛ)
                 this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOn;
             else
             {
                 this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
-                BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВКЛ = !BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВКЛ;
+                BMA_M_1Parameters.КнопкаПитаниеВКЛ = !BMA_M_1Parameters.КнопкаПитаниеВКЛ;
             }
         }
 
@@ -253,10 +253,10 @@ namespace R440O.R440OForms.BMA_M_1
             this.BMA_M_1КнопкаПитаниеВКЛ.Text = string.Empty;
             this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = null;
 
-            if (BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВЫКЛ)
+            if (BMA_M_1Parameters.КнопкаПитаниеВЫКЛ)
             {
-                BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВКЛ = true;
-                BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВЫКЛ = false;
+                BMA_M_1Parameters.КнопкаПитаниеВКЛ = true;
+                BMA_M_1Parameters.КнопкаПитаниеВЫКЛ = false;
                 this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
             }
         }
@@ -264,61 +264,60 @@ namespace R440O.R440OForms.BMA_M_1
         private void BMA_M_1КнопкаПитаниеВКЛ_MouseUp(object sender, MouseEventArgs e)
         {
             this.BMA_M_1КнопкаПитаниеВКЛ.Text = "ВКЛ";
-            if (BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВКЛ)
+            if (BMA_M_1Parameters.КнопкаПитаниеВКЛ)
                 this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOn;
             else
             {
                 this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
-                BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВКЛ = !BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВКЛ;
+                BMA_M_1Parameters.КнопкаПитаниеВКЛ = !BMA_M_1Parameters.КнопкаПитаниеВКЛ;
             }
 
         }
         #endregion
 
-
         #region Инициализация
         private void InitializeTogglesPosition()
         {
-            var angle = BMA_M_1Parameters.BMA_M_1ПереключательКонтроль * 30 - 100;
+            var angle = (int)BMA_M_1Parameters.ПереключательКонтроль * 30 - 100;
             BMA_M_1ПереключательКонтроль.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = BMA_M_1Parameters.BMA_M_1ПереключательРекурента * 30 - 70;
+            angle = (int)BMA_M_1Parameters.ПереключательРекуррента * 30 - 70;
             BMA_M_1ПереключательРекурента.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = BMA_M_1Parameters.BMA_M_1ПереключательРежимРаботы * 30 - 70;
+            angle = (int)BMA_M_1Parameters.ПереключательРежимРаботы * 30 - 70;
             BMA_M_1ПереключательРежимРаботы.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = BMA_M_1Parameters.BMA_M_1ПереключательКоррАЧХ * 30 - 100;
+            angle = (int)BMA_M_1Parameters.ПереключательКоррАЧХ * 30 - 100;
             BMA_M_1ПереключательКоррАЧХ.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = BMA_M_1Parameters.BMA_M_1ПереключательЧастотаВызова * 30 - 70;
+            angle = (int)BMA_M_1Parameters.ПереключательЧастотаВызова * 30 - 70;
             BMA_M_1ПереключательЧастотаВызова.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = BMA_M_1Parameters.BMA_M_1ПереключательУровниСигналаПрдПрм * 30 - 70;
+            angle = (int)BMA_M_1Parameters.ПереключательУровниСигналаПрдПрм * 30 - 70;
             BMA_M_1ПереключательУровниСигналаПрдПрм.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = BMA_M_1Parameters.BMA_M_1ПереключательРежимы * 30 - 70;
+            angle = (int)BMA_M_1Parameters.ПереключательРежимы * 30 - 70;
             BMA_M_1ПереключательРежимы.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = BMA_M_1Parameters.BMA_M_1ПереключательЗапретЗапроса * 30 - 45;
+            angle = (int)BMA_M_1Parameters.ПереключательЗапретЗапроса * 30 - 45;
             BMA_M_1ПереключательЗапретЗапроса.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = BMA_M_1Parameters.BMA_M_1ПереключательКоррКанала * 30 - 45;
+            angle = (int)BMA_M_1Parameters.ПереключательКоррКанала * 30 - 45;
             BMA_M_1ПереключательКоррКанала.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
 
         private void InitializeButtonsPosition()
         {
-            if (BMA_M_1Parameters.BMA_M_1КнопкаШлейфТЧ)
+            if (BMA_M_1Parameters.КнопкаШлейфТЧ)
             {
                 this.BMA_M_1КнопкаШлейфТЧ.BackgroundImage = null;
                 this.BMA_M_1КнопкаШлейфТЧ.Text = string.Empty;
@@ -329,7 +328,7 @@ namespace R440O.R440OForms.BMA_M_1
                 this.BMA_M_1КнопкаШлейфТЧ.Text = "ТЧ";
             }
 
-            if (BMA_M_1Parameters.BMA_M_1КнопкаШлейфДК)
+            if (BMA_M_1Parameters.КнопкаШлейфДК)
             {
                 this.BMA_M_1КнопкаШлейфДК.BackgroundImage = null;
                 this.BMA_M_1КнопкаШлейфДК.Text = string.Empty;
@@ -340,11 +339,11 @@ namespace R440O.R440OForms.BMA_M_1
                 this.BMA_M_1КнопкаШлейфДК.Text = "ДК";
             }
 
-            this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВКЛ
+            this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = BMA_M_1Parameters.КнопкаПитаниеВКЛ
                 ? ControlElementImages.buttonSquareBlueOn
                 : ControlElementImages.buttonSquareBlueOff;
 
-            this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = BMA_M_1Parameters.BMA_M_1КнопкаПитаниеВЫКЛ
+            this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = BMA_M_1Parameters.КнопкаПитаниеВЫКЛ
                 ? ControlElementImages.buttonSquareBlueOn
                 : ControlElementImages.buttonSquareBlueOff;
         }
