@@ -12,6 +12,7 @@ using R440O.R440OForms.C300M_3;
 using R440O.R440OForms.C300M_4;
 using R440O.R440OForms.A304;
 using R440O.R440OForms.A306;
+using R440O.R440OForms.BMA_M_1;
 
 namespace R440O.R440OForms.N15
 {
@@ -567,13 +568,21 @@ namespace R440O.R440OForms.N15
         public static bool ЛампочкаБМА_1
         {
             get { return _лампочкаБма1; }
-            set { _лампочкаБма1 = value; }
+            set 
+            { 
+                _лампочкаБма1 = value;
+                BMA_M_1Parameters.ResetParameters();
+            }
         }
 
         public static bool ЛампочкаБМА_2
         {
             get { return _лампочкаБма2; }
-            set { _лампочкаБма2 = value; }
+            set 
+            { 
+                _лампочкаБма2 = value;
+                BMA_M_1Parameters.ResetParameters();
+            }
         }
 
         public static bool Лампочка27В
@@ -735,7 +744,8 @@ namespace R440O.R440OForms.N15
             Лампочка27В = (N502BParameters.ЛампочкаСфазировано
                           && N502BParameters.ТумблерЭлектрооборудование
                           && N502BParameters.ТумблерВыпрямитель27В);
-
+            ЛампочкаБМА_1 = Лампочка27В && ЛампочкаН15БП && ТумблерБМА_1;
+            ЛампочкаБМА_2 = Лампочка27В && ЛампочкаН15БП && ТумблерБМА_2;
             ЛампочкаМШУ = Лампочка27В && ТумблерМШУ;
             ЛампочкаА306 = ЛампочкаМШУ;
             ЛампочкаА3041 = ЛампочкаМШУ && A304Parameters.Лампочка1К;

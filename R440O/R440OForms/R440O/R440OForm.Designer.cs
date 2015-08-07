@@ -50,7 +50,6 @@
             this.R440OButtonB2_1 = new System.Windows.Forms.Button();
             this.R440OButtonB1_2 = new System.Windows.Forms.Button();
             this.R440OButtonPowerShield = new System.Windows.Forms.Button();
-            this.R440OButtonNKN_2 = new System.Windows.Forms.Button();
             this.R440OButtonNKN_1 = new System.Windows.Forms.Button();
             this.R440OButtonN18_M = new System.Windows.Forms.Button();
             this.R440OButtonN16 = new System.Windows.Forms.Button();
@@ -69,7 +68,6 @@
             this.R440OButtonP220_27G_2 = new System.Windows.Forms.Button();
             this.R440OButtonBMB = new System.Windows.Forms.Button();
             this.R440OButtonBMA_M_2 = new System.Windows.Forms.Button();
-            this.R440OButtonBMA_M_1 = new System.Windows.Forms.Button();
             this.R440OButtonAstra = new System.Windows.Forms.Button();
             this.R440OButtonC300PM_1 = new System.Windows.Forms.Button();
             this.R440OButtonC300M_4 = new System.Windows.Forms.Button();
@@ -89,6 +87,8 @@
             this.R440OButtonA205M_2 = new System.Windows.Forms.Button();
             this.R440OButtonA205M_1 = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.R440OButtonNKN_2 = new System.Windows.Forms.Button();
+            this.R440OButtonBMA_M_1 = new System.Windows.Forms.Button();
             this.R440OPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -460,21 +460,6 @@
             this.R440OButtonPowerShield.UseVisualStyleBackColor = false;
             this.R440OButtonPowerShield.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
-            // R440OButtonNKN_2
-            // 
-            this.R440OButtonNKN_2.BackColor = System.Drawing.Color.Transparent;
-            this.R440OButtonNKN_2.FlatAppearance.BorderSize = 0;
-            this.R440OButtonNKN_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.R440OButtonNKN_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.R440OButtonNKN_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.R440OButtonNKN_2.Location = new System.Drawing.Point(530, 60);
-            this.R440OButtonNKN_2.Name = "R440OButtonNKN_2";
-            this.R440OButtonNKN_2.Size = new System.Drawing.Size(69, 54);
-            this.R440OButtonNKN_2.TabIndex = 38;
-            this.toolTip1.SetToolTip(this.R440OButtonNKN_2, "НКН-2");
-            this.R440OButtonNKN_2.UseVisualStyleBackColor = false;
-            this.R440OButtonNKN_2.Click += new System.EventHandler(this.R440OButtonCommon_Click);
-            // 
             // R440OButtonNKN_1
             // 
             this.R440OButtonNKN_1.BackColor = System.Drawing.Color.Transparent;
@@ -737,28 +722,13 @@
             this.R440OButtonBMA_M_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.R440OButtonBMA_M_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.R440OButtonBMA_M_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.R440OButtonBMA_M_2.Location = new System.Drawing.Point(561, 230);
+            this.R440OButtonBMA_M_2.Location = new System.Drawing.Point(517, 6);
             this.R440OButtonBMA_M_2.Name = "R440OButtonBMA_M_2";
             this.R440OButtonBMA_M_2.Size = new System.Drawing.Size(82, 51);
             this.R440OButtonBMA_M_2.TabIndex = 20;
             this.toolTip1.SetToolTip(this.R440OButtonBMA_M_2, "БМА-М/2");
             this.R440OButtonBMA_M_2.UseVisualStyleBackColor = false;
             this.R440OButtonBMA_M_2.Click += new System.EventHandler(this.R440OButtonCommon_Click);
-            // 
-            // R440OButtonBMA_M_1
-            // 
-            this.R440OButtonBMA_M_1.BackColor = System.Drawing.Color.Transparent;
-            this.R440OButtonBMA_M_1.FlatAppearance.BorderSize = 0;
-            this.R440OButtonBMA_M_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.R440OButtonBMA_M_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.R440OButtonBMA_M_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.R440OButtonBMA_M_1.Location = new System.Drawing.Point(515, 8);
-            this.R440OButtonBMA_M_1.Name = "R440OButtonBMA_M_1";
-            this.R440OButtonBMA_M_1.Size = new System.Drawing.Size(84, 51);
-            this.R440OButtonBMA_M_1.TabIndex = 19;
-            this.toolTip1.SetToolTip(this.R440OButtonBMA_M_1, "БМА-М/1");
-            this.R440OButtonBMA_M_1.UseVisualStyleBackColor = false;
-            this.R440OButtonBMA_M_1.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
             // R440OButtonAstra
             // 
@@ -1036,6 +1006,36 @@
             this.toolTip1.OwnerDraw = true;
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
+            // R440OButtonNKN_2
+            // 
+            this.R440OButtonNKN_2.BackColor = System.Drawing.Color.Transparent;
+            this.R440OButtonNKN_2.FlatAppearance.BorderSize = 0;
+            this.R440OButtonNKN_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.R440OButtonNKN_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.R440OButtonNKN_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.R440OButtonNKN_2.Location = new System.Drawing.Point(530, 60);
+            this.R440OButtonNKN_2.Name = "R440OButtonNKN_2";
+            this.R440OButtonNKN_2.Size = new System.Drawing.Size(69, 54);
+            this.R440OButtonNKN_2.TabIndex = 38;
+            this.toolTip1.SetToolTip(this.R440OButtonNKN_2, "НКН-2");
+            this.R440OButtonNKN_2.UseVisualStyleBackColor = false;
+            this.R440OButtonNKN_2.Click += new System.EventHandler(this.R440OButtonCommon_Click);
+            // 
+            // R440OButtonBMA_M_1
+            // 
+            this.R440OButtonBMA_M_1.BackColor = System.Drawing.Color.Transparent;
+            this.R440OButtonBMA_M_1.FlatAppearance.BorderSize = 0;
+            this.R440OButtonBMA_M_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.R440OButtonBMA_M_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.R440OButtonBMA_M_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.R440OButtonBMA_M_1.Location = new System.Drawing.Point(559, 231);
+            this.R440OButtonBMA_M_1.Name = "R440OButtonBMA_M_1";
+            this.R440OButtonBMA_M_1.Size = new System.Drawing.Size(84, 51);
+            this.R440OButtonBMA_M_1.TabIndex = 19;
+            this.toolTip1.SetToolTip(this.R440OButtonBMA_M_1, "БМА-М/1");
+            this.R440OButtonBMA_M_1.UseVisualStyleBackColor = false;
+            this.R440OButtonBMA_M_1.Click += new System.EventHandler(this.R440OButtonCommon_Click);
+            // 
             // R440OForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1071,7 +1071,6 @@
         private System.Windows.Forms.Button R440OButtonC300M_4;
         private System.Windows.Forms.Button R440OButtonC300PM_1;
         private System.Windows.Forms.Button R440OButtonAstra;
-        private System.Windows.Forms.Button R440OButtonBMA_M_1;
         private System.Windows.Forms.Button R440OButtonBMA_M_2;
         private System.Windows.Forms.Button R440OButtonBMB;
         private System.Windows.Forms.Button R440OButtonP220_27G_2;
@@ -1090,7 +1089,6 @@
         private System.Windows.Forms.Button R440OButtonN16;
         private System.Windows.Forms.Button R440OButtonN18_M;
         private System.Windows.Forms.Button R440OButtonNKN_1;
-        private System.Windows.Forms.Button R440OButtonNKN_2;
         private System.Windows.Forms.Button R440OButtonPowerShield;
         private System.Windows.Forms.Button R440OButtonB1_2;
         private System.Windows.Forms.Button R440OButtonB2_1;
@@ -1112,6 +1110,8 @@
         private System.Windows.Forms.Button R440OButtonWattmeter;
         private System.Windows.Forms.Button R440OButtonOrderScheme;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button R440OButtonNKN_2;
+        private System.Windows.Forms.Button R440OButtonBMA_M_1;
     }
 }
 

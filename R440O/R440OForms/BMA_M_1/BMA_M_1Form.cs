@@ -7,8 +7,10 @@
 namespace R440O.R440OForms.BMA_M_1
 {
     using System.Windows.Forms;
+    using System.Reflection;
     using Parameters;
     using ThirdParty;
+    using System;
 
     /// <summary>
     /// Форма блока БМА-М-1
@@ -21,8 +23,8 @@ namespace R440O.R440OForms.BMA_M_1
         public BMA_M_1Form()
         {
             this.InitializeComponent();
-            this.InitializeTogglesPosition();
-            this.InitializeButtonsPosition();
+            BMA_M_1Parameters.RefreshForm += RefreshForm;
+            RefreshForm();
         }
         #region Переключатели
         private void BMA_M_1ПереключательКонтроль_MouseUp(object sender, MouseEventArgs e)
@@ -275,9 +277,9 @@ namespace R440O.R440OForms.BMA_M_1
         }
         #endregion
 
-        #region Инициализация
-        private void InitializeTogglesPosition()
+        public void RefreshForm()
         {
+            #region Переключатели
             var angle = (int)BMA_M_1Parameters.ПереключательКонтроль * 30 - 100;
             BMA_M_1ПереключательКонтроль.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
@@ -313,10 +315,9 @@ namespace R440O.R440OForms.BMA_M_1
             angle = (int)BMA_M_1Parameters.ПереключательКоррКанала * 30 - 45;
             BMA_M_1ПереключательКоррКанала.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
-        }
+            #endregion
 
-        private void InitializeButtonsPosition()
-        {
+            #region Кнопки
             if (BMA_M_1Parameters.КнопкаШлейфТЧ)
             {
                 this.BMA_M_1КнопкаШлейфТЧ.BackgroundImage = null;
@@ -346,8 +347,29 @@ namespace R440O.R440OForms.BMA_M_1
             this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = BMA_M_1Parameters.КнопкаПитаниеВЫКЛ
                 ? ControlElementImages.buttonSquareBlueOn
                 : ControlElementImages.buttonSquareBlueOff;
-        }
-        #endregion
+            #endregion
 
+            foreach (Control item in BMA_M_1Panel.Controls)
+            {
+                if (item.Name.Contains("Лампочка"))
+                {
+                    PropertyInfo[] fieldList = typeof(BMA_M_1Parameters).GetProperties();
+                    foreach (PropertyInfo property in fieldList)
+                    {
+                        if (item.Name == property.Name)
+                        {
+                            if (!(item.Name == "ЛампочкаИсправно" || item.Name == "ЛампочкаНеисправно"
+                                || item.Name == "ЛампочкаРРР" || item.Name == "ЛампочкаДист"))
+                            {
+                                item.BackgroundImage = Convert.ToBoolean(property.GetValue(null))
+                                    ? ControlElementImages.lampType7OnRed
+                                    : null;
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
