@@ -4,6 +4,8 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+using System.Drawing;
+
 namespace R440O.R440OForms.BMB
 {
     using System.Windows.Forms;
@@ -125,6 +127,9 @@ namespace R440O.R440OForms.BMB
             ЛампочкаДк.BackgroundImage = BMBParameters.ЛампочкаДк
                 ? ControlElementImages.lampType7OnRed
                 : null;
+
+            ЛампочкаПриемВызова.BackColor = BMBParameters.ЛампочкаПриемВызова ? Color.FromArgb(100, 50, 250, 50) : Color.Transparent;
+
         }
 
         #region Кнопки
