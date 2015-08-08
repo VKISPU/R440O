@@ -26,6 +26,7 @@ namespace R440O.R440OForms.BMA_M_1
             BMA_M_1Parameters.RefreshForm += RefreshForm;
             RefreshForm();
         }
+
         #region Переключатели
         private void BMA_M_1ПереключательКонтроль_MouseUp(object sender, MouseEventArgs e)
         {
@@ -339,7 +340,6 @@ namespace R440O.R440OForms.BMA_M_1
                 this.BMA_M_1КнопкаШлейфДК.BackgroundImage = ControlElementImages.buttonSquareYellow;
                 this.BMA_M_1КнопкаШлейфДК.Text = "ДК";
             }
-
             this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = BMA_M_1Parameters.КнопкаПитаниеВкл
                 ? ControlElementImages.buttonSquareBlueOn
                 : ControlElementImages.buttonSquareBlueOff;
@@ -351,25 +351,40 @@ namespace R440O.R440OForms.BMA_M_1
 
             foreach (Control item in BMA_M_1Panel.Controls)
             {
-                if (item.Name.Contains("Лампочка"))
+                if (item.Name.Contains("ЛампочкаРекуррента"))
                 {
                     PropertyInfo[] fieldList = typeof(BMA_M_1Parameters).GetProperties();
                     foreach (PropertyInfo property in fieldList)
                     {
                         if (item.Name == property.Name)
                         {
-                            if (!(item.Name == "ЛампочкаИсправно" || item.Name == "ЛампочкаНеисправно"
-                                || item.Name == "ЛампочкаРРР" || item.Name == "ЛампочкаДист"))
-                            {
-                                item.BackgroundImage = Convert.ToBoolean(property.GetValue(null))
-                                    ? ControlElementImages.lampType7OnRed
-                                    : null;
-                                break;
-                            }
+                            item.BackgroundImage = Convert.ToBoolean(property.GetValue(null))
+                            ? ControlElementImages.lampType7OnRed
+                            : null;
+                            break;
                         }
                     }
                 }
             }
+
+            if (BMA_M_1Parameters.ЛампочкаДК)
+            {
+                ЛампочкаДК.BackgroundImage = ControlElementImages.lampType7OnRed;
+            }
+            else
+            {
+                ЛампочкаДК.BackgroundImage = null;
+            }
+
+            if (BMA_M_1Parameters.ЛампочкаТЧБ)
+            {
+                ЛампочкаТЧБ.BackgroundImage = ControlElementImages.lampType7OnRed;
+            }
+            else
+            {
+                ЛампочкаТЧБ.BackgroundImage = null;
+            }
+
         }
     }
 }

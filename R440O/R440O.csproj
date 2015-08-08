@@ -63,6 +63,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ControlElementImages.resx</DependentUpon>
     </Compile>
+    <Compile Include="ThirdParty\EasyTimer.cs" />
     <Compile Include="СостоянияЭлементов\БМА_М.cs" />
     <Compile Include="InternalBlocks\A503BParameters.cs" />
     <Compile Include="InternalBlocks\MSHUParameters.cs" />

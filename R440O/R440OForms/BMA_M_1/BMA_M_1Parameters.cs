@@ -171,9 +171,21 @@ namespace R440O.Parameters
         #endregion
 
         #region Лампочки
-        public static bool ЛампочкаТЧБ = false;
+        public static bool ЛампочкаТЧБ
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_1;
+            }
+        }
         public static bool ЛампочкаФЗ = false;
-        public static bool ЛампочкаДК = false;
+        public static bool ЛампочкаДК 
+        { 
+            get 
+            { 
+                return N15Parameters.ЛампочкаБМА_1; 
+            } 
+        }
         public static bool ЛампочкаСинхрТЧ = false;
         public static bool ЛампочкаСинхрДК = false;
         public static bool ЛампочкаПрдТЧ = false;
@@ -198,26 +210,26 @@ namespace R440O.Parameters
 
         public static bool ЛампочкаРекуррента15
         {
-            get 
+            get
             {
-                return N15Parameters.ЛампочкаБМА_1 && ПереключательРекуррента == EПереключательРекуррента._15; 
+                return N15Parameters.ЛампочкаБМА_1 && ПереключательРекуррента == EПереключательРекуррента._15;
             }
         }
-        public static bool ЛампочкаРекуррента31 
+        public static bool ЛампочкаРекуррента31
         {
             get
             {
                 return N15Parameters.ЛампочкаБМА_1 && ПереключательРекуррента == EПереключательРекуррента._31;
             }
         }
-        public static bool ЛампочкаРекуррента511 
+        public static bool ЛампочкаРекуррента511
         {
             get
             {
                 return N15Parameters.ЛампочкаБМА_1 && ПереключательРекуррента == EПереключательРекуррента._511;
             }
         }
-        public static bool ЛампочкаРекуррента1023 
+        public static bool ЛампочкаРекуррента1023
         {
             get
             {
@@ -231,7 +243,7 @@ namespace R440O.Parameters
         public static bool ЛампочкаНеисправно = false;
         public static bool ЛампочкаРРР = false;
         public static bool ЛампочкаДист = false;
-        
+
 
         #endregion
 

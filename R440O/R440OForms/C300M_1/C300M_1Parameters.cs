@@ -178,6 +178,8 @@ namespace R440O.R440OForms.C300M_1
             set
             {
                 _кнопкаПитаниеВыкл = value;
+                N15Parameters.ЛампочкаЦ300МВкл1 = false;
+                N15Parameters.ResetParameters();
                 ResetParameters();
                 RefreshForm();
             }
@@ -313,8 +315,9 @@ namespace R440O.R440OForms.C300M_1
             get { return _тумблерУправление; } 
             set 
             { 
-                _тумблерУправление = value; 
-                ResetParameters();
+                _тумблерУправление = value;
+                if(value)
+                    ResetParameters();
                 Search();
                 if (RefreshForm != null) RefreshForm(); 
             } 

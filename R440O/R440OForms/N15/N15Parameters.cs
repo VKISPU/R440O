@@ -585,7 +585,6 @@ namespace R440O.R440OForms.N15
             { 
                 _лампочкаБма2 = value;
                 BMBParameters.ResetParameters();
-                BMA_M_1Parameters.Refresh();
             }
         }
 
