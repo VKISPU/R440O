@@ -1,4 +1,6 @@
-﻿namespace R440O.Parameters
+﻿using R440O.R440OForms.BMB;
+
+namespace R440O.Parameters
 {
     using System;
     using System.Collections.Generic;
@@ -142,10 +144,20 @@
         #endregion
 
         #region Кнопки
+        private static bool КнопкаПитаниеВКЛ;
         public static bool КнопкаШлейфТЧ;
         public static bool КнопкаШлейфДК;
-        public static bool КнопкаПитаниеВКЛ;
-        public static bool КнопкаПитаниеВЫКЛ = true;
+        public static bool КнопкаПитаниеВЫКЛ;
+
+        public static bool КнопкаПитаниеВкл
+        {
+            get { return КнопкаПитаниеВКЛ; }
+            set
+            {
+                КнопкаПитаниеВКЛ = value;
+                BMBParameters.ResetParameters();
+            }
+        }
         #endregion
 
         #region Лампочки
@@ -205,12 +217,11 @@
 
         public static bool ЛампочкаАвтомКоманда1 = false;
         public static bool ЛампочкаАвтомКоманда2 = false;
-
         public static bool ЛампочкаИсправно = false;
         public static bool ЛампочкаНеисправно = false;
-
         public static bool ЛампочкаРРР = false;
         public static bool ЛампочкаДист = false;
+        
 
         #endregion
 

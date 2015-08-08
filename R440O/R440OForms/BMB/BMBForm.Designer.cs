@@ -35,7 +35,6 @@
             this.BMBЛампочкаНаправление1 = new System.Windows.Forms.PictureBox();
             this.ЛампочкаРезервВкл = new System.Windows.Forms.PictureBox();
             this.ЛампочкаПриемВызова = new System.Windows.Forms.PictureBox();
-            this.ИндикаторПриемКоманды = new System.Windows.Forms.Label();
             this.ИндикаторНаборКоманды = new System.Windows.Forms.Label();
             this.ЛампочкаДк = new System.Windows.Forms.PictureBox();
             this.ЛампочкаТч = new System.Windows.Forms.PictureBox();
@@ -58,6 +57,7 @@
             this.КнопкаНаборКоманды3 = new System.Windows.Forms.Button();
             this.КнопкаНаборКоманды2 = new System.Windows.Forms.Button();
             this.КнопкаНаборКоманды1 = new System.Windows.Forms.Button();
+            this.ИндикаторПриемКоманды = new System.Windows.Forms.Label();
             this.BMBPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление3)).BeginInit();
@@ -167,25 +167,13 @@
             this.ЛампочкаПриемВызова.TabIndex = 78;
             this.ЛампочкаПриемВызова.TabStop = false;
             // 
-            // ИндикаторПриемКоманды
-            // 
-            this.ИндикаторПриемКоманды.AutoSize = true;
-            this.ИндикаторПриемКоманды.BackColor = System.Drawing.Color.Transparent;
-            this.ИндикаторПриемКоманды.Font = new System.Drawing.Font("MS Reference Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ИндикаторПриемКоманды.ForeColor = System.Drawing.Color.Red;
-            this.ИндикаторПриемКоманды.Location = new System.Drawing.Point(739, 54);
-            this.ИндикаторПриемКоманды.Name = "ИндикаторПриемКоманды";
-            this.ИндикаторПриемКоманды.Size = new System.Drawing.Size(41, 40);
-            this.ИндикаторПриемКоманды.TabIndex = 77;
-            this.ИндикаторПриемКоманды.Text = "  ";
-            // 
             // ИндикаторНаборКоманды
             // 
             this.ИндикаторНаборКоманды.AutoSize = true;
             this.ИндикаторНаборКоманды.BackColor = System.Drawing.Color.Transparent;
             this.ИндикаторНаборКоманды.Font = new System.Drawing.Font("Courier New", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ИндикаторНаборКоманды.ForeColor = System.Drawing.Color.Red;
-            this.ИндикаторНаборКоманды.Location = new System.Drawing.Point(738, 159);
+            this.ИндикаторНаборКоманды.ForeColor = System.Drawing.Color.LawnGreen;
+            this.ИндикаторНаборКоманды.Location = new System.Drawing.Point(736, 156);
             this.ИндикаторНаборКоманды.Name = "ИндикаторНаборКоманды";
             this.ИндикаторНаборКоманды.Size = new System.Drawing.Size(62, 41);
             this.ИндикаторНаборКоманды.TabIndex = 76;
@@ -372,6 +360,8 @@
             this.КнопкаПередачаКоманды.TabIndex = 65;
             this.КнопкаПередачаКоманды.Text = "ВКЛ";
             this.КнопкаПередачаКоманды.UseVisualStyleBackColor = false;
+            this.КнопкаПередачаКоманды.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаПередачаКоманды_MouseDown);
+            this.КнопкаПередачаКоманды.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаПередачаКоманды_MouseUp);
             // 
             // КнопкаНаборКоманды4
             // 
@@ -390,8 +380,8 @@
             this.КнопкаНаборКоманды4.TabIndex = 64;
             this.КнопкаНаборКоманды4.Text = "4";
             this.КнопкаНаборКоманды4.UseVisualStyleBackColor = false;
-            this.КнопкаНаборКоманды4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды4_MouseDown);
-            this.КнопкаНаборКоманды4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды4_MouseUp);
+            this.КнопкаНаборКоманды4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды_MouseDown);
+            this.КнопкаНаборКоманды4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды_MouseUp);
             // 
             // КнопкаНаборКоманды0
             // 
@@ -410,8 +400,8 @@
             this.КнопкаНаборКоманды0.TabIndex = 63;
             this.КнопкаНаборКоманды0.Text = "0";
             this.КнопкаНаборКоманды0.UseVisualStyleBackColor = false;
-            this.КнопкаНаборКоманды0.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды0_MouseDown);
-            this.КнопкаНаборКоманды0.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды0_MouseUp);
+            this.КнопкаНаборКоманды0.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды_MouseDown);
+            this.КнопкаНаборКоманды0.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды_MouseUp);
             // 
             // КнопкаНаборКоманды9
             // 
@@ -430,8 +420,8 @@
             this.КнопкаНаборКоманды9.TabIndex = 62;
             this.КнопкаНаборКоманды9.Text = "9";
             this.КнопкаНаборКоманды9.UseVisualStyleBackColor = false;
-            this.КнопкаНаборКоманды9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды9_MouseDown);
-            this.КнопкаНаборКоманды9.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды9_MouseUp);
+            this.КнопкаНаборКоманды9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды_MouseDown);
+            this.КнопкаНаборКоманды9.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды_MouseUp);
             // 
             // КнопкаНаборКоманды8
             // 
@@ -450,8 +440,8 @@
             this.КнопкаНаборКоманды8.TabIndex = 61;
             this.КнопкаНаборКоманды8.Text = "8";
             this.КнопкаНаборКоманды8.UseVisualStyleBackColor = false;
-            this.КнопкаНаборКоманды8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды8_MouseDown);
-            this.КнопкаНаборКоманды8.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды8_MouseUp);
+            this.КнопкаНаборКоманды8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды_MouseDown);
+            this.КнопкаНаборКоманды8.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды_MouseUp);
             // 
             // КнопкаНаборКоманды7
             // 
@@ -470,8 +460,8 @@
             this.КнопкаНаборКоманды7.TabIndex = 60;
             this.КнопкаНаборКоманды7.Text = "7";
             this.КнопкаНаборКоманды7.UseVisualStyleBackColor = false;
-            this.КнопкаНаборКоманды7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды7_MouseDown);
-            this.КнопкаНаборКоманды7.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды7_MouseUp);
+            this.КнопкаНаборКоманды7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды_MouseDown);
+            this.КнопкаНаборКоманды7.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды_MouseUp);
             // 
             // КнопкаНаборКоманды6
             // 
@@ -490,8 +480,8 @@
             this.КнопкаНаборКоманды6.TabIndex = 59;
             this.КнопкаНаборКоманды6.Text = "6";
             this.КнопкаНаборКоманды6.UseVisualStyleBackColor = false;
-            this.КнопкаНаборКоманды6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды6_MouseDown);
-            this.КнопкаНаборКоманды6.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды6_MouseUp);
+            this.КнопкаНаборКоманды6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды_MouseDown);
+            this.КнопкаНаборКоманды6.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды_MouseUp);
             // 
             // КнопкаНаборКоманды5
             // 
@@ -510,8 +500,8 @@
             this.КнопкаНаборКоманды5.TabIndex = 58;
             this.КнопкаНаборКоманды5.Text = "5";
             this.КнопкаНаборКоманды5.UseVisualStyleBackColor = false;
-            this.КнопкаНаборКоманды5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды5_MouseDown);
-            this.КнопкаНаборКоманды5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды5_MouseUp);
+            this.КнопкаНаборКоманды5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды_MouseDown);
+            this.КнопкаНаборКоманды5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды_MouseUp);
             // 
             // КнопкаНаборКоманды3
             // 
@@ -530,8 +520,8 @@
             this.КнопкаНаборКоманды3.TabIndex = 57;
             this.КнопкаНаборКоманды3.Text = "3";
             this.КнопкаНаборКоманды3.UseVisualStyleBackColor = false;
-            this.КнопкаНаборКоманды3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды3_MouseDown);
-            this.КнопкаНаборКоманды3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды3_MouseUp);
+            this.КнопкаНаборКоманды3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды_MouseDown);
+            this.КнопкаНаборКоманды3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды_MouseUp);
             // 
             // КнопкаНаборКоманды2
             // 
@@ -550,8 +540,8 @@
             this.КнопкаНаборКоманды2.TabIndex = 56;
             this.КнопкаНаборКоманды2.Text = "2";
             this.КнопкаНаборКоманды2.UseVisualStyleBackColor = false;
-            this.КнопкаНаборКоманды2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды2_MouseDown);
-            this.КнопкаНаборКоманды2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды2_MouseUp);
+            this.КнопкаНаборКоманды2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды_MouseDown);
+            this.КнопкаНаборКоманды2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды_MouseUp);
             // 
             // КнопкаНаборКоманды1
             // 
@@ -570,8 +560,21 @@
             this.КнопкаНаборКоманды1.TabIndex = 55;
             this.КнопкаНаборКоманды1.Text = "1";
             this.КнопкаНаборКоманды1.UseVisualStyleBackColor = false;
-            this.КнопкаНаборКоманды1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды1_MouseDown);
-            this.КнопкаНаборКоманды1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды1_MouseUp);
+            this.КнопкаНаборКоманды1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды_MouseDown);
+            this.КнопкаНаборКоманды1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды_MouseUp);
+            // 
+            // ИндикаторПриемКоманды
+            // 
+            this.ИндикаторПриемКоманды.AutoSize = true;
+            this.ИндикаторПриемКоманды.BackColor = System.Drawing.Color.Transparent;
+            this.ИндикаторПриемКоманды.Font = new System.Drawing.Font("Courier New", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ИндикаторПриемКоманды.ForeColor = System.Drawing.Color.LawnGreen;
+            this.ИндикаторПриемКоманды.Location = new System.Drawing.Point(736, 53);
+            this.ИндикаторПриемКоманды.Name = "ИндикаторПриемКоманды";
+            this.ИндикаторПриемКоманды.Size = new System.Drawing.Size(62, 41);
+            this.ИндикаторПриемКоманды.TabIndex = 76;
+            this.ИндикаторПриемКоманды.Text = "  ";
+            this.ИндикаторПриемКоманды.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // BMBForm
             // 
@@ -622,7 +625,6 @@
         private System.Windows.Forms.Button ПереключательРаботаКонтроль;
         private System.Windows.Forms.PictureBox ЛампочкаДк;
         private System.Windows.Forms.PictureBox ЛампочкаТч;
-        private System.Windows.Forms.Label ИндикаторПриемКоманды;
         private System.Windows.Forms.Label ИндикаторНаборКоманды;
         private System.Windows.Forms.PictureBox ЛампочкаПриемВызова;
         private System.Windows.Forms.PictureBox ЛампочкаРезервВкл;
@@ -630,5 +632,6 @@
         private System.Windows.Forms.PictureBox BMBЛампочкаНаправление3;
         private System.Windows.Forms.PictureBox BMBЛампочкаНаправление2;
         private System.Windows.Forms.PictureBox BMBЛампочкаНаправление1;
+        private System.Windows.Forms.Label ИндикаторПриемКоманды;
     }
 }

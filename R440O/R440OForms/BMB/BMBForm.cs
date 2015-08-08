@@ -4,6 +4,7 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+using System;
 using System.Drawing;
 
 namespace R440O.R440OForms.BMB
@@ -47,12 +48,12 @@ namespace R440O.R440OForms.BMB
         {
             if (e.Button == MouseButtons.Left)
             {
-                BMBParameters.BMBПереключательНаправление += 1;
+                BMBParameters.ПереключательНаправление += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                BMBParameters.BMBПереключательНаправление -= 1;
+                BMBParameters.ПереключательНаправление -= 1;
             }
         }
 
@@ -114,7 +115,7 @@ namespace R440O.R440OForms.BMB
             BMBПереключательПодключениеРезерва.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = BMBParameters.BMBПереключательНаправление * 30 - 75;
+            angle = BMBParameters.ПереключательНаправление * 30 - 75;
             BMBПереключательНаправление.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
@@ -129,6 +130,9 @@ namespace R440O.R440OForms.BMB
                 : null;
 
             ЛампочкаПриемВызова.BackColor = BMBParameters.ЛампочкаПриемВызова ? Color.FromArgb(100, 50, 250, 50) : Color.Transparent;
+
+            ИндикаторНаборКоманды.Text = BMBParameters.НаборКоманды;
+            ИндикаторПриемКоманды.Text = BMBParameters.ПриемКоманды;
 
         }
 
@@ -173,144 +177,35 @@ namespace R440O.R440OForms.BMB
         }
         #endregion
 
-        #region КнопкаНаборКоманды1
-        private void КнопкаНаборКоманды1_MouseDown(object sender, MouseEventArgs e)
+        #region КнопкаПередачаКоманды
+
+        private void КнопкаНаборКоманды_MouseUp(object sender, System.Windows.Forms.MouseEventArgs e)
         {
-            КнопкаНаборКоманды1.BackgroundImage = null;
-            КнопкаНаборКоманды1.Text = "";
+            var button = sender as Button;
+            if (button != null) button.BackgroundImage = ControlElementImages.buttonSquareBlue;
         }
 
-        private void КнопкаНаборКоманды1_MouseUp(object sender, MouseEventArgs e)
+        private void КнопкаНаборКоманды_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
         {
-            КнопкаНаборКоманды1.BackgroundImage = ControlElementImages.buttonSquareBlue;
-            КнопкаНаборКоманды1.Text = "1";
-        }
-        #endregion
-
-        #region КнопкаНаборКоманды2
-        private void КнопкаНаборКоманды2_MouseDown(object sender, MouseEventArgs e)
-        {
-            КнопкаНаборКоманды2.BackgroundImage = null;
-            КнопкаНаборКоманды2.Text = "";
+            var button = sender as Button;
+            if (button != null)
+            {
+                var buttonNumber = Convert.ToInt32(button.Name[18].ToString());
+                button.BackgroundImage = null;
+                button.Text = string.Empty + buttonNumber;
+                BMBParameters.ДобавитьЧисло(buttonNumber);
+            }
         }
 
-        private void КнопкаНаборКоманды2_MouseUp(object sender, MouseEventArgs e)
+        private void КнопкаПередачаКоманды_MouseDown(object sender, MouseEventArgs e)
         {
-            КнопкаНаборКоманды2.BackgroundImage = ControlElementImages.buttonSquareBlue;
-            КнопкаНаборКоманды2.Text = "2";
-        }
-        #endregion
-
-        #region КнопкаНаборКоманды3
-        private void КнопкаНаборКоманды3_MouseDown(object sender, MouseEventArgs e)
-        {
-            КнопкаНаборКоманды3.BackgroundImage = null;
-            КнопкаНаборКоманды3.Text = "";
+            КнопкаПередачаКоманды.BackgroundImage = TransformImageHelper.Scale(ControlElementImages.buttonSquareBlue, 0.65F);
         }
 
-        private void КнопкаНаборКоманды3_MouseUp(object sender, MouseEventArgs e)
+        private void КнопкаПередачаКоманды_MouseUp(object sender, MouseEventArgs e)
         {
-            КнопкаНаборКоманды3.BackgroundImage = ControlElementImages.buttonSquareBlue;
-            КнопкаНаборКоманды3.Text = "3";
-        }
-        #endregion
-
-        #region КнопкаНаборКоманды4
-        private void КнопкаНаборКоманды4_MouseDown(object sender, MouseEventArgs e)
-        {
-            КнопкаНаборКоманды4.BackgroundImage = null;
-            КнопкаНаборКоманды4.Text = "";
-        }
-
-        private void КнопкаНаборКоманды4_MouseUp(object sender, MouseEventArgs e)
-        {
-            КнопкаНаборКоманды4.BackgroundImage = ControlElementImages.buttonSquareBlue;
-            КнопкаНаборКоманды4.Text = "4";
-        }
-        #endregion
-
-        #region КнопкаНаборКоманды5
-        private void КнопкаНаборКоманды5_MouseDown(object sender, MouseEventArgs e)
-        {
-            КнопкаНаборКоманды5.BackgroundImage = null;
-            КнопкаНаборКоманды5.Text = "";
-        }
-
-        private void КнопкаНаборКоманды5_MouseUp(object sender, MouseEventArgs e)
-        {
-            КнопкаНаборКоманды5.BackgroundImage = ControlElementImages.buttonSquareBlue;
-            КнопкаНаборКоманды5.Text = "5";
-        }
-        #endregion
-
-        #region КнопкаНаборКоманды6
-        private void КнопкаНаборКоманды6_MouseDown(object sender, MouseEventArgs e)
-        {
-            КнопкаНаборКоманды6.BackgroundImage = null;
-            КнопкаНаборКоманды6.Text = "";
-        }
-
-        private void КнопкаНаборКоманды6_MouseUp(object sender, MouseEventArgs e)
-        {
-            КнопкаНаборКоманды6.BackgroundImage = ControlElementImages.buttonSquareBlue;
-            КнопкаНаборКоманды6.Text = "6";
-        }
-        #endregion
-
-        #region КнопкаНаборКоманды7
-        private void КнопкаНаборКоманды7_MouseDown(object sender, MouseEventArgs e)
-        {
-            КнопкаНаборКоманды7.BackgroundImage = null;
-            КнопкаНаборКоманды7.Text = "";
-        }
-
-        private void КнопкаНаборКоманды7_MouseUp(object sender, MouseEventArgs e)
-        {
-            КнопкаНаборКоманды7.BackgroundImage = ControlElementImages.buttonSquareBlue;
-            КнопкаНаборКоманды7.Text = "7";
-        }
-        #endregion
-
-        #region КнопкаНаборКоманды8
-        private void КнопкаНаборКоманды8_MouseDown(object sender, MouseEventArgs e)
-        {
-            КнопкаНаборКоманды8.BackgroundImage = null;
-            КнопкаНаборКоманды8.Text = "";
-        }
-
-        private void КнопкаНаборКоманды8_MouseUp(object sender, MouseEventArgs e)
-        {
-            КнопкаНаборКоманды8.BackgroundImage = ControlElementImages.buttonSquareBlue;
-            КнопкаНаборКоманды8.Text = "8";
-        }
-        #endregion
-
-        #region КнопкаНаборКоманды9
-        private void КнопкаНаборКоманды9_MouseDown(object sender, MouseEventArgs e)
-        {
-            КнопкаНаборКоманды9.BackgroundImage = null;
-            КнопкаНаборКоманды9.Text = "";
-        }
-
-        private void КнопкаНаборКоманды9_MouseUp(object sender, MouseEventArgs e)
-        {
-            КнопкаНаборКоманды9.BackgroundImage = ControlElementImages.buttonSquareBlue;
-            КнопкаНаборКоманды9.Text = "9";
-        }
-        #endregion
-
-        #region КнопкаНаборКоманды0
-        private void КнопкаНаборКоманды0_MouseDown(object sender, MouseEventArgs e)
-        {
-            КнопкаНаборКоманды0.BackgroundImage = null;
-            КнопкаНаборКоманды0.Text = "";
-        }
-
-        private void КнопкаНаборКоманды0_MouseUp(object sender, MouseEventArgs e)
-        {
-            КнопкаНаборКоманды0.BackgroundImage = ControlElementImages.buttonSquareBlue;
-            КнопкаНаборКоманды0.Text = "0";
-        }
+            КнопкаПередачаКоманды.BackgroundImage = ControlElementImages.buttonSquareBlue;
+        } 
         #endregion
     }
 }

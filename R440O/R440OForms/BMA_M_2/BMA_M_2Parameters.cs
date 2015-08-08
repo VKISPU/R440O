@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using R440O.R440OForms.BMB;
 
-namespace R440O.Parameters
+namespace R440O.R440OForms.BMA_M_2
 {
     class BMA_M_2Parameters
     {
@@ -222,6 +218,16 @@ namespace R440O.Parameters
             }
         }
 
+        public static bool КнопкаПитаниеВкл
+        {
+            get { return КнопкаПитаниеВКЛ; }
+            set
+            {
+                КнопкаПитаниеВКЛ = value;
+                BMBParameters.ResetParameters();
+            }
+        }
+
         /// <summary>
         /// Названия положений переключателя напряжения
         /// </summary>
@@ -233,10 +239,10 @@ namespace R440O.Parameters
         #endregion
 
         #region Кнопки
-        public static bool BMA_M_2КнопкаШлейфТЧ = false;
-        public static bool BMA_M_2КнопкаШлейфДК = false;
-        public static bool BMA_M_2КнопкаПитаниеВКЛ = false;
-        public static bool BMA_M_2КнопкаПитаниеВЫКЛ = true;
+        public static bool КнопкаШлейфТЧ = false;
+        public static bool КнопкаШлейфДК = false;
+        private static bool КнопкаПитаниеВКЛ = false;
+        public static bool КнопкаПитаниеВЫКЛ = true;
         #endregion
 
         #region Лампочки

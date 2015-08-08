@@ -230,10 +230,10 @@ namespace R440O.R440OForms.BMA_M_1
             this.BMA_M_1КнопкаПитаниеВЫКЛ.Text = string.Empty;
             this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = null;
 
-            if (BMA_M_1Parameters.КнопкаПитаниеВКЛ)
+            if (BMA_M_1Parameters.КнопкаПитаниеВкл)
             {
                 BMA_M_1Parameters.КнопкаПитаниеВЫКЛ = true;
-                BMA_M_1Parameters.КнопкаПитаниеВКЛ = false;
+                BMA_M_1Parameters.КнопкаПитаниеВкл = false;
                 this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
             }
         }
@@ -246,7 +246,7 @@ namespace R440O.R440OForms.BMA_M_1
             else
             {
                 this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
-                BMA_M_1Parameters.КнопкаПитаниеВКЛ = !BMA_M_1Parameters.КнопкаПитаниеВКЛ;
+                BMA_M_1Parameters.КнопкаПитаниеВкл = !BMA_M_1Parameters.КнопкаПитаниеВкл;
             }
         }
 
@@ -257,7 +257,7 @@ namespace R440O.R440OForms.BMA_M_1
 
             if (BMA_M_1Parameters.КнопкаПитаниеВЫКЛ)
             {
-                BMA_M_1Parameters.КнопкаПитаниеВКЛ = true;
+                BMA_M_1Parameters.КнопкаПитаниеВкл = true;
                 BMA_M_1Parameters.КнопкаПитаниеВЫКЛ = false;
                 this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
             }
@@ -266,12 +266,12 @@ namespace R440O.R440OForms.BMA_M_1
         private void BMA_M_1КнопкаПитаниеВКЛ_MouseUp(object sender, MouseEventArgs e)
         {
             this.BMA_M_1КнопкаПитаниеВКЛ.Text = "ВКЛ";
-            if (BMA_M_1Parameters.КнопкаПитаниеВКЛ)
+            if (BMA_M_1Parameters.КнопкаПитаниеВкл)
                 this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOn;
             else
             {
                 this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
-                BMA_M_1Parameters.КнопкаПитаниеВКЛ = !BMA_M_1Parameters.КнопкаПитаниеВКЛ;
+                BMA_M_1Parameters.КнопкаПитаниеВкл = !BMA_M_1Parameters.КнопкаПитаниеВкл;
             }
 
         }
@@ -340,7 +340,7 @@ namespace R440O.R440OForms.BMA_M_1
                 this.BMA_M_1КнопкаШлейфДК.Text = "ДК";
             }
 
-            this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = BMA_M_1Parameters.КнопкаПитаниеВКЛ
+            this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = BMA_M_1Parameters.КнопкаПитаниеВкл
                 ? ControlElementImages.buttonSquareBlueOn
                 : ControlElementImages.buttonSquareBlueOff;
 

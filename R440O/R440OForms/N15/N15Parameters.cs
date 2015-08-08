@@ -13,6 +13,7 @@ using R440O.R440OForms.C300M_4;
 using R440O.R440OForms.A304;
 using R440O.R440OForms.A306;
 using R440O.R440OForms.BMA_M_1;
+using R440O.R440OForms.BMB;
 
 namespace R440O.R440OForms.N15
 {
@@ -572,6 +573,7 @@ namespace R440O.R440OForms.N15
             { 
                 _лампочкаБма1 = value;
                 BMA_M_1Parameters.ResetParameters();
+                BMBParameters.ResetParameters();
             }
         }
 
@@ -582,6 +584,7 @@ namespace R440O.R440OForms.N15
             { 
                 _лампочкаБма2 = value;
                 BMA_M_1Parameters.ResetParameters();
+                BMBParameters.ResetParameters();
             }
         }
 

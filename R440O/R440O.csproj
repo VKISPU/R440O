@@ -98,7 +98,7 @@
     <Compile Include="Parameters\PU_K1_2Parameters.cs" />
     <Compile Include="Parameters\PU_K1_1Parameters.cs" />
     <Compile Include="Parameters\B3_2Parameters.cs" />
-    <Compile Include="Parameters\BMA_M_2Parameters.cs" />
+    <Compile Include="R440OForms\BMA_M_2\BMA_M_2Parameters.cs" />
     <Compile Include="R440OForms\BMA_M_1\BMA_M_1Parameters.cs" />
     <Compile Include="R440OForms\BMB\BMBParameters.cs" />
     <Compile Include="Parameters\DAB_5Parameters.cs" />
@@ -554,9 +554,11 @@
     </Compile>
     <EmbeddedResource Include="R440OForms\A1\A1Form.resx">
       <DependentUpon>A1Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\A205M_1\A205M_1Form.resx">
       <DependentUpon>A205M_1Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\A205M_2\A205M_2Form.resx">
       <DependentUpon>A205M_2Form.cs</DependentUpon>

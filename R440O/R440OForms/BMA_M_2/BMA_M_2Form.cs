@@ -182,7 +182,7 @@ namespace R440O.R440OForms.BMA_M_2
         #region Кнопки
         private void BMA_M_2КнопкаШлейфТЧ_Click(object sender, System.EventArgs e)
         {
-            if (BMA_M_2Parameters.BMA_M_2КнопкаШлейфТЧ)
+            if (BMA_M_2Parameters.КнопкаШлейфТЧ)
             {
                 this.BMA_M_2КнопкаШлейфТЧ.BackgroundImage = ControlElementImages.buttonSquareYellow;
                 this.BMA_M_2КнопкаШлейфТЧ.Text = "ТЧ";
@@ -192,12 +192,12 @@ namespace R440O.R440OForms.BMA_M_2
                 this.BMA_M_2КнопкаШлейфТЧ.BackgroundImage = null;
                 this.BMA_M_2КнопкаШлейфТЧ.Text = string.Empty;
             }
-            BMA_M_2Parameters.BMA_M_2КнопкаШлейфТЧ = !BMA_M_2Parameters.BMA_M_2КнопкаШлейфТЧ;
+            BMA_M_2Parameters.КнопкаШлейфТЧ = !BMA_M_2Parameters.КнопкаШлейфТЧ;
         }
 
         private void BMA_M_2КнопкаШлейфДК_Click(object sender, System.EventArgs e)
         {
-            if (BMA_M_2Parameters.BMA_M_2КнопкаШлейфДК)
+            if (BMA_M_2Parameters.КнопкаШлейфДК)
             {
                 this.BMA_M_2КнопкаШлейфДК.BackgroundImage = ControlElementImages.buttonSquareYellow;
                 this.BMA_M_2КнопкаШлейфДК.Text = "ДК";
@@ -207,7 +207,7 @@ namespace R440O.R440OForms.BMA_M_2
                 this.BMA_M_2КнопкаШлейфДК.BackgroundImage = null;
                 this.BMA_M_2КнопкаШлейфДК.Text = string.Empty;
             }
-            BMA_M_2Parameters.BMA_M_2КнопкаШлейфДК = !BMA_M_2Parameters.BMA_M_2КнопкаШлейфДК;
+            BMA_M_2Parameters.КнопкаШлейфДК = !BMA_M_2Parameters.КнопкаШлейфДК;
         }
 
         private void BMA_M_2КнопкаПроверка_MouseUp(object sender, MouseEventArgs e)
@@ -228,10 +228,10 @@ namespace R440O.R440OForms.BMA_M_2
             this.BMA_M_2КнопкаПитаниеВЫКЛ.Text = string.Empty;
             this.BMA_M_2КнопкаПитаниеВЫКЛ.BackgroundImage = null;
 
-            if (BMA_M_2Parameters.BMA_M_2КнопкаПитаниеВКЛ)
+            if (BMA_M_2Parameters.КнопкаПитаниеВкл)
             {
-                BMA_M_2Parameters.BMA_M_2КнопкаПитаниеВЫКЛ = true;
-                BMA_M_2Parameters.BMA_M_2КнопкаПитаниеВКЛ = false;
+                BMA_M_2Parameters.КнопкаПитаниеВЫКЛ = true;
+                BMA_M_2Parameters.КнопкаПитаниеВкл = false;
                 this.BMA_M_2КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
             }
         }
@@ -239,12 +239,12 @@ namespace R440O.R440OForms.BMA_M_2
         private void BMA_M_2КнопкаПитаниеВЫКЛ_MouseUp(object sender, MouseEventArgs e)
         {
             this.BMA_M_2КнопкаПитаниеВЫКЛ.Text = "ВЫКЛ";
-            if (BMA_M_2Parameters.BMA_M_2КнопкаПитаниеВЫКЛ)
+            if (BMA_M_2Parameters.КнопкаПитаниеВЫКЛ)
                 this.BMA_M_2КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOn;
             else
             {
                 this.BMA_M_2КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
-                BMA_M_2Parameters.BMA_M_2КнопкаПитаниеВКЛ = !BMA_M_2Parameters.BMA_M_2КнопкаПитаниеВКЛ;
+                BMA_M_2Parameters.КнопкаПитаниеВкл = !BMA_M_2Parameters.КнопкаПитаниеВкл;
             }
         }
 
@@ -253,10 +253,10 @@ namespace R440O.R440OForms.BMA_M_2
             this.BMA_M_2КнопкаПитаниеВКЛ.Text = string.Empty;
             this.BMA_M_2КнопкаПитаниеВКЛ.BackgroundImage = null;
 
-            if (BMA_M_2Parameters.BMA_M_2КнопкаПитаниеВЫКЛ)
+            if (BMA_M_2Parameters.КнопкаПитаниеВЫКЛ)
             {
-                BMA_M_2Parameters.BMA_M_2КнопкаПитаниеВКЛ = true;
-                BMA_M_2Parameters.BMA_M_2КнопкаПитаниеВЫКЛ = false;
+                BMA_M_2Parameters.КнопкаПитаниеВкл = true;
+                BMA_M_2Parameters.КнопкаПитаниеВЫКЛ = false;
                 this.BMA_M_2КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
             }
         }
@@ -264,12 +264,12 @@ namespace R440O.R440OForms.BMA_M_2
         private void BMA_M_2КнопкаПитаниеВКЛ_MouseUp(object sender, MouseEventArgs e)
         {
             this.BMA_M_2КнопкаПитаниеВКЛ.Text = "ВКЛ";
-            if (BMA_M_2Parameters.BMA_M_2КнопкаПитаниеВКЛ)
+            if (BMA_M_2Parameters.КнопкаПитаниеВкл)
                 this.BMA_M_2КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOn;
             else
             {
                 this.BMA_M_2КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
-                BMA_M_2Parameters.BMA_M_2КнопкаПитаниеВКЛ = !BMA_M_2Parameters.BMA_M_2КнопкаПитаниеВКЛ;
+                BMA_M_2Parameters.КнопкаПитаниеВкл = !BMA_M_2Parameters.КнопкаПитаниеВкл;
             }
 
         }
@@ -318,7 +318,7 @@ namespace R440O.R440OForms.BMA_M_2
 
         private void InitializeButtonsPosition()
         {
-            if (BMA_M_2Parameters.BMA_M_2КнопкаШлейфТЧ)
+            if (BMA_M_2Parameters.КнопкаШлейфТЧ)
             {
                 this.BMA_M_2КнопкаШлейфТЧ.BackgroundImage = null;
                 this.BMA_M_2КнопкаШлейфТЧ.Text = string.Empty;
@@ -329,7 +329,7 @@ namespace R440O.R440OForms.BMA_M_2
                 this.BMA_M_2КнопкаШлейфТЧ.Text = "ТЧ";
             }
 
-            if (BMA_M_2Parameters.BMA_M_2КнопкаШлейфДК)
+            if (BMA_M_2Parameters.КнопкаШлейфДК)
             {
                 this.BMA_M_2КнопкаШлейфДК.BackgroundImage = null;
                 this.BMA_M_2КнопкаШлейфДК.Text = string.Empty;
@@ -340,11 +340,11 @@ namespace R440O.R440OForms.BMA_M_2
                 this.BMA_M_2КнопкаШлейфДК.Text = "ДК";
             }
 
-            this.BMA_M_2КнопкаПитаниеВКЛ.BackgroundImage = BMA_M_2Parameters.BMA_M_2КнопкаПитаниеВКЛ
+            this.BMA_M_2КнопкаПитаниеВКЛ.BackgroundImage = BMA_M_2Parameters.КнопкаПитаниеВкл
                 ? ControlElementImages.buttonSquareBlueOn
                 : ControlElementImages.buttonSquareBlueOff;
 
-            this.BMA_M_2КнопкаПитаниеВЫКЛ.BackgroundImage = BMA_M_2Parameters.BMA_M_2КнопкаПитаниеВЫКЛ
+            this.BMA_M_2КнопкаПитаниеВЫКЛ.BackgroundImage = BMA_M_2Parameters.КнопкаПитаниеВЫКЛ
                 ? ControlElementImages.buttonSquareBlueOn
                 : ControlElementImages.buttonSquareBlueOff;
         }

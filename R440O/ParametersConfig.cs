@@ -71,6 +71,11 @@ namespace R440O
             C300M_1Parameters.ПереключательВолна1 = 0;
 
 
+            //// Проверка БМАБ и БМБ
+            //БМА
+            N15LocalParameters._локТумблерБМА_1 = true;
+            BMA_M_1Parameters.КнопкаПитаниеВкл = true;
+
 
         }
     }
