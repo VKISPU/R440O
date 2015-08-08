@@ -121,7 +121,8 @@ namespace R440O.R440OForms.C300M_1
                 for (int i = 0; i < КнопкиКонтрольРежима.Length; i++)
                     КнопкиКонтрольРежима[i] = false;
                 КнопкиКонтрольРежима[_кнопкаКонтрольРежима] = true;
-                ЛампочкаСигнал = false;
+                if(Array.IndexOf(КнопкиКонтрольРежима, true) != 0)
+                    ЛампочкаСигнал = false;
                 Search();
                 RefreshForm();
             }
@@ -307,7 +308,17 @@ namespace R440O.R440OForms.C300M_1
         /// <summary>
         /// Возможные состояния: true - Дистанционное; false - Местное;
         /// </summary>
-        public static bool ТумблерУправление { get { return _тумблерУправление; } set { _тумблерУправление = value; ResetParameters(); if (RefreshForm != null) RefreshForm(); } }
+        public static bool ТумблерУправление 
+        { 
+            get { return _тумблерУправление; } 
+            set 
+            { 
+                _тумблерУправление = value; 
+                ResetParameters();
+                Search();
+                if (RefreshForm != null) RefreshForm(); 
+            } 
+        }
         private static bool _тумблерУправление = false;
 
         /// <summary>
@@ -456,7 +467,7 @@ namespace R440O.R440OForms.C300M_1
                                                : _ИндикаторСигнал = 50;
                                     case 2:
                                         if (!ТумблерРегулировкаУровня)
-                                            return _ИндикаторСигнал = 50;
+                                            return _ИндикаторСигнал = 0;
                                         else
                                             break;
                                     case 3:
@@ -736,5 +747,11 @@ namespace R440O.R440OForms.C300M_1
 
         public delegate void VoidVoidSignature();
         public static event VoidVoidSignature RefreshForm;
+
+        public static void Refresh()
+        {
+            if (RefreshForm != null)
+                RefreshForm();
+        }
     }
 }

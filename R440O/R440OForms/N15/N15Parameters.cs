@@ -572,8 +572,9 @@ namespace R440O.R440OForms.N15
             set 
             { 
                 _лампочкаБма1 = value;
-                BMA_M_1Parameters.ResetParameters();
                 BMBParameters.ResetParameters();
+                BMA_M_1Parameters.Refresh();
+
             }
         }
 
@@ -583,8 +584,8 @@ namespace R440O.R440OForms.N15
             set 
             { 
                 _лампочкаБма2 = value;
-                BMA_M_1Parameters.ResetParameters();
                 BMBParameters.ResetParameters();
+                BMA_M_1Parameters.Refresh();
             }
         }
 
@@ -744,6 +745,15 @@ namespace R440O.R440OForms.N15
 
         public static void ResetParameters()
         {
+            ЛампочкаЦ300МВкл1 = Лампочка27В && ЛампочкаН15БП && ТумблерЦ300М1;
+            C300M_1Parameters.Search();
+            ЛампочкаЦ300МВкл2 = Лампочка27В && ЛампочкаН15БП && ТумблерЦ300М2;
+            //C300M_2Parameters.Search();
+            ЛампочкаЦ300МВкл3 = Лампочка27В && ЛампочкаН15БП && ТумблерЦ300М3;
+            //C300M_3Parameters.Search();
+            ЛампочкаЦ300МВкл4 = Лампочка27В && ЛампочкаН15БП && ТумблерЦ300М4;
+            //C300M_4Parameters.Search();
+            
             Лампочка27В = (N502BParameters.ЛампочкаСфазировано
                           && N502BParameters.ТумблерЭлектрооборудование
                           && N502BParameters.ТумблерВыпрямитель27В);

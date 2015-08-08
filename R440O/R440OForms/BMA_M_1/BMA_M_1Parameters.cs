@@ -39,7 +39,7 @@ namespace R440O.Parameters
                 if (value >= EПереключательРекуррента._15
                     && value <= EПереключательРекуррента._1023)
                     _ПереключательРекуррента = value;
-                ResetParameters();
+                Refresh();
             }
         }
         #endregion
@@ -228,7 +228,7 @@ namespace R440O.Parameters
         public delegate void VoidVoidSignature();
         public static event VoidVoidSignature RefreshForm;
 
-        public static void ResetParameters()
+        public static void Refresh()
         {
             if (RefreshForm != null)
                 RefreshForm();
