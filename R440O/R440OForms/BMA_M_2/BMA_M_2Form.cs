@@ -197,7 +197,7 @@ namespace R440O.R440OForms.BMA_M_2
 
         private void BMA_M_2КнопкаШлейфДК_Click(object sender, System.EventArgs e)
         {
-            if (BMA_M_2Parameters.КнопкаШлейфДК)
+            if (BMA_M_2Parameters.КнопкаШлейфДк)
             {
                 this.BMA_M_2КнопкаШлейфДК.BackgroundImage = ControlElementImages.buttonSquareYellow;
                 this.BMA_M_2КнопкаШлейфДК.Text = "ДК";
@@ -207,7 +207,7 @@ namespace R440O.R440OForms.BMA_M_2
                 this.BMA_M_2КнопкаШлейфДК.BackgroundImage = null;
                 this.BMA_M_2КнопкаШлейфДК.Text = string.Empty;
             }
-            BMA_M_2Parameters.КнопкаШлейфДК = !BMA_M_2Parameters.КнопкаШлейфДК;
+            BMA_M_2Parameters.КнопкаШлейфДк = !BMA_M_2Parameters.КнопкаШлейфДк;
         }
 
         private void BMA_M_2КнопкаПроверка_MouseUp(object sender, MouseEventArgs e)
@@ -329,7 +329,7 @@ namespace R440O.R440OForms.BMA_M_2
                 this.BMA_M_2КнопкаШлейфТЧ.Text = "ТЧ";
             }
 
-            if (BMA_M_2Parameters.КнопкаШлейфДК)
+            if (BMA_M_2Parameters.КнопкаШлейфДк)
             {
                 this.BMA_M_2КнопкаШлейфДК.BackgroundImage = null;
                 this.BMA_M_2КнопкаШлейфДК.Text = string.Empty;

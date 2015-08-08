@@ -158,6 +158,16 @@ namespace R440O.Parameters
                 BMBParameters.ResetParameters();
             }
         }
+
+        public static bool КнопкаШлейфДк
+        {
+            get { return КнопкаШлейфДК; }
+            set
+            {
+                КнопкаШлейфДК = value;
+                BMBParameters.ResetParameters();
+            }
+        }
         #endregion
 
         #region Лампочки
