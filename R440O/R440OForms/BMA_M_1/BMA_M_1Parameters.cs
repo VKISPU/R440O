@@ -11,6 +11,7 @@ namespace R440O.Parameters
     using СостоянияЭлементов.БМА_М;
     using R440O.R440OForms;
     using R440O.R440OForms.N15;
+    using R440O.ThirdParty;
 
     class BMA_M_1Parameters
     {
@@ -24,7 +25,15 @@ namespace R440O.Parameters
             {
                 if (value >= EПереключательКонтроль.РАБОТА_1
                     && value <= EПереключательКонтроль.РАБОТА_2)
+                {
                     _ПереключательКонтроль = value;
+                    _ЛампочкаКонтрольНенорм = true;
+                    _ЛампочкаКонтрольНорм = false;
+                    if (timer_ЛампочкаКонтрольНенорм != null)
+                        timer_ЛампочкаКонтрольНенорм.Dispose();
+                    Refresh();
+                }
+                
             }
         }
         #endregion
@@ -185,24 +194,52 @@ namespace R440O.Parameters
         {
             get
             {
-                return N15Parameters.ЛампочкаБМА_1;
+                return N15Parameters.ЛампочкаБМА_1
+                    && (ПереключательКонтроль == EПереключательКонтроль.РАБОТА_1
+                    || ПереключательКонтроль == EПереключательКонтроль.РАБОТА_2);
             }
         }
         public static bool ЛампочкаФЗ = false;
-        public static bool ЛампочкаДК 
-        { 
-            get 
-            { 
-                return N15Parameters.ЛампочкаБМА_1; 
-            } 
+        public static bool ЛампочкаДК
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_1
+                    && (ПереключательКонтроль == EПереключательКонтроль.РАБОТА_1
+                    || ПереключательКонтроль == EПереключательКонтроль.РАБОТА_2);
+            }
         }
         public static bool ЛампочкаСинхрТЧ = false;
         public static bool ЛампочкаСинхрДК = false;
-        public static bool ЛампочкаПрдТЧ = false;
+        public static bool ЛампочкаПрдТЧ
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_1
+                    && (ПереключательКонтроль == EПереключательКонтроль.РАБОТА_1
+                    || ПереключательКонтроль == EПереключательКонтроль.РАБОТА_2);
+            }
+        }
         public static bool ЛампочкаПрдДК = false;
-        public static bool ЛампочкаПрмТЧ = false;
+        public static bool ЛампочкаПрмТЧ
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_1
+                    && (ПереключательКонтроль == EПереключательКонтроль.РАБОТА_1
+                    || ПереключательКонтроль == EПереключательКонтроль.РАБОТА_2);
+            }
+        }
         public static bool ЛампочкаПрмФР = false;
-        public static bool ЛампочкаПрмДК1 = false;
+        public static bool ЛампочкаПрмДК1
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_1
+                    && (ПереключательКонтроль == EПереключательКонтроль.РАБОТА_1
+                    || ПереключательКонтроль == EПереключательКонтроль.РАБОТА_2);
+            }
+        }
         public static bool ЛампочкаПрмДК2 = false;
 
         public static bool ЛампочкаПитание_5В = false;
@@ -211,12 +248,84 @@ namespace R440O.Parameters
         public static bool ЛампочкаПитание_15В = false;
         public static bool ЛампочкаПитание_15Вplus = false;
 
-        public static bool ЛампочкаКонтрольНенорм = false;
-        public static bool ЛампочкаКонтрольНорм = false;
-        public static bool ЛампочкаКонтрольТест = false;
-        public static bool ЛампочкаКонтрольДК = false;
-        public static bool ЛампочкаКонтрольТЧ = false;
-        public static bool ЛампочкаКонтрольКомпл = false;
+
+        private static IDisposable timer_ЛампочкаКонтрольНенорм = null;
+        public static bool _ЛампочкаКонтрольНенорм = true;
+        public static bool ЛампочкаКонтрольНенорм
+        {
+            get
+            {
+                if (N15Parameters.ЛампочкаБМА_1
+                    && (ПереключательКонтроль > EПереключательКонтроль.РАБОТА_1
+                  && ПереключательКонтроль < EПереключательКонтроль.РАБОТА_2)
+                    && _ЛампочкаКонтрольНенорм)
+                {
+                    timer_ЛампочкаКонтрольНенорм = EasyTimer.SetTimeout(() =>
+                    {
+                        _ЛампочкаКонтрольНорм = true;
+                        Refresh();                        
+                    }, 4000);
+                    timer_ЛампочкаКонтрольНенорм = EasyTimer.SetTimeout(() =>
+                    {
+                        _ЛампочкаКонтрольНенорм = false;
+                        Refresh();
+                    }, 8000);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+        public static bool _ЛампочкаКонтрольНорм = false;
+        public static bool ЛампочкаКонтрольНорм
+        {
+            get
+            {
+                if (N15Parameters.ЛампочкаБМА_1
+                    && (ПереключательКонтроль > EПереключательКонтроль.РАБОТА_1
+                  && ПереключательКонтроль < EПереключательКонтроль.РАБОТА_2)
+                    && _ЛампочкаКонтрольНорм)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+        public static bool ЛампочкаКонтрольТест
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_1 && ПереключательКонтроль == EПереключательКонтроль.ТЕСТ;
+            }
+        }
+        public static bool ЛампочкаКонтрольДК
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_1 && ПереключательКонтроль == EПереключательКонтроль.ДК;
+            }
+        }
+        public static bool ЛампочкаКонтрольТЧ
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_1 && ПереключательКонтроль == EПереключательКонтроль.ТЧ;
+            }
+        }
+        public static bool ЛампочкаКонтрольКомпл
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_1 && ПереключательКонтроль == EПереключательКонтроль.КОМПЛ;
+            }
+        }
 
         public static bool ЛампочкаРекуррента15
         {
@@ -264,6 +373,19 @@ namespace R440O.Parameters
         {
             if (RefreshForm != null)
                 RefreshForm();
+        }
+
+
+        public static void DisposeAllTimers()
+        {
+            if (timer_ЛампочкаКонтрольНенорм != null)
+                timer_ЛампочкаКонтрольНенорм.Dispose();
+        }
+
+        public static void ResetLampsValue()
+        {
+            _ЛампочкаКонтрольНенорм = N15Parameters.ЛампочкаБМА_1;
+            _ЛампочкаКонтрольНорм = !_ЛампочкаКонтрольНенорм;
         }
     }
 }

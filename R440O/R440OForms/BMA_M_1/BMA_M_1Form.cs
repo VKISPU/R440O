@@ -351,7 +351,7 @@ namespace R440O.R440OForms.BMA_M_1
 
             foreach (Control item in BMA_M_1Panel.Controls)
             {
-                if (item.Name.Contains("ЛампочкаРекуррента"))
+                if (item.Name.Contains("Лампочка"))
                 {
                     PropertyInfo[] fieldList = typeof(BMA_M_1Parameters).GetProperties();
                     foreach (PropertyInfo property in fieldList)
