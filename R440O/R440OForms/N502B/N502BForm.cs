@@ -19,9 +19,6 @@ namespace R440O.R440OForms.N502B
         {
             InitializeComponent();
             N502BParameters.RefreshForm += RefreshForm;
-            N502BParameters.RefreshForm += ИндикаторНапряжение.Invalidate;
-            N502BParameters.RefreshForm += ИндикаторКонтрольНапряжения.Invalidate;
-            N502BParameters.RefreshForm += ИндикаторТокНагрузкиИЗаряда.Invalidate;
             RefreshForm();
         }
 
@@ -178,11 +175,6 @@ namespace R440O.R440OForms.N502B
             {
                 N502BParameters.ПереключательНапряжение -= 1;
             }
-
-            var angle = N502BParameters.ПереключательНапряжение * 36 - 150;
-            if (N502BParameters.ПереключательНапряжение >= 4) angle += 48;
-            ПереключательНапряжение.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
 
         private void ПереключательФазировка_MouseUp(object sender, MouseEventArgs e)
@@ -197,9 +189,6 @@ namespace R440O.R440OForms.N502B
                 N502BParameters.ПереключательФазировка -= 1;
                 if (N502BParameters.ПереключательФазировка == 0) N502BParameters.ПереключательФазировка = 4;
             }
-            var angle = N502BParameters.ПереключательФазировка * 90 - 180;
-            ПереключательФазировка.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType5, angle);
         }
 
         private void ПереключательКонтрольНапряжения_MouseUp(object sender, MouseEventArgs e)
@@ -212,10 +201,6 @@ namespace R440O.R440OForms.N502B
             {
                 N502BParameters.ПереключательКонтрольНапряжения -= 1;
             }
-
-            var angle = N502BParameters.ПереключательКонтрольНапряжения * 45 - 90;
-            ПереключательКонтрольНапряжения.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType1, angle);
         }
 
         private void ПереключательТокНагрузкиИЗаряда_MouseUp(object sender, MouseEventArgs e)
@@ -228,10 +213,6 @@ namespace R440O.R440OForms.N502B
             {
                 N502BParameters.ПереключательТокНагрузкиИЗаряда -= 1;
             }
-
-            var angle = N502BParameters.ПереключательТокНагрузкиИЗаряда * 40 - 180;
-            ПереключательТокНагрузкиИЗаряда.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType4, angle);
         }
 
         #endregion
@@ -243,6 +224,18 @@ namespace R440O.R440OForms.N502B
             this.RefreshLamps();
             this.RefreshTogglesPosition();
             this.RefreshTumblersPosition();
+
+            var angle = N502BParameters.ИндикаторНапряжение * 0.25F - 70;
+            ИндикаторНапряжение.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
+
+            angle = N502BParameters.ИндикаторКонтрольНапряжения * 1.5F - 60;
+            ИндикаторКонтрольНапряжения.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
+
+            angle = N502BParameters.ИндикаторТокНагрузкиИЗаряда * 1.75F - 70;
+            ИндикаторТокНагрузкиИЗаряда.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
         }
 
         private void RefreshTumblersPosition()
@@ -298,8 +291,7 @@ namespace R440O.R440OForms.N502B
                 ? ControlElementImages.tumblerN502BPowerUp
                 : ControlElementImages.tumblerN502BPowerDown;
 
-            var angle = N502BParameters.ПереключательНапряжение * 36 - 150;
-            if (N502BParameters.ПереключательНапряжение >= 4) angle += 48;
+            var angle = N502BParameters.ПереключательНапряжение * 38 - 150;
             ПереключательНапряжение.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
@@ -327,78 +319,6 @@ namespace R440O.R440OForms.N502B
                 : null;
         }
 
-        #endregion
-
-        private void DrawLine(Graphics g, int x1, int y1, int x2, int y2)
-        {
-            var point1 = new Point(x1, y1);
-            var point2 = new Point(x2, y2);
-            var myPen = new Pen(Color.Black, 5);
-            g.DrawLine(myPen, point1, point2);
-        }
-
-        #region Отрисовка индикаторов
-        private void ИндикаторНапряжение_Paint(object sender, PaintEventArgs e)
-        {
-            switch (N502BParameters.ИндикаторНапряжение)
-            {
-                case 0:
-                    DrawLine(e.Graphics, 10, 40, 45, 55);
-                    break;
-                case 220:
-                    DrawLine(e.Graphics, 20, 20, 45, 55);
-                    break;
-                case 380:
-                    DrawLine(e.Graphics, 60, 20, 45, 55);
-                    break;
-            }
-        }
-
-        private void ИндикаторКонтрольНапряжения_Paint(object sender, PaintEventArgs e)
-        {
-            switch (N502BParameters.ИндикаторКонтрольНапряжения)
-            {
-                case 0:
-                    DrawLine(e.Graphics, 0, 40, 45, 70);
-                    break;
-                case 10:
-                    DrawLine(e.Graphics, 10, 35, 45, 70);
-                    break;
-                case 20:
-                    DrawLine(e.Graphics, 20, 30, 45, 70);
-                    break;
-                case 30:
-                    DrawLine(e.Graphics, 30, 25, 45, 70);
-                    break;
-                case 40:
-                    DrawLine(e.Graphics, 40, 20, 45, 70);
-                    break;
-                case 50:
-                    DrawLine(e.Graphics, 50, 25, 45, 70);
-                    break;
-                case 60:
-                    DrawLine(e.Graphics, 60, 25, 45, 70);
-                    break;
-                case 70:
-                    DrawLine(e.Graphics, 70, 30, 45, 70);
-                    break;
-                case 80:
-                    DrawLine(e.Graphics, 80, 35, 45, 70);
-                    break;
-            }
-        }
-
-        private void ИндикаторТокНагрузкиИЗаряда_Paint(object sender, PaintEventArgs e)
-        {
-            if (N502BParameters.ПереключательТокНагрузкиИЗаряда < 5)
-            {
-                DrawLine(e.Graphics, N502BParameters.ИндикаторТокНагрузкиИЗаряда, 40 - N502BParameters.ИндикаторТокНагрузкиИЗаряда, 45, 70);
-            }
-            else
-            {
-                DrawLine(e.Graphics, N502BParameters.ИндикаторТокНагрузкиИЗаряда, 40 - N502BParameters.ИндикаторТокНагрузкиИЗаряда / 2, 45, 70);
-            }
-        }
         #endregion
     }
 }

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.N502BPanel = new System.Windows.Forms.Panel();
+            this.ИндикаторТокНагрузкиИЗаряда = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ИндикаторКонтрольНапряжения = new System.Windows.Forms.PictureBox();
             this.ИндикаторНапряжение = new System.Windows.Forms.PictureBox();
             this.ЛампочкаСфазировано = new System.Windows.Forms.PictureBox();
@@ -49,20 +51,27 @@
             this.ТумблерОсвещение = new System.Windows.Forms.Button();
             this.ТумблерВыпрямитель27В = new System.Windows.Forms.Button();
             this.ТумблерЭлектрооборудование = new System.Windows.Forms.Button();
-            this.ИндикаторТокНагрузкиИЗаряда = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.N502BPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторТокНагрузкиИЗаряда)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторКонтрольНапряжения)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторНапряжение)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСфазировано)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСеть)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторТокНагрузкиИЗаряда)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // N502BPanel
             // 
             this.N502BPanel.BackgroundImage = global::R440O.BackgroundImages.N502B;
             this.N502BPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.N502BPanel.Controls.Add(this.pictureBox3);
+            this.N502BPanel.Controls.Add(this.pictureBox2);
             this.N502BPanel.Controls.Add(this.ИндикаторТокНагрузкиИЗаряда);
+            this.N502BPanel.Controls.Add(this.pictureBox1);
             this.N502BPanel.Controls.Add(this.ИндикаторКонтрольНапряжения);
             this.N502BPanel.Controls.Add(this.ИндикаторНапряжение);
             this.N502BPanel.Controls.Add(this.ЛампочкаСфазировано);
@@ -88,25 +97,44 @@
             this.N502BPanel.Size = new System.Drawing.Size(749, 745);
             this.N502BPanel.TabIndex = 1;
             // 
+            // ИндикаторТокНагрузкиИЗаряда
+            // 
+            this.ИндикаторТокНагрузкиИЗаряда.BackColor = System.Drawing.Color.Transparent;
+            this.ИндикаторТокНагрузкиИЗаряда.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ИндикаторТокНагрузкиИЗаряда.Location = new System.Drawing.Point(594, 140);
+            this.ИндикаторТокНагрузкиИЗаряда.Name = "ИндикаторТокНагрузкиИЗаряда";
+            this.ИндикаторТокНагрузкиИЗаряда.Size = new System.Drawing.Size(108, 103);
+            this.ИндикаторТокНагрузкиИЗаряда.TabIndex = 41;
+            this.ИндикаторТокНагрузкиИЗаряда.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Location = new System.Drawing.Point(469, 192);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(108, 51);
+            this.pictureBox1.TabIndex = 40;
+            this.pictureBox1.TabStop = false;
+            // 
             // ИндикаторКонтрольНапряжения
             // 
             this.ИндикаторКонтрольНапряжения.BackColor = System.Drawing.Color.Transparent;
-            this.ИндикаторКонтрольНапряжения.Location = new System.Drawing.Point(474, 131);
+            this.ИндикаторКонтрольНапряжения.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ИндикаторКонтрольНапряжения.Location = new System.Drawing.Point(469, 140);
             this.ИндикаторКонтрольНапряжения.Name = "ИндикаторКонтрольНапряжения";
-            this.ИндикаторКонтрольНапряжения.Size = new System.Drawing.Size(102, 67);
+            this.ИндикаторКонтрольНапряжения.Size = new System.Drawing.Size(108, 103);
             this.ИндикаторКонтрольНапряжения.TabIndex = 40;
             this.ИндикаторКонтрольНапряжения.TabStop = false;
-            this.ИндикаторКонтрольНапряжения.Paint += new System.Windows.Forms.PaintEventHandler(this.ИндикаторКонтрольНапряжения_Paint);
             // 
             // ИндикаторНапряжение
             // 
             this.ИндикаторНапряжение.BackColor = System.Drawing.Color.Transparent;
-            this.ИндикаторНапряжение.Location = new System.Drawing.Point(94, 140);
+            this.ИндикаторНапряжение.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ИндикаторНапряжение.Location = new System.Drawing.Point(96, 154);
             this.ИндикаторНапряжение.Name = "ИндикаторНапряжение";
-            this.ИндикаторНапряжение.Size = new System.Drawing.Size(85, 58);
+            this.ИндикаторНапряжение.Size = new System.Drawing.Size(84, 75);
             this.ИндикаторНапряжение.TabIndex = 39;
             this.ИндикаторНапряжение.TabStop = false;
-            this.ИндикаторНапряжение.Paint += new System.Windows.Forms.PaintEventHandler(this.ИндикаторНапряжение_Paint);
             // 
             // ЛампочкаСфазировано
             // 
@@ -155,9 +183,9 @@
             this.ПереключательКонтрольНапряжения.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.ПереключательКонтрольНапряжения.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.ПереключательКонтрольНапряжения.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ПереключательКонтрольНапряжения.Location = new System.Drawing.Point(474, 262);
+            this.ПереключательКонтрольНапряжения.Location = new System.Drawing.Point(476, 265);
             this.ПереключательКонтрольНапряжения.Name = "ПереключательКонтрольНапряжения";
-            this.ПереключательКонтрольНапряжения.Size = new System.Drawing.Size(93, 76);
+            this.ПереключательКонтрольНапряжения.Size = new System.Drawing.Size(89, 76);
             this.ПереключательКонтрольНапряжения.TabIndex = 34;
             this.ПереключательКонтрольНапряжения.UseVisualStyleBackColor = false;
             this.ПереключательКонтрольНапряжения.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательКонтрольНапряжения_MouseUp);
@@ -389,15 +417,23 @@
             this.ТумблерЭлектрооборудование.UseVisualStyleBackColor = false;
             this.ТумблерЭлектрооборудование.Click += new System.EventHandler(this.ТумблерЭлектрооборудование_Click);
             // 
-            // ИндикаторТокНагрузкиИЗаряда
+            // pictureBox2
             // 
-            this.ИндикаторТокНагрузкиИЗаряда.BackColor = System.Drawing.Color.Transparent;
-            this.ИндикаторТокНагрузкиИЗаряда.Location = new System.Drawing.Point(597, 131);
-            this.ИндикаторТокНагрузкиИЗаряда.Name = "ИндикаторТокНагрузкиИЗаряда";
-            this.ИндикаторТокНагрузкиИЗаряда.Size = new System.Drawing.Size(102, 67);
-            this.ИндикаторТокНагрузкиИЗаряда.TabIndex = 41;
-            this.ИндикаторТокНагрузкиИЗаряда.TabStop = false;
-            this.ИндикаторТокНагрузкиИЗаряда.Paint += new System.Windows.Forms.PaintEventHandler(this.ИндикаторТокНагрузкиИЗаряда_Paint);
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Location = new System.Drawing.Point(594, 192);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(110, 51);
+            this.pictureBox2.TabIndex = 40;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Location = new System.Drawing.Point(85, 194);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(110, 51);
+            this.pictureBox3.TabIndex = 40;
+            this.pictureBox3.TabStop = false;
             // 
             // N502BForm
             // 
@@ -411,11 +447,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Н502Б";
             this.N502BPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторТокНагрузкиИЗаряда)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторКонтрольНапряжения)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторНапряжение)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСфазировано)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСеть)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторТокНагрузкиИЗаряда)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -444,6 +483,9 @@
         private System.Windows.Forms.PictureBox ИндикаторНапряжение;
         private System.Windows.Forms.PictureBox ИндикаторКонтрольНапряжения;
         private System.Windows.Forms.PictureBox ИндикаторТокНагрузкиИЗаряда;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
 
     }
 }

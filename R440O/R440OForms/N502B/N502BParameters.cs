@@ -228,12 +228,15 @@ namespace R440O.R440OForms.N502B
         }
 
         private static int _переключательНапряжение = 1;
+        /// <summary>
+        /// 1,2,3 - сеть. 4 - нейтральное. 5,6,7 - нагрузка. 
+        /// </summary>
         public static int ПереключательНапряжение
         {
             get { return _переключательНапряжение; }
             set
             {
-                if (value > 0 && value < 7)
+                if (value > 0 && value < 8)
                     _переключательНапряжение = value;
                 if (RefreshForm != null)
                     RefreshForm();
@@ -280,6 +283,7 @@ namespace R440O.R440OForms.N502B
         }
         #endregion
 
+        #region Нагрузка
         private static bool _кнопкаВклНагрузки;
 
         public static bool КнопкаВклНагрузки
@@ -296,8 +300,10 @@ namespace R440O.R440OForms.N502B
                     RefreshForm();
             }
 
-        }
+        } 
+        #endregion
 
+        #region Индикаторы
         public static int ИндикаторНапряжение
         {
             get
@@ -327,8 +333,10 @@ namespace R440O.R440OForms.N502B
                         case 3:
                             return VoltageStabilizerParameters.КабельВход;
                         case 4:
+                            return 0;
                         case 5:
                         case 6:
+                        case 7:
                             return 220;
                     }
                 }
@@ -385,7 +393,8 @@ namespace R440O.R440OForms.N502B
 
                 return 0;
             }
-        }
+        } 
+        #endregion
 
         public delegate void VoidVoidSignature();
         public static event VoidVoidSignature RefreshForm;
