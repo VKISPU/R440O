@@ -218,26 +218,6 @@ namespace R440O.R440OForms.BMA_M_2
             }
         }
 
-        public static bool КнопкаПитаниеВкл
-        {
-            get { return КнопкаПитаниеВКЛ; }
-            set
-            {
-                КнопкаПитаниеВКЛ = value;
-                BMBParameters.ResetParameters();
-            }
-        }
-
-        public static bool КнопкаШлейфДк
-        {
-            get { return КнопкаШлейфДК; }
-            set
-            {
-                КнопкаШлейфДК = value;
-                BMBParameters.ResetParameters();
-            }
-        }
-
         /// <summary>
         /// Названия положений переключателя напряжения
         /// </summary>
@@ -249,10 +229,42 @@ namespace R440O.R440OForms.BMA_M_2
         #endregion
 
         #region Кнопки
-        public static bool КнопкаШлейфТЧ = false;
-        public static bool КнопкаШлейфДК;
-        private static bool КнопкаПитаниеВКЛ = false;
-        public static bool КнопкаПитаниеВЫКЛ = true;
+        #region Кнопки
+        private static bool _кнопкаПитаниеВКЛ;
+        private static bool _кнопкаШлейфТЧ;
+        private static bool _кнопкаШлейфДК;
+        public static bool КнопкаПитаниеВЫКЛ;
+
+        public static bool КнопкаПитаниеВкл
+        {
+            get { return _кнопкаПитаниеВКЛ; }
+            set
+            {
+                _кнопкаПитаниеВКЛ = value;
+                BMBParameters.ResetParameters();
+            }
+        }
+
+        public static bool КнопкаШлейфДК
+        {
+            get { return _кнопкаШлейфДК; }
+            set
+            {
+                _кнопкаШлейфДК = value;
+                BMBParameters.ResetParameters();
+            }
+        }
+
+        public static bool КнопкаШлейфТЧ
+        {
+            get { return _кнопкаШлейфТЧ; }
+            set
+            {
+                _кнопкаШлейфТЧ = value;
+                BMBParameters.ResetParameters();
+            }
+        }
+        #endregion
         #endregion
 
         #region Лампочки

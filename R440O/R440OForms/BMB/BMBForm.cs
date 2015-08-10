@@ -59,6 +59,8 @@ namespace R440O.R440OForms.BMB
 
         #endregion
 
+        #region Инициализация
+
         public void RefreshElements()
         {
             InitializeButtons();
@@ -131,10 +133,20 @@ namespace R440O.R440OForms.BMB
 
             ЛампочкаПриемВызова.BackColor = BMBParameters.ЛампочкаПриемВызова ? Color.FromArgb(100, 50, 250, 50) : Color.Transparent;
 
+            BMBЛампочкаНаправление1.BackgroundImage = BMBParameters.ЛампочкаНаправление1 ? ControlElementImages.lampType7OnRed
+                : null;
+            BMBЛампочкаНаправление2.BackgroundImage = BMBParameters.ЛампочкаНаправление2 ? ControlElementImages.lampType7OnRed
+                : null;
+            BMBЛампочкаНаправление3.BackgroundImage = BMBParameters.ЛампочкаНаправление3 ? ControlElementImages.lampType7OnRed
+                : null;
+            BMBЛампочкаНаправление4.BackgroundImage = BMBParameters.ЛампочкаНаправление4 ? ControlElementImages.lampType7OnRed
+                : null;
+
             ИндикаторНаборКоманды.Text = BMBParameters.НаборКоманды;
             ИндикаторПриемКоманды.Text = BMBParameters.ПриемКоманды;
 
-        }
+        } 
+        #endregion
 
         #region Кнопки
 
@@ -200,12 +212,13 @@ namespace R440O.R440OForms.BMB
         private void КнопкаПередачаКоманды_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаПередачаКоманды.BackgroundImage = TransformImageHelper.Scale(ControlElementImages.buttonSquareBlue, 0.65F);
+            BMBParameters.ПередатьКоманду();
         }
 
         private void КнопкаПередачаКоманды_MouseUp(object sender, MouseEventArgs e)
         {
             КнопкаПередачаКоманды.BackgroundImage = ControlElementImages.buttonSquareBlue;
-        } 
+        }
         #endregion
     }
 }

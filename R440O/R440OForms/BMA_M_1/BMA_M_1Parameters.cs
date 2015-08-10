@@ -144,27 +144,37 @@ namespace R440O.Parameters
         #endregion
 
         #region Кнопки
-        private static bool КнопкаПитаниеВКЛ;
-        public static bool КнопкаШлейфТЧ;
-        public static bool КнопкаШлейфДК;
+        private static bool _кнопкаПитаниеВКЛ;
+        private static bool _кнопкаШлейфТЧ;
+        private static bool _кнопкаШлейфДК;
         public static bool КнопкаПитаниеВЫКЛ;
 
         public static bool КнопкаПитаниеВкл
         {
-            get { return КнопкаПитаниеВКЛ; }
+            get { return _кнопкаПитаниеВКЛ; }
             set
             {
-                КнопкаПитаниеВКЛ = value;
+                _кнопкаПитаниеВКЛ = value;
                 BMBParameters.ResetParameters();
             }
         }
 
-        public static bool КнопкаШлейфДк
+        public static bool КнопкаШлейфДК
         {
-            get { return КнопкаШлейфДК; }
+            get { return _кнопкаШлейфДК; }
             set
             {
-                КнопкаШлейфДК = value;
+                _кнопкаШлейфДК = value;
+                BMBParameters.ResetParameters();
+            }
+        }
+
+        public static bool КнопкаШлейфТЧ
+        {
+            get { return _кнопкаШлейфТЧ; }
+            set
+            {
+                _кнопкаШлейфТЧ = value;
                 BMBParameters.ResetParameters();
             }
         }
