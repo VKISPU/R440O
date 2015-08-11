@@ -1,25 +1,32 @@
-﻿using System;
-using System.Globalization;
-using R440O.Parameters;
-using R440O.Properties;
-using R440O.R440OForms.A205M_1;
-using R440O.R440OForms.NKN_1;
-using R440O.R440OForms.NKN_2;
-using R440O.R440OForms.PowerCabel;
-using R440O.R440OForms.VoltageStabilizer;
-using R440O.R440OForms.C300M_1;
-using R440O.R440OForms.C300M_2;
-using R440O.R440OForms.C300M_3;
-using R440O.R440OForms.C300M_4;
-using R440O.R440OForms.A304;
-using R440O.R440OForms.BMB;
-using R440O.R440OForms.N15;
-using System.Windows.Forms;
+﻿using System.Linq;
 
 namespace R440O.R440OForms.N502B
 {
+    using System;
+    using System.Windows.Forms;
+    using Parameters;
+    using Properties;
+    using A205M_1;
+    using NKN_1;
+    using NKN_2;
+    using PowerCabel;
+    using VoltageStabilizer;
+    using C300M_1;
+    using C300M_2;
+    using C300M_3;
+    using C300M_4;
+    using A304;
+    using BMB;
+    using N15;
+
     public static class N502BParameters
     {
+
+        static N502BParameters()
+        {
+            СлучайнаяФазировка();
+        }
+
         #region Время работы станции
         public static Timer StationTimer;
 
@@ -323,79 +330,55 @@ namespace R440O.R440OForms.N502B
         {
             get
             {
-                if (VoltageStabilizerParameters.КабельВход != 0 && ЛампочкаСеть && ПереключательСеть &&
-                    Нагрузка && ПереключательФазировка == 2)
+                if (!(ФазировкаГорит || ЛампочкаСфазировано)) return 0;
+                switch (ПереключательНапряжение)
                 {
-                    switch (ПереключательНапряжение)
-                    {
-                        case 1:
-                        case 2:
-                        case 3:
-                            return VoltageStabilizerParameters.КабельВход;
-                        case 4:
-                            return 0;
-                        case 5:
-                        case 6:
-                        case 7:
-                            return 220;
-                    }
-                }
-                if (VoltageStabilizerParameters.КабельВход != 0 && ЛампочкаСеть && ПереключательСеть &&
-                    ЛампочкаСфазировано)
-                {
-                    switch (ПереключательНапряжение)
-                    {
-                        case 1:
-                        case 2:
-                        case 3:
-                            return VoltageStabilizerParameters.КабельВход;
-                        case 4:
-                            return 0;
-                        case 5:
-                        case 6:
-                        case 7:
-                            return 220;
-                    }
-                }
-                if (ЛампочкаСеть && ПереключательСеть &&
-                    (ПереключательФазировка == 2 || ПереключательФазировка == 4))
-                {
-                    switch (ПереключательНапряжение)
-                    {
-                        case 1:
-                        case 2:
-                        case 3:
-                            return 380;
-                        case 4:
-                            return 0;
-                        case 5:
-                        case 6:
-                        case 7:
-                            return 0;
-                    }
+                    case 1:
+                    case 2:
+                    case 3:
+                        return VoltageStabilizerParameters.КабельВход;
+                    case 4:
+                        return 0;
+                    case 5:
+                    case 6:
+                    case 7:
+                        return 220;
                 }
                 return 0;
             }
         }
 
+        /// <summary>
+        /// Вычисление величины тока, используемой на станции.
+        /// </summary>
         public static int ИндикаторТокНагрузки
         {
             get
             {
-                if (ЛампочкаСфазировано)
+                return (ФазировкаГорит || ЛампочкаСфазировано) ? ВключенныеБлоки() * 5 : 0;
+            }
+        }
+
+        /// <summary>
+        /// Определяет количество включенных на данный момент блоков.
+        /// </summary>
+        /// <returns></returns>
+        private static int ВключенныеБлоки()
+        {
+            var propertyList = typeof(N15Parameters).GetProperties().ToArray();
+            var quantity = 0;
+            foreach (var property in propertyList)
+            {
+                if (property.Name.Contains("Лампочка"))
                 {
-                    switch (ИндикаторНапряжение)
+                    if ((bool) property.GetValue(null))
                     {
-                        case 220:
-                            return 127;
-                        case 380:
-                            return 220;
-                        case 0:
-                            return 0;
+                        quantity++;
                     }
                 }
-                return 0;
             }
+
+            return quantity;
         }
 
         public static int ИндикаторКонтрольНапряжения
@@ -440,8 +423,40 @@ namespace R440O.R440OForms.N502B
 
         public static void ResetParameters()
         {
-            ЛампочкаСфазировано = ПереключательФазировка == 4 && ЛампочкаСеть &&
+            ЛампочкаСфазировано = ПереключательФазировка == Фазировка && ЛампочкаСеть &&
                                   ПереключательСеть && VoltageStabilizerParameters.КабельВход == 380 && Нагрузка;
         }
+
+        #region Фазировка
+        /// <summary>
+        /// Текущее требуемое для фазировки положение.
+        /// </summary>
+        public static int Фазировка;
+
+        /// <summary>
+        /// Задание случайной фазировки.
+        /// </summary>
+        private static void СлучайнаяФазировка()
+        {
+            var generator = new Random();
+            var zeroToOne = generator.NextDouble();
+            Фазировка = zeroToOne > 0.5F ? 4 : 2;
+        }
+
+        /// <summary>
+        /// Определение, горит ли лампочка сфазировано при нажатии на кнопку включения нагрузки.
+        /// </summary>
+        public static bool ФазировкаГорит {
+            get
+            {
+                return (ПереключательФазировка == 2 || ПереключательФазировка == 4) && ЛампочкаСеть &&
+                       ПереключательСеть && VoltageStabilizerParameters.КабельВход == 380 && КнопкаНагрузка;
+            }
+        }
+
+        public static bool КнопкаНагрузка { private get; set; }
+
+        #endregion
+        
     }
 }

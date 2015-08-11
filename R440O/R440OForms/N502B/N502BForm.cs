@@ -139,11 +139,26 @@ namespace R440O.R440OForms.N502B
         {
             КнопкаВклНагрузки.BackgroundImage = null;
             N502BParameters.Нагрузка = true;
+            N502BParameters.КнопкаНагрузка = true;
+            ЛампочкаСфазировано.BackgroundImage = N502BParameters.ФазировкаГорит
+                ? ControlElementImages.lampType12OnRed
+                : null;
+
+            var angle = N502BParameters.ИндикаторНапряжение * 0.25F - 70;
+            ИндикаторНапряжение.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
+
+            angle = N502BParameters.ИндикаторТокНагрузки * 0.25F - 70;
+            ИндикаторТокНагрузки.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
+            
         }
 
         private void КнопкаВклНагрузки_MouseUp(object sender, MouseEventArgs e)
         {
             КнопкаВклНагрузки.BackgroundImage = ControlElementImages.buttonRoundType3;
+            N502BParameters.КнопкаНагрузка = false;
+            RefreshForm();
         }
         #endregion
 

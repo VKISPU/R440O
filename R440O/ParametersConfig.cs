@@ -22,6 +22,7 @@ namespace R440O
             VoltageStabilizerParameters.КабельВход = 380;
 
             //Включаем Н502Б и Нагрузку
+            N502BParameters.Фазировка = 4;
             N502BParameters.ПереключательСеть = true;
             N502BParameters.ПереключательФазировка = 4;
             N502BParameters.Нагрузка = true;
