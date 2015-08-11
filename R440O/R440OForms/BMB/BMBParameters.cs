@@ -275,7 +275,7 @@ namespace R440O.R440OForms.BMB
         /// <returns></returns>
         private static bool БМАПодключенВерно()
         {
-            return ((N15Parameters.ЛампочкаБМА_1 && BMA_M_1Parameters.КнопкаПитаниеВкл && ПереключательНаправление == 1)
+            return ((N15Parameters.ЛампочкаБМА_1 && BMA_M_1Parameters.КнопкаПитаниеВКЛ && ПереключательНаправление == 1)
                     ||
                     (N15Parameters.ЛампочкаБМА_2 && BMA_M_2Parameters.КнопкаПитаниеВкл && ПереключательНаправление == 2));
         }

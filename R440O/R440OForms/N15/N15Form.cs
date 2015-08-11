@@ -34,7 +34,7 @@ namespace R440O.R440OForms.N15
 
         #region Инициализация элементов управления
 
-        private void RefreshForm()
+        public void RefreshForm()
         {
             InitializeButtons();
             InitializeTumblers();

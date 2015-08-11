@@ -792,5 +792,10 @@ namespace R440O.R440OForms.N15
         public delegate void VoidVoidSignature();
 
         public static event VoidVoidSignature RefreshForm;
+
+        public static void Refresh()
+        {
+            if (RefreshForm != null) RefreshForm();
+        }
     }
 }

@@ -11,6 +11,7 @@ namespace R440O.R440OForms.BMA_M_1
     using Parameters;
     using ThirdParty;
     using System;
+    using System.Drawing;
 
     /// <summary>
     /// Форма блока БМА-М-1
@@ -231,49 +232,27 @@ namespace R440O.R440OForms.BMA_M_1
             this.BMA_M_1КнопкаПитаниеВЫКЛ.Text = string.Empty;
             this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = null;
 
-            if (BMA_M_1Parameters.КнопкаПитаниеВкл)
-            {
-                BMA_M_1Parameters.КнопкаПитаниеВЫКЛ = true;
-                BMA_M_1Parameters.КнопкаПитаниеВкл = false;
-                this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
-            }
         }
 
         private void BMA_M_1КнопкаПитаниеВЫКЛ_MouseUp(object sender, MouseEventArgs e)
         {
             this.BMA_M_1КнопкаПитаниеВЫКЛ.Text = "ВЫКЛ";
-            if (BMA_M_1Parameters.КнопкаПитаниеВЫКЛ)
-                this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOn;
-            else
-            {
-                this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
-                BMA_M_1Parameters.КнопкаПитаниеВкл = !BMA_M_1Parameters.КнопкаПитаниеВкл;
-            }
+            this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
+            BMA_M_1Parameters.КнопкаПитаниеВЫКЛ = true;
         }
 
         private void BMA_M_1КнопкаПитаниеВКЛ_MouseDown(object sender, MouseEventArgs e)
         {
             this.BMA_M_1КнопкаПитаниеВКЛ.Text = string.Empty;
             this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = null;
-
-            if (BMA_M_1Parameters.КнопкаПитаниеВЫКЛ)
-            {
-                BMA_M_1Parameters.КнопкаПитаниеВкл = true;
-                BMA_M_1Parameters.КнопкаПитаниеВЫКЛ = false;
-                this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
-            }
         }
 
         private void BMA_M_1КнопкаПитаниеВКЛ_MouseUp(object sender, MouseEventArgs e)
         {
             this.BMA_M_1КнопкаПитаниеВКЛ.Text = "ВКЛ";
-            if (BMA_M_1Parameters.КнопкаПитаниеВкл)
-                this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOn;
-            else
-            {
-                this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
-                BMA_M_1Parameters.КнопкаПитаниеВкл = !BMA_M_1Parameters.КнопкаПитаниеВкл;
-            }
+            BMA_M_1Parameters.КнопкаПитаниеВКЛ = true;
+            this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOn;
+            BMA_M_1Parameters.КнопкаПитаниеВКЛ = true;
 
         }
         #endregion
@@ -340,30 +319,66 @@ namespace R440O.R440OForms.BMA_M_1
                 this.BMA_M_1КнопкаШлейфДК.BackgroundImage = ControlElementImages.buttonSquareYellow;
                 this.BMA_M_1КнопкаШлейфДК.Text = "ДК";
             }
-            this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = BMA_M_1Parameters.КнопкаПитаниеВкл
+            this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = BMA_M_1Parameters.КнопкаПитаниеВКЛ
                 ? ControlElementImages.buttonSquareBlueOn
                 : ControlElementImages.buttonSquareBlueOff;
 
-            this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = BMA_M_1Parameters.КнопкаПитаниеВЫКЛ
-                ? ControlElementImages.buttonSquareBlueOn
-                : ControlElementImages.buttonSquareBlueOff;
+            this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
             #endregion
 
             foreach (Control item in BMA_M_1Panel.Controls)
             {
                 if (item.Name.Contains("Лампочка"))
                 {
-                    PropertyInfo[] fieldList = typeof(BMA_M_1Parameters).GetProperties();
-                    foreach (PropertyInfo property in fieldList)
+                    if (item.Name.Contains("ЛампочкаИсправно"))
                     {
-                        if (item.Name == property.Name)
-                        {
-                            item.BackgroundImage = Convert.ToBoolean(property.GetValue(null))
-                            ? ControlElementImages.lampType7OnRed
-                            : null;
-                            break;
-                        }
+                        ЛампочкаИсправно.BackColor = BMA_M_1Parameters.ЛампочкаИсправно ? Color.FromArgb(100, 50, 250, 50) : Color.Transparent;
                     }
+                    else
+                        if (item.Name.Contains("ЛампочкаКонтрольКомпл"))
+                        {
+                            if (BMA_M_1Parameters.ЛампочкаКонтрольКомпл)
+                            {
+                                ЛампочкаКонтрольКомпл.BackgroundImage = ControlElementImages.lampType7OnRed;
+                                if (!BMA_M_1Parameters.КнопкаШлейфДК)
+                                {                                    
+                                    BMA_M_1КнопкаШлейфДК.BackgroundImage = ControlElementImages.buttonSquareYellowOn;
+                                    
+                                }
+                                if(!BMA_M_1Parameters.КнопкаШлейфТЧ)
+                                {
+                                    BMA_M_1КнопкаШлейфТЧ.BackgroundImage = ControlElementImages.buttonSquareYellowOn;
+                                }
+
+                            }
+                            else
+                            {
+                                ЛампочкаКонтрольКомпл.BackgroundImage = null;
+                                if (!BMA_M_1Parameters.КнопкаШлейфДК)
+                                {
+                                    BMA_M_1КнопкаШлейфДК.BackgroundImage = ControlElementImages.buttonSquareYellow;
+
+                                }
+                                if (!BMA_M_1Parameters.КнопкаШлейфТЧ)
+                                {
+                                    BMA_M_1КнопкаШлейфТЧ.BackgroundImage = ControlElementImages.buttonSquareYellow;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            PropertyInfo[] fieldList = typeof(BMA_M_1Parameters).GetProperties();
+                            foreach (PropertyInfo property in fieldList)
+                            {
+                                if (item.Name == property.Name)
+                                {
+                                    item.BackgroundImage = Convert.ToBoolean(property.GetValue(null))
+                                    ? ControlElementImages.lampType7OnRed
+                                    : null;
+                                    break;
+                                }
+                            }
+                        }
                 }
             }
 

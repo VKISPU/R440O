@@ -74,7 +74,7 @@ namespace R440O
             //// Проверка БМАБ и БМБ
             //БМА
             N15LocalParameters._локТумблерБМА_1 = true;
-            BMA_M_1Parameters.КнопкаПитаниеВкл = true;
+            BMA_M_1Parameters.КнопкаПитаниеВКЛ = true;
 
 
         }

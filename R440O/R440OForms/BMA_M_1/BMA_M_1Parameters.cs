@@ -153,17 +153,27 @@ namespace R440O.Parameters
         #endregion
 
         #region Кнопки
-        private static bool _кнопкаПитаниеВКЛ;
+        
         private static bool _кнопкаШлейфТЧ;
         private static bool _кнопкаШлейфДК;
-        public static bool КнопкаПитаниеВЫКЛ;
 
-        public static bool КнопкаПитаниеВкл
+        public static bool КнопкаПитаниеВЫКЛ
         {
-            get { return _кнопкаПитаниеВКЛ; }
             set
             {
-                _кнопкаПитаниеВКЛ = value;
+                N15Parameters.ЛампочкаБМА_1 = false;
+                N15Parameters.Refresh();
+                BMBParameters.ResetParameters();
+            }
+        }
+
+        public static bool КнопкаПитаниеВКЛ
+        {
+            get { return N15Parameters.ЛампочкаБМА_1; }
+            set
+            {
+                N15Parameters.ЛампочкаБМА_1 = N15Parameters.Лампочка27В && N15Parameters.ЛампочкаН15БП;
+                N15Parameters.Refresh();
                 BMBParameters.ResetParameters();
             }
         }
@@ -358,7 +368,13 @@ namespace R440O.Parameters
 
         public static bool ЛампочкаАвтомКоманда1 = false;
         public static bool ЛампочкаАвтомКоманда2 = false;
-        public static bool ЛампочкаИсправно = false;
+        public static bool ЛампочкаИсправно
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_1;
+            }
+        }
         public static bool ЛампочкаНеисправно = false;
         public static bool ЛампочкаРРР = false;
         public static bool ЛампочкаДист = false;

@@ -1115,6 +1115,7 @@
     <None Include="Resources\lampType6OnRed.png" />
     <None Include="Resources\lampType10OnGreen.png" />
     <None Include="Resources\C300M.png" />
+    <Content Include="Resources\buttonSquareYellowOn.png" />
     <Content Include="Resources\lampType13OnGreen.png" />
     <Content Include="Resources\revolverRoundSmall.png" />
     <None Include="Resources\toggleType8.png" />
