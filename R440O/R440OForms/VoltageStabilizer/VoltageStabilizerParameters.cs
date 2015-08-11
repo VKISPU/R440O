@@ -108,7 +108,7 @@
                 _кабельВход = value;
                 if (RefreshForm != null) RefreshForm();
                 ResetParameters();
-                N502BParameters.ResetParameters();
+                N502BParameters.Нагрузка = false;
             }
         }
 

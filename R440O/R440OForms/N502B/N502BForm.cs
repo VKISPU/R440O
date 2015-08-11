@@ -4,9 +4,9 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-using System.Drawing;
+using System;
+using System.Globalization;
 using R440O.ThirdParty;
-
 
 namespace R440O.R440OForms.N502B
 {
@@ -14,14 +14,14 @@ namespace R440O.R440OForms.N502B
 
     public partial class N502BForm : Form
     {
-
         public N502BForm()
         {
             InitializeComponent();
             N502BParameters.RefreshForm += RefreshForm;
+            N502BParameters.СледитьЗаВременем();
             RefreshForm();
         }
-
+        
         #region Тумблеры
 
         private void ТумблерЭлектрооборудование_Click(object sender, System.EventArgs e)
@@ -138,13 +138,12 @@ namespace R440O.R440OForms.N502B
         private void КнопкаВклНагрузки_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаВклНагрузки.BackgroundImage = null;
-            N502BParameters.КнопкаВклНагрузки = true;
+            N502BParameters.Нагрузка = true;
         }
 
         private void КнопкаВклНагрузки_MouseUp(object sender, MouseEventArgs e)
         {
             КнопкаВклНагрузки.BackgroundImage = ControlElementImages.buttonRoundType3;
-            N502BParameters.КнопкаВклНагрузки = false;
         }
         #endregion
 
@@ -162,6 +161,8 @@ namespace R440O.R440OForms.N502B
                 ПереключательСеть.BackgroundImage = ControlElementImages.tumblerN502BPowerUp;
                 N502BParameters.ПереключательСеть = true;
             }
+            if (N502BParameters.ЛампочкаСеть && N502BParameters.ПереключательСеть) N502BParameters.StationTimer.Start();
+            else N502BParameters.StationTimer.Stop();
         }
 
         private void ПереключательНапряжение_MouseUp(object sender, MouseEventArgs e)
@@ -221,6 +222,8 @@ namespace R440O.R440OForms.N502B
 
         private void RefreshForm()
         {
+            ВремяРаботы.Text = Math.Round(N502BParameters.ВремяРаботыСтанции.TotalHours, 1).ToString(CultureInfo.CurrentCulture);
+
             this.RefreshLamps();
             this.RefreshTogglesPosition();
             this.RefreshTumblersPosition();

@@ -1,4 +1,7 @@
-﻿using R440O.Parameters;
+﻿using System;
+using System.Globalization;
+using R440O.Parameters;
+using R440O.Properties;
 using R440O.R440OForms.A205M_1;
 using R440O.R440OForms.NKN_1;
 using R440O.R440OForms.NKN_2;
@@ -11,23 +14,40 @@ using R440O.R440OForms.C300M_4;
 using R440O.R440OForms.A304;
 using R440O.R440OForms.BMB;
 using R440O.R440OForms.N15;
+using System.Windows.Forms;
 
 namespace R440O.R440OForms.N502B
 {
-    public class N502BParameters
+    public static class N502BParameters
     {
+        #region Время работы станции
+        public static Timer StationTimer;
+
+        public static TimeSpan ВремяРаботыСтанции;
+
+        public static void СледитьЗаВременем()
+        {
+            ВремяРаботыСтанции = Settings.Default.TimeofWork;
+            StationTimer = new Timer { Enabled = false, Interval = 60 * 1000 };
+            StationTimer.Tick += StationTimer_Tick;
+            if (ЛампочкаСеть && ПереключательСеть) StationTimer.Start();
+            else StationTimer.Stop();
+        }
+
+        private static void StationTimer_Tick(object sender, EventArgs e)
+        {
+            ВремяРаботыСтанции += new TimeSpan(0, 0, 1, 0);
+            Settings.Default.TimeofWork = ВремяРаботыСтанции;
+            Settings.Default.Save();
+            ResetParameters();
+        }
+        #endregion
+
         #region Лампочки
-        private static bool _лампочкаСеть;
 
         public static bool ЛампочкаСеть
         {
-            get { return _лампочкаСеть; }
-            set
-            {
-                _лампочкаСеть = value;
-                VoltageStabilizerParameters.ResetParameters();
-                if (RefreshForm != null) RefreshForm();
-            }
+            get { return PowerCabelParameters.КабельСеть; }
         }
 
         private static bool _лампочкаСфазировано;
@@ -220,7 +240,7 @@ namespace R440O.R440OForms.N502B
             set
             {
                 _переключательСеть = value;
-                ResetParameters();
+                Нагрузка = false;
                 VoltageStabilizerParameters.ResetParameters();
                 if (RefreshForm != null)
                     RefreshForm();
@@ -250,7 +270,7 @@ namespace R440O.R440OForms.N502B
             set
             {
                 if (value >= 0 && value <= 5) _переключательФазировка = value;
-                ResetParameters();
+                Нагрузка = false;
                 if (RefreshForm != null)
                     RefreshForm();
             }
@@ -284,23 +304,18 @@ namespace R440O.R440OForms.N502B
         #endregion
 
         #region Нагрузка
-        private static bool _кнопкаВклНагрузки;
+        private static bool _нагрузка;
 
-        public static bool КнопкаВклНагрузки
+        public static bool Нагрузка
         {
-            get { return _кнопкаВклНагрузки; }
+            get { return _нагрузка; }
             set
             {
-                _кнопкаВклНагрузки = value;
-                if (value)
-                {
-                    ResetParameters();
-                }
-                if (RefreshForm != null)
-                    RefreshForm();
+                _нагрузка = value;
+                ResetParameters();
             }
+        }
 
-        } 
         #endregion
 
         #region Индикаторы
@@ -309,7 +324,7 @@ namespace R440O.R440OForms.N502B
             get
             {
                 if (VoltageStabilizerParameters.КабельВход != 0 && ЛампочкаСеть && ПереключательСеть &&
-                    КнопкаВклНагрузки && ПереключательФазировка == 2)
+                    Нагрузка && ПереключательФазировка == 2)
                 {
                     switch (ПереключательНапряжение)
                     {
@@ -425,9 +440,8 @@ namespace R440O.R440OForms.N502B
 
         public static void ResetParameters()
         {
-            ЛампочкаСеть = PowerCabelParameters.КабельСеть;
             ЛампочкаСфазировано = ПереключательФазировка == 4 && ЛампочкаСеть &&
-                                  ПереключательСеть && VoltageStabilizerParameters.КабельВход == 380 && КнопкаВклНагрузки;
+                                  ПереключательСеть && VoltageStabilizerParameters.КабельВход == 380 && Нагрузка;
         }
     }
 }

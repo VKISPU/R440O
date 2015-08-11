@@ -15,7 +15,7 @@ namespace R440O.R440OForms.PowerCabel
             set
             {
                 _кабельСеть = value;
-                N502BParameters.ResetParameters();
+                N502BParameters.Нагрузка = false;
             }
         }
     }

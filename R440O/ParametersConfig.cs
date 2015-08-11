@@ -24,8 +24,7 @@ namespace R440O
             //Включаем Н502Б и Нагрузку
             N502BParameters.ПереключательСеть = true;
             N502BParameters.ПереключательФазировка = 4;
-            N502BParameters.КнопкаВклНагрузки = true;
-            N502BParameters.КнопкаВклНагрузки = false;
+            N502BParameters.Нагрузка = true;
 
             //Устанавливаем переключатели
             N502BParameters.ТумблерЭлектрооборудование = true;

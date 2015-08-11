@@ -29,11 +29,14 @@
         private void InitializeComponent()
         {
             this.N502BPanel = new System.Windows.Forms.Panel();
+            this.ВремяРаботы = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ИндикаторТокНагрузкиИЗаряда = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ИндикаторКонтрольНапряжения = new System.Windows.Forms.PictureBox();
+            this.ИндикаторТокНагрузки = new System.Windows.Forms.PictureBox();
             this.ИндикаторНапряжение = new System.Windows.Forms.PictureBox();
             this.ЛампочкаСфазировано = new System.Windows.Forms.PictureBox();
             this.ЛампочкаСеть = new System.Windows.Forms.PictureBox();
@@ -53,25 +56,24 @@
             this.ТумблерОсвещение = new System.Windows.Forms.Button();
             this.ТумблерВыпрямитель27В = new System.Windows.Forms.Button();
             this.ТумблерЭлектрооборудование = new System.Windows.Forms.Button();
-            this.ИндикаторТокНагрузки = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.N502BPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторТокНагрузкиИЗаряда)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторКонтрольНапряжения)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторТокНагрузки)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторНапряжение)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСфазировано)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСеть)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторТокНагрузки)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // N502BPanel
             // 
             this.N502BPanel.BackgroundImage = global::R440O.BackgroundImages.N502B;
             this.N502BPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.N502BPanel.Controls.Add(this.ВремяРаботы);
             this.N502BPanel.Controls.Add(this.pictureBox5);
             this.N502BPanel.Controls.Add(this.pictureBox3);
             this.N502BPanel.Controls.Add(this.pictureBox2);
@@ -102,6 +104,31 @@
             this.N502BPanel.Name = "N502BPanel";
             this.N502BPanel.Size = new System.Drawing.Size(749, 745);
             this.N502BPanel.TabIndex = 1;
+            // 
+            // ВремяРаботы
+            // 
+            this.ВремяРаботы.BackColor = System.Drawing.Color.Transparent;
+            this.ВремяРаботы.FlatAppearance.BorderSize = 0;
+            this.ВремяРаботы.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ВремяРаботы.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ВремяРаботы.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ВремяРаботы.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ВремяРаботы.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ВремяРаботы.Location = new System.Drawing.Point(368, 170);
+            this.ВремяРаботы.Name = "ВремяРаботы";
+            this.ВремяРаботы.Size = new System.Drawing.Size(63, 22);
+            this.ВремяРаботы.TabIndex = 42;
+            this.ВремяРаботы.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ВремяРаботы.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Location = new System.Drawing.Point(215, 194);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(110, 51);
+            this.pictureBox5.TabIndex = 40;
+            this.pictureBox5.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -149,6 +176,16 @@
             this.ИндикаторКонтрольНапряжения.Size = new System.Drawing.Size(108, 103);
             this.ИндикаторКонтрольНапряжения.TabIndex = 40;
             this.ИндикаторКонтрольНапряжения.TabStop = false;
+            // 
+            // ИндикаторТокНагрузки
+            // 
+            this.ИндикаторТокНагрузки.BackColor = System.Drawing.Color.Transparent;
+            this.ИндикаторТокНагрузки.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ИндикаторТокНагрузки.Location = new System.Drawing.Point(226, 154);
+            this.ИндикаторТокНагрузки.Name = "ИндикаторТокНагрузки";
+            this.ИндикаторТокНагрузки.Size = new System.Drawing.Size(84, 75);
+            this.ИндикаторТокНагрузки.TabIndex = 39;
+            this.ИндикаторТокНагрузки.TabStop = false;
             // 
             // ИндикаторНапряжение
             // 
@@ -441,25 +478,6 @@
             this.ТумблерЭлектрооборудование.UseVisualStyleBackColor = false;
             this.ТумблерЭлектрооборудование.Click += new System.EventHandler(this.ТумблерЭлектрооборудование_Click);
             // 
-            // ИндикаторТокНагрузки
-            // 
-            this.ИндикаторТокНагрузки.BackColor = System.Drawing.Color.Transparent;
-            this.ИндикаторТокНагрузки.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ИндикаторТокНагрузки.Location = new System.Drawing.Point(226, 154);
-            this.ИндикаторТокНагрузки.Name = "ИндикаторТокНагрузки";
-            this.ИндикаторТокНагрузки.Size = new System.Drawing.Size(84, 75);
-            this.ИндикаторТокНагрузки.TabIndex = 39;
-            this.ИндикаторТокНагрузки.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Location = new System.Drawing.Point(215, 194);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(110, 51);
-            this.pictureBox5.TabIndex = 40;
-            this.pictureBox5.TabStop = false;
-            // 
             // N502BForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -472,16 +490,16 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Н502Б";
             this.N502BPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторТокНагрузкиИЗаряда)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторКонтрольНапряжения)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторТокНагрузки)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторНапряжение)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСфазировано)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСеть)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторТокНагрузки)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -515,6 +533,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox ИндикаторТокНагрузки;
+        private System.Windows.Forms.Button ВремяРаботы;
 
     }
 }
