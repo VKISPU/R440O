@@ -20,6 +20,7 @@ namespace R440O.R440OForms.BMB
             {
                 if (value > 0 && value < 3)
                     _переключательРаботаКонтроль = value;
+                BMA_M_1Parameters.Refresh();
                 ResetParameters();
             }
         }
@@ -101,6 +102,7 @@ namespace R440O.R440OForms.BMB
                     ПереданнаяКоманда = string.Empty;
                 }
                 _кнопкаПередачаВызоваТч = value;
+                BMA_M_1Parameters.Refresh();
                 if (RefreshForm != null) RefreshForm();
             }
         }
@@ -142,6 +144,7 @@ namespace R440O.R440OForms.BMB
             set
             {
                 _кнопкаСлСвязь = value;
+                BMA_M_1Parameters.Refresh();
                 if (RefreshForm != null) RefreshForm();
             }
         }
@@ -167,6 +170,7 @@ namespace R440O.R440OForms.BMB
                     ПереданнаяКоманда = string.Empty;
                 }
                 _кнопкаПитание = value;
+                BMA_M_1Parameters.Refresh();
                 if (RefreshForm != null) RefreshForm();
             }
         }
