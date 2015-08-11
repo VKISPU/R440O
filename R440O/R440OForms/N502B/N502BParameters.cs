@@ -318,8 +318,10 @@ namespace R440O.R440OForms.N502B
                         case 3:
                             return VoltageStabilizerParameters.КабельВход;
                         case 4:
+                            return 0;
                         case 5:
                         case 6:
+                        case 7:
                             return 220;
                     }
                 }
@@ -350,8 +352,30 @@ namespace R440O.R440OForms.N502B
                         case 3:
                             return 380;
                         case 4:
+                            return 0;
                         case 5:
                         case 6:
+                        case 7:
+                            return 0;
+                    }
+                }
+                return 0;
+            }
+        }
+
+        public static int ИндикаторТокНагрузки
+        {
+            get
+            {
+                if (ЛампочкаСфазировано)
+                {
+                    switch (ИндикаторНапряжение)
+                    {
+                        case 220:
+                            return 127;
+                        case 380:
+                            return 220;
+                        case 0:
                             return 0;
                     }
                 }

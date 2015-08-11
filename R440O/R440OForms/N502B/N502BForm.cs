@@ -229,6 +229,10 @@ namespace R440O.R440OForms.N502B
             ИндикаторНапряжение.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
 
+            angle = N502BParameters.ИндикаторТокНагрузки * 0.25F - 70;
+            ИндикаторТокНагрузки.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
+
             angle = N502BParameters.ИндикаторКонтрольНапряжения * 1.5F - 60;
             ИндикаторКонтрольНапряжения.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
