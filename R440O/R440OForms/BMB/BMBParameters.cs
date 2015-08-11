@@ -261,6 +261,9 @@ namespace R440O.R440OForms.BMB
 
         #region НаборКоманды
 
+        /// <summary>
+        /// 0 - первый регистр; 1 - второй регистр;
+        /// </summary>
         private static int[] Команда = {-1, -1};
 
         /// <summary>
@@ -268,7 +271,7 @@ namespace R440O.R440OForms.BMB
         /// </summary>
         private static bool ПодсветкаНабора()
         {
-            return (ПереключательРаботаКонтроль == 2 || 
+            return КнопкаПитание == Кнопка.Горит && БМАПодключенВерно() && (ПереключательРаботаКонтроль == 2 || 
                         (КнопкаСлСвязь == Кнопка.Горит &&
                         (BMA_M_1Parameters.КнопкаШлейфДК || BMA_M_2Parameters.КнопкаШлейфДК) && БМАПодключенВерно()));
         }
@@ -299,13 +302,20 @@ namespace R440O.R440OForms.BMB
         {
             if (ПодсветкаНабора())
             {
-                if ((value < 3 && Команда[1] == -1) || Команда[0] == -1 && Команда[1] != -1)
-                {
-                    Команда[0] = Команда[1];
+                if (Команда[0] != -1 && Команда[1] == -1)
                     Команда[1] = value;
-                    if (RefreshForm != null) RefreshForm();
+                else if (value < 3 && Команда[0] == -1)
+                {
+                    Команда[0] = value;
+                } else
+                if (Команда[0] != -1 && Команда[1] != -1 && value < 3)
+                {
+                    ПереданнаяКоманда = string.Empty;
+                    Команда[0] = value;
+                    Команда[1] = -1;
                 }
             }
+            if (RefreshForm != null) RefreshForm();
         }
 
         /// <summary>
@@ -333,8 +343,8 @@ namespace R440O.R440OForms.BMB
         /// </summary>
         public static void ПередатьКоманду()
         {
+            if (Команда[0] == 0 && Команда[1] == 0) return;
             ПереданнаяКоманда = НаборКоманды;
-            ОбнулитьНабор();
             if (RefreshForm != null) RefreshForm();
         }
         
