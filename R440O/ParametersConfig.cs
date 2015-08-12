@@ -16,13 +16,16 @@ namespace R440O
         /// </summary>
         public static void SetParameters()
         {
+            //// Фазировка и Напряжение
+            N502BParameters.Фазировка = 4;
+            VoltageStabilizerParameters.ПравильныйВход = 380;
+
             //// Подключение питания
             //Подключаем кабели
             PowerCabelParameters.КабельСеть = true;
             VoltageStabilizerParameters.КабельВход = 380;
 
             //Включаем Н502Б и Нагрузку
-            N502BParameters.Фазировка = 4;
             N502BParameters.ПереключательСеть = true;
             N502BParameters.ПереключательФазировка = 4;
             N502BParameters.Нагрузка = true;

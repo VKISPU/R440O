@@ -1,9 +1,15 @@
 ﻿namespace R440O.R440OForms.VoltageStabilizer
 {
+    using System;
     using N502B;
 
     public static class VoltageStabilizerParameters
     {
+        static VoltageStabilizerParameters()
+        {
+            СлучайноеНапряжение();
+        }
+
         #region Лампочки
         private static bool _лампочкаСетьВкл;
         public static bool ЛампочкаСетьВкл
@@ -93,11 +99,18 @@
 
         #endregion
 
+        #region Текущее напряжение
+
         ////Кабель
         /// <summary>
         /// Возможные состояния: 220, 380, 0
         /// </summary>
         private static int _кабельВход;
+
+        /// <summary>
+        /// Значение, которому должен соответствовать КаюельВход.
+        /// </summary>
+        public static int ПравильныйВход { get; set; }
 
         public static int КабельВход
         {
@@ -112,17 +125,34 @@
             }
         }
 
+        /// <summary>
+        /// Задание случайной фазировки.
+        /// </summary>
+        private static void СлучайноеНапряжение()
+        {
+            var generator = new Random();
+            var zeroToOne = generator.NextDouble();
+            ПравильныйВход = zeroToOne > 0.5F ? 380 : 220;
+        }
+
+        public static bool ПодключенПравильно()
+        {
+            return _кабельВход == ПравильныйВход;
+        }
+
+        #endregion
+
         #region Обновление переменных и формы
 
         public static void ResetParameters()
         {
             ЛампочкаСетьВкл = N502BParameters.ПереключательСеть &&
                              N502BParameters.ЛампочкаСеть
-                               && _кабельВход == 380;
+                               && ПодключенПравильно();
 
             ЛампочкаАвария = N502BParameters.ПереключательСеть &&
                              N502BParameters.ЛампочкаСеть
-                               && _кабельВход == 220;
+                               && !ПодключенПравильно();
         }
 
         public delegate void ParameterChangedHandler();

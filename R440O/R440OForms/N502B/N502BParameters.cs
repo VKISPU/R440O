@@ -349,14 +349,14 @@ namespace R440O.R440OForms.N502B
 
                 // Если не включено питание, напряжение также показывается.
                 if (ЛампочкаСеть && ПереключательСеть &&
-                        (ПереключательФазировка == 2 || ПереключательФазировка == 4))
+                        (ПереключательФазировка == 2 || ПереключательФазировка == 4) && VoltageStabilizerParameters.КабельВход == 0)
                 {
                     switch (ПереключательНапряжение)
                     {
                         case 1:
                         case 2:
                         case 3:
-                            return 380;
+                            return VoltageStabilizerParameters.ПравильныйВход;
                         case 4:
                         case 5:
                         case 6:
@@ -444,7 +444,7 @@ namespace R440O.R440OForms.N502B
         public static void ResetParameters()
         {
             ЛампочкаСфазировано = ПереключательФазировка == Фазировка && ЛампочкаСеть &&
-                                  ПереключательСеть && VoltageStabilizerParameters.КабельВход == 380 && Нагрузка;
+                                  ПереключательСеть && VoltageStabilizerParameters.ПодключенПравильно() && Нагрузка;
         }
 
         #region Фазировка
@@ -470,7 +470,7 @@ namespace R440O.R440OForms.N502B
             get
             {
                 return (ПереключательФазировка == 2 || ПереключательФазировка == 4) && ЛампочкаСеть &&
-                       ПереключательСеть && VoltageStabilizerParameters.КабельВход == 380 && КнопкаНагрузка;
+                       ПереключательСеть && VoltageStabilizerParameters.ПодключенПравильно() && КнопкаНагрузка;
             }
         }
 
