@@ -1,12 +1,7 @@
-﻿using System;
-using System.Diagnostics.Eventing.Reader;
-using System.Drawing;
-using System.Reflection;
-using System.Linq;
-using System.Windows.Forms.VisualStyles;
-
-namespace R440O.R440OForms.A306
+﻿namespace R440O.R440OForms.A306
 {
+    using System;
+    using System.Drawing;
     using System.Windows.Forms;
     using Parameters;
 
@@ -24,6 +19,8 @@ namespace R440O.R440OForms.A306
             InitializeComponent();
             A306Parameters.RefreshForm += RefreshForm;
         }
+
+        #region Инициализация
         /// <summary>
         /// Задает начальные полочения переключателей на блоке A306.
         /// </summary>
@@ -111,7 +108,8 @@ namespace R440O.R440OForms.A306
             }
             A306Panel.Refresh();
 
-        }
+        } 
+        #endregion
 
         #region Тумблеры
         private void ТумблерДистанцМестн_Click(object sender, System.EventArgs e)
@@ -125,7 +123,7 @@ namespace R440O.R440OForms.A306
         }
         #endregion
 
-
+        #region Коммутация
 
         private void Выходы_Click(object sender, EventArgs e)
         {
@@ -184,7 +182,10 @@ namespace R440O.R440OForms.A306
             //выделим визуально
             FontChange(button, "ВходNO_1", "ВходКанала");
             A306Parameters.АктивныйВход = 5;
-        }
+        } 
+        #endregion
+
+        #region Графика
 
         private void FontChange(Button button, string controlName1, string controlName2)
         {
@@ -333,7 +334,8 @@ namespace R440O.R440OForms.A306
 
 
             }
-        }
+        } 
+        #endregion
 
         /// <summary>
         /// Для запуска refreshForm после того как вся форма загрузилась
