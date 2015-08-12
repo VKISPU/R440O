@@ -330,19 +330,39 @@ namespace R440O.R440OForms.N502B
         {
             get
             {
-                if (!(ФазировкаГорит || ЛампочкаСфазировано)) return 0;
-                switch (ПереключательНапряжение)
+                if (ФазировкаГорит || ЛампочкаСфазировано)
                 {
-                    case 1:
-                    case 2:
-                    case 3:
-                        return VoltageStabilizerParameters.КабельВход;
-                    case 4:
-                        return 0;
-                    case 5:
-                    case 6:
-                    case 7:
-                        return 220;
+                    switch (ПереключательНапряжение)
+                    {
+                        case 1:
+                        case 2:
+                        case 3:
+                            return VoltageStabilizerParameters.КабельВход;
+                        case 4:
+                            return 0;
+                        case 5:
+                        case 6:
+                        case 7:
+                            return 220;
+                    }
+                }
+
+                // Если не включено питание, напряжение также показывается.
+                if (ЛампочкаСеть && ПереключательСеть &&
+                        (ПереключательФазировка == 2 || ПереключательФазировка == 4))
+                {
+                    switch (ПереключательНапряжение)
+                    {
+                        case 1:
+                        case 2:
+                        case 3:
+                            return 380;
+                        case 4:
+                        case 5:
+                        case 6:
+                        case 7:
+                            return 0;
+                    }
                 }
                 return 0;
             }
