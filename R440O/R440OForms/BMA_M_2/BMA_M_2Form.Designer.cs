@@ -29,38 +29,38 @@
         private void InitializeComponent()
         {
             this.BMA_M_2Panel = new System.Windows.Forms.Panel();
-            this.BMA_M_2ЛампочкаНеисправно = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаИсправно = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаДист = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаРРР = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаКонтрольНорм = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаКонтрольНенорм = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаКонтрольКомпл = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаКонтрольТЧ = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаКонтрольДК = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаКонтрольТест = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаРекурента1023 = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаРекурента511 = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаРекурента31 = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаРекурента15 = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаАвтомКоманда2 = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаАвтомКоманда1 = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаПитание_15Вplus = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаПитание_15В = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаПитание_12В = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаПитание_5В = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаПитание_10В = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаПрмФР = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаПрмДК2 = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаПрмДК1 = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаПрмТЧ = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаПрдДК = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаПрдТЧ = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаСинхрДК = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаСинхрТЧ = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаДК = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаФЗ = new System.Windows.Forms.PictureBox();
-            this.BMA_M_2ЛампочкаТЧБ = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаНеисправно = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаИсправно = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаДист = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаРРР = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаКонтрольНорм = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаКонтрольНенорм = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаКонтрольКомпл = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаКонтрольТЧ = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаКонтрольДК = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаКонтрольТест = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаРекуррента1023 = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаРекуррента511 = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаРекуррента31 = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаРекуррента15 = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаАвтомКоманда2 = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаАвтомКоманда1 = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаПитание_15Вplus = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаПитание_15В = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаПитание_12В = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаПитание_5В = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаПитание_10В = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаПрмФР = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаПрмДК2 = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаПрмДК1 = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаПрмТЧ = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаПрдДК = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаПрдТЧ = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаСинхрДК = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаСинхрТЧ = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаДК = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаФЗ = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаТЧБ = new System.Windows.Forms.PictureBox();
             this.BMA_M_2КнопкаПитаниеВЫКЛ = new System.Windows.Forms.Button();
             this.BMA_M_2КнопкаПитаниеВКЛ = new System.Windows.Forms.Button();
             this.BMA_M_2КнопкаПроверка = new System.Windows.Forms.Button();
@@ -76,76 +76,76 @@
             this.BMA_M_2ПереключательРекурента = new System.Windows.Forms.Button();
             this.BMA_M_2ПереключательКонтроль = new System.Windows.Forms.Button();
             this.BMA_M_2Panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаНеисправно)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаИсправно)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаДист)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаРРР)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаКонтрольНорм)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаКонтрольНенорм)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаКонтрольКомпл)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаКонтрольТЧ)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаКонтрольДК)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаКонтрольТест)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаРекурента1023)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаРекурента511)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаРекурента31)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаРекурента15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаАвтомКоманда2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаАвтомКоманда1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаПитание_15Вplus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаПитание_15В)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаПитание_12В)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаПитание_5В)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаПитание_10В)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаПрмФР)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаПрмДК2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаПрмДК1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаПрмТЧ)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаПрдДК)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаПрдТЧ)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаСинхрДК)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаСинхрТЧ)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаДК)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаФЗ)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаТЧБ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаНеисправно)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаИсправно)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаДист)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаРРР)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКонтрольНорм)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКонтрольНенорм)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКонтрольКомпл)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКонтрольТЧ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКонтрольДК)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКонтрольТест)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаРекуррента1023)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаРекуррента511)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаРекуррента31)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаРекуррента15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаАвтомКоманда2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаАвтомКоманда1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПитание_15Вplus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПитание_15В)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПитание_12В)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПитание_5В)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПитание_10В)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПрмФР)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПрмДК2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПрмДК1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПрмТЧ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПрдДК)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПрдТЧ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСинхрДК)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСинхрТЧ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаДК)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаФЗ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаТЧБ)).BeginInit();
             this.SuspendLayout();
             // 
             // BMA_M_2Panel
             // 
             this.BMA_M_2Panel.BackgroundImage = global::R440O.BackgroundImages.BMA_M;
             this.BMA_M_2Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаНеисправно);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаИсправно);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаДист);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаРРР);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаКонтрольНорм);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаКонтрольНенорм);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаКонтрольКомпл);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаКонтрольТЧ);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаКонтрольДК);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаКонтрольТест);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаРекурента1023);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаРекурента511);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаРекурента31);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаРекурента15);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаАвтомКоманда2);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаАвтомКоманда1);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаПитание_15Вplus);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаПитание_15В);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаПитание_12В);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаПитание_5В);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаПитание_10В);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаПрмФР);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаПрмДК2);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаПрмДК1);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаПрмТЧ);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаПрдДК);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаПрдТЧ);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаСинхрДК);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаСинхрТЧ);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаДК);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаФЗ);
-            this.BMA_M_2Panel.Controls.Add(this.BMA_M_2ЛампочкаТЧБ);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаНеисправно);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаИсправно);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаДист);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаРРР);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаКонтрольНорм);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаКонтрольНенорм);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаКонтрольКомпл);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаКонтрольТЧ);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаКонтрольДК);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаКонтрольТест);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаРекуррента1023);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаРекуррента511);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаРекуррента31);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаРекуррента15);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаАвтомКоманда2);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаАвтомКоманда1);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаПитание_15Вplus);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаПитание_15В);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаПитание_12В);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаПитание_5В);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаПитание_10В);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаПрмФР);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаПрмДК2);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаПрмДК1);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаПрмТЧ);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаПрдДК);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаПрдТЧ);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаСинхрДК);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаСинхрТЧ);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаДК);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаФЗ);
+            this.BMA_M_2Panel.Controls.Add(this.ЛампочкаТЧБ);
             this.BMA_M_2Panel.Controls.Add(this.BMA_M_2КнопкаПитаниеВЫКЛ);
             this.BMA_M_2Panel.Controls.Add(this.BMA_M_2КнопкаПитаниеВКЛ);
             this.BMA_M_2Panel.Controls.Add(this.BMA_M_2КнопкаПроверка);
@@ -165,325 +165,325 @@
             this.BMA_M_2Panel.Size = new System.Drawing.Size(954, 626);
             this.BMA_M_2Panel.TabIndex = 1;
             // 
-            // BMA_M_2ЛампочкаНеисправно
+            // ЛампочкаНеисправно
             // 
-            this.BMA_M_2ЛампочкаНеисправно.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаНеисправно.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаНеисправно.Location = new System.Drawing.Point(154, 104);
-            this.BMA_M_2ЛампочкаНеисправно.Name = "BMA_M_2ЛампочкаНеисправно";
-            this.BMA_M_2ЛампочкаНеисправно.Size = new System.Drawing.Size(72, 27);
-            this.BMA_M_2ЛампочкаНеисправно.TabIndex = 93;
-            this.BMA_M_2ЛампочкаНеисправно.TabStop = false;
+            this.ЛампочкаНеисправно.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаНеисправно.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаНеисправно.Location = new System.Drawing.Point(154, 104);
+            this.ЛампочкаНеисправно.Name = "ЛампочкаНеисправно";
+            this.ЛампочкаНеисправно.Size = new System.Drawing.Size(72, 27);
+            this.ЛампочкаНеисправно.TabIndex = 93;
+            this.ЛампочкаНеисправно.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаИсправно
+            // ЛампочкаИсправно
             // 
-            this.BMA_M_2ЛампочкаИсправно.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаИсправно.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаИсправно.Location = new System.Drawing.Point(155, 81);
-            this.BMA_M_2ЛампочкаИсправно.Name = "BMA_M_2ЛампочкаИсправно";
-            this.BMA_M_2ЛампочкаИсправно.Size = new System.Drawing.Size(72, 27);
-            this.BMA_M_2ЛампочкаИсправно.TabIndex = 92;
-            this.BMA_M_2ЛампочкаИсправно.TabStop = false;
+            this.ЛампочкаИсправно.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаИсправно.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаИсправно.Location = new System.Drawing.Point(155, 81);
+            this.ЛампочкаИсправно.Name = "ЛампочкаИсправно";
+            this.ЛампочкаИсправно.Size = new System.Drawing.Size(72, 27);
+            this.ЛампочкаИсправно.TabIndex = 92;
+            this.ЛампочкаИсправно.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаДист
+            // ЛампочкаДист
             // 
-            this.BMA_M_2ЛампочкаДист.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаДист.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаДист.Location = new System.Drawing.Point(581, 104);
-            this.BMA_M_2ЛампочкаДист.Name = "BMA_M_2ЛампочкаДист";
-            this.BMA_M_2ЛампочкаДист.Size = new System.Drawing.Size(72, 27);
-            this.BMA_M_2ЛампочкаДист.TabIndex = 91;
-            this.BMA_M_2ЛампочкаДист.TabStop = false;
+            this.ЛампочкаДист.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаДист.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаДист.Location = new System.Drawing.Point(581, 104);
+            this.ЛампочкаДист.Name = "ЛампочкаДист";
+            this.ЛампочкаДист.Size = new System.Drawing.Size(72, 27);
+            this.ЛампочкаДист.TabIndex = 91;
+            this.ЛампочкаДист.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаРРР
+            // ЛампочкаРРР
             // 
-            this.BMA_M_2ЛампочкаРРР.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаРРР.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаРРР.Location = new System.Drawing.Point(581, 81);
-            this.BMA_M_2ЛампочкаРРР.Name = "BMA_M_2ЛампочкаРРР";
-            this.BMA_M_2ЛампочкаРРР.Size = new System.Drawing.Size(72, 27);
-            this.BMA_M_2ЛампочкаРРР.TabIndex = 90;
-            this.BMA_M_2ЛампочкаРРР.TabStop = false;
+            this.ЛампочкаРРР.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаРРР.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаРРР.Location = new System.Drawing.Point(581, 81);
+            this.ЛампочкаРРР.Name = "ЛампочкаРРР";
+            this.ЛампочкаРРР.Size = new System.Drawing.Size(72, 27);
+            this.ЛампочкаРРР.TabIndex = 90;
+            this.ЛампочкаРРР.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаКонтрольНорм
+            // ЛампочкаКонтрольНорм
             // 
-            this.BMA_M_2ЛампочкаКонтрольНорм.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаКонтрольНорм.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаКонтрольНорм.Location = new System.Drawing.Point(416, 68);
-            this.BMA_M_2ЛампочкаКонтрольНорм.Name = "BMA_M_2ЛампочкаКонтрольНорм";
-            this.BMA_M_2ЛампочкаКонтрольНорм.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаКонтрольНорм.TabIndex = 89;
-            this.BMA_M_2ЛампочкаКонтрольНорм.TabStop = false;
+            this.ЛампочкаКонтрольНорм.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаКонтрольНорм.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаКонтрольНорм.Location = new System.Drawing.Point(416, 68);
+            this.ЛампочкаКонтрольНорм.Name = "ЛампочкаКонтрольНорм";
+            this.ЛампочкаКонтрольНорм.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаКонтрольНорм.TabIndex = 89;
+            this.ЛампочкаКонтрольНорм.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаКонтрольНенорм
+            // ЛампочкаКонтрольНенорм
             // 
-            this.BMA_M_2ЛампочкаКонтрольНенорм.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаКонтрольНенорм.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаКонтрольНенорм.Location = new System.Drawing.Point(296, 69);
-            this.BMA_M_2ЛампочкаКонтрольНенорм.Name = "BMA_M_2ЛампочкаКонтрольНенорм";
-            this.BMA_M_2ЛампочкаКонтрольНенорм.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаКонтрольНенорм.TabIndex = 88;
-            this.BMA_M_2ЛампочкаКонтрольНенорм.TabStop = false;
+            this.ЛампочкаКонтрольНенорм.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаКонтрольНенорм.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаКонтрольНенорм.Location = new System.Drawing.Point(296, 69);
+            this.ЛампочкаКонтрольНенорм.Name = "ЛампочкаКонтрольНенорм";
+            this.ЛампочкаКонтрольНенорм.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаКонтрольНенорм.TabIndex = 88;
+            this.ЛампочкаКонтрольНенорм.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаКонтрольКомпл
+            // ЛампочкаКонтрольКомпл
             // 
-            this.BMA_M_2ЛампочкаКонтрольКомпл.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаКонтрольКомпл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаКонтрольКомпл.Location = new System.Drawing.Point(415, 154);
-            this.BMA_M_2ЛампочкаКонтрольКомпл.Name = "BMA_M_2ЛампочкаКонтрольКомпл";
-            this.BMA_M_2ЛампочкаКонтрольКомпл.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаКонтрольКомпл.TabIndex = 87;
-            this.BMA_M_2ЛампочкаКонтрольКомпл.TabStop = false;
+            this.ЛампочкаКонтрольКомпл.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаКонтрольКомпл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаКонтрольКомпл.Location = new System.Drawing.Point(415, 154);
+            this.ЛампочкаКонтрольКомпл.Name = "ЛампочкаКонтрольКомпл";
+            this.ЛампочкаКонтрольКомпл.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаКонтрольКомпл.TabIndex = 87;
+            this.ЛампочкаКонтрольКомпл.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаКонтрольТЧ
+            // ЛампочкаКонтрольТЧ
             // 
-            this.BMA_M_2ЛампочкаКонтрольТЧ.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаКонтрольТЧ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаКонтрольТЧ.Location = new System.Drawing.Point(376, 154);
-            this.BMA_M_2ЛампочкаКонтрольТЧ.Name = "BMA_M_2ЛампочкаКонтрольТЧ";
-            this.BMA_M_2ЛампочкаКонтрольТЧ.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаКонтрольТЧ.TabIndex = 86;
-            this.BMA_M_2ЛампочкаКонтрольТЧ.TabStop = false;
+            this.ЛампочкаКонтрольТЧ.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаКонтрольТЧ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаКонтрольТЧ.Location = new System.Drawing.Point(376, 154);
+            this.ЛампочкаКонтрольТЧ.Name = "ЛампочкаКонтрольТЧ";
+            this.ЛампочкаКонтрольТЧ.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаКонтрольТЧ.TabIndex = 86;
+            this.ЛампочкаКонтрольТЧ.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаКонтрольДК
+            // ЛампочкаКонтрольДК
             // 
-            this.BMA_M_2ЛампочкаКонтрольДК.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаКонтрольДК.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаКонтрольДК.Location = new System.Drawing.Point(336, 154);
-            this.BMA_M_2ЛампочкаКонтрольДК.Name = "BMA_M_2ЛампочкаКонтрольДК";
-            this.BMA_M_2ЛампочкаКонтрольДК.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаКонтрольДК.TabIndex = 85;
-            this.BMA_M_2ЛампочкаКонтрольДК.TabStop = false;
+            this.ЛампочкаКонтрольДК.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаКонтрольДК.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаКонтрольДК.Location = new System.Drawing.Point(336, 154);
+            this.ЛампочкаКонтрольДК.Name = "ЛампочкаКонтрольДК";
+            this.ЛампочкаКонтрольДК.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаКонтрольДК.TabIndex = 85;
+            this.ЛампочкаКонтрольДК.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаКонтрольТест
+            // ЛампочкаКонтрольТест
             // 
-            this.BMA_M_2ЛампочкаКонтрольТест.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаКонтрольТест.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаКонтрольТест.Location = new System.Drawing.Point(296, 154);
-            this.BMA_M_2ЛампочкаКонтрольТест.Name = "BMA_M_2ЛампочкаКонтрольТест";
-            this.BMA_M_2ЛампочкаКонтрольТест.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаКонтрольТест.TabIndex = 84;
-            this.BMA_M_2ЛампочкаКонтрольТест.TabStop = false;
+            this.ЛампочкаКонтрольТест.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаКонтрольТест.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаКонтрольТест.Location = new System.Drawing.Point(296, 154);
+            this.ЛампочкаКонтрольТест.Name = "ЛампочкаКонтрольТест";
+            this.ЛампочкаКонтрольТест.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаКонтрольТест.TabIndex = 84;
+            this.ЛампочкаКонтрольТест.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаРекурента1023
+            // ЛампочкаРекуррента1023
             // 
-            this.BMA_M_2ЛампочкаРекурента1023.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаРекурента1023.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаРекурента1023.Location = new System.Drawing.Point(415, 325);
-            this.BMA_M_2ЛампочкаРекурента1023.Name = "BMA_M_2ЛампочкаРекурента1023";
-            this.BMA_M_2ЛампочкаРекурента1023.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаРекурента1023.TabIndex = 83;
-            this.BMA_M_2ЛампочкаРекурента1023.TabStop = false;
+            this.ЛампочкаРекуррента1023.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаРекуррента1023.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаРекуррента1023.Location = new System.Drawing.Point(415, 325);
+            this.ЛампочкаРекуррента1023.Name = "ЛампочкаРекуррента1023";
+            this.ЛампочкаРекуррента1023.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаРекуррента1023.TabIndex = 83;
+            this.ЛампочкаРекуррента1023.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаРекурента511
+            // ЛампочкаРекуррента511
             // 
-            this.BMA_M_2ЛампочкаРекурента511.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаРекурента511.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаРекурента511.Location = new System.Drawing.Point(375, 325);
-            this.BMA_M_2ЛампочкаРекурента511.Name = "BMA_M_2ЛампочкаРекурента511";
-            this.BMA_M_2ЛампочкаРекурента511.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаРекурента511.TabIndex = 82;
-            this.BMA_M_2ЛампочкаРекурента511.TabStop = false;
+            this.ЛампочкаРекуррента511.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаРекуррента511.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаРекуррента511.Location = new System.Drawing.Point(375, 325);
+            this.ЛампочкаРекуррента511.Name = "ЛампочкаРекуррента511";
+            this.ЛампочкаРекуррента511.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаРекуррента511.TabIndex = 82;
+            this.ЛампочкаРекуррента511.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаРекурента31
+            // ЛампочкаРекуррента31
             // 
-            this.BMA_M_2ЛампочкаРекурента31.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаРекурента31.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаРекурента31.Location = new System.Drawing.Point(337, 325);
-            this.BMA_M_2ЛампочкаРекурента31.Name = "BMA_M_2ЛампочкаРекурента31";
-            this.BMA_M_2ЛампочкаРекурента31.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаРекурента31.TabIndex = 81;
-            this.BMA_M_2ЛампочкаРекурента31.TabStop = false;
+            this.ЛампочкаРекуррента31.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаРекуррента31.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаРекуррента31.Location = new System.Drawing.Point(337, 325);
+            this.ЛампочкаРекуррента31.Name = "ЛампочкаРекуррента31";
+            this.ЛампочкаРекуррента31.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаРекуррента31.TabIndex = 81;
+            this.ЛампочкаРекуррента31.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаРекурента15
+            // ЛампочкаРекуррента15
             // 
-            this.BMA_M_2ЛампочкаРекурента15.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаРекурента15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаРекурента15.Location = new System.Drawing.Point(296, 325);
-            this.BMA_M_2ЛампочкаРекурента15.Name = "BMA_M_2ЛампочкаРекурента15";
-            this.BMA_M_2ЛампочкаРекурента15.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаРекурента15.TabIndex = 80;
-            this.BMA_M_2ЛампочкаРекурента15.TabStop = false;
+            this.ЛампочкаРекуррента15.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаРекуррента15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаРекуррента15.Location = new System.Drawing.Point(296, 325);
+            this.ЛампочкаРекуррента15.Name = "ЛампочкаРекуррента15";
+            this.ЛампочкаРекуррента15.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаРекуррента15.TabIndex = 80;
+            this.ЛампочкаРекуррента15.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаАвтомКоманда2
+            // ЛампочкаАвтомКоманда2
             // 
-            this.BMA_M_2ЛампочкаАвтомКоманда2.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаАвтомКоманда2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаАвтомКоманда2.Location = new System.Drawing.Point(388, 467);
-            this.BMA_M_2ЛампочкаАвтомКоманда2.Name = "BMA_M_2ЛампочкаАвтомКоманда2";
-            this.BMA_M_2ЛампочкаАвтомКоманда2.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаАвтомКоманда2.TabIndex = 79;
-            this.BMA_M_2ЛампочкаАвтомКоманда2.TabStop = false;
+            this.ЛампочкаАвтомКоманда2.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаАвтомКоманда2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаАвтомКоманда2.Location = new System.Drawing.Point(388, 467);
+            this.ЛампочкаАвтомКоманда2.Name = "ЛампочкаАвтомКоманда2";
+            this.ЛампочкаАвтомКоманда2.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаАвтомКоманда2.TabIndex = 79;
+            this.ЛампочкаАвтомКоманда2.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаАвтомКоманда1
+            // ЛампочкаАвтомКоманда1
             // 
-            this.BMA_M_2ЛампочкаАвтомКоманда1.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаАвтомКоманда1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаАвтомКоманда1.Location = new System.Drawing.Point(318, 467);
-            this.BMA_M_2ЛампочкаАвтомКоманда1.Name = "BMA_M_2ЛампочкаАвтомКоманда1";
-            this.BMA_M_2ЛампочкаАвтомКоманда1.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаАвтомКоманда1.TabIndex = 78;
-            this.BMA_M_2ЛампочкаАвтомКоманда1.TabStop = false;
+            this.ЛампочкаАвтомКоманда1.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаАвтомКоманда1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаАвтомКоманда1.Location = new System.Drawing.Point(318, 467);
+            this.ЛампочкаАвтомКоманда1.Name = "ЛампочкаАвтомКоманда1";
+            this.ЛампочкаАвтомКоманда1.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаАвтомКоманда1.TabIndex = 78;
+            this.ЛампочкаАвтомКоманда1.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаПитание_15Вplus
+            // ЛампочкаПитание_15Вplus
             // 
-            this.BMA_M_2ЛампочкаПитание_15Вplus.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаПитание_15Вplus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаПитание_15Вplus.Location = new System.Drawing.Point(219, 467);
-            this.BMA_M_2ЛампочкаПитание_15Вplus.Name = "BMA_M_2ЛампочкаПитание_15Вplus";
-            this.BMA_M_2ЛампочкаПитание_15Вplus.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаПитание_15Вplus.TabIndex = 77;
-            this.BMA_M_2ЛампочкаПитание_15Вplus.TabStop = false;
+            this.ЛампочкаПитание_15Вplus.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаПитание_15Вplus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаПитание_15Вplus.Location = new System.Drawing.Point(219, 467);
+            this.ЛампочкаПитание_15Вplus.Name = "ЛампочкаПитание_15Вplus";
+            this.ЛампочкаПитание_15Вplus.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаПитание_15Вplus.TabIndex = 77;
+            this.ЛампочкаПитание_15Вplus.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаПитание_15В
+            // ЛампочкаПитание_15В
             // 
-            this.BMA_M_2ЛампочкаПитание_15В.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаПитание_15В.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаПитание_15В.Location = new System.Drawing.Point(173, 467);
-            this.BMA_M_2ЛампочкаПитание_15В.Name = "BMA_M_2ЛампочкаПитание_15В";
-            this.BMA_M_2ЛампочкаПитание_15В.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаПитание_15В.TabIndex = 76;
-            this.BMA_M_2ЛампочкаПитание_15В.TabStop = false;
+            this.ЛампочкаПитание_15В.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаПитание_15В.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаПитание_15В.Location = new System.Drawing.Point(173, 467);
+            this.ЛампочкаПитание_15В.Name = "ЛампочкаПитание_15В";
+            this.ЛампочкаПитание_15В.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаПитание_15В.TabIndex = 76;
+            this.ЛампочкаПитание_15В.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаПитание_12В
+            // ЛампочкаПитание_12В
             // 
-            this.BMA_M_2ЛампочкаПитание_12В.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаПитание_12В.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаПитание_12В.Location = new System.Drawing.Point(127, 467);
-            this.BMA_M_2ЛампочкаПитание_12В.Name = "BMA_M_2ЛампочкаПитание_12В";
-            this.BMA_M_2ЛампочкаПитание_12В.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаПитание_12В.TabIndex = 75;
-            this.BMA_M_2ЛампочкаПитание_12В.TabStop = false;
+            this.ЛампочкаПитание_12В.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаПитание_12В.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаПитание_12В.Location = new System.Drawing.Point(127, 467);
+            this.ЛампочкаПитание_12В.Name = "ЛампочкаПитание_12В";
+            this.ЛампочкаПитание_12В.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаПитание_12В.TabIndex = 75;
+            this.ЛампочкаПитание_12В.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаПитание_5В
+            // ЛампочкаПитание_5В
             // 
-            this.BMA_M_2ЛампочкаПитание_5В.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаПитание_5В.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаПитание_5В.Location = new System.Drawing.Point(127, 415);
-            this.BMA_M_2ЛампочкаПитание_5В.Name = "BMA_M_2ЛампочкаПитание_5В";
-            this.BMA_M_2ЛампочкаПитание_5В.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаПитание_5В.TabIndex = 74;
-            this.BMA_M_2ЛампочкаПитание_5В.TabStop = false;
+            this.ЛампочкаПитание_5В.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаПитание_5В.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаПитание_5В.Location = new System.Drawing.Point(127, 415);
+            this.ЛампочкаПитание_5В.Name = "ЛампочкаПитание_5В";
+            this.ЛампочкаПитание_5В.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаПитание_5В.TabIndex = 74;
+            this.ЛампочкаПитание_5В.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаПитание_10В
+            // ЛампочкаПитание_10В
             // 
-            this.BMA_M_2ЛампочкаПитание_10В.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаПитание_10В.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаПитание_10В.Location = new System.Drawing.Point(219, 415);
-            this.BMA_M_2ЛампочкаПитание_10В.Name = "BMA_M_2ЛампочкаПитание_10В";
-            this.BMA_M_2ЛампочкаПитание_10В.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаПитание_10В.TabIndex = 73;
-            this.BMA_M_2ЛампочкаПитание_10В.TabStop = false;
+            this.ЛампочкаПитание_10В.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаПитание_10В.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаПитание_10В.Location = new System.Drawing.Point(219, 415);
+            this.ЛампочкаПитание_10В.Name = "ЛампочкаПитание_10В";
+            this.ЛампочкаПитание_10В.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаПитание_10В.TabIndex = 73;
+            this.ЛампочкаПитание_10В.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаПрмФР
+            // ЛампочкаПрмФР
             // 
-            this.BMA_M_2ЛампочкаПрмФР.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаПрмФР.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаПрмФР.Location = new System.Drawing.Point(127, 354);
-            this.BMA_M_2ЛампочкаПрмФР.Name = "BMA_M_2ЛампочкаПрмФР";
-            this.BMA_M_2ЛампочкаПрмФР.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаПрмФР.TabIndex = 72;
-            this.BMA_M_2ЛампочкаПрмФР.TabStop = false;
+            this.ЛампочкаПрмФР.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаПрмФР.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаПрмФР.Location = new System.Drawing.Point(127, 354);
+            this.ЛампочкаПрмФР.Name = "ЛампочкаПрмФР";
+            this.ЛампочкаПрмФР.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаПрмФР.TabIndex = 72;
+            this.ЛампочкаПрмФР.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаПрмДК2
+            // ЛампочкаПрмДК2
             // 
-            this.BMA_M_2ЛампочкаПрмДК2.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаПрмДК2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаПрмДК2.Location = new System.Drawing.Point(219, 354);
-            this.BMA_M_2ЛампочкаПрмДК2.Name = "BMA_M_2ЛампочкаПрмДК2";
-            this.BMA_M_2ЛампочкаПрмДК2.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаПрмДК2.TabIndex = 71;
-            this.BMA_M_2ЛампочкаПрмДК2.TabStop = false;
+            this.ЛампочкаПрмДК2.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаПрмДК2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаПрмДК2.Location = new System.Drawing.Point(219, 354);
+            this.ЛампочкаПрмДК2.Name = "ЛампочкаПрмДК2";
+            this.ЛампочкаПрмДК2.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаПрмДК2.TabIndex = 71;
+            this.ЛампочкаПрмДК2.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаПрмДК1
+            // ЛампочкаПрмДК1
             // 
-            this.BMA_M_2ЛампочкаПрмДК1.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаПрмДК1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаПрмДК1.Location = new System.Drawing.Point(219, 304);
-            this.BMA_M_2ЛампочкаПрмДК1.Name = "BMA_M_2ЛампочкаПрмДК1";
-            this.BMA_M_2ЛампочкаПрмДК1.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаПрмДК1.TabIndex = 70;
-            this.BMA_M_2ЛампочкаПрмДК1.TabStop = false;
+            this.ЛампочкаПрмДК1.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаПрмДК1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаПрмДК1.Location = new System.Drawing.Point(219, 304);
+            this.ЛампочкаПрмДК1.Name = "ЛампочкаПрмДК1";
+            this.ЛампочкаПрмДК1.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаПрмДК1.TabIndex = 70;
+            this.ЛампочкаПрмДК1.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаПрмТЧ
+            // ЛампочкаПрмТЧ
             // 
-            this.BMA_M_2ЛампочкаПрмТЧ.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаПрмТЧ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаПрмТЧ.Location = new System.Drawing.Point(127, 304);
-            this.BMA_M_2ЛампочкаПрмТЧ.Name = "BMA_M_2ЛампочкаПрмТЧ";
-            this.BMA_M_2ЛампочкаПрмТЧ.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаПрмТЧ.TabIndex = 69;
-            this.BMA_M_2ЛампочкаПрмТЧ.TabStop = false;
+            this.ЛампочкаПрмТЧ.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаПрмТЧ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаПрмТЧ.Location = new System.Drawing.Point(127, 304);
+            this.ЛампочкаПрмТЧ.Name = "ЛампочкаПрмТЧ";
+            this.ЛампочкаПрмТЧ.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаПрмТЧ.TabIndex = 69;
+            this.ЛампочкаПрмТЧ.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаПрдДК
+            // ЛампочкаПрдДК
             // 
-            this.BMA_M_2ЛампочкаПрдДК.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаПрдДК.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаПрдДК.Location = new System.Drawing.Point(219, 253);
-            this.BMA_M_2ЛампочкаПрдДК.Name = "BMA_M_2ЛампочкаПрдДК";
-            this.BMA_M_2ЛампочкаПрдДК.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаПрдДК.TabIndex = 68;
-            this.BMA_M_2ЛампочкаПрдДК.TabStop = false;
+            this.ЛампочкаПрдДК.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаПрдДК.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаПрдДК.Location = new System.Drawing.Point(219, 253);
+            this.ЛампочкаПрдДК.Name = "ЛампочкаПрдДК";
+            this.ЛампочкаПрдДК.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаПрдДК.TabIndex = 68;
+            this.ЛампочкаПрдДК.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаПрдТЧ
+            // ЛампочкаПрдТЧ
             // 
-            this.BMA_M_2ЛампочкаПрдТЧ.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаПрдТЧ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаПрдТЧ.Location = new System.Drawing.Point(127, 253);
-            this.BMA_M_2ЛампочкаПрдТЧ.Name = "BMA_M_2ЛампочкаПрдТЧ";
-            this.BMA_M_2ЛампочкаПрдТЧ.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаПрдТЧ.TabIndex = 67;
-            this.BMA_M_2ЛампочкаПрдТЧ.TabStop = false;
+            this.ЛампочкаПрдТЧ.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаПрдТЧ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаПрдТЧ.Location = new System.Drawing.Point(127, 253);
+            this.ЛампочкаПрдТЧ.Name = "ЛампочкаПрдТЧ";
+            this.ЛампочкаПрдТЧ.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаПрдТЧ.TabIndex = 67;
+            this.ЛампочкаПрдТЧ.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаСинхрДК
+            // ЛампочкаСинхрДК
             // 
-            this.BMA_M_2ЛампочкаСинхрДК.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаСинхрДК.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаСинхрДК.Location = new System.Drawing.Point(219, 204);
-            this.BMA_M_2ЛампочкаСинхрДК.Name = "BMA_M_2ЛампочкаСинхрДК";
-            this.BMA_M_2ЛампочкаСинхрДК.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаСинхрДК.TabIndex = 66;
-            this.BMA_M_2ЛампочкаСинхрДК.TabStop = false;
+            this.ЛампочкаСинхрДК.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаСинхрДК.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаСинхрДК.Location = new System.Drawing.Point(219, 204);
+            this.ЛампочкаСинхрДК.Name = "ЛампочкаСинхрДК";
+            this.ЛампочкаСинхрДК.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаСинхрДК.TabIndex = 66;
+            this.ЛампочкаСинхрДК.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаСинхрТЧ
+            // ЛампочкаСинхрТЧ
             // 
-            this.BMA_M_2ЛампочкаСинхрТЧ.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаСинхрТЧ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаСинхрТЧ.Location = new System.Drawing.Point(127, 203);
-            this.BMA_M_2ЛампочкаСинхрТЧ.Name = "BMA_M_2ЛампочкаСинхрТЧ";
-            this.BMA_M_2ЛампочкаСинхрТЧ.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаСинхрТЧ.TabIndex = 65;
-            this.BMA_M_2ЛампочкаСинхрТЧ.TabStop = false;
+            this.ЛампочкаСинхрТЧ.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаСинхрТЧ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаСинхрТЧ.Location = new System.Drawing.Point(127, 203);
+            this.ЛампочкаСинхрТЧ.Name = "ЛампочкаСинхрТЧ";
+            this.ЛампочкаСинхрТЧ.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаСинхрТЧ.TabIndex = 65;
+            this.ЛампочкаСинхрТЧ.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаДК
+            // ЛампочкаДК
             // 
-            this.BMA_M_2ЛампочкаДК.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаДК.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаДК.Location = new System.Drawing.Point(219, 154);
-            this.BMA_M_2ЛампочкаДК.Name = "BMA_M_2ЛампочкаДК";
-            this.BMA_M_2ЛампочкаДК.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаДК.TabIndex = 64;
-            this.BMA_M_2ЛампочкаДК.TabStop = false;
+            this.ЛампочкаДК.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаДК.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаДК.Location = new System.Drawing.Point(219, 154);
+            this.ЛампочкаДК.Name = "ЛампочкаДК";
+            this.ЛампочкаДК.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаДК.TabIndex = 64;
+            this.ЛампочкаДК.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаФЗ
+            // ЛампочкаФЗ
             // 
-            this.BMA_M_2ЛампочкаФЗ.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаФЗ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаФЗ.Location = new System.Drawing.Point(173, 154);
-            this.BMA_M_2ЛампочкаФЗ.Name = "BMA_M_2ЛампочкаФЗ";
-            this.BMA_M_2ЛампочкаФЗ.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаФЗ.TabIndex = 63;
-            this.BMA_M_2ЛампочкаФЗ.TabStop = false;
+            this.ЛампочкаФЗ.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаФЗ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаФЗ.Location = new System.Drawing.Point(173, 154);
+            this.ЛампочкаФЗ.Name = "ЛампочкаФЗ";
+            this.ЛампочкаФЗ.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаФЗ.TabIndex = 63;
+            this.ЛампочкаФЗ.TabStop = false;
             // 
-            // BMA_M_2ЛампочкаТЧБ
+            // ЛампочкаТЧБ
             // 
-            this.BMA_M_2ЛампочкаТЧБ.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_2ЛампочкаТЧБ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BMA_M_2ЛампочкаТЧБ.Location = new System.Drawing.Point(127, 154);
-            this.BMA_M_2ЛампочкаТЧБ.Name = "BMA_M_2ЛампочкаТЧБ";
-            this.BMA_M_2ЛампочкаТЧБ.Size = new System.Drawing.Size(31, 31);
-            this.BMA_M_2ЛампочкаТЧБ.TabIndex = 62;
-            this.BMA_M_2ЛампочкаТЧБ.TabStop = false;
+            this.ЛампочкаТЧБ.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаТЧБ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаТЧБ.Location = new System.Drawing.Point(127, 154);
+            this.ЛампочкаТЧБ.Name = "ЛампочкаТЧБ";
+            this.ЛампочкаТЧБ.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаТЧБ.TabIndex = 62;
+            this.ЛампочкаТЧБ.TabStop = false;
             // 
             // BMA_M_2КнопкаПитаниеВЫКЛ
             // 
@@ -736,38 +736,38 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "БМА-M/2";
             this.BMA_M_2Panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаНеисправно)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаИсправно)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаДист)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаРРР)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаКонтрольНорм)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаКонтрольНенорм)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаКонтрольКомпл)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаКонтрольТЧ)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаКонтрольДК)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаКонтрольТест)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаРекурента1023)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаРекурента511)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаРекурента31)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаРекурента15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаАвтомКоманда2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаАвтомКоманда1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаПитание_15Вplus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаПитание_15В)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаПитание_12В)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаПитание_5В)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаПитание_10В)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаПрмФР)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаПрмДК2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаПрмДК1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаПрмТЧ)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаПрдДК)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаПрдТЧ)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаСинхрДК)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаСинхрТЧ)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаДК)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаФЗ)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BMA_M_2ЛампочкаТЧБ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаНеисправно)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаИсправно)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаДист)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаРРР)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКонтрольНорм)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКонтрольНенорм)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКонтрольКомпл)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКонтрольТЧ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКонтрольДК)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКонтрольТест)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаРекуррента1023)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаРекуррента511)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаРекуррента31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаРекуррента15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаАвтомКоманда2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаАвтомКоманда1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПитание_15Вplus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПитание_15В)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПитание_12В)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПитание_5В)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПитание_10В)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПрмФР)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПрмДК2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПрмДК1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПрмТЧ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПрдДК)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПрдТЧ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСинхрДК)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСинхрТЧ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаДК)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаФЗ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаТЧБ)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -789,37 +789,37 @@
         private System.Windows.Forms.Button BMA_M_2КнопкаШлейфДК;
         private System.Windows.Forms.Button BMA_M_2КнопкаПитаниеВКЛ;
         private System.Windows.Forms.Button BMA_M_2КнопкаПитаниеВЫКЛ;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаКонтрольНорм;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаКонтрольНенорм;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаКонтрольКомпл;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаКонтрольТЧ;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаКонтрольДК;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаКонтрольТест;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаРекурента1023;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаРекурента511;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаРекурента31;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаРекурента15;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаАвтомКоманда2;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаАвтомКоманда1;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаПитание_15Вplus;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаПитание_15В;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаПитание_12В;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаПитание_5В;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаПитание_10В;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаПрмФР;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаПрмДК2;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаПрмДК1;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаПрмТЧ;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаПрдДК;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаПрдТЧ;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаСинхрДК;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаСинхрТЧ;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаДК;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаФЗ;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаТЧБ;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаРРР;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаНеисправно;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаИсправно;
-        private System.Windows.Forms.PictureBox BMA_M_2ЛампочкаДист;
+        private System.Windows.Forms.PictureBox ЛампочкаКонтрольНорм;
+        private System.Windows.Forms.PictureBox ЛампочкаКонтрольНенорм;
+        private System.Windows.Forms.PictureBox ЛампочкаКонтрольКомпл;
+        private System.Windows.Forms.PictureBox ЛампочкаКонтрольТЧ;
+        private System.Windows.Forms.PictureBox ЛампочкаКонтрольДК;
+        private System.Windows.Forms.PictureBox ЛампочкаКонтрольТест;
+        private System.Windows.Forms.PictureBox ЛампочкаРекуррента1023;
+        private System.Windows.Forms.PictureBox ЛампочкаРекуррента511;
+        private System.Windows.Forms.PictureBox ЛампочкаРекуррента31;
+        private System.Windows.Forms.PictureBox ЛампочкаРекуррента15;
+        private System.Windows.Forms.PictureBox ЛампочкаАвтомКоманда2;
+        private System.Windows.Forms.PictureBox ЛампочкаАвтомКоманда1;
+        private System.Windows.Forms.PictureBox ЛампочкаПитание_15Вplus;
+        private System.Windows.Forms.PictureBox ЛампочкаПитание_15В;
+        private System.Windows.Forms.PictureBox ЛампочкаПитание_12В;
+        private System.Windows.Forms.PictureBox ЛампочкаПитание_5В;
+        private System.Windows.Forms.PictureBox ЛампочкаПитание_10В;
+        private System.Windows.Forms.PictureBox ЛампочкаПрмФР;
+        private System.Windows.Forms.PictureBox ЛампочкаПрмДК2;
+        private System.Windows.Forms.PictureBox ЛампочкаПрмДК1;
+        private System.Windows.Forms.PictureBox ЛампочкаПрмТЧ;
+        private System.Windows.Forms.PictureBox ЛампочкаПрдДК;
+        private System.Windows.Forms.PictureBox ЛампочкаПрдТЧ;
+        private System.Windows.Forms.PictureBox ЛампочкаСинхрДК;
+        private System.Windows.Forms.PictureBox ЛампочкаСинхрТЧ;
+        private System.Windows.Forms.PictureBox ЛампочкаДК;
+        private System.Windows.Forms.PictureBox ЛампочкаФЗ;
+        private System.Windows.Forms.PictureBox ЛампочкаТЧБ;
+        private System.Windows.Forms.PictureBox ЛампочкаРРР;
+        private System.Windows.Forms.PictureBox ЛампочкаНеисправно;
+        private System.Windows.Forms.PictureBox ЛампочкаИсправно;
+        private System.Windows.Forms.PictureBox ЛампочкаДист;
     }
 }

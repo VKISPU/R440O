@@ -1,246 +1,178 @@
 ﻿using R440O.R440OForms.BMB;
 
-namespace R440O.R440OForms.BMA_M_2
+namespace R440O.Parameters
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    using СостоянияЭлементов.БМА_М;
+    using R440O.R440OForms;
+    using R440O.R440OForms.N15;
+    using R440O.ThirdParty;
+
     class BMA_M_2Parameters
     {
         #region Переключатели
         #region ПереключательКонтроль
-        /// <summary>
-        /// Положение переключателя напряжения
-        /// </summary>
-        private static int _BMA_M_2ПереключательКонтроль = 1;
-
-        public static int BMA_M_2ПереключательКонтроль
+        private static EПереключательКонтроль _ПереключательКонтроль = EПереключательКонтроль.РАБОТА_1;
+        public static EПереключательКонтроль ПереключательКонтроль
         {
-            get { return _BMA_M_2ПереключательКонтроль; }
+            get { return _ПереключательКонтроль; }
             set
             {
-                if (value > 0 && value < 7) _BMA_M_2ПереключательКонтроль = value;
+                if (value >= EПереключательКонтроль.РАБОТА_1
+                    && value <= EПереключательКонтроль.РАБОТА_2)
+                {
+                    _ПереключательКонтроль = value;
+                    _ЛампочкаКонтрольНенорм = true;
+                    _ЛампочкаКонтрольНорм = false;
+                    if (timer_ЛампочкаКонтрольНенорм != null)
+                        timer_ЛампочкаКонтрольНенорм.Dispose();
+                    Refresh();
+                }
+
             }
         }
-
-        /// <summary>
-        /// Названия положений переключателя напряжения
-        /// </summary>
-        private static string[] BMA_M_2ПоложенияПереключательКонтроль = {
-            "работа1",
-            "ТЕСТ",
-            "ДК",
-            "ТЧ",
-            "КОМПЛ",
-            "работа2"
-        };
         #endregion
 
-        #region ПереключательРекурента
-        /// <summary>
-        /// Положение переключателя напряжения
-        /// </summary>
-        private static int _BMA_M_2ПереключательРекурента = 1;
-
-        public static int BMA_M_2ПереключательРекурента
+        #region ПереключательРекуррента
+        private static EПереключательРекуррента _ПереключательРекуррента = EПереключательРекуррента._15;
+        public static EПереключательРекуррента ПереключательРекуррента
         {
-            get { return _BMA_M_2ПереключательРекурента; }
+            get { return _ПереключательРекуррента; }
             set
             {
-                if (value > 0 && value < 5) _BMA_M_2ПереключательРекурента = value;
+                if (value >= EПереключательРекуррента._15
+                    && value <= EПереключательРекуррента._1023)
+                    _ПереключательРекуррента = value;
+                Refresh();
             }
         }
-
-        /// <summary>
-        /// Названия положений переключателя напряжения
-        /// </summary>
-        private static string[] BMA_M_2ПоложенияПереключательРекурента = {
-            "15",
-            "31",
-            "511",
-            "1023"
-        };
         #endregion
 
         #region ПереключательРежимРаботы
-        /// <summary>
-        /// Положение переключателя напряжения
-        /// </summary>
-        private static int _BMA_M_2ПереключательРежимРаботы = 1;
-
-        public static int BMA_M_2ПереключательРежимРаботы
+        private static EПереключательРежимРаботы _ПереключательРежимРаботы = EПереключательРежимРаботы.МУ_АВТ;
+        public static EПереключательРежимРаботы ПереключательРежимРаботы
         {
-            get { return _BMA_M_2ПереключательРежимРаботы; }
+            get { return _ПереключательРежимРаботы; }
             set
             {
-                if (value > 0 && value < 5) _BMA_M_2ПереключательРежимРаботы = value;
+                if (value >= EПереключательРежимРаботы.МУ_АВТ
+                    && value <= EПереключательРежимРаботы.ДО_АВТ)
+                    _ПереключательРежимРаботы = value;
             }
         }
-
-        /// <summary>
-        /// Названия положений переключателя напряжения
-        /// </summary>
-        private static string[] BMA_M_2ПоложенияПереключательРежимРаботы = {
-            "МУавт",
-            "МУручн",
-            "ДОручн",
-            "ДОавт"
-        };
         #endregion
 
         #region ПереключательКоррАЧХ
-        /// <summary>
-        /// Положение переключателя напряжения
-        /// </summary>
-        private static int _BMA_M_2ПереключательКоррАЧХ = 1;
-
-        public static int BMA_M_2ПереключательКоррАЧХ
+        private static EПереключательКоррАЧХ _ПереключательКоррАЧХ = EПереключательКоррАЧХ._1;
+        public static EПереключательКоррАЧХ ПереключательКоррАЧХ
         {
-            get { return _BMA_M_2ПереключательКоррАЧХ; }
+            get { return _ПереключательКоррАЧХ; }
             set
             {
-                if (value > 0 && value < 7) _BMA_M_2ПереключательКоррАЧХ = value;
+                if (value >= EПереключательКоррАЧХ._1
+                    && value <= EПереключательКоррАЧХ._6)
+                    _ПереключательКоррАЧХ = value;
             }
         }
         #endregion
 
         #region ПереключательЧастотаВызова
-        /// <summary>
-        /// Положение переключателя напряжения
-        /// </summary>
-        private static int _BMA_M_2ПереключательЧастотаВызова = 1;
-
-        public static int BMA_M_2ПереключательЧастотаВызова
+        private static EПереключательЧастотаВызова _ПереключательЧастотаВызова = EПереключательЧастотаВызова._2d1;
+        public static EПереключательЧастотаВызова ПереключательЧастотаВызова
         {
-            get { return _BMA_M_2ПереключательЧастотаВызова; }
+            get { return _ПереключательЧастотаВызова; }
             set
             {
-                if (value > 0 && value < 5) _BMA_M_2ПереключательЧастотаВызова = value;
+                if (value >= EПереключательЧастотаВызова._2d1
+                    && value <= EПереключательЧастотаВызова._3d2)
+                    _ПереключательЧастотаВызова = value;
             }
         }
-
-        /// <summary>
-        /// Названия положений переключателя напряжения
-        /// </summary>
-        private static string[] BMA_M_2ПоложенияПереключательЧастотаВызова = {
-            "2,1",
-            "1,8",
-            "2,6",
-            "3,2"
-        };
         #endregion
 
         #region ПереключательУровниСигналаПрдПрм
-        /// <summary>
-        /// Положение переключателя напряжения
-        /// </summary>
-        private static int _BMA_M_2ПереключательУровниСигналаПрдПрм = 1;
-
-        public static int BMA_M_2ПереключательУровниСигналаПрдПрм
+        private static EПереключательУровниСигналаПрдПрм _ПереключательУровниСигналаПрдПрм = EПереключательУровниСигналаПрдПрм._m13_m13;
+        public static EПереключательУровниСигналаПрдПрм ПереключательУровниСигналаПрдПрм
         {
-            get { return _BMA_M_2ПереключательУровниСигналаПрдПрм; }
+            get { return _ПереключательУровниСигналаПрдПрм; }
             set
             {
-                if (value > 0 && value < 5) _BMA_M_2ПереключательУровниСигналаПрдПрм = value;
+                if (value >= EПереключательУровниСигналаПрдПрм._m13_m13
+                    && value <= EПереключательУровниСигналаПрдПрм._28_m10d5)
+                    _ПереключательУровниСигналаПрдПрм = value;
             }
         }
-
-        /// <summary>
-        /// Названия положений переключателя напряжения
-        /// </summary>
-        private static string[] BMA_M_2ПоложенияПереключательУровниСигналаПрдПрм = {
-            "-13/-13",
-            "-23/-5,7",
-            "-10,5/-28",
-            "-28/-10,5"
-        };
         #endregion
 
         #region ПереключательРежимы
-        /// <summary>
-        /// Положение переключателя напряжения
-        /// </summary>
-        private static int _BMA_M_2ПереключательРежимы = 1;
-
-        public static int BMA_M_2ПереключательРежимы
+        private static EПереключательРежимы _ПереключательРежимы = EПереключательРежимы.ДОФТ;
+        public static EПереключательРежимы ПереключательРежимы
         {
-            get { return _BMA_M_2ПереключательРежимы; }
+            get { return _ПереключательРежимы; }
             set
             {
-                if (value > 0 && value < 5) _BMA_M_2ПереключательРежимы = value;
+                if (value >= EПереключательРежимы.ДОФТ
+                    && value <= EПереключательРежимы.ЧТ)
+                    _ПереключательРежимы = value;
             }
         }
-
-        /// <summary>
-        /// Названия положений переключателя напряжения
-        /// </summary>
-        private static string[] BMA_M_2ПоложенияПереключательРежимы = {
-            "ДОФТ",
-            "ОФТ",
-            "2x1200",
-            "ЧТ"
-        };
         #endregion
 
         #region ПереключательЗапретЗапроса
-        /// <summary>
-        /// Положение переключателя напряжения
-        /// </summary>
-        private static int _BMA_M_2ПереключательЗапретЗапроса = 1;
-
-        public static int BMA_M_2ПереключательЗапретЗапроса
+        private static EПереключательЗапретЗапроса _ПереключательЗапретЗапроса = EПереключательЗапретЗапроса.ВЫКЛ;
+        public static EПереключательЗапретЗапроса ПереключательЗапретЗапроса
         {
-            get { return _BMA_M_2ПереключательЗапретЗапроса; }
+            get { return _ПереключательЗапретЗапроса; }
             set
             {
-                if (value > 0 && value < 3) _BMA_M_2ПереключательЗапретЗапроса = value;
+                if (value >= EПереключательЗапретЗапроса.ВЫКЛ
+                    && value <= EПереключательЗапретЗапроса.ВКЛ)
+                    _ПереключательЗапретЗапроса = value;
             }
         }
-
-        /// <summary>
-        /// Названия положений переключателя напряжения
-        /// </summary>
-        private static string[] BMA_M_2ПоложенияПереключательЗапретЗапроса = {
-            "Вкл",
-            "Выкл"
-        };
         #endregion
 
         #region ПереключательКоррКанала
-        /// <summary>
-        /// Положение переключателя напряжения
-        /// </summary>
-        private static int _BMA_M_2ПереключательКоррКанала = 1;
-
-        public static int BMA_M_2ПереключательКоррКанала
+        private static EПереключательКоррКанала _ПереключательКоррКанала = EПереключательКоррКанала.ВЫКЛ;
+        public static EПереключательКоррКанала ПереключательКоррКанала
         {
-            get { return _BMA_M_2ПереключательКоррКанала; }
+            get { return _ПереключательКоррКанала; }
             set
             {
-                if (value > 0 && value < 3) _BMA_M_2ПереключательКоррКанала = value;
+                if (value >= EПереключательКоррКанала.ВЫКЛ
+                    && value <= EПереключательКоррКанала.ВКЛ)
+                    _ПереключательКоррКанала = value;
+            }
+        }
+        #endregion
+        #endregion
+
+        #region Кнопки
+        private static bool _кнопкаШлейфТЧ;
+        private static bool _кнопкаШлейфДК;
+
+        public static bool КнопкаПитаниеВЫКЛ
+        {
+            set
+            {
+                N15Parameters.ЛампочкаБМА_2 = false;
+                N15Parameters.Refresh();
+                BMBParameters.ResetParameters();
             }
         }
 
-        /// <summary>
-        /// Названия положений переключателя напряжения
-        /// </summary>
-        private static string[] BMA_M_2ПоложенияПереключательКоррКанала = {
-            "Вкл",
-            "Выкл"
-        };
-        #endregion
-        #endregion
-
-        #region Кнопки
-        #region Кнопки
-        private static bool _кнопкаПитаниеВКЛ;
-        private static bool _кнопкаШлейфТЧ;
-        private static bool _кнопкаШлейфДК;
-        public static bool КнопкаПитаниеВЫКЛ;
-
-        public static bool КнопкаПитаниеВкл
+        public static bool КнопкаПитаниеВКЛ
         {
-            get { return _кнопкаПитаниеВКЛ; }
+            get { return N15Parameters.ЛампочкаБМА_2; }
             set
             {
-                _кнопкаПитаниеВКЛ = value;
+                N15Parameters.ЛампочкаБМА_2 = N15Parameters.Лампочка27В && N15Parameters.ЛампочкаН15БП;
+                N15Parameters.Refresh();
                 BMBParameters.ResetParameters();
             }
         }
@@ -251,6 +183,7 @@ namespace R440O.R440OForms.BMA_M_2
             set
             {
                 _кнопкаШлейфДК = value;
+                Refresh();
                 BMBParameters.ResetParameters();
             }
         }
@@ -262,51 +195,268 @@ namespace R440O.R440OForms.BMA_M_2
             {
                 _кнопкаШлейфТЧ = value;
                 BMBParameters.ResetParameters();
+                Refresh();
             }
         }
         #endregion
-        #endregion
 
         #region Лампочки
-        public static bool BMA_M_2ЛампочкаТЧБ = false;
-        public static bool BMA_M_2ЛампочкаФЗ = false;
-        public static bool BMA_M_2ЛампочкаДК = false;
-        public static bool BMA_M_2ЛампочкаСинхрТЧ = false;
-        public static bool BMA_M_2ЛампочкаСинхрДК = false;
-        public static bool BMA_M_2ЛампочкаПрдТЧ = false;
-        public static bool BMA_M_2ЛампочкаПрдДК = false;
-        public static bool BMA_M_2ЛампочкаПрмТЧ = false;
-        public static bool BMA_M_2ЛампочкаПрмФР = false;
-        public static bool BMA_M_2ЛампочкаПрмДК1 = false;
-        public static bool BMA_M_2ЛампочкаПрмДК2 = false;
+        public static bool ЛампочкаТЧБ
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_2
+                    && (ПереключательКонтроль == EПереключательКонтроль.РАБОТА_1
+                    || ПереключательКонтроль == EПереключательКонтроль.РАБОТА_2)
+                    && !КнопкаШлейфТЧ;
+            }
+        }
+        public static bool ЛампочкаФЗ
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_2
+                    && (ПереключательКонтроль == EПереключательКонтроль.РАБОТА_1
+                    || ПереключательКонтроль == EПереключательКонтроль.РАБОТА_2)
+                    && (КнопкаШлейфТЧ
+                    && BMBParameters.ПереключательРаботаКонтроль == 1
+                    && BMBParameters.КнопкаСлСвязь == СостоянияЭлементов.БМБ.Кнопка.Горит);
+            }
+        }
+        public static bool ЛампочкаДК
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_2
+                    && (ПереключательКонтроль == EПереключательКонтроль.РАБОТА_1
+                    || ПереключательКонтроль == EПереключательКонтроль.РАБОТА_2)
+                    && !КнопкаШлейфДК;
 
-        public static bool BMA_M_2ЛампочкаПитание_5В = false;
-        public static bool BMA_M_2ЛампочкаПитание_10В = false;
-        public static bool BMA_M_2ЛампочкаПитание_12В = false;
-        public static bool BMA_M_2ЛампочкаПитание_15В = false;
-        public static bool BMA_M_2ЛампочкаПитание_15Вplus = false;
+            }
+        }
+        public static bool ЛампочкаСинхрТЧ
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_2
+                    && (ПереключательКонтроль == EПереключательКонтроль.РАБОТА_1
+                    || ПереключательКонтроль == EПереключательКонтроль.РАБОТА_2)
+                    && (КнопкаШлейфТЧ
+                    && BMBParameters.ПереключательРаботаКонтроль == 1
+                    && BMBParameters.КнопкаСлСвязь == СостоянияЭлементов.БМБ.Кнопка.Горит);
+            }
+        }
+        public static bool ЛампочкаСинхрДК = false;
+        public static bool ЛампочкаПрдТЧ
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_2
+                    && (ПереключательКонтроль == EПереключательКонтроль.РАБОТА_1
+                    || ПереключательКонтроль == EПереключательКонтроль.РАБОТА_2)
+                    && !(КнопкаШлейфТЧ
+                    && BMBParameters.ПереключательРаботаКонтроль == 1
+                    && BMBParameters.КнопкаПередачаВызоваТч == СостоянияЭлементов.БМБ.Кнопка.Горит
+                    && BMBParameters.КнопкаСлСвязь == СостоянияЭлементов.БМБ.Кнопка.Горит);
+            }
+        }
+        public static bool ЛампочкаПрдДК
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_2
+                        && (ПереключательКонтроль == EПереключательКонтроль.РАБОТА_1
+                        || ПереключательКонтроль == EПереключательКонтроль.РАБОТА_2)
+                        && !(КнопкаШлейфДК
+                        && BMBParameters.ПереключательРаботаКонтроль == 1
+                        && BMBParameters.КнопкаПередачаВызоваДк == СостоянияЭлементов.БМБ.Кнопка.Горит
+                        && BMBParameters.КнопкаСлСвязь == СостоянияЭлементов.БМБ.Кнопка.Горит);
+            }
+        }
 
-        public static bool BMA_M_2ЛампочкаКонтрольНенорм = false;
-        public static bool BMA_M_2ЛампочкаКонтрольНорм = false;
-        public static bool BMA_M_2ЛампочкаКонтрольТест = false;
-        public static bool BMA_M_2ЛампочкаКонтрольДК = false;
-        public static bool BMA_M_2ЛампочкаКонтрольТЧ = false;
-        public static bool BMA_M_2ЛампочкаКонтрольКомпл = false;
+        public static bool ЛампочкаПрмТЧ
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_2
+                    && (ПереключательКонтроль == EПереключательКонтроль.РАБОТА_1
+                    || ПереключательКонтроль == EПереключательКонтроль.РАБОТА_2)
+                    && !КнопкаШлейфТЧ;
 
-        public static bool BMA_M_2ЛампочкаРекурента15 = false;
-        public static bool BMA_M_2ЛампочкаРекурента31 = false;
-        public static bool BMA_M_2ЛампочкаРекурента511 = false;
-        public static bool BMA_M_2ЛампочкаРекурента1023 = false;
+            }
+        }
+        public static bool ЛампочкаПрмФР
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_2
+                    && (ПереключательКонтроль == EПереключательКонтроль.РАБОТА_1
+                    || ПереключательКонтроль == EПереключательКонтроль.РАБОТА_2)
+                    && КнопкаШлейфТЧ;
+            }
+        }
+        public static bool ЛампочкаПрмДК1
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_2
+                    && (ПереключательКонтроль == EПереключательКонтроль.РАБОТА_1
+                    || ПереключательКонтроль == EПереключательКонтроль.РАБОТА_2)
+                    && !КнопкаШлейфДК;
+            }
+        }
+        public static bool ЛампочкаПрмДК2 = false;
 
-        public static bool BMA_M_2ЛампочкаАвтомКоманда1 = false;
-        public static bool BMA_M_2ЛампочкаАвтомКоманда2 = false;
+        public static bool ЛампочкаПитание_5В = false;
+        public static bool ЛампочкаПитание_10В = false;
+        public static bool ЛампочкаПитание_12В = false;
+        public static bool ЛампочкаПитание_15В = false;
+        public static bool ЛампочкаПитание_15Вplus = false;
 
-        public static bool BMA_M_2ЛампочкаИсправно = false;
-        public static bool BMA_M_2ЛампочкаНеисправно = false;
 
-        public static bool BMA_M_2ЛампочкаРРР = false;
-        public static bool BMA_M_2ЛампочкаДист = false;
+        private static IDisposable timer_ЛампочкаКонтрольНенорм = null;
+        public static bool _ЛампочкаКонтрольНенорм = true;
+        public static bool ЛампочкаКонтрольНенорм
+        {
+            get
+            {
+                if (N15Parameters.ЛампочкаБМА_2
+                    && (ПереключательКонтроль > EПереключательКонтроль.РАБОТА_1
+                  && ПереключательКонтроль < EПереключательКонтроль.РАБОТА_2)
+                    && _ЛампочкаКонтрольНенорм)
+                {
+                    timer_ЛампочкаКонтрольНенорм = EasyTimer.SetTimeout(() =>
+                    {
+                        _ЛампочкаКонтрольНорм = true;
+                        Refresh();
+                    }, 4000);
+                    timer_ЛампочкаКонтрольНенорм = EasyTimer.SetTimeout(() =>
+                    {
+                        _ЛампочкаКонтрольНенорм = false;
+                        Refresh();
+                    }, 8000);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+        public static bool _ЛампочкаКонтрольНорм = false;
+        public static bool ЛампочкаКонтрольНорм
+        {
+            get
+            {
+                if (N15Parameters.ЛампочкаБМА_2
+                    && (ПереключательКонтроль > EПереключательКонтроль.РАБОТА_1
+                  && ПереключательКонтроль < EПереключательКонтроль.РАБОТА_2)
+                    && _ЛампочкаКонтрольНорм)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+        public static bool ЛампочкаКонтрольТест
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_2 && ПереключательКонтроль == EПереключательКонтроль.ТЕСТ;
+            }
+        }
+        public static bool ЛампочкаКонтрольДК
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_2 && ПереключательКонтроль == EПереключательКонтроль.ДК;
+            }
+        }
+        public static bool ЛампочкаКонтрольТЧ
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_2 && ПереключательКонтроль == EПереключательКонтроль.ТЧ;
+            }
+        }
+        public static bool ЛампочкаКонтрольКомпл
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_2 && ПереключательКонтроль == EПереключательКонтроль.КОМПЛ;
+            }
+        }
+
+        public static bool ЛампочкаРекуррента15
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_2 && ПереключательРекуррента == EПереключательРекуррента._15;
+            }
+        }
+        public static bool ЛампочкаРекуррента31
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_2 && ПереключательРекуррента == EПереключательРекуррента._31;
+            }
+        }
+        public static bool ЛампочкаРекуррента511
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_2 && ПереключательРекуррента == EПереключательРекуррента._511;
+            }
+        }
+        public static bool ЛампочкаРекуррента1023
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_2 && ПереключательРекуррента == EПереключательРекуррента._1023;
+            }
+        }
+
+        public static bool ЛампочкаАвтомКоманда1 = false;
+        public static bool ЛампочкаАвтомКоманда2 = false;
+        public static bool ЛампочкаИсправно
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаБМА_2;
+            }
+        }
+        public static bool ЛампочкаНеисправно = false;
+        public static bool ЛампочкаРРР = false;
+        public static bool ЛампочкаДист = false;
+
 
         #endregion
+
+        public delegate void VoidVoidSignature();
+        public static event VoidVoidSignature RefreshForm;
+
+        public static void Refresh()
+        {
+            if (RefreshForm != null)
+                RefreshForm();
+        }
+
+
+        public static void DisposeAllTimers()
+        {
+            if (timer_ЛампочкаКонтрольНенорм != null)
+                timer_ЛампочкаКонтрольНенорм.Dispose();
+        }
+
+        public static void ResetLampsValue()
+        {
+            _ЛампочкаКонтрольНенорм = N15Parameters.ЛампочкаБМА_2;
+            _ЛампочкаКонтрольНорм = !_ЛампочкаКонтрольНенорм;
+        }
     }
 }
