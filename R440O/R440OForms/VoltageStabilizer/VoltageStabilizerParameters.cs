@@ -122,6 +122,12 @@
                 if (RefreshForm != null) RefreshForm();
                 ResetParameters();
                 N502BParameters.Нагрузка = false;
+
+                if (N502BParameters.ЛампочкаСеть && N502BParameters.ПереключательСеть
+                    && ОператорСтанцииПоражёнТоком != null)
+                {
+                    ОператорСтанцииПоражёнТоком();
+                }
             }
         }
 
@@ -157,6 +163,7 @@
 
         public delegate void ParameterChangedHandler();
         public static event ParameterChangedHandler RefreshForm;
+        public static event ParameterChangedHandler ОператорСтанцииПоражёнТоком;
         #endregion
     }
 }

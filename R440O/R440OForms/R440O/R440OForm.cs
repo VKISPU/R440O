@@ -9,11 +9,6 @@ namespace R440O.R440OForms.R440O
     using System;
     using System.Linq;
     using System.Windows.Forms;
-    using A304;
-    using N15;
-    using N502B;
-    using NKN_1;
-    using NKN_2;
 
     /// <summary>
     /// Форма станции Р440-О
@@ -36,13 +31,13 @@ namespace R440O.R440OForms.R440O
         private void R440OButtonCommon_Click(object sender, EventArgs e)
         {
             var button = (Button)sender;
-            const string BUTTON_STRINGS = "Button";
+            const string buttonStrings = "Button";
             var blockName =
-                button.Name.Substring(button.Name.IndexOf(BUTTON_STRINGS, StringComparison.Ordinal) + BUTTON_STRINGS.Length);
+                button.Name.Substring(button.Name.IndexOf(buttonStrings, StringComparison.Ordinal) + buttonStrings.Length);
             var formName = blockName + "Form";
 
             // Активация формы соответствующей нажатой кнопке
-            foreach (Form form in OwnedForms.Where(form => form.Name == formName))
+            foreach (var form in OwnedForms.Where(form => form.Name == formName))
             {
                 form.WindowState = FormWindowState.Normal;
                 form.Activate();
@@ -52,8 +47,8 @@ namespace R440O.R440OForms.R440O
             // Открытие новой формы соответствующей нажатой кнопке
             try
             {
-                const string R440_O_FORMS_STRING = "R440O.R440OForms.";
-                var typeName = R440_O_FORMS_STRING + blockName + "." + formName;
+                const string r440OFormsString = "R440O.R440OForms.";
+                var typeName = r440OFormsString + blockName + "." + formName;
                 // ReSharper disable once AssignNullToNotNullAttribute by trycatch
                 var thisForm = Activator.CreateInstance(Type.GetType(typeName));
                 var newForm = (Form)thisForm;
@@ -63,20 +58,6 @@ namespace R440O.R440OForms.R440O
             {
                 throw new Exception();
             }
-        }
-
-        /// <summary>
-        /// Возвращает форму по заданному имени
-        /// </summary>
-        /// <param name="formName">Имя формы</param>
-        /// <returns>Объект формы</returns>
-        private Form GetSpecificForm(string formName)
-        {
-            return (from form in OwnedForms.Where(form => form.Name == formName) let specificForm = new Form() select form).FirstOrDefault();
-        }
-
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
-        {
         }
     }
 }

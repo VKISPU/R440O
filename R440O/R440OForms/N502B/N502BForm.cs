@@ -18,10 +18,17 @@ namespace R440O.R440OForms.N502B
         {
             InitializeComponent();
             N502BParameters.RefreshForm += RefreshForm;
+            N502BParameters.СтанцияСгорела += ВыводСообщенияСтанцияСгорела;
             N502BParameters.СледитьЗаВременем();
             RefreshForm();
         }
-        
+
+        private void ВыводСообщенияСтанцияСгорела()
+        {
+            var form = new BaseClasses.MessageBox("ОШИБКА", "Станция сгорела!");
+            form.Show();
+        }
+
         #region Тумблеры
 
         private void ТумблерЭлектрооборудование_Click(object sender, System.EventArgs e)

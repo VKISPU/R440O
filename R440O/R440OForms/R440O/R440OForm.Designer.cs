@@ -1004,7 +1004,6 @@
             // 
             this.toolTip1.IsBalloon = true;
             this.toolTip1.OwnerDraw = true;
-            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
             // R440OButtonNKN_2
             // 

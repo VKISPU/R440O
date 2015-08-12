@@ -49,8 +49,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BackgroundImages.Designer.cs">
@@ -62,6 +64,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ControlElementImages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseClasses\MessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseClasses\MessageBox.Designer.cs">
+      <DependentUpon>MessageBox.cs</DependentUpon>
     </Compile>
     <Compile Include="ThirdParty\EasyTimer.cs" />
     <Compile Include="СостоянияЭлементов\БМА_М.cs" />
@@ -542,6 +550,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ControlElementImages.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseClasses\MessageBox.resx">
+      <DependentUpon>MessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -251,6 +251,15 @@ namespace R440O.R440OForms.N502B
                 VoltageStabilizerParameters.ResetParameters();
                 if (RefreshForm != null)
                     RefreshForm();
+
+                if (!VoltageStabilizerParameters.ПодключенПравильно()
+                    && VoltageStabilizerParameters.КабельВход !=0
+                    && _переключательСеть
+                    && ЛампочкаСеть
+                    && СтанцияСгорела != null)
+                {
+                    СтанцияСгорела();
+                }
             }
         }
 
@@ -440,6 +449,7 @@ namespace R440O.R440OForms.N502B
 
         public delegate void VoidVoidSignature();
         public static event VoidVoidSignature RefreshForm;
+        public static event VoidVoidSignature СтанцияСгорела;
 
         public static void ResetParameters()
         {

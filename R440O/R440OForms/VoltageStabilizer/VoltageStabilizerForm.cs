@@ -16,7 +16,14 @@
         {
             InitializeComponent();
             VoltageStabilizerParameters.RefreshForm += RefreshElements;
+            VoltageStabilizerParameters.ОператорСтанцииПоражёнТоком += ВыводСообщенияОператорСтанцииПоражёнТоком;
             RefreshElements();
+        }
+
+        private void ВыводСообщенияОператорСтанцииПоражёнТоком()
+        {
+            var form = new BaseClasses.MessageBox("ОШИБКА", "Оператор станции поражён током!");
+            form.Show();
         }
 
         #region Обработка действий пользователя
