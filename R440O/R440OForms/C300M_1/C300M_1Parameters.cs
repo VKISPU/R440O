@@ -121,10 +121,10 @@ namespace R440O.R440OForms.C300M_1
                 for (int i = 0; i < КнопкиКонтрольРежима.Length; i++)
                     КнопкиКонтрольРежима[i] = false;
                 КнопкиКонтрольРежима[_кнопкаКонтрольРежима] = true;
-                if(Array.IndexOf(КнопкиКонтрольРежима, true) != 0)
-                    ЛампочкаСигнал = false;
-                Search();
+                ИндикаторСигнал = ДиапазонПойманногоСигнала;
                 RefreshForm();
+                Search();
+                
             }
         }
         private static int _кнопкаКонтрольРежима = -1;
@@ -141,7 +141,6 @@ namespace R440O.R440OForms.C300M_1
                 _кнопкаКонтрольРежимаМинус27 = value;
                 for (int i = 0; i < КнопкиКонтрольРежима.Length; i++)
                     КнопкиКонтрольРежима[i] = false;
-                ЛампочкаСигнал = false;
                 Search();
                 RefreshForm();
             }
@@ -722,6 +721,7 @@ namespace R440O.R440OForms.C300M_1
         private static void StopSearch()
         {
             ЛампочкаСигнал = true;
+            ДиапазонПойманногоСигнала = ИндикаторСигнал;
             СтрелкаДвижетсяНалево = false;
             timer.Stop();
         }
@@ -756,5 +756,7 @@ namespace R440O.R440OForms.C300M_1
             if (RefreshForm != null)
                 RefreshForm();
         }
+
+        private static float ДиапазонПойманногоСигнала = 0;
     }
 }
