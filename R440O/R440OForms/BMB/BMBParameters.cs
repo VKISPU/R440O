@@ -124,6 +124,7 @@ namespace R440O.R440OForms.BMB
                     ПереданнаяКоманда = string.Empty;
                 }
                 _кнопкаПередачаВызоваДк = value;
+                BMA_M_1Parameters.Refresh();
                 if (RefreshForm != null) RefreshForm();
             }
         }
