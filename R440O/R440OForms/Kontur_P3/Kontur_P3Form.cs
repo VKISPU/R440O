@@ -4,11 +4,15 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+using R440O.BaseClasses;
+using R440O.R440OForms.Kontur_P3.Параметры;
+
 namespace R440O.R440OForms.Kontur_P3
 {
     using System.Windows.Forms;
     using BaseClasses;
     using ThirdParty;
+    using Parameters;
     using СостоянияЭлементов.Контур_П;
     using Параметры;
 
@@ -217,40 +221,52 @@ namespace R440O.R440OForms.Kontur_P3
 
         private void Kontur_P3КнопкаАдресК_MouseDown(object sender, MouseEventArgs e)
         {
-            Kontur_P3Parameters.КнопкаАдресК = !Kontur_P3Parameters.КнопкаАдресК;
+            КнопкаАдресК.BackgroundImage = null;
+            КнопкаАдресК.Text = null;
         }
 
         private void Kontur_P3КнопкаАдресК_MouseUp(object sender, MouseEventArgs e)
         {
+            КнопкаАдресК.BackgroundImage = ControlElementImages.buttonSquareBlack_small;
+            КнопкаАдресК.Text = "К";
         }
         #endregion
 
         #region Подпись
         private void Kontur_P3КнопкаПодпись1_MouseDown(object sender, MouseEventArgs e)
         {
-            Kontur_P3Parameters.КнопкаПодпись1 = !Kontur_P3Parameters.КнопкаПодпись1;
+            КнопкаПодпись1.BackgroundImage = null;
+            КнопкаПодпись1.Text = null;
         }
 
         private void Kontur_P3КнопкаПодпись1_MouseUp(object sender, MouseEventArgs e)
         {
+            КнопкаПодпись1.BackgroundImage = ControlElementImages.buttonSquareRed_small;
+            КнопкаПодпись1.Text = "1";
         }
 
         private void Kontur_P3КнопкаПодпись2_MouseDown(object sender, MouseEventArgs e)
         {
-            Kontur_P3Parameters.КнопкаПодпись2 = !Kontur_P3Parameters.КнопкаПодпись2;
+            КнопкаПодпись2.BackgroundImage = null;
+            КнопкаПодпись2.Text = null;
         }
 
         private void Kontur_P3КнопкаПодпись2_MouseUp(object sender, MouseEventArgs e)
         {
+            КнопкаПодпись2.BackgroundImage = ControlElementImages.buttonSquareRed_small;
+            КнопкаПодпись2.Text = "2";
         }
 
         private void Kontur_P3КнопкаПодпись3_MouseDown(object sender, MouseEventArgs e)
         {
-            Kontur_P3Parameters.КнопкаПодпись3 = !Kontur_P3Parameters.КнопкаПодпись3;
+            КнопкаПодпись3.BackgroundImage = null;
+            КнопкаПодпись3.Text = null;
         }
 
         private void Kontur_P3КнопкаПодпись3_MouseUp(object sender, MouseEventArgs e)
         {
+            КнопкаПодпись3.BackgroundImage = ControlElementImages.buttonSquareRed_small;
+            КнопкаПодпись3.Text = "3";
         }  
         #endregion
 
@@ -590,7 +606,14 @@ namespace R440O.R440OForms.Kontur_P3
             angle = (int)Kontur_P3Parameters.ПереключательКонтроль * 36 - 180;
             ПереключательКонтроль.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
-        }
+
+            #region Лампочки
+            ЛампочкаСеть.BackgroundImage = Kontur_P3Parameters.ЛампочкаСеть
+                ? ControlElementImages.lampType9OnGreen
+                : null;
+            #endregion
+
+        } 
         #endregion
     }
 }

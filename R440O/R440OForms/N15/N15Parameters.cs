@@ -14,6 +14,8 @@ using R440O.R440OForms.A304;
 using R440O.R440OForms.A306;
 using R440O.R440OForms.BMA_M_1;
 using R440O.R440OForms.BMB;
+using R440O.R440OForms.Kontur_P3.Параметры;
+using R440O.СостоянияЭлементов.Контур_П;
 
 namespace R440O.R440OForms.N15
 {
@@ -569,8 +571,8 @@ namespace R440O.R440OForms.N15
         public static bool ЛампочкаБМА_1
         {
             get { return _лампочкаБма1; }
-            set 
-            { 
+            set
+            {
                 _лампочкаБма1 = value;
                 BMBParameters.ResetParameters();
                 BMA_M_1Parameters.DisposeAllTimers();
@@ -582,8 +584,8 @@ namespace R440O.R440OForms.N15
         public static bool ЛампочкаБМА_2
         {
             get { return _лампочкаБма2; }
-            set 
-            { 
+            set
+            {
                 _лампочкаБма2 = value;
                 BMBParameters.ResetParameters();
                 BMA_M_2Parameters.DisposeAllTimers();
@@ -607,7 +609,11 @@ namespace R440O.R440OForms.N15
         public static bool ЛампочкаАФСС
         {
             get { return _лампочкаАфсс; }
-            set { _лампочкаАфсс = value; }
+            set
+            {
+                _лампочкаАфсс = value;
+                Kontur_P3Parameters.Refresh();
+            }
         }
 
         public static bool ЛампочкаА1
@@ -741,7 +747,7 @@ namespace R440O.R440OForms.N15
             get { return _регуляторУровень; }
             set
             {
-                if (value > -120 && value < 120)_регуляторУровень = value; 
+                if (value > -120 && value < 120) _регуляторУровень = value;
                 C300M_1Parameters.ResetParameters();
             }
         }
@@ -756,7 +762,7 @@ namespace R440O.R440OForms.N15
             //C300M_3Parameters.Search();
             ЛампочкаЦ300МВкл4 = Лампочка27В && ЛампочкаН15БП && ТумблерЦ300М4;
             //C300M_4Parameters.Search();
-            
+
             Лампочка27В = (N502BParameters.ЛампочкаСфазировано
                           && N502BParameters.ТумблерЭлектрооборудование
                           && N502BParameters.ТумблерВыпрямитель27В);
@@ -770,6 +776,9 @@ namespace R440O.R440OForms.N15
             ЛампочкаН15БП = (N502BParameters.ЛампочкаСфазировано
                           && N502BParameters.ТумблерЭлектрооборудование
                           && N502BParameters.ТумблерВыпрямитель27В);
+
+            //Hardcode
+            ЛампочкаАФСС = Лампочка27В && ЛампочкаН15БП && ТумблерАФСС && Kontur_P3Parameters.ТумблерСеть == EТумблерСеть.ВКЛ;
 
             ЛампочкаА205Неиспр1 = (N18_MParameters.N18MПереключательВходК121 != 1) &&
                 ((NKN_1Parameters.ЛампочкаМУ && NKN_1Parameters.Питание220Включено && N502BParameters.ТумблерН15)

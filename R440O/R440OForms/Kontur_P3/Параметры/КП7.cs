@@ -1,4 +1,5 @@
-﻿using R440O.СостоянияЭлементов.Контур_П;
+﻿using R440O.R440OForms.N15;
+using R440O.СостоянияЭлементов.Контур_П;
 
 namespace R440O.R440OForms.Kontur_P3.Параметры
 {
@@ -7,7 +8,13 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
         #region Лампочки
         public static bool ЛампочкаПР1_ЗА = false;
         public static bool ЛампочкаПР2_ЗА = false;
-        public static bool ЛампочкаСеть = false;
+        public static bool ЛампочкаСеть
+        {
+            get
+            {
+                return N15Parameters.ЛампочкаАФСС;
+            }
+        }
         #endregion
 
         #region Тумблеры
@@ -18,7 +25,8 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
             set
             {
                 _ТумблерСеть = value;
-                if (RefreshForm != null) RefreshForm();
+                N15Parameters.ResetParameters();
+                Refresh();
             }
         }
         #endregion
