@@ -1107,6 +1107,9 @@
     <None Include="Resources\A306Input.png" />
     <None Include="Resources\A306.png" />
     <None Include="Resources\arrow2.png" />
+    <Content Include="Resources\bmb.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\buttonSquareBlack.png" />
     <Content Include="Resources\buttonSquareBlackLarge.png" />
     <None Include="Resources\buttonSquareBlack_small.png" />

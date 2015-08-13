@@ -6,6 +6,8 @@
 
 using System;
 using System.Drawing;
+using System.IO;
+using System.Media;
 
 namespace R440O.R440OForms.BMB
 {
@@ -61,6 +63,8 @@ namespace R440O.R440OForms.BMB
 
         #region Инициализация
 
+        private readonly SoundPlayer _player = new SoundPlayer(Directory.GetCurrentDirectory() + "\\Resources\\bmb.wav");
+
         public void RefreshElements()
         {
             InitializeButtons();
@@ -99,6 +103,12 @@ namespace R440O.R440OForms.BMB
                  : BMBParameters.КнопкаЗвСигнал == Кнопка.Отжата
                      ? ControlElementImages.buttonSquareGreen
                      : TransformImageHelper.Scale(ControlElementImages.buttonSquareGreen, 0.65F);
+
+            this.КнопкаПередачаКоманды.BackgroundImage = BMBParameters.КнопкаПередачаКоманды == Кнопка.Горит
+                 ? ControlElementImages.buttonSquareBlueOn
+                 : BMBParameters.КнопкаПередачаКоманды == Кнопка.Отжата
+                     ? ControlElementImages.buttonSquareBlueOff
+                     : TransformImageHelper.Scale(ControlElementImages.buttonSquareBlueOff, 0.85F);
 
             this.КнопкаПередачаВызоваДк.Text = BMBParameters.КнопкаПередачаВызоваДк == Кнопка.Горит ? null : "ДК";
             this.КнопкаПередачаВызоваТч.Text = BMBParameters.КнопкаПередачаВызоваТч == Кнопка.Горит ? null : "ТЧ";
@@ -211,13 +221,14 @@ namespace R440O.R440OForms.BMB
 
         private void КнопкаПередачаКоманды_MouseDown(object sender, MouseEventArgs e)
         {
-            КнопкаПередачаКоманды.BackgroundImage = TransformImageHelper.Scale(ControlElementImages.buttonSquareBlue, 0.65F);
+            BMBParameters.КнопкаПередачаКоманды = Кнопка.Нажата;
             BMBParameters.ПередатьКоманду();
         }
 
         private void КнопкаПередачаКоманды_MouseUp(object sender, MouseEventArgs e)
         {
-            КнопкаПередачаКоманды.BackgroundImage = ControlElementImages.buttonSquareBlue;
+            BMBParameters.КнопкаПередачаКоманды = Кнопка.Отжата;
+            RefreshElements();
         }
         #endregion
     }

@@ -35,6 +35,7 @@
             this.BMBЛампочкаНаправление1 = new System.Windows.Forms.PictureBox();
             this.ЛампочкаРезервВкл = new System.Windows.Forms.PictureBox();
             this.ЛампочкаПриемВызова = new System.Windows.Forms.PictureBox();
+            this.ИндикаторПриемКоманды = new System.Windows.Forms.Label();
             this.ИндикаторНаборКоманды = new System.Windows.Forms.Label();
             this.ЛампочкаДк = new System.Windows.Forms.PictureBox();
             this.ЛампочкаТч = new System.Windows.Forms.PictureBox();
@@ -57,7 +58,6 @@
             this.КнопкаНаборКоманды3 = new System.Windows.Forms.Button();
             this.КнопкаНаборКоманды2 = new System.Windows.Forms.Button();
             this.КнопкаНаборКоманды1 = new System.Windows.Forms.Button();
-            this.ИндикаторПриемКоманды = new System.Windows.Forms.Label();
             this.BMBPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление3)).BeginInit();
@@ -166,6 +166,19 @@
             this.ЛампочкаПриемВызова.Size = new System.Drawing.Size(64, 42);
             this.ЛампочкаПриемВызова.TabIndex = 78;
             this.ЛампочкаПриемВызова.TabStop = false;
+            // 
+            // ИндикаторПриемКоманды
+            // 
+            this.ИндикаторПриемКоманды.AutoSize = true;
+            this.ИндикаторПриемКоманды.BackColor = System.Drawing.Color.Transparent;
+            this.ИндикаторПриемКоманды.Font = new System.Drawing.Font("Courier New", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ИндикаторПриемКоманды.ForeColor = System.Drawing.Color.LawnGreen;
+            this.ИндикаторПриемКоманды.Location = new System.Drawing.Point(736, 53);
+            this.ИндикаторПриемКоманды.Name = "ИндикаторПриемКоманды";
+            this.ИндикаторПриемКоманды.Size = new System.Drawing.Size(62, 41);
+            this.ИндикаторПриемКоманды.TabIndex = 76;
+            this.ИндикаторПриемКоманды.Text = "  ";
+            this.ИндикаторПриемКоманды.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ИндикаторНаборКоманды
             // 
@@ -347,16 +360,16 @@
             // 
             this.КнопкаПередачаКоманды.BackColor = System.Drawing.Color.Transparent;
             this.КнопкаПередачаКоманды.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlue;
-            this.КнопкаПередачаКоманды.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.КнопкаПередачаКоманды.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.КнопкаПередачаКоманды.FlatAppearance.BorderSize = 0;
             this.КнопкаПередачаКоманды.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.КнопкаПередачаКоманды.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КнопкаПередачаКоманды.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КнопкаПередачаКоманды.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.КнопкаПередачаКоманды.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.КнопкаПередачаКоманды.Location = new System.Drawing.Point(743, 365);
+            this.КнопкаПередачаКоманды.Location = new System.Drawing.Point(744, 365);
             this.КнопкаПередачаКоманды.Name = "КнопкаПередачаКоманды";
-            this.КнопкаПередачаКоманды.Size = new System.Drawing.Size(54, 52);
+            this.КнопкаПередачаКоманды.Size = new System.Drawing.Size(54, 50);
             this.КнопкаПередачаКоманды.TabIndex = 65;
             this.КнопкаПередачаКоманды.Text = "ВКЛ";
             this.КнопкаПередачаКоманды.UseVisualStyleBackColor = false;
@@ -562,19 +575,6 @@
             this.КнопкаНаборКоманды1.UseVisualStyleBackColor = false;
             this.КнопкаНаборКоманды1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды_MouseDown);
             this.КнопкаНаборКоманды1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаНаборКоманды_MouseUp);
-            // 
-            // ИндикаторПриемКоманды
-            // 
-            this.ИндикаторПриемКоманды.AutoSize = true;
-            this.ИндикаторПриемКоманды.BackColor = System.Drawing.Color.Transparent;
-            this.ИндикаторПриемКоманды.Font = new System.Drawing.Font("Courier New", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ИндикаторПриемКоманды.ForeColor = System.Drawing.Color.LawnGreen;
-            this.ИндикаторПриемКоманды.Location = new System.Drawing.Point(736, 53);
-            this.ИндикаторПриемКоманды.Name = "ИндикаторПриемКоманды";
-            this.ИндикаторПриемКоманды.Size = new System.Drawing.Size(62, 41);
-            this.ИндикаторПриемКоманды.TabIndex = 76;
-            this.ИндикаторПриемКоманды.Text = "  ";
-            this.ИндикаторПриемКоманды.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // BMBForm
             // 
