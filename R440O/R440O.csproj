@@ -71,6 +71,12 @@
     <Compile Include="BaseClasses\MessageBox.Designer.cs">
       <DependentUpon>MessageBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="R440OForms\Kontur_P3\Параметры\КП1.cs" />
+    <Compile Include="R440OForms\Kontur_P3\Параметры\КП2.cs" />
+    <Compile Include="R440OForms\Kontur_P3\Параметры\КП3.cs" />
+    <Compile Include="R440OForms\Kontur_P3\Параметры\КП4.cs" />
+    <Compile Include="R440OForms\Kontur_P3\Параметры\КП5.cs" />
+    <Compile Include="R440OForms\Kontur_P3\Параметры\КП6.cs" />
     <Compile Include="ThirdParty\EasyTimer.cs" />
     <Compile Include="СостоянияЭлементов\Контур_П.cs" />
     <Compile Include="СостоянияЭлементов\БМА_М.cs" />
@@ -98,7 +104,7 @@
     <Compile Include="Parameters\K03M_01Parameters.cs" />
     <Compile Include="Parameters\K02M_02Parameters.cs" />
     <Compile Include="Parameters\K02M_01Parameters.cs" />
-    <Compile Include="R440OForms\Kontur_P3\Kontur_P3Parameters.cs" />
+    <Compile Include="R440OForms\Kontur_P3\Параметры\КП7.cs" />
     <Compile Include="Parameters\N12SParameters.cs" />
     <Compile Include="Parameters\N13_1Parameters.cs" />
     <Compile Include="Parameters\N13_2Parameters.cs" />
