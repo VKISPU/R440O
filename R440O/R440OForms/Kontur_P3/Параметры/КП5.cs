@@ -1,5 +1,4 @@
-﻿using R440O.СостоянияЭлементов.БМБ;
-using R440O.СостоянияЭлементов.Контур_П;
+﻿using R440O.СостоянияЭлементов.Контур_П;
 
 namespace R440O.R440OForms.Kontur_P3.Параметры
 {
@@ -74,6 +73,23 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
             }
         }
 
+        #endregion
+
+        #region Табло
+
+        public static string ТаблоАдрес1 { get { return ""; } }
+        public static string ТаблоАдрес2 { get { return ""; } }
+
+        public static string ТаблоГруппа
+        {
+            get
+            {
+                return ЛампочкаСеть ? "0" : "";
+                
+            }
+        }
+
+        public static string ТаблоИнформация { get { return ""; } }
         #endregion
     }
 }
