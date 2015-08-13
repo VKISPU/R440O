@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-
-namespace R440O.СостоянияЭлементов.БМА_М
+﻿namespace R440O.СостоянияЭлементов.БМА_М
 {
     enum EПереключательКонтроль
     {

@@ -72,6 +72,7 @@
       <DependentUpon>MessageBox.cs</DependentUpon>
     </Compile>
     <Compile Include="ThirdParty\EasyTimer.cs" />
+    <Compile Include="СостоянияЭлементов\Контур_П.cs" />
     <Compile Include="СостоянияЭлементов\БМА_М.cs" />
     <Compile Include="InternalBlocks\A503BParameters.cs" />
     <Compile Include="InternalBlocks\MSHUParameters.cs" />
@@ -97,7 +98,7 @@
     <Compile Include="Parameters\K03M_01Parameters.cs" />
     <Compile Include="Parameters\K02M_02Parameters.cs" />
     <Compile Include="Parameters\K02M_01Parameters.cs" />
-    <Compile Include="Parameters\Kontur_P3Parameters.cs" />
+    <Compile Include="R440OForms\Kontur_P3\Kontur_P3Parameters.cs" />
     <Compile Include="Parameters\N12SParameters.cs" />
     <Compile Include="Parameters\N13_1Parameters.cs" />
     <Compile Include="Parameters\N13_2Parameters.cs" />
