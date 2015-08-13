@@ -1,10 +1,5 @@
-﻿namespace R440O.Parameters
+﻿namespace R440O.R440OForms.Kontur_P3.Параметры
 {
-    using СостоянияЭлементов.Контур_П;
-    using R440O.R440OForms;
-    using R440O.R440OForms.N15;
-    using R440O.ThirdParty;
-
     partial class Kontur_P3Parameters
     {
         #region Лампочки
@@ -12,5 +7,8 @@
         public static bool ЛампочкаКП1Канал10 = false;
         public static bool ЛампочкаКП1Канал11 = false;
         #endregion
+
+        public delegate void ParameterChangedHandler();
+        public static event ParameterChangedHandler RefreshForm;
     }
 }

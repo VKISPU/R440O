@@ -1,10 +1,7 @@
-﻿
-namespace R440O.Parameters
+﻿using R440O.СостоянияЭлементов.Контур_П;
+
+namespace R440O.R440OForms.Kontur_P3.Параметры
 {
-    using СостоянияЭлементов.Контур_П;
-    using R440O.R440OForms;
-    using R440O.R440OForms.N15;
-    using R440O.ThirdParty;
     partial class Kontur_P3Parameters
     {
         #region Лампочки
@@ -22,7 +19,11 @@ namespace R440O.Parameters
         public static EТумблерМткПУ ТумблерМткПУ
         {
             get { return _ТумблерМткПУ; }
-            set { _ТумблерМткПУ = value; }
+            set
+            {
+                _ТумблерМткПУ = value;
+                if (RefreshForm != null) RefreshForm();
+            }
         }
         #endregion
 

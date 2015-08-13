@@ -1,10 +1,7 @@
-﻿namespace R440O.Parameters
-{
-    using СостоянияЭлементов.Контур_П;
-    using R440O.R440OForms;
-    using R440O.R440OForms.N15;
-    using R440O.ThirdParty;
+﻿using R440O.СостоянияЭлементов.Контур_П;
 
+namespace R440O.R440OForms.Kontur_P3.Параметры
+{
     partial class Kontur_P3Parameters
     {
         #region Лампочки
@@ -18,7 +15,11 @@
         public static EТумблерСеть ТумблерСеть
         {
             get { return _ТумблерСеть; }
-            set { _ТумблерСеть = value; }
+            set
+            {
+                _ТумблерСеть = value;
+                if (RefreshForm != null) RefreshForm();
+            }
         }
         #endregion
 
@@ -37,24 +38,9 @@
                 {
                     _ПереключательКонтроль = value;
                 }
+                if (RefreshForm != null) RefreshForm();
             }
         }
-
-        /// <summary>
-        /// Названия положений переключателя Контроль
-        /// </summary>
-        private static string[] ПоложенияПереключательКонтроль = {
-            "откл",
-            "+9В",
-            "+5Вст",
-            "+12В",
-            "сеть",
-            "+20В",
-            "-20В",
-            "+15В",
-            "-15В",
-            "+9Врезерв"
-        };
         #endregion
     }
 }

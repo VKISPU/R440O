@@ -63,7 +63,7 @@ namespace R440O.R440OForms.BMB
 
         #region Инициализация
 
-        private SoundPlayer _player;
+        private SoundPlayer _player = new SoundPlayer(Directory.GetCurrentDirectory() + "\\Resources\\bmb.wav");
 
         public void RefreshElements()
         {
