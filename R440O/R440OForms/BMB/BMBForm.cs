@@ -63,13 +63,26 @@ namespace R440O.R440OForms.BMB
 
         #region Инициализация
 
-        private readonly SoundPlayer _player = new SoundPlayer(Directory.GetCurrentDirectory() + "\\Resources\\bmb.wav");
+        private SoundPlayer _player;
 
         public void RefreshElements()
         {
             InitializeButtons();
             InitializeToggles();
             InitializeLamps();
+
+            // Звук для БМБ
+            if (BMBParameters.ЛампочкаПриемВызова && BMBParameters.КнопкаЗвСигнал == Кнопка.Горит)
+            {
+                _player = new SoundPlayer(Directory.GetCurrentDirectory() + "\\Resources\\bmb.wav");
+                _player.PlayLooping();
+            }
+            else
+            {
+                _player.Stop();
+                _player.Dispose();
+            }
+
         }
 
         private void InitializeButtons()
