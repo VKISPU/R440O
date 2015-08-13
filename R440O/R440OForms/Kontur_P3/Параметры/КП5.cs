@@ -1,4 +1,5 @@
-﻿using R440O.СостоянияЭлементов.Контур_П;
+﻿using R440O.СостоянияЭлементов.БМБ;
+using R440O.СостоянияЭлементов.Контур_П;
 
 namespace R440O.R440OForms.Kontur_P3.Параметры
 {
@@ -27,5 +28,52 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
         }
         #endregion
 
+        #region Кнопки
+        private static bool _кнопкаПодпись1;
+        private static bool _кнопкаПодпись2;
+        private static bool _кнопкаПодпись3;
+        private static bool _кнопкаАдресК;
+
+        public static bool КнопкаАдресК
+        {
+            get { return _кнопкаАдресК; }
+            set
+            {
+                _кнопкаАдресК = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool КнопкаПодпись1
+        {
+            get { return _кнопкаПодпись1; }
+            set
+            {
+                _кнопкаПодпись1 = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool КнопкаПодпись2
+        {
+            get { return _кнопкаПодпись2; }
+            set
+            {
+                _кнопкаПодпись2 = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        public static bool КнопкаПодпись3
+        {
+            get { return _кнопкаПодпись3; }
+            set
+            {
+                _кнопкаПодпись3 = value;
+                if (RefreshForm != null) RefreshForm();
+            }
+        }
+
+        #endregion
     }
 }
