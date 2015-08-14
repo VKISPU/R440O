@@ -25,8 +25,7 @@ namespace R440O.R440OForms.N502B
 
         private void ВыводСообщенияСтанцияСгорела()
         {
-            var form = new BaseClasses.MessageBox("ОШИБКА", "Станция сгорела!");
-            form.Show();
+            MessageBox.Show("Станция сгорела!", "ОШИБКА");
         }
 
         #region Тумблеры
