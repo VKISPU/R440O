@@ -583,7 +583,11 @@ namespace R440O.R440OForms.Kontur_P3
             InitializeTogglesPosition();
             InitializeTumblersPosition();
 
-            var angle = (int)Kontur_P3Parameters.ПереключательПриоритет * 36 - 162;
+            var angle = Kontur_P3Parameters.ИндикаторСеть * 1.15F;
+            ИндикаторСеть.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
+
+            angle = (int)Kontur_P3Parameters.ПереключательПриоритет * 36 - 162;
             ПереключательПриоритет.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 

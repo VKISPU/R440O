@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.Kontur_P3Panel = new System.Windows.Forms.Panel();
+            this.ТаблоИнформация = new System.Windows.Forms.Button();
+            this.ТаблоГруппа = new System.Windows.Forms.Button();
+            this.ТаблоАдрес2 = new System.Windows.Forms.Button();
+            this.ТаблоАдрес1 = new System.Windows.Forms.Button();
             this.ЛампочкаПР2_ЗА = new System.Windows.Forms.PictureBox();
             this.ЛампочкаСеть = new System.Windows.Forms.PictureBox();
             this.ЛампочкаПР1_ЗА = new System.Windows.Forms.PictureBox();
@@ -101,10 +105,7 @@
             this.ТумблерКонтроль = new System.Windows.Forms.Button();
             this.ПереключательПриоритет = new System.Windows.Forms.Button();
             this.ПереключательКонтроль = new System.Windows.Forms.Button();
-            this.ТаблоАдрес1 = new System.Windows.Forms.Button();
-            this.ТаблоАдрес2 = new System.Windows.Forms.Button();
-            this.ТаблоГруппа = new System.Windows.Forms.Button();
-            this.ТаблоИнформация = new System.Windows.Forms.Button();
+            this.ИндикаторСеть = new System.Windows.Forms.PictureBox();
             this.Kontur_P3Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПР2_ЗА)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСеть)).BeginInit();
@@ -136,12 +137,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКП1Канал11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКП1Канал10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКонтрольПодписи)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторСеть)).BeginInit();
             this.SuspendLayout();
             // 
             // Kontur_P3Panel
             // 
             this.Kontur_P3Panel.BackgroundImage = global::R440O.BackgroundImages.Kontur_P3;
             this.Kontur_P3Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3Panel.Controls.Add(this.ИндикаторСеть);
             this.Kontur_P3Panel.Controls.Add(this.ТаблоИнформация);
             this.Kontur_P3Panel.Controls.Add(this.ТаблоГруппа);
             this.Kontur_P3Panel.Controls.Add(this.ТаблоАдрес2);
@@ -222,6 +225,66 @@
             this.Kontur_P3Panel.Name = "Kontur_P3Panel";
             this.Kontur_P3Panel.Size = new System.Drawing.Size(1109, 409);
             this.Kontur_P3Panel.TabIndex = 1;
+            // 
+            // ТаблоИнформация
+            // 
+            this.ТаблоИнформация.BackColor = System.Drawing.Color.Transparent;
+            this.ТаблоИнформация.FlatAppearance.BorderSize = 0;
+            this.ТаблоИнформация.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТаблоИнформация.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТаблоИнформация.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТаблоИнформация.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ТаблоИнформация.ForeColor = System.Drawing.Color.LawnGreen;
+            this.ТаблоИнформация.Location = new System.Drawing.Point(721, 130);
+            this.ТаблоИнформация.Name = "ТаблоИнформация";
+            this.ТаблоИнформация.Size = new System.Drawing.Size(79, 30);
+            this.ТаблоИнформация.TabIndex = 91;
+            this.ТаблоИнформация.UseVisualStyleBackColor = false;
+            // 
+            // ТаблоГруппа
+            // 
+            this.ТаблоГруппа.BackColor = System.Drawing.Color.Transparent;
+            this.ТаблоГруппа.FlatAppearance.BorderSize = 0;
+            this.ТаблоГруппа.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТаблоГруппа.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТаблоГруппа.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТаблоГруппа.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ТаблоГруппа.ForeColor = System.Drawing.Color.LawnGreen;
+            this.ТаблоГруппа.Location = new System.Drawing.Point(690, 131);
+            this.ТаблоГруппа.Name = "ТаблоГруппа";
+            this.ТаблоГруппа.Size = new System.Drawing.Size(42, 30);
+            this.ТаблоГруппа.TabIndex = 91;
+            this.ТаблоГруппа.UseVisualStyleBackColor = false;
+            // 
+            // ТаблоАдрес2
+            // 
+            this.ТаблоАдрес2.BackColor = System.Drawing.Color.Transparent;
+            this.ТаблоАдрес2.FlatAppearance.BorderSize = 0;
+            this.ТаблоАдрес2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТаблоАдрес2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТаблоАдрес2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТаблоАдрес2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ТаблоАдрес2.ForeColor = System.Drawing.Color.LawnGreen;
+            this.ТаблоАдрес2.Location = new System.Drawing.Point(594, 131);
+            this.ТаблоАдрес2.Name = "ТаблоАдрес2";
+            this.ТаблоАдрес2.Size = new System.Drawing.Size(86, 30);
+            this.ТаблоАдрес2.TabIndex = 91;
+            this.ТаблоАдрес2.UseVisualStyleBackColor = false;
+            // 
+            // ТаблоАдрес1
+            // 
+            this.ТаблоАдрес1.BackColor = System.Drawing.Color.Transparent;
+            this.ТаблоАдрес1.FlatAppearance.BorderSize = 0;
+            this.ТаблоАдрес1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТаблоАдрес1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТаблоАдрес1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТаблоАдрес1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ТаблоАдрес1.ForeColor = System.Drawing.Color.LawnGreen;
+            this.ТаблоАдрес1.Location = new System.Drawing.Point(514, 131);
+            this.ТаблоАдрес1.Name = "ТаблоАдрес1";
+            this.ТаблоАдрес1.Size = new System.Drawing.Size(66, 30);
+            this.ТаблоАдрес1.TabIndex = 91;
+            this.ТаблоАдрес1.UseVisualStyleBackColor = false;
             // 
             // ЛампочкаПР2_ЗА
             // 
@@ -1311,65 +1374,15 @@
             this.ПереключательКонтроль.UseVisualStyleBackColor = false;
             this.ПереключательКонтроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3ПереключательКонтроль_MouseUp);
             // 
-            // ТаблоАдрес1
+            // ИндикаторСеть
             // 
-            this.ТаблоАдрес1.BackColor = System.Drawing.Color.Transparent;
-            this.ТаблоАдрес1.FlatAppearance.BorderSize = 0;
-            this.ТаблоАдрес1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.ТаблоАдрес1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.ТаблоАдрес1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ТаблоАдрес1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ТаблоАдрес1.ForeColor = System.Drawing.Color.LawnGreen;
-            this.ТаблоАдрес1.Location = new System.Drawing.Point(514, 131);
-            this.ТаблоАдрес1.Name = "ТаблоАдрес1";
-            this.ТаблоАдрес1.Size = new System.Drawing.Size(66, 30);
-            this.ТаблоАдрес1.TabIndex = 91;
-            this.ТаблоАдрес1.UseVisualStyleBackColor = false;
-            // 
-            // ТаблоАдрес2
-            // 
-            this.ТаблоАдрес2.BackColor = System.Drawing.Color.Transparent;
-            this.ТаблоАдрес2.FlatAppearance.BorderSize = 0;
-            this.ТаблоАдрес2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.ТаблоАдрес2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.ТаблоАдрес2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ТаблоАдрес2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ТаблоАдрес2.ForeColor = System.Drawing.Color.LawnGreen;
-            this.ТаблоАдрес2.Location = new System.Drawing.Point(594, 131);
-            this.ТаблоАдрес2.Name = "ТаблоАдрес2";
-            this.ТаблоАдрес2.Size = new System.Drawing.Size(86, 30);
-            this.ТаблоАдрес2.TabIndex = 91;
-            this.ТаблоАдрес2.UseVisualStyleBackColor = false;
-            // 
-            // ТаблоГруппа
-            // 
-            this.ТаблоГруппа.BackColor = System.Drawing.Color.Transparent;
-            this.ТаблоГруппа.FlatAppearance.BorderSize = 0;
-            this.ТаблоГруппа.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.ТаблоГруппа.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.ТаблоГруппа.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ТаблоГруппа.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ТаблоГруппа.ForeColor = System.Drawing.Color.LawnGreen;
-            this.ТаблоГруппа.Location = new System.Drawing.Point(690, 131);
-            this.ТаблоГруппа.Name = "ТаблоГруппа";
-            this.ТаблоГруппа.Size = new System.Drawing.Size(42, 30);
-            this.ТаблоГруппа.TabIndex = 91;
-            this.ТаблоГруппа.UseVisualStyleBackColor = false;
-            // 
-            // ТаблоИнформация
-            // 
-            this.ТаблоИнформация.BackColor = System.Drawing.Color.Transparent;
-            this.ТаблоИнформация.FlatAppearance.BorderSize = 0;
-            this.ТаблоИнформация.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.ТаблоИнформация.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.ТаблоИнформация.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ТаблоИнформация.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ТаблоИнформация.ForeColor = System.Drawing.Color.LawnGreen;
-            this.ТаблоИнформация.Location = new System.Drawing.Point(721, 130);
-            this.ТаблоИнформация.Name = "ТаблоИнформация";
-            this.ТаблоИнформация.Size = new System.Drawing.Size(79, 30);
-            this.ТаблоИнформация.TabIndex = 91;
-            this.ТаблоИнформация.UseVisualStyleBackColor = false;
+            this.ИндикаторСеть.BackColor = System.Drawing.Color.Transparent;
+            this.ИндикаторСеть.BackgroundImage = global::R440O.ControlElementImages.arrow;
+            this.ИндикаторСеть.Location = new System.Drawing.Point(924, 207);
+            this.ИндикаторСеть.Name = "ИндикаторСеть";
+            this.ИндикаторСеть.Size = new System.Drawing.Size(99, 25);
+            this.ИндикаторСеть.TabIndex = 92;
+            this.ИндикаторСеть.TabStop = false;
             // 
             // Kontur_P3Form
             // 
@@ -1413,6 +1426,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКП1Канал11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКП1Канал10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКонтрольПодписи)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторСеть)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1496,5 +1510,6 @@
         private System.Windows.Forms.Button ТаблоИнформация;
         private System.Windows.Forms.Button ТаблоГруппа;
         private System.Windows.Forms.Button ТаблоАдрес2;
+        private System.Windows.Forms.PictureBox ИндикаторСеть;
     }
 }

@@ -31,6 +31,19 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
         }
         #endregion
 
+        #region Индикатор Сеть
+        public static float ИндикаторСеть
+        {
+            get
+            {
+                if (ЛампочкаСеть && ПереключательКонтроль != EПереключательКонтроль.ОТКЛ)
+                    return -5;
+                else
+                    return -20;
+            }
+        }
+        #endregion
+
         #region ПереключательКонтроль
         /// <summary>
         /// Положение переключателя Приоритет
@@ -50,5 +63,7 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
             }
         }
         #endregion
+
+
     }
 }
