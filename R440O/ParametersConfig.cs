@@ -2,10 +2,13 @@
 using R440O.R440OForms.A205M_1;
 using R440O.R440OForms.A304;
 using R440O.R440OForms.C300M_1;
+using R440O.R440OForms.Kontur_P3;
+using R440O.R440OForms.Kontur_P3.Параметры;
 using R440O.R440OForms.N15;
 using R440O.R440OForms.N502B;
 using R440O.R440OForms.PowerCabel;
 using R440O.R440OForms.VoltageStabilizer;
+using R440O.СостоянияЭлементов.Контур_П;
 
 namespace R440O
 {
@@ -79,6 +82,10 @@ namespace R440O
             N15LocalParameters._локТумблерБМА_1 = true;
             BMA_M_1Parameters.КнопкаПитаниеВКЛ = true;
 
+
+            //// Поключение АФСС
+            N15LocalParameters.локТумблерАФСС = true;
+            Kontur_P3Parameters.ТумблерСеть = EТумблерСеть.ВКЛ;
 
         }
     }

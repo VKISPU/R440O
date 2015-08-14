@@ -334,6 +334,7 @@ namespace R440O.R440OForms.Kontur_P3
         private void Kontur_P3КнопкаОтклЗС_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаОтклЗС.BackgroundImage = null;
+            Kontur_P3Parameters.ОтключитьЗвуковуюСигнализацию();
         }
 
         private void Kontur_P3КнопкаОтклЗС_MouseUp(object sender, MouseEventArgs e)
@@ -347,6 +348,7 @@ namespace R440O.R440OForms.Kontur_P3
         {
             Кнопка7.BackgroundImage = null;
             Кнопка7.Text = null;
+            Kontur_P3Parameters.НажатьКнопку(7);
         }
 
         private void Kontur_P3Кнопка7_MouseUp(object sender, MouseEventArgs e)
@@ -359,6 +361,7 @@ namespace R440O.R440OForms.Kontur_P3
         {
             Кнопка8.BackgroundImage = null;
             Кнопка8.Text = null;
+            Kontur_P3Parameters.НажатьКнопку(8);
         }
 
         private void Kontur_P3Кнопка8_MouseUp(object sender, MouseEventArgs e)
@@ -371,6 +374,7 @@ namespace R440O.R440OForms.Kontur_P3
         {
             Кнопка9.BackgroundImage = null;
             Кнопка9.Text = null;
+            Kontur_P3Parameters.НажатьКнопку(9);
         }
 
         private void Kontur_P3Кнопка9_MouseUp(object sender, MouseEventArgs e)
@@ -383,6 +387,7 @@ namespace R440O.R440OForms.Kontur_P3
         {
             Кнопка4.BackgroundImage = null;
             Кнопка4.Text = null;
+            Kontur_P3Parameters.НажатьКнопку(4);
         }
 
         private void Kontur_P3Кнопка4_MouseUp(object sender, MouseEventArgs e)
@@ -395,6 +400,7 @@ namespace R440O.R440OForms.Kontur_P3
         {
             Кнопка5.BackgroundImage = null;
             Кнопка5.Text = null;
+            Kontur_P3Parameters.НажатьКнопку(5);
         }
 
         private void Kontur_P3Кнопка5_MouseUp(object sender, MouseEventArgs e)
@@ -407,6 +413,7 @@ namespace R440O.R440OForms.Kontur_P3
         {
             Кнопка6.BackgroundImage = null;
             Кнопка6.Text = null;
+            Kontur_P3Parameters.НажатьКнопку(6);
         }
 
         private void Kontur_P3Кнопка6_MouseUp(object sender, MouseEventArgs e)
@@ -419,6 +426,7 @@ namespace R440O.R440OForms.Kontur_P3
         {
             Кнопка1.BackgroundImage = null;
             Кнопка1.Text = null;
+            Kontur_P3Parameters.НажатьКнопку(1);
         }
 
         private void Kontur_P3Кнопка1_MouseUp(object sender, MouseEventArgs e)
@@ -431,6 +439,7 @@ namespace R440O.R440OForms.Kontur_P3
         {
             Кнопка2.BackgroundImage = null;
             Кнопка2.Text = null;
+            Kontur_P3Parameters.НажатьКнопку(2);
         }
 
         private void Kontur_P3Кнопка2_MouseUp(object sender, MouseEventArgs e)
@@ -443,6 +452,7 @@ namespace R440O.R440OForms.Kontur_P3
         {
             Кнопка3.BackgroundImage = null;
             Кнопка3.Text = null;
+            Kontur_P3Parameters.НажатьКнопку(3);
         }
 
         private void Kontur_P3Кнопка3_MouseUp(object sender, MouseEventArgs e)
@@ -455,6 +465,7 @@ namespace R440O.R440OForms.Kontur_P3
         {
             Кнопка0.BackgroundImage = null;
             Кнопка0.Text = null;
+            Kontur_P3Parameters.НажатьКнопку(0);
         }
 
         private void Kontur_P3Кнопка0_MouseUp(object sender, MouseEventArgs e)
@@ -491,7 +502,7 @@ namespace R440O.R440OForms.Kontur_P3
         #endregion
 
         #region Обновление формы
-        private void InitializeButtonsPosition()
+        private void InitializeButtons()
         {
             if (Kontur_P3Parameters.КнопкаАдресК)
             {
@@ -538,7 +549,7 @@ namespace R440O.R440OForms.Kontur_P3
             }
         }
 
-        private void InitializeTogglesPosition()
+        private void InitializeToggles()
         {
             var angle = (int)Kontur_P3Parameters.ПереключательПриоритет * 36 - 162;
             ПереключательПриоритет.BackgroundImage =
@@ -550,7 +561,7 @@ namespace R440O.R440OForms.Kontur_P3
 
         }
 
-        private void InitializeTumblersPosition()
+        private void InitializeTumblers()
         {
             this.ТумблерКонтроль.BackgroundImage = Kontur_P3Parameters.ТумблерКонтроль == EТумблерКонтроль.КОНТРОЛЬ_1
                ? ControlElementImages.tumblerType4Down
@@ -579,32 +590,45 @@ namespace R440O.R440OForms.Kontur_P3
 
         public void RefreshElements()
         {
-            InitializeButtonsPosition();
-            InitializeTogglesPosition();
-            InitializeTumblersPosition();
-
+            InitializeButtons();
+            InitializeToggles();
+            InitializeTumblers();
+            
             var angle = Kontur_P3Parameters.ИндикаторСеть * 1.15F;
             ИндикаторСеть.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
 
+
+            #region Переключатели
             angle = (int)Kontur_P3Parameters.ПереключательПриоритет * 36 - 162;
+
             ПереключательПриоритет.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
 
             angle = (int)Kontur_P3Parameters.ПереключательКонтроль * 36 - 180;
             ПереключательКонтроль.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle); 
+            #endregion
 
             #region Лампочки
             ЛампочкаСеть.BackgroundImage = Kontur_P3Parameters.ЛампочкаСеть
                 ? ControlElementImages.lampType9OnGreen
                 : null;
+            ЛампочкаСбойПодписи.BackgroundImage = Kontur_P3Parameters.ЛампочкаСбойПодписи
+                ? ControlElementImages.lampType5OnRed
+                : null;
+            ЛампочкаНеиспр.BackgroundImage = Kontur_P3Parameters.ЛампочкаНеиспр
+                ? ControlElementImages.lampType5OnRed
+                : null;
             #endregion
 
+            #region Табло
             ТаблоАдрес1.Text = Kontur_P3Parameters.ТаблоАдрес1;
             ТаблоАдрес2.Text = Kontur_P3Parameters.ТаблоАдрес2;
             ТаблоГруппа.Text = Kontur_P3Parameters.ТаблоГруппа;
             ТаблоИнформация.Text = Kontur_P3Parameters.ТаблоИнформация;
+
+            #endregion
         }
         #endregion
     }
