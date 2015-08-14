@@ -1,4 +1,7 @@
-﻿using R440O.СостоянияЭлементов.Контур_П;
+﻿using System;
+using System.Linq;
+using System.Windows.Forms;
+using R440O.СостоянияЭлементов.Контур_П;
 
 namespace R440O.R440OForms.Kontur_P3.Параметры
 {
@@ -11,12 +14,12 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
 
         public static bool ЛампочкаНеиспр
         {
-            get { return (КнопкаПодпись1 || КнопкаПодпись2 || КнопкаПодпись3 || КнопкаАдресК) && ЛампочкаСеть && ЗвуковаяСигнализация; }
+            get { return (КнопкаПодпись1 || КнопкаПодпись2 || КнопкаПодпись3) && ЛампочкаСеть && ЗвуковаяСигнализация; }
         }
         public static bool ЛампочкаКонтроль = false;
         public static bool ЛампочкаСбойПодписи
         {
-            get { return (КнопкаПодпись1 || КнопкаПодпись2 || КнопкаПодпись3 || КнопкаАдресК) && ЛампочкаСеть && ЗвуковаяСигнализация; }
+            get { return (КнопкаПодпись1 || КнопкаПодпись2 || КнопкаПодпись3) && ЛампочкаСеть && ЗвуковаяСигнализация; }
         }
         public static bool ЛампочкаПередача = false;
         public static bool ЛампочкаОтбой = false;
@@ -48,13 +51,6 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
             set
             {
                 _кнопкаАдресК = value;
-                if (value)
-                {
-                    _кнопкаПодпись1 = false;
-                    _кнопкаПодпись2 = false;
-                    _кнопкаПодпись3 = false;
-                }
-                ЗвуковаяСигнализация = true;
                 if (RefreshForm != null) RefreshForm();
             }
         }
@@ -65,12 +61,6 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
             set
             {
                 _кнопкаПодпись1 = value;
-                if (value)
-                {
-                    _кнопкаПодпись2 = false;
-                    _кнопкаПодпись3 = false;
-                    _кнопкаАдресК = false;
-                }
                 ЗвуковаяСигнализация = true;
                 if (RefreshForm != null) RefreshForm();
             }
@@ -82,12 +72,6 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
             set
             {
                 _кнопкаПодпись2 = value;
-                if (value)
-                {
-                    _кнопкаПодпись1 = false;
-                    _кнопкаПодпись3 = false;
-                    _кнопкаАдресК = false;
-                }
                 ЗвуковаяСигнализация = true;
                 if (RefreshForm != null) RefreshForm();
             }
@@ -99,12 +83,6 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
             set
             {
                 _кнопкаПодпись3 = value;
-                if (value)
-                {
-                    _кнопкаПодпись1 = false;
-                    _кнопкаПодпись2 = false;
-                    _кнопкаАдресК = false;
-                }
                 ЗвуковаяСигнализация = true;
                 if (RefreshForm != null) RefreshForm();
             }
@@ -126,37 +104,47 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
         /// <param name="number"></param>
         public static void НажатьКнопку(int number)
         {
-            if (КнопкаПодпись1)
+            if (number != -1)
             {
-                if (_подпись1[0] == 0) _подпись1[0] = number;
-                else if (_подпись1[1] == 0) _подпись1[1] = number;
-                else if (_подпись1[2] == 0) _подпись1[2] = number;
-            }
-            if (КнопкаПодпись2)
-            {
-                if (_подпись2[0] == 0) _подпись2[0] = number;
-                else if (_подпись2[1] == 0) _подпись2[1] = number;
-                else if (_подпись2[2] == 0) _подпись2[2] = number;
-            }
-            if (КнопкаПодпись3)
-            {
-                if (_подпись3[0] == 0) _подпись3[0] = number;
-                else if (_подпись3[1] == 0) _подпись3[1] = number;
-                else if (_подпись3[2] == 0) _подпись3[2] = number;
+                if (КнопкаПодпись1)
+                {
+                    if (_подпись1[0] == 0) _подпись1[0] = number;
+                    else if (_подпись1[1] == 0) _подпись1[1] = number;
+                    else if (_подпись1[2] == 0) _подпись1[2] = number;
+                }
+                if (КнопкаПодпись2)
+                {
+                    if (_подпись2[0] == 0) _подпись2[0] = number;
+                    else if (_подпись2[1] == 0) _подпись2[1] = number;
+                    else if (_подпись2[2] == 0) _подпись2[2] = number;
+                }
+                if (КнопкаПодпись3)
+                {
+                    if (_подпись3[0] == 0) _подпись3[0] = number;
+                    else if (_подпись3[1] == 0) _подпись3[1] = number;
+                    else if (_подпись3[2] == 0) _подпись3[2] = number;
+                }
+
+                if (КнопкаАдресК)
+                {
+                    if (_адрес[0] == 0) _адрес[0] = number;
+                    else if (_адрес[1] == 0) _адрес[1] = number;
+                    else if (_адрес[2] == 0) _адрес[2] = number;
+                }
             }
 
-            if (КнопкаАдресК)
+            if (!КнопкаПодпись1 && !КнопкаПодпись2 && !КнопкаПодпись3 && !КнопкаАдресК)
             {
-                if (_адрес[0] == 0) _адрес[0] = number;
-                else if (_адрес[1] == 0) _адрес[1] = number;
-                else if (_адрес[2] == 0) _адрес[2] = number;
+                if (_группа[ТекущаяГруппа][0] == 0) _группа[ТекущаяГруппа][0] = number;
+                else if (_группа[ТекущаяГруппа][1] == 0) _группа[ТекущаяГруппа][1] = number;
+                else if (_группа[ТекущаяГруппа][2] == 0) _группа[ТекущаяГруппа][2] = number;
             }
-
+            
             if (RefreshForm != null) RefreshForm();
         }
         #endregion
 
-        #region Подписи и Адрес
+        #region Подписи и Адреса
 
         private static int[] _подпись1 = {0, 0, 0};
         private static int[] _подпись2 = { 0, 0, 0 };
@@ -178,6 +166,49 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
         public static string Адрес
         {
             get { return _адрес[2] + " " + _адрес[1] + " " + _адрес[0]; }
+        }
+
+        #endregion
+
+        #region Группа
+
+        public static int ТекущаяГруппа
+        {
+            get { return _текущаяГруппа; }
+            set
+            {
+                if (value < 10 && ЛампочкаСеть)
+                _текущаяГруппа = value;
+                if (RefreshForm != null) RefreshForm();
+
+            }
+        }
+
+        private static int _текущаяГруппа;
+
+        private static int[][] _группа =
+        {
+            new int[] {},
+            new [] { 0, 0, 0 }, //1
+            new [] { 0, 0, 0 }, //2
+            new [] { 0, 0, 0 }, //3
+            new [] { 0, 0, 0 }, //4
+            new [] { 0, 0, 0 }, //5
+            new [] { 0, 0, 0 }, //6
+            new [] { 0, 0, 0 }, //7
+            new [] { 0, 0, 0 }, //8
+            new [] { 0, 0, -1} //9
+        };
+        
+        private static string Группа
+        {
+            get
+            {
+                if (_группа[ТекущаяГруппа].Contains(-1))
+                {
+                    return "^ 0 0 "; }
+                return _группа[ТекущаяГруппа][2] + " " + _группа[ТекущаяГруппа][1] + " " + _группа[ТекущаяГруппа][0];
+            }
         }
 
         #endregion
@@ -206,12 +237,20 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
         {
             get
             {
-                return ЛампочкаСеть ? "0" : "";
-                
+                if (!ЛампочкаСеть) return "";
+                return ТекущаяГруппа + string.Empty;
             }
         }
 
-        public static string ТаблоИнформация { get { return ""; } }
+        public static string ТаблоИнформация
+        {
+            get
+            {
+                if (!ЛампочкаСеть) return "";
+                return ТекущаяГруппа == 0 ? "" : Группа + string.Empty;
+            }
+        }
+
         #endregion
     }
 }

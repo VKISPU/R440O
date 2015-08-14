@@ -258,6 +258,7 @@ namespace R440O.R440OForms.Kontur_P3
         private void Kontur_P3КнопкаГруппа_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаГруппа.BackgroundImage = null;
+            Kontur_P3Parameters.ТекущаяГруппа++;
         }
 
         private void Kontur_P3КнопкаГруппа_MouseUp(object sender, MouseEventArgs e)
@@ -478,6 +479,7 @@ namespace R440O.R440OForms.Kontur_P3
         {
             КнопкаИнформКОН.BackgroundImage = null;
             КнопкаИнформКОН.Text = null;
+            Kontur_P3Parameters.НажатьКнопку(-1);
         }
 
         private void Kontur_P3КнопкаИнформКОН_MouseUp(object sender, MouseEventArgs e)
