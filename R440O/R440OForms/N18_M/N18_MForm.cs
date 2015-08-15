@@ -7,7 +7,6 @@
 namespace R440O.R440OForms.N18_M
 {
     using System.Windows.Forms;
-    using Parameters;
     using ThirdParty;
 
     /// <summary>
@@ -24,7 +23,7 @@ namespace R440O.R440OForms.N18_M
             this.InitializeTogglesPosition();
             this.InitializeTumblersPosition();
         }
-
+        
         #region Тумблеры
         private void N18_MТумблерДАБ5_Click(object sender, System.EventArgs e)
         {

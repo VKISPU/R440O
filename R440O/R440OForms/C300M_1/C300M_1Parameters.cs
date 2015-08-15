@@ -7,6 +7,7 @@ using R440O.R440OForms.A205M_2;
 using System.Windows.Forms;
 using R440O.InternalBlocks;
 using R440O.Parameters;
+using R440O.ОбщиеТипыДанных;
 
 namespace R440O.R440OForms.C300M_1
 {
@@ -337,9 +338,9 @@ namespace R440O.R440OForms.C300M_1
             }
         }
 
-        public static string ТумблерВведениеString
+        public static Модуляция ТумблерВведениеString
         {
-            get { return _тумблерВведение ? "ЧТ" : "ОФТ"; }
+            get { return _тумблерВведение ? Модуляция.ЧТ : Модуляция.ОФТ; }
         }
 
         private static bool _тумблерВведение;
@@ -388,9 +389,9 @@ namespace R440O.R440OForms.C300M_1
             }
         }
 
-        public static string ТумблерВидМодуляцииString
+        public static Модуляция ТумблерВидМодуляцииString
         {
-            get { return _тумблерВидМодуляции ? "ЧТ" : "ОФТ"; }
+            get { return _тумблерВидМодуляции ? Модуляция.ЧТ : Модуляция.ОФТ; }
         }
 
         private static bool _тумблерВидМодуляции = false;
@@ -744,7 +745,7 @@ namespace R440O.R440OForms.C300M_1
                 && signal.Wave == Волна 
                 && signal.Modulation == ТумблерВведениеString 
                 && signal.Modulation == ТумблерВидМодуляцииString
-                && (Math.Abs(signal.Speed - ТекущаяСкоростьРаботы) <= 4.0)) return true;
+                && (Math.Abs(signal.GroupSpeed - ТекущаяСкоростьРаботы) <= 4.0)) return true;
             return false;
         }
 

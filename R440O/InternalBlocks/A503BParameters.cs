@@ -1,7 +1,7 @@
-﻿using System;
-using R440O.BaseClasses;
+﻿using R440O.BaseClasses;
 using R440O.R440OForms.A205M_1;
 using R440O.R440OForms.N15;
+using R440O.ОбщиеТипыДанных;
 
 namespace R440O.InternalBlocks
 {
@@ -25,26 +25,26 @@ namespace R440O.InternalBlocks
                     {
                         case 1:
                         {
-                            signal.Modulation = "ЧТ";
-                            signal.Speed = 200;
+                            signal.Modulation = Модуляция.ЧТ;
+                            signal.GroupSpeed = 200;
                         }
                             break;
                         case 2:
                         {
-                            signal.Modulation = "ЧТ";
-                            signal.Speed = 20;
+                            signal.Modulation = Модуляция.ЧТ;
+                            signal.GroupSpeed = 20;
                         }
                             break;
                         case 3:
                         {
-                            signal.Modulation = "ОФТ";
-                            signal.Speed = 5.2;
+                            signal.Modulation = Модуляция.ОФТ;
+                            signal.GroupSpeed = 5.2;
                         }
                             break;
                         case 4:
                         {
-                            signal.Modulation = "ОФТ";
-                            signal.Speed = 48;
+                            signal.Modulation = Модуляция.ОФТ;
+                            signal.GroupSpeed = 48;
                         }
                             break;
                     }

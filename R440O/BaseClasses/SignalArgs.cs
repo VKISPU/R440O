@@ -1,4 +1,6 @@
-﻿namespace R440O.BaseClasses
+﻿using R440O.ОбщиеТипыДанных;
+
+namespace R440O.BaseClasses
 {
     /// <summary>
     /// Параметры передаваемого сигнала.
@@ -13,17 +15,21 @@
         /// <summary>
         /// Тип модуляции. ОФТ, ЧТ.
         /// </summary>
-        public string Modulation;
+        public Модуляция Modulation;
 
         /// <summary>
-        /// Скорость передачи сигнала.
+        /// Групповая скорость передачи сигнала.
         /// </summary>
-        public double Speed;
+        public double GroupSpeed;
+        
+        /// <summary>
+        /// Скорость передачи в определённом канале.
+        /// </summary>
+        public double[] ChanelSpeed = new double[10];
 
         /// <summary>
         /// Уровень передачи сигнала.
         /// </summary>
         public double Level;
-
     }
 }

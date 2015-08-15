@@ -44,13 +44,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(969, 741);
+            this.ClientSize = new System.Drawing.Size(969, 733);
             this.Controls.Add(this.PowerShieldPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "PowerShieldForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ЩИТ ЭЛЕКТРОПИТАНИЯ";
+            this.Text = "КАБЕЛЬНЫЙ ВВОД";
             this.ResumeLayout(false);
 
         }
