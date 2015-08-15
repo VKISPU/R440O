@@ -6,8 +6,6 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
     partial class Kontur_P3Parameters
     {
         #region Лампочки
-        public static bool ЛампочкаПР1_ЗА = false;
-        public static bool ЛампочкаПР2_ЗА = false;
         public static bool ЛампочкаСеть
         {
             get
@@ -26,6 +24,7 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
             {
                 _ТумблерСеть = value;
                 N15Parameters.ResetParameters();
+                ResetToDefaultsWhenTurnOnOff();
                 Refresh();
             }
         }
@@ -63,7 +62,5 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
             }
         }
         #endregion
-
-
     }
 }

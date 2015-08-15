@@ -7,16 +7,5 @@
         public static bool ЛампочкаКП1Канал10 = false;
         public static bool ЛампочкаКП1Канал11 = false;
         #endregion
-
-        public delegate void ParameterChangedHandler();
-        public static event ParameterChangedHandler RefreshForm;
-
-        public static void Refresh()
-        {
-            if (RefreshForm != null)
-            {
-                RefreshForm();
-            }
-        }
     }
 }

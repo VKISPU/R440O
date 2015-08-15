@@ -40,35 +40,14 @@ namespace R440O.R440OForms.Kontur_P3
                 Kontur_P3Parameters.ПереключательПриоритет -= 1;
             }
         }
-
-        private void Kontur_P3ПереключательКонтроль_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                Kontur_P3Parameters.ПереключательКонтроль += 1;
-            }
-
-            if (e.Button == MouseButtons.Right)
-            {
-                Kontur_P3Parameters.ПереключательКонтроль -= 1;
-            }
-        }
         #endregion
 
         #region Тумблеры
-
         private void Kontur_P3ТумблерКонтроль_Click(object sender, System.EventArgs e)
         {
             Kontur_P3Parameters.ТумблерКонтроль = Kontur_P3Parameters.ТумблерКонтроль == EТумблерКонтроль.КОНТРОЛЬ_1
                 ? EТумблерКонтроль.КОНТРОЛЬ_2
                 : EТумблерКонтроль.КОНТРОЛЬ_1;
-        }
-
-        private void Kontur_P3ТумблерМткПУ_Click(object sender, System.EventArgs e)
-        {
-            Kontur_P3Parameters.ТумблерМткПУ = Kontur_P3Parameters.ТумблерМткПУ == EТумблерМткПУ.МТК
-                ? EТумблерМткПУ.ПУ
-                : EТумблерМткПУ.МТК;
         }
 
         private void Kontur_P3ТумблерДокументирование_Click(object sender, System.EventArgs e)
@@ -91,13 +70,6 @@ namespace R440O.R440OForms.Kontur_P3
             Kontur_P3Parameters.ТумблерРежим = Kontur_P3Parameters.ТумблерРежим == EТумблерРежим.РЕЖИМ_1
                 ? EТумблерРежим.РЕЖИМ_2
                 : EТумблерРежим.РЕЖИМ_1;
-        }
-
-        private void Kontur_P3ТумблерСеть_Click(object sender, System.EventArgs e)
-        {
-            Kontur_P3Parameters.ТумблерСеть = Kontur_P3Parameters.ТумблерСеть == EТумблерСеть.ОТКЛ
-                ? EТумблерСеть.ВКЛ
-                : EТумблерСеть.ОТКЛ;
         }
 
         #endregion
@@ -143,7 +115,7 @@ namespace R440O.R440OForms.Kontur_P3
         private void Kontur_P3КнопкаНачИнформ_MouseUp(object sender, MouseEventArgs e)
         {
             КнопкаНачИнформ.BackgroundImage = ControlElementImages.buttonRoundType8;
-        } 
+        }
         #endregion
 
         #region КП3
@@ -175,7 +147,7 @@ namespace R440O.R440OForms.Kontur_P3
         private void Kontur_P3КнопкаКан12_MouseUp(object sender, MouseEventArgs e)
         {
             КнопкаКан12.BackgroundImage = ControlElementImages.buttonRoundType8;
-        } 
+        }
         #endregion
 
         private void Kontur_P3КнопкаКП4Контроль_MouseDown(object sender, MouseEventArgs e)
@@ -200,70 +172,118 @@ namespace R440O.R440OForms.Kontur_P3
         }
         #endregion
 
-        #region Квадратные кнопки
-
-        #region Адрес
-        private void Kontur_P3КнопкаАдресУСС_MouseDown(object sender, MouseEventArgs e)
+        #region КП7
+        #region Тумблеры
+        private void ТумблерСеть_Click(object sender, System.EventArgs e)
         {
-            КнопкаАдресУСС.BackgroundImage = null;
-            КнопкаАдресУСС.Text = null;
+            Kontur_P3Parameters.ТумблерСеть = Kontur_P3Parameters.ТумблерСеть == EТумблерСеть.ОТКЛ
+               ? EТумблерСеть.ВКЛ
+               : EТумблерСеть.ОТКЛ;
+        }
+        #endregion
+
+        #region Переключатели
+        private void ПереключательКонтроль_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Kontur_P3Parameters.ПереключательКонтроль += 1;
+            }
+
+            if (e.Button == MouseButtons.Right)
+            {
+                Kontur_P3Parameters.ПереключательКонтроль -= 1;
+            }
+        }
+        #endregion
+        #endregion
+
+        #region КП5
+        #region Кнопки
+        private void КнопкаАдресУСС_MouseClick(object sender, MouseEventArgs e)
+        {
+            Kontur_P3Parameters.КнопкаАдресУСС = !Kontur_P3Parameters.КнопкаАдресУСС;
+            if (Kontur_P3Parameters.КнопкаАдресУСС)
+            {
+                КнопкаАдресУСС.BackgroundImage = null;
+                КнопкаАдресУСС.Text = "";
+            }
+            else
+            {
+                КнопкаАдресУСС.BackgroundImage = ControlElementImages.buttonSquareBlack_small;
+                КнопкаАдресУСС.Text = "УСС";
+            }
         }
 
-        private void Kontur_P3КнопкаАдресУСС_MouseUp(object sender, MouseEventArgs e)
-        {
-            КнопкаАдресУСС.BackgroundImage = ControlElementImages.buttonSquareBlack_small;
-            КнопкаАдресУСС.Text = "УСС";
-        }
-
-        private void Kontur_P3КнопкаАдресК_MouseDown(object sender, MouseEventArgs e)
+        private void КнопкаАдресК_MouseClick(object sender, MouseEventArgs e)
         {
             Kontur_P3Parameters.КнопкаАдресК = !Kontur_P3Parameters.КнопкаАдресК;
+            if (Kontur_P3Parameters.КнопкаАдресК)
+            {
+                КнопкаАдресК.BackgroundImage = null;
+                КнопкаАдресК.Text = "";
+            }
+            else
+            {
+                КнопкаАдресК.BackgroundImage = ControlElementImages.buttonSquareBlack_small;
+                КнопкаАдресК.Text = "К";
+            }
         }
 
-        private void Kontur_P3КнопкаАдресК_MouseUp(object sender, MouseEventArgs e)
-        {
-        }
-        #endregion
-
-        #region Подпись
-        private void Kontur_P3КнопкаПодпись1_MouseDown(object sender, MouseEventArgs e)
+        private void КнопкаПодпись1_MouseClick(object sender, MouseEventArgs e)
         {
             Kontur_P3Parameters.КнопкаПодпись1 = !Kontur_P3Parameters.КнопкаПодпись1;
+            if (Kontur_P3Parameters.КнопкаПодпись1)
+            {
+                КнопкаПодпись1.BackgroundImage = null;
+                КнопкаПодпись1.Text = "";
+            }
+            else
+            {
+                КнопкаПодпись1.BackgroundImage = ControlElementImages.buttonSquareRed_small;
+                КнопкаПодпись1.Text = "1";
+            }
         }
 
-        private void Kontur_P3КнопкаПодпись1_MouseUp(object sender, MouseEventArgs e)
-        {
-        }
-
-        private void Kontur_P3КнопкаПодпись2_MouseDown(object sender, MouseEventArgs e)
+        private void КнопкаПодпись2_MouseClick(object sender, MouseEventArgs e)
         {
             Kontur_P3Parameters.КнопкаПодпись2 = !Kontur_P3Parameters.КнопкаПодпись2;
+            if (Kontur_P3Parameters.КнопкаПодпись2)
+            {
+                КнопкаПодпись2.BackgroundImage = null;
+                КнопкаПодпись2.Text = "";
+            }
+            else
+            {
+                КнопкаПодпись2.BackgroundImage = ControlElementImages.buttonSquareRed_small;
+                КнопкаПодпись2.Text = "2";
+            }
         }
 
-        private void Kontur_P3КнопкаПодпись2_MouseUp(object sender, MouseEventArgs e)
-        {
-        }
-
-        private void Kontur_P3КнопкаПодпись3_MouseDown(object sender, MouseEventArgs e)
+        private void КнопкаПодпись3_MouseClick(object sender, MouseEventArgs e)
         {
             Kontur_P3Parameters.КнопкаПодпись3 = !Kontur_P3Parameters.КнопкаПодпись3;
+            if (Kontur_P3Parameters.КнопкаПодпись3)
+            {
+                КнопкаПодпись3.BackgroundImage = null;
+                КнопкаПодпись3.Text = "";
+            }
+            else
+            {
+                КнопкаПодпись3.BackgroundImage = ControlElementImages.buttonSquareRed_small;
+                КнопкаПодпись3.Text = "3";
+            }
         }
 
-        private void Kontur_P3КнопкаПодпись3_MouseUp(object sender, MouseEventArgs e)
-        {
-        }  
-        #endregion
-
-        #region Группа
         private void Kontur_P3КнопкаГруппа_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаГруппа.BackgroundImage = null;
-            Kontur_P3Parameters.ТекущаяГруппа++;
         }
 
         private void Kontur_P3КнопкаГруппа_MouseUp(object sender, MouseEventArgs e)
         {
             КнопкаГруппа.BackgroundImage = ControlElementImages.buttonSquareBlack_small;
+            Kontur_P3Parameters.ПоменятьГруппу();
         }
 
         private void Kontur_P3КнопкаОбщийС_MouseDown(object sender, MouseEventArgs e)
@@ -276,10 +296,9 @@ namespace R440O.R440OForms.Kontur_P3
         {
             КнопкаОбщийС.BackgroundImage = ControlElementImages.buttonSquareRed_small;
             КнопкаОбщийС.Text = "C";
-        } 
-        #endregion
+            Kontur_P3Parameters.СбросОбщий();
+        }
 
-        #region Передача
         private void Kontur_P3КнопкаВызов_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаВызов.BackgroundImage = null;
@@ -335,151 +354,146 @@ namespace R440O.R440OForms.Kontur_P3
         private void Kontur_P3КнопкаОтклЗС_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаОтклЗС.BackgroundImage = null;
-            Kontur_P3Parameters.ОтключитьЗвуковуюСигнализацию();
         }
 
         private void Kontur_P3КнопкаОтклЗС_MouseUp(object sender, MouseEventArgs e)
         {
             КнопкаОтклЗС.BackgroundImage = ControlElementImages.buttonSquareBlack_small;
-        } 
-        #endregion
-
-        #region от 0 до 9
+        }
         private void Kontur_P3Кнопка7_MouseDown(object sender, MouseEventArgs e)
         {
             Кнопка7.BackgroundImage = null;
             Кнопка7.Text = null;
-            Kontur_P3Parameters.НажатьКнопку(7);
         }
 
         private void Kontur_P3Кнопка7_MouseUp(object sender, MouseEventArgs e)
         {
             Кнопка7.BackgroundImage = ControlElementImages.buttonSquareBlack_small;
             Кнопка7.Text = " 7";
+            Kontur_P3Parameters.НажатаКнопка(7);
         }
 
         private void Kontur_P3Кнопка8_MouseDown(object sender, MouseEventArgs e)
         {
             Кнопка8.BackgroundImage = null;
             Кнопка8.Text = null;
-            Kontur_P3Parameters.НажатьКнопку(8);
         }
 
         private void Kontur_P3Кнопка8_MouseUp(object sender, MouseEventArgs e)
         {
             Кнопка8.BackgroundImage = ControlElementImages.buttonSquareBlack_small;
             Кнопка8.Text = " 8";
+            Kontur_P3Parameters.НажатаКнопка(8);
         }
 
         private void Kontur_P3Кнопка9_MouseDown(object sender, MouseEventArgs e)
         {
             Кнопка9.BackgroundImage = null;
             Кнопка9.Text = null;
-            Kontur_P3Parameters.НажатьКнопку(9);
         }
 
         private void Kontur_P3Кнопка9_MouseUp(object sender, MouseEventArgs e)
         {
             Кнопка9.BackgroundImage = ControlElementImages.buttonSquareBlack_small;
             Кнопка9.Text = " 9";
+            Kontur_P3Parameters.НажатаКнопка(9);
         }
 
         private void Kontur_P3Кнопка4_MouseDown(object sender, MouseEventArgs e)
         {
             Кнопка4.BackgroundImage = null;
             Кнопка4.Text = null;
-            Kontur_P3Parameters.НажатьКнопку(4);
         }
 
         private void Kontur_P3Кнопка4_MouseUp(object sender, MouseEventArgs e)
         {
             Кнопка4.BackgroundImage = ControlElementImages.buttonSquareBlack_small;
             Кнопка4.Text = " 4";
+            Kontur_P3Parameters.НажатаКнопка(4);
         }
 
         private void Kontur_P3Кнопка5_MouseDown(object sender, MouseEventArgs e)
         {
             Кнопка5.BackgroundImage = null;
             Кнопка5.Text = null;
-            Kontur_P3Parameters.НажатьКнопку(5);
         }
 
         private void Kontur_P3Кнопка5_MouseUp(object sender, MouseEventArgs e)
         {
             Кнопка5.BackgroundImage = ControlElementImages.buttonSquareBlack_small;
             Кнопка5.Text = " 5";
+            Kontur_P3Parameters.НажатаКнопка(5);
         }
 
         private void Kontur_P3Кнопка6_MouseDown(object sender, MouseEventArgs e)
         {
             Кнопка6.BackgroundImage = null;
             Кнопка6.Text = null;
-            Kontur_P3Parameters.НажатьКнопку(6);
         }
 
         private void Kontur_P3Кнопка6_MouseUp(object sender, MouseEventArgs e)
         {
             Кнопка6.BackgroundImage = ControlElementImages.buttonSquareBlack_small;
             Кнопка6.Text = " 6";
+            Kontur_P3Parameters.НажатаКнопка(6);
         }
 
         private void Kontur_P3Кнопка1_MouseDown(object sender, MouseEventArgs e)
         {
             Кнопка1.BackgroundImage = null;
             Кнопка1.Text = null;
-            Kontur_P3Parameters.НажатьКнопку(1);
         }
 
         private void Kontur_P3Кнопка1_MouseUp(object sender, MouseEventArgs e)
         {
             Кнопка1.BackgroundImage = ControlElementImages.buttonSquareBlack_small;
             Кнопка1.Text = " 1";
+            Kontur_P3Parameters.НажатаКнопка(1);
         }
 
         private void Kontur_P3Кнопка2_MouseDown(object sender, MouseEventArgs e)
         {
             Кнопка2.BackgroundImage = null;
             Кнопка2.Text = null;
-            Kontur_P3Parameters.НажатьКнопку(2);
         }
 
         private void Kontur_P3Кнопка2_MouseUp(object sender, MouseEventArgs e)
         {
             Кнопка2.BackgroundImage = ControlElementImages.buttonSquareBlack_small;
             Кнопка2.Text = " 2";
+            Kontur_P3Parameters.НажатаКнопка(2);
         }
 
         private void Kontur_P3Кнопка3_MouseDown(object sender, MouseEventArgs e)
         {
             Кнопка3.BackgroundImage = null;
             Кнопка3.Text = null;
-            Kontur_P3Parameters.НажатьКнопку(3);
         }
 
         private void Kontur_P3Кнопка3_MouseUp(object sender, MouseEventArgs e)
         {
             Кнопка3.BackgroundImage = ControlElementImages.buttonSquareBlack_small;
             Кнопка3.Text = " 3";
+            Kontur_P3Parameters.НажатаКнопка(3);
         }
 
         private void Kontur_P3Кнопка0_MouseDown(object sender, MouseEventArgs e)
         {
             Кнопка0.BackgroundImage = null;
             Кнопка0.Text = null;
-            Kontur_P3Parameters.НажатьКнопку(0);
         }
 
         private void Kontur_P3Кнопка0_MouseUp(object sender, MouseEventArgs e)
         {
             Кнопка0.BackgroundImage = ControlElementImages.buttonSquareBlack_small;
             Кнопка0.Text = " 0";
+            Kontur_P3Parameters.НажатаКнопка(0);
         }
 
         private void Kontur_P3КнопкаИнформКОН_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаИнформКОН.BackgroundImage = null;
             КнопкаИнформКОН.Text = null;
-            Kontur_P3Parameters.НажатьКнопку(-1);
         }
 
         private void Kontur_P3КнопкаИнформКОН_MouseUp(object sender, MouseEventArgs e)
@@ -498,81 +512,53 @@ namespace R440O.R440OForms.Kontur_P3
         {
             КнопкаИнформС.BackgroundImage = ControlElementImages.buttonSquareRed_small;
             КнопкаИнформС.Text = "С";
-        } 
+        }
         #endregion
 
-        #endregion
-
-        #region Обновление формы
-        private void InitializeButtons()
+        #region Тумблеры
+        private void ТумблерМткПУ_Click(object sender, System.EventArgs e)
         {
-            if (Kontur_P3Parameters.КнопкаАдресК)
-            {
-                КнопкаАдресК.BackgroundImage = null;
-                КнопкаАдресК.Text = null;
-            }
-            else
-            {
-                КнопкаАдресК.BackgroundImage = ControlElementImages.buttonSquareBlack_small;
-                КнопкаАдресК.Text = "К";
-            }
-            if (Kontur_P3Parameters.КнопкаПодпись1)
-            {
-                КнопкаПодпись1.BackgroundImage = null;
-                КнопкаПодпись1.Text = null;
-            }
-            else
-            {
-
-                КнопкаПодпись1.BackgroundImage = ControlElementImages.buttonSquareRed_small;
-                КнопкаПодпись1.Text = "1";
-            }
-            if (Kontur_P3Parameters.КнопкаПодпись2)
-            {
-                КнопкаПодпись2.BackgroundImage = null;
-                КнопкаПодпись2.Text = null;
-            }
-            else
-            {
-
-                КнопкаПодпись2.BackgroundImage = ControlElementImages.buttonSquareRed_small;
-                КнопкаПодпись2.Text = "2";
-            }
-            if (Kontur_P3Parameters.КнопкаПодпись3)
-            {
-                КнопкаПодпись3.BackgroundImage = null;
-                КнопкаПодпись3.Text = null;
-            }
-            else
-            {
-
-                КнопкаПодпись3.BackgroundImage = ControlElementImages.buttonSquareRed_small;
-                КнопкаПодпись3.Text = "3";
-            }
-        }
-
-        private void InitializeToggles()
-        {
-            var angle = (int)Kontur_P3Parameters.ПереключательПриоритет * 36 - 162;
-            ПереключательПриоритет.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
-
-            angle = (int)Kontur_P3Parameters.ПереключательКонтроль * 36 - 180;
-            ПереключательКонтроль.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
-
-        }
-
-        private void InitializeTumblers()
-        {
-            this.ТумблерКонтроль.BackgroundImage = Kontur_P3Parameters.ТумблерКонтроль == EТумблерКонтроль.КОНТРОЛЬ_1
-               ? ControlElementImages.tumblerType4Down
-               : ControlElementImages.tumblerType4Up;
-
+            Kontur_P3Parameters.ТумблерМткПУ = Kontur_P3Parameters.ТумблерМткПУ == EТумблерМткПУ.МТК
+                ? EТумблерМткПУ.ПУ
+                : EТумблерМткПУ.МТК;
             this.ТумблерМткПУ.BackgroundImage = Kontur_P3Parameters.ТумблерМткПУ == EТумблерМткПУ.МТК
                 ? ControlElementImages.tumblerType4Down
                 : ControlElementImages.tumblerType4Up;
+        }
+        #endregion
+        #endregion
 
+        #region Обновление формы
+        public void RefreshElements()
+        {
+            #region КП7
+            #region Тумблеры
+            this.ТумблерСеть.BackgroundImage = Kontur_P3Parameters.ТумблерСеть == EТумблерСеть.ОТКЛ
+               ? ControlElementImages.tumblerType4Down
+               : ControlElementImages.tumblerType4Up;
+            #endregion
+
+            #region Индикатор Сеть
+            var angle = Kontur_P3Parameters.ИндикаторСеть * 1.15F;
+            ИндикаторСеть.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
+            #endregion
+
+            #region Переключатели
+            angle = (int)Kontur_P3Parameters.ПереключательКонтроль * 36 - 180;
+            ПереключательКонтроль.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
+            #endregion
+
+            #region Лампочки
+            ЛампочкаСеть.BackgroundImage = Kontur_P3Parameters.ЛампочкаСеть
+               ? ControlElementImages.lampType9OnGreen
+               : null;
+            #endregion
+            #endregion
+
+            #region КП6
+            #region Тумблеры
             this.ТумблерДокументирование.BackgroundImage = Kontur_P3Parameters.ТумблерДокументирование == EТумблерДокументирование.ОТКЛ
                ? ControlElementImages.tumblerType4Down
                : ControlElementImages.tumblerType4Up;
@@ -584,38 +570,74 @@ namespace R440O.R440OForms.Kontur_P3
             this.ТумблерРежим.BackgroundImage = Kontur_P3Parameters.ТумблерРежим == EТумблерРежим.РЕЖИМ_1
                ? ControlElementImages.tumblerType4Down
                : ControlElementImages.tumblerType4Up;
+            #endregion
+            #endregion
 
-            this.ТумблерСеть.BackgroundImage = Kontur_P3Parameters.ТумблерСеть == EТумблерСеть.ОТКЛ
-               ? ControlElementImages.tumblerType4Down
-               : ControlElementImages.tumblerType4Up;
-        }
+            #region КП5
+            #region Тумблеры
+            this.ТумблерМткПУ.BackgroundImage = Kontur_P3Parameters.ТумблерМткПУ == EТумблерМткПУ.МТК
+                ? ControlElementImages.tumblerType4Down
+                : ControlElementImages.tumblerType4Up;
+            #endregion
 
-        public void RefreshElements()
-        {
-            InitializeButtons();
-            InitializeToggles();
-            InitializeTumblers();
-            
-            var angle = Kontur_P3Parameters.ИндикаторСеть * 1.15F;
-            ИндикаторСеть.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
+            #region Кнопки
+            if (Kontur_P3Parameters.КнопкаАдресУСС)
+            {
+                КнопкаАдресУСС.BackgroundImage = null;
+                КнопкаАдресУСС.Text = "";
+            }
+            else
+            {
+                КнопкаАдресУСС.BackgroundImage = ControlElementImages.buttonSquareBlack_small;
+                КнопкаАдресУСС.Text = "УСС";
+            }
 
+            if (Kontur_P3Parameters.КнопкаАдресК)
+            {
+                КнопкаАдресК.BackgroundImage = null;
+                КнопкаАдресК.Text = "";
+            }
+            else
+            {
+                КнопкаАдресК.BackgroundImage = ControlElementImages.buttonSquareBlack_small;
+                КнопкаАдресК.Text = "К";
+            }
 
-            #region Переключатели
-            angle = (int)Kontur_P3Parameters.ПереключательПриоритет * 36 - 162;
+            if (Kontur_P3Parameters.КнопкаПодпись1)
+            {
+                КнопкаПодпись1.BackgroundImage = null;
+                КнопкаПодпись1.Text = "";
+            }
+            else
+            {
+                КнопкаПодпись1.BackgroundImage = ControlElementImages.buttonSquareRed_small;
+                КнопкаПодпись1.Text = "1";
+            }
 
-            ПереключательПриоритет.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
+            if (Kontur_P3Parameters.КнопкаПодпись2)
+            {
+                КнопкаПодпись2.BackgroundImage = null;
+                КнопкаПодпись2.Text = "";
+            }
+            else
+            {
+                КнопкаПодпись2.BackgroundImage = ControlElementImages.buttonSquareRed_small;
+                КнопкаПодпись2.Text = "2";
+            }
 
-            angle = (int)Kontur_P3Parameters.ПереключательКонтроль * 36 - 180;
-            ПереключательКонтроль.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle); 
+            if (Kontur_P3Parameters.КнопкаПодпись3)
+            {
+                КнопкаПодпись3.BackgroundImage = null;
+                КнопкаПодпись3.Text = "";
+            }
+            else
+            {
+                КнопкаПодпись3.BackgroundImage = ControlElementImages.buttonSquareRed_small;
+                КнопкаПодпись3.Text = "3";
+            }
             #endregion
 
             #region Лампочки
-            ЛампочкаСеть.BackgroundImage = Kontur_P3Parameters.ЛампочкаСеть
-                ? ControlElementImages.lampType9OnGreen
-                : null;
             ЛампочкаСбойПодписи.BackgroundImage = Kontur_P3Parameters.ЛампочкаСбойПодписи
                 ? ControlElementImages.lampType5OnRed
                 : null;
@@ -629,7 +651,23 @@ namespace R440O.R440OForms.Kontur_P3
             ТаблоАдрес2.Text = Kontur_P3Parameters.ТаблоАдрес2;
             ТаблоГруппа.Text = Kontur_P3Parameters.ТаблоГруппа;
             ТаблоИнформация.Text = Kontur_P3Parameters.ТаблоИнформация;
+            #endregion
+            #endregion
 
+            #region КП3
+            #region Переключатели
+            angle = (int)Kontur_P3Parameters.ПереключательПриоритет * 36 - 162;
+            ПереключательПриоритет.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
+            #endregion
+            #endregion
+
+            #region КП2
+            #region Тумблеры
+            this.ТумблерКонтроль.BackgroundImage = Kontur_P3Parameters.ТумблерКонтроль == EТумблерКонтроль.КОНТРОЛЬ_1
+               ? ControlElementImages.tumblerType4Down
+               : ControlElementImages.tumblerType4Up;
+            #endregion
             #endregion
         }
         #endregion

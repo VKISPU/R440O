@@ -71,6 +71,7 @@
     <Compile Include="R440OForms\Kontur_P3\Параметры\КП4.cs" />
     <Compile Include="R440OForms\Kontur_P3\Параметры\КП5.cs" />
     <Compile Include="R440OForms\Kontur_P3\Параметры\КП6.cs" />
+    <Compile Include="R440OForms\Kontur_P3\Параметры\Общие.cs" />
     <Compile Include="ThirdParty\EasyTimer.cs" />
     <Compile Include="СостоянияЭлементов\Контур_П.cs" />
     <Compile Include="СостоянияЭлементов\БМА_М.cs" />

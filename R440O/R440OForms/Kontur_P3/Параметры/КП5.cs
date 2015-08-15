@@ -11,16 +11,9 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
 
         #region Лампочки
         public static bool ЛампочкаКП5Прием = false;
-
-        public static bool ЛампочкаНеиспр
-        {
-            get { return (КнопкаПодпись1 || КнопкаПодпись2 || КнопкаПодпись3) && ЛампочкаСеть && ЗвуковаяСигнализация; }
-        }
+        public static bool ЛампочкаНеиспр { get; set; }
         public static bool ЛампочкаКонтроль = false;
-        public static bool ЛампочкаСбойПодписи
-        {
-            get { return (КнопкаПодпись1 || КнопкаПодпись2 || КнопкаПодпись3) && ЛампочкаСеть && ЗвуковаяСигнализация; }
-        }
+        public static bool ЛампочкаСбойПодписи { get; set; }
         public static bool ЛампочкаПередача = false;
         public static bool ЛампочкаОтбой = false;
         public static bool ЛампочкаИнформПринята = false;
@@ -34,223 +27,204 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
             set
             {
                 _ТумблерМткПУ = value;
-                if (RefreshForm != null) RefreshForm();
+                Refresh();
             }
         }
         #endregion
 
         #region Кнопки
-        private static bool _кнопкаПодпись1;
-        private static bool _кнопкаПодпись2;
-        private static bool _кнопкаПодпись3;
-        private static bool _кнопкаАдресК;
+        private static bool _КнопкаАдресУСС;
+        public static bool КнопкаАдресУСС
+        {
+            get { return _КнопкаАдресУСС; }
+            set
+            {
+                _КнопкаАдресУСС = value;
+                Refresh();
+            }
+        }
 
+        private static bool _КнопкаАдресК;
         public static bool КнопкаАдресК
         {
-            get { return _кнопкаАдресК; }
+            get { return _КнопкаАдресК; }
             set
             {
-                _кнопкаАдресК = value;
-                if (RefreshForm != null) RefreshForm();
+                _КнопкаАдресК = value;
+                Refresh();
             }
         }
 
+        private static bool _КнопкаПодпись1;
         public static bool КнопкаПодпись1
         {
-            get { return _кнопкаПодпись1; }
+            get { return _КнопкаПодпись1; }
             set
             {
-                _кнопкаПодпись1 = value;
-                ЗвуковаяСигнализация = true;
-                if (RefreshForm != null) RefreshForm();
+                _КнопкаПодпись1 = value;
+                Refresh();
             }
         }
 
+        private static bool _КнопкаПодпись2;
         public static bool КнопкаПодпись2
         {
-            get { return _кнопкаПодпись2; }
+            get { return _КнопкаПодпись2; }
             set
             {
-                _кнопкаПодпись2 = value;
-                ЗвуковаяСигнализация = true;
-                if (RefreshForm != null) RefreshForm();
+                _КнопкаПодпись2 = value;
+                Refresh();
             }
         }
 
+        private static bool _КнопкаПодпись3;
         public static bool КнопкаПодпись3
         {
-            get { return _кнопкаПодпись3; }
+            get { return _КнопкаПодпись3; }
             set
             {
-                _кнопкаПодпись3 = value;
-                ЗвуковаяСигнализация = true;
-                if (RefreshForm != null) RefreshForm();
+                _КнопкаПодпись3 = value;
+                Refresh();
             }
         }
 
+        public static bool КнопкаГруппа { get; set; }
+        public static bool КнопкаОбщийС { get; set; }
+        public static bool КнопкаОтклЗС { get; set; }
+        public static bool КнопкаВызов { get; set; }
+        public static bool КнопкаОтбой { get; set; }
+        public static bool КнопкаИнформ { get; set; }
+        public static bool КнопкаНаборКК { get; set; }
+        public static bool КнопкаКонтрольЗанятости { get; set; }
+        public static bool КнопкаИнформКОН { get; set; }
+        public static bool КнопкаИнформС { get; set; }
         #endregion
 
-        #region Активные действия кнопок
+        #region Значения групп, адресов, информации
+        private static string ЗначениеАдресК = "000";
+        private static string ЗначениеПодпись1 = "000";
+        private static string ЗначениеПодпись2 = "000";
+        private static string ЗначениеПодпись3 = "000";
 
-        public static void ОтключитьЗвуковуюСигнализацию()
-        {
-            ЗвуковаяСигнализация = false;
-            if (RefreshForm != null) RefreshForm();
-        }
+        private static int ИндексГруппы = -1;
+        private static string ЗначениеИндексГруппы = "0";
+        private static string[] ЗначениеГруппа = { "000", "000", "000", "000", "000", "000", "000", "000", "^00" };
 
-        /// <summary>
-        /// Нажатие клавиши с номером
-        /// </summary>
-        /// <param name="number"></param>
-        public static void НажатьКнопку(int number)
-        {
-            if (number != -1)
-            {
-                if (КнопкаПодпись1)
-                {
-                    if (_подпись1[0] == 0) _подпись1[0] = number;
-                    else if (_подпись1[1] == 0) _подпись1[1] = number;
-                    else if (_подпись1[2] == 0) _подпись1[2] = number;
-                }
-                if (КнопкаПодпись2)
-                {
-                    if (_подпись2[0] == 0) _подпись2[0] = number;
-                    else if (_подпись2[1] == 0) _подпись2[1] = number;
-                    else if (_подпись2[2] == 0) _подпись2[2] = number;
-                }
-                if (КнопкаПодпись3)
-                {
-                    if (_подпись3[0] == 0) _подпись3[0] = number;
-                    else if (_подпись3[1] == 0) _подпись3[1] = number;
-                    else if (_подпись3[2] == 0) _подпись3[2] = number;
-                }
-
-                if (КнопкаАдресК)
-                {
-                    if (_адрес[0] == 0) _адрес[0] = number;
-                    else if (_адрес[1] == 0) _адрес[1] = number;
-                    else if (_адрес[2] == 0) _адрес[2] = number;
-                }
-            }
-
-            if (!КнопкаПодпись1 && !КнопкаПодпись2 && !КнопкаПодпись3 && !КнопкаАдресК)
-            {
-                if (_группа[ТекущаяГруппа][0] == 0) _группа[ТекущаяГруппа][0] = number;
-                else if (_группа[ТекущаяГруппа][1] == 0) _группа[ТекущаяГруппа][1] = number;
-                else if (_группа[ТекущаяГруппа][2] == 0) _группа[ТекущаяГруппа][2] = number;
-            }
-            
-            if (RefreshForm != null) RefreshForm();
-        }
-        #endregion
-
-        #region Подписи и Адреса
-
-        private static int[] _подпись1 = {0, 0, 0};
-        private static int[] _подпись2 = { 0, 0, 0 };
-        private static int[] _подпись3 = { 0, 0, 0 };
-        private static int[] _адрес = { 0, 0, 0 };
-
-        public static string Подпись1
-        {
-            get { return _подпись1[2] + " " + _подпись1[1] + " " + _подпись1[0]; }
-        }
-        public static string Подпись2
-        {
-            get { return _подпись2[2] + " " + _подпись2[1] + " " + _подпись2[0]; }
-        }
-        public static string Подпись3
-        {
-            get { return _подпись3[2] + " " + _подпись3[1] + " " + _подпись3[0]; }
-        }
-        public static string Адрес
-        {
-            get { return _адрес[2] + " " + _адрес[1] + " " + _адрес[0]; }
-        }
-
-        #endregion
-
-        #region Группа
-
-        public static int ТекущаяГруппа
-        {
-            get { return _текущаяГруппа; }
-            set
-            {
-                if (value < 10 && ЛампочкаСеть)
-                _текущаяГруппа = value;
-                if (RefreshForm != null) RefreshForm();
-
-            }
-        }
-
-        private static int _текущаяГруппа;
-
-        private static int[][] _группа =
-        {
-            new int[] {},
-            new [] { 0, 0, 0 }, //1
-            new [] { 0, 0, 0 }, //2
-            new [] { 0, 0, 0 }, //3
-            new [] { 0, 0, 0 }, //4
-            new [] { 0, 0, 0 }, //5
-            new [] { 0, 0, 0 }, //6
-            new [] { 0, 0, 0 }, //7
-            new [] { 0, 0, 0 }, //8
-            new [] { 0, 0, -1} //9
-        };
-        
-        private static string Группа
-        {
-            get
-            {
-                if (_группа[ТекущаяГруппа].Contains(-1))
-                {
-                    return "^ 0 0 "; }
-                return _группа[ТекущаяГруппа][2] + " " + _группа[ТекущаяГруппа][1] + " " + _группа[ТекущаяГруппа][0];
-            }
-        }
-
+        private static string ЗначениеИнформация = "";
         #endregion
 
         #region Табло
+        private static string _ТаблоАдрес1 = "";
+        public static string ТаблоАдрес1
+        {
+            get
+            {
+                return _ТаблоАдрес1;
+            }
+        }
 
-        public static string ТаблоАдрес1 { get { return ""; } }
-
+        private static string _ТаблоАдрес2 = "";
         public static string ТаблоАдрес2
         {
             get
             {
-                if (ЛампочкаСеть)
-                {
-                    if (КнопкаПодпись1) return Подпись1;
-                    if (КнопкаПодпись2) return Подпись2;
-                    if (КнопкаПодпись3) return Подпись3;
-                    if (КнопкаАдресК) return Адрес;
-                }
-                return "";
-                
+                return _ТаблоАдрес2;
             }
         }
 
+        private static string _ТаблоГруппа = "";
         public static string ТаблоГруппа
         {
             get
             {
-                if (!ЛампочкаСеть) return "";
-                return ТекущаяГруппа + string.Empty;
+                return _ТаблоГруппа;
             }
         }
 
+        private static string _ТаблоИнформация = "";
         public static string ТаблоИнформация
         {
             get
             {
-                if (!ЛампочкаСеть) return "";
-                return ТекущаяГруппа == 0 ? "" : Группа + string.Empty;
+                return _ТаблоИнформация;
+            }
+        }
+        #endregion
+
+        public static void НажатаКнопка(int number)
+        {
+            if (ЛампочкаСеть)
+            {
+                if (_КнопкаАдресК || _КнопкаПодпись1 || _КнопкаПодпись2 || _КнопкаПодпись3)
+                {
+                    if (_КнопкаАдресК)
+                    {
+                        ДобавитьЧислоВПоследнийРегистр(number, ref ЗначениеАдресК);
+                        _ТаблоАдрес2 = ЗначениеАдресК;
+                    }
+                    if (_КнопкаПодпись1)
+                    {
+                        ДобавитьЧислоВПоследнийРегистр(number, ref ЗначениеПодпись1);
+                        _ТаблоАдрес2 = ЗначениеПодпись1;
+                    }
+                    if (_КнопкаПодпись2)
+                    {
+                        ДобавитьЧислоВПоследнийРегистр(number, ref ЗначениеПодпись2);
+                        _ТаблоАдрес2 = ЗначениеПодпись2;
+                    }
+                    if (_КнопкаПодпись3)
+                    {
+                        ДобавитьЧислоВПоследнийРегистр(number, ref ЗначениеПодпись3);
+                        _ТаблоАдрес2 = ЗначениеПодпись3;
+                    }
+                }
+                else
+                {
+                    if (ИндексГруппы > -1 && ИндексГруппы < 8)
+                    {
+                        ДобавитьЧислоВПоследнийРегистр(number, ref ЗначениеГруппа[ИндексГруппы]);
+                        ЗначениеИнформация = ЗначениеГруппа[ИндексГруппы];
+                        _ТаблоИнформация = ЗначениеИнформация;
+                    }
+                }
+            }
+            Refresh();
+        }
+
+        public static void ПоменятьГруппу()
+        {
+            if (ЛампочкаСеть)
+            {
+                if (!(_КнопкаАдресК || _КнопкаПодпись1 || _КнопкаПодпись2 || _КнопкаПодпись3))
+                {
+                    ИндексГруппы++;
+                    if (ИндексГруппы > 8)
+                        ИндексГруппы = 0;
+                    ЗначениеИндексГруппы = Convert.ToString(ИндексГруппы + 1);
+                    ЗначениеИнформация = ЗначениеГруппа[ИндексГруппы];
+                    Refresh();
+                }
             }
         }
 
-        #endregion
+        private static void ДобавитьЧислоВПоследнийРегистр(int number, ref string str)
+        {
+            str = Convert.ToString(str[1]) + Convert.ToString(str[2]) + Convert.ToString(number);
+        }
+
+        public static void СбросОбщий()
+        {
+            ЗначениеАдресК = "000";
+            ЗначениеПодпись1 = "000";
+            ЗначениеПодпись2 = "000";
+            ЗначениеПодпись3 = "000";
+
+            ЗначениеИндексГруппы = "0";
+            ИндексГруппы = -1;
+
+            ЗначениеИнформация = "";
+            ЗначениеГруппа = new string[] { "000", "000", "000", "000", "000", "000", "000", "000", "^00" };
+            Refresh();
+        }
     }
 }

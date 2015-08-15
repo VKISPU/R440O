@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.Kontur_P3Panel = new System.Windows.Forms.Panel();
+            this.ИндикаторСеть = new System.Windows.Forms.PictureBox();
             this.ТаблоИнформация = new System.Windows.Forms.Button();
             this.ТаблоГруппа = new System.Windows.Forms.Button();
             this.ТаблоАдрес2 = new System.Windows.Forms.Button();
@@ -105,8 +106,8 @@
             this.ТумблерКонтроль = new System.Windows.Forms.Button();
             this.ПереключательПриоритет = new System.Windows.Forms.Button();
             this.ПереключательКонтроль = new System.Windows.Forms.Button();
-            this.ИндикаторСеть = new System.Windows.Forms.PictureBox();
             this.Kontur_P3Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторСеть)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПР2_ЗА)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСеть)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПР1_ЗА)).BeginInit();
@@ -137,7 +138,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКП1Канал11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКП1Канал10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКонтрольПодписи)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторСеть)).BeginInit();
             this.SuspendLayout();
             // 
             // Kontur_P3Panel
@@ -225,6 +225,16 @@
             this.Kontur_P3Panel.Name = "Kontur_P3Panel";
             this.Kontur_P3Panel.Size = new System.Drawing.Size(1109, 409);
             this.Kontur_P3Panel.TabIndex = 1;
+            // 
+            // ИндикаторСеть
+            // 
+            this.ИндикаторСеть.BackColor = System.Drawing.Color.Transparent;
+            this.ИндикаторСеть.BackgroundImage = global::R440O.ControlElementImages.arrow;
+            this.ИндикаторСеть.Location = new System.Drawing.Point(924, 207);
+            this.ИндикаторСеть.Name = "ИндикаторСеть";
+            this.ИндикаторСеть.Size = new System.Drawing.Size(99, 25);
+            this.ИндикаторСеть.TabIndex = 92;
+            this.ИндикаторСеть.TabStop = false;
             // 
             // ТаблоИнформация
             // 
@@ -927,8 +937,7 @@
             this.КнопкаАдресК.TabIndex = 44;
             this.КнопкаАдресК.Text = "К";
             this.КнопкаАдресК.UseVisualStyleBackColor = false;
-            this.КнопкаАдресК.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаАдресК_MouseDown);
-            this.КнопкаАдресК.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаАдресК_MouseUp);
+            this.КнопкаАдресК.MouseClick += new System.Windows.Forms.MouseEventHandler(this.КнопкаАдресК_MouseClick);
             // 
             // КнопкаАдресУСС
             // 
@@ -948,8 +957,7 @@
             this.КнопкаАдресУСС.Text = "УСС";
             this.КнопкаАдресУСС.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.КнопкаАдресУСС.UseVisualStyleBackColor = false;
-            this.КнопкаАдресУСС.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаАдресУСС_MouseDown);
-            this.КнопкаАдресУСС.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаАдресУСС_MouseUp);
+            this.КнопкаАдресУСС.MouseClick += new System.Windows.Forms.MouseEventHandler(this.КнопкаАдресУСС_MouseClick);
             // 
             // КнопкаНаборКК
             // 
@@ -1050,8 +1058,7 @@
             this.КнопкаПодпись3.TabIndex = 38;
             this.КнопкаПодпись3.Text = "3";
             this.КнопкаПодпись3.UseVisualStyleBackColor = false;
-            this.КнопкаПодпись3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаПодпись3_MouseDown);
-            this.КнопкаПодпись3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаПодпись3_MouseUp);
+            this.КнопкаПодпись3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.КнопкаПодпись3_MouseClick);
             // 
             // КнопкаПодпись2
             // 
@@ -1070,8 +1077,7 @@
             this.КнопкаПодпись2.TabIndex = 37;
             this.КнопкаПодпись2.Text = "2";
             this.КнопкаПодпись2.UseVisualStyleBackColor = false;
-            this.КнопкаПодпись2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаПодпись2_MouseDown);
-            this.КнопкаПодпись2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаПодпись2_MouseUp);
+            this.КнопкаПодпись2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.КнопкаПодпись2_MouseClick);
             // 
             // КнопкаПодпись1
             // 
@@ -1090,8 +1096,7 @@
             this.КнопкаПодпись1.TabIndex = 36;
             this.КнопкаПодпись1.Text = "1";
             this.КнопкаПодпись1.UseVisualStyleBackColor = false;
-            this.КнопкаПодпись1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаПодпись1_MouseDown);
-            this.КнопкаПодпись1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаПодпись1_MouseUp);
+            this.КнопкаПодпись1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.КнопкаПодпись1_MouseClick);
             // 
             // КнопкаПуск
             // 
@@ -1260,7 +1265,7 @@
             this.ТумблерСеть.Size = new System.Drawing.Size(43, 56);
             this.ТумблерСеть.TabIndex = 26;
             this.ТумблерСеть.UseVisualStyleBackColor = false;
-            this.ТумблерСеть.Click += new System.EventHandler(this.Kontur_P3ТумблерСеть_Click);
+            this.ТумблерСеть.Click += new System.EventHandler(this.ТумблерСеть_Click);
             // 
             // ТумблерДокументирование
             // 
@@ -1324,7 +1329,7 @@
             this.ТумблерМткПУ.Size = new System.Drawing.Size(43, 56);
             this.ТумблерМткПУ.TabIndex = 22;
             this.ТумблерМткПУ.UseVisualStyleBackColor = false;
-            this.ТумблерМткПУ.Click += new System.EventHandler(this.Kontur_P3ТумблерМткПУ_Click);
+            this.ТумблерМткПУ.Click += new System.EventHandler(this.ТумблерМткПУ_Click);
             // 
             // ТумблерКонтроль
             // 
@@ -1372,17 +1377,7 @@
             this.ПереключательКонтроль.Size = new System.Drawing.Size(57, 65);
             this.ПереключательКонтроль.TabIndex = 3;
             this.ПереключательКонтроль.UseVisualStyleBackColor = false;
-            this.ПереключательКонтроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3ПереключательКонтроль_MouseUp);
-            // 
-            // ИндикаторСеть
-            // 
-            this.ИндикаторСеть.BackColor = System.Drawing.Color.Transparent;
-            this.ИндикаторСеть.BackgroundImage = global::R440O.ControlElementImages.arrow;
-            this.ИндикаторСеть.Location = new System.Drawing.Point(924, 207);
-            this.ИндикаторСеть.Name = "ИндикаторСеть";
-            this.ИндикаторСеть.Size = new System.Drawing.Size(99, 25);
-            this.ИндикаторСеть.TabIndex = 92;
-            this.ИндикаторСеть.TabStop = false;
+            this.ПереключательКонтроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательКонтроль_MouseUp);
             // 
             // Kontur_P3Form
             // 
@@ -1396,6 +1391,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Контур-П";
             this.Kontur_P3Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторСеть)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПР2_ЗА)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСеть)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПР1_ЗА)).EndInit();
@@ -1426,7 +1422,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКП1Канал11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКП1Канал10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКонтрольПодписи)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторСеть)).EndInit();
             this.ResumeLayout(false);
 
         }

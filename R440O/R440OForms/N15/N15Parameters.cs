@@ -612,6 +612,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _лампочкаАфсс = value;
+                Kontur_P3Parameters.ResetToDefaultsWhenTurnOnOff();
                 Kontur_P3Parameters.Refresh();
             }
         }
