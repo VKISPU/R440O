@@ -1,13 +1,11 @@
-﻿using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using R440O.R440OForms.A205M_1;
+﻿using R440O.R440OForms.A205M_1;
 using R440O.R440OForms.A205M_2;
 using R440O.R440OForms.N15;
 using R440O.СостоянияЭлементов.Н18;
 
 namespace R440O.R440OForms.N18_M
 {
-    class N18_MParameters : INotifyPropertyChanged
+    class N18_MParameters
     {
         #region Лампочки
         //Лампочки
@@ -288,7 +286,5 @@ namespace R440O.R440OForms.N18_M
             var handler = ParameterChanged;
             if (handler != null) handler();
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
     }
 }
