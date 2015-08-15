@@ -15,9 +15,9 @@
         public VoltageStabilizerForm()
         {
             InitializeComponent();
-            VoltageStabilizerParameters.RefreshForm += RefreshElements;
+            VoltageStabilizerParameters.RefreshForm += RefreshFormElements;
             VoltageStabilizerParameters.ОператорСтанцииПоражёнТоком += ВыводСообщенияОператорСтанцииПоражёнТоком;
-            RefreshElements();
+            RefreshFormElements();
         }
 
         private void ВыводСообщенияОператорСтанцииПоражёнТоком()
@@ -76,7 +76,7 @@
 
         #endregion
 
-        public void RefreshElements()
+        public void RefreshFormElements()
         {
             switch (VoltageStabilizerParameters.КабельВход)
             {

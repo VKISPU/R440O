@@ -2,6 +2,9 @@
 {
     public interface IRefreshableForm
     {
-        void RefreshElements();
+        /// <summary>
+        /// Обновление состояния элемнтов, отображаемых на форме.
+        /// </summary>
+        void RefreshFormElements();
     }
 }

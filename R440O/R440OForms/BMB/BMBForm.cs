@@ -27,8 +27,8 @@ namespace R440O.R440OForms.BMB
         public BMBForm()
         {
             InitializeComponent();
-            BMBParameters.RefreshForm += RefreshElements;
-            RefreshElements();
+            BMBParameters.RefreshForm += RefreshFormElements;
+            RefreshFormElements();
         }
 
         #region Переключатели
@@ -65,7 +65,7 @@ namespace R440O.R440OForms.BMB
 
         private SoundPlayer _player = new SoundPlayer(Directory.GetCurrentDirectory() + "\\Resources\\bmb.wav");
 
-        public void RefreshElements()
+        public void RefreshFormElements()
         {
             InitializeButtons();
             InitializeToggles();
@@ -241,7 +241,7 @@ namespace R440O.R440OForms.BMB
         private void КнопкаПередачаКоманды_MouseUp(object sender, MouseEventArgs e)
         {
             BMBParameters.КнопкаПередачаКоманды = Кнопка.Отжата;
-            RefreshElements();
+            RefreshFormElements();
         }
         #endregion
     }

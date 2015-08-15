@@ -228,7 +228,7 @@ namespace R440O.R440OForms.A205M_1
 
         public static void ResetParameters()
         {
-            ЛампочкаНормРаб = NKN_1Parameters.ЛампочкиФаз[0] && (N18_MParameters.N18MПереключательВходК121 == 1);
+            ЛампочкаНормРаб = NKN_1Parameters.ЛампочкиФаз[0] && (N18_MParameters.ПереключательВходК121 == 1);
         }
 
         /// <summary>

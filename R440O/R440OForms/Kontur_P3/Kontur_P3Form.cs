@@ -23,8 +23,8 @@ namespace R440O.R440OForms.Kontur_P3
         public Kontur_P3Form()
         {
             this.InitializeComponent();
-            Kontur_P3Parameters.RefreshForm += RefreshElements;
-            RefreshElements();
+            Kontur_P3Parameters.RefreshForm += RefreshFormElements;
+            RefreshFormElements();
         }
 
         #region Переключатели
@@ -529,7 +529,7 @@ namespace R440O.R440OForms.Kontur_P3
         #endregion
 
         #region Обновление формы
-        public void RefreshElements()
+        public void RefreshFormElements()
         {
             #region КП7
             #region Тумблеры

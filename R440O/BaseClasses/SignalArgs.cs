@@ -31,5 +31,10 @@ namespace R440O.BaseClasses
         /// Уровень передачи сигнала.
         /// </summary>
         public double Level;
+
+        /// <summary>
+        /// Определяет, передаётся ли информация.
+        /// </summary>
+        public bool Information;
     }
 }

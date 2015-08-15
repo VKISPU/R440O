@@ -1,10 +1,13 @@
-﻿using R440O.R440OForms.A205M_1;
+﻿using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using R440O.R440OForms.A205M_1;
 using R440O.R440OForms.A205M_2;
 using R440O.R440OForms.N15;
+using R440O.СостоянияЭлементов.Н18;
 
 namespace R440O.R440OForms.N18_M
 {
-    class N18_MParameters
+    class N18_MParameters : INotifyPropertyChanged
     {
         #region Лампочки
         //Лампочки
@@ -21,301 +24,271 @@ namespace R440O.R440OForms.N18_M
         #endregion
 
         #region Переключатели
-        //Переключатели
 
-        #region N18_MПереключательВходБ22
+        #region Двухпозиционные
+
+        private static int _переключательВходБ22 = 1;
+       
         /// <summary>
-        /// Положение переключателя Выход1РН
+        /// 1 - б1-1,
+        /// 2 - даб-5
         /// </summary>
-        private static int _N18_MПереключательВходБ22 = 1;
-
-        public static int N18_MПереключательВходБ22
+        public static int ПереключательВходБ22
         {
-            get { return _N18_MПереключательВходБ22; }
+            get { return _переключательВходБ22; }
             set
             {
-                if (value > 0 && value < 3) _N18_MПереключательВходБ22 = value;
+                if (value > 0 && value < 3) _переключательВходБ22 = value;
+                OnParameterChanged();
             }
         }
 
-        /// <summary>
-        /// Названия положений переключателя Выход1РН
-        /// </summary>
-        private static string[] N18_MПоложенияПереключательВходБ22 = {
-            "б1-1",
-            "даб-5"
-        };
-        #endregion
+        private static int _переключательВыход1РН = 1;
 
-        #region N18_MПереключательВыход1РН
         /// <summary>
-        /// Положение переключателя Выход1РН
+        /// 1 - б1-1,
+        /// 2 - даб-5
         /// </summary>
-        private static int _N18_MПереключательВыход1РН = 1;
-
-        public static int N18_MПереключательВыход1РН
+        public static int ПереключательВыход1РН
         {
-            get { return _N18_MПереключательВыход1РН; }
+            get { return _переключательВыход1РН; }
             set
             {
-                if (value > 0 && value < 3) _N18_MПереключательВыход1РН = value;
+                if (value > 0 && value < 3) _переключательВыход1РН = value;
+                OnParameterChanged();
             }
         }
 
-        /// <summary>
-        /// Названия положений переключателя Выход1РН
-        /// </summary>
-        private static string[] N18_MПоложенияПереключательВыход1РН = {
-            "б1-1",
-            "даб-5"
-        };
-        #endregion
+        private static int _переключательВыход2РН = 1;
 
-        #region N18_MПереключательВыход2РН
         /// <summary>
-        /// Положение переключателя Выход2РН
+        /// 1 - б1-2,
+        /// 2 - даб-5
         /// </summary>
-        private static int _N18_MПереключательВыход2РН = 1;
-
-        public static int N18_MПереключательВыход2РН
+        public static int ПереключательВыход2РН
         {
-            get { return _N18_MПереключательВыход2РН; }
+            get { return _переключательВыход2РН; }
             set
             {
-                if (value > 0 && value < 3) _N18_MПереключательВыход2РН = value;
+                if (value > 0 && value < 3) _переключательВыход2РН = value;
+                OnParameterChanged();
             }
         }
 
-        /// <summary>
-        /// Названия положений переключателя Выход2РН
-        /// </summary>
-        private static string[] N18_MПоложенияПереключательВыход2РН = {
-            "б1-2",
-            "даб-5"
-        };
-        #endregion
+        private static int _переключатель48ПрмЩв = 1;
 
-        #region N18_MПереключатель48ПРМЩВ
         /// <summary>
-        /// Положение переключателя 48ПРМЩВ
+        /// 1 - б2,
+        /// 2 - даб-5
         /// </summary>
-        private static int _N18_MПереключатель48ПРМЩВ = 1;
-
-        public static int N18_MПереключатель48ПРМЩВ
+        public static int Переключатель48ПрмЩв
         {
-            get { return _N18_MПереключатель48ПРМЩВ; }
+            get { return _переключатель48ПрмЩв; }
             set
             {
-                if (value > 0 && value < 3) _N18_MПереключатель48ПРМЩВ = value;
+                if (value > 0 && value < 3) _переключатель48ПрмЩв = value;
+                OnParameterChanged();
+            }
+        } 
+        #endregion
+
+        private static int _переключательПрмСс2 = 3;
+
+        /// <summary>
+        /// 1 - прм-2,
+        /// 2 - б3-2,
+        /// 3 - б2-2,
+        /// 4 - б1-2,
+        /// 5 - даб-5
+        /// </summary>
+        public static int ПереключательПрмСс2
+        {
+            get { return _переключательПрмСс2; }
+            set
+            {
+                if (value > 0 && value < 6) _переключательПрмСс2 = value;
+                OnParameterChanged();
             }
         }
 
-        /// <summary>
-        /// Названия положений переключателя 48ПРМЩВ
-        /// </summary>
-        private static string[] N18_MПоложенияПереключатель48ПРМЩВ = {
-            "б2",
-            "даб-5"
-        };
-        #endregion
+        private static int _переключательПрмСс1 = 3;
 
-        #region N18_MПереключательПРМСС2
         /// <summary>
-        /// Положение переключателя ПРМСС2
+        /// 1 - прм-1,
+        /// 2 - б3-1,
+        /// 3 - б2-1,
+        /// 4 - б1-1,
+        /// 5 - даб-5
         /// </summary>
-        private static int _N18_MПереключательПРМСС2 = 3;
-
-        public static int N18_MПереключательПРМСС2
+        public static int ПереключательПрмСс1
         {
-            get { return _N18_MПереключательПРМСС2; }
+            get { return _переключательПрмСс1; }
             set
             {
-                if (value > 0 && value < 6) _N18_MПереключательПРМСС2 = value;
+                if (value > 0 && value < 6) _переключательПрмСс1 = value;
+                OnParameterChanged();
+            }
+        }
+        
+        private static int _переключательПрдБма12 = 6;
+
+        /// <summary>
+        /// 1 - тлф-1/2,
+        /// 2 - тлф-2/3,
+        /// 3 - тлф-3/1,
+        /// 4 - тлф-1/3,
+        /// 5 - тлф-2/1,
+        /// 6 - тлф-3/2,
+        /// 7 - мод1,
+        /// 8 - мод2,
+        /// 9 - к1-2-1
+        /// </summary>
+        public static int ПереключательПрдБма12
+        {
+            get { return _переключательПрдБма12; }
+            set
+            {
+                if (value > 0 && value < 10) _переключательПрдБма12 = value;
+                OnParameterChanged();
             }
         }
 
-        /// <summary>
-        /// Названия положений переключателя ПРМСС2
-        /// </summary>
-        private static string[] N18_MПоложенияПереключательПРМСС2 = {
-            "прм-2",
-            "б3-2",
-            "б2-2",
-            "б1-2",
-            "даб-5"
-        };
-        #endregion
+        private static int _переключательПРД = 3;
 
-        #region N18_MПереключательПРМСС1
         /// <summary>
-        /// Положение переключателя ПРМСС1
+        /// 1 - даб-5,
+        /// 2 - а1,
+        /// 3 - бма,
+        /// 4 - тлг,
+        /// 5 - сс
         /// </summary>
-        private static int _N18_MПереключательПРМСС1 = 3;
-
-        public static int N18_MПереключательПРМСС1
+        public static int ПереключательПРД
         {
-            get { return _N18_MПереключательПРМСС1; }
+            get { return _переключательПРД; }
             set
             {
-                if (value > 0 && value < 6) _N18_MПереключательПРМСС1 = value;
+                if (value > 0 && value < 6) _переключательПРД = value;
+                OnParameterChanged();
             }
         }
 
-        /// <summary>
-        /// Названия положений переключателя ПРМСС1
-        /// </summary>
-        private static string[] N18_MПоложенияПереключательПРМСС1 = {
-            "прм-1",
-            "б3-1",
-            "б2-1",
-            "б1-1",
-            "даб-5"
-        };
-        #endregion
-
-        #region N18_MПереключательПРДБМА12
-        /// <summary>
-        /// Положение переключателя ПРДБМА12
-        /// </summary>
-        private static int _N18_MПереключательПРДБМА12 = 6;
-
-        public static int N18_MПереключательПРДБМА12
-        {
-            get { return _N18_MПереключательПРДБМА12; }
-            set
-            {
-                if (value > 0 && value < 10) _N18_MПереключательПРДБМА12 = value;
-            }
-        }
+        private static int _переключательВходК121 = 1;
 
         /// <summary>
-        /// Названия положений переключателя ПРДБМА12
-        /// </summary>
-        private static string[] N18_MПоложенияПереключательПРДБМА12 = {
-            "тлф-1/2",
-            "тлф-2/3",
-            "тлф-3/1",
-            "тлф-1/3",
-            "тлф-2/1",
-            "тлф-3/2",
-            "мод1",
-            "мод2",
-            "к1_2_1"
-        };
-        #endregion
-
-        #region N18_MПереключательПРД
-        /// <summary>
-        /// Положение переключателя ПРД
-        /// </summary>
-        private static int _N18_MПереключательПРД = 3;
-
-        public static int N18_MПереключательПРД
-        {
-            get { return _N18_MПереключательПРД; }
-            set
-            {
-                if (value > 0 && value < 6) _N18_MПереключательПРД = value;
-            }
-        }
-
-        /// <summary>
-        /// Названия положений переключателя ВходК1-2-1
-        /// </summary>
-        private static string[] N18_MПоложенияПереключательПРД = {
-            "даб-5",
-            "а1",
-            "бма",
-            "тлг",
-            "сс"
-        };
-        #endregion
-
-        #region N18_MПереключательВходК1_2_1
-        private static int _n18MПереключательВходК121 = 1;
-
-        /// <summary>
-        /// Положение переключателя ВходК1-2-1
         /// 1 - откл,
         /// 2 - бма-1,
         /// 3 - бма-2,
         /// 4 - щв
         /// </summary>
-        public static int N18MПереключательВходК121
+        public static int ПереключательВходК121
         {
-            get { return _n18MПереключательВходК121; }
+            get { return _переключательВходК121; }
             set
             {
-                if (value > 0 && value < 5) _n18MПереключательВходК121 = value;
+                if (value > 0 && value < 5) _переключательВходК121 = value;
+                OnParameterChanged();
                 A205M_1Parameters.ResetParameters();
                 A205M_2Parameters.ResetParameters();
                 N15Parameters.ResetParameters();
             }
         }
-        #endregion
 
-        #region ПереключательПРМ1
+        private static int _переключательПРМ1 = 3;
+
         /// <summary>
-        /// Положение переключателя ПРМ1
+        /// 1 - б3-1,
+        /// 2 - б2-1,
+        /// 3 - даб-5,
+        /// 4 - б1-1,
+        /// 5 - р-н
         /// </summary>
-        private static int _N18_MПереключательПРМ1 = 3;
-
-        public static int N18_MПереключательПРМ1
+        public static int ПереключательПРМ1
         {
-            get { return _N18_MПереключательПРМ1; }
+            get { return _переключательПРМ1; }
             set
             {
-                if (value > 0 && value < 6) _N18_MПереключательПРМ1 = value;
+                if (value > 0 && value < 6) _переключательПРМ1 = value;
+                OnParameterChanged();
             }
         }
 
-        /// <summary>
-        /// Названия положений переключателя ПРМ1
-        /// </summary>
-        private static string[] N18_MПоложенияПереключательПРМ1 = {
-            "б3-1",
-            "б2-1",
-            "даб-5",
-            "б1-1",
-            "р-н"
-        };
-        #endregion
+        private static int _переключательПРМ2 = 3;
 
-        #region ПереключательПРМ2
         /// <summary>
-        /// Положение переключателя ПРМ2
+        /// 1 - б3-2,
+        /// 2 - б2-2,
+        /// 3 - даб-5,
+        /// 4 - б1-2,
+        /// р-н
         /// </summary>
-        private static int _N18_MПереключательПРМ2 = 3;
-
-        public static int N18_MПереключательПРМ2
+        public static int ПереключательПРМ2
         {
-            get { return _N18_MПереключательПРМ2; }
+            get { return _переключательПРМ2; }
             set
             {
-                if (value > 0 && value < 6) _N18_MПереключательПРМ2 = value;
+                if (value > 0 && value < 6) _переключательПРМ2 = value;
+                OnParameterChanged();
             }
         }
 
-        /// <summary>
-        /// Названия положений переключателя ПРМ1
-        /// </summary>
-        private static string[] N18_MПоложенияПереключательПРМ2 = {
-            "б3-2",
-            "б2-2",
-            "даб-5",
-            "б1-2",
-            "р-н"
-        };
-        #endregion
         #endregion
 
         #region Тумблеры
-        //Тумблер
-        public static string N18_MТумблерДАБ5 = "прм-1";
-        public static string N18_MТумблерКАУ_ПРМ = "б1-1";
-        public static string N18_MТумблерПРД_СС = "контур-П";
-        public static string N18_MТумблерТЛФ_ПРМ = "осн";
+        private static ТумблерДаб5 _тумблерДАБ5 = ТумблерДаб5.Прм1;
+        private static ТумблерКауПрм _тумблерКАУ_ПРМ = ТумблерКауПрм.Б11;
+        private static ТумблерПрдСс _тумблерПРД_СС = ТумблерПрдСс.КонтурП;
+        private static ТумблерТлфПрм _тумблерТЛФ_ПРМ = ТумблерТлфПрм.Осн;
+
+        public static ТумблерДаб5 ТумблерДАБ5
+        {
+            get { return _тумблерДАБ5; }
+            set
+            {
+                _тумблерДАБ5 = value;
+                OnParameterChanged();
+            }
+        }
+
+        public static ТумблерКауПрм ТумблерКАУ_ПРМ
+        {
+            get { return _тумблерКАУ_ПРМ; }
+            set
+            {
+                _тумблерКАУ_ПРМ = value;
+                OnParameterChanged();
+            }
+        }
+
+        public static ТумблерПрдСс ТумблерПРД_СС
+        {
+            get { return _тумблерПРД_СС; }
+            set
+            {
+                _тумблерПРД_СС = value;
+                OnParameterChanged();
+            }
+        }
+
+        public static ТумблерТлфПрм ТумблерТЛФ_ПРМ
+        {
+            get { return _тумблерТЛФ_ПРМ; }
+            set
+            {
+                _тумблерТЛФ_ПРМ = value;
+                OnParameterChanged();
+            }
+        }
         #endregion
 
+        public delegate void ParameterChangedHandler();
+        public static event ParameterChangedHandler ParameterChanged;
+
+        private static void OnParameterChanged()
+        {
+            var handler = ParameterChanged;
+            if (handler != null) handler();
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }
