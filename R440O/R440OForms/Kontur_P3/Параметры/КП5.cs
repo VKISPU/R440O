@@ -20,7 +20,7 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
         #endregion
 
         #region Тумблеры
-        private static EТумблерМткПУ _ТумблерМткПУ = EТумблерМткПУ.МТК;
+        private static EТумблерМткПУ _ТумблерМткПУ = EТумблерМткПУ.ПУ;
         public static EТумблерМткПУ ТумблерМткПУ
         {
             get { return _ТумблерМткПУ; }
@@ -88,10 +88,15 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
             }
         }
 
-        public static bool КнопкаГруппа { get; set; }
-        public static bool КнопкаОбщийС { get; set; }
-        public static bool КнопкаОтклЗС { get; set; }
-        public static bool КнопкаВызов { get; set; }
+        private static bool _КнопкаВызов;
+        public static bool КнопкаВызов {
+            get { return _КнопкаВызов; }
+            set
+            {
+                _КнопкаВызов = value;
+            }
+        }
+
         public static bool КнопкаОтбой { get; set; }
         public static bool КнопкаИнформ { get; set; }
         public static bool КнопкаНаборКК { get; set; }
@@ -244,6 +249,8 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
 
             ЗначениеИнформация = "";
             ЗначениеГруппа = new string[] { "000", "000", "000", "000", "000", "000", "000", "000", "^00" };
+
+            КнопкаКП4Контроль = false;
             Refresh();
         }
     }

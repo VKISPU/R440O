@@ -879,8 +879,7 @@
             this.КнопкаВызов.Size = new System.Drawing.Size(29, 28);
             this.КнопкаВызов.TabIndex = 47;
             this.КнопкаВызов.UseVisualStyleBackColor = false;
-            this.КнопкаВызов.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаВызов_MouseDown);
-            this.КнопкаВызов.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаВызов_MouseUp);
+            this.КнопкаВызов.MouseClick += new System.Windows.Forms.MouseEventHandler(this.КнопкаВызов_MouseClick);
             // 
             // КнопкаОтклЗС
             // 
