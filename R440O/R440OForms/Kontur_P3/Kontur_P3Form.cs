@@ -500,6 +500,7 @@ namespace R440O.R440OForms.Kontur_P3
         {
             КнопкаИнформКОН.BackgroundImage = ControlElementImages.buttonSquareRed_small;
             КнопкаИнформКОН.Text = "КОН";
+            Kontur_P3Parameters.НажатаКнопкаКонец();
         }
 
         private void Kontur_P3КнопкаИнформС_MouseDown(object sender, MouseEventArgs e)
