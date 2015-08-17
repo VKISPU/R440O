@@ -23,7 +23,7 @@ namespace R440O.BaseClasses
         public double GroupSpeed;
         
         /// <summary>
-        /// Скорость передачи в определённом канале.
+        /// Скорость передачи в определённом канале. Количество каналов = 10.
         /// </summary>
         public double[] ChanelSpeed = new double[10];
 

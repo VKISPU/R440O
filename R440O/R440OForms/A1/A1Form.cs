@@ -1,17 +1,17 @@
 ﻿using System.Linq;
+using R440O.BaseClasses;
 
 namespace R440O.R440OForms.A1
 {
     using System.Windows.Forms;
 
-    public partial class A1Form : Form
+    public partial class A1Form : Form, IRefreshableForm
     {
         public A1Form()
         {
             this.InitializeComponent();
-            this.InitializeTumblersPosition();
-            this.InitializeButtonsPosition();
-            this.InitializeLamps();
+            A1Parameters.ParameterChanged += RefreshFormElements;
+            RefreshFormElements();
         }
 
         #region Обработка действий пользователя
@@ -21,16 +21,7 @@ namespace R440O.R440OForms.A1
         /// </summary>
         private void КнопкаСкоростьАБ_1ТЛФ_К_Click(object sender, System.EventArgs e)
         {
-            if (A1Parameters.КнопкаСкоростьАБ_1ТЛФ_К == false)
-            {
-                this.КнопкаСкоростьАБ_1ТЛФ_К.BackgroundImage = null;
-                A1Parameters.КнопкаСкоростьАБ_1ТЛФ_К = true;
-            }
-            else
-            {
-                this.КнопкаСкоростьАБ_1ТЛФ_К.BackgroundImage = ControlElementImages.buttonRectType1;
-                A1Parameters.КнопкаСкоростьАБ_1ТЛФ_К = false;
-            }
+            A1Parameters.КнопкаСкоростьАб_1ТЛФК = !A1Parameters.КнопкаСкоростьАб_1ТЛФК;
         }
 
         /// <summary>
@@ -38,16 +29,7 @@ namespace R440O.R440OForms.A1
         /// </summary>
         private void КнопкаСкоростьГР_Click(object sender, System.EventArgs e)
         {
-            if (A1Parameters.КнопкаСкоростьГР == false)
-            {
-                this.КнопкаСкоростьГР.BackgroundImage = null;
-                A1Parameters.КнопкаСкоростьГР = true;
-            }
-            else
-            {
-                this.КнопкаСкоростьГР.BackgroundImage = ControlElementImages.buttonRectType1;
-                A1Parameters.КнопкаСкоростьГР = false;
-            }
+            A1Parameters.КнопкаСкоростьГр = !A1Parameters.КнопкаСкоростьГр;
         }
 
         /// <summary>
@@ -56,40 +38,31 @@ namespace R440O.R440OForms.A1
         private void ТумблерМуДу_Click(object sender, System.EventArgs e)
         {
             A1Parameters.ТумблерМуДу = !A1Parameters.ТумблерМуДу;
-            this.ТумблерМуДу.BackgroundImage = A1Parameters.ТумблерМуДу
-                ? ControlElementImages.tumblerType4Up
-                : ControlElementImages.tumblerType4Down;
         }
 
         #endregion
 
         #region Инициализация
 
-        private void InitializeTumblersPosition()
+        public void RefreshFormElements()
         {
             this.ТумблерМуДу.BackgroundImage = A1Parameters.ТумблерМуДу
                 ? ControlElementImages.tumblerType4Up
                 : ControlElementImages.tumblerType4Down;
-        }
 
-        private void InitializeButtonsPosition()
-        {
-            this.КнопкаСкоростьГР.BackgroundImage = A1Parameters.КнопкаСкоростьГР
+            this.КнопкаСкоростьГР.BackgroundImage = A1Parameters.КнопкаСкоростьГр
                 ? null
                 : ControlElementImages.buttonRectType1;
 
-            this.КнопкаСкоростьАБ_1ТЛФ_К.BackgroundImage = A1Parameters.КнопкаСкоростьАБ_1ТЛФ_К
+            this.КнопкаСкоростьАБ_1ТЛФ_К.BackgroundImage = A1Parameters.КнопкаСкоростьАб_1ТЛФК
                 ? null
                 : ControlElementImages.buttonRectType1;
-        }
 
-        private void InitializeLamps()
-        {
             foreach (Control itemIn in Panel.Controls)
             {
                 var item = itemIn;
                 if (!item.Name.Contains("Лампочка")) continue;
-                var fieldList = typeof (A1Parameters).GetFields();
+                var fieldList = typeof(A1Parameters).GetFields();
                 foreach (var field in fieldList.Where(field => item.Name == field.Name))
                 {
                     if (item.Name.Contains("ЛампочкаФСПК") ||
@@ -97,11 +70,11 @@ namespace R440O.R440OForms.A1
                         item.Name.Contains("ЛампочкаПУЛ2_2") ||
                         item.Name.Contains("ЛампочкаПУЛ3_2") ||
                         item.Name.Contains("ЛампочкаПитание"))
-                        item.BackgroundImage = (bool) field.GetValue(null)
+                        item.BackgroundImage = (bool)field.GetValue(null)
                             ? ControlElementImages.lampType3OnRed
                             : null;
                     else
-                        item.BackgroundImage = (bool) field.GetValue(null)
+                        item.BackgroundImage = (bool)field.GetValue(null)
                             ? ControlElementImages.lampType2OnRed
                             : null;
                     break;
