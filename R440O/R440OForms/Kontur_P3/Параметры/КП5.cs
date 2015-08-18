@@ -88,12 +88,15 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
             }
         }
 
+        private static EПереключательПриоритет НомерКанала;
         private static bool _КнопкаВызов;
         public static bool КнопкаВызов {
             get { return _КнопкаВызов; }
             set
             {
                 _КнопкаВызов = value;
+                НомерКанала = ПереключательПриоритет;
+                Refresh();
             }
         }
 
@@ -232,6 +235,7 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
             }
         }
 
+      
         private static void ДобавитьЧислоВПоследнийРегистр(int number, ref string str)
         {
             str = Convert.ToString(str[1]) + Convert.ToString(str[2]) + Convert.ToString(number);
@@ -251,6 +255,8 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
             ЗначениеГруппа = new string[] { "000", "000", "000", "000", "000", "000", "000", "000", "^00" };
 
             КнопкаКП4Контроль = false;
+            КнопкаВызов = false;
+            КнопкаКП4Контроль = false; 
             Refresh();
         }
     }

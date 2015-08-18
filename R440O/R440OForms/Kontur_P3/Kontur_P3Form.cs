@@ -227,13 +227,17 @@ namespace R440O.R440OForms.Kontur_P3
             Kontur_P3Parameters.СбросОбщий();
         }
 
-        private void КнопкаВызов_MouseClick(object sender, MouseEventArgs e)
-        {            
-            КнопкаВызов.BackgroundImage = (Kontur_P3Parameters.КнопкаВызов)
-                ? ControlElementImages.buttonSquareBlack_small
-                : null;
-            Kontur_P3Parameters.КнопкаВызов = !Kontur_P3Parameters.КнопкаВызов;
+        private void КнопкаВызов_MouseDown(object sender, MouseEventArgs e)
+        {
+            КнопкаВызов.BackgroundImage = null;
+            Kontur_P3Parameters.КнопкаВызов = true;
         }
+
+        private void КнопкаВызов_MouseUp(object sender, MouseEventArgs e)
+        {
+            КнопкаВызов.BackgroundImage = ControlElementImages.buttonSquareBlack_small;
+        }
+
         private void Kontur_P3КнопкаОтбой_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаОтбой.BackgroundImage = null;
@@ -456,15 +460,12 @@ namespace R440O.R440OForms.Kontur_P3
         #endregion
 
         #region КП4
-        private void Kontur_P3КнопкаКП4Контроль_MouseDown(object sender, MouseEventArgs e)
+        private void КнопкаКП4Контроль_MouseClick(object sender, MouseEventArgs e)
         {
-            КнопкаКП4Контроль.BackgroundImage = null;
-            Kontur_P3Parameters.КнопкаКП4Контроль = true;
-        }
-
-        private void Kontur_P3КнопкаКП4Контроль_MouseUp(object sender, MouseEventArgs e)
-        {
-            КнопкаКП4Контроль.BackgroundImage = ControlElementImages.buttonRoundType8;
+            Kontur_P3Parameters.КнопкаКП4Контроль = !Kontur_P3Parameters.КнопкаКП4Контроль;
+            КнопкаКП4Контроль.BackgroundImage = (Kontur_P3Parameters.КнопкаКП4Контроль)
+                ? null
+                : ControlElementImages.buttonRoundType8;
         }
         #endregion
 
@@ -686,6 +687,9 @@ namespace R440O.R440OForms.Kontur_P3
             ЛампочкаКП4Канал9.BackgroundImage = (Kontur_P3Parameters.ЛампочкаКП4Канал9)
                 ? ControlElementImages.lampType9OnGreen
                : null;
+            КнопкаКП4Контроль.BackgroundImage = (Kontur_P3Parameters.КнопкаКП4Контроль)
+                ? null
+                : ControlElementImages.buttonRoundType8;
             #endregion
 
             #region КП3
@@ -705,6 +709,9 @@ namespace R440O.R440OForms.Kontur_P3
             #endregion
         }
         #endregion
+
+        
+        
 
         
     }

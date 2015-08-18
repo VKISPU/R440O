@@ -879,7 +879,8 @@
             this.КнопкаВызов.Size = new System.Drawing.Size(29, 28);
             this.КнопкаВызов.TabIndex = 47;
             this.КнопкаВызов.UseVisualStyleBackColor = false;
-            this.КнопкаВызов.MouseClick += new System.Windows.Forms.MouseEventHandler(this.КнопкаВызов_MouseClick);
+            this.КнопкаВызов.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаВызов_MouseDown);
+            this.КнопкаВызов.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаВызов_MouseUp);
             // 
             // КнопкаОтклЗС
             // 
@@ -1128,8 +1129,7 @@
             this.КнопкаКП4Контроль.Size = new System.Drawing.Size(36, 38);
             this.КнопкаКП4Контроль.TabIndex = 34;
             this.КнопкаКП4Контроль.UseVisualStyleBackColor = false;
-            this.КнопкаКП4Контроль.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаКП4Контроль_MouseDown);
-            this.КнопкаКП4Контроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаКП4Контроль_MouseUp);
+            this.КнопкаКП4Контроль.MouseClick += new System.Windows.Forms.MouseEventHandler(this.КнопкаКП4Контроль_MouseClick);
             // 
             // КнопкаКан12
             // 
