@@ -29,6 +29,7 @@
         public static bool _локТумблерАнтЭкв;
         public static bool _локТумблерТлфТлгПрм;
         public static bool _локТумблерТлфТлгПрд;
+
         ////Тумблеры
         public static bool локТумблерЦ300М1
         {

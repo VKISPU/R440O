@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.Panel = new System.Windows.Forms.Panel();
+            this.N15РегуляторУровень = new System.Windows.Forms.Button();
             this.ЛампочкаА205Неиспр2 = new System.Windows.Forms.PictureBox();
             this.ЛампочкаА205Неиспр1 = new System.Windows.Forms.PictureBox();
             this.OpenInsideButtonRight = new System.Windows.Forms.Button();
@@ -129,7 +130,7 @@
             this.КнопкаПРМНаведениеЦ300М1 = new System.Windows.Forms.Button();
             this.КнопкаСтанцияВыкл = new System.Windows.Forms.Button();
             this.КнопкаСтанцияВкл = new System.Windows.Forms.Button();
-            this.N15РегуляторУровень = new System.Windows.Forms.Button();
+            this.Тумблер5МГц25МГц3 = new System.Windows.Forms.Button();
             this.Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаА205Неиспр2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаА205Неиспр1)).BeginInit();
@@ -199,6 +200,7 @@
             this.Panel.Controls.Add(this.ЛампочкаА205Неиспр1);
             this.Panel.Controls.Add(this.OpenInsideButtonRight);
             this.Panel.Controls.Add(this.OpenInsideButtonLeft);
+            this.Panel.Controls.Add(this.Тумблер5МГц25МГц3);
             this.Panel.Controls.Add(this.ТумблерТлфТлгПрд);
             this.Panel.Controls.Add(this.ТумблерТлфТлгПрм);
             this.Panel.Controls.Add(this.ТумблерАнтЭкв);
@@ -299,6 +301,24 @@
             this.Panel.Name = "Panel";
             this.Panel.Size = new System.Drawing.Size(1042, 503);
             this.Panel.TabIndex = 2;
+            // 
+            // N15РегуляторУровень
+            // 
+            this.N15РегуляторУровень.BackColor = System.Drawing.Color.Transparent;
+            this.N15РегуляторУровень.BackgroundImage = global::R440O.ControlElementImages.revolverRoundSmall;
+            this.N15РегуляторУровень.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.N15РегуляторУровень.FlatAppearance.BorderSize = 0;
+            this.N15РегуляторУровень.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.N15РегуляторУровень.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.N15РегуляторУровень.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.N15РегуляторУровень.Location = new System.Drawing.Point(835, 342);
+            this.N15РегуляторУровень.Name = "N15РегуляторУровень";
+            this.N15РегуляторУровень.Size = new System.Drawing.Size(50, 51);
+            this.N15РегуляторУровень.TabIndex = 50;
+            this.N15РегуляторУровень.UseVisualStyleBackColor = false;
+            this.N15РегуляторУровень.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N15Регулятор_MouseDown);
+            this.N15РегуляторУровень.MouseMove += new System.Windows.Forms.MouseEventHandler(this.N15Регулятор_MouseMove);
+            this.N15РегуляторУровень.MouseUp += new System.Windows.Forms.MouseEventHandler(this.N15Регулятор_MouseUp);
             // 
             // ЛампочкаА205Неиспр2
             // 
@@ -1581,23 +1601,21 @@
             this.КнопкаСтанцияВкл.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаСтанцияВкл_MouseDown);
             this.КнопкаСтанцияВкл.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаСтанцияВкл_MouseUp);
             // 
-            // N15РегуляторУровень
+            // Тумблер5МГц25МГц3
             // 
-            this.N15РегуляторУровень.BackColor = System.Drawing.Color.Transparent;
-            this.N15РегуляторУровень.BackgroundImage = global::R440O.ControlElementImages.revolverRoundSmall;
-            this.N15РегуляторУровень.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N15РегуляторУровень.FlatAppearance.BorderSize = 0;
-            this.N15РегуляторУровень.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N15РегуляторУровень.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N15РегуляторУровень.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N15РегуляторУровень.Location = new System.Drawing.Point(835, 342);
-            this.N15РегуляторУровень.Name = "N15РегуляторУровень";
-            this.N15РегуляторУровень.Size = new System.Drawing.Size(50, 51);
-            this.N15РегуляторУровень.TabIndex = 50;
-            this.N15РегуляторУровень.UseVisualStyleBackColor = false;
-            this.N15РегуляторУровень.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N15Регулятор_MouseDown);
-            this.N15РегуляторУровень.MouseMove += new System.Windows.Forms.MouseEventHandler(this.N15Регулятор_MouseMove);
-            this.N15РегуляторУровень.MouseUp += new System.Windows.Forms.MouseEventHandler(this.N15Регулятор_MouseUp);
+            this.Тумблер5МГц25МГц3.BackColor = System.Drawing.Color.Transparent;
+            this.Тумблер5МГц25МГц3.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Down;
+            this.Тумблер5МГц25МГц3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Тумблер5МГц25МГц3.FlatAppearance.BorderSize = 0;
+            this.Тумблер5МГц25МГц3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Тумблер5МГц25МГц3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Тумблер5МГц25МГц3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Тумблер5МГц25МГц3.Location = new System.Drawing.Point(944, 375);
+            this.Тумблер5МГц25МГц3.Name = "Тумблер5МГц25МГц3";
+            this.Тумблер5МГц25МГц3.Size = new System.Drawing.Size(34, 51);
+            this.Тумблер5МГц25МГц3.TabIndex = 70;
+            this.Тумблер5МГц25МГц3.UseVisualStyleBackColor = false;
+            this.Тумблер5МГц25МГц3.Click += new System.EventHandler(this.Тумблер5МГц25МГц3_Click);
             // 
             // N15Form
             // 
@@ -1776,5 +1794,6 @@
         private System.Windows.Forms.PictureBox ЛампочкаА205Неиспр1;
         private System.Windows.Forms.Button ТумблерА503Б;
         private System.Windows.Forms.Button N15РегуляторУровень;
+        private System.Windows.Forms.Button Тумблер5МГц25МГц3;
     }
 }

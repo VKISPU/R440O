@@ -34,7 +34,7 @@ namespace R440O.R440OForms.N15
 
         #region Инициализация элементов управления
 
-        public void RefreshForm()
+        private void RefreshForm()
         {
             InitializeButtons();
             InitializeTumblers();
@@ -108,6 +108,10 @@ namespace R440O.R440OForms.N15
             //// Тумблеры работающие без нажатия кнопки ВКЛ
             ТумблерА503Б.BackgroundImage = N15Parameters.ТумблерА503Б ? ControlElementImages.tumblerType3Up
                             : ControlElementImages.tumblerType3Down;
+
+            Тумблер5МГц25МГц3.BackgroundImage = N15Parameters.Тумблер5МГц25МГц3 ? ControlElementImages.tumblerType2Up
+                            : ControlElementImages.tumblerType2Down;
+
         }
 
         /// <summary>
@@ -464,6 +468,7 @@ namespace R440O.R440OForms.N15
         }
         #endregion
 
+        #region Нажатия на тумблеры
         private void Тумблер_Click(object sender, EventArgs e)
         {
             var button = sender as Button;
@@ -477,5 +482,12 @@ namespace R440O.R440OForms.N15
         {
             N15Parameters.ТумблерА503Б = !N15Parameters.ТумблерА503Б;
         }
+
+        private void Тумблер5МГц25МГц3_Click(object sender, EventArgs e)
+        {
+            N15Parameters.Тумблер5МГц25МГц3 = !N15Parameters.Тумблер5МГц25МГц3;
+        }
+        #endregion
+        
     }
 }

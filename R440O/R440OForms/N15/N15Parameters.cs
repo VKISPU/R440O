@@ -1,4 +1,5 @@
 ﻿using R440O.Parameters;
+using R440O.R440OForms.A1;
 using R440O.R440OForms.A205M_1;
 using R440O.R440OForms.A205M_2;
 using R440O.R440OForms.N18_M;
@@ -12,6 +13,8 @@ using R440O.R440OForms.C300M_4;
 using R440O.R440OForms.A304;
 using R440O.R440OForms.BMB;
 using R440O.R440OForms.Kontur_P3.Параметры;
+using R440O.R440OForms.P220_27G_2;
+using R440O.R440OForms.P220_27G_3;
 using R440O.СостоянияЭлементов.Контур_П;
 
 namespace R440O.R440OForms.N15
@@ -459,50 +462,57 @@ namespace R440O.R440OForms.N15
             {
                 _тумблерА503Б = value;
                 ResetParameters();
-                if (ParameterChanged != null) ParameterChanged();
+                OnParameterChanged();
             }
         }
 
         public static bool ТумблерФаза
         {
             get { return _тумблерФаза; }
-            set { _тумблерФаза = value; if (ParameterChanged != null) ParameterChanged(); }
+            set { _тумблерФаза = value; OnParameterChanged(); }
         }
 
         public static bool ТумблерУров1
         {
             get { return _тумблерУров1; }
-            set { _тумблерУров1 = value; if (ParameterChanged != null) ParameterChanged(); }
+            set { _тумблерУров1 = value; OnParameterChanged(); }
         }
 
         public static bool ТумблерУров2
         {
             get { return _тумблерУров2; }
-            set { _тумблерУров2 = value; if (ParameterChanged != null) ParameterChanged(); }
+            set { _тумблерУров2 = value; OnParameterChanged(); }
         }
 
         public static bool ТумблерАнтЭкв
         {
             get { return _тумблерАнтЭкв; }
-            set { _тумблерАнтЭкв = value; if (ParameterChanged != null) ParameterChanged(); }
+            set { _тумблерАнтЭкв = value; OnParameterChanged(); }
         }
 
         public static bool ТумблерТлфТлгПрм
         {
             get { return _тумблерТлфТлгПрм; }
-            set { _тумблерТлфТлгПрм = value; if (ParameterChanged != null) ParameterChanged(); }
+            set { _тумблерТлфТлгПрм = value; OnParameterChanged(); }
         }
 
         public static bool ТумблерТлфТлгПрд
         {
             get { return _тумблерТлфТлгПрд; }
-            set { _тумблерТлфТлгПрд = value; if (ParameterChanged != null) ParameterChanged(); }
+            set { _тумблерТлфТлгПрд = value; OnParameterChanged(); }
         }
 
-        public static bool Тумблер5мГц25мГц3
+        /// <summary>
+        /// true - 2, false - 3
+        /// </summary>
+        public static bool Тумблер5МГц25МГц3
         {
             get { return _тумблер5МГц25МГц3; }
-            set { _тумблер5МГц25МГц3 = value; if (ParameterChanged != null) ParameterChanged(); }
+            set
+            {
+                _тумблер5МГц25МГц3 = value;
+                OnParameterChanged();
+            }
         }
 
         #endregion
@@ -654,14 +664,12 @@ namespace R440O.R440OForms.N15
 
         public static bool ЛампочкаП220272
         {
-            get { return _лампочкаП220272; }
-            set { _лампочкаП220272 = value; }
+            get { return P220_27G_2Parameters.ЛампочкаСеть; }
         }
 
         public static bool ЛампочкаП220273
         {
-            get { return _лампочкаП220273; }
-            set { _лампочкаП220273 = value; }
+            get { return P220_27G_3Parameters.ЛампочкаСеть; }
         }
 
         public static bool ЛампочкаА306
@@ -783,10 +791,15 @@ namespace R440O.R440OForms.N15
             BMA_M_2Parameters.Refresh();
             #endregion
 
-            #region МШУ и АФС
+            #region МШУ и АФСС
             A306Parameters.ResetParameters();
             Kontur_P3Parameters.ResetToDefaultsWhenTurnOnOff();
             Kontur_P3Parameters.Refresh();
+            #endregion
+
+            #region Дискрет и Генераторы
+            P220_27G_2Parameters.ResetParameters();
+            P220_27G_3Parameters.ResetParameters();
             #endregion
 
             OnParameterChanged();

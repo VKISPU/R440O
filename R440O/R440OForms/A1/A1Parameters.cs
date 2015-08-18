@@ -1,6 +1,5 @@
 ﻿using R440O.BaseClasses;
 using R440O.R440OForms.N15;
-using R440O.R440OForms.N502B;
 
 namespace R440O.R440OForms.A1
 {
@@ -10,8 +9,7 @@ namespace R440O.R440OForms.A1
         {
             get
             {
-                return N502BParameters.ЛампочкаСфазировано && N502BParameters.ТумблерЭлектрооборудование &&
-                       N502BParameters.ТумблерВыпрямитель27В &&
+                return N15Parameters.Включен &&
                        (ТумблерМуДу || !ТумблерМуДу && N15Parameters.ЛампочкаА1);
             }
         }

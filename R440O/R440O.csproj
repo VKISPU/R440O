@@ -134,8 +134,8 @@
     <Compile Include="R440OForms\N502B\N502BParameters.cs" />
     <Compile Include="R440OForms\NKN_2\NKN_2Parameters.cs" />
     <Compile Include="R440OForms\NKN_1\NKN_1Parameters.cs" />
-    <Compile Include="Parameters\P220_27G_2Parameters.cs" />
-    <Compile Include="Parameters\P220_27G_3Parameters.cs" />
+    <Compile Include="R440OForms\P220_27G_2\P220_27G_2Parameters.cs" />
+    <Compile Include="R440OForms\P220_27G_3\P220_27G_3Parameters.cs" />
     <Compile Include="R440OForms\PowerCabel\PowerCabelParameters.cs" />
     <Compile Include="Parameters\Rubin_NParameters.cs" />
     <Compile Include="R440OForms\VoltageStabilizer\VoltageStabilizerParameters.cs" />

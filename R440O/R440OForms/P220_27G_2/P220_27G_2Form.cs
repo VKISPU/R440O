@@ -4,15 +4,16 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+using R440O.BaseClasses;
+
 namespace R440O.R440OForms.P220_27G_2
 {
     using System.Windows.Forms;
-    using Parameters;
 
     /// <summary>
     /// Форма блока П220-27Г-3
     /// </summary>
-    public partial class P220_27G_2Form : Form
+    public partial class P220_27G_2Form : Form, IRefreshableForm
     {
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="P220_27G_2Form"/>
@@ -20,44 +21,31 @@ namespace R440O.R440OForms.P220_27G_2
         public P220_27G_2Form()
         {
             this.InitializeComponent();
-            this.InitializeTumblersPosition();
+            P220_27G_2Parameters.ParameterChanged += RefreshFormElements;
+            RefreshFormElements();
         }
 
         private void P220_27G_2ТумблерСеть_Click(object sender, System.EventArgs e)
         {
-            if (P220_27G_2Parameters.P220_27G_2ТумблерСеть)
-            {
-                this.P220_27G_2ТумблерСеть.BackgroundImage = ControlElementImages.tumblerType6Down;
-                P220_27G_2Parameters.P220_27G_2ТумблерСеть = false;
-            }
-            else
-            {
-                this.P220_27G_2ТумблерСеть.BackgroundImage = ControlElementImages.tumblerType6Up;
-                P220_27G_2Parameters.P220_27G_2ТумблерСеть = true;
-            }
+            P220_27G_2Parameters.ТумблерСеть = !P220_27G_2Parameters.ТумблерСеть;
         }
 
         private void P220_27G_2ТумблерМуДу_Click(object sender, System.EventArgs e)
         {
-            if (P220_27G_2Parameters.P220_27G_2ТумблерМуДу == "Му")
-            {
-                this.P220_27G_2ТумблерМуДу.BackgroundImage = ControlElementImages.tumblerType4Down;
-                P220_27G_2Parameters.P220_27G_2ТумблерМуДу = "Ду";
-            }
-            else
-            {
-                this.P220_27G_2ТумблерМуДу.BackgroundImage = ControlElementImages.tumblerType4Up;
-                P220_27G_2Parameters.P220_27G_2ТумблерМуДу = "Му";
-            }
+            P220_27G_2Parameters.ТумблерМуДу = !P220_27G_2Parameters.ТумблерМуДу;
         }
 
-        private void InitializeTumblersPosition()
+        public void RefreshFormElements()
         {
-            this.P220_27G_2ТумблерМуДу.BackgroundImage = P220_27G_2Parameters.P220_27G_2ТумблерМуДу == "Ду"
+            ЛампочкаСеть.BackgroundImage = P220_27G_2Parameters.ЛампочкаСеть
+                ? ControlElementImages.lampType9OnGreen
+                : null;
+
+            this.ТумблерМуДу.BackgroundImage = P220_27G_2Parameters.ТумблерМуДу
                 ? ControlElementImages.tumblerType4Down
                 : ControlElementImages.tumblerType4Up;
 
-            this.P220_27G_2ТумблерСеть.BackgroundImage = P220_27G_2Parameters.P220_27G_2ТумблерСеть
+            this.ТумблерСеть.BackgroundImage = P220_27G_2Parameters.ТумблерСеть
                 ? ControlElementImages.tumblerType6Up
                 : ControlElementImages.tumblerType6Down;
         }

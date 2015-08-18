@@ -29,135 +29,135 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(P220_27G_3Form));
-            this.P220_27G_3Panel = new System.Windows.Forms.Panel();
-            this.P220_27G_3ТумблерМуДу = new System.Windows.Forms.Button();
-            this.P220_27G_3ТумблерСеть = new System.Windows.Forms.Button();
-            this.P220_27G_3ЛампочкаПерегр = new System.Windows.Forms.PictureBox();
-            this.P220_27G_3ЛампочкаНеиспр = new System.Windows.Forms.PictureBox();
-            this.P220_27G_3ЛампочкаСеть = new System.Windows.Forms.PictureBox();
-            this.P220_27G_3Лампочка27В = new System.Windows.Forms.PictureBox();
-            this.P220_27G_3Panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P220_27G_3ЛампочкаПерегр)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P220_27G_3ЛампочкаНеиспр)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P220_27G_3ЛампочкаСеть)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P220_27G_3Лампочка27В)).BeginInit();
+            this.Panel = new System.Windows.Forms.Panel();
+            this.Лампочка27В = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаСеть = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаПерегр = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаНеиспр = new System.Windows.Forms.PictureBox();
+            this.ТумблерМуДу = new System.Windows.Forms.Button();
+            this.ТумблерСеть = new System.Windows.Forms.Button();
+            this.Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Лампочка27В)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСеть)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПерегр)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаНеиспр)).BeginInit();
             this.SuspendLayout();
             // 
-            // P220_27G_3Panel
+            // Panel
             // 
-            this.P220_27G_3Panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("P220_27G_3Panel.BackgroundImage")));
-            this.P220_27G_3Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.P220_27G_3Panel.Controls.Add(this.P220_27G_3Лампочка27В);
-            this.P220_27G_3Panel.Controls.Add(this.P220_27G_3ЛампочкаСеть);
-            this.P220_27G_3Panel.Controls.Add(this.P220_27G_3ЛампочкаПерегр);
-            this.P220_27G_3Panel.Controls.Add(this.P220_27G_3ЛампочкаНеиспр);
-            this.P220_27G_3Panel.Controls.Add(this.P220_27G_3ТумблерМуДу);
-            this.P220_27G_3Panel.Controls.Add(this.P220_27G_3ТумблерСеть);
-            this.P220_27G_3Panel.Location = new System.Drawing.Point(0, 0);
-            this.P220_27G_3Panel.Name = "P220_27G_3Panel";
-            this.P220_27G_3Panel.Size = new System.Drawing.Size(1101, 354);
-            this.P220_27G_3Panel.TabIndex = 2;
+            this.Panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Panel.BackgroundImage")));
+            this.Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Panel.Controls.Add(this.Лампочка27В);
+            this.Panel.Controls.Add(this.ЛампочкаСеть);
+            this.Panel.Controls.Add(this.ЛампочкаПерегр);
+            this.Panel.Controls.Add(this.ЛампочкаНеиспр);
+            this.Panel.Controls.Add(this.ТумблерМуДу);
+            this.Panel.Controls.Add(this.ТумблерСеть);
+            this.Panel.Location = new System.Drawing.Point(0, 0);
+            this.Panel.Name = "Panel";
+            this.Panel.Size = new System.Drawing.Size(1101, 354);
+            this.Panel.TabIndex = 2;
             // 
-            // P220_27G_3ТумблерМуДу
+            // Лампочка27В
             // 
-            this.P220_27G_3ТумблерМуДу.BackColor = System.Drawing.Color.Transparent;
-            this.P220_27G_3ТумблерМуДу.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
-            this.P220_27G_3ТумблерМуДу.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.P220_27G_3ТумблерМуДу.FlatAppearance.BorderSize = 0;
-            this.P220_27G_3ТумблерМуДу.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.P220_27G_3ТумблерМуДу.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.P220_27G_3ТумблерМуДу.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.P220_27G_3ТумблерМуДу.Location = new System.Drawing.Point(233, 116);
-            this.P220_27G_3ТумблерМуДу.Name = "P220_27G_3ТумблерМуДу";
-            this.P220_27G_3ТумблерМуДу.Size = new System.Drawing.Size(38, 58);
-            this.P220_27G_3ТумблерМуДу.TabIndex = 26;
-            this.P220_27G_3ТумблерМуДу.UseVisualStyleBackColor = false;
-            this.P220_27G_3ТумблерМуДу.Click += new System.EventHandler(this.P220_27G_3ТумблерМуДу_Click);
+            this.Лампочка27В.BackColor = System.Drawing.Color.Transparent;
+            this.Лампочка27В.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Лампочка27В.Location = new System.Drawing.Point(230, 50);
+            this.Лампочка27В.Name = "Лампочка27В";
+            this.Лампочка27В.Size = new System.Drawing.Size(16, 17);
+            this.Лампочка27В.TabIndex = 79;
+            this.Лампочка27В.TabStop = false;
             // 
-            // P220_27G_3ТумблерСеть
+            // ЛампочкаСеть
             // 
-            this.P220_27G_3ТумблерСеть.BackColor = System.Drawing.Color.Transparent;
-            this.P220_27G_3ТумблерСеть.BackgroundImage = global::R440O.ControlElementImages.tumblerType6Down;
-            this.P220_27G_3ТумблерСеть.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.P220_27G_3ТумблерСеть.FlatAppearance.BorderSize = 0;
-            this.P220_27G_3ТумблерСеть.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.P220_27G_3ТумблерСеть.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.P220_27G_3ТумблерСеть.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.P220_27G_3ТумблерСеть.Location = new System.Drawing.Point(178, 115);
-            this.P220_27G_3ТумблерСеть.Name = "P220_27G_3ТумблерСеть";
-            this.P220_27G_3ТумблерСеть.Size = new System.Drawing.Size(61, 71);
-            this.P220_27G_3ТумблерСеть.TabIndex = 23;
-            this.P220_27G_3ТумблерСеть.UseVisualStyleBackColor = false;
-            this.P220_27G_3ТумблерСеть.Click += new System.EventHandler(this.P220_27G_3ТумблерСеть_Click);
+            this.ЛампочкаСеть.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаСеть.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаСеть.Location = new System.Drawing.Point(193, 47);
+            this.ЛампочкаСеть.Name = "ЛампочкаСеть";
+            this.ЛампочкаСеть.Size = new System.Drawing.Size(30, 30);
+            this.ЛампочкаСеть.TabIndex = 78;
+            this.ЛампочкаСеть.TabStop = false;
             // 
-            // P220_27G_3ЛампочкаПерегр
+            // ЛампочкаПерегр
             // 
-            this.P220_27G_3ЛампочкаПерегр.BackColor = System.Drawing.Color.Transparent;
-            this.P220_27G_3ЛампочкаПерегр.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.P220_27G_3ЛампочкаПерегр.Location = new System.Drawing.Point(948, 95);
-            this.P220_27G_3ЛампочкаПерегр.Name = "P220_27G_3ЛампочкаПерегр";
-            this.P220_27G_3ЛампочкаПерегр.Size = new System.Drawing.Size(16, 16);
-            this.P220_27G_3ЛампочкаПерегр.TabIndex = 77;
-            this.P220_27G_3ЛампочкаПерегр.TabStop = false;
+            this.ЛампочкаПерегр.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаПерегр.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ЛампочкаПерегр.Location = new System.Drawing.Point(948, 95);
+            this.ЛампочкаПерегр.Name = "ЛампочкаПерегр";
+            this.ЛампочкаПерегр.Size = new System.Drawing.Size(16, 16);
+            this.ЛампочкаПерегр.TabIndex = 77;
+            this.ЛампочкаПерегр.TabStop = false;
             // 
-            // P220_27G_3ЛампочкаНеиспр
+            // ЛампочкаНеиспр
             // 
-            this.P220_27G_3ЛампочкаНеиспр.BackColor = System.Drawing.Color.Transparent;
-            this.P220_27G_3ЛампочкаНеиспр.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.P220_27G_3ЛампочкаНеиспр.Location = new System.Drawing.Point(948, 64);
-            this.P220_27G_3ЛампочкаНеиспр.Name = "P220_27G_3ЛампочкаНеиспр";
-            this.P220_27G_3ЛампочкаНеиспр.Size = new System.Drawing.Size(16, 16);
-            this.P220_27G_3ЛампочкаНеиспр.TabIndex = 76;
-            this.P220_27G_3ЛампочкаНеиспр.TabStop = false;
+            this.ЛампочкаНеиспр.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаНеиспр.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ЛампочкаНеиспр.Location = new System.Drawing.Point(948, 64);
+            this.ЛампочкаНеиспр.Name = "ЛампочкаНеиспр";
+            this.ЛампочкаНеиспр.Size = new System.Drawing.Size(16, 16);
+            this.ЛампочкаНеиспр.TabIndex = 76;
+            this.ЛампочкаНеиспр.TabStop = false;
             // 
-            // P220_27G_3ЛампочкаСеть
+            // ТумблерМуДу
             // 
-            this.P220_27G_3ЛампочкаСеть.BackColor = System.Drawing.Color.Transparent;
-            this.P220_27G_3ЛампочкаСеть.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.P220_27G_3ЛампочкаСеть.Location = new System.Drawing.Point(195, 49);
-            this.P220_27G_3ЛампочкаСеть.Name = "P220_27G_3ЛампочкаСеть";
-            this.P220_27G_3ЛампочкаСеть.Size = new System.Drawing.Size(26, 27);
-            this.P220_27G_3ЛампочкаСеть.TabIndex = 78;
-            this.P220_27G_3ЛампочкаСеть.TabStop = false;
+            this.ТумблерМуДу.BackColor = System.Drawing.Color.Transparent;
+            this.ТумблерМуДу.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
+            this.ТумблерМуДу.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ТумблерМуДу.FlatAppearance.BorderSize = 0;
+            this.ТумблерМуДу.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерМуДу.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерМуДу.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТумблерМуДу.Location = new System.Drawing.Point(233, 116);
+            this.ТумблерМуДу.Name = "ТумблерМуДу";
+            this.ТумблерМуДу.Size = new System.Drawing.Size(38, 58);
+            this.ТумблерМуДу.TabIndex = 26;
+            this.ТумблерМуДу.UseVisualStyleBackColor = false;
+            this.ТумблерМуДу.Click += new System.EventHandler(this.P220_27G_3ТумблерМуДу_Click);
             // 
-            // P220_27G_3Лампочка27В
+            // ТумблерСеть
             // 
-            this.P220_27G_3Лампочка27В.BackColor = System.Drawing.Color.Transparent;
-            this.P220_27G_3Лампочка27В.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.P220_27G_3Лампочка27В.Location = new System.Drawing.Point(230, 50);
-            this.P220_27G_3Лампочка27В.Name = "P220_27G_3Лампочка27В";
-            this.P220_27G_3Лампочка27В.Size = new System.Drawing.Size(16, 17);
-            this.P220_27G_3Лампочка27В.TabIndex = 79;
-            this.P220_27G_3Лампочка27В.TabStop = false;
+            this.ТумблерСеть.BackColor = System.Drawing.Color.Transparent;
+            this.ТумблерСеть.BackgroundImage = global::R440O.ControlElementImages.tumblerType6Down;
+            this.ТумблерСеть.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ТумблерСеть.FlatAppearance.BorderSize = 0;
+            this.ТумблерСеть.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерСеть.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерСеть.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТумблерСеть.Location = new System.Drawing.Point(178, 115);
+            this.ТумблерСеть.Name = "ТумблерСеть";
+            this.ТумблерСеть.Size = new System.Drawing.Size(61, 71);
+            this.ТумблерСеть.TabIndex = 23;
+            this.ТумблерСеть.UseVisualStyleBackColor = false;
+            this.ТумблерСеть.Click += new System.EventHandler(this.P220_27G_3ТумблерСеть_Click);
             // 
             // P220_27G_3Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 350);
-            this.Controls.Add(this.P220_27G_3Panel);
+            this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "P220_27G_3Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "П220/27Г-3";
-            this.P220_27G_3Panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.P220_27G_3ЛампочкаПерегр)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P220_27G_3ЛампочкаНеиспр)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P220_27G_3ЛампочкаСеть)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P220_27G_3Лампочка27В)).EndInit();
+            this.Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Лампочка27В)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСеть)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПерегр)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаНеиспр)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel P220_27G_3Panel;
-        private System.Windows.Forms.Button P220_27G_3ТумблерСеть;
-        private System.Windows.Forms.Button P220_27G_3ТумблерМуДу;
-        private System.Windows.Forms.PictureBox P220_27G_3ЛампочкаПерегр;
-        private System.Windows.Forms.PictureBox P220_27G_3ЛампочкаНеиспр;
-        private System.Windows.Forms.PictureBox P220_27G_3Лампочка27В;
-        private System.Windows.Forms.PictureBox P220_27G_3ЛампочкаСеть;
+        private System.Windows.Forms.Panel Panel;
+        private System.Windows.Forms.Button ТумблерСеть;
+        private System.Windows.Forms.Button ТумблерМуДу;
+        private System.Windows.Forms.PictureBox ЛампочкаПерегр;
+        private System.Windows.Forms.PictureBox ЛампочкаНеиспр;
+        private System.Windows.Forms.PictureBox Лампочка27В;
+        private System.Windows.Forms.PictureBox ЛампочкаСеть;
     }
 }

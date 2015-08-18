@@ -1,17 +1,18 @@
-﻿using R440O.Parameters;
-using R440O.R440OForms.A205M_1;
-using R440O.R440OForms.A304;
-using R440O.R440OForms.C300M_1;
-using R440O.R440OForms.Kontur_P3;
-using R440O.R440OForms.Kontur_P3.Параметры;
-using R440O.R440OForms.N15;
-using R440O.R440OForms.N502B;
-using R440O.R440OForms.PowerCabel;
-using R440O.R440OForms.VoltageStabilizer;
-using R440O.СостоянияЭлементов.Контур_П;
-
-namespace R440O
+﻿namespace R440O
 {
+    using Parameters;
+    using R440OForms.A205M_1;
+    using R440OForms.A304;
+    using R440OForms.C300M_1;
+    using R440OForms.Kontur_P3.Параметры;
+    using R440OForms.N15;
+    using R440OForms.N502B;
+    using R440OForms.P220_27G_2;
+    using R440OForms.P220_27G_3;
+    using R440OForms.PowerCabel;
+    using R440OForms.VoltageStabilizer;
+    using СостоянияЭлементов.Контур_П;
+
     public static class ParametersConfig
     {
         /// <summary>
@@ -19,11 +20,11 @@ namespace R440O
         /// </summary>
         public static void SetParameters()
         {
-            //// Фазировка и Напряжение
+            //// Сброс случайных значений Фазировка и Напряжение
             N502BParameters.Фазировка = 4;
             VoltageStabilizerParameters.ПравильныйВход = 380;
 
-            //// Подключение питания
+            #region Подключение питания
             //Подключаем кабели
             PowerCabelParameters.КабельСеть = true;
             VoltageStabilizerParameters.КабельВход = 380;
@@ -40,9 +41,10 @@ namespace R440O
 
             //A304
             A304Parameters.ТумблерУправление1 = true;
-            A304Parameters.ТумблерУправление2 = true;
+            A304Parameters.ТумблерУправление2 = true; 
+            #endregion
 
-            //// Настройка по малому шлейфу
+            #region Настройка по малому шлейфу
             // Подготовка Н-15
             N15LocalParameters._локТумблерЦ300М1 = true;
             N15LocalParameters._локТумблерМШУ = true;
@@ -74,7 +76,8 @@ namespace R440O
             C300M_1Parameters.ПереключательВолна1000 = 0;
             C300M_1Parameters.ПереключательВолна100 = 1;
             C300M_1Parameters.ПереключательВолна10 = 0;
-            C300M_1Parameters.ПереключательВолна1 = 0;
+            C300M_1Parameters.ПереключательВолна1 = 0; 
+            #endregion
 
 
             //// Проверка БМАБ и БМБ
@@ -86,6 +89,16 @@ namespace R440O
             //// Поключение АФСС
             N15LocalParameters.локТумблерАФСС = true;
             Kontur_P3Parameters.ТумблерСеть = EТумблерСеть.ВКЛ;
+
+            #region Дискрет
+
+            N15Parameters.Тумблер5МГц25МГц3 = true;
+            P220_27G_2Parameters.ТумблерСеть = true;
+            P220_27G_2Parameters.ТумблерМуДу = true;
+            P220_27G_3Parameters.ТумблерСеть = true;
+            P220_27G_3Parameters.ТумблерМуДу = true;
+
+            #endregion
 
         }
     }
