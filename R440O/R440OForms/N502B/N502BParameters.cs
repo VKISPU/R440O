@@ -69,7 +69,6 @@ namespace R440O.R440OForms.N502B
                 _лампочкаСфазировано = value;
                 NKN_1Parameters.ResetParameters();
                 NKN_2Parameters.ResetParameters();
-                BMBParameters.ResetParameters();
                 A205M_1Parameters.RefreshIndicators();
                 C300M_1Parameters.ResetParameters();
                 C300M_2Parameters.ResetParameters();
@@ -79,9 +78,8 @@ namespace R440O.R440OForms.N502B
                 C300M_2Parameters.RefreshIndicators();
                 C300M_3Parameters.RefreshIndicators();
                 C300M_4Parameters.RefreshIndicators();
-                N15Parameters.ResetParameters();
                 A304Parameters.ResetParameters();
-                A306Parameters.ResetParameters();
+                N15Parameters.ResetParameters();
                 if (RefreshForm != null) RefreshForm();
             }
         }

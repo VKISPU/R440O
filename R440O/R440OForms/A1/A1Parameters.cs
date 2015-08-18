@@ -1,16 +1,16 @@
-﻿using R440O.BaseClasses;
-using R440O.R440OForms.N15;
-
-namespace R440O.R440OForms.A1
+﻿namespace R440O.R440OForms.A1
 {
+    using BaseClasses;
+    using N15;
+
     public static class A1Parameters
     {
         public static bool Включен
         {
             get
             {
-                return N15Parameters.Включен &&
-                       (ТумблерМуДу || !ТумблерМуДу && N15Parameters.ЛампочкаА1);
+                return (N15Parameters.ЛампочкаП220272 || N15Parameters.ЛампочкаП220273) &&
+                       (ТумблерМуДу || !ТумблерМуДу && N15Parameters.ТумблерА1);
             }
         }
 
@@ -24,19 +24,19 @@ namespace R440O.R440OForms.A1
                     return new SignalArgs
                     {
                         GroupSpeed = 4.8,
-                        ChanelSpeed = new[] {-1, 2.4, 1.2, 0, 0.1, 0.1, 0, 0, 0, 0}
+                        ChanelSpeed = new[] { -1, 2.4, 1.2, 0, 0.1, 0.1, 0.05, 0.02}
                     };
                     else return new SignalArgs
                     {
                         GroupSpeed = 4.8,
-                        ChanelSpeed = new[] { -1, 1.2, 1.2, 1.2, 0.1, 0.1, 0, 0, 0, 0 }
+                        ChanelSpeed = new[] { -1, 1.2, 1.2, 1.2, 0.1, 0.1, 0.05, 0.02 }
                     };
 
                 if (КнопкаСкоростьГр)
                     return new SignalArgs
                     {
                         GroupSpeed = 2.4,
-                        ChanelSpeed = new[] { -1, 0, 1.2, 0, 0.1, 0.1, 0, 0, 0, 0 }
+                        ChanelSpeed = new[] { -1, 0, 1.2, 0, 0.1, 0.1, 0.05, 0.02 }
                     };
                 return null;
             }
@@ -58,7 +58,7 @@ namespace R440O.R440OForms.A1
         public static bool ЛампочкаПУЛ3_1;
         public static bool ЛампочкаПУЛ3_2;
         public static bool ЛампочкаНеиспр;
-        public static bool ЛампочкаПитание;
+        public static bool _лампочкаПитание;
 
         // Управляющие элементы
         private static bool _тумблерМуДу;
@@ -97,7 +97,13 @@ namespace R440O.R440OForms.A1
                 _кнопкаСкоростьАб_1ТЛФК = value;
                 OnParameterChanged();
             }
-        } 
+        }
+
+        public static bool ЛампочкаПитание
+        {
+            get { return Включен; }
+        }
+
         #endregion
 
         public delegate void ParameterChangedHandler();
@@ -108,6 +114,11 @@ namespace R440O.R440OForms.A1
         {
             var handler = ParameterChanged;
             if (handler != null) handler();
+        }
+
+        public static void ResetParameters()
+        {
+            OnParameterChanged();
         }
     }
 }

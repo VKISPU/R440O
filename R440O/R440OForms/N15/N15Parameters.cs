@@ -646,8 +646,7 @@ namespace R440O.R440OForms.N15
 
         public static bool ЛампочкаА1
         {
-            get { return _лампочкаА1; }
-            set { _лампочкаА1 = value; }
+            get { return A1Parameters.Включен; }
         }
 
         public static bool ЛампочкаА403Вкл
@@ -782,6 +781,7 @@ namespace R440O.R440OForms.N15
             C300M_1Parameters.Search();
 
             #region БМА
+
             BMBParameters.ResetParameters();
             BMA_M_1Parameters.DisposeAllTimers();
             BMA_M_1Parameters.ResetLampsValue();
@@ -789,17 +789,23 @@ namespace R440O.R440OForms.N15
             BMA_M_2Parameters.DisposeAllTimers();
             BMA_M_2Parameters.ResetLampsValue();
             BMA_M_2Parameters.Refresh();
+
             #endregion
 
             #region МШУ и АФСС
+
             A306Parameters.ResetParameters();
             Kontur_P3Parameters.ResetToDefaultsWhenTurnOnOff();
             Kontur_P3Parameters.Refresh();
+
             #endregion
 
             #region Дискрет и Генераторы
+
+            A1Parameters.ResetParameters();
             P220_27G_2Parameters.ResetParameters();
             P220_27G_3Parameters.ResetParameters();
+
             #endregion
 
             OnParameterChanged();

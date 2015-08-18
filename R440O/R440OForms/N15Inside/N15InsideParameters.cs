@@ -1,10 +1,10 @@
 ﻿using R440O.R440OForms.A1;
+using R440O.R440OForms.N15;
 using R440O.R440OForms.N18_M;
 
 namespace R440O.R440OForms.N15Inside
 {
     using BaseClasses;
-    using N502B;
     using ОбщиеТипыДанных;
 
     class N15InsideParameters
@@ -13,8 +13,7 @@ namespace R440O.R440OForms.N15Inside
         {
             get
             {
-                return N502BParameters.ЛампочкаСфазировано && N502BParameters.ТумблерЭлектрооборудование &&
-                       N502BParameters.ТумблерВыпрямитель27В && N502BParameters.ТумблерН15;
+                return N15Parameters.Включен;
             }
         }
 

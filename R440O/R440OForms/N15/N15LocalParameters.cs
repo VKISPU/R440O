@@ -2,33 +2,30 @@
 {
     public static class N15LocalParameters
     {
-        public static bool _локТумблерЦ300М1;
-        public static bool _локТумблерЦ300М2;
-        public static bool _локТумблерЦ300М3;
-        public static bool _локТумблерЦ300М4;
-        public static bool _локТумблерН12С;
-        public static bool _локТумблерМШУ;
-        public static bool _локТумблерБМА_1;
-        public static bool _локТумблерБМА_2;
-        public static bool _локТумблерА205Base; //чтобы при записи локальных параметров в него не записывалось значение _локТумблерА20512
-        public static bool _локТумблерА20512;
-        public static bool _локТумблерАФСС;
-        public static bool _локТумблерА1;
-        public static bool _локТумблерА403;
-        public static bool _локТумблерК1_1;
-        public static bool _локТумблерК1_2;
-        public static bool _локТумблерА30412;
-        public static bool _локТумблерБ1_1;
-        public static bool _локТумблерБ1_2;
-        public static bool _локТумблерБ2_1;
-        public static bool _локТумблерБ2_2;
-        public static bool _локТумблерБ3_1;
-        public static bool _локТумблерБ3_2;
-        public static bool _локТумблерДАБ_5;
-        public static bool _локТумблерР_Н;
-        public static bool _локТумблерАнтЭкв;
-        public static bool _локТумблерТлфТлгПрм;
-        public static bool _локТумблерТлфТлгПрд;
+        private static bool _локТумблерЦ300М1;
+        private static bool _локТумблерЦ300М2;
+        private static bool _локТумблерЦ300М3;
+        private static bool _локТумблерЦ300М4;
+        private static bool _локТумблерН12С;
+        private static bool _локТумблерМШУ;
+        private static bool _локТумблерБМА1;
+        private static bool _локТумблерБМА2;
+        private static bool _локТумблерА205Base; //чтобы при записи локальных параметров в него не записывалось значение _локТумблерА20512
+        private static bool _локТумблерА20512;
+        private static bool _локТумблерАФСС;
+        private static bool _локТумблерА1;
+        private static bool _локТумблерА403;
+        private static bool _локТумблерК11;
+        private static bool _локТумблерК12;
+        private static bool _локТумблерА30412;
+        private static bool _локТумблерБ1_1;
+        private static bool _локТумблерБ1_2;
+        private static bool _локТумблерБ2_1;
+        private static bool _локТумблерБ2_2;
+        private static bool _локТумблерБ3_1;
+        private static bool _локТумблерБ3_2;
+        private static bool _локТумблерДАБ_5;
+        private static bool _локТумблерР_Н;
 
         ////Тумблеры
         public static bool локТумблерЦ300М1
@@ -87,19 +84,19 @@
 
         public static bool локТумблерБМА_1
         {
-            get { return _локТумблерБМА_1; }
+            get { return _локТумблерБМА1; }
             set
             {
-                _локТумблерБМА_1 = value;
+                _локТумблерБМА1 = value;
             }
         }
 
         public static bool локТумблерБМА_2
         {
-            get { return _локТумблерБМА_2; }
+            get { return _локТумблерБМА2; }
             set
             {
-                _локТумблерБМА_2 = value;
+                _локТумблерБМА2 = value;
             }
         }
 
@@ -112,7 +109,6 @@
             set
             {
                 _локТумблерА205Base = value;
-                N15Parameters.ResetParameters();
             }
         }
 
@@ -122,7 +118,6 @@
             set
             {
                 _локТумблерА20512 = value;
-                N15Parameters.ResetParameters();
             }
         }
 
@@ -155,10 +150,10 @@
 
         public static bool локТумблерК1_1
         {
-            get { return _локТумблерК1_1; }
+            get { return _локТумблерК11; }
             set
             {
-                _локТумблерК1_1 = value;            }
+                _локТумблерК11 = value;            }
         }
 
         public static bool локТумблерК1_2 { get; set; }
@@ -238,33 +233,6 @@
             set
             {
                 _локТумблерР_Н = value;
-            }
-        }
-
-        public static bool локТумблерАнтЭкв
-        {
-            get { return _локТумблерАнтЭкв; }
-            set
-            {
-                _локТумблерАнтЭкв = value;
-            }
-        }
-
-        public static bool локТумблерТлфТлгПрм
-        {
-            get { return _локТумблерТлфТлгПрм; }
-            set
-            {
-                _локТумблерТлфТлгПрм = value;
-            }
-        }
-
-        public static bool локТумблерТлфТлгПрд
-        {
-            get { return _локТумблерТлфТлгПрд; }
-            set
-            {
-                _локТумблерТлфТлгПрд = value;
             }
         }
     }

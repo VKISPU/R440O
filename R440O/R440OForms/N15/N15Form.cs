@@ -84,33 +84,38 @@ namespace R440O.R440OForms.N15
             foreach (Control item in Panel.Controls)
             {
                 if (!item.Name.Contains("Тумблер")) continue;
-                propertyList = typeof(N15LocalParameters).GetProperties();
+                propertyList = typeof (N15LocalParameters).GetProperties();
                 foreach (var property in propertyList.Where(property => ("лок" + item.Name) == property.Name))
                 {
-                    if (item.Name.Contains("ТумблерА20512") ||
-                        item.Name.Contains("ТумблерАнтЭкв") ||
-                        item.Name.Contains("ТумблерТлфТлгПрм") ||
-                        item.Name.Contains("ТумблерТлфТлгПрд"))
-                    {
-                        item.BackgroundImage = (bool)property.GetValue(null)
-                            ? ControlElementImages.tumblerType4Up
-                            : ControlElementImages.tumblerType4Down;
-                    }
-                    else
-                    {
-                        item.BackgroundImage = (bool)property.GetValue(null)
-                            ? ControlElementImages.tumblerType3Up
-                            : ControlElementImages.tumblerType3Down;
-                    }
+                    item.BackgroundImage = (bool) property.GetValue(null)
+                        ? ControlElementImages.tumblerType3Up
+                        : ControlElementImages.tumblerType3Down;
                 }
             }
 
-            //// Тумблеры работающие без нажатия кнопки ВКЛ
+            ТумблерА20512.BackgroundImage = N15LocalParameters.локТумблерА20512
+                            ? ControlElementImages.tumblerType4Up
+                            : ControlElementImages.tumblerType4Down;
+
+            #region Тумблеры работающие без нажатия кнопки ВКЛ
             ТумблерА503Б.BackgroundImage = N15Parameters.ТумблерА503Б ? ControlElementImages.tumblerType3Up
                             : ControlElementImages.tumblerType3Down;
 
             Тумблер5МГц25МГц3.BackgroundImage = N15Parameters.Тумблер5МГц25МГц3 ? ControlElementImages.tumblerType2Up
                             : ControlElementImages.tumblerType2Down;
+
+            ТумблерАнтЭкв.BackgroundImage = N15Parameters.ТумблерАнтЭкв
+                            ? ControlElementImages.tumblerType4Up
+                            : ControlElementImages.tumblerType4Down;
+
+            ТумблерТлфТлгПрд.BackgroundImage = N15Parameters.ТумблерТлфТлгПрд
+                            ? ControlElementImages.tumblerType4Up
+                            : ControlElementImages.tumblerType4Down;
+
+            ТумблерТлфТлгПрм.BackgroundImage = N15Parameters.ТумблерТлфТлгПрм
+                            ? ControlElementImages.tumblerType4Up
+                            : ControlElementImages.tumblerType4Down; 
+            #endregion
 
         }
 
@@ -146,6 +151,10 @@ namespace R440O.R440OForms.N15
 
         #region Обновление элементов управления
 
+        /// <summary>
+        /// Перерисовка одиночных тумблеров, которые включаются через кнопку СТАНЦИЯ.ВКЛ.
+        /// </summary>
+        /// <param name="parameterName"></param>
         private void RefreshFormElement(string parameterName)
         {
             var item = Panel.Controls.Find(parameterName, false)[0];
@@ -155,22 +164,14 @@ namespace R440O.R440OForms.N15
             var propertyList = typeof(N15LocalParameters).GetProperties();
             foreach (var property in propertyList.Where(property => ("лок" + item.Name) == property.Name))
             {
-                if (item.Name.Contains("ТумблерА20512") ||
-                    item.Name.Contains("ТумблерАнтЭкв") ||
-                    item.Name.Contains("ТумблерТлфТлгПрм") ||
-                    item.Name.Contains("ТумблерТлфТлгПрд"))
-                {
-                    item.BackgroundImage = (bool)property.GetValue(null)
-                        ? ControlElementImages.tumblerType4Up
-                        : ControlElementImages.tumblerType4Down;
-                }
-                else
-                {
-                    item.BackgroundImage = (bool)property.GetValue(null)
+                item.BackgroundImage = (bool)property.GetValue(null)
                         ? ControlElementImages.tumblerType3Up
                         : ControlElementImages.tumblerType3Down;
-                }
             }
+
+            ТумблерА20512.BackgroundImage = N15LocalParameters.локТумблерА20512
+                            ? ControlElementImages.tumblerType4Up
+                            : ControlElementImages.tumblerType4Down;
         }
 
 
@@ -487,6 +488,22 @@ namespace R440O.R440OForms.N15
         {
             N15Parameters.Тумблер5МГц25МГц3 = !N15Parameters.Тумблер5МГц25МГц3;
         }
+
+        private void ТумблерАнтЭкв_Click(object sender, EventArgs e)
+        {
+            N15Parameters.ТумблерАнтЭкв = !N15Parameters.ТумблерАнтЭкв;
+        }
+
+        private void ТумблерТлфТлгПрм_Click(object sender, EventArgs e)
+        {
+            N15Parameters.ТумблерТлфТлгПрм = !N15Parameters.ТумблерТлфТлгПрм;
+        }
+
+        private void ТумблерТлфТлгПрд_Click(object sender, EventArgs e)
+        {
+            N15Parameters.ТумблерТлфТлгПрд = !N15Parameters.ТумблерТлфТлгПрд;
+        }
+        
         #endregion
         
     }

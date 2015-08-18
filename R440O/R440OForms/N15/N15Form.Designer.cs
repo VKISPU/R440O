@@ -34,6 +34,7 @@
             this.ЛампочкаА205Неиспр1 = new System.Windows.Forms.PictureBox();
             this.OpenInsideButtonRight = new System.Windows.Forms.Button();
             this.OpenInsideButtonLeft = new System.Windows.Forms.Button();
+            this.Тумблер5МГц25МГц3 = new System.Windows.Forms.Button();
             this.ТумблерТлфТлгПрд = new System.Windows.Forms.Button();
             this.ТумблерТлфТлгПрм = new System.Windows.Forms.Button();
             this.ТумблерАнтЭкв = new System.Windows.Forms.Button();
@@ -130,7 +131,6 @@
             this.КнопкаПРМНаведениеЦ300М1 = new System.Windows.Forms.Button();
             this.КнопкаСтанцияВыкл = new System.Windows.Forms.Button();
             this.КнопкаСтанцияВкл = new System.Windows.Forms.Button();
-            this.Тумблер5МГц25МГц3 = new System.Windows.Forms.Button();
             this.Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаА205Неиспр2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаА205Неиспр1)).BeginInit();
@@ -368,6 +368,22 @@
             this.OpenInsideButtonLeft.UseVisualStyleBackColor = false;
             this.OpenInsideButtonLeft.Click += new System.EventHandler(this.N15ButtonInside1_Click);
             // 
+            // Тумблер5МГц25МГц3
+            // 
+            this.Тумблер5МГц25МГц3.BackColor = System.Drawing.Color.Transparent;
+            this.Тумблер5МГц25МГц3.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Down;
+            this.Тумблер5МГц25МГц3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Тумблер5МГц25МГц3.FlatAppearance.BorderSize = 0;
+            this.Тумблер5МГц25МГц3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Тумблер5МГц25МГц3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Тумблер5МГц25МГц3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Тумблер5МГц25МГц3.Location = new System.Drawing.Point(944, 375);
+            this.Тумблер5МГц25МГц3.Name = "Тумблер5МГц25МГц3";
+            this.Тумблер5МГц25МГц3.Size = new System.Drawing.Size(34, 51);
+            this.Тумблер5МГц25МГц3.TabIndex = 70;
+            this.Тумблер5МГц25МГц3.UseVisualStyleBackColor = false;
+            this.Тумблер5МГц25МГц3.Click += new System.EventHandler(this.Тумблер5МГц25МГц3_Click);
+            // 
             // ТумблерТлфТлгПрд
             // 
             this.ТумблерТлфТлгПрд.BackColor = System.Drawing.Color.Transparent;
@@ -382,7 +398,7 @@
             this.ТумблерТлфТлгПрд.Size = new System.Drawing.Size(34, 51);
             this.ТумблерТлфТлгПрд.TabIndex = 70;
             this.ТумблерТлфТлгПрд.UseVisualStyleBackColor = false;
-            this.ТумблерТлфТлгПрд.Click += new System.EventHandler(this.Тумблер_Click);
+            this.ТумблерТлфТлгПрд.Click += new System.EventHandler(this.ТумблерТлфТлгПрд_Click);
             // 
             // ТумблерТлфТлгПрм
             // 
@@ -398,7 +414,7 @@
             this.ТумблерТлфТлгПрм.Size = new System.Drawing.Size(34, 51);
             this.ТумблерТлфТлгПрм.TabIndex = 69;
             this.ТумблерТлфТлгПрм.UseVisualStyleBackColor = false;
-            this.ТумблерТлфТлгПрм.Click += new System.EventHandler(this.Тумблер_Click);
+            this.ТумблерТлфТлгПрм.Click += new System.EventHandler(this.ТумблерТлфТлгПрм_Click);
             // 
             // ТумблерАнтЭкв
             // 
@@ -414,7 +430,7 @@
             this.ТумблерАнтЭкв.Size = new System.Drawing.Size(34, 51);
             this.ТумблерАнтЭкв.TabIndex = 68;
             this.ТумблерАнтЭкв.UseVisualStyleBackColor = false;
-            this.ТумблерАнтЭкв.Click += new System.EventHandler(this.Тумблер_Click);
+            this.ТумблерАнтЭкв.Click += new System.EventHandler(this.ТумблерАнтЭкв_Click);
             // 
             // ЛампочкаДАБ_5
             // 
@@ -1600,22 +1616,6 @@
             this.КнопкаСтанцияВкл.UseVisualStyleBackColor = false;
             this.КнопкаСтанцияВкл.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаСтанцияВкл_MouseDown);
             this.КнопкаСтанцияВкл.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаСтанцияВкл_MouseUp);
-            // 
-            // Тумблер5МГц25МГц3
-            // 
-            this.Тумблер5МГц25МГц3.BackColor = System.Drawing.Color.Transparent;
-            this.Тумблер5МГц25МГц3.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Down;
-            this.Тумблер5МГц25МГц3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Тумблер5МГц25МГц3.FlatAppearance.BorderSize = 0;
-            this.Тумблер5МГц25МГц3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Тумблер5МГц25МГц3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Тумблер5МГц25МГц3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Тумблер5МГц25МГц3.Location = new System.Drawing.Point(944, 375);
-            this.Тумблер5МГц25МГц3.Name = "Тумблер5МГц25МГц3";
-            this.Тумблер5МГц25МГц3.Size = new System.Drawing.Size(34, 51);
-            this.Тумблер5МГц25МГц3.TabIndex = 70;
-            this.Тумблер5МГц25МГц3.UseVisualStyleBackColor = false;
-            this.Тумблер5МГц25МГц3.Click += new System.EventHandler(this.Тумблер5МГц25МГц3_Click);
             // 
             // N15Form
             // 

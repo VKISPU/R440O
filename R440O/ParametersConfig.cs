@@ -46,10 +46,10 @@
 
             #region Настройка по малому шлейфу
             // Подготовка Н-15
-            N15LocalParameters._локТумблерЦ300М1 = true;
-            N15LocalParameters._локТумблерМШУ = true;
-            N15LocalParameters._локТумблерА20512 = true;
-            N15LocalParameters._локТумблерА205Base = true;
+            N15LocalParameters.локТумблерЦ300М1 = true;
+            N15LocalParameters.локТумблерМШУ = true;
+            N15LocalParameters.локТумблерА20512 = true;
+            N15LocalParameters.локТумблерА205Base = true;
             N15Parameters.ТумблерА503Б = true;
             N15Parameters.РегуляторУровень = 100;
 
@@ -82,7 +82,7 @@
 
             //// Проверка БМАБ и БМБ
             //БМА
-            N15LocalParameters._локТумблерБМА_1 = true;
+            N15LocalParameters.локТумблерБМА_1 = true;
             BMA_M_1Parameters.КнопкаПитаниеВКЛ = true;
 
 
@@ -90,9 +90,12 @@
             N15LocalParameters.локТумблерАФСС = true;
             Kontur_P3Parameters.ТумблерСеть = EТумблерСеть.ВКЛ;
 
-            #region Дискрет
+            #region Дискрет и ПУЛы
 
             N15Parameters.Тумблер5МГц25МГц3 = true;
+            N15LocalParameters.локТумблерА1 = true;
+            N15Parameters.ТумблерТлфТлгПрд = true;
+            N15Parameters.ТумблерТлфТлгПрм = true;
             P220_27G_2Parameters.ТумблерСеть = true;
             P220_27G_2Parameters.ТумблерМуДу = true;
             P220_27G_3Parameters.ТумблерСеть = true;

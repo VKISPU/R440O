@@ -62,19 +62,19 @@ namespace R440O.R440OForms.A1
             {
                 var item = itemIn;
                 if (!item.Name.Contains("Лампочка")) continue;
-                var fieldList = typeof(A1Parameters).GetFields();
-                foreach (var field in fieldList.Where(field => item.Name == field.Name))
+                var propertiesList = typeof(A1Parameters).GetProperties();
+                foreach (var prop in propertiesList.Where(field => item.Name == field.Name))
                 {
                     if (item.Name.Contains("ЛампочкаФСПК") ||
                         item.Name.Contains("ЛампочкаПУЛ1_2") ||
                         item.Name.Contains("ЛампочкаПУЛ2_2") ||
                         item.Name.Contains("ЛампочкаПУЛ3_2") ||
                         item.Name.Contains("ЛампочкаПитание"))
-                        item.BackgroundImage = (bool)field.GetValue(null)
+                        item.BackgroundImage = (bool)prop.GetValue(null)
                             ? ControlElementImages.lampType3OnRed
                             : null;
                     else
-                        item.BackgroundImage = (bool)field.GetValue(null)
+                        item.BackgroundImage = (bool)prop.GetValue(null)
                             ? ControlElementImages.lampType2OnRed
                             : null;
                     break;
