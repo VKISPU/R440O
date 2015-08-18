@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 using R440O.СостоянияЭлементов.Контур_П;
+using R440O.ThirdParty;
 
 namespace R440O.R440OForms.Kontur_P3.Параметры
 {
@@ -14,7 +15,12 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
         public static bool ЛампочкаНеиспр { get; set; }
         public static bool ЛампочкаКонтроль = false;
         public static bool ЛампочкаСбойПодписи { get; set; }
-        public static bool ЛампочкаПередача = false;
+
+        private static bool _ЛампочкаПередача;
+        public static bool ЛампочкаПередача
+        {
+            get { return ЛампочкаСеть && ЗначениеКнопкиКП4Контроль && _ЛампочкаПередача; }
+        }
         public static bool ЛампочкаОтбой = false;
         public static bool ЛампочкаИнформПринята = false;
         #endregion
@@ -88,19 +94,71 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
             }
         }
 
+        private static IDisposable timer_Мигание = null;
+        private static IDisposable timer_ЛампочкаПередача = null;
+        private static bool Мигание;
         private static EПереключательПриоритет НомерКанала;
         private static bool ЗначениеКнопкиКП4Контроль;
-        public static bool КнопкаВызов {
+        public static bool КнопкаВызов
+        {
             set
             {
                 НомерКанала = ПереключательПриоритет;
                 ЗначениеКнопкиКП4Контроль = (КнопкаКП4Контроль) ? true : false;
+                if (timer_Мигание != null)
+                    timer_Мигание.Dispose();
+                timer_Мигание = EasyTimer.SetInterval(() =>
+                {
+                    Мигание = !Мигание;
+                    Refresh();
+                }, 2000);
+                if (timer_ЛампочкаПередача != null)
+                    timer_ЛампочкаПередача.Dispose();
+                timer_ЛампочкаПередача = EasyTimer.SetTimeout(() =>
+                {
+                    _ЛампочкаПередача = false;
+                    Refresh();
+                }, 6000);
+                _ЛампочкаПередача = true;
+                ЗначениеАдресК = "000";
+                ЗначениеПодпись1 = "000";
+                ЗначениеПодпись2 = "000";
+                ЗначениеПодпись3 = "000";
+
+                ЗначениеИндексГруппы = "0";
+                ИндексГруппы = -1;
+
+                ЗначениеИнформация = "";
+                ЗначениеГруппа = new string[] { "000", "000", "000", "000", "000", "000", "000", "000", "^00" };
                 Refresh();
             }
         }
 
         public static bool КнопкаОтбой { get; set; }
-        public static bool КнопкаИнформ { get; set; }
+        public static bool КнопкаИнформ
+        {
+            set
+            {
+                НомерКанала = ПереключательПриоритет;
+                ЗначениеКнопкиКП4Контроль = (КнопкаКП4Контроль) ? true : false;
+                if (timer_Мигание != null)
+                    timer_Мигание.Dispose();
+                if (timer_ЛампочкаПередача != null)
+                    timer_ЛампочкаПередача.Dispose();
+                timer_ЛампочкаПередача = EasyTimer.SetTimeout(() =>
+                {
+                    _ЛампочкаПередача = false;
+                    Refresh();
+                }, 6000);
+                _ЛампочкаПередача = true;
+                timer_Мигание = EasyTimer.SetInterval(() =>
+                {
+                    Мигание = !Мигание;
+                    Refresh();
+                }, 2000);
+                Refresh();
+            }
+        }
         public static bool КнопкаНаборКК { get; set; }
         public static bool КнопкаКонтрольЗанятости { get; set; }
         public static bool КнопкаИнформКОН { get; set; }
@@ -221,12 +279,12 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
                     ИндексГруппы++;
                     if (ИндексГруппы > 0)
                     {
-                        if(ЗначениеГруппа[ИндексГруппы - 1] == "^00")
+                        if (ЗначениеГруппа[ИндексГруппы - 1] == "^00")
                             ИндексГруппы = 0;
                         else
                             if (ИндексГруппы > 8)
                                 ИндексГруппы = 0;
-                    }                    
+                    }
                     ЗначениеИндексГруппы = Convert.ToString(ИндексГруппы + 1);
                     ЗначениеИнформация = ЗначениеГруппа[ИндексГруппы];
                     Refresh();
@@ -234,7 +292,7 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
             }
         }
 
-      
+
         private static void ДобавитьЧислоВПоследнийРегистр(int number, ref string str)
         {
             str = Convert.ToString(str[1]) + Convert.ToString(str[2]) + Convert.ToString(number);
@@ -255,6 +313,11 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
 
             ЗначениеКнопкиКП4Контроль = false;
             КнопкаКП4Контроль = false;
+            Мигание = false;
+            if (timer_Мигание != null)
+                timer_Мигание.Dispose();
+            if (timer_ЛампочкаПередача != null)
+                timer_ЛампочкаПередача.Dispose();
             Refresh();
         }
     }

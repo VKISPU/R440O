@@ -251,6 +251,7 @@ namespace R440O.R440OForms.Kontur_P3
         private void Kontur_P3КнопкаИнформ_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаИнформ.BackgroundImage = null;
+            Kontur_P3Parameters.КнопкаИнформ = true;
         }
 
         private void Kontur_P3КнопкаИнформ_MouseUp(object sender, MouseEventArgs e)
@@ -649,6 +650,9 @@ namespace R440O.R440OForms.Kontur_P3
             ЛампочкаНеиспр.BackgroundImage = Kontur_P3Parameters.ЛампочкаНеиспр
                 ? ControlElementImages.lampType5OnRed
                 : null;
+            ЛампочкаПередача.BackgroundImage = Kontur_P3Parameters.ЛампочкаПередача
+               ? ControlElementImages.lampType9OnGreen
+               : null;
             #endregion
 
             #region Табло
