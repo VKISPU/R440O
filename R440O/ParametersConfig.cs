@@ -1,4 +1,6 @@
-﻿namespace R440O
+﻿using R440O.R440OForms.N18_M;
+
+namespace R440O
 {
     using Parameters;
     using R440OForms.A205M_1;
@@ -92,6 +94,7 @@
 
             #region Дискрет и ПУЛы
 
+            N18_MParameters.ПереключательПРД = 2;
             N15Parameters.Тумблер5МГц25МГц3 = true;
             N15LocalParameters.локТумблерА1 = true;
             N15Parameters.ТумблерТлфТлгПрд = true;

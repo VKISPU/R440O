@@ -235,7 +235,11 @@ namespace R440O.R440OForms.N18_M
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
             angle = N18_MParameters.ПереключательПрмСс1 * 40 - 120;
-            N18_MПереключательПРД.BackgroundImage =
+            N18_MПереключательПРМСС1.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+
+            angle = N18_MParameters.ПереключательПрмСс2 * 40 - 120;
+            N18_MПереключательПРМСС2.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
             angle = N18_MParameters.Переключатель48ПрмЩв * 50 - 75;

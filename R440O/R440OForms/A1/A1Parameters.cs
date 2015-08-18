@@ -24,19 +24,22 @@
                     return new SignalArgs
                     {
                         GroupSpeed = 4.8,
-                        ChanelSpeed = new[] { -1, 2.4, 1.2, 0, 0.1, 0.1, 0.05, 0.02}
+                        ChanelSpeed = new[] { -1, 2.4, 1.2, 0, 0.1, 0.1, 0.05, 0.025 },
+                        Level = 50
                     };
                     else return new SignalArgs
                     {
                         GroupSpeed = 4.8,
-                        ChanelSpeed = new[] { -1, 1.2, 1.2, 1.2, 0.1, 0.1, 0.05, 0.02 }
+                        ChanelSpeed = new[] { -1, 1.2, 1.2, 1.2, 0.1, 0.1, 0.05, 0.025 },
+                        Level = 50
                     };
 
                 if (КнопкаСкоростьГр)
                     return new SignalArgs
                     {
                         GroupSpeed = 2.4,
-                        ChanelSpeed = new[] { -1, 0, 1.2, 0, 0.1, 0.1, 0.05, 0.02 }
+                        ChanelSpeed = new[] { -1, 0, 1.2, 0, 0.1, 0.1, 0.05, 0.025 },
+                        Level = 50
                     };
                 return null;
             }

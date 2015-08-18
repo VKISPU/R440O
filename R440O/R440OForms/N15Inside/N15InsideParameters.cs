@@ -1,4 +1,6 @@
-﻿using R440O.R440OForms.A1;
+﻿using System;
+using System.Windows.Forms;
+using R440O.R440OForms.A1;
 using R440O.R440OForms.N15;
 using R440O.R440OForms.N18_M;
 
@@ -22,11 +24,12 @@ namespace R440O.R440OForms.N15Inside
             get
             {
                 if (!Включен) return null;
-                if (A1Parameters.ВыходнойСигнал != null && N18_MParameters.ПереключательПРД == 2)
+                if (N15Parameters.ТумблерТлфТлгПрд && A1Parameters.ВыходнойСигнал != null && N18_MParameters.ПереключательПРД == 2 &&
+                    Math.Abs(СкоростьПередачиПРД1 - A1Parameters.ВыходнойСигнал.GroupSpeed) <= 0.5)
                 {
                     var transition = A1Parameters.ВыходнойСигнал;
                     transition.Modulation = ТумблерПул48ПРДЧтОфт1;
-                    transition.GroupSpeed = ПереключательПУЛ4801;
+                    transition.GroupSpeed = СкоростьПередачиПРД1;
                     return transition;
                 }
                     return null;
@@ -139,7 +142,28 @@ namespace R440O.R440OForms.N15Inside
                 }
             }
         }
-        
+
+        private static double СкоростьПередачиПРД1
+        {
+            get
+            {
+                switch (_переключательПУЛ48ПРД1)
+                {
+                    case 1:
+                        return 1.2;
+                    case 2:
+                        return 2.4;
+                    case 3:
+                        return 4.8;
+                    case 4:
+                        return 5.2;
+                    case 5:
+                        return 48;
+                }
+                return 0;
+            }
+        }
+
         private static int _переключательПУЛ48ПРД1 = 1;
 
         /// <summary>
@@ -193,6 +217,7 @@ namespace R440O.R440OForms.N15Inside
 
         private static void OnParameterChanged()
         {
+            var g = ВыходПередающегоТракта;
             var handler = ParameterChanged;
             if (handler != null) handler();
         }

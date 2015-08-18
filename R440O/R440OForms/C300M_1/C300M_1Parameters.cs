@@ -711,7 +711,7 @@ namespace R440O.R440OForms.C300M_1
                 && signal.Wave == Волна 
                 && signal.Modulation == ТумблерВведениеString 
                 && signal.Modulation == ТумблерВидМодуляцииString
-                && (Math.Abs(signal.GroupSpeed - ТекущаяСкоростьРаботы) <= 4.0)) return true;
+                && (Math.Abs(signal.GroupSpeed - ТекущаяСкоростьРаботы) <= 0.5)) return true;
             return false;
         }
 
