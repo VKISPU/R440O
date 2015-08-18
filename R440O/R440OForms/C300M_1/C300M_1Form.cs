@@ -22,7 +22,7 @@ namespace R440O.R440OForms.C300M_1
         public C300M_1Form()
         {
             InitializeComponent();
-            C300M_1Parameters.RefreshForm += RefreshForm;
+            C300M_1Parameters.ParameterChanged += RefreshForm;
             RefreshForm();
         }
 
@@ -322,28 +322,26 @@ namespace R440O.R440OForms.C300M_1
         {
             КнопкаПитаниеВкл.BackgroundImage = null;
             КнопкаПитаниеВкл.Text = "";
-            C300M_1Parameters.КнопкаПитаниеВкл = true;
+            C300M_1Parameters.Питание = true;
         }
 
         private void КнопкаПитаниеВкл_MouseUp(object sender, MouseEventArgs e)
         {
             КнопкаПитаниеВкл.BackgroundImage = ControlElementImages.buttonSquareWhite;
             КнопкаПитаниеВкл.Text = "ВКЛ";
-            C300M_1Parameters.КнопкаПитаниеВкл = false;
         }
 
         private void КнопкаПитаниеВыкл_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаПитаниеВыкл.BackgroundImage = null;
             КнопкаПитаниеВыкл.Text = "";
-            C300M_1Parameters.КнопкаПитаниеВыкл = true;
+            C300M_1Parameters.Питание = true;
         }
 
         private void КнопкаПитаниеВыкл_MouseUp(object sender, MouseEventArgs e)
         {
             КнопкаПитаниеВыкл.BackgroundImage = ControlElementImages.buttonSquareWhite;
             КнопкаПитаниеВыкл.Text = "ОТКЛ";
-            C300M_1Parameters.КнопкаПитаниеВыкл = false;
         }
         #endregion
 

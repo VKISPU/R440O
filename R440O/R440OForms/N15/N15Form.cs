@@ -28,7 +28,7 @@ namespace R440O.R440OForms.N15
         public N15Form()
         {
             this.InitializeComponent();
-            N15Parameters.RefreshForm += RefreshForm;
+            N15Parameters.ParameterChanged += RefreshForm;
             RefreshForm();
         }
 

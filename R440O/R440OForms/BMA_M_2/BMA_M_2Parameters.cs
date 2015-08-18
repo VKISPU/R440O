@@ -15,6 +15,18 @@ namespace R440O.Parameters
 
     class BMA_M_2Parameters
     {
+
+        public static bool Питание
+        {
+            get { return _питание; }
+            set
+            {
+                _питание = value;
+                    N15Parameters.OnParameterChanged();
+                    BMBParameters.ResetParameters();
+            }
+        }
+        private static bool _питание;
         #region Переключатели
         #region ПереключательКонтроль
         private static EПереключательКонтроль _ПереключательКонтроль = EПереключательКонтроль.РАБОТА_1;
@@ -160,9 +172,7 @@ namespace R440O.Parameters
         {
             set
             {
-                N15Parameters.ЛампочкаБМА_2 = false;
-                N15Parameters.Refresh();
-                BMBParameters.ResetParameters();
+                Питание = false;
             }
         }
 
@@ -171,9 +181,7 @@ namespace R440O.Parameters
             get { return N15Parameters.ЛампочкаБМА_2; }
             set
             {
-                N15Parameters.ЛампочкаБМА_2 = N15Parameters.Лампочка27В && N15Parameters.ЛампочкаН15БП;
-                N15Parameters.Refresh();
-                BMBParameters.ResetParameters();
+                Питание = true;
             }
         }
 
