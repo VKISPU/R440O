@@ -12,9 +12,23 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
 
         #region Лампочки
         public static bool ЛампочкаКП5Прием = false;
-        public static bool ЛампочкаНеиспр { get; set; }
+
+        public static bool ЛампочкаСбойПодписи
+        {
+            get
+            {
+                return ЛампочкаСеть && (КнопкаПодпись1 || КнопкаПодпись2 || КнопкаПодпись3);
+            }
+        }
+
+        public static bool ЛампочкаНеиспр
+        {
+            get
+            {
+                return ЛампочкаСеть && (КнопкаПодпись1 || КнопкаПодпись2 || КнопкаПодпись3);
+            }
+        }
         public static bool ЛампочкаКонтроль = false;
-        public static bool ЛампочкаСбойПодписи { get; set; }
 
         private static bool _ЛампочкаПередача;
         public static bool ЛампочкаПередача
@@ -196,7 +210,8 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
             get { return _КнопкаНаборКК; }
             set
             {
-                КнопкаНаборККНажата = !ЛампочкаИнформПринята;
+                КнопкаНаборККНажата = true;
+                КнопкаНаборККОтжата = true;
                 _КнопкаНаборКК = value;
                 Refresh();
             }
