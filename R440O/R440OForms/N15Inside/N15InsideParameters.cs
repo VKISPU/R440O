@@ -1,15 +1,15 @@
-﻿using System;
-using R440O.R440OForms.A1;
-using R440O.R440OForms.N15;
-using R440O.R440OForms.N18_M;
-
-namespace R440O.R440OForms.N15Inside
+﻿namespace R440O.R440OForms.N15Inside
 {
+    using A1;
+    using C300M_1;
+    using N15;
+    using N18_M;
     using BaseClasses;
     using ОбщиеТипыДанных;
 
     class N15InsideParameters
     {
+        #region Работа блока
         public static bool Включен
         {
             get
@@ -22,19 +22,34 @@ namespace R440O.R440OForms.N15Inside
         {
             get
             {
-                if (!Включен) return null;
-                if (N15Parameters.ТумблерТлфТлгПрд && A1Parameters.ВыходнойСигнал != null && N18_MParameters.ПереключательПРД == 2 &&
-                    Math.Abs(СкоростьПередачиПРД1 - A1Parameters.ВыходнойСигнал.GroupSpeed) <= 0.5)
+                if (Включен &&
+                    N15Parameters.ТумблерТлфТлгПрд && A1Parameters.ВыходнойСигнал != null && N18_MParameters.ПереключательПРД == 2 &&
+                    SpeedTester.IsEquivalent(СкоростьПередачиПРД1, A1Parameters.ВыходнойСигнал.GroupSpeed))
                 {
                     var transition = A1Parameters.ВыходнойСигнал;
                     transition.Modulation = ТумблерПул48ПРДЧтОфт1;
                     transition.GroupSpeed = СкоростьПередачиПРД1;
                     return transition;
                 }
-                    return null;
+                return null;
             }
-            
+
         }
+
+        public static SignalArgs ВыходПриемногоТракта
+        {
+            get
+            {
+                if (Включен &&
+                    N15Parameters.ТумблерТлфТлгПрм && C300M_1Parameters.ВыходнойСигнал != null &&
+                    SpeedTester.IsEquivalent(C300M_1Parameters.ВыходнойСигнал.GroupSpeed, СкоростьПриемаПРМ1) &&
+                    C300M_1Parameters.ВыходнойСигнал.Modulation == ТумблерПул480ЧтОфт1)
+                    return C300M_1Parameters.ВыходнойСигнал;
+                return null;
+            }
+
+        } 
+        #endregion
 
         #region Тумблеры
         private static Модуляция _тумблерПул480ЧтОфт1 = Модуляция.ЧТ;
@@ -84,6 +99,35 @@ namespace R440O.R440OForms.N15Inside
         #endregion
 
         #region Переключатели
+
+        private static double СкоростьПриемаПРМ1
+        {
+            get
+            {
+                switch (_переключательПУЛ48ПРД1)
+                {
+                    case 1:
+                        return 1.2;
+                    case 2:
+                        return 2.4;
+                    case 3:
+                        return 4.8;
+                    case 4:
+                        return 5.2;
+                    case 5:
+                        return 48;
+                    case 6:
+                        return 96;
+                    case 7:
+                        return 144;
+                    case 8:
+                        return 240;
+                    case 9:
+                        return 480;
+                }
+                return 0;
+            }
+        }
 
         private static int _переключательПУЛ4801 = 1;
 

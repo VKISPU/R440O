@@ -508,9 +508,9 @@ namespace R440O.R440OForms.C300M_1
         {
             SetSearchInterval();
             Сигнал = false;
-            if (!КнопкаПоиск && ПринятыйСигнал != null)
+            if (!КнопкаПоиск && ВыходнойСигнал != null)
             {
-                switch (ПринятыйСигнал.Modulation)
+                switch (ВыходнойСигнал.Modulation)
                 {
                     case Модуляция.ОФТ:
                         if (ИндикаторСигнал < 2 && ИндикаторСигнал > -2)
@@ -582,7 +582,7 @@ namespace R440O.R440OForms.C300M_1
             }
         }
 
-        private static SignalArgs ПринятыйСигнал
+        public static SignalArgs ВыходнойСигнал
         {
             get
             {
