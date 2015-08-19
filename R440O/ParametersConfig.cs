@@ -1,4 +1,5 @@
-﻿using R440O.R440OForms.N15Inside;
+﻿using R440O.R440OForms.B1_1;
+using R440O.R440OForms.N15Inside;
 using R440O.R440OForms.N18_M;
 using R440O.ОбщиеТипыДанных;
 
@@ -114,6 +115,8 @@ namespace R440O
             N15InsideParameters.ПереключательПУЛ48ПРД1 = 3;
             N15InsideParameters.ТумблерПул48ПРДЧтОфт1 = Модуляция.ОФТ;
 
+            // Приемная часть
+            N15LocalParameters.локТумблерБ1_1 = true;
 
             #endregion
 

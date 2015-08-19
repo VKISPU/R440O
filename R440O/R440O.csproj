@@ -81,7 +81,7 @@
     <Compile Include="InternalBlocks\MSHUParameters.cs" />
     <Compile Include="ParametersConfig.cs" />
     <Compile Include="R440OForms\A403_1\A403_1Parameters.cs" />
-    <Compile Include="Parameters\B1_1Parameters.cs" />
+    <Compile Include="R440OForms\B1_1\B1_1Parameters.cs" />
     <Compile Include="Parameters\B1_2Parameters.cs" />
     <Compile Include="Parameters\B2_1Parameters.cs" />
     <Compile Include="Parameters\B2_2Parameters.cs" />

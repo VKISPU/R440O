@@ -260,7 +260,6 @@
 
         private static void OnParameterChanged()
         {
-            var g = ВыходПередающегоТракта;
             var handler = ParameterChanged;
             if (handler != null) handler();
         }

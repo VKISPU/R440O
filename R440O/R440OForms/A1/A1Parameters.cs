@@ -5,6 +5,7 @@
 
     public static class A1Parameters
     {
+        #region Работа блока
         public static bool Включен
         {
             get
@@ -21,12 +22,12 @@
                 if (!Включен) return null;
                 if (!КнопкаСкоростьГр)
                     if (КнопкаСкоростьАб_1ТЛФК)
-                    return new SignalArgs
-                    {
-                        GroupSpeed = 4.8,
-                        ChanelSpeed = new[] { -1, 2.4, 1.2, 0, 0.1, 0.1, 0.05, 0.025 },
-                        Level = 50
-                    };
+                        return new SignalArgs
+                        {
+                            GroupSpeed = 4.8,
+                            ChanelSpeed = new[] { -1, 2.4, 1.2, 0, 0.1, 0.1, 0.05, 0.025 },
+                            Level = 50
+                        };
                     else return new SignalArgs
                     {
                         GroupSpeed = 4.8,
@@ -44,7 +45,8 @@
                 return null;
             }
         }
-
+        
+        #endregion
 
         #region Элементы блока
         ////Лампочки
