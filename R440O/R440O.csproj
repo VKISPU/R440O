@@ -60,6 +60,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BackgroundImages.resx</DependentUpon>
     </Compile>
+    <Compile Include="BaseClasses\SpeedTester.cs" />
     <Compile Include="ControlElementImages.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

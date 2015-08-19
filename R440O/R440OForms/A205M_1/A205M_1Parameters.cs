@@ -1,13 +1,96 @@
-﻿using System.Resources;
-using R440O.R440OForms.N18_M;
-using R440O.R440OForms.N502B;
-using R440O.R440OForms.NKN_1;
-using R440O.R440OForms.C300M_1;
-
-namespace R440O.R440OForms.A205M_1
+﻿namespace R440O.R440OForms.A205M_1
 {
+    using BaseClasses;
+    using N18_M;
+    using N502B;
+    using NKN_1;
+    using C300M_1;
+    using N15Inside;
+    using ОбщиеТипыДанных;
+
     public class A205M_1Parameters
     {
+        #region Выходной Сигнал
+
+        public static SignalArgs ВыходнойСигнал
+        {
+            get
+            {
+                if (ЛампочкаНормРаб)
+                {
+                    var signal = new SignalArgs();
+                    if (N15InsideParameters.ВыходПередающегоТракта != null)
+                    {
+                        signal = N15InsideParameters.ВыходПередающегоТракта;
+                        switch (ПереключательВидРаботы)
+                        {
+
+                            case 1:
+                            {
+                                if (signal.Modulation != Модуляция.ЧТ) signal = null; 
+                            }
+                                break;
+                            case 2:
+                            {
+                                if (signal.Modulation != Модуляция.ЧТ) signal = null;
+                            }
+                                break;
+                            case 3:
+                            {
+                                if (signal.Modulation != Модуляция.ОФТ || !SpeedTester.IsEquivalent(signal.GroupSpeed, 5.2)) signal = null;
+                            }
+                                break;
+                            case 4:
+                            {
+                                if (signal.Modulation != Модуляция.ОФТ || !SpeedTester.IsEquivalent(signal.GroupSpeed, 48)) signal = null;
+                            }
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        switch (ПереключательВидРаботы)
+                        {
+
+                            case 1:
+                                {
+                                    signal.Modulation = Модуляция.ЧТ;
+                                    signal.GroupSpeed = 200;
+                                }
+                                break;
+                            case 2:
+                                {
+                                    signal.Modulation = Модуляция.ЧТ;
+                                    signal.GroupSpeed = 20;
+                                }
+                                break;
+                            case 3:
+                                {
+                                    signal.Modulation = Модуляция.ОФТ;
+                                    signal.GroupSpeed = 5.2;
+                                }
+                                break;
+                            case 4:
+                                {
+                                    signal.Modulation = Модуляция.ОФТ;
+                                    signal.GroupSpeed = 48;
+                                }
+                                break;
+                        }
+                    }
+                    if (signal == null) return null;
+                    signal.Wave = ПереключательВолнаX10000 * 10000 +
+                                  ПереключательВолнаX1000 * 1000 +
+                                  ПереключательВолнаX100 * 100 +
+                                  ПереключательВолнаX10 * 10 +
+                                  ПереключательВолнаX1;
+                    return signal;
+                }
+                return null;
+            }
+        }
+
+        #endregion
 
         #region Private fields
         private static int _переключательВолнаX10000 = 0;

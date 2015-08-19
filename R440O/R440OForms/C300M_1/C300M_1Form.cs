@@ -205,7 +205,7 @@ namespace R440O.R440OForms.C300M_1
                 }
             }
 
-            /// Установка кнопок в положение последней их установки
+            // Установка кнопок в положение последней их установки
             foreach (Control item in C300M_1Panel.Controls)
             {
                 if (item.Name.Contains("КнопкаВидРаботы") && !item.Name.Contains("Сброс"))

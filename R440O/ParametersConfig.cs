@@ -1,4 +1,6 @@
-﻿using R440O.R440OForms.N18_M;
+﻿using R440O.R440OForms.N15Inside;
+using R440O.R440OForms.N18_M;
+using R440O.ОбщиеТипыДанных;
 
 namespace R440O
 {
@@ -94,15 +96,24 @@ namespace R440O
 
             #region Дискрет и ПУЛы
 
+            // Н18
             N18_MParameters.ПереключательПРД = 2;
+
+            // Генераторы
             N15Parameters.Тумблер5МГц25МГц3 = true;
-            N15LocalParameters.локТумблерА1 = true;
-            N15Parameters.ТумблерТлфТлгПрд = true;
-            N15Parameters.ТумблерТлфТлгПрм = true;
             P220_27G_2Parameters.ТумблерСеть = true;
             P220_27G_2Parameters.ТумблерМуДу = true;
             P220_27G_3Parameters.ТумблерСеть = true;
             P220_27G_3Parameters.ТумблерМуДу = true;
+
+            N15LocalParameters.локТумблерА1 = true;
+
+            //ПУЛы
+            N15Parameters.ТумблерТлфТлгПрд = true;
+            N15Parameters.ТумблерТлфТлгПрм = true;
+            N15InsideParameters.ПереключательПУЛ48ПРД1 = 3;
+            N15InsideParameters.ТумблерПул48ПРДЧтОфт1 = Модуляция.ОФТ;
+
 
             #endregion
 
