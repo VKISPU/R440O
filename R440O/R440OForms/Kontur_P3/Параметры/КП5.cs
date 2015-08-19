@@ -134,7 +134,7 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
                 {
                     Мигание = !Мигание;
                     Refresh();
-                }, 2000);
+                }, 300);
                 if (timer_ЛампочкаПередача != null)
                     timer_ЛампочкаПередача.Dispose();
                 timer_ЛампочкаПередача = EasyTimer.SetTimeout(() =>
@@ -199,7 +199,7 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
                 {
                     Мигание = !Мигание;
                     Refresh();
-                }, 2000);
+                }, 300);
                 Refresh();
             }
         }

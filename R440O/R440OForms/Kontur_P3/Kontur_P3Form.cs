@@ -538,189 +538,196 @@ namespace R440O.R440OForms.Kontur_P3
         #region Обновление формы
         public void RefreshFormElements()
         {
-            #region КП7
-            #region Тумблеры
-            this.ТумблерСеть.BackgroundImage = Kontur_P3Parameters.ТумблерСеть == EТумблерСеть.ОТКЛ
-               ? ControlElementImages.tumblerType4Down
-               : ControlElementImages.tumblerType4Up;
-            #endregion
-
-            #region Индикатор Сеть
-            var angle = Kontur_P3Parameters.ИндикаторСеть * 1.15F;
-            ИндикаторСеть.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
-            #endregion
-
-            #region Переключатели
-            angle = (int)Kontur_P3Parameters.ПереключательКонтроль * 36 - 180;
-            ПереключательКонтроль.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
-            #endregion
-
-            #region Лампочки
-            ЛампочкаСеть.BackgroundImage = Kontur_P3Parameters.ЛампочкаСеть
-               ? ControlElementImages.lampType9OnGreen
-               : null;
-            #endregion
-            #endregion
-
-            #region КП6
-            #region Тумблеры
-            this.ТумблерДокументирование.BackgroundImage = Kontur_P3Parameters.ТумблерДокументирование == EТумблерДокументирование.ОТКЛ
-               ? ControlElementImages.tumblerType4Down
-               : ControlElementImages.tumblerType4Up;
-
-            this.ТумблерАсинхрСинхр.BackgroundImage = Kontur_P3Parameters.ТумблерАсинхрСинхр == EТумблерАсинхрСинхр.СИНХР
-               ? ControlElementImages.tumblerType4Down
-               : ControlElementImages.tumblerType4Up;
-
-            this.ТумблерРежим.BackgroundImage = Kontur_P3Parameters.ТумблерРежим == EТумблерРежим.РЕЖИМ_1
-               ? ControlElementImages.tumblerType4Down
-               : ControlElementImages.tumblerType4Up;
-            #endregion
-            #endregion
-
-            #region КП5
-            #region Тумблеры
-            this.ТумблерМткПУ.BackgroundImage = Kontur_P3Parameters.ТумблерМткПУ == EТумблерМткПУ.ПУ
-                ? ControlElementImages.tumblerType4Down
-                : ControlElementImages.tumblerType4Up;
-            #endregion
-
-            #region Кнопки
-            if (Kontur_P3Parameters.КнопкаАдресУСС)
-            {
-                КнопкаАдресУСС.BackgroundImage = null;
-                КнопкаАдресУСС.Text = "";
-            }
-            else
-            {
-                КнопкаАдресУСС.BackgroundImage = ControlElementImages.buttonSquareBlack_small;
-                КнопкаАдресУСС.Text = "УСС";
-            }
-
-            if (Kontur_P3Parameters.КнопкаАдресК)
-            {
-                КнопкаАдресК.BackgroundImage = null;
-                КнопкаАдресК.Text = "";
-            }
-            else
-            {
-                КнопкаАдресК.BackgroundImage = ControlElementImages.buttonSquareBlack_small;
-                КнопкаАдресК.Text = "К";
-            }
-
-            if (Kontur_P3Parameters.КнопкаПодпись1)
-            {
-                КнопкаПодпись1.BackgroundImage = null;
-                КнопкаПодпись1.Text = "";
-            }
-            else
-            {
-                КнопкаПодпись1.BackgroundImage = ControlElementImages.buttonSquareRed_small;
-                КнопкаПодпись1.Text = "1";
-            }
-
-            if (Kontur_P3Parameters.КнопкаПодпись2)
-            {
-                КнопкаПодпись2.BackgroundImage = null;
-                КнопкаПодпись2.Text = "";
-            }
-            else
-            {
-                КнопкаПодпись2.BackgroundImage = ControlElementImages.buttonSquareRed_small;
-                КнопкаПодпись2.Text = "2";
-            }
-
-            if (Kontur_P3Parameters.КнопкаПодпись3)
-            {
-                КнопкаПодпись3.BackgroundImage = null;
-                КнопкаПодпись3.Text = "";
-            }
-            else
-            {
-                КнопкаПодпись3.BackgroundImage = ControlElementImages.buttonSquareRed_small;
-                КнопкаПодпись3.Text = "3";
-            }
-            #endregion
-
-            #region Лампочки
-            ЛампочкаСбойПодписи.BackgroundImage = Kontur_P3Parameters.ЛампочкаСбойПодписи
-                ? ControlElementImages.lampType5OnRed
-                : null;
-            ЛампочкаНеиспр.BackgroundImage = Kontur_P3Parameters.ЛампочкаНеиспр
-                ? ControlElementImages.lampType5OnRed
-                : null;
-            ЛампочкаПередача.BackgroundImage = Kontur_P3Parameters.ЛампочкаПередача
-               ? ControlElementImages.lampType9OnGreen
-               : null;
-            ЛампочкаИнформПринята.BackgroundImage = Kontur_P3Parameters.ЛампочкаИнформПринята
-               ? ControlElementImages.lampType9OnGreen
-               : null;
-            #endregion
-
-            #region Табло
             try
             {
-                ТаблоАдрес1.Text = Kontur_P3Parameters.ТаблоАдрес1;
-                ТаблоАдрес2.Text = Kontur_P3Parameters.ТаблоАдрес2;
-                ТаблоГруппа.Text = Kontur_P3Parameters.ТаблоГруппа;
-                ТаблоИнформация.Text = Kontur_P3Parameters.ТаблоИнформация;
+                #region КП7
+                #region Тумблеры
+                this.ТумблерСеть.BackgroundImage = Kontur_P3Parameters.ТумблерСеть == EТумблерСеть.ОТКЛ
+                   ? ControlElementImages.tumblerType4Down
+                   : ControlElementImages.tumblerType4Up;
+                #endregion
+
+                #region Индикатор Сеть
+                var angle = Kontur_P3Parameters.ИндикаторСеть * 1.15F;
+                ИндикаторСеть.BackgroundImage =
+                    TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
+                #endregion
+
+                #region Переключатели
+                angle = (int)Kontur_P3Parameters.ПереключательКонтроль * 36 - 180;
+                ПереключательКонтроль.BackgroundImage =
+                    TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
+                #endregion
+
+                #region Лампочки
+                ЛампочкаСеть.BackgroundImage = Kontur_P3Parameters.ЛампочкаСеть
+                   ? ControlElementImages.lampType9OnGreen
+                   : null;
+                #endregion
+                #endregion
+
+                #region КП6
+                #region Тумблеры
+                this.ТумблерДокументирование.BackgroundImage = Kontur_P3Parameters.ТумблерДокументирование == EТумблерДокументирование.ОТКЛ
+                   ? ControlElementImages.tumblerType4Down
+                   : ControlElementImages.tumblerType4Up;
+
+                this.ТумблерАсинхрСинхр.BackgroundImage = Kontur_P3Parameters.ТумблерАсинхрСинхр == EТумблерАсинхрСинхр.СИНХР
+                   ? ControlElementImages.tumblerType4Down
+                   : ControlElementImages.tumblerType4Up;
+
+                this.ТумблерРежим.BackgroundImage = Kontur_P3Parameters.ТумблерРежим == EТумблерРежим.РЕЖИМ_1
+                   ? ControlElementImages.tumblerType4Down
+                   : ControlElementImages.tumblerType4Up;
+                #endregion
+                #endregion
+
+                #region КП5
+                #region Тумблеры
+                this.ТумблерМткПУ.BackgroundImage = Kontur_P3Parameters.ТумблерМткПУ == EТумблерМткПУ.ПУ
+                    ? ControlElementImages.tumblerType4Down
+                    : ControlElementImages.tumblerType4Up;
+                #endregion
+
+                #region Кнопки
+                if (Kontur_P3Parameters.КнопкаАдресУСС)
+                {
+                    КнопкаАдресУСС.BackgroundImage = null;
+                    КнопкаАдресУСС.Text = "";
+                }
+                else
+                {
+                    КнопкаАдресУСС.BackgroundImage = ControlElementImages.buttonSquareBlack_small;
+                    КнопкаАдресУСС.Text = "УСС";
+                }
+
+                if (Kontur_P3Parameters.КнопкаАдресК)
+                {
+                    КнопкаАдресК.BackgroundImage = null;
+                    КнопкаАдресК.Text = "";
+                }
+                else
+                {
+                    КнопкаАдресК.BackgroundImage = ControlElementImages.buttonSquareBlack_small;
+                    КнопкаАдресК.Text = "К";
+                }
+
+                if (Kontur_P3Parameters.КнопкаПодпись1)
+                {
+                    КнопкаПодпись1.BackgroundImage = null;
+                    КнопкаПодпись1.Text = "";
+                }
+                else
+                {
+                    КнопкаПодпись1.BackgroundImage = ControlElementImages.buttonSquareRed_small;
+                    КнопкаПодпись1.Text = "1";
+                }
+
+                if (Kontur_P3Parameters.КнопкаПодпись2)
+                {
+                    КнопкаПодпись2.BackgroundImage = null;
+                    КнопкаПодпись2.Text = "";
+                }
+                else
+                {
+                    КнопкаПодпись2.BackgroundImage = ControlElementImages.buttonSquareRed_small;
+                    КнопкаПодпись2.Text = "2";
+                }
+
+                if (Kontur_P3Parameters.КнопкаПодпись3)
+                {
+                    КнопкаПодпись3.BackgroundImage = null;
+                    КнопкаПодпись3.Text = "";
+                }
+                else
+                {
+                    КнопкаПодпись3.BackgroundImage = ControlElementImages.buttonSquareRed_small;
+                    КнопкаПодпись3.Text = "3";
+                }
+                #endregion
+
+                #region Лампочки
+                ЛампочкаСбойПодписи.BackgroundImage = Kontur_P3Parameters.ЛампочкаСбойПодписи
+                    ? ControlElementImages.lampType5OnRed
+                    : null;
+                ЛампочкаНеиспр.BackgroundImage = Kontur_P3Parameters.ЛампочкаНеиспр
+                    ? ControlElementImages.lampType5OnRed
+                    : null;
+                ЛампочкаПередача.BackgroundImage = Kontur_P3Parameters.ЛампочкаПередача
+                   ? ControlElementImages.lampType9OnGreen
+                   : null;
+                ЛампочкаИнформПринята.BackgroundImage = Kontur_P3Parameters.ЛампочкаИнформПринята
+                   ? ControlElementImages.lampType9OnGreen
+                   : null;
+                #endregion
+
+                #region Табло
+                try
+                {
+                    ТаблоАдрес1.Text = Kontur_P3Parameters.ТаблоАдрес1;
+                    ТаблоАдрес2.Text = Kontur_P3Parameters.ТаблоАдрес2;
+                    ТаблоГруппа.Text = Kontur_P3Parameters.ТаблоГруппа;
+                    ТаблоИнформация.Text = Kontur_P3Parameters.ТаблоИнформация;
+                }
+                catch
+                {
+                }
+                #endregion
+                #endregion
+
+                #region КП4
+                ЛампочкаКП4Канал1.BackgroundImage = (Kontur_P3Parameters.ЛампочкаКП4Канал1)
+                    ? ControlElementImages.lampType9OnGreen
+                   : null;
+                ЛампочкаКП4Канал2.BackgroundImage = (Kontur_P3Parameters.ЛампочкаКП4Канал2)
+                    ? ControlElementImages.lampType9OnGreen
+                   : null;
+                ЛампочкаКП4Канал3.BackgroundImage = (Kontur_P3Parameters.ЛампочкаКП4Канал3)
+                    ? ControlElementImages.lampType9OnGreen
+                   : null;
+                ЛампочкаКП4Канал4.BackgroundImage = (Kontur_P3Parameters.ЛампочкаКП4Канал4)
+                    ? ControlElementImages.lampType9OnGreen
+                   : null;
+                ЛампочкаКП4Канал5.BackgroundImage = (Kontur_P3Parameters.ЛампочкаКП4Канал5)
+                    ? ControlElementImages.lampType9OnGreen
+                   : null;
+                ЛампочкаКП4Канал6.BackgroundImage = (Kontur_P3Parameters.ЛампочкаКП4Канал6)
+                    ? ControlElementImages.lampType9OnGreen
+                   : null;
+                ЛампочкаКП4Канал7.BackgroundImage = (Kontur_P3Parameters.ЛампочкаКП4Канал7)
+                    ? ControlElementImages.lampType9OnGreen
+                   : null;
+                ЛампочкаКП4Канал8.BackgroundImage = (Kontur_P3Parameters.ЛампочкаКП4Канал8)
+                    ? ControlElementImages.lampType9OnGreen
+                   : null;
+                ЛампочкаКП4Канал9.BackgroundImage = (Kontur_P3Parameters.ЛампочкаКП4Канал9)
+                    ? ControlElementImages.lampType9OnGreen
+                   : null;
+                КнопкаКП4Контроль.BackgroundImage = (Kontur_P3Parameters.КнопкаКП4Контроль)
+                    ? null
+                    : ControlElementImages.buttonRoundType8;
+                #endregion
+
+                #region КП3
+                #region Переключатели
+                angle = (int)Kontur_P3Parameters.ПереключательПриоритет * 36 - 162;
+                ПереключательПриоритет.BackgroundImage =
+                    TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
+                #endregion
+                #endregion
+
+                #region КП2
+                #region Тумблеры
+                this.ТумблерКонтроль.BackgroundImage = Kontur_P3Parameters.ТумблерКонтроль == EТумблерКонтроль.КОНТРОЛЬ_1
+                   ? ControlElementImages.tumblerType4Down
+                   : ControlElementImages.tumblerType4Up;
+                #endregion
+                #endregion
             }
             catch
             {
             }
-            #endregion
-            #endregion
-
-            #region КП4
-            ЛампочкаКП4Канал1.BackgroundImage = (Kontur_P3Parameters.ЛампочкаКП4Канал1)
-                ? ControlElementImages.lampType9OnGreen
-               : null;
-            ЛампочкаКП4Канал2.BackgroundImage = (Kontur_P3Parameters.ЛампочкаКП4Канал2)
-                ? ControlElementImages.lampType9OnGreen
-               : null;
-            ЛампочкаКП4Канал3.BackgroundImage = (Kontur_P3Parameters.ЛампочкаКП4Канал3)
-                ? ControlElementImages.lampType9OnGreen
-               : null;
-            ЛампочкаКП4Канал4.BackgroundImage = (Kontur_P3Parameters.ЛампочкаКП4Канал4)
-                ? ControlElementImages.lampType9OnGreen
-               : null;
-            ЛампочкаКП4Канал5.BackgroundImage = (Kontur_P3Parameters.ЛампочкаКП4Канал5)
-                ? ControlElementImages.lampType9OnGreen
-               : null;
-            ЛампочкаКП4Канал6.BackgroundImage = (Kontur_P3Parameters.ЛампочкаКП4Канал6)
-                ? ControlElementImages.lampType9OnGreen
-               : null;
-            ЛампочкаКП4Канал7.BackgroundImage = (Kontur_P3Parameters.ЛампочкаКП4Канал7)
-                ? ControlElementImages.lampType9OnGreen
-               : null;
-            ЛампочкаКП4Канал8.BackgroundImage = (Kontur_P3Parameters.ЛампочкаКП4Канал8)
-                ? ControlElementImages.lampType9OnGreen
-               : null;
-            ЛампочкаКП4Канал9.BackgroundImage = (Kontur_P3Parameters.ЛампочкаКП4Канал9)
-                ? ControlElementImages.lampType9OnGreen
-               : null;
-            КнопкаКП4Контроль.BackgroundImage = (Kontur_P3Parameters.КнопкаКП4Контроль)
-                ? null
-                : ControlElementImages.buttonRoundType8;
-            #endregion
-
-            #region КП3
-            #region Переключатели
-            angle = (int)Kontur_P3Parameters.ПереключательПриоритет * 36 - 162;
-            ПереключательПриоритет.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType6, angle);
-            #endregion
-            #endregion
-
-            #region КП2
-            #region Тумблеры
-            this.ТумблерКонтроль.BackgroundImage = Kontur_P3Parameters.ТумблерКонтроль == EТумблерКонтроль.КОНТРОЛЬ_1
-               ? ControlElementImages.tumblerType4Down
-               : ControlElementImages.tumblerType4Up;
-            #endregion
-            #endregion
+           
         }
         #endregion
 
