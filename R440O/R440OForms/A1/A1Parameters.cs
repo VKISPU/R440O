@@ -51,17 +51,101 @@
         #region Элементы блока
         ////Лампочки
         public static bool ЛампочкаБОЧ;
-        public static bool ЛампочкаФСПК;
+
+        public static bool ЛампочкаФСПК
+        {
+            get
+            {
+                return Включен && !КнопкаСкоростьГр;
+            }
+        }
+
         public static bool ЛампочкаТКААвария;
+
+        #region ТЛФ1
+        public static bool НаличиеТЛФ1
+        {
+            get
+            {
+                return false;
+            }
+        }
+
         public static bool ЛампочкаЭП1;
-        public static bool ЛампочкаПУЛ1_1;
-        public static bool ЛампочкаПУЛ1_2;
+
+        public static bool ЛампочкаПУЛ1_1
+        {
+            get
+            {
+                return Включен && !НаличиеТЛФ1;
+            }
+        }
+
+        public static bool ЛампочкаПУЛ1_2
+        {
+            get
+            {
+                return Включен && НаличиеТЛФ1;
+            }
+        } 
+        #endregion
+
+        #region ТЛФ2
+        public static bool НаличиеТЛФ2
+        {
+            get
+            {
+                return false;
+            }
+        }
+
         public static bool ЛампочкаЭП2;
-        public static bool ЛампочкаПУЛ2_1;
-        public static bool ЛампочкаПУЛ2_2;
+
+        public static bool ЛампочкаПУЛ2_1
+        {
+            get
+            {
+                return Включен && !НаличиеТЛФ2;
+            }
+        }
+
+        public static bool ЛампочкаПУЛ2_2
+        {
+            get
+            {
+                return Включен && НаличиеТЛФ2;
+            }
+        }
+        #endregion
+
+        #region ТЛФ1
+        public static bool НаличиеТЛФ3
+        {
+            get
+            {
+                return false;
+            }
+        }
+
         public static bool ЛампочкаЭП3;
-        public static bool ЛампочкаПУЛ3_1;
-        public static bool ЛампочкаПУЛ3_2;
+
+        public static bool ЛампочкаПУЛ3_1
+        {
+            get
+            {
+                return Включен && !НаличиеТЛФ3;
+            }
+        }
+
+        public static bool ЛампочкаПУЛ3_2
+        {
+            get
+            {
+                return Включен && НаличиеТЛФ3;
+            }
+        }
+        #endregion
+
         public static bool ЛампочкаНеиспр;
         public static bool _лампочкаПитание;
 

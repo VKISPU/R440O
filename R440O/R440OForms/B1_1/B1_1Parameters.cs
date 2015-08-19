@@ -1,4 +1,7 @@
-﻿namespace R440O.R440OForms.B1_1
+﻿using R440O.R440OForms.N15Inside;
+using R440O.R440OForms.N18_M;
+
+namespace R440O.R440OForms.B1_1
 {
     using BaseClasses;
     using N15;
@@ -20,6 +23,9 @@
         {
             get
             {
+                if (N15InsideParameters.ВыходПриемногоТракта != null &&
+                    N18_MParameters.ПереключательПРМ1 == 4)
+                    return N15InsideParameters.ВыходПриемногоТракта;
                 return null;
             }
         }
