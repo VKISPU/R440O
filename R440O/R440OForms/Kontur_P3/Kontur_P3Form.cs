@@ -74,21 +74,7 @@ namespace R440O.R440OForms.Kontur_P3
 
         #endregion
 
-        
-
-        
-
         #region Круглые кнопки
-        private void Kontur_P3КнопкаКП1Контроль_MouseDown(object sender, MouseEventArgs e)
-        {
-            КнопкаКП1Контроль.BackgroundImage = null;
-        }
-
-        private void Kontur_P3КнопкаКП1Контроль_MouseUp(object sender, MouseEventArgs e)
-        {
-            КнопкаКП1Контроль.BackgroundImage = ControlElementImages.buttonRoundType8;
-        }
-
         private void Kontur_P3КнопкаПуск_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаПуск.BackgroundImage = null;
@@ -456,7 +442,7 @@ namespace R440O.R440OForms.Kontur_P3
             Kontur_P3Parameters.ТумблерМткПУ = Kontur_P3Parameters.ТумблерМткПУ == EТумблерМткПУ.МТК
                 ? EТумблерМткПУ.ПУ
                 : EТумблерМткПУ.МТК;
-            
+
         }
         #endregion
         #endregion
@@ -475,31 +461,40 @@ namespace R440O.R440OForms.Kontur_P3
         private void Kontur_P3КнопкаКан10_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаКан10.BackgroundImage = null;
+            Kontur_P3Parameters.НажатаКнопкаКанал10();
+            Kontur_P3Parameters.КнопкаКП3Канал10 = true;
         }
 
         private void Kontur_P3КнопкаКан10_MouseUp(object sender, MouseEventArgs e)
         {
             КнопкаКан10.BackgroundImage = ControlElementImages.buttonRoundType8;
+            Kontur_P3Parameters.КнопкаКП3Канал10 = false;
         }
 
         private void Kontur_P3КнопкаКан11_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаКан11.BackgroundImage = null;
+            Kontur_P3Parameters.НажатаКнопкаКанал11();
+            Kontur_P3Parameters.КнопкаКП3Канал11 = true;
         }
 
         private void Kontur_P3КнопкаКан11_MouseUp(object sender, MouseEventArgs e)
         {
             КнопкаКан11.BackgroundImage = ControlElementImages.buttonRoundType8;
+            Kontur_P3Parameters.КнопкаКП3Канал11 = false;
         }
 
         private void Kontur_P3КнопкаКан12_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаКан12.BackgroundImage = null;
+            Kontur_P3Parameters.НажатаКнопкаКанал12();
+            Kontur_P3Parameters.КнопкаКП3Канал12 = true;
         }
 
         private void Kontur_P3КнопкаКан12_MouseUp(object sender, MouseEventArgs e)
         {
             КнопкаКан12.BackgroundImage = ControlElementImages.buttonRoundType8;
+            Kontur_P3Parameters.КнопкаКП3Канал12 = false;
         }
         #endregion
 
@@ -533,6 +528,18 @@ namespace R440O.R440OForms.Kontur_P3
         {
             КнопкаНачИнформ.BackgroundImage = ControlElementImages.buttonRoundType8;
         }
+        #endregion
+
+        #region КП1
+        #region Кнопки
+        private void КнопкаКП1Контроль_Click(object sender, System.EventArgs e)
+        {
+            Kontur_P3Parameters.КнопкаКП1Контроль = !Kontur_P3Parameters.КнопкаКП1Контроль;
+            КнопкаКП1Контроль.BackgroundImage = (Kontur_P3Parameters.КнопкаКП1Контроль)
+                ? null
+                : ControlElementImages.buttonRoundType8;
+        }
+        #endregion
         #endregion
 
         #region Обновление формы
@@ -659,6 +666,9 @@ namespace R440O.R440OForms.Kontur_P3
                 ЛампочкаИнформПринята.BackgroundImage = Kontur_P3Parameters.ЛампочкаИнформПринята
                    ? ControlElementImages.lampType9OnGreen
                    : null;
+                ЛампочкаКонтроль.BackgroundImage = Kontur_P3Parameters.ЛампочкаКонтроль
+                    ? ControlElementImages.lampType5OnRed
+                    : null;
                 #endregion
 
                 #region Табло
@@ -709,6 +719,17 @@ namespace R440O.R440OForms.Kontur_P3
                 #endregion
 
                 #region КП3
+                #region Лампочки
+                ЛампочкаКП3Канал10.BackgroundImage = Kontur_P3Parameters.ЛампочкаКП3Канал10
+                   ? ControlElementImages.lampType9OnGreen
+                   : null;
+                ЛампочкаКП3Канал11.BackgroundImage = Kontur_P3Parameters.ЛампочкаКП3Канал11
+                   ? ControlElementImages.lampType9OnGreen
+                   : null;
+                ЛампочкаКП3Канал12.BackgroundImage = Kontur_P3Parameters.ЛампочкаКП3Канал12
+                   ? ControlElementImages.lampType9OnGreen
+                   : null;
+                #endregion
                 #region Переключатели
                 angle = (int)Kontur_P3Parameters.ПереключательПриоритет * 36 - 162;
                 ПереключательПриоритет.BackgroundImage =
@@ -723,17 +744,30 @@ namespace R440O.R440OForms.Kontur_P3
                    : ControlElementImages.tumblerType4Up;
                 #endregion
                 #endregion
+
+                #region КП1
+                #region Кнопки
+                КнопкаКП1Контроль.BackgroundImage = (Kontur_P3Parameters.КнопкаКП1Контроль)
+                ? null
+                : ControlElementImages.buttonRoundType8;
+                #endregion
+
+                #region Лампочки
+                ЛампочкаКП1Канал10.BackgroundImage = (Kontur_P3Parameters.ЛампочкаКП1Канал10)
+                    ? ControlElementImages.lampType9OnGreen
+                   : null;
+                ЛампочкаКП1Канал11.BackgroundImage = (Kontur_P3Parameters.ЛампочкаКП1Канал11)
+                    ? ControlElementImages.lampType9OnGreen
+                   : null;
+                #endregion
+                #endregion
             }
             catch
             {
             }
-           
+
         }
         #endregion
-
-        
-        
-
         
     }
 }

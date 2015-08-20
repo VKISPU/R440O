@@ -1196,8 +1196,7 @@
             this.КнопкаКП1Контроль.Size = new System.Drawing.Size(36, 38);
             this.КнопкаКП1Контроль.TabIndex = 30;
             this.КнопкаКП1Контроль.UseVisualStyleBackColor = false;
-            this.КнопкаКП1Контроль.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаКП1Контроль_MouseDown);
-            this.КнопкаКП1Контроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаКП1Контроль_MouseUp);
+            this.КнопкаКП1Контроль.Click += new System.EventHandler(this.КнопкаКП1Контроль_Click);
             // 
             // КнопкаНачИнформ
             // 

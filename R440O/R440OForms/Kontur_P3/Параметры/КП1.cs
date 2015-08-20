@@ -2,9 +2,31 @@
 {
     partial class Kontur_P3Parameters
     {
+        #region Кнопки
+        private static bool ЗначениеКнопкиКП1Контроль;
+        private static bool _КнопкаКП1Контроль;
+        public static bool КнопкаКП1Контроль
+        { 
+            get { return _КнопкаКП1Контроль; }
+            set
+            { 
+                _КнопкаКП1Контроль = value;
+                if (_КнопкаКП1Контроль)
+                    КнопкаКП4Контроль = false;
+                Refresh();
+            }
+        }
+        #endregion
+
         #region Лампочки
         public static bool ЛампочкаКонтрольПодписи = false;
-        public static bool ЛампочкаКП1Канал10 = false;
+        public static bool ЛампочкаКП1Канал10
+        {
+            get
+            {
+                return ЛампочкаСеть && ЗначениеКнопкиКП1Контроль;
+            }
+        }
         public static bool ЛампочкаКП1Канал11 = false;
         #endregion
     }
