@@ -83,9 +83,9 @@
     <Compile Include="R440OForms\A403_1\A403_1Parameters.cs" />
     <Compile Include="R440OForms\B1_1\B1_1Parameters.cs" />
     <Compile Include="Parameters\B1_2Parameters.cs" />
-    <Compile Include="Parameters\B2_1Parameters.cs" />
+    <Compile Include="R440OForms\B2_1\B2_1Parameters.cs" />
     <Compile Include="Parameters\B2_2Parameters.cs" />
-    <Compile Include="Parameters\B3_1Parameters.cs" />
+    <Compile Include="R440OForms\B3_1\B3_1Parameters.cs" />
     <Compile Include="Parameters\C1_67Parameters.cs" />
     <Compile Include="Parameters\K05M_02InsideParameters.cs" />
     <Compile Include="Parameters\K05M_01InsideParameters.cs" />

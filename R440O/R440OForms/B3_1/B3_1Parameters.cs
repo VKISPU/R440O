@@ -1,0 +1,203 @@
+﻿namespace R440O.R440OForms.B3_1
+{
+    class B3_1Parameters
+    {
+        #region Лампочки
+
+        public static string ЛампочкаПУЛГ_1 { get; set; }
+        public static string ЛампочкаПУЛГ_2 { get; set; }
+        public static string ЛампочкаПРИавар { get; set; }
+        public static string ЛампочкаРС_1 { get; set; }
+        public static string ЛампочкаРС_синхр { get; set; }
+        public static string ЛампочкаТЛГпр1 { get; set; }
+        public static string ЛампочкаТЛГпр2 { get; set; }
+        public static string ЛампочкаТЛГпр3 { get; set; }
+        public static string ЛампочкаОКпр1 { get; set; }
+        public static string ЛампочкаПФТК1_1 { get; set; }
+        public static string ЛампочкаПФТК1_2 { get; set; }
+        public static string ЛампочкаОКпр2 { get; set; }
+        public static string ЛампочкаПФТК2_1 { get; set; }
+        public static string ЛампочкаПФТК2_2 { get; set; }
+        public static string ЛампочкаВУПнеиспр { get; set; }
+        public static string ЛампочкаВУП_1 {get; set; }
+
+        #endregion
+
+        #region Колодки
+
+        private static int _колодкаУКК1;
+        public static int КолодкаУКК1
+        {
+            get { return _колодкаУКК1; }
+            set
+            {
+                if (value >= 0 && value <= 9) _колодкаУКК1 = value;
+                OnParameterChanged();
+            }
+        }
+
+        private static int _колодкаУКК2;
+        public static int КолодкаУКК2
+        {
+            get { return _колодкаУКК2; }
+            set
+            {
+                if (value >= 0 && value <= 9) _колодкаУКК2 = value;
+                OnParameterChanged();
+            }
+        }
+
+        public static bool КолодкаОКпр1Син
+        {
+            get { return _колодкаОКпр1Син; }
+            set
+            {
+                _колодкаОКпр1Син = value;
+                OnParameterChanged();
+            }
+        }
+
+        public static bool КолодкаОКпр1Ас
+        {
+            get { return _колодкаОКпр1Ас; }
+            set
+            {
+                _колодкаОКпр1Ас = value;
+                OnParameterChanged();
+            }
+        }
+
+        public static bool КолодкаОКпр2Син
+        {
+            get { return _колодкаОКпр2Син; }
+            set
+            {
+                _колодкаОКпр2Син = value;
+                OnParameterChanged();
+            }
+        }
+
+        public static bool КолодкаОКпр2Ас
+        {
+            get { return _колодкаОКпр2Ас; }
+            set
+            {
+                _колодкаОКпр2Ас = value;
+                OnParameterChanged();
+            }
+        }
+
+        private static int _колодкаКРПР;
+        public static int КолодкаКРПР
+        {
+            get { return _колодкаКРПР; }
+            set
+            {
+                if (value >= 0 && value <= 5) _колодкаКРПР = value;
+                OnParameterChanged();
+            }
+        }
+
+        public static bool КолодкаТлГпр11
+        {
+            get { return _колодкаТлГпр11; }
+            set
+            {
+                _колодкаТлГпр11 = value;
+                OnParameterChanged();
+            }
+        }
+
+        public static bool КолодкаТлГпр12
+        {
+            get { return _колодкаТлГпр12; }
+            set
+            {
+                _колодкаТлГпр12 = value;
+                OnParameterChanged();
+            }
+        }
+
+        public static bool КолодкаТлГпр21
+        {
+            get { return _колодкаТлГпр21; }
+            set
+            {
+                _колодкаТлГпр21 = value;
+                OnParameterChanged();
+            }
+        }
+
+        public static bool КолодкаТлГпр22
+        {
+            get { return _колодкаТлГпр22; }
+            set
+            {
+                _колодкаТлГпр22 = value;
+                OnParameterChanged();
+            }
+        }
+
+        public static bool КолодкаТлГпр31
+        {
+            get { return _колодкаТлГпр31; }
+            set
+            {
+                _колодкаТлГпр31 = value;
+                OnParameterChanged();
+            }
+        }
+
+        public static bool КолодкаТлГпр32
+        {
+            get { return _колодкаТлГпр32; }
+            set
+            {
+                _колодкаТлГпр32 = value;
+                OnParameterChanged();
+            }
+        }
+
+        private static bool _тумблерМуДу;
+        private static bool _колодкаОКпр1Син;
+        private static bool _колодкаОКпр1Ас;
+        private static bool _колодкаОКпр2Син;
+        private static bool _колодкаОКпр2Ас;
+        private static bool _колодкаТлГпр11;
+        private static bool _колодкаТлГпр12;
+        private static bool _колодкаТлГпр21;
+        private static bool _колодкаТлГпр22;
+        private static bool _колодкаТлГпр31;
+        private static bool _колодкаТлГпр32;
+
+        #endregion
+
+        /// <summary>
+        /// Возможные состояния: Му - true, Ду - false
+        /// </summary>
+        public static bool ТумблерМуДу
+        {
+            get { return _тумблерМуДу; }
+            set
+            {
+                _тумблерМуДу = value; 
+                OnParameterChanged();
+            }
+        }
+
+        public delegate void ParameterChangedHandler();
+        public static event ParameterChangedHandler ParameterChanged;
+
+        private static void OnParameterChanged()
+        {
+            var handler = ParameterChanged;
+            if (handler != null) handler();
+        }
+
+        public static void ResetParameters()
+        {
+            OnParameterChanged();
+        }
+
+    }
+}
