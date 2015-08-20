@@ -128,7 +128,6 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
                 Refresh();
             }
         }
-
         private static IDisposable timer_Мигание = null;
         private static IDisposable timer_МиганиеКП1 = null;
         private static IDisposable timer_ЛампочкаПередача = null;
@@ -138,11 +137,12 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
         public static bool КнопкаВызов
         {
             set
-            {
+            {                
                 if (timer_ЛампочкаПередача != null)
                     timer_ЛампочкаПередача.Dispose();
                 timer_ЛампочкаПередача = EasyTimer.SetTimeout(() =>
                 {
+                    ОчищениеТаблоНаКП2();
                     if ((ЗначениеАдресК == ЗначениеПодпись1
                         || ЗначениеАдресК == ЗначениеПодпись2
                         || ЗначениеАдресК == ЗначениеПодпись3) && ТумблерМткПУ == EТумблерМткПУ.МТК)
@@ -150,9 +150,15 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
                         if (КнопкаКП4Контроль)
                         {
                             if (timer_Мигание != null)
+                            {
                                 timer_Мигание.Dispose();
+                                timer_Мигание = null;
+                            }
                             if (timer_МиганиеКП1 != null)
+                            {
                                 timer_МиганиеКП1.Dispose();
+                                timer_МиганиеКП1 = null;
+                            }
                             timer_Мигание = EasyTimer.SetInterval(() =>
                             {
                                 Мигание = !Мигание;
@@ -175,21 +181,30 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
 
                                 ЗначениеИнформация = "";
                                 ЗначениеГруппа = new string[] { "000", "000", "000", "000", "000", "000", "000", "000", "^00" };
-                                
-                            }
+                            }                        
                         }
                         else
                             if (КнопкаКП1Контроль)
                             {
                                 if (timer_Мигание != null)
+                                {
                                     timer_Мигание.Dispose();
+                                    timer_Мигание = null;
+                                }
                                 if (timer_МиганиеКП1 != null)
+                                {
                                     timer_МиганиеКП1.Dispose();
+                                    timer_МиганиеКП1 = null;
+                                }
                                 timer_МиганиеКП1 = EasyTimer.SetInterval(() =>
                                 {
                                     ЛампочкаКП1Канал11 = !ЛампочкаКП1Канал11;
                                     Refresh();
                                 }, 300);
+                                ИнформацияПринята = true;
+                                ЗначениеКнопкиКП1Контроль = (КнопкаКП1Контроль) ? true : false;
+                                ЗначениеКнопкиКП4Контроль = false;
+                                КнопкаНаборКК = false;
                                 if (ЗначениеАдресК != "   ")
                                 {
                                     ЗначениеАдресК = "000";
@@ -203,10 +218,6 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
                                     ЗначениеИнформация = "";
                                     ЗначениеГруппа = new string[] { "000", "000", "000", "000", "000", "000", "000", "000", "^00" };
                                 }
-                                ИнформацияПринята = true;
-                                ЗначениеКнопкиКП1Контроль = (КнопкаКП1Контроль) ? true : false;
-                                ЗначениеКнопкиКП4Контроль = false;
-                                КнопкаНаборКК = false;
                             }
                             else
                             {
@@ -214,9 +225,15 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
                                 ЗначениеКнопкиКП1Контроль = false;
                                 ИнформацияПринята = false;
                                 if (timer_Мигание != null)
+                                {
                                     timer_Мигание.Dispose();
+                                    timer_Мигание = null;
+                                }
                                 if (timer_МиганиеКП1 != null)
+                                {
                                     timer_МиганиеКП1.Dispose();
+                                    timer_МиганиеКП1 = null;
+                                }
                                 if (timer_ЛампочкаПередача != null)
                                     timer_ЛампочкаПередача.Dispose();
                             }
@@ -227,15 +244,22 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
                         ЗначениеКнопкиКП1Контроль = false;
                         ИнформацияПринята = false;
                         if (timer_Мигание != null)
+                        {
                             timer_Мигание.Dispose();
+                            timer_Мигание = null;
+                        }
                         if (timer_МиганиеКП1 != null)
+                        {
                             timer_МиганиеКП1.Dispose();
+                            timer_МиганиеКП1 = null;
+                        }
                         if (timer_ЛампочкаПередача != null)
                             timer_ЛампочкаПередача.Dispose();
                         
                     }
                     ЛампочкаКП1Канал11 = false;
                     КП3 = false;
+                    ОчищениеТаблоНаКП2();
                     _ЛампочкаПередача = false;                    
                     Refresh();
                     
@@ -251,7 +275,7 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
             set
             {
                 НомерКанала = ПереключательПриоритет;
-                
+                ОчищениеТаблоНаКП2();
                 if (timer_ЛампочкаПередача != null)
                     timer_ЛампочкаПередача.Dispose();
                 timer_ЛампочкаПередача = EasyTimer.SetTimeout(() =>
@@ -263,10 +287,15 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
                         if (КнопкаКП4Контроль)
                         {
                             if (timer_Мигание != null)
+                            {
                                 timer_Мигание.Dispose();
+                                timer_Мигание = null;
+                            }
                             if (timer_МиганиеКП1 != null)
+                            {
                                 timer_МиганиеКП1.Dispose();
-
+                                timer_МиганиеКП1 = null;
+                            }
                             timer_Мигание = EasyTimer.SetInterval(() =>
                             {
                                 Мигание = !Мигание;
@@ -282,9 +311,15 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
                             if (КнопкаКП1Контроль)
                             {
                                 if (timer_Мигание != null)
+                                {
                                     timer_Мигание.Dispose();
+                                    timer_Мигание = null;
+                                }
                                 if (timer_МиганиеКП1 != null)
+                                {
                                     timer_МиганиеКП1.Dispose();
+                                    timer_МиганиеКП1 = null;
+                                }
                                 timer_МиганиеКП1 = EasyTimer.SetInterval(() =>
                                 {
                                     ЛампочкаКП1Канал11 = !ЛампочкаКП1Канал11;
@@ -301,9 +336,15 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
                                 ЗначениеКнопкиКП1Контроль = false;
                                 ИнформацияПринята = false;
                                 if (timer_Мигание != null)
+                                {
                                     timer_Мигание.Dispose();
+                                    timer_Мигание = null;
+                                }
                                 if (timer_МиганиеКП1 != null)
+                                {
                                     timer_МиганиеКП1.Dispose();
+                                    timer_МиганиеКП1 = null;
+                                }
                                 if (timer_ЛампочкаПередача != null)
                                     timer_ЛампочкаПередача.Dispose();
                             }
@@ -314,14 +355,21 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
                         ЗначениеКнопкиКП1Контроль = false;
                         ИнформацияПринята = false;
                         if (timer_Мигание != null)
+                        {
                             timer_Мигание.Dispose();
+                            timer_Мигание = null;
+                        }
                         if (timer_МиганиеКП1 != null)
+                        {
                             timer_МиганиеКП1.Dispose();
+                            timer_МиганиеКП1 = null;
+                        }
                         if (timer_ЛампочкаПередача != null)
                             timer_ЛампочкаПередача.Dispose();
                     }
                     ЛампочкаКП1Канал11 = false;
                     КП3 = false;
+                    ОчищениеТаблоНаКП2();
                     _ЛампочкаПередача = false;
                     Refresh();
                 }, 6000);
@@ -498,11 +546,17 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
             Мигание = false;
             ЛампочкаКП1Канал11 = false;
             if (timer_Мигание != null)
+            {                
                 timer_Мигание.Dispose();
+                timer_Мигание = null;
+            }
             if (timer_ЛампочкаПередача != null)
                 timer_ЛампочкаПередача.Dispose();
             if (timer_МиганиеКП1 != null)
+            {
                 timer_МиганиеКП1.Dispose();
+                timer_МиганиеКП1 = null;
+            }
             _ЛампочкаПередача = false;
             ИнформацияПринята = false;
             КнопкаНаборКК = false;
@@ -512,6 +566,7 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
             ЛампочкаКП1Канал11 = false;
             КнопкаКП3Канал12 = false;
             КП3 = false;
+            ОчищениеТаблоНаКП2();
             Refresh();
         }
     }

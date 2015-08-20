@@ -760,6 +760,11 @@ namespace R440O.R440OForms.Kontur_P3
                     ? ControlElementImages.lampType9OnGreen
                    : null;
                 #endregion
+
+                #region Табло
+                ТаблоКП2Информация1.Text = Kontur_P3Parameters.ТекущееЗначение1КП2;
+                ТаблоКП2Информация2.Text = Kontur_P3Parameters.ТекущееЗначение2КП2;
+                #endregion
                 #endregion
             }
             catch

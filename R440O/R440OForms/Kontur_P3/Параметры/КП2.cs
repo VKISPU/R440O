@@ -20,5 +20,12 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
             }
         }
         #endregion
+
+        #region Значения
+        private static int ИндексГруппыКП2 = 0;
+        private static string[] ЗначениеГруппыКП2 = {"", "", "", "", "", "", "", "", ""};
+        public static string ТекущееЗначение1КП2;
+        public static string ТекущееЗначение2КП2;
+        #endregion
     }
 }

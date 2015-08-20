@@ -106,6 +106,8 @@
             this.ТумблерКонтроль = new System.Windows.Forms.Button();
             this.ПереключательПриоритет = new System.Windows.Forms.Button();
             this.ПереключательКонтроль = new System.Windows.Forms.Button();
+            this.ТаблоКП2Информация1 = new System.Windows.Forms.Button();
+            this.ТаблоКП2Информация2 = new System.Windows.Forms.Button();
             this.Kontur_P3Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторСеть)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПР2_ЗА)).BeginInit();
@@ -144,6 +146,8 @@
             // 
             this.Kontur_P3Panel.BackgroundImage = global::R440O.BackgroundImages.Kontur_P3;
             this.Kontur_P3Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Kontur_P3Panel.Controls.Add(this.ТаблоКП2Информация2);
+            this.Kontur_P3Panel.Controls.Add(this.ТаблоКП2Информация1);
             this.Kontur_P3Panel.Controls.Add(this.ИндикаторСеть);
             this.Kontur_P3Panel.Controls.Add(this.ТаблоИнформация);
             this.Kontur_P3Panel.Controls.Add(this.ТаблоГруппа);
@@ -1377,6 +1381,38 @@
             this.ПереключательКонтроль.UseVisualStyleBackColor = false;
             this.ПереключательКонтроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательКонтроль_MouseUp);
             // 
+            // ТаблоКП2Информация1
+            // 
+            this.ТаблоКП2Информация1.BackColor = System.Drawing.Color.Transparent;
+            this.ТаблоКП2Информация1.FlatAppearance.BorderSize = 0;
+            this.ТаблоКП2Информация1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТаблоКП2Информация1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТаблоКП2Информация1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТаблоКП2Информация1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ТаблоКП2Информация1.ForeColor = System.Drawing.Color.Red;
+            this.ТаблоКП2Информация1.Location = new System.Drawing.Point(196, 91);
+            this.ТаблоКП2Информация1.Name = "ТаблоКП2Информация1";
+            this.ТаблоКП2Информация1.Size = new System.Drawing.Size(37, 32);
+            this.ТаблоКП2Информация1.TabIndex = 93;
+            this.ТаблоКП2Информация1.Text = "111";
+            this.ТаблоКП2Информация1.UseVisualStyleBackColor = false;
+            // 
+            // ТаблоКП2Информация2
+            // 
+            this.ТаблоКП2Информация2.BackColor = System.Drawing.Color.Transparent;
+            this.ТаблоКП2Информация2.FlatAppearance.BorderSize = 0;
+            this.ТаблоКП2Информация2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТаблоКП2Информация2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТаблоКП2Информация2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТаблоКП2Информация2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ТаблоКП2Информация2.ForeColor = System.Drawing.Color.Red;
+            this.ТаблоКП2Информация2.Location = new System.Drawing.Point(197, 113);
+            this.ТаблоКП2Информация2.Name = "ТаблоКП2Информация2";
+            this.ТаблоКП2Информация2.Size = new System.Drawing.Size(37, 27);
+            this.ТаблоКП2Информация2.TabIndex = 94;
+            this.ТаблоКП2Информация2.Text = "111";
+            this.ТаблоКП2Информация2.UseVisualStyleBackColor = false;
+            // 
             // Kontur_P3Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1504,5 +1540,7 @@
         private System.Windows.Forms.Button ТаблоГруппа;
         private System.Windows.Forms.Button ТаблоАдрес2;
         private System.Windows.Forms.PictureBox ИндикаторСеть;
+        private System.Windows.Forms.Button ТаблоКП2Информация2;
+        private System.Windows.Forms.Button ТаблоКП2Информация1;
     }
 }
