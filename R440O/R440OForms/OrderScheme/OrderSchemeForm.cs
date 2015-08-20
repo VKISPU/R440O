@@ -1,13 +1,9 @@
-﻿//-----------------------------------------------------------------------
-// <copyright file="OrderSchemeForm.cs" company="VKISPU">
-//      R440O station.
-// </copyright>
-//-----------------------------------------------------------------------
-
-namespace R440O.R440OForms.OrderScheme
+﻿namespace R440O.R440OForms.OrderScheme
 {
     using System.Windows.Forms;
-    using Parameters;
+    using C300M_1;
+    using N15Inside;
+
     /// <summary>
     /// Форма блока Схемы-Приказ
     /// </summary>
@@ -20,22 +16,30 @@ namespace R440O.R440OForms.OrderScheme
         {
             this.InitializeComponent();
             InitializeParameters();
+            CorrectStation();
+        }
+
+        /// <summary>
+        /// Поправление настроек станции в соответствии с настройками корреспондента
+        /// </summary>
+        private void CorrectStation()
+        {
+            C300M_1Parameters.КнопкиВидРаботы[9] = true;
+            N15InsideParameters.ПереключательПУЛ4801 = 9;
         }
 
         private void InitializeParameters()
         {
-            OrderSchemeParameters.GenerateParameters();
-
             ПередачаУсловныйНомерВолны1.Text = OrderSchemeParameters.ПередачаУсловныйНомерВолны1.ToString();
             ПередачаУсловныйНомерВолны2.Text = OrderSchemeParameters.ПередачаУсловныйНомерВолны2.ToString();
             ПередачаУсловныйНомерВолны3.Text = OrderSchemeParameters.ПередачаУсловныйНомерВолны3.ToString();
 
-            ПередачаПроверкаНаСебяА503_1.Text = OrderSchemeParameters.ПередачаПроверкаНаСебяУсловныйНомерВолныА503_1
-                + "/" + OrderSchemeParameters.ПередачаПроверкаНаСебяУсловныйНомерСтволаА503_1;
-            ПередачаПроверкаНаСебяА503_2.Text = OrderSchemeParameters.ПередачаПроверкаНаСебяУсловныйНомерВолныА503_2
-                + "/" + OrderSchemeParameters.ПередачаПроверкаНаСебяУсловныйНомерСтволаА503_2;
-            ПередачаПроверкаНаСебяА503_3.Text = OrderSchemeParameters.ПередачаПроверкаНаСебяУсловныйНомерВолныА503_3
-                + "/" + OrderSchemeParameters.ПередачаПроверкаНаСебяУсловныйНомерСтволаА503_3;
+            ПередачаПроверкаНаСебяА503_1.Text = OrderSchemeParameters.ПередачаПроверкаНаСебяУсловныйНомерВолныА5031
+                + "/" + OrderSchemeParameters.ПередачаПроверкаНаСебяУсловныйНомерСтволаА5031;
+            ПередачаПроверкаНаСебяА503_2.Text = OrderSchemeParameters.ПередачаПроверкаНаСебяУсловныйНомерВолныА5032
+                + "/" + OrderSchemeParameters.ПередачаПроверкаНаСебяУсловныйНомерСтволаА5032;
+            ПередачаПроверкаНаСебяА503_3.Text = OrderSchemeParameters.ПередачаПроверкаНаСебяУсловныйНомерВолныА5033
+                + "/" + OrderSchemeParameters.ПередачаПроверкаНаСебяУсловныйНомерСтволаА5033;
 
             ПередачаПроверкаНаСебяИС3_1.Text = ПередачаПроверкаНаСебяА503_1.Text;
             ПередачаПроверкаНаСебяИС3_2.Text = ПередачаПроверкаНаСебяА503_2.Text;
@@ -44,7 +48,7 @@ namespace R440O.R440OForms.OrderScheme
             ПриемВидМодуляции1.Text = "ОФТ-" + OrderSchemeParameters.ПриемВидМодуляцииСкорость1;
 
             ПриемУсловныйНомерВолны1.Text = OrderSchemeParameters.ПриемУсловныйНомерВолны1
-                + "/" + OrderSchemeParameters.ПередачаПроверкаНаСебяУсловныйНомерСтволаА503_1;
+                + "/" + OrderSchemeParameters.ПриемУсловныйНомерСтвола1;
 
             ПриемНомерПотока1.Text = OrderSchemeParameters.ПриемНомерПотока1.ToString();
         }

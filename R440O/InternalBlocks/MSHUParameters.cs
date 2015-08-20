@@ -1,6 +1,7 @@
 ﻿using R440O.BaseClasses;
 using R440O.R440OForms.A304;
 using R440O.R440OForms.N15;
+using R440O.R440OForms.OrderScheme;
 
 namespace R440O.InternalBlocks
 {
@@ -19,13 +20,15 @@ namespace R440O.InternalBlocks
         {
             get
             {
-                if (A503BParameters.ВыходнойСигнал != null && Включен &&
-                    (A503BParameters.ВыходнойСигнал.Wave / 5000) == A304Parameters.ПереключательВыборСтвола)
+                var inputSignal = A503BParameters.ВыходнойСигнал ?? OrderSchemeParameters.СигналКорреспондента;
+
+                if (Включен && (inputSignal.Wave/5000) == A304Parameters.ПереключательВыборСтвола)
                 {
-                    var newSignal = A503BParameters.ВыходнойСигнал;
-                    newSignal.Wave = newSignal.Wave % 5000;
-                    return newSignal;
+                    var outputSignal = inputSignal;
+                    outputSignal.Wave = outputSignal.Wave%5000;
+                    return outputSignal;
                 }
+
                 return null;
             }
         }

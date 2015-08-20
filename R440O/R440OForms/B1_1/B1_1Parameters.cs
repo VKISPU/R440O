@@ -1,7 +1,4 @@
-﻿using System;
-using R440O.ThirdParty;
-
-namespace R440O.R440OForms.B1_1
+﻿namespace R440O.R440OForms.B1_1
 {
     using N15Inside;
     using N18_M;

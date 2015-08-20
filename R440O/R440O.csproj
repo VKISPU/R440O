@@ -107,7 +107,7 @@
     <Compile Include="Parameters\N13_2Parameters.cs" />
     <Compile Include="R440OForms\N15Inside\N15InsideParameters.cs" />
     <Compile Include="Parameters\N16Parameters.cs" />
-    <Compile Include="Parameters\OrderSchemeParameters.cs" />
+    <Compile Include="R440OForms\OrderScheme\OrderSchemeParameters.cs" />
     <Compile Include="Parameters\PU_K1_2Parameters.cs" />
     <Compile Include="Parameters\PU_K1_1Parameters.cs" />
     <Compile Include="Parameters\B3_2Parameters.cs" />
