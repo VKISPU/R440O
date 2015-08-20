@@ -272,7 +272,6 @@ namespace R440O.R440OForms.B1_1
             set
             {
                 _тумблерМуДу = value;
-                CheckTimer();
                 OnParameterChanged();
             }
         }
@@ -283,7 +282,6 @@ namespace R440O.R440OForms.B1_1
             set
             {
                 _кнопкаСкоростьГР = value;
-                CheckTimer();
                 OnParameterChanged();
             }
         }
@@ -294,7 +292,6 @@ namespace R440O.R440OForms.B1_1
             set
             {
                 _кнопкаСкоростьАб1Тлфк = value;
-                CheckTimer();
                 OnParameterChanged();
             }
         }

@@ -222,7 +222,7 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
                             timer_ЛампочкаПередача.Dispose();
                         
                     }
-                    КнопкаКП3Канал12 = false;
+                    ЛампочкаКП1Канал11 = false;
                     _ЛампочкаПередача = false;                    
                     Refresh();
                     
@@ -294,7 +294,7 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
                         if (timer_ЛампочкаПередача != null)
                             timer_ЛампочкаПередача.Dispose();
                     }
-                    КнопкаКП3Канал12 = false;
+                    ЛампочкаКП1Канал11 = false;
                     _ЛампочкаПередача = false;
                     Refresh();
                 }, 6000);
