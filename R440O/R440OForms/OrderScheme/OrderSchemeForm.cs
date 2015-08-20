@@ -3,6 +3,7 @@
     using System.Windows.Forms;
     using C300M_1;
     using N15Inside;
+    using N18_M;
 
     /// <summary>
     /// Форма блока Схемы-Приказ
@@ -26,6 +27,10 @@
         {
             C300M_1Parameters.КнопкиВидРаботы[9] = true;
             N15InsideParameters.ПереключательПУЛ4801 = 9;
+            N18_MParameters.ПереключательВходБ22 = 1;
+            N18_MParameters.ПереключательПРМ1 = 1;
+            N18_MParameters.ПереключательПРМ2 = 1;
+            N18_MParameters.Переключатель48ПрмЩв = 1;
         }
 
         private void InitializeParameters()
