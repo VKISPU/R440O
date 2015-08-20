@@ -1,29 +1,126 @@
 ﻿namespace R440O.R440OForms.B3_1
 {
+    using BaseClasses;
+    using N15;
+    using N15Inside;
+    using N18_M;
+
     class B3_1Parameters
     {
+        #region Работа блока
+        public static bool Включен
+        {
+            get
+            {
+                return (N15Parameters.ЛампочкаП220272 || N15Parameters.ЛампочкаП220273) &&
+                       (ТумблерМуДу || !ТумблерМуДу && N15Parameters.ТумблерБ3_1);
+            }
+        }
+
+        public static SignalArgs ВыходнойСигнал
+        {
+            get
+            {
+                if (Включен &&
+                    N15InsideParameters.ВыходПриемногоТракта != null &&
+                    N18_MParameters.ПереключательПРМ1 == 1 && 
+                    ПравильнаяКолодка(N15InsideParameters.ВыходПриемногоТракта.GroupSpeed))
+                    return N15InsideParameters.ВыходПриемногоТракта;
+                return null;
+            }
+        }
+
+        private static bool ПравильнаяКолодка(double groupSpeed)
+        {
+            switch (КолодкаКРПР)
+            {
+                case 1:
+                    return groupSpeed == 480;
+                case 2:
+                    return groupSpeed == 240;
+                case 3:
+                    return groupSpeed == 144;
+                case 4:
+                    return groupSpeed == 96;
+                case 5:
+                    return groupSpeed == 48;
+            }
+            return false;
+        }
+
+        #endregion
+
         #region Лампочки
 
-        public static string ЛампочкаПУЛГ_1 { get; set; }
-        public static string ЛампочкаПУЛГ_2 { get; set; }
-        public static string ЛампочкаПРИавар { get; set; }
-        public static string ЛампочкаРС_1 { get; set; }
-        public static string ЛампочкаРС_синхр { get; set; }
-        public static string ЛампочкаТЛГпр1 { get; set; }
-        public static string ЛампочкаТЛГпр2 { get; set; }
-        public static string ЛампочкаТЛГпр3 { get; set; }
-        public static string ЛампочкаОКпр1 { get; set; }
-        public static string ЛампочкаПФТК1_1 { get; set; }
-        public static string ЛампочкаПФТК1_2 { get; set; }
-        public static string ЛампочкаОКпр2 { get; set; }
-        public static string ЛампочкаПФТК2_1 { get; set; }
-        public static string ЛампочкаПФТК2_2 { get; set; }
-        public static string ЛампочкаВУПнеиспр { get; set; }
-        public static string ЛампочкаВУП_1 {get; set; }
+        public static bool ЛампочкаПУЛГ_1
+        {
+            get { return Включен && !ЛампочкаПУЛГ_2; }
+        }
+
+        public static bool ЛампочкаПУЛГ_2
+        {
+            get { return Включен && N15InsideParameters.Включен && N18_MParameters.ПереключательПРМ1 == 1
+                && КолодкаКРПР != 5; }
+        }
+
+        public static bool ЛампочкаПРИавар
+        {
+            get
+            {
+                return Включен &&
+                    КолодкаУКК1 == 0 &&
+                    КолодкаУКК2 == 0 &&
+                    !КолодкаОКпр1Ас && !КолодкаОКпр2Ас &&
+                    !КолодкаОКпр1Син && !КолодкаОКпр2Син &&
+                    !КолодкаТлГпр11 && !КолодкаТлГпр12 &&
+                    !КолодкаТлГпр21 && !КолодкаТлГпр22 &&
+                    !КолодкаТлГпр31 && !КолодкаТлГпр32;
+            }
+        }
+
+        public static bool ЛампочкаРС_1
+        {
+            get { return Включен && ВыходнойСигнал == null; }
+        }
+
+        public static bool ЛампочкаРС_синхр
+        {
+            get { return Включен && ВыходнойСигнал != null; }
+        }
+
+        public static bool ЛампочкаТЛГпр1 { get; set; }
+        public static bool ЛампочкаТЛГпр2 { get; set; }
+        public static bool ЛампочкаТЛГпр3 { get; set; }
+        public static bool ЛампочкаОКпр1 { get; set; }
+        public static bool ЛампочкаПФТК1_1 { get; set; }
+        public static bool ЛампочкаПФТК1_2 { get; set; }
+        public static bool ЛампочкаОКпр2 { get; set; }
+        public static bool ЛампочкаПФТК2_1 { get; set; }
+        public static bool ЛампочкаПФТК2_2 { get; set; }
+        public static bool ЛампочкаВУПнеиспр { get; set; }
+
+        public static bool ЛампочкаВУП1
+        {
+            get
+            {
+                return Включен;
+            }
+        }
 
         #endregion
 
         #region Колодки
+
+        private static int _колодкаКРПР;
+        public static int КолодкаКРПР
+        {
+            get { return _колодкаКРПР; }
+            set
+            {
+                if (value >= 0 && value <= 5) _колодкаКРПР = value;
+                OnParameterChanged();
+            }
+        }
 
         private static int _колодкаУКК1;
         public static int КолодкаУКК1
@@ -83,17 +180,6 @@
             set
             {
                 _колодкаОКпр2Ас = value;
-                OnParameterChanged();
-            }
-        }
-
-        private static int _колодкаКРПР;
-        public static int КолодкаКРПР
-        {
-            get { return _колодкаКРПР; }
-            set
-            {
-                if (value >= 0 && value <= 5) _колодкаКРПР = value;
                 OnParameterChanged();
             }
         }

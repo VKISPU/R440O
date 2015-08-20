@@ -1,4 +1,6 @@
-﻿namespace R440O.R440OForms.OrderScheme
+﻿using R440O.R440OForms.N15;
+
+namespace R440O.R440OForms.OrderScheme
 {
     using System.Windows.Forms;
     using C300M_1;
@@ -25,8 +27,9 @@
         /// </summary>
         private void CorrectStation()
         {
-            C300M_1Parameters.КнопкиВидРаботы[9] = true;
-            N15InsideParameters.ПереключательПУЛ4801 = 9;
+            C300M_1Parameters.КнопкаВидРаботы = 8;
+            N15Parameters.ТумблерА503Б = false;
+            N15InsideParameters.ПереключательПУЛ4801 = 8;
             N18_MParameters.ПереключательВходБ22 = 1;
             N18_MParameters.ПереключательПРМ1 = 1;
             N18_MParameters.ПереключательПРМ2 = 1;

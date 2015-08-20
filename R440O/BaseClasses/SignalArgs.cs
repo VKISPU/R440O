@@ -1,7 +1,7 @@
-﻿using R440O.ОбщиеТипыДанных;
-
-namespace R440O.BaseClasses
+﻿namespace R440O.BaseClasses
 {
+    using ОбщиеТипыДанных;
+
     /// <summary>
     /// Параметры передаваемого сигнала.
     /// </summary>
@@ -33,8 +33,8 @@ namespace R440O.BaseClasses
         public double Level = -1;
 
         /// <summary>
-        /// Определяет, передаётся ли информация.
+        /// True - синхронный режим работы, false - асинхронный режим работы.
         /// </summary>
-        public bool Information;
+        public bool Synchronization;
     }
 }

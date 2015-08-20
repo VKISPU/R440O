@@ -80,12 +80,12 @@
 
         public static bool ЛампочкаПУЛ_1
         {
-            get { return Включен && ВыходнойСигнал == null; }
+            get { return Включен && N15InsideParameters.Включен && N18_MParameters.ПереключательПРМ1 != 4; }
         }
 
         public static bool ЛампочкаПУЛ_2
         {
-            get { return Включен && ВыходнойСигнал != null; }
+            get { return Включен && N15InsideParameters.Включен && N18_MParameters.ПереключательПРМ1 == 4; }
         }
 
         public static bool ЛампочкаПРСС { get; set; } 

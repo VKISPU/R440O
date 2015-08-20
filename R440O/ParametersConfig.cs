@@ -121,6 +121,8 @@ namespace R440O
 
             // Приемная часть
             N15LocalParameters.локТумблерБ1_1 = true;
+            N15LocalParameters.локТумблерБ2_1 = true;
+            N15LocalParameters.локТумблерБ3_1 = true;
 
             #endregion
 

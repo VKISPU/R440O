@@ -1,6 +1,7 @@
 ﻿namespace R440O.R440OForms.B3_1
 {
     using System;
+    using System.Linq;
     using System.Windows.Forms;
     using BaseClasses;
 
@@ -207,6 +208,29 @@
                     item.BackgroundImage = (item.Name.Contains("КолодкаКРПР_" + B3_1Parameters.КолодкаКРПР))
                     ? ControlElementImages.jumperType2
                     : null;
+
+                if (!item.Name.Contains("Лампочка")) continue;
+                var propertiesList = typeof(B3_1Parameters).GetProperties();
+                foreach (var prop in propertiesList.Where(field => item.Name == "B3_1" + field.Name))
+                {
+                    if (item.Name.Contains("ЛампочкаПУЛГ_2") ||
+                        item.Name.Contains("ЛампочкаРС_синхр") ||
+                        item.Name.Contains("ЛампочкаПФТК1_2") ||
+                        item.Name.Contains("ЛампочкаПФТК2_2") ||
+                        item.Name.Contains("ЛампочкаВУП1"))
+                        item.BackgroundImage = (bool)prop.GetValue(null)
+                            ? ControlElementImages.lampType3OnRed
+                            : null;
+                    else if (item.Name.Contains("ЛампочкаТЛГпр"))
+                        item.BackgroundImage = (bool)prop.GetValue(null)
+                            ? ControlElementImages.lampType4OnRed
+                            : null;
+                    else
+                        item.BackgroundImage = (bool)prop.GetValue(null)
+                            ? ControlElementImages.lampType2OnRed
+                            : null;
+                    break;
+                }
             }
 
             КолодкаОКпр1Син.BackgroundImage = B3_1Parameters.КолодкаОКпр1Син ? ControlElementImages.jumperType2 : null;

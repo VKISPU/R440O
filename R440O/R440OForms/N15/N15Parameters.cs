@@ -1,4 +1,6 @@
-﻿namespace R440O.R440OForms.N15
+﻿using R440O.R440OForms.B3_1;
+
+namespace R440O.R440OForms.N15
 {
     using Parameters;
     using A1;
@@ -701,8 +703,7 @@
 
         public static bool ЛампочкаБ3_1
         {
-            get { return _лампочкаБ31; }
-            set { _лампочкаБ31 = value; }
+            get { return B3_1Parameters.Включен; }
         }
 
         public static bool ЛампочкаБ3_2
@@ -790,6 +791,7 @@
 
             A1Parameters.ResetParameters();
             B1_1Parameters.ResetParameters();
+            B3_1Parameters.ResetParameters();
             P220_27G_2Parameters.ResetParameters();
             P220_27G_3Parameters.ResetParameters();
 
