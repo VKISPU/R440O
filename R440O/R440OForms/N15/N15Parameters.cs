@@ -1,24 +1,25 @@
-﻿using R440O.Parameters;
-using R440O.R440OForms.A1;
-using R440O.R440OForms.A205M_1;
-using R440O.R440OForms.A205M_2;
-using R440O.R440OForms.N18_M;
-using R440O.R440OForms.N502B;
-using R440O.R440OForms.NKN_1;
-using R440O.R440OForms.NKN_2;
-using R440O.R440OForms.C300M_1;
-using R440O.R440OForms.C300M_2;
-using R440O.R440OForms.C300M_3;
-using R440O.R440OForms.C300M_4;
-using R440O.R440OForms.A304;
-using R440O.R440OForms.BMB;
-using R440O.R440OForms.Kontur_P3.Параметры;
-using R440O.R440OForms.P220_27G_2;
-using R440O.R440OForms.P220_27G_3;
-using R440O.СостоянияЭлементов.Контур_П;
-
-namespace R440O.R440OForms.N15
+﻿namespace R440O.R440OForms.N15
 {
+    using Parameters;
+    using A1;
+    using A205M_1;
+    using A205M_2;
+    using N18_M;
+    using N502B;
+    using NKN_1;
+    using NKN_2;
+    using C300M_1;
+    using C300M_2;
+    using C300M_3;
+    using C300M_4;
+    using A304;
+    using B1_1;
+    using BMB;
+    using Kontur_P3.Параметры;
+    using P220_27G_2;
+    using P220_27G_3;
+    using СостоянияЭлементов.Контур_П;
+
     public static class N15Parameters
     {
         public static bool Включен
@@ -577,21 +578,8 @@ namespace R440O.R440OForms.N15
         #region Лампочки левая часть
 
         private static bool _лампочкаН12С;
-        private static bool _лампочкаМШУ;
-        private static bool _лампочкаБма1;
-        private static bool _лампочкаБма2;
-        private static bool _лампочка27В;
-        private static bool _лампочкаН15Бп;
-        private static bool _лампочкаАфсс;
-        private static bool _лампочкаА1;
         private static bool _лампочкаА403Вкл;
         private static bool _лампочкаА403Неиспр;
-        private static bool _лампочкаП220272;
-        private static bool _лампочкаП220273;
-        private static bool _лампочкаА306;
-        private static bool _лампочкаА3041;
-        private static bool _лампочкаА3042;
-        private static bool _лампочкаБ11;
         private static bool _лампочкаБ12;
         private static bool _лампочкаБ21;
         private static bool _лампочкаБ22;
@@ -599,7 +587,6 @@ namespace R440O.R440OForms.N15
         private static bool _лампочкаБ32;
         private static bool _лампочкаДаб5;
         private static bool _лампочкаРН;
-        private static bool _лампочкаА503Б;
         private static double _регуляторУровень = -120;
 
 
@@ -691,8 +678,7 @@ namespace R440O.R440OForms.N15
 
         public static bool ЛампочкаБ1_1
         {
-            get { return _лампочкаБ11; }
-            set { _лампочкаБ11 = value; }
+            get { return B1_1Parameters.Включен; }
         }
 
         public static bool ЛампочкаБ1_2
@@ -803,6 +789,7 @@ namespace R440O.R440OForms.N15
             #region Дискрет и Генераторы
 
             A1Parameters.ResetParameters();
+            B1_1Parameters.ResetParameters();
             P220_27G_2Parameters.ResetParameters();
             P220_27G_3Parameters.ResetParameters();
 

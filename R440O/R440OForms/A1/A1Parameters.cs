@@ -1,4 +1,6 @@
-﻿namespace R440O.R440OForms.A1
+﻿using R440O.R440OForms.B1_1;
+
+namespace R440O.R440OForms.A1
 {
     using BaseClasses;
     using N15;
@@ -35,14 +37,12 @@
                         Level = 50
                     };
 
-                if (КнопкаСкоростьГр)
-                    return new SignalArgs
+                return new SignalArgs
                     {
                         GroupSpeed = 2.4,
                         ChanelSpeed = new[] { -1, 0, 1.2, 0, 0.1, 0.1, 0.05, 0.025 },
                         Level = 50
                     };
-                return null;
             }
         }
         
@@ -56,7 +56,7 @@
         {
             get
             {
-                return Включен && !КнопкаСкоростьГр;
+                return Включен;
             }
         }
 
@@ -174,6 +174,7 @@
             set
             {
                 _кнопкаСкоростьГР = value;
+                N15Parameters.ResetParameters();
                 OnParameterChanged();
             }
         }
@@ -184,6 +185,7 @@
             set
             {
                 _кнопкаСкоростьАб_1ТЛФК = value;
+                N15Parameters.ResetParameters();
                 OnParameterChanged();
             }
         }

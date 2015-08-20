@@ -99,6 +99,7 @@ namespace R440O
 
             // Н18
             N18_MParameters.ПереключательПРД = 2;
+            N18_MParameters.ПереключательПРМ1 = 4;
 
             // Генераторы
             N15Parameters.Тумблер5МГц25МГц3 = true;
@@ -114,6 +115,9 @@ namespace R440O
             N15Parameters.ТумблерТлфТлгПрм = true;
             N15InsideParameters.ПереключательПУЛ48ПРД1 = 3;
             N15InsideParameters.ТумблерПул48ПРДЧтОфт1 = Модуляция.ОФТ;
+
+            N15InsideParameters.ПереключательПУЛ4801 = 3;
+            N15InsideParameters.ТумблерПул480ЧтОфт1 = Модуляция.ОФТ;
 
             // Приемная часть
             N15LocalParameters.локТумблерБ1_1 = true;

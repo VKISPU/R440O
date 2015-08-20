@@ -49,6 +49,7 @@
             }
 
         } 
+
         #endregion
 
         #region Тумблеры
@@ -64,6 +65,7 @@
             {
                 _тумблерПул480ЧтОфт1 = value;
                 OnParameterChanged();
+                N15Parameters.ResetParameters();
             }
         }
 
@@ -84,6 +86,7 @@
             {
                 _тумблерПУЛ48ПРДЧтОфт1 = value;
                 OnParameterChanged();
+                N15Parameters.ResetParameters();
             }
         }
 
@@ -152,6 +155,7 @@
                 {
                     _переключательПУЛ4801 = value;
                     OnParameterChanged();
+                    N15Parameters.ResetParameters();
                 }
             }
         }
@@ -226,6 +230,7 @@
                 {
                     _переключательПУЛ48ПРД1 = value;
                     OnParameterChanged();
+                    N15Parameters.ResetParameters();
                 }
             }
         }
