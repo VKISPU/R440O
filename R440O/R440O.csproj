@@ -60,6 +60,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BackgroundImages.resx</DependentUpon>
     </Compile>
+    <Compile Include="BaseClasses\Chanel.cs" />
+    <Compile Include="BaseClasses\Flow.cs" />
+    <Compile Include="BaseClasses\Group.cs" />
     <Compile Include="BaseClasses\SpeedTester.cs" />
     <Compile Include="ControlElementImages.Designer.cs">
       <AutoGen>True</AutoGen>
