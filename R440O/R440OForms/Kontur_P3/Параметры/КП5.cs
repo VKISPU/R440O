@@ -51,8 +51,10 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
         }
         public static bool ЛампочкаОтбой = false;
 
+        public static bool ЛампочкаИнформПринята { get; set; }
+
         private static bool ИнформацияПринята = false;
-        public static bool ЛампочкаИнформПринята
+        public static bool ЛампочкаПрием
         {
             get
             {
@@ -239,9 +241,9 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
                     ЛампочкаКП1Канал11 = false;
                     КП3 = false;
                     ОчищениеТаблоНаКП2();
-                    _ЛампочкаПередача = false;                    
-                    Refresh();
-                    
+                    _ЛампочкаПередача = false;
+                    ЛампочкаИнформПринята = false;
+                    Refresh();                    
                 }, 6000);
                _ЛампочкаПередача = true;                
                 Refresh();
@@ -350,6 +352,7 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
                     КП3 = false;
                     ОчищениеТаблоНаКП2();
                     _ЛампочкаПередача = false;
+                    ЛампочкаИнформПринята = false;
                     Refresh();
                 }, 6000);
                 _ЛампочкаПередача = true;                
@@ -545,6 +548,7 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
             ЛампочкаКП1Канал11 = false;
             КнопкаКП3Канал12 = false;
             КП3 = false;
+            ЛампочкаИнформПринята = false;
             ОчищениеТаблоНаКП2();
             Refresh();
         }

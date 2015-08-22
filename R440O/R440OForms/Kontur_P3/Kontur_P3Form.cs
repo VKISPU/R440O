@@ -695,6 +695,9 @@ namespace R440O.R440OForms.Kontur_P3
                 ЛампочкаПередача.BackgroundImage = Kontur_P3Parameters.ЛампочкаПередача
                    ? ControlElementImages.lampType9OnGreen
                    : null;
+                ЛампочкаКП5Прием.BackgroundImage = Kontur_P3Parameters.ЛампочкаПрием
+                   ? ControlElementImages.lampType9OnGreen
+                   : null;
                 ЛампочкаИнформПринята.BackgroundImage = Kontur_P3Parameters.ЛампочкаИнформПринята
                    ? ControlElementImages.lampType9OnGreen
                    : null;
