@@ -1,105 +1,142 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace R440O.Parameters
+﻿namespace R440O.R440OForms.B2_1
 {
-    class B2_1Parameters
+    using N15;
+
+    static class B2_1Parameters
     {
+        #region Работа блока
+        public static bool Включен
+        {
+            get
+            {
+                return (N15Parameters.ЛампочкаП220272 || N15Parameters.ЛампочкаП220273) &&
+                       (ТумблерМуДу || !ТумблерМуДу && N15Parameters.ТумблерБ2_1);
+            }
+        }
+
+        #endregion
+
         #region Лампочки
-        public static string B2_1ЛампочкаБОЧ { get; set; }
-        public static string B2_1ЛампочкаПУЛ_1 { get; set; }
-        public static string B2_1ЛампочкаПУЛ_2 { get; set; }
-        public static string B2_1ЛампочкаПрРПрС_1 { get; set; }
-        public static string B2_1ЛампочкаПрРПрС_2 { get; set; }
-        public static string B2_1ЛампочкаПрРПрС_Авар { get; set; }
-        public static string B2_1ЛампочкаТЛГпр { get; set; }
-        public static string B2_1ЛампочкаТКСпр2 { get; set; }
-        public static string B2_1ЛампочкаДФАПЧ21 { get; set; }
-        public static string B2_1ЛампочкаПрТС1_1 { get; set; }
-        public static string B2_1ЛампочкаПрТС1_2 { get; set; }
-        public static string B2_1ЛампочкаДФАПЧ22 { get; set; }
-        public static string B2_1ЛампочкаПрТС2_1 { get; set; }
-        public static string B2_1ЛампочкаПрТС2_2 { get; set; }
-        public static string B2_1ЛампочкаВУП_1 { get; set; }
-        public static string B2_1ЛампочкаВУП_Неиспр { get; set; }
+        public static string ЛампочкаБОЧ { get; set; }
+        public static string ЛампочкаПУЛ_1 { get; set; }
+        public static string ЛампочкаПУЛ_2 { get; set; }
+        public static string ЛампочкаПрРПрС_1 { get; set; }
+        public static string ЛампочкаПрРПрС_2 { get; set; }
+        public static string ЛампочкаПрРПрС_Авар { get; set; }
+        public static string ЛампочкаТЛГпр { get; set; }
+        public static string ЛампочкаТКСпр2 { get; set; }
+        public static string ЛампочкаДФАПЧ21 { get; set; }
+        public static string ЛампочкаПрТС1_1 { get; set; }
+        public static string ЛампочкаПрТС1_2 { get; set; }
+        public static string ЛампочкаДФАПЧ22 { get; set; }
+        public static string ЛампочкаПрТС2_1 { get; set; }
+        public static string ЛампочкаПрТС2_2 { get; set; }
+        public static string ЛампочкаВУП_1 { get; set; }
+        public static string ЛампочкаВУП_Неиспр { get; set; }
         #endregion
 
         #region Кнопки
-    
-        public static bool B2_1КнопкаБК1_1 { get { return _B2_1КнопкаБК1_1; } set { _B2_1КнопкаБК1_1 = value; } }
-        private static bool _B2_1КнопкаБК1_1 = false;
+
+        private static int _кнопкаБК1;
+        private static int _кнопкаБК2;
+        private static bool _тумблерМуДу;
         
-        public static bool B2_1КнопкаБК1_2 { get { return _B2_1КнопкаБК1_2; } set {_B2_1КнопкаБК1_2 = value;} }
-        private static bool _B2_1КнопкаБК1_2 = false;
+        public static int КнопкаБК1
+        {
+            get { return _кнопкаБК1; }
+            set
+            {
+                _кнопкаБК1 = _кнопкаБК1 == value ? 0 : value;
+                OnParameterChanged();
+            }
+        }
 
-        public static bool B2_1КнопкаБК1_3 { get { return _B2_1КнопкаБК1_3; } set { _B2_1КнопкаБК1_3 = value; } }
-        private static bool _B2_1КнопкаБК1_3 = false;
+        public static int КнопкаБК2
+        {
+            get { return _кнопкаБК2; }
+            set
+            {
+                _кнопкаБК2 = _кнопкаБК2 == value ? 0 : value;
+                OnParameterChanged();
+            }
+        }
 
-        public static bool B2_1КнопкаБК1_4 { get { return _B2_1КнопкаБК1_4; } set { _B2_1КнопкаБК1_4 = value; } }
-        private static bool _B2_1КнопкаБК1_4 = false;
-
-        public static bool B2_1КнопкаБК1_5 { get { return _B2_1КнопкаБК1_5; } set { _B2_1КнопкаБК1_5 = value; } }
-        private static bool _B2_1КнопкаБК1_5 = false;
-
-        public static bool B2_1КнопкаБК1_6 { get { return _B2_1КнопкаБК1_6; } set { _B2_1КнопкаБК1_6 = value; } }
-        private static bool _B2_1КнопкаБК1_6 = false;
-
-        public static bool B2_1КнопкаБК1_7 { get { return _B2_1КнопкаБК1_7; } set { _B2_1КнопкаБК1_7 = value; } }
-        private static bool _B2_1КнопкаБК1_7 = false;
-
-        public static bool B2_1КнопкаБК1_8 { get { return _B2_1КнопкаБК1_8; } set { _B2_1КнопкаБК1_8 = value; } }
-        private static bool _B2_1КнопкаБК1_8 = false;
-
-        public static bool B2_1КнопкаБК1_9 { get { return _B2_1КнопкаБК1_9; } set { _B2_1КнопкаБК1_9 = value; } }
-        private static bool _B2_1КнопкаБК1_9 = false;
-
-
-
-        public static bool B2_1КнопкаБК2_1 { get { return _B2_1КнопкаБК2_1; } set { _B2_1КнопкаБК2_1 = value; } }
-        private static bool _B2_1КнопкаБК2_1 = false;
-
-        public static bool B2_1КнопкаБК2_2 { get { return _B2_1КнопкаБК2_2; } set { _B2_1КнопкаБК2_2 = value; } }
-        private static bool _B2_1КнопкаБК2_2 = false;
-
-        public static bool B2_1КнопкаБК2_3 { get { return _B2_1КнопкаБК2_3; } set { _B2_1КнопкаБК2_3 = value; } }
-        private static bool _B2_1КнопкаБК2_3 = false;
-
-        public static bool B2_1КнопкаБК2_4 { get { return _B2_1КнопкаБК2_4; } set { _B2_1КнопкаБК2_4 = value; } }
-        private static bool _B2_1КнопкаБК2_4 = false;
-
-        public static bool B2_1КнопкаБК2_5 { get { return _B2_1КнопкаБК2_5; } set { _B2_1КнопкаБК2_5 = value; } }
-        private static bool _B2_1КнопкаБК2_5 = false;
-
-        public static bool B2_1КнопкаБК2_6 { get { return _B2_1КнопкаБК2_6; } set { _B2_1КнопкаБК2_6 = value; } }
-        private static bool _B2_1КнопкаБК2_6 = false;
-
-        public static bool B2_1КнопкаБК2_7 { get { return _B2_1КнопкаБК2_7; } set { _B2_1КнопкаБК2_7 = value; } }
-        private static bool _B2_1КнопкаБК2_7 = false;
-
-        public static bool B2_1КнопкаБК2_8 { get { return _B2_1КнопкаБК2_8; } set { _B2_1КнопкаБК2_8 = value; } }
-        private static bool _B2_1КнопкаБК2_8 = false;
-
-        public static bool B2_1КнопкаБК2_9 { get { return _B2_1КнопкаБК2_9; } set { _B2_1КнопкаБК2_9 = value; } }
-        private static bool _B2_1КнопкаБК2_9 = false;
+        /// <summary>
+        /// Возможные состояния: Му - true, Ду - false
+        /// </summary>
+        public static bool ТумблерМуДу
+        {
+            get { return _тумблерМуДу; }
+            set
+            {
+                _тумблерМуДу = value;
+                OnParameterChanged();
+            }
+        }
         #endregion
 
         #region Колодки
-        public static bool B2_1КолодкаТЛГпр_1 = false;
-        public static bool B2_1КолодкаТЛГпр_2 = false;
 
-        public static bool B2_1КолодкаТКСпр2_1 = false;
-        public static bool B2_1КолодкаТКСпр2_2 = false;
+        private static bool _колодкаТлГпр1;
+        private static bool _колодкаТлГпр2;
+        private static bool _колодкаТкСпр21;
+        private static bool _колодкаТкСпр22;
+
+        public static bool КолодкаТЛГпр1
+        {
+            get { return _колодкаТлГпр1; }
+            set
+            {
+                _колодкаТлГпр1 = value; 
+                OnParameterChanged();
+            }
+        }
+
+        public static bool КолодкаТЛГпр2
+        {
+            get { return _колодкаТлГпр2; }
+            set
+            {
+                _колодкаТлГпр2 = value;
+                OnParameterChanged();
+            }
+        }
+
+        public static bool КолодкаТКСпр21
+        {
+            get { return _колодкаТкСпр21; }
+            set
+            {
+                _колодкаТкСпр21 = value;
+                OnParameterChanged();
+            }
+        }
+
+        public static bool КолодкаТКСпр22
+        {
+            get { return _колодкаТкСпр22; }
+            set
+            {
+                _колодкаТкСпр22 = value;
+                OnParameterChanged();
+            }
+        }
+
         #endregion
 
-        //Тумблеры 
-        /// <summary>
-        /// Возможные состояния: Му - местное управление, Ду - дистанционное управление
-        /// </summary>
-        public static string B2_1ТумблерМуДу = "Ду";
+        public delegate void ParameterChangedHandler();
+        public static event ParameterChangedHandler ParameterChanged;
 
+        private static void OnParameterChanged()
+        {
+            var handler = ParameterChanged;
+            if (handler != null) handler();
+        }
+
+        public static void ResetParameters()
+        {
+            OnParameterChanged();
+        }
 
     }
 }

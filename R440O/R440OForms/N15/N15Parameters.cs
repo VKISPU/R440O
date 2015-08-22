@@ -1,6 +1,4 @@
-﻿using R440O.R440OForms.B3_1;
-
-namespace R440O.R440OForms.N15
+﻿namespace R440O.R440OForms.N15
 {
     using Parameters;
     using A1;
@@ -16,6 +14,8 @@ namespace R440O.R440OForms.N15
     using C300M_4;
     using A304;
     using B1_1;
+    using B2_1;
+    using B3_1;
     using BMB;
     using Kontur_P3.Параметры;
     using P220_27G_2;
@@ -691,8 +691,7 @@ namespace R440O.R440OForms.N15
 
         public static bool ЛампочкаБ2_1
         {
-            get { return _лампочкаБ21; }
-            set { _лампочкаБ21 = value; }
+            get { return B2_1Parameters.Включен; }
         }
 
         public static bool ЛампочкаБ2_2
