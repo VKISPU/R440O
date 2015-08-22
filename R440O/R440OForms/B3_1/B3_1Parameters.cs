@@ -80,7 +80,7 @@
 
         public static bool ЛампочкаРС_1
         {
-            get { return Включен && ВыходнойСигнал == null; }
+            get { return !ЛампочкаРС_синхр; }
         }
 
         public static bool ЛампочкаРС_синхр
@@ -91,12 +91,21 @@
         public static bool ЛампочкаТЛГпр1 { get; set; }
         public static bool ЛампочкаТЛГпр2 { get; set; }
         public static bool ЛампочкаТЛГпр3 { get; set; }
-        public static bool ЛампочкаОКпр1 { get; set; }
-        public static bool ЛампочкаПФТК1_1 { get; set; }
-        public static bool ЛампочкаПФТК1_2 { get; set; }
-        public static bool ЛампочкаОКпр2 { get; set; }
-        public static bool ЛампочкаПФТК2_1 { get; set; }
-        public static bool ЛампочкаПФТК2_2 { get; set; }
+
+        public static bool ЛампочкаОКпр1
+        {
+            get { return ЛампочкаРС_синхр && ВыходнойСигнал.SelectedElement.Flow != КолодкаУКК1; }
+        }
+
+        public static bool ЛампочкаПФТК1_1 { get { return ЛампочкаРС_1 && !ЛампочкаОКпр1; } }
+        public static bool ЛампочкаПФТК1_2 { get { return ЛампочкаПУЛГ_2 && !ЛампочкаОКпр1; } }
+
+        public static bool ЛампочкаОКпр2
+        {
+            get { return ЛампочкаРС_синхр && ВыходнойСигнал.SelectedElement.Flow != КолодкаУКК2; }
+        }
+        public static bool ЛампочкаПФТК2_1 { get { return ЛампочкаРС_1 && !ЛампочкаОКпр2; } }
+        public static bool ЛампочкаПФТК2_2 { get { return ЛампочкаПУЛГ_2 && !ЛампочкаОКпр2; } }
         public static bool ЛампочкаВУПнеиспр { get; set; }
 
         public static bool ЛампочкаВУП1
