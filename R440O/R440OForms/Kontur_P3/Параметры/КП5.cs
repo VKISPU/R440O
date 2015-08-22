@@ -47,7 +47,7 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
         private static bool _ЛампочкаПередача;
         public static bool ЛампочкаПередача
         {
-            get { return ЛампочкаСеть && _ЛампочкаПередача; }
+            get { return ЛампочкаСеть && (_ЛампочкаПередача || ЛампочкаКП3Канал10 || ЛампочкаКП3Канал11 || ЛампочкаКП3Канал12); }
         }
         public static bool ЛампочкаОтбой = false;
 
