@@ -62,7 +62,6 @@
                 {
                     ChanelSpeed = new []{-1, 1.2, 1.2, 1.2, 0.05, 0.05, 0.025},
                     GroupSpeed = ПриемВидМодуляцииСкорость1,
-                    Information = true,
                     Level = 50,
                     Modulation = Модуляция.ОФТ,
                     Wave = ПриемУсловныйНомерВолны1
