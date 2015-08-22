@@ -20,7 +20,13 @@
         #endregion
 
         #region Лампочки
-        public static bool ЛампочкаКонтрольПодписи = false;
+        public static bool ЛампочкаКонтрольПодписи
+        {
+            get
+            {
+                return ЛампочкаСеть && (КнопкаПодпись1 || КнопкаПодпись2 || КнопкаПодпись3);
+            }
+        }
         public static bool ЛампочкаКП1Канал10
         {
             get

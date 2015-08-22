@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.Kontur_P3Panel = new System.Windows.Forms.Panel();
+            this.ТаблоКП2Группа = new System.Windows.Forms.Button();
             this.ТаблоКП2Информация2 = new System.Windows.Forms.Button();
             this.ТаблоКП2Информация1 = new System.Windows.Forms.Button();
             this.ИндикаторСеть = new System.Windows.Forms.PictureBox();
@@ -108,7 +109,6 @@
             this.ТумблерКонтроль = new System.Windows.Forms.Button();
             this.ПереключательПриоритет = new System.Windows.Forms.Button();
             this.ПереключательКонтроль = new System.Windows.Forms.Button();
-            this.ТаблоКП2Группа = new System.Windows.Forms.Button();
             this.Kontur_P3Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторСеть)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПР2_ЗА)).BeginInit();
@@ -231,6 +231,22 @@
             this.Kontur_P3Panel.Name = "Kontur_P3Panel";
             this.Kontur_P3Panel.Size = new System.Drawing.Size(1109, 409);
             this.Kontur_P3Panel.TabIndex = 1;
+            // 
+            // ТаблоКП2Группа
+            // 
+            this.ТаблоКП2Группа.BackColor = System.Drawing.Color.Transparent;
+            this.ТаблоКП2Группа.FlatAppearance.BorderSize = 0;
+            this.ТаблоКП2Группа.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТаблоКП2Группа.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТаблоКП2Группа.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТаблоКП2Группа.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ТаблоКП2Группа.ForeColor = System.Drawing.Color.Red;
+            this.ТаблоКП2Группа.Location = new System.Drawing.Point(198, 157);
+            this.ТаблоКП2Группа.Name = "ТаблоКП2Группа";
+            this.ТаблоКП2Группа.Size = new System.Drawing.Size(37, 27);
+            this.ТаблоКП2Группа.TabIndex = 95;
+            this.ТаблоКП2Группа.Text = "111";
+            this.ТаблоКП2Группа.UseVisualStyleBackColor = false;
             // 
             // ТаблоКП2Информация2
             // 
@@ -860,8 +876,7 @@
             this.КнопкаКонтрольЗанятости.Size = new System.Drawing.Size(29, 28);
             this.КнопкаКонтрольЗанятости.TabIndex = 50;
             this.КнопкаКонтрольЗанятости.UseVisualStyleBackColor = false;
-            this.КнопкаКонтрольЗанятости.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаКонтрольЗанятости_MouseDown);
-            this.КнопкаКонтрольЗанятости.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Kontur_P3КнопкаКонтрольЗанятости_MouseUp);
+            this.КнопкаКонтрольЗанятости.Click += new System.EventHandler(this.КнопкаКонтрольЗанятости_Click);
             // 
             // КнопкаИнформ
             // 
@@ -1418,22 +1433,6 @@
             this.ПереключательКонтроль.TabIndex = 3;
             this.ПереключательКонтроль.UseVisualStyleBackColor = false;
             this.ПереключательКонтроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательКонтроль_MouseUp);
-            // 
-            // ТаблоКП2Группа
-            // 
-            this.ТаблоКП2Группа.BackColor = System.Drawing.Color.Transparent;
-            this.ТаблоКП2Группа.FlatAppearance.BorderSize = 0;
-            this.ТаблоКП2Группа.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.ТаблоКП2Группа.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.ТаблоКП2Группа.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ТаблоКП2Группа.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ТаблоКП2Группа.ForeColor = System.Drawing.Color.Red;
-            this.ТаблоКП2Группа.Location = new System.Drawing.Point(198, 157);
-            this.ТаблоКП2Группа.Name = "ТаблоКП2Группа";
-            this.ТаблоКП2Группа.Size = new System.Drawing.Size(37, 27);
-            this.ТаблоКП2Группа.TabIndex = 95;
-            this.ТаблоКП2Группа.Text = "111";
-            this.ТаблоКП2Группа.UseVisualStyleBackColor = false;
             // 
             // Kontur_P3Form
             // 

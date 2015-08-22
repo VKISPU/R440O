@@ -258,14 +258,12 @@ namespace R440O.R440OForms.Kontur_P3
             КнопкаНаборКК.Text = "ПРМ";
         }
 
-        private void Kontur_P3КнопкаКонтрольЗанятости_MouseDown(object sender, MouseEventArgs e)
+        private void КнопкаКонтрольЗанятости_Click(object sender, System.EventArgs e)
         {
-            КнопкаКонтрольЗанятости.BackgroundImage = null;
-        }
-
-        private void Kontur_P3КнопкаКонтрольЗанятости_MouseUp(object sender, MouseEventArgs e)
-        {
-            КнопкаКонтрольЗанятости.BackgroundImage = ControlElementImages.buttonSquareBlack_small;
+            Kontur_P3Parameters.КнопкаКонтрольЗанятости = !Kontur_P3Parameters.КнопкаКонтрольЗанятости;
+            КнопкаКонтрольЗанятости.BackgroundImage = Kontur_P3Parameters.КнопкаКонтрольЗанятости
+                ? null
+                : ControlElementImages.buttonSquareBlack_small;
         }
 
         private void Kontur_P3КнопкаОтклЗС_MouseDown(object sender, MouseEventArgs e)
@@ -629,6 +627,9 @@ namespace R440O.R440OForms.Kontur_P3
                 #endregion
 
                 #region Кнопки
+                КнопкаКонтрольЗанятости.BackgroundImage = Kontur_P3Parameters.КнопкаКонтрольЗанятости
+                ? null
+                : ControlElementImages.buttonSquareBlack_small;
                 if (Kontur_P3Parameters.КнопкаАдресУСС)
                 {
                     КнопкаАдресУСС.BackgroundImage = null;
@@ -799,6 +800,9 @@ namespace R440O.R440OForms.Kontur_P3
                 ЛампочкаКП1Канал11.BackgroundImage = (Kontur_P3Parameters.ЛампочкаКП1Канал11)
                     ? ControlElementImages.lampType9OnGreen
                    : null;
+                ЛампочкаКонтрольПодписи.BackgroundImage = Kontur_P3Parameters.ЛампочкаКонтрольПодписи
+                    ? ControlElementImages.lampType5OnRed
+                    : null;
                 #endregion
 
                 #region Табло
@@ -814,6 +818,8 @@ namespace R440O.R440OForms.Kontur_P3
 
         }
         #endregion
+
+        
 
        
 
