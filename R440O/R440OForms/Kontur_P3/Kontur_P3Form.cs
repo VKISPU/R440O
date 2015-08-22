@@ -455,6 +455,22 @@ namespace R440O.R440OForms.Kontur_P3
                 ? null
                 : ControlElementImages.buttonRoundType8;
         }
+        private void КнопкаКП4Контроль_MouseDown(object sender, MouseEventArgs e)
+        {
+            Kontur_P3Parameters.КП4Контроль = true;
+            if (!Kontur_P3Parameters.КнопкаКП4Контроль)
+            {
+                КнопкаКП4Контроль.BackgroundImage = null;
+            }
+        }
+
+        private void КнопкаКП4Контроль_MouseUp(object sender, MouseEventArgs e)
+        {
+            Kontur_P3Parameters.КП4Контроль = false;
+            if(!Kontur_P3Parameters.КнопкаКП4Контроль)
+                КнопкаКП4Контроль.BackgroundImage = ControlElementImages.buttonRoundType8;
+        }
+        
         #endregion
 
         #region КП3
@@ -502,6 +518,7 @@ namespace R440O.R440OForms.Kontur_P3
         private void Kontur_P3КнопкаСдвиг1_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаСдвиг1.BackgroundImage = null;
+            Kontur_P3Parameters.НажатаКнопкаСдвиг1();
         }
 
         private void Kontur_P3КнопкаСдвиг1_MouseUp(object sender, MouseEventArgs e)
@@ -522,6 +539,7 @@ namespace R440O.R440OForms.Kontur_P3
         private void Kontur_P3КнопкаНачИнформ_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаНачИнформ.BackgroundImage = null;
+            Kontur_P3Parameters.НажатаКнопкаНачалоИнформации();
         }
 
         private void Kontur_P3КнопкаНачИнформ_MouseUp(object sender, MouseEventArgs e)
@@ -538,6 +556,19 @@ namespace R440O.R440OForms.Kontur_P3
             КнопкаКП1Контроль.BackgroundImage = (Kontur_P3Parameters.КнопкаКП1Контроль)
                 ? null
                 : ControlElementImages.buttonRoundType8;
+        }
+        private void КнопкаКП1Контроль_MouseDown(object sender, MouseEventArgs e)
+        {
+            Kontur_P3Parameters.КП1Контроль = true;
+            if (!Kontur_P3Parameters.КнопкаКП1Контроль)
+                КнопкаКП1Контроль.BackgroundImage = null;
+        }
+
+        private void КнопкаКП1Контроль_MouseUp(object sender, MouseEventArgs e)
+        {
+            Kontur_P3Parameters.КП1Контроль = false;
+            if (!Kontur_P3Parameters.КнопкаКП1Контроль)
+                КнопкаКП1Контроль.BackgroundImage = ControlElementImages.buttonRoundType8;
         }
         #endregion
         #endregion
@@ -588,6 +619,7 @@ namespace R440O.R440OForms.Kontur_P3
                    : ControlElementImages.tumblerType4Up;
                 #endregion
                 #endregion
+
 
                 #region КП5
                 #region Тумблеры
@@ -764,6 +796,7 @@ namespace R440O.R440OForms.Kontur_P3
                 #region Табло
                 ТаблоКП2Информация1.Text = Kontur_P3Parameters.ТекущееЗначение1КП2;
                 ТаблоКП2Информация2.Text = Kontur_P3Parameters.ТекущееЗначение2КП2;
+                ТаблоКП2Группа.Text = Kontur_P3Parameters.ТекущееЗначениеГрупыКП2;
                 #endregion
                 #endregion
             }
@@ -773,6 +806,9 @@ namespace R440O.R440OForms.Kontur_P3
 
         }
         #endregion
+
+       
+
         
     }
 }
