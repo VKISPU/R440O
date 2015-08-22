@@ -582,7 +582,7 @@ namespace R440O.R440OForms.C300M_1
             }
         }
 
-        public static SignalArgs ВыходнойСигнал
+        public static Signal ВыходнойСигнал
         {
             get
             {

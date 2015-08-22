@@ -12,13 +12,13 @@
     {
         #region Выходной Сигнал
 
-        public static SignalArgs ВыходнойСигнал
+        public static Signal ВыходнойСигнал
         {
             get
             {
                 if (ЛампочкаНормРаб)
                 {
-                    var signal = new SignalArgs();
+                    var signal = new Signal();
                     if (N15InsideParameters.ВыходПередающегоТракта != null)
                     {
                         signal = N15InsideParameters.ВыходПередающегоТракта;
@@ -37,12 +37,12 @@
                                 break;
                             case 3:
                             {
-                                if (signal.Modulation != Модуляция.ОФТ || !SpeedTester.IsEquivalent(signal.GroupSpeed, 5.2)) signal = null;
+                                if (signal.Modulation != Модуляция.ОФТ || !Signal.IsEquivalentSpeed(signal.GroupSpeed, 5.2)) signal = null;
                             }
                                 break;
                             case 4:
                             {
-                                if (signal.Modulation != Модуляция.ОФТ || !SpeedTester.IsEquivalent(signal.GroupSpeed, 48)) signal = null;
+                                if (signal.Modulation != Модуляция.ОФТ || !Signal.IsEquivalentSpeed(signal.GroupSpeed, 48)) signal = null;
                             }
                                 break;
                         }

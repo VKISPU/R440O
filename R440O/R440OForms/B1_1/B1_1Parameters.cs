@@ -1,5 +1,6 @@
 ﻿namespace R440O.R440OForms.B1_1
 {
+    using System.Collections.Generic;
     using N15Inside;
     using N18_M;
     using BaseClasses;
@@ -18,7 +19,7 @@
             }
         }
 
-        public static SignalArgs ВыходнойСигнал
+        public static Signal ВыходнойСигнал
         {
             get
             {
@@ -30,30 +31,39 @@
             }
         }
 
-        private static SignalArgs НеобходимыйСигнал
+        private static Signal НеобходимыйСигнал
         {
             get
             {
                 if (!КнопкаСкоростьГР)
                     if (КнопкаСкоростьАб1ТлфК)
-                        return new SignalArgs
+                        return new Signal
                         {
                             GroupSpeed = 4.8,
-                            ChanelSpeed = new[] {-1, 2.4, 1.2, 0, 0.1, 0.1, 0.05, 0.025},
+                            Elements = new List<SignalElement>
+                            {
+                                new SignalElement(new[] {-1, 2.4, 1.2, 0, 0.1, 0.1, 0.05, 0.025})
+                            },
                             Level = 50
                         };
                     else
-                        return new SignalArgs
+                        return new Signal
                         {
                             GroupSpeed = 4.8,
-                            ChanelSpeed = new[] {-1, 1.2, 1.2, 1.2, 0.1, 0.1, 0.05, 0.025},
+                            Elements = new List<SignalElement>
+                            {
+                                new SignalElement(new[] {-1, 1.2, 1.2, 1.2, 0.1, 0.1, 0.05, 0.025})
+                            },
                             Level = 50
                         };
 
-                return new SignalArgs
+                return new Signal
                 {
                     GroupSpeed = 2.4,
-                    ChanelSpeed = new[] {-1, 0, 1.2, 0, 0.1, 0.1, 0.05, 0.025},
+                    Elements = new List<SignalElement>
+                            {
+                                new SignalElement(new[] {-1, 0, 1.2, 0, 0.1, 0.1, 0.05, 0.025})
+                            },
                     Level = 50
                 };
             }
@@ -97,8 +107,8 @@
         {
             get
             {
-                if (ЛампочкаТКБтк1_2 &&
-                    !SpeedTester.IsEquivalent(ВыходнойСигнал.ChanelSpeed[1], НеобходимыйСигнал.ChanelSpeed[1]))
+                if (ЛампочкаТКБтк1_2 && !Signal.IsEquivalentSpeed(ВыходнойСигнал.SelectedElement.SpeedOfChanel(1),
+                    НеобходимыйСигнал.SelectedElement.SpeedOfChanel(1)))
                     return true;
                 return false;
             }
@@ -107,7 +117,7 @@
         {
             get
             {
-                if (ВыходнойСигнал != null && НеобходимыйСигнал.ChanelSpeed[1] != 0)
+                if (ВыходнойСигнал != null && НеобходимыйСигнал.SelectedElement.SpeedOfChanel(1) != 0)
                     return true;
                 return false;
             }
@@ -117,7 +127,8 @@
             get
             {
                 if (ЛампочкаТКБтк2_2 &&
-                    !SpeedTester.IsEquivalent(ВыходнойСигнал.ChanelSpeed[2], НеобходимыйСигнал.ChanelSpeed[2]))
+                    !Signal.IsEquivalentSpeed(ВыходнойСигнал.SelectedElement.SpeedOfChanel(2),
+                    НеобходимыйСигнал.SelectedElement.SpeedOfChanel(2)))
                     return true;
                 return false;
             }
@@ -127,7 +138,7 @@
         {
             get
             {
-                if (ВыходнойСигнал != null && НеобходимыйСигнал.ChanelSpeed[2] != 0)
+                if (ВыходнойСигнал != null && НеобходимыйСигнал.SelectedElement.SpeedOfChanel(1) != 0)
                     return true;
                 return false;
             }
@@ -137,8 +148,9 @@
         {
             get
             {
-                if (ЛампочкаТКБтк3_2 &&
-                    !SpeedTester.IsEquivalent(ВыходнойСигнал.ChanelSpeed[3], НеобходимыйСигнал.ChanelSpeed[3]))
+                if (ЛампочкаТКБтк3_2 && 
+                    !Signal.IsEquivalentSpeed(ВыходнойСигнал.SelectedElement.SpeedOfChanel(3),
+                    НеобходимыйСигнал.SelectedElement.SpeedOfChanel(3)))
                     return true;
                 return false;
             }
@@ -147,7 +159,7 @@
         {
             get
             {
-                if (ВыходнойСигнал != null && НеобходимыйСигнал.ChanelSpeed[3] != 0)
+                if (ВыходнойСигнал != null && НеобходимыйСигнал.SelectedElement.SpeedOfChanel(1) != 0)
                     return true;
                 return false;
             }
@@ -160,9 +172,9 @@
         {
             get
             {
-                return ВыходнойСигнал != null && (!SpeedTester.IsEquivalent
-                    (ВыходнойСигнал.ChanelSpeed[1], НеобходимыйСигнал.ChanelSpeed[1])
-                    || ВыходнойСигнал.ChanelSpeed[1] == 0);
+                return ВыходнойСигнал != null && (!Signal.IsEquivalentSpeed
+                    (ВыходнойСигнал.SelectedElement.SpeedOfChanel(1), НеобходимыйСигнал.SelectedElement.SpeedOfChanel(1))
+                    || ВыходнойСигнал.SelectedElement.SpeedOfChanel(1) == 0);
             }
         }
 
@@ -170,9 +182,9 @@
         {
             get
             {
-                return ВыходнойСигнал != null && (!SpeedTester.IsEquivalent
-                    (ВыходнойСигнал.ChanelSpeed[2], НеобходимыйСигнал.ChanelSpeed[2])
-                    || ВыходнойСигнал.ChanelSpeed[2] == 0);
+                return ВыходнойСигнал != null && (!Signal.IsEquivalentSpeed
+                    (ВыходнойСигнал.SelectedElement.SpeedOfChanel(2), НеобходимыйСигнал.SelectedElement.SpeedOfChanel(2))
+                    || ВыходнойСигнал.SelectedElement.SpeedOfChanel(2) == 0);
             }
         }
 
@@ -180,9 +192,9 @@
         {
             get
             {
-                return ВыходнойСигнал != null && (!SpeedTester.IsEquivalent
-                    (ВыходнойСигнал.ChanelSpeed[3], НеобходимыйСигнал.ChanelSpeed[3])
-                                                  || ВыходнойСигнал.ChanelSpeed[3] == 0);
+                return ВыходнойСигнал != null && (!Signal.IsEquivalentSpeed
+                    (ВыходнойСигнал.SelectedElement.SpeedOfChanel(3), НеобходимыйСигнал.SelectedElement.SpeedOfChanel(3))
+                    || ВыходнойСигнал.SelectedElement.SpeedOfChanel(3) == 0);
             }
         } 
         #endregion

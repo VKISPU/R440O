@@ -17,7 +17,7 @@
             }
         }
 
-        public static SignalArgs ВыходнойСигнал
+        public static Signal ВыходнойСигнал
         {
             get
             {

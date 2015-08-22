@@ -1,6 +1,7 @@
 ﻿namespace R440O.R440OForms.OrderScheme
 {
     using System;
+    using System.Collections.Generic;
     using BaseClasses;
     using ОбщиеТипыДанных;
 
@@ -54,13 +55,16 @@
 
         private static bool _generate = false;
 
-        public static SignalArgs СигналКорреспондента
+        public static Signal СигналКорреспондента
         {
             get
             {
-                var signal = new SignalArgs
+                var signal = new Signal
                 {
-                    ChanelSpeed = new []{-1, 1.2, 1.2, 1.2, 0.05, 0.05, 0.025},
+                    Elements = new List<SignalElement>
+                    {
+                        new SignalElement(ПриемНомерПотока1, ПриемНомерГруппы1, new []{-1, 1.2, 1.2, 1.2, 0.05, 0.05, 0.025})
+                    },
                     GroupSpeed = ПриемВидМодуляцииСкорость1,
                     Level = 50,
                     Modulation = Модуляция.ОФТ,

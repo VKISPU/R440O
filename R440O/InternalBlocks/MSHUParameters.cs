@@ -16,7 +16,7 @@ namespace R440O.InternalBlocks
         /// Волна равна номинальной волне на приём. 
         /// Проходит, если правильно выбран ствол.
         /// </summary>
-        public static SignalArgs ВыходнойСигнал
+        public static Signal ВыходнойСигнал
         {
             get
             {

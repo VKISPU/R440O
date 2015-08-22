@@ -18,13 +18,13 @@
             }
         }
 
-        public static SignalArgs ВыходПередающегоТракта
+        public static Signal ВыходПередающегоТракта
         {
             get
             {
                 if (Включен &&
                     N15Parameters.ТумблерТлфТлгПрд && A1Parameters.ВыходнойСигнал != null && N18_MParameters.ПереключательПРД == 2 &&
-                    SpeedTester.IsEquivalent(СкоростьПередачиПРД1, A1Parameters.ВыходнойСигнал.GroupSpeed))
+                    Signal.IsEquivalentSpeed(СкоростьПередачиПРД1, A1Parameters.ВыходнойСигнал.GroupSpeed))
                 {
                     var transition = A1Parameters.ВыходнойСигнал;
                     transition.Modulation = ТумблерПул48ПРДЧтОфт1;
@@ -36,13 +36,13 @@
 
         }
 
-        public static SignalArgs ВыходПриемногоТракта
+        public static Signal ВыходПриемногоТракта
         {
             get
             {
                 if (Включен &&
                     N15Parameters.ТумблерТлфТлгПрм && C300M_1Parameters.ВыходнойСигнал != null &&
-                    SpeedTester.IsEquivalent(C300M_1Parameters.ВыходнойСигнал.GroupSpeed, СкоростьПриемаПРМ1) &&
+                    Signal.IsEquivalentSpeed(C300M_1Parameters.ВыходнойСигнал.GroupSpeed, СкоростьПриемаПРМ1) &&
                     C300M_1Parameters.ВыходнойСигнал.Modulation == ТумблерПул480ЧтОфт1)
                     return C300M_1Parameters.ВыходнойСигнал;
                 return null;

@@ -1,7 +1,6 @@
-﻿using R440O.R440OForms.B1_1;
-
-namespace R440O.R440OForms.A1
+﻿namespace R440O.R440OForms.A1
 {
+    using System.Collections.Generic;
     using BaseClasses;
     using N15;
 
@@ -17,30 +16,39 @@ namespace R440O.R440OForms.A1
             }
         }
 
-        public static SignalArgs ВыходнойСигнал
+        public static Signal ВыходнойСигнал
         {
             get
             {
                 if (!Включен) return null;
                 if (!КнопкаСкоростьГр)
                     if (КнопкаСкоростьАб_1ТЛФК)
-                        return new SignalArgs
+                        return new Signal
                         {
                             GroupSpeed = 4.8,
-                            ChanelSpeed = new[] { -1, 2.4, 1.2, 0, 0.1, 0.1, 0.05, 0.025 },
+                            Elements = new List<SignalElement>()
+                            {
+                                new SignalElement(new [] { -1, 2.4, 1.2, 0, 0.1, 0.1, 0.05, 0.025 })
+                            },
                             Level = 50
                         };
-                    else return new SignalArgs
+                    else return new Signal
                     {
                         GroupSpeed = 4.8,
-                        ChanelSpeed = new[] { -1, 1.2, 1.2, 1.2, 0.1, 0.1, 0.05, 0.025 },
+                        Elements = new List<SignalElement>()
+                            {
+                                new SignalElement(new [] { -1, 1.2, 1.2, 1.2, 0.1, 0.1, 0.05, 0.025 })
+                            },
                         Level = 50
                     };
 
-                return new SignalArgs
+                return new Signal
                     {
                         GroupSpeed = 2.4,
-                        ChanelSpeed = new[] { -1, 0, 1.2, 0, 0.1, 0.1, 0.05, 0.025 },
+                        Elements = new List<SignalElement>()
+                            {
+                                new SignalElement(new [] { -1, 0, 1.2, 0, 0.1, 0.1, 0.05, 0.025 })
+                            },
                         Level = 50
                     };
             }

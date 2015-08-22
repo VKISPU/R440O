@@ -61,9 +61,7 @@
       <DependentUpon>BackgroundImages.resx</DependentUpon>
     </Compile>
     <Compile Include="BaseClasses\Chanel.cs" />
-    <Compile Include="BaseClasses\Flow.cs" />
-    <Compile Include="BaseClasses\Group.cs" />
-    <Compile Include="BaseClasses\SpeedTester.cs" />
+    <Compile Include="BaseClasses\SignalElement.cs" />
     <Compile Include="ControlElementImages.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -545,7 +543,7 @@
       <DependentUpon>C300PM_1Form.cs</DependentUpon>
     </Compile>
     <Compile Include="BaseClasses\IRefreshableForm.cs" />
-    <Compile Include="BaseClasses\SignalArgs.cs" />
+    <Compile Include="BaseClasses\Signal.cs" />
     <Compile Include="ThirdParty\TransformImageHelper.cs" />
     <Compile Include="СостоянияЭлементов\БМБ.cs" />
     <Compile Include="СостоянияЭлементов\ТумблерДАБ5.cs" />

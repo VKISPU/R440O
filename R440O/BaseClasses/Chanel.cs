@@ -3,16 +3,28 @@
     /// <summary>
     /// Единичный информационный канал.
     /// </summary>
-    public struct Chanel
+    public class Chanel
     {
+        public Chanel(double speed)
+        {
+            Speed = speed;
+            Information = false;
+        }
+
+        public Chanel(double speed, bool information)
+        {
+            Speed = speed;
+            Information = information;
+        }
+
         /// <summary>
         /// Скорость передачи информации в канале.
         /// </summary>
-        public int Speed;
+        public double Speed { get; private set; }
 
         /// <summary>
         /// true - информация присутствует, false - отсутствует.
         /// </summary>
-        public bool Information;
+        public bool Information { get; private set; }
     }
 }

@@ -9,7 +9,7 @@ namespace R440O.Parameters
     public class A306Parameters
     {
         #region Выход блока
-        public static SignalArgs ВыходнойСигнал1
+        public static Signal ВыходнойСигнал1
         {
             get
             {
@@ -17,21 +17,21 @@ namespace R440O.Parameters
             }
         }
 
-        public static SignalArgs ВыходнойСигнал2
+        public static Signal ВыходнойСигнал2
         {
             get
             {
                 return IsRightSet(1) ? MSHUParameters.ВыходнойСигнал : null;
             }
         }
-        public static SignalArgs ВыходнойСигнал3
+        public static Signal ВыходнойСигнал3
         {
             get
             {
                 return IsRightSet(2) ? MSHUParameters.ВыходнойСигнал : null;
             }
         }
-        public static SignalArgs ВыходнойСигнал4
+        public static Signal ВыходнойСигнал4
         {
             get
             {

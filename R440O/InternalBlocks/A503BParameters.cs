@@ -13,7 +13,7 @@ namespace R440O.InternalBlocks
             get { return N15Parameters.ЛампочкаА503Б; }
         }
 
-        public static SignalArgs ВыходнойСигнал
+        public static Signal ВыходнойСигнал
         {
             get
             {
