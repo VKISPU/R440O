@@ -778,6 +778,11 @@ namespace R440O.R440OForms.Kontur_P3
                    ? ControlElementImages.tumblerType4Down
                    : ControlElementImages.tumblerType4Up;
                 #endregion
+                #region Лампочки
+                ЛампочкаКП2Прием.BackgroundImage = Kontur_P3Parameters.ЛампочкаКП2Прием
+                   ? ControlElementImages.lampType9OnGreen
+                   : null;
+                #endregion
                 #endregion
 
                 #region КП1

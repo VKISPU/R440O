@@ -1,4 +1,5 @@
-﻿using R440O.СостоянияЭлементов.Контур_П;
+﻿using R440O.ThirdParty;
+using R440O.СостоянияЭлементов.Контур_П;
 using System;
 
 namespace R440O.R440OForms.Kontur_P3.Параметры
@@ -6,7 +7,24 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
     partial class Kontur_P3Parameters
     {
         #region Лампочки
-        public static bool ЛампочкаКП2Прием = false;
+
+        private static IDisposable timer_ЛампочкаКП2Прием = null;
+        private static bool _ЛампочкаКП2Прием;
+        public static bool ЛампочкаКП2Прием
+        {
+            get { return _ЛампочкаКП2Прием; }
+            set 
+            { 
+                _ЛампочкаКП2Прием = value;
+                timer_ЛампочкаКП2Прием = EasyTimer.SetTimeout(() => 
+                {
+                    _ЛампочкаКП2Прием = false;
+                    ЛампочкаИнформПринята = true;
+                    Refresh();
+                    timer_ЛампочкаКП2Прием.Dispose();
+                }, 3000);
+            }
+        }
         #endregion
 
         #region Тумблеры

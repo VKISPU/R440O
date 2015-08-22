@@ -549,6 +549,9 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
             КнопкаКП3Канал12 = false;
             КП3 = false;
             ЛампочкаИнформПринята = false;
+            if (timer_ЛампочкаКП2Прием != null)
+                timer_ЛампочкаКП2Прием.Dispose();
+            _ЛампочкаКП2Прием = false;
             ОчищениеТаблоНаКП2();
             Refresh();
         }
