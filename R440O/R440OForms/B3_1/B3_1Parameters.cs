@@ -1,4 +1,6 @@
-﻿namespace R440O.R440OForms.B3_1
+﻿using System.Linq;
+
+namespace R440O.R440OForms.B3_1
 {
     using BaseClasses;
     using N15;
@@ -94,7 +96,7 @@
 
         public static bool ЛампочкаОКпр1
         {
-            get { return ЛампочкаРС_синхр && ВыходнойСигнал.SelectedElement.Flow != КолодкаУКК1; }
+            get { return ЛампочкаРС_синхр && ВыходнойСигнал.Elements.Count(item => item.Flow == КолодкаУКК1) == 0; }
         }
 
         public static bool ЛампочкаПФТК1_1 { get { return ЛампочкаРС_1 && !ЛампочкаОКпр1; } }
@@ -102,7 +104,7 @@
 
         public static bool ЛампочкаОКпр2
         {
-            get { return ЛампочкаРС_синхр && ВыходнойСигнал.SelectedElement.Flow != КолодкаУКК2; }
+            get { return ЛампочкаРС_синхр && ВыходнойСигнал.Elements.Count(item => item.Flow == КолодкаУКК2) == 0; }
         }
         public static bool ЛампочкаПФТК2_1 { get { return ЛампочкаРС_1 && !ЛампочкаОКпр2; } }
         public static bool ЛампочкаПФТК2_2 { get { return ЛампочкаПУЛГ_2 && !ЛампочкаОКпр2; } }
