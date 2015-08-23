@@ -1,6 +1,7 @@
-﻿namespace R440O.R440OForms.B3_1
+﻿using R440O.R440OForms.B2_1;
+
+namespace R440O.R440OForms.B3_1
 {
-    using System.Linq;
     using BaseClasses;
     using N15;
     using N15Inside;
@@ -103,7 +104,7 @@
 
         public static bool ЛампочкаРС_1
         {
-            get { return !ЛампочкаРС_синхр; }
+            get { return Включен && !ЛампочкаРС_синхр; }
         }
 
         public static bool ЛампочкаРС_синхр
@@ -150,6 +151,7 @@
             set
             {
                 if (value >= 0 && value <= 5) _колодкаКРПР = value;
+                B2_1Parameters.ResetParameters();
                 OnParameterChanged();
             }
         }
@@ -161,6 +163,7 @@
             set
             {
                 if (value >= 0 && value <= 9) _колодкаУКК1 = value;
+                B2_1Parameters.ResetParameters();
                 OnParameterChanged();
             }
         }
@@ -182,6 +185,7 @@
             set
             {
                 _колодкаОКпр1Син = value;
+                B2_1Parameters.ResetParameters();
                 OnParameterChanged();
             }
         }
@@ -192,6 +196,7 @@
             set
             {
                 _колодкаОКпр1Ас = value;
+                B2_1Parameters.ResetParameters();
                 OnParameterChanged();
             }
         }
@@ -202,6 +207,7 @@
             set
             {
                 _колодкаОКпр2Син = value;
+                B2_1Parameters.ResetParameters();
                 OnParameterChanged();
             }
         }
@@ -212,6 +218,7 @@
             set
             {
                 _колодкаОКпр2Ас = value;
+                B2_1Parameters.ResetParameters();
                 OnParameterChanged();
             }
         }

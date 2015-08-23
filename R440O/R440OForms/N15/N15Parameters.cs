@@ -790,6 +790,7 @@
 
             A1Parameters.ResetParameters();
             B1_1Parameters.ResetParameters();
+            B2_1Parameters.ResetParameters();
             B3_1Parameters.ResetParameters();
             P220_27G_2Parameters.ResetParameters();
             P220_27G_3Parameters.ResetParameters();

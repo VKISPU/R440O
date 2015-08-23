@@ -1,6 +1,9 @@
-﻿namespace R440O.R440OForms.B2_1
+﻿using R440O.R440OForms.B3_1;
+
+namespace R440O.R440OForms.B2_1
 {
     using N15;
+    using BaseClasses;
 
     static class B2_1Parameters
     {
@@ -14,25 +17,55 @@
             }
         }
 
+        public static Signal ВходнойСигнал
+        {
+            get
+            {
+                if (Включен && B3_1Parameters.ВыходнойСигнал1 != null)
+                    return B3_1Parameters.ВыходнойСигнал1;
+                return null;
+            }
+        }
+
         #endregion
 
         #region Лампочки
-        public static string ЛампочкаБОЧ { get; set; }
-        public static string ЛампочкаПУЛ_1 { get; set; }
-        public static string ЛампочкаПУЛ_2 { get; set; }
-        public static string ЛампочкаПрРПрС_1 { get; set; }
-        public static string ЛампочкаПрРПрС_2 { get; set; }
-        public static string ЛампочкаПрРПрС_Авар { get; set; }
-        public static string ЛампочкаТЛГпр { get; set; }
-        public static string ЛампочкаТКСпр2 { get; set; }
-        public static string ЛампочкаДФАПЧ21 { get; set; }
-        public static string ЛампочкаПрТС1_1 { get; set; }
-        public static string ЛампочкаПрТС1_2 { get; set; }
-        public static string ЛампочкаДФАПЧ22 { get; set; }
-        public static string ЛампочкаПрТС2_1 { get; set; }
-        public static string ЛампочкаПрТС2_2 { get; set; }
-        public static string ЛампочкаВУП_1 { get; set; }
-        public static string ЛампочкаВУП_Неиспр { get; set; }
+
+        public static bool ЛампочкаБОЧ { get; set; }
+
+        public static bool ЛампочкаПУЛ_1 { get { return Включен && ВходнойСигнал == null; } }
+        public static bool ЛампочкаПУЛ_2 { get { return Включен && !ЛампочкаПУЛ_1; } }
+
+        public static bool ЛампочкаПрРПрС_1
+        {
+            get
+            {
+                return Включен && !ЛампочкаПрРПрС_2;
+            }
+        }
+
+        public static bool ЛампочкаПрРПрС_2
+        {
+            get
+            {
+                if (Включен && ВходнойСигнал != null)
+                    return (ВходнойСигнал.Synchronization && B3_1Parameters.КолодкаОКпр1Син) ||
+                           (!ВходнойСигнал.Synchronization && B3_1Parameters.КолодкаОКпр1Ас);
+                return false;
+            }
+        }
+
+        public static bool ЛампочкаПрРПрС_Авар { get; set; }
+        public static bool ЛампочкаТЛГпр { get; set; }
+        public static bool ЛампочкаТКСпр2 { get; set; }
+        public static bool ЛампочкаДФАПЧ21 { get; set; }
+        public static bool ЛампочкаПрТС1_1 { get; set; }
+        public static bool ЛампочкаПрТС1_2 { get; set; }
+        public static bool ЛампочкаДФАПЧ22 { get; set; }
+        public static bool ЛампочкаПрТС2_1 { get; set; }
+        public static bool ЛампочкаПрТС2_2 { get; set; }
+        public static bool ЛампочкаВУП_1 { get; set; }
+        public static bool ЛампочкаВУП_Неиспр { get; set; }
         #endregion
 
         #region Кнопки
@@ -70,7 +103,7 @@
             set
             {
                 _тумблерМуДу = value;
-                OnParameterChanged();
+                N15Parameters.ResetParameters();
             }
         }
         #endregion

@@ -1,4 +1,6 @@
-﻿namespace R440O.R440OForms.B2_1
+﻿using System.Linq;
+
+namespace R440O.R440OForms.B2_1
 {
     using System;
     using System.Windows.Forms;
@@ -108,7 +110,6 @@
             {
                 if (item.Name.Contains("Кнопка"))
                 {
-                    if (!item.Name.Contains("Кнопка")) continue;
                     item.BackgroundImage = ControlElementImages.buttonRectType1;
                     var button = item as Button;
                     var numberOfComplect = Convert.ToInt32(button.Name[8].ToString());
@@ -118,6 +119,30 @@
                     {
                         item.BackgroundImage = null;
                     }
+                }
+
+                if (!item.Name.Contains("Лампочка")) continue;
+                var propertiesList = typeof(B2_1Parameters).GetProperties();
+                foreach (var prop in propertiesList.Where(field => item.Name == field.Name))
+                {
+                    if (item.Name.Contains("ЛампочкаПУЛГ_2") ||
+                        item.Name.Contains("ЛампочкаПрРПрС_2") ||
+                        item.Name.Contains("ЛампочкаПрТС1_2") ||
+                        item.Name.Contains("ЛампочкаПрТС2_2") ||
+                        item.Name.Contains("ЛампочкаВУП_1"))
+                        item.BackgroundImage = (bool) prop.GetValue(null)
+                            ? ControlElementImages.lampType3OnRed
+                            : null;
+                    else if (item.Name.Contains("ЛампочкаТЛГпр") ||
+                             item.Name.Contains("ЛампочкаТКСпр2"))
+                        item.BackgroundImage = (bool) prop.GetValue(null)
+                            ? ControlElementImages.lampType4OnRed
+                            : null;
+                    else
+                        item.BackgroundImage = (bool) prop.GetValue(null)
+                            ? ControlElementImages.lampType2OnRed
+                            : null;
+                    break;
                 }
             }
 
