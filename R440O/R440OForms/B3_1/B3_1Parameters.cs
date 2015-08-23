@@ -118,7 +118,7 @@ namespace R440O.R440OForms.B3_1
 
         public static bool ЛампочкаОКпр1
         {
-            get { return ЛампочкаРС_синхр && ВыходнойСигнал1.SelectedElements == null; }
+            get { return ЛампочкаРС_синхр && ВыходнойСигнал1.SelectedFlowElements.Count == 0; }
         }
 
         public static bool ЛампочкаПФТК1_1 { get { return ЛампочкаРС_1; } }
@@ -126,7 +126,7 @@ namespace R440O.R440OForms.B3_1
 
         public static bool ЛампочкаОКпр2
         {
-            get { return ЛампочкаРС_синхр && ВыходнойСигнал2.SelectedElements == null; }
+            get { return ЛампочкаРС_синхр && ВыходнойСигнал2.SelectedFlowElements.Count == 0; }
         }
         public static bool ЛампочкаПФТК2_1 { get { return ЛампочкаРС_1; } }
         public static bool ЛампочкаПФТК2_2 { get { return ЛампочкаПУЛГ_2 && !ЛампочкаОКпр2; } }

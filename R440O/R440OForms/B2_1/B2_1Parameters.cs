@@ -27,6 +27,28 @@ namespace R440O.R440OForms.B2_1
             }
         }
 
+        public static Signal ВыходнойСигнал1
+        {
+            get
+            {
+                if (ВходнойСигнал == null) return null;
+                var signal = ВходнойСигнал;
+                signal.SelectGroup(КнопкаБК1);
+                return signal;
+            }
+        }
+
+        public static Signal ВыходнойСигнал2
+        {
+            get
+            {
+                if (ВходнойСигнал == null) return null;
+                var signal = ВходнойСигнал;
+                signal.SelectGroup(КнопкаБК2);
+                return signal;
+            }
+        }
+
         #endregion
 
         #region Лампочки
@@ -72,7 +94,7 @@ namespace R440O.R440OForms.B2_1
         }
         public static bool ЛампочкаПрТС1_2
         {
-            get { return Включен && ЛампочкаПрРПрС_1; }
+            get { return Включен && (ЛампочкаПрРПрС_1 || ВыходнойСигнал1.SelectedGroupElements.Count == 0); }
         }
         public static bool ЛампочкаДФАПЧ22
         {
@@ -84,7 +106,7 @@ namespace R440O.R440OForms.B2_1
         }
         public static bool ЛампочкаПрТС2_2
         {
-            get { return Включен && ЛампочкаПрРПрС_1; }
+            get { return Включен && (ЛампочкаПрРПрС_1 || ВыходнойСигнал2.SelectedGroupElements.Count == 0); }
         }
         public static bool ЛампочкаВУП_1
         {

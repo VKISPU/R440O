@@ -49,11 +49,23 @@
         /// <summary>
         /// Выбранный элемент информационного сигнала.
         /// </summary>
-        public List<SignalElement> SelectedElements
+        public List<SignalElement> SelectedFlowElements
         {
             get
             {
                 var selectedElements = Elements.Where(elem => elem.Flow == SelectedFlow).ToList();
+                return selectedElements;
+            }
+        }
+
+        /// <summary>
+        /// Выбранный элемент информационного сигнала.
+        /// </summary>
+        public List<SignalElement> SelectedGroupElements
+        {
+            get
+            {
+                var selectedElements = Elements.Where(elem => (elem.Flow == SelectedFlow && elem.Group == SelectedGroup)).ToList();
                 return selectedElements;
             }
         }
