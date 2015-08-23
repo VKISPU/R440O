@@ -5,6 +5,8 @@
     using N18_M;
     using BaseClasses;
     using N15;
+    using B2_1;
+
 
     public static class B1_1Parameters
     {
@@ -19,7 +21,7 @@
             }
         }
 
-        public static Signal ВыходнойСигнал
+        public static Signal ВходнойСигнал
         {
             get
             {
@@ -27,6 +29,9 @@
                     N15InsideParameters.ВыходПриемногоТракта != null &&
                     N18_MParameters.ПереключательПРМ1 == 4)
                     return N15InsideParameters.ВыходПриемногоТракта;
+
+                if (Включен && B2_1Parameters.ВыходнойСигнал1 != null && B2_1Parameters.ВыходнойСигнал1.SelectedGroupElements.Count != 0) 
+                    return B2_1Parameters.ВыходнойСигнал1;
                 return null;
             }
         }
@@ -96,12 +101,12 @@
 
         public static bool ЛампочкаПУЛ_1
         {
-            get { return Включен && N15InsideParameters.Включен && N18_MParameters.ПереключательПРМ1 != 4; }
+            get { return Включен && ВходнойСигнал == null; }
         }
 
         public static bool ЛампочкаПУЛ_2
         {
-            get { return Включен && N15InsideParameters.Включен && N18_MParameters.ПереключательПРМ1 == 4; }
+            get { return Включен && ВходнойСигнал != null; ; }
         }
 
         public static bool ЛампочкаПРСС { get; set; } 
@@ -113,7 +118,7 @@
         {
             get
             {
-                if (ЛампочкаТКБтк1_2 && !Signal.IsEquivalentSpeed(ВыходнойСигнал.SpeedOfChanel(1),
+                if (ЛампочкаТКБтк1_2 && !Signal.IsEquivalentSpeed(ВходнойСигнал.SpeedOfChanel(1),
                     НеобходимыйСигнал.SpeedOfChanel(1)))
                     return true;
                 return false;
@@ -123,7 +128,7 @@
         {
             get
             {
-                if (ВыходнойСигнал != null && НеобходимыйСигнал.SpeedOfChanel(1) != 0)
+                if (ВходнойСигнал != null && НеобходимыйСигнал.SpeedOfChanel(1) != 0)
                     return true;
                 return false;
             }
@@ -133,7 +138,7 @@
             get
             {
                 if (ЛампочкаТКБтк2_2 &&
-                    !Signal.IsEquivalentSpeed(ВыходнойСигнал.SpeedOfChanel(2),
+                    !Signal.IsEquivalentSpeed(ВходнойСигнал.SpeedOfChanel(2),
                     НеобходимыйСигнал.SpeedOfChanel(2)))
                     return true;
                 return false;
@@ -144,7 +149,7 @@
         {
             get
             {
-                if (ВыходнойСигнал != null && НеобходимыйСигнал.SpeedOfChanel(2) != 0)
+                if (ВходнойСигнал != null && НеобходимыйСигнал.SpeedOfChanel(2) != 0)
                     return true;
                 return false;
             }
@@ -155,7 +160,7 @@
             get
             {
                 if (ЛампочкаТКБтк3_2 && 
-                    !Signal.IsEquivalentSpeed(ВыходнойСигнал.SpeedOfChanel(3),
+                    !Signal.IsEquivalentSpeed(ВходнойСигнал.SpeedOfChanel(3),
                     НеобходимыйСигнал.SpeedOfChanel(3)))
                     return true;
                 return false;
@@ -165,7 +170,7 @@
         {
             get
             {
-                if (ВыходнойСигнал != null && НеобходимыйСигнал.SpeedOfChanel(3) != 0)
+                if (ВходнойСигнал != null && НеобходимыйСигнал.SpeedOfChanel(3) != 0)
                     return true;
                 return false;
             }
@@ -178,9 +183,9 @@
         {
             get
             {
-                return ВыходнойСигнал != null && (!Signal.IsEquivalentSpeed
-                    (ВыходнойСигнал.SpeedOfChanel(1), НеобходимыйСигнал.SpeedOfChanel(1))
-                    || ВыходнойСигнал.SpeedOfChanel(1) == 0);
+                return ВходнойСигнал != null && (!Signal.IsEquivalentSpeed
+                    (ВходнойСигнал.SpeedOfChanel(1), НеобходимыйСигнал.SpeedOfChanel(1))
+                    || ВходнойСигнал.SpeedOfChanel(1) == 0);
             }
         }
 
@@ -188,9 +193,9 @@
         {
             get
             {
-                return ВыходнойСигнал != null && (!Signal.IsEquivalentSpeed
-                    (ВыходнойСигнал.SpeedOfChanel(2), НеобходимыйСигнал.SpeedOfChanel(2))
-                    || ВыходнойСигнал.SpeedOfChanel(2) == 0);
+                return ВходнойСигнал != null && (!Signal.IsEquivalentSpeed
+                    (ВходнойСигнал.SpeedOfChanel(2), НеобходимыйСигнал.SpeedOfChanel(2))
+                    || ВходнойСигнал.SpeedOfChanel(2) == 0);
             }
         }
 
@@ -198,9 +203,9 @@
         {
             get
             {
-                return ВыходнойСигнал != null && (!Signal.IsEquivalentSpeed
-                    (ВыходнойСигнал.SpeedOfChanel(3), НеобходимыйСигнал.SpeedOfChanel(3))
-                    || ВыходнойСигнал.SpeedOfChanel(3) == 0);
+                return ВходнойСигнал != null && (!Signal.IsEquivalentSpeed
+                    (ВходнойСигнал.SpeedOfChanel(3), НеобходимыйСигнал.SpeedOfChanel(3))
+                    || ВходнойСигнал.SpeedOfChanel(3) == 0);
             }
         } 
         #endregion

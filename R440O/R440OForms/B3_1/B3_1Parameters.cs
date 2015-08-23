@@ -1,4 +1,5 @@
-﻿using R440O.R440OForms.B2_1;
+﻿using R440O.R440OForms.B1_1;
+using R440O.R440OForms.B2_1;
 
 namespace R440O.R440OForms.B3_1
 {
@@ -152,6 +153,7 @@ namespace R440O.R440OForms.B3_1
             {
                 if (value >= 0 && value <= 5) _колодкаКРПР = value;
                 B2_1Parameters.ResetParameters();
+                B1_1Parameters.ResetParameters();
                 OnParameterChanged();
             }
         }
@@ -164,6 +166,7 @@ namespace R440O.R440OForms.B3_1
             {
                 if (value >= 0 && value <= 9) _колодкаУКК1 = value;
                 B2_1Parameters.ResetParameters();
+                B1_1Parameters.ResetParameters();
                 OnParameterChanged();
             }
         }
@@ -187,6 +190,7 @@ namespace R440O.R440OForms.B3_1
                 if (value) _колодкаОКпр1Ас = false;
                 _колодкаОКпр1Син = value;
                 B2_1Parameters.ResetParameters();
+                B1_1Parameters.ResetParameters();
                 OnParameterChanged();
             }
         }
@@ -199,6 +203,7 @@ namespace R440O.R440OForms.B3_1
                 if (value) _колодкаОКпр1Син = false;
                 _колодкаОКпр1Ас = value;
                 B2_1Parameters.ResetParameters();
+                B1_1Parameters.ResetParameters();
                 OnParameterChanged();
             }
         }
@@ -211,6 +216,7 @@ namespace R440O.R440OForms.B3_1
                 if (value) _колодкаОКпр2Ас = false;
                 _колодкаОКпр2Син = value;
                 B2_1Parameters.ResetParameters();
+                B1_1Parameters.ResetParameters();
                 OnParameterChanged();
             }
         }
@@ -223,6 +229,7 @@ namespace R440O.R440OForms.B3_1
                 if (value) _колодкаОКпр2Син = false;
                 _колодкаОКпр2Ас = value;
                 B2_1Parameters.ResetParameters();
+                B1_1Parameters.ResetParameters();
                 OnParameterChanged();
             }
         }

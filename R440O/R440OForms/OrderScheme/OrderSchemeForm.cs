@@ -64,6 +64,8 @@ namespace R440O.R440OForms.OrderScheme
                 + "/" + OrderSchemeParameters.ПриемУсловныйНомерСтвола1;
 
             ПриемНомерПотока1.Text = OrderSchemeParameters.ПриемНомерПотока1.ToString();
+
+            ПриемНомерГруппы1.Text = OrderSchemeParameters.ПриемНомерГруппы1.ToString();
         }
     }
 }

@@ -1,8 +1,7 @@
-﻿using System.Linq;
-
-namespace R440O.R440OForms.B2_1
+﻿namespace R440O.R440OForms.B2_1
 {
     using System;
+    using System.Linq;
     using System.Windows.Forms;
     using BaseClasses;
 

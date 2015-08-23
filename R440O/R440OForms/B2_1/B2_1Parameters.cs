@@ -1,4 +1,5 @@
-﻿using R440O.R440OForms.B3_1;
+﻿using R440O.R440OForms.B1_1;
+using R440O.R440OForms.B3_1;
 
 namespace R440O.R440OForms.B2_1
 {
@@ -79,35 +80,48 @@ namespace R440O.R440OForms.B2_1
 
         public static bool ЛампочкаПрРПрС_Авар
         {
-            get { return Включен && ЛампочкаПрРПрС_1; }
+            get { return Включен && ЛампочкаПрРПрС_1 || (ЛампочкаПрРПрС_2 && КнопкаБК1 == 0 && КнопкаБК2 == 0); }
         }
 
         public static bool ЛампочкаТЛГпр { get; set; }
         public static bool ЛампочкаТКСпр2 { get; set; }
         public static bool ЛампочкаДФАПЧ21
         {
-            get { return Включен && ЛампочкаПрРПрС_1; }
+            get { return Включен && (ЛампочкаПрРПрС_Авар || ЛампочкаПрРПрС_1); }
         }
         public static bool ЛампочкаПрТС1_1
         {
-            get { return Включен && ЛампочкаПрРПрС_1; }
+            get { return Включен && (ЛампочкаПрРПрС_Авар || ЛампочкаПрРПрС_1); }
         }
+
         public static bool ЛампочкаПрТС1_2
         {
-            get { return Включен && (ЛампочкаПрРПрС_1 || ВыходнойСигнал1.SelectedGroupElements.Count == 0); }
+            get
+            {
+                return Включен &&
+                       (ЛампочкаПрРПрС_Авар || 
+                       (ЛампочкаПрРПрС_1 || ВыходнойСигнал1.SelectedGroupElements.Count == 0));
+            }
         }
+
         public static bool ЛампочкаДФАПЧ22
         {
-            get { return Включен && ЛампочкаПрРПрС_1; }
+            get { return Включен && (ЛампочкаПрРПрС_Авар || ЛампочкаПрРПрС_1); }
         }
         public static bool ЛампочкаПрТС2_1
         {
-            get { return Включен && ЛампочкаПрРПрС_1; }
+            get { return Включен && (ЛампочкаПрРПрС_Авар || ЛампочкаПрРПрС_1); }
         }
+
         public static bool ЛампочкаПрТС2_2
         {
-            get { return Включен && (ЛампочкаПрРПрС_1 || ВыходнойСигнал2.SelectedGroupElements.Count == 0); }
+            get
+            {
+                return Включен && (ЛампочкаПрРПрС_Авар ||
+                                   (ЛампочкаПрРПрС_1 || ВыходнойСигнал2.SelectedGroupElements.Count == 0));
+            }
         }
+
         public static bool ЛампочкаВУП_1
         {
             get { return Включен; }
@@ -127,6 +141,7 @@ namespace R440O.R440OForms.B2_1
             set
             {
                 _кнопкаБК1 = _кнопкаБК1 == value ? 0 : value;
+                B1_1Parameters.ResetParameters();
                 OnParameterChanged();
             }
         }
