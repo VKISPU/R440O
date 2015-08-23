@@ -16,6 +16,18 @@
             }
         }
 
+        public SignalElement(int flow, int group, Chanel[] chanels)
+        {
+            Flow = flow;
+            Group = group;
+            Chanels = new List<Chanel>();
+
+            foreach (var chanel in chanels)
+            {
+                Chanels.Add(chanel);
+            }
+        }
+
         public SignalElement(double[] chanels)
         {
             Flow = 9;

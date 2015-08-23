@@ -70,25 +70,54 @@
             }
         }
 
+        /// <summary>
+        /// Текущий выбранный поток.
+        /// </summary>
         public int SelectedFlow { get; private set; }
 
+        /// <summary>
+        /// Текущая выбранная группа.
+        /// </summary>
         public int SelectedGroup { get; private set; }
 
+        /// <summary>
+        /// Выбрать информационный поток.
+        /// </summary>
+        /// <param name="flow">Номер потока.</param>
         public void SelectFlow(int flow)
         {
             SelectedFlow = flow;
         }
 
+        /// <summary>
+        /// Выбрать информационную группу.
+        /// </summary>
+        /// <param name="group">Номер группы.</param>
         public void SelectGroup(int group)
         {
             SelectedGroup = group;
         }
 
+        /// <summary>
+        /// Скорость в информационном канале.
+        /// </summary>
+        /// <param name="chanelNumber">Номер канала.</param>
         public double SpeedOfChanel(int chanelNumber)
         {
             var element = Elements.FirstOrDefault(elem => elem.Flow == SelectedFlow &&
                                                           elem.Group == SelectedGroup);
             return element.Chanels[chanelNumber].Speed;
+        }
+
+        /// <summary>
+        /// Наличие информации в информационном канале.
+        /// </summary>
+        /// <param name="chanelNumber">Номер канала.</param>
+        public bool InformationOfChanel(int chanelNumber)
+        {
+            var element = Elements.FirstOrDefault(elem => elem.Flow == SelectedFlow &&
+                                                          elem.Group == SelectedGroup);
+            return element.Chanels[chanelNumber].Information;
         }
 
         /// <summary>

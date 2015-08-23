@@ -22,7 +22,9 @@
             ПриемУсловныйНомерСтвола1 = 2;
             ПриемВидМодуляцииСкорость1 = 240;
             ПриемНомерПотока1 = 9;
-            ПриемНомерГруппы1 = 1;
+            ПриемНомерГруппы1 = 9;
+            ПриемНомерКаналаТЛФ = 2;
+            ПриемНомерКаналаТЛГ = 4;
         }
 
         public static int ПередачаУсловныйНомерВолны1;
@@ -47,14 +49,31 @@
         public static int ПриемНомерГруппы1;
         public static int ПриемНомерГруппы2;
 
-        public static int ПриемНомерКанала1ТЛФ;
-        public static int ПриемНомерКанала1ТЛГ;
+        /// <summary>
+        /// От 1 до 3 канала.
+        /// </summary>
+        public static int ПриемНомерКаналаТЛФ;
+
+        /// <summary>
+        /// От 4 до 5 канала.
+        /// </summary>
+        public static int ПриемНомерКаналаТЛГ;
 
         public static int ПриемУсловныйНомерВолны1;
         public static int ПриемУсловныйНомерСтвола1;
 
-        private static bool _generate = false;
+        /// <summary>
+        /// Проверка должна ли по данному каналу передаваться информация.
+        /// </summary>
+        /// <param name="chanel">Номер канала, по которому должна идти информация.</param>
+        public static bool IsInf(int chanel)
+        {
+            return ПриемНомерКаналаТЛФ == chanel;
+        }
 
+        /// <summary>
+        /// Сигнал коресспондента, согласно схеме приказ.
+        /// </summary>
         public static Signal СигналКорреспондента
         {
             get
@@ -63,7 +82,9 @@
                 {
                     Elements = new List<SignalElement>
                     {
-                        new SignalElement(ПриемНомерПотока1, ПриемНомерГруппы1, new []{-1, 1.2, 1.2, 1.2, 0.05, 0.05, 0.025})
+                        new SignalElement(ПриемНомерПотока1, ПриемНомерГруппы1, 
+                            new []{new Chanel(-1, IsInf(0)), new Chanel(1.2, IsInf(1)), new Chanel(1.2, IsInf(2)), new Chanel(1.2, IsInf(3)), 
+                                new Chanel(0.05, IsInf(4)), new Chanel(0.05, IsInf(5)), new Chanel(0.025, IsInf(6))})
                     },
                     GroupSpeed = ПриемВидМодуляцииСкорость1,
                     Level = 50,
@@ -74,6 +95,11 @@
             } 
         }
 
+        private static bool _generate;
+
+        /// <summary>
+        /// Генериует случайным образом параметры настройки на корреспондента.
+        /// </summary>
         private static void GenerateParameters()
         {
             if (_generate) return;
@@ -111,6 +137,8 @@
             if (ПриемВидМодуляцииСкорость1 == 1.2) ПриемНомерПотока1 = rand.Next(9);
 
             ПриемНомерГруппы1 = rand.Next(9);
+            ПриемНомерКаналаТЛФ = rand.Next(3);
+            ПриемНомерКаналаТЛГ = rand.Next(4,5);
         }
     }
 }

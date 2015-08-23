@@ -7,7 +7,6 @@
     using N15;
     using B2_1;
 
-
     public static class B1_1Parameters
     {
         #region Работа блока
@@ -128,7 +127,8 @@
         {
             get
             {
-                if (ВходнойСигнал != null && НеобходимыйСигнал.SpeedOfChanel(1) != 0)
+                if (ВходнойСигнал != null && НеобходимыйСигнал.SpeedOfChanel(1) != 0 &&
+                    !ВходнойСигнал.InformationOfChanel(1))
                     return true;
                 return false;
             }
@@ -149,7 +149,8 @@
         {
             get
             {
-                if (ВходнойСигнал != null && НеобходимыйСигнал.SpeedOfChanel(2) != 0)
+                if (ВходнойСигнал != null && НеобходимыйСигнал.SpeedOfChanel(2) != 0 &&
+                    !ВходнойСигнал.InformationOfChanel(2))
                     return true;
                 return false;
             }
@@ -170,7 +171,8 @@
         {
             get
             {
-                if (ВходнойСигнал != null && НеобходимыйСигнал.SpeedOfChanel(3) != 0)
+                if (ВходнойСигнал != null && НеобходимыйСигнал.SpeedOfChanel(3) != 0 &&
+                    !ВходнойСигнал.InformationOfChanel(3))
                     return true;
                 return false;
             }
