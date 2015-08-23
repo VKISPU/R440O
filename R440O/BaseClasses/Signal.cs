@@ -40,13 +40,31 @@
         /// </summary>
         public List<SignalElement> Elements;
 
-
         /// <summary>
         /// Выбранный элемент информационного сигнала.
         /// </summary>
-        public SignalElement SelectedElement
+        public SignalElement SelectedElement { get; set; }
+
+        /// <summary>
+        /// Выбирает определённый элемент
+        /// </summary>
+        /// <param name="flow"></param>
+        public void Select(int flow)
         {
-            get { return Elements.FirstOrDefault(); }
+            SelectedElement = null;
+            foreach (var elem in Elements.Where(elem => elem.Flow == flow))
+            {
+                SelectedElement = elem;
+                return;
+            }
+        }
+
+        /// <summary>
+        /// Выбор первого элемента в последавательности, используется для эталонных сигналов.
+        /// </summary>
+        public void Select()
+        {
+            SelectedElement = Elements.FirstOrDefault();
         }
 
         /// <summary>

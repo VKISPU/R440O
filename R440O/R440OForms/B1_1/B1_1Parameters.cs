@@ -35,9 +35,11 @@
         {
             get
             {
+                Signal signal;
                 if (!КнопкаСкоростьГР)
                     if (КнопкаСкоростьАб1ТлфК)
-                        return new Signal
+                    {
+                        signal = new Signal
                         {
                             GroupSpeed = 4.8,
                             Elements = new List<SignalElement>
@@ -46,8 +48,13 @@
                             },
                             Level = 50
                         };
+                        signal.Select();
+                        return signal;
+                    }
+
                     else
-                        return new Signal
+                    {
+                        signal = new Signal
                         {
                             GroupSpeed = 4.8,
                             Elements = new List<SignalElement>
@@ -56,16 +63,21 @@
                             },
                             Level = 50
                         };
+                        signal.Select();
+                        return signal;
+                    }
 
-                return new Signal
+                signal = new Signal
                 {
                     GroupSpeed = 2.4,
                     Elements = new List<SignalElement>
-                            {
-                                new SignalElement(new[] {-1, 0, 1.2, 0, 0.1, 0.1, 0.05, 0.025})
-                            },
+                    {
+                        new SignalElement(new[] {-1, 0, 1.2, 0, 0.1, 0.1, 0.05, 0.025})
+                    },
                     Level = 50
                 };
+                signal.Select();
+                return signal;
             }
         }
 

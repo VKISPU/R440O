@@ -1,7 +1,6 @@
-﻿using System.Linq;
-
-namespace R440O.R440OForms.B3_1
+﻿namespace R440O.R440OForms.B3_1
 {
+    using System.Linq;
     using BaseClasses;
     using N15;
     using N15Inside;
@@ -19,16 +18,38 @@ namespace R440O.R440OForms.B3_1
             }
         }
 
-        public static Signal ВыходнойСигнал
+        public static Signal ВходнойСигнал
         {
             get
             {
                 if (Включен &&
                     N15InsideParameters.ВыходПриемногоТракта != null &&
-                    N18_MParameters.ПереключательПРМ1 == 1 && 
+                    N18_MParameters.ПереключательПРМ1 == 1 &&
                     ПравильнаяКолодка(N15InsideParameters.ВыходПриемногоТракта.GroupSpeed))
                     return N15InsideParameters.ВыходПриемногоТракта;
                 return null;
+            }
+        }
+
+        public static Signal ВыходнойСигнал1
+        {
+            get
+            {
+                if (ВходнойСигнал == null) return null;
+                var signal = ВходнойСигнал;
+                signal.Select(КолодкаУКК1);
+                return signal;
+            }
+        }
+
+        public static Signal ВыходнойСигнал2
+        {
+            get
+            {
+                if (ВходнойСигнал == null) return null;
+                var signal = ВходнойСигнал;
+                signal.Select(КолодкаУКК2);
+                return signal;
             }
         }
 
@@ -87,7 +108,7 @@ namespace R440O.R440OForms.B3_1
 
         public static bool ЛампочкаРС_синхр
         {
-            get { return Включен && ВыходнойСигнал != null; }
+            get { return Включен && ВходнойСигнал != null; }
         }
 
         public static bool ЛампочкаТЛГпр1 { get; set; }
@@ -96,17 +117,17 @@ namespace R440O.R440OForms.B3_1
 
         public static bool ЛампочкаОКпр1
         {
-            get { return ЛампочкаРС_синхр && ВыходнойСигнал.Elements.Count(item => item.Flow == КолодкаУКК1) == 0; }
+            get { return ЛампочкаРС_синхр && ВыходнойСигнал1.SelectedElement == null; }
         }
 
-        public static bool ЛампочкаПФТК1_1 { get { return ЛампочкаРС_1 && !ЛампочкаОКпр1; } }
+        public static bool ЛампочкаПФТК1_1 { get { return ЛампочкаРС_1; } }
         public static bool ЛампочкаПФТК1_2 { get { return ЛампочкаПУЛГ_2 && !ЛампочкаОКпр1; } }
 
         public static bool ЛампочкаОКпр2
         {
-            get { return ЛампочкаРС_синхр && ВыходнойСигнал.Elements.Count(item => item.Flow == КолодкаУКК2) == 0; }
+            get { return ЛампочкаРС_синхр && ВыходнойСигнал2.SelectedElement == null; }
         }
-        public static bool ЛампочкаПФТК2_1 { get { return ЛампочкаРС_1 && !ЛампочкаОКпр2; } }
+        public static bool ЛампочкаПФТК2_1 { get { return ЛампочкаРС_1; } }
         public static bool ЛампочкаПФТК2_2 { get { return ЛампочкаПУЛГ_2 && !ЛампочкаОКпр2; } }
         public static bool ЛампочкаВУПнеиспр { get; set; }
 
