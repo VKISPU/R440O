@@ -43,10 +43,5 @@
         /// Каналы с определённой скоростью передачи информации.
         /// </summary>
         public List<Chanel> Chanels { get; private set; }
-
-        public double SpeedOfChanel(int chanelNumber)
-        {
-            return Chanels[chanelNumber].Speed;
-        }
     }
 }

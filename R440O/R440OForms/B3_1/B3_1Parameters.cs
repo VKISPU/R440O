@@ -38,7 +38,7 @@ namespace R440O.R440OForms.B3_1
             {
                 if (ВходнойСигнал == null) return null;
                 var signal = ВходнойСигнал;
-                signal.Select(КолодкаУКК1);
+                signal.SelectFlow(КолодкаУКК1);
                 return signal;
             }
         }
@@ -49,7 +49,7 @@ namespace R440O.R440OForms.B3_1
             {
                 if (ВходнойСигнал == null) return null;
                 var signal = ВходнойСигнал;
-                signal.Select(КолодкаУКК2);
+                signal.SelectFlow(КолодкаУКК2);
                 return signal;
             }
         }
@@ -118,7 +118,7 @@ namespace R440O.R440OForms.B3_1
 
         public static bool ЛампочкаОКпр1
         {
-            get { return ЛампочкаРС_синхр && ВыходнойСигнал1.SelectedElement == null; }
+            get { return ЛампочкаРС_синхр && ВыходнойСигнал1.SelectedElements == null; }
         }
 
         public static bool ЛампочкаПФТК1_1 { get { return ЛампочкаРС_1; } }
@@ -126,7 +126,7 @@ namespace R440O.R440OForms.B3_1
 
         public static bool ЛампочкаОКпр2
         {
-            get { return ЛампочкаРС_синхр && ВыходнойСигнал2.SelectedElement == null; }
+            get { return ЛампочкаРС_синхр && ВыходнойСигнал2.SelectedElements == null; }
         }
         public static bool ЛампочкаПФТК2_1 { get { return ЛампочкаРС_1; } }
         public static bool ЛампочкаПФТК2_2 { get { return ЛампочкаПУЛГ_2 && !ЛампочкаОКпр2; } }
@@ -184,6 +184,7 @@ namespace R440O.R440OForms.B3_1
             get { return _колодкаОКпр1Син; }
             set
             {
+                if (value) _колодкаОКпр1Ас = false;
                 _колодкаОКпр1Син = value;
                 B2_1Parameters.ResetParameters();
                 OnParameterChanged();
@@ -195,6 +196,7 @@ namespace R440O.R440OForms.B3_1
             get { return _колодкаОКпр1Ас; }
             set
             {
+                if (value) _колодкаОКпр1Син = false;
                 _колодкаОКпр1Ас = value;
                 B2_1Parameters.ResetParameters();
                 OnParameterChanged();
@@ -206,6 +208,7 @@ namespace R440O.R440OForms.B3_1
             get { return _колодкаОКпр2Син; }
             set
             {
+                if (value) _колодкаОКпр2Ас = false;
                 _колодкаОКпр2Син = value;
                 B2_1Parameters.ResetParameters();
                 OnParameterChanged();
@@ -217,6 +220,7 @@ namespace R440O.R440OForms.B3_1
             get { return _колодкаОКпр2Ас; }
             set
             {
+                if (value) _колодкаОКпр2Син = false;
                 _колодкаОКпр2Ас = value;
                 B2_1Parameters.ResetParameters();
                 OnParameterChanged();

@@ -48,56 +48,24 @@
         #region ОКпр1 Колодки
         private void B3_1КолодкаОКпр1_син_Click(object sender, System.EventArgs e)
         {
-            if (B3_1Parameters.КолодкаОКпр1Син)
-            {
-                B3_1Parameters.КолодкаОКпр1Син = false;
-            }
-            else
-            {
-                B3_1Parameters.КолодкаОКпр1Син = true;
-                B3_1Parameters.КолодкаОКпр1Ас = false;
-            }
+            B3_1Parameters.КолодкаОКпр1Син = !B3_1Parameters.КолодкаОКпр1Син;
         }
 
         private void B3_1КолодкаОКпр1_ас_Click(object sender, System.EventArgs e)
         {
-            if (B3_1Parameters.КолодкаОКпр1Ас)
-            {
-                B3_1Parameters.КолодкаОКпр1Ас = false;
-            }
-            else
-            {
-                B3_1Parameters.КолодкаОКпр1Ас = true;
-                B3_1Parameters.КолодкаОКпр1Син = false;
-            }
+            B3_1Parameters.КолодкаОКпр1Ас = !B3_1Parameters.КолодкаОКпр1Ас;
         }
         #endregion
 
         #region ОКпр2 Колодки
         private void B3_1КолодкаОКпр2_син_Click(object sender, System.EventArgs e)
         {
-            if (B3_1Parameters.КолодкаОКпр2Син)
-            {
-                B3_1Parameters.КолодкаОКпр2Син = false;
-            }
-            else
-            {
-                B3_1Parameters.КолодкаОКпр2Син = true;
-                B3_1Parameters.КолодкаОКпр2Ас = false;
-            }
+            B3_1Parameters.КолодкаОКпр2Син = !B3_1Parameters.КолодкаОКпр2Син;
         }
 
         private void B3_1КолодкаОКпр2_ас_Click(object sender, System.EventArgs e)
         {
-            if (B3_1Parameters.КолодкаОКпр2Ас)
-            {
-                B3_1Parameters.КолодкаОКпр2Ас = false;              
-            }
-            else
-            {
-                B3_1Parameters.КолодкаОКпр2Ас = true;
-                B3_1Parameters.КолодкаОКпр2Син = false;
-            }
+            B3_1Parameters.КолодкаОКпр2Ас = !B3_1Parameters.КолодкаОКпр2Ас;
         }
         #endregion
 

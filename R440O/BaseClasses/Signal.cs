@@ -10,6 +10,12 @@
     /// </summary>
     public class Signal
     {
+        public Signal()
+        {
+            SelectedFlow = 9;
+            SelectedGroup = 9;
+        }
+
         /// <summary>
         /// Номинальная частота волны, КГц.
         /// </summary>
@@ -43,28 +49,34 @@
         /// <summary>
         /// Выбранный элемент информационного сигнала.
         /// </summary>
-        public SignalElement SelectedElement { get; set; }
-
-        /// <summary>
-        /// Выбирает определённый элемент
-        /// </summary>
-        /// <param name="flow"></param>
-        public void Select(int flow)
+        public List<SignalElement> SelectedElements
         {
-            SelectedElement = null;
-            foreach (var elem in Elements.Where(elem => elem.Flow == flow))
+            get
             {
-                SelectedElement = elem;
-                return;
+                var selectedElements = Elements.Where(elem => elem.Flow == SelectedFlow).ToList();
+                return selectedElements;
             }
         }
 
-        /// <summary>
-        /// Выбор первого элемента в последавательности, используется для эталонных сигналов.
-        /// </summary>
-        public void Select()
+        public int SelectedFlow { get; private set; }
+
+        public int SelectedGroup { get; private set; }
+
+        public void SelectFlow(int flow)
         {
-            SelectedElement = Elements.FirstOrDefault();
+            SelectedFlow = flow;
+        }
+
+        public void SelectGroup(int group)
+        {
+            SelectedGroup = group;
+        }
+
+        public double SpeedOfChanel(int chanelNumber)
+        {
+            var element = Elements.FirstOrDefault(elem => elem.Flow == SelectedFlow &&
+                                                          elem.Group == SelectedGroup);
+            return element.Chanels[chanelNumber].Speed;
         }
 
         /// <summary>

@@ -55,16 +55,41 @@ namespace R440O.R440OForms.B2_1
             }
         }
 
-        public static bool ЛампочкаПрРПрС_Авар { get; set; }
+        public static bool ЛампочкаПрРПрС_Авар
+        {
+            get { return Включен && ЛампочкаПрРПрС_1; }
+        }
+
         public static bool ЛампочкаТЛГпр { get; set; }
         public static bool ЛампочкаТКСпр2 { get; set; }
-        public static bool ЛампочкаДФАПЧ21 { get; set; }
-        public static bool ЛампочкаПрТС1_1 { get; set; }
-        public static bool ЛампочкаПрТС1_2 { get; set; }
-        public static bool ЛампочкаДФАПЧ22 { get; set; }
-        public static bool ЛампочкаПрТС2_1 { get; set; }
-        public static bool ЛампочкаПрТС2_2 { get; set; }
-        public static bool ЛампочкаВУП_1 { get; set; }
+        public static bool ЛампочкаДФАПЧ21
+        {
+            get { return Включен && ЛампочкаПрРПрС_1; }
+        }
+        public static bool ЛампочкаПрТС1_1
+        {
+            get { return Включен && ЛампочкаПрРПрС_1; }
+        }
+        public static bool ЛампочкаПрТС1_2
+        {
+            get { return Включен && ЛампочкаПрРПрС_1; }
+        }
+        public static bool ЛампочкаДФАПЧ22
+        {
+            get { return Включен && ЛампочкаПрРПрС_1; }
+        }
+        public static bool ЛампочкаПрТС2_1
+        {
+            get { return Включен && ЛампочкаПрРПрС_1; }
+        }
+        public static bool ЛампочкаПрТС2_2
+        {
+            get { return Включен && ЛампочкаПрРПрС_1; }
+        }
+        public static bool ЛампочкаВУП_1
+        {
+            get { return Включен; }
+        }
         public static bool ЛампочкаВУП_Неиспр { get; set; }
         #endregion
 

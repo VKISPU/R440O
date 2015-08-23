@@ -1,4 +1,5 @@
-﻿using R440O.R440OForms.N15;
+﻿using R440O.R440OForms.B3_1;
+using R440O.R440OForms.N15;
 
 namespace R440O.R440OForms.OrderScheme
 {
@@ -34,6 +35,10 @@ namespace R440O.R440OForms.OrderScheme
             N18_MParameters.ПереключательПРМ1 = 1;
             N18_MParameters.ПереключательПРМ2 = 1;
             N18_MParameters.Переключатель48ПрмЩв = 1;
+
+            B3_1Parameters.КолодкаКРПР = 2;
+            B3_1Parameters.КолодкаОКпр1Ас = true;
+            B3_1Parameters.КолодкаУКК1 = 9;
         }
 
         private void InitializeParameters()
