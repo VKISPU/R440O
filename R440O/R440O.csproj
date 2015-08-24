@@ -111,7 +111,7 @@
     <Compile Include="R440OForms\OrderScheme\OrderSchemeParameters.cs" />
     <Compile Include="Parameters\PU_K1_2Parameters.cs" />
     <Compile Include="Parameters\PU_K1_1Parameters.cs" />
-    <Compile Include="Parameters\B3_2Parameters.cs" />
+    <Compile Include="R440OForms\B3_2\B3_2Parameters.cs" />
     <Compile Include="R440OForms\BMA_M_2\BMA_M_2Parameters.cs" />
     <Compile Include="R440OForms\BMA_M_1\BMA_M_1Parameters.cs" />
     <Compile Include="R440OForms\BMB\BMBParameters.cs" />

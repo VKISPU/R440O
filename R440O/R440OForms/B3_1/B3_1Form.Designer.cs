@@ -100,7 +100,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПУЛГ_1)).BeginInit();
             this.SuspendLayout();
             // 
-            // B3_1Panel
+            // Panel
             // 
             this.Panel.BackgroundImage = global::R440O.BackgroundImages.B3;
             this.Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -156,181 +156,181 @@
             this.Panel.Controls.Add(this.КолодкаУКК1_2);
             this.Panel.Controls.Add(this.КолодкаУКК1_1);
             this.Panel.Location = new System.Drawing.Point(0, 0);
-            this.Panel.Name = "B3_1Panel";
+            this.Panel.Name = "Panel";
             this.Panel.Size = new System.Drawing.Size(1104, 354);
             this.Panel.TabIndex = 0;
             // 
-            // B3_1ЛампочкаТЛГпр3
+            // ЛампочкаТЛГпр3
             // 
             this.ЛампочкаТЛГпр3.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаТЛГпр3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ЛампочкаТЛГпр3.Location = new System.Drawing.Point(398, 79);
-            this.ЛампочкаТЛГпр3.Name = "B3_1ЛампочкаТЛГпр3";
+            this.ЛампочкаТЛГпр3.Name = "ЛампочкаТЛГпр3";
             this.ЛампочкаТЛГпр3.Size = new System.Drawing.Size(30, 30);
             this.ЛампочкаТЛГпр3.TabIndex = 79;
             this.ЛампочкаТЛГпр3.TabStop = false;
             // 
-            // B3_1ЛампочкаТЛГпр2
+            // ЛампочкаТЛГпр2
             // 
             this.ЛампочкаТЛГпр2.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаТЛГпр2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ЛампочкаТЛГпр2.Location = new System.Drawing.Point(367, 79);
-            this.ЛампочкаТЛГпр2.Name = "B3_1ЛампочкаТЛГпр2";
+            this.ЛампочкаТЛГпр2.Name = "ЛампочкаТЛГпр2";
             this.ЛампочкаТЛГпр2.Size = new System.Drawing.Size(30, 30);
             this.ЛампочкаТЛГпр2.TabIndex = 78;
             this.ЛампочкаТЛГпр2.TabStop = false;
             // 
-            // B3_1ЛампочкаТЛГпр1
+            // ЛампочкаТЛГпр1
             // 
             this.ЛампочкаТЛГпр1.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаТЛГпр1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ЛампочкаТЛГпр1.Location = new System.Drawing.Point(336, 79);
-            this.ЛампочкаТЛГпр1.Name = "B3_1ЛампочкаТЛГпр1";
+            this.ЛампочкаТЛГпр1.Name = "ЛампочкаТЛГпр1";
             this.ЛампочкаТЛГпр1.Size = new System.Drawing.Size(30, 30);
             this.ЛампочкаТЛГпр1.TabIndex = 77;
             this.ЛампочкаТЛГпр1.TabStop = false;
             // 
-            // B3_1ЛампочкаВУП_неиспр
+            // ЛампочкаВУП_неиспр
             // 
             this.ЛампочкаВУП_неиспр.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаВУП_неиспр.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ЛампочкаВУП_неиспр.Location = new System.Drawing.Point(984, 84);
-            this.ЛампочкаВУП_неиспр.Name = "B3_1ЛампочкаВУП_неиспр";
+            this.ЛампочкаВУП_неиспр.Name = "ЛампочкаВУП_неиспр";
             this.ЛампочкаВУП_неиспр.Size = new System.Drawing.Size(16, 16);
             this.ЛампочкаВУП_неиспр.TabIndex = 76;
             this.ЛампочкаВУП_неиспр.TabStop = false;
             // 
-            // B3_1ЛампочкаВУП1
+            // ЛампочкаВУП1
             // 
             this.ЛампочкаВУП1.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаВУП1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ЛампочкаВУП1.Location = new System.Drawing.Point(728, 89);
-            this.ЛампочкаВУП1.Name = "B3_1ЛампочкаВУП1";
+            this.ЛампочкаВУП1.Name = "ЛампочкаВУП1";
             this.ЛампочкаВУП1.Size = new System.Drawing.Size(16, 16);
             this.ЛампочкаВУП1.TabIndex = 75;
             this.ЛампочкаВУП1.TabStop = false;
             // 
-            // B3_1ЛампочкаПФТК2_2
+            // ЛампочкаПФТК2_2
             // 
             this.ЛампочкаПФТК2_2.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаПФТК2_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ЛампочкаПФТК2_2.Location = new System.Drawing.Point(591, 89);
-            this.ЛампочкаПФТК2_2.Name = "B3_1ЛампочкаПФТК2_2";
+            this.ЛампочкаПФТК2_2.Name = "ЛампочкаПФТК2_2";
             this.ЛампочкаПФТК2_2.Size = new System.Drawing.Size(16, 16);
             this.ЛампочкаПФТК2_2.TabIndex = 74;
             this.ЛампочкаПФТК2_2.TabStop = false;
             // 
-            // B3_1ЛампочкаПФТК2_1
+            // ЛампочкаПФТК2_1
             // 
             this.ЛампочкаПФТК2_1.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаПФТК2_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ЛампочкаПФТК2_1.Location = new System.Drawing.Point(591, 71);
-            this.ЛампочкаПФТК2_1.Name = "B3_1ЛампочкаПФТК2_1";
+            this.ЛампочкаПФТК2_1.Name = "ЛампочкаПФТК2_1";
             this.ЛампочкаПФТК2_1.Size = new System.Drawing.Size(16, 16);
             this.ЛампочкаПФТК2_1.TabIndex = 73;
             this.ЛампочкаПФТК2_1.TabStop = false;
             // 
-            // B3_1ЛампочкаОКпр2
+            // ЛампочкаОКпр2
             // 
             this.ЛампочкаОКпр2.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаОКпр2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ЛампочкаОКпр2.Location = new System.Drawing.Point(561, 71);
-            this.ЛампочкаОКпр2.Name = "B3_1ЛампочкаОКпр2";
+            this.ЛампочкаОКпр2.Name = "ЛампочкаОКпр2";
             this.ЛампочкаОКпр2.Size = new System.Drawing.Size(16, 16);
             this.ЛампочкаОКпр2.TabIndex = 72;
             this.ЛампочкаОКпр2.TabStop = false;
             // 
-            // B3_1ЛампочкаПФТК1_2
+            // ЛампочкаПФТК1_2
             // 
             this.ЛампочкаПФТК1_2.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаПФТК1_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ЛампочкаПФТК1_2.Location = new System.Drawing.Point(498, 89);
-            this.ЛампочкаПФТК1_2.Name = "B3_1ЛампочкаПФТК1_2";
+            this.ЛампочкаПФТК1_2.Name = "ЛампочкаПФТК1_2";
             this.ЛампочкаПФТК1_2.Size = new System.Drawing.Size(16, 16);
             this.ЛампочкаПФТК1_2.TabIndex = 71;
             this.ЛампочкаПФТК1_2.TabStop = false;
             // 
-            // B3_1ЛампочкаПФТК1_1
+            // ЛампочкаПФТК1_1
             // 
             this.ЛампочкаПФТК1_1.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаПФТК1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ЛампочкаПФТК1_1.Location = new System.Drawing.Point(498, 71);
-            this.ЛампочкаПФТК1_1.Name = "B3_1ЛампочкаПФТК1_1";
+            this.ЛампочкаПФТК1_1.Name = "ЛампочкаПФТК1_1";
             this.ЛампочкаПФТК1_1.Size = new System.Drawing.Size(16, 16);
             this.ЛампочкаПФТК1_1.TabIndex = 70;
             this.ЛампочкаПФТК1_1.TabStop = false;
             // 
-            // B3_1ЛампочкаОКпр1
+            // ЛампочкаОКпр1
             // 
             this.ЛампочкаОКпр1.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаОКпр1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ЛампочкаОКпр1.Location = new System.Drawing.Point(468, 71);
-            this.ЛампочкаОКпр1.Name = "B3_1ЛампочкаОКпр1";
+            this.ЛампочкаОКпр1.Name = "ЛампочкаОКпр1";
             this.ЛампочкаОКпр1.Size = new System.Drawing.Size(16, 16);
             this.ЛампочкаОКпр1.TabIndex = 69;
             this.ЛампочкаОКпр1.TabStop = false;
             // 
-            // B3_1ЛампочкаРС_синхр
+            // ЛампочкаРС_синхр
             // 
             this.ЛампочкаРС_синхр.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаРС_синхр.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ЛампочкаРС_синхр.Location = new System.Drawing.Point(312, 86);
-            this.ЛампочкаРС_синхр.Name = "B3_1ЛампочкаРС_синхр";
+            this.ЛампочкаРС_синхр.Name = "ЛампочкаРС_синхр";
             this.ЛампочкаРС_синхр.Size = new System.Drawing.Size(16, 16);
             this.ЛампочкаРС_синхр.TabIndex = 68;
             this.ЛампочкаРС_синхр.TabStop = false;
             // 
-            // B3_1ЛампочкаРС_1
+            // ЛампочкаРС_1
             // 
             this.ЛампочкаРС_1.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаРС_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ЛампочкаРС_1.Location = new System.Drawing.Point(312, 68);
-            this.ЛампочкаРС_1.Name = "B3_1ЛампочкаРС_1";
+            this.ЛампочкаРС_1.Name = "ЛампочкаРС_1";
             this.ЛампочкаРС_1.Size = new System.Drawing.Size(16, 16);
             this.ЛампочкаРС_1.TabIndex = 67;
             this.ЛампочкаРС_1.TabStop = false;
             // 
-            // B3_1ЛампочкаПРИавар
+            // ЛампочкаПРИавар
             // 
             this.ЛампочкаПРИавар.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаПРИавар.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ЛампочкаПРИавар.Location = new System.Drawing.Point(282, 68);
-            this.ЛампочкаПРИавар.Name = "B3_1ЛампочкаПРИавар";
+            this.ЛампочкаПРИавар.Name = "ЛампочкаПРИавар";
             this.ЛампочкаПРИавар.Size = new System.Drawing.Size(16, 16);
             this.ЛампочкаПРИавар.TabIndex = 66;
             this.ЛампочкаПРИавар.TabStop = false;
             // 
-            // B3_1ЛампочкаФСЧ
+            // ЛампочкаФСЧ
             // 
             this.ЛампочкаФСЧ.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаФСЧ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ЛампочкаФСЧ.Location = new System.Drawing.Point(126, 68);
-            this.ЛампочкаФСЧ.Name = "B3_1ЛампочкаФСЧ";
+            this.ЛампочкаФСЧ.Name = "ЛампочкаФСЧ";
             this.ЛампочкаФСЧ.Size = new System.Drawing.Size(16, 16);
             this.ЛампочкаФСЧ.TabIndex = 65;
             this.ЛампочкаФСЧ.TabStop = false;
             // 
-            // B3_1ЛампочкаПУЛГ_2
+            // ЛампочкаПУЛГ_2
             // 
             this.ЛампочкаПУЛГ_2.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаПУЛГ_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ЛампочкаПУЛГ_2.Location = new System.Drawing.Point(95, 86);
-            this.ЛампочкаПУЛГ_2.Name = "B3_1ЛампочкаПУЛГ_2";
+            this.ЛампочкаПУЛГ_2.Name = "ЛампочкаПУЛГ_2";
             this.ЛампочкаПУЛГ_2.Size = new System.Drawing.Size(16, 16);
             this.ЛампочкаПУЛГ_2.TabIndex = 64;
             this.ЛампочкаПУЛГ_2.TabStop = false;
             // 
-            // B3_1ЛампочкаПУЛГ_1
+            // ЛампочкаПУЛГ_1
             // 
             this.ЛампочкаПУЛГ_1.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаПУЛГ_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ЛампочкаПУЛГ_1.Location = new System.Drawing.Point(95, 68);
-            this.ЛампочкаПУЛГ_1.Name = "B3_1ЛампочкаПУЛГ_1";
+            this.ЛампочкаПУЛГ_1.Name = "ЛампочкаПУЛГ_1";
             this.ЛампочкаПУЛГ_1.Size = new System.Drawing.Size(16, 16);
             this.ЛампочкаПУЛГ_1.TabIndex = 63;
             this.ЛампочкаПУЛГ_1.TabStop = false;
             // 
-            // B3_1ТумблерМуДу
+            // ТумблерМуДу
             // 
             this.ТумблерМуДу.BackColor = System.Drawing.Color.Transparent;
             this.ТумблерМуДу.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
@@ -340,13 +340,13 @@
             this.ТумблерМуДу.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.ТумблерМуДу.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ТумблерМуДу.Location = new System.Drawing.Point(719, 143);
-            this.ТумблерМуДу.Name = "B3_1ТумблерМуДу";
+            this.ТумблерМуДу.Name = "ТумблерМуДу";
             this.ТумблерМуДу.Size = new System.Drawing.Size(36, 56);
             this.ТумблерМуДу.TabIndex = 43;
             this.ТумблерМуДу.UseVisualStyleBackColor = false;
-            this.ТумблерМуДу.Click += new System.EventHandler(this.B3_1ТумблерМуДу_Click);
+            this.ТумблерМуДу.Click += new System.EventHandler(this.ТумблерМуДу_Click);
             // 
-            // B3_1КолодкаТЛГпр3_2
+            // КолодкаТЛГпр3_2
             // 
             this.КолодкаТЛГпр32.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаТЛГпр32.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -355,13 +355,13 @@
             this.КолодкаТЛГпр32.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаТЛГпр32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаТЛГпр32.Location = new System.Drawing.Point(398, 145);
-            this.КолодкаТЛГпр32.Name = "B3_1КолодкаТЛГпр3_2";
+            this.КолодкаТЛГпр32.Name = "КолодкаТЛГпр3_2";
             this.КолодкаТЛГпр32.Size = new System.Drawing.Size(30, 68);
             this.КолодкаТЛГпр32.TabIndex = 42;
             this.КолодкаТЛГпр32.UseVisualStyleBackColor = false;
-            this.КолодкаТЛГпр32.Click += new System.EventHandler(this.B3_1КолодкаТЛГпр3_2_Click);
+            this.КолодкаТЛГпр32.Click += new System.EventHandler(this.КолодкаТЛГпр3_2_Click);
             // 
-            // B3_1КолодкаТЛГпр3_1
+            // КолодкаТЛГпр3_1
             // 
             this.КолодкаТЛГпр31.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаТЛГпр31.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -370,13 +370,13 @@
             this.КолодкаТЛГпр31.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаТЛГпр31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаТЛГпр31.Location = new System.Drawing.Point(398, 112);
-            this.КолодкаТЛГпр31.Name = "B3_1КолодкаТЛГпр3_1";
+            this.КолодкаТЛГпр31.Name = "КолодкаТЛГпр3_1";
             this.КолодкаТЛГпр31.Size = new System.Drawing.Size(30, 68);
             this.КолодкаТЛГпр31.TabIndex = 41;
             this.КолодкаТЛГпр31.UseVisualStyleBackColor = false;
-            this.КолодкаТЛГпр31.Click += new System.EventHandler(this.B3_1КолодкаТЛГпр3_1_Click);
+            this.КолодкаТЛГпр31.Click += new System.EventHandler(this.КолодкаТЛГпр3_1_Click);
             // 
-            // B3_1КолодкаТЛГпр2_2
+            // КолодкаТЛГпр2_2
             // 
             this.КолодкаТЛГпр22.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаТЛГпр22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -385,13 +385,13 @@
             this.КолодкаТЛГпр22.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаТЛГпр22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаТЛГпр22.Location = new System.Drawing.Point(367, 145);
-            this.КолодкаТЛГпр22.Name = "B3_1КолодкаТЛГпр2_2";
+            this.КолодкаТЛГпр22.Name = "КолодкаТЛГпр2_2";
             this.КолодкаТЛГпр22.Size = new System.Drawing.Size(30, 68);
             this.КолодкаТЛГпр22.TabIndex = 40;
             this.КолодкаТЛГпр22.UseVisualStyleBackColor = false;
-            this.КолодкаТЛГпр22.Click += new System.EventHandler(this.B3_1КолодкаТЛГпр2_2_Click);
+            this.КолодкаТЛГпр22.Click += new System.EventHandler(this.КолодкаТЛГпр2_2_Click);
             // 
-            // B3_1КолодкаТЛГпр2_1
+            // КолодкаТЛГпр2_1
             // 
             this.КолодкаТЛГпр21.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаТЛГпр21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -400,13 +400,13 @@
             this.КолодкаТЛГпр21.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаТЛГпр21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаТЛГпр21.Location = new System.Drawing.Point(367, 112);
-            this.КолодкаТЛГпр21.Name = "B3_1КолодкаТЛГпр2_1";
+            this.КолодкаТЛГпр21.Name = "КолодкаТЛГпр2_1";
             this.КолодкаТЛГпр21.Size = new System.Drawing.Size(30, 68);
             this.КолодкаТЛГпр21.TabIndex = 39;
             this.КолодкаТЛГпр21.UseVisualStyleBackColor = false;
-            this.КолодкаТЛГпр21.Click += new System.EventHandler(this.B3_1КолодкаТЛГпр2_1_Click);
+            this.КолодкаТЛГпр21.Click += new System.EventHandler(this.КолодкаТЛГпр2_1_Click);
             // 
-            // B3_1КолодкаТЛГпр1_2
+            // КолодкаТЛГпр1_2
             // 
             this.КолодкаТЛГпр12.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаТЛГпр12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -415,13 +415,13 @@
             this.КолодкаТЛГпр12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаТЛГпр12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаТЛГпр12.Location = new System.Drawing.Point(336, 145);
-            this.КолодкаТЛГпр12.Name = "B3_1КолодкаТЛГпр1_2";
+            this.КолодкаТЛГпр12.Name = "КолодкаТЛГпр1_2";
             this.КолодкаТЛГпр12.Size = new System.Drawing.Size(30, 68);
             this.КолодкаТЛГпр12.TabIndex = 38;
             this.КолодкаТЛГпр12.UseVisualStyleBackColor = false;
-            this.КолодкаТЛГпр12.Click += new System.EventHandler(this.B3_1КолодкаТЛГпр1_2_Click);
+            this.КолодкаТЛГпр12.Click += new System.EventHandler(this.КолодкаТЛГпр1_2_Click);
             // 
-            // B3_1КолодкаТЛГпр1_1
+            // КолодкаТЛГпр1_1
             // 
             this.КолодкаТЛГпр11.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаТЛГпр11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -430,13 +430,13 @@
             this.КолодкаТЛГпр11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаТЛГпр11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаТЛГпр11.Location = new System.Drawing.Point(336, 112);
-            this.КолодкаТЛГпр11.Name = "B3_1КолодкаТЛГпр1_1";
+            this.КолодкаТЛГпр11.Name = "КолодкаТЛГпр1_1";
             this.КолодкаТЛГпр11.Size = new System.Drawing.Size(30, 68);
             this.КолодкаТЛГпр11.TabIndex = 37;
             this.КолодкаТЛГпр11.UseVisualStyleBackColor = false;
-            this.КолодкаТЛГпр11.Click += new System.EventHandler(this.B3_1КолодкаТЛГпр1_1_Click);
+            this.КолодкаТЛГпр11.Click += new System.EventHandler(this.КолодкаТЛГпр1_1_Click);
             // 
-            // B3_1КолодкаКРПР_5
+            // КолодкаКРПР_5
             // 
             this.КолодкаКРПР_5.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаКРПР_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -445,13 +445,13 @@
             this.КолодкаКРПР_5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаКРПР_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаКРПР_5.Location = new System.Drawing.Point(146, 193);
-            this.КолодкаКРПР_5.Name = "B3_1КолодкаКРПР_5";
+            this.КолодкаКРПР_5.Name = "КолодкаКРПР_5";
             this.КолодкаКРПР_5.Size = new System.Drawing.Size(42, 19);
             this.КолодкаКРПР_5.TabIndex = 36;
             this.КолодкаКРПР_5.UseVisualStyleBackColor = false;
-            this.КолодкаКРПР_5.Click += new System.EventHandler(this.B3_1КолодкаКРПР_Click);
+            this.КолодкаКРПР_5.Click += new System.EventHandler(this.КолодкаКРПР_Click);
             // 
-            // B3_1КолодкаКРПР_4
+            // КолодкаКРПР_4
             // 
             this.КолодкаКРПР_4.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаКРПР_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -460,13 +460,13 @@
             this.КолодкаКРПР_4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаКРПР_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаКРПР_4.Location = new System.Drawing.Point(146, 171);
-            this.КолодкаКРПР_4.Name = "B3_1КолодкаКРПР_4";
+            this.КолодкаКРПР_4.Name = "КолодкаКРПР_4";
             this.КолодкаКРПР_4.Size = new System.Drawing.Size(42, 19);
             this.КолодкаКРПР_4.TabIndex = 35;
             this.КолодкаКРПР_4.UseVisualStyleBackColor = false;
-            this.КолодкаКРПР_4.Click += new System.EventHandler(this.B3_1КолодкаКРПР_Click);
+            this.КолодкаКРПР_4.Click += new System.EventHandler(this.КолодкаКРПР_Click);
             // 
-            // B3_1КолодкаКРПР_3
+            // КолодкаКРПР_3
             // 
             this.КолодкаКРПР_3.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаКРПР_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -475,13 +475,13 @@
             this.КолодкаКРПР_3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаКРПР_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаКРПР_3.Location = new System.Drawing.Point(146, 150);
-            this.КолодкаКРПР_3.Name = "B3_1КолодкаКРПР_3";
+            this.КолодкаКРПР_3.Name = "КолодкаКРПР_3";
             this.КолодкаКРПР_3.Size = new System.Drawing.Size(42, 19);
             this.КолодкаКРПР_3.TabIndex = 34;
             this.КолодкаКРПР_3.UseVisualStyleBackColor = false;
-            this.КолодкаКРПР_3.Click += new System.EventHandler(this.B3_1КолодкаКРПР_Click);
+            this.КолодкаКРПР_3.Click += new System.EventHandler(this.КолодкаКРПР_Click);
             // 
-            // B3_1КолодкаКРПР_2
+            // КолодкаКРПР_2
             // 
             this.КолодкаКРПР_2.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаКРПР_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -490,13 +490,13 @@
             this.КолодкаКРПР_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаКРПР_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаКРПР_2.Location = new System.Drawing.Point(146, 130);
-            this.КолодкаКРПР_2.Name = "B3_1КолодкаКРПР_2";
+            this.КолодкаКРПР_2.Name = "КолодкаКРПР_2";
             this.КолодкаКРПР_2.Size = new System.Drawing.Size(42, 19);
             this.КолодкаКРПР_2.TabIndex = 33;
             this.КолодкаКРПР_2.UseVisualStyleBackColor = false;
-            this.КолодкаКРПР_2.Click += new System.EventHandler(this.B3_1КолодкаКРПР_Click);
+            this.КолодкаКРПР_2.Click += new System.EventHandler(this.КолодкаКРПР_Click);
             // 
-            // B3_1КолодкаКРПР_1
+            // КолодкаКРПР_1
             // 
             this.КолодкаКРПР_1.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаКРПР_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -505,13 +505,13 @@
             this.КолодкаКРПР_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаКРПР_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаКРПР_1.Location = new System.Drawing.Point(146, 111);
-            this.КолодкаКРПР_1.Name = "B3_1КолодкаКРПР_1";
+            this.КолодкаКРПР_1.Name = "КолодкаКРПР_1";
             this.КолодкаКРПР_1.Size = new System.Drawing.Size(42, 19);
             this.КолодкаКРПР_1.TabIndex = 32;
             this.КолодкаКРПР_1.UseVisualStyleBackColor = false;
-            this.КолодкаКРПР_1.Click += new System.EventHandler(this.B3_1КолодкаКРПР_Click);
+            this.КолодкаКРПР_1.Click += new System.EventHandler(this.КолодкаКРПР_Click);
             // 
-            // B3_1КолодкаОКпр2_ас
+            // КолодкаОКпр2_ас
             // 
             this.КолодкаОКпр2Ас.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаОКпр2Ас.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -520,13 +520,13 @@
             this.КолодкаОКпр2Ас.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаОКпр2Ас.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаОКпр2Ас.Location = new System.Drawing.Point(549, 191);
-            this.КолодкаОКпр2Ас.Name = "B3_1КолодкаОКпр2_ас";
+            this.КолодкаОКпр2Ас.Name = "КолодкаОКпр2_ас";
             this.КолодкаОКпр2Ас.Size = new System.Drawing.Size(42, 19);
             this.КолодкаОКпр2Ас.TabIndex = 31;
             this.КолодкаОКпр2Ас.UseVisualStyleBackColor = false;
-            this.КолодкаОКпр2Ас.Click += new System.EventHandler(this.B3_1КолодкаОКпр2_ас_Click);
+            this.КолодкаОКпр2Ас.Click += new System.EventHandler(this.КолодкаОКпр2_ас_Click);
             // 
-            // B3_1КолодкаОКпр2_син
+            // КолодкаОКпр2_син
             // 
             this.КолодкаОКпр2Син.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаОКпр2Син.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -535,13 +535,13 @@
             this.КолодкаОКпр2Син.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаОКпр2Син.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаОКпр2Син.Location = new System.Drawing.Point(549, 170);
-            this.КолодкаОКпр2Син.Name = "B3_1КолодкаОКпр2_син";
+            this.КолодкаОКпр2Син.Name = "КолодкаОКпр2_син";
             this.КолодкаОКпр2Син.Size = new System.Drawing.Size(42, 19);
             this.КолодкаОКпр2Син.TabIndex = 30;
             this.КолодкаОКпр2Син.UseVisualStyleBackColor = false;
-            this.КолодкаОКпр2Син.Click += new System.EventHandler(this.B3_1КолодкаОКпр2_син_Click);
+            this.КолодкаОКпр2Син.Click += new System.EventHandler(this.КолодкаОКпр2_син_Click);
             // 
-            // B3_1КолодкаОКпр1_ас
+            // КолодкаОКпр1_ас
             // 
             this.КолодкаОКпр1Ас.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаОКпр1Ас.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -550,13 +550,13 @@
             this.КолодкаОКпр1Ас.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаОКпр1Ас.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаОКпр1Ас.Location = new System.Drawing.Point(456, 192);
-            this.КолодкаОКпр1Ас.Name = "B3_1КолодкаОКпр1_ас";
+            this.КолодкаОКпр1Ас.Name = "КолодкаОКпр1_ас";
             this.КолодкаОКпр1Ас.Size = new System.Drawing.Size(42, 19);
             this.КолодкаОКпр1Ас.TabIndex = 29;
             this.КолодкаОКпр1Ас.UseVisualStyleBackColor = false;
-            this.КолодкаОКпр1Ас.Click += new System.EventHandler(this.B3_1КолодкаОКпр1_ас_Click);
+            this.КолодкаОКпр1Ас.Click += new System.EventHandler(this.КолодкаОКпр1_ас_Click);
             // 
-            // B3_1КолодкаОКпр1_син
+            // КолодкаОКпр1_син
             // 
             this.КолодкаОКпр1Син.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаОКпр1Син.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -565,13 +565,13 @@
             this.КолодкаОКпр1Син.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаОКпр1Син.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаОКпр1Син.Location = new System.Drawing.Point(456, 171);
-            this.КолодкаОКпр1Син.Name = "B3_1КолодкаОКпр1_син";
+            this.КолодкаОКпр1Син.Name = "КолодкаОКпр1_син";
             this.КолодкаОКпр1Син.Size = new System.Drawing.Size(42, 19);
             this.КолодкаОКпр1Син.TabIndex = 28;
             this.КолодкаОКпр1Син.UseVisualStyleBackColor = false;
-            this.КолодкаОКпр1Син.Click += new System.EventHandler(this.B3_1КолодкаОКпр1_син_Click);
+            this.КолодкаОКпр1Син.Click += new System.EventHandler(this.КолодкаОКпр1_син_Click);
             // 
-            // B3_1КолодкаУКК2_9
+            // КолодкаУКК2_9
             // 
             this.КолодкаУКК2_9.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК2_9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -580,13 +580,13 @@
             this.КолодкаУКК2_9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК2_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаУКК2_9.Location = new System.Drawing.Point(610, 251);
-            this.КолодкаУКК2_9.Name = "B3_1КолодкаУКК2_9";
+            this.КолодкаУКК2_9.Name = "КолодкаУКК2_9";
             this.КолодкаУКК2_9.Size = new System.Drawing.Size(42, 19);
             this.КолодкаУКК2_9.TabIndex = 27;
             this.КолодкаУКК2_9.UseVisualStyleBackColor = false;
-            this.КолодкаУКК2_9.Click += new System.EventHandler(this.B3_1КолодкаУКК_Click);
+            this.КолодкаУКК2_9.Click += new System.EventHandler(this.КолодкаУКК_Click);
             // 
-            // B3_1КолодкаУКК2_8
+            // КолодкаУКК2_8
             // 
             this.КолодкаУКК2_8.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК2_8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -595,13 +595,13 @@
             this.КолодкаУКК2_8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК2_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаУКК2_8.Location = new System.Drawing.Point(610, 231);
-            this.КолодкаУКК2_8.Name = "B3_1КолодкаУКК2_8";
+            this.КолодкаУКК2_8.Name = "КолодкаУКК2_8";
             this.КолодкаУКК2_8.Size = new System.Drawing.Size(42, 19);
             this.КолодкаУКК2_8.TabIndex = 26;
             this.КолодкаУКК2_8.UseVisualStyleBackColor = false;
-            this.КолодкаУКК2_8.Click += new System.EventHandler(this.B3_1КолодкаУКК_Click);
+            this.КолодкаУКК2_8.Click += new System.EventHandler(this.КолодкаУКК_Click);
             // 
-            // B3_1КолодкаУКК2_7
+            // КолодкаУКК2_7
             // 
             this.КолодкаУКК2_7.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК2_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -610,13 +610,13 @@
             this.КолодкаУКК2_7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК2_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаУКК2_7.Location = new System.Drawing.Point(610, 209);
-            this.КолодкаУКК2_7.Name = "B3_1КолодкаУКК2_7";
+            this.КолодкаУКК2_7.Name = "КолодкаУКК2_7";
             this.КолодкаУКК2_7.Size = new System.Drawing.Size(42, 19);
             this.КолодкаУКК2_7.TabIndex = 25;
             this.КолодкаУКК2_7.UseVisualStyleBackColor = false;
-            this.КолодкаУКК2_7.Click += new System.EventHandler(this.B3_1КолодкаУКК_Click);
+            this.КолодкаУКК2_7.Click += new System.EventHandler(this.КолодкаУКК_Click);
             // 
-            // B3_1КолодкаУКК2_6
+            // КолодкаУКК2_6
             // 
             this.КолодкаУКК2_6.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК2_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -625,13 +625,13 @@
             this.КолодкаУКК2_6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК2_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаУКК2_6.Location = new System.Drawing.Point(610, 188);
-            this.КолодкаУКК2_6.Name = "B3_1КолодкаУКК2_6";
+            this.КолодкаУКК2_6.Name = "КолодкаУКК2_6";
             this.КолодкаУКК2_6.Size = new System.Drawing.Size(42, 19);
             this.КолодкаУКК2_6.TabIndex = 24;
             this.КолодкаУКК2_6.UseVisualStyleBackColor = false;
-            this.КолодкаУКК2_6.Click += new System.EventHandler(this.B3_1КолодкаУКК_Click);
+            this.КолодкаУКК2_6.Click += new System.EventHandler(this.КолодкаУКК_Click);
             // 
-            // B3_1КолодкаУКК2_5
+            // КолодкаУКК2_5
             // 
             this.КолодкаУКК2_5.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК2_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -640,13 +640,13 @@
             this.КолодкаУКК2_5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК2_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаУКК2_5.Location = new System.Drawing.Point(610, 168);
-            this.КолодкаУКК2_5.Name = "B3_1КолодкаУКК2_5";
+            this.КолодкаУКК2_5.Name = "КолодкаУКК2_5";
             this.КолодкаУКК2_5.Size = new System.Drawing.Size(42, 19);
             this.КолодкаУКК2_5.TabIndex = 23;
             this.КолодкаУКК2_5.UseVisualStyleBackColor = false;
-            this.КолодкаУКК2_5.Click += new System.EventHandler(this.B3_1КолодкаУКК_Click);
+            this.КолодкаУКК2_5.Click += new System.EventHandler(this.КолодкаУКК_Click);
             // 
-            // B3_1КолодкаУКК2_4
+            // КолодкаУКК2_4
             // 
             this.КолодкаУКК2_4.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК2_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -655,13 +655,13 @@
             this.КолодкаУКК2_4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК2_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаУКК2_4.Location = new System.Drawing.Point(610, 146);
-            this.КолодкаУКК2_4.Name = "B3_1КолодкаУКК2_4";
+            this.КолодкаУКК2_4.Name = "КолодкаУКК2_4";
             this.КолодкаУКК2_4.Size = new System.Drawing.Size(42, 19);
             this.КолодкаУКК2_4.TabIndex = 22;
             this.КолодкаУКК2_4.UseVisualStyleBackColor = false;
-            this.КолодкаУКК2_4.Click += new System.EventHandler(this.B3_1КолодкаУКК_Click);
+            this.КолодкаУКК2_4.Click += new System.EventHandler(this.КолодкаУКК_Click);
             // 
-            // B3_1КолодкаУКК2_3
+            // КолодкаУКК2_3
             // 
             this.КолодкаУКК2_3.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК2_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -670,13 +670,13 @@
             this.КолодкаУКК2_3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК2_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаУКК2_3.Location = new System.Drawing.Point(610, 124);
-            this.КолодкаУКК2_3.Name = "B3_1КолодкаУКК2_3";
+            this.КолодкаУКК2_3.Name = "КолодкаУКК2_3";
             this.КолодкаУКК2_3.Size = new System.Drawing.Size(42, 19);
             this.КолодкаУКК2_3.TabIndex = 21;
             this.КолодкаУКК2_3.UseVisualStyleBackColor = false;
-            this.КолодкаУКК2_3.Click += new System.EventHandler(this.B3_1КолодкаУКК_Click);
+            this.КолодкаУКК2_3.Click += new System.EventHandler(this.КолодкаУКК_Click);
             // 
-            // B3_1КолодкаУКК2_2
+            // КолодкаУКК2_2
             // 
             this.КолодкаУКК2_2.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК2_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -685,13 +685,13 @@
             this.КолодкаУКК2_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК2_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаУКК2_2.Location = new System.Drawing.Point(610, 104);
-            this.КолодкаУКК2_2.Name = "B3_1КолодкаУКК2_2";
+            this.КолодкаУКК2_2.Name = "КолодкаУКК2_2";
             this.КолодкаУКК2_2.Size = new System.Drawing.Size(42, 19);
             this.КолодкаУКК2_2.TabIndex = 20;
             this.КолодкаУКК2_2.UseVisualStyleBackColor = false;
-            this.КолодкаУКК2_2.Click += new System.EventHandler(this.B3_1КолодкаУКК_Click);
+            this.КолодкаУКК2_2.Click += new System.EventHandler(this.КолодкаУКК_Click);
             // 
-            // B3_1КолодкаУКК2_1
+            // КолодкаУКК2_1
             // 
             this.КолодкаУКК2_1.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК2_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -700,13 +700,13 @@
             this.КолодкаУКК2_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК2_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаУКК2_1.Location = new System.Drawing.Point(610, 82);
-            this.КолодкаУКК2_1.Name = "B3_1КолодкаУКК2_1";
+            this.КолодкаУКК2_1.Name = "КолодкаУКК2_1";
             this.КолодкаУКК2_1.Size = new System.Drawing.Size(42, 19);
             this.КолодкаУКК2_1.TabIndex = 19;
             this.КолодкаУКК2_1.UseVisualStyleBackColor = false;
-            this.КолодкаУКК2_1.Click += new System.EventHandler(this.B3_1КолодкаУКК_Click);
+            this.КолодкаУКК2_1.Click += new System.EventHandler(this.КолодкаУКК_Click);
             // 
-            // B3_1КолодкаУКК1_9
+            // КолодкаУКК1_9
             // 
             this.КолодкаУКК1_9.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК1_9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -715,13 +715,13 @@
             this.КолодкаУКК1_9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК1_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаУКК1_9.Location = new System.Drawing.Point(517, 251);
-            this.КолодкаУКК1_9.Name = "B3_1КолодкаУКК1_9";
+            this.КолодкаУКК1_9.Name = "КолодкаУКК1_9";
             this.КолодкаУКК1_9.Size = new System.Drawing.Size(42, 19);
             this.КолодкаУКК1_9.TabIndex = 18;
             this.КолодкаУКК1_9.UseVisualStyleBackColor = false;
-            this.КолодкаУКК1_9.Click += new System.EventHandler(this.B3_1КолодкаУКК_Click);
+            this.КолодкаУКК1_9.Click += new System.EventHandler(this.КолодкаУКК_Click);
             // 
-            // B3_1КолодкаУКК1_8
+            // КолодкаУКК1_8
             // 
             this.КолодкаУКК1_8.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК1_8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -730,13 +730,13 @@
             this.КолодкаУКК1_8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК1_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаУКК1_8.Location = new System.Drawing.Point(517, 231);
-            this.КолодкаУКК1_8.Name = "B3_1КолодкаУКК1_8";
+            this.КолодкаУКК1_8.Name = "КолодкаУКК1_8";
             this.КолодкаУКК1_8.Size = new System.Drawing.Size(42, 19);
             this.КолодкаУКК1_8.TabIndex = 17;
             this.КолодкаУКК1_8.UseVisualStyleBackColor = false;
-            this.КолодкаУКК1_8.Click += new System.EventHandler(this.B3_1КолодкаУКК_Click);
+            this.КолодкаУКК1_8.Click += new System.EventHandler(this.КолодкаУКК_Click);
             // 
-            // B3_1КолодкаУКК1_7
+            // КолодкаУКК1_7
             // 
             this.КолодкаУКК1_7.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК1_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -745,13 +745,13 @@
             this.КолодкаУКК1_7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК1_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаУКК1_7.Location = new System.Drawing.Point(517, 209);
-            this.КолодкаУКК1_7.Name = "B3_1КолодкаУКК1_7";
+            this.КолодкаУКК1_7.Name = "КолодкаУКК1_7";
             this.КолодкаУКК1_7.Size = new System.Drawing.Size(42, 19);
             this.КолодкаУКК1_7.TabIndex = 16;
             this.КолодкаУКК1_7.UseVisualStyleBackColor = false;
-            this.КолодкаУКК1_7.Click += new System.EventHandler(this.B3_1КолодкаУКК_Click);
+            this.КолодкаУКК1_7.Click += new System.EventHandler(this.КолодкаУКК_Click);
             // 
-            // B3_1КолодкаУКК1_6
+            // КолодкаУКК1_6
             // 
             this.КолодкаУКК1_6.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК1_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -760,13 +760,13 @@
             this.КолодкаУКК1_6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК1_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаУКК1_6.Location = new System.Drawing.Point(517, 188);
-            this.КолодкаУКК1_6.Name = "B3_1КолодкаУКК1_6";
+            this.КолодкаУКК1_6.Name = "КолодкаУКК1_6";
             this.КолодкаУКК1_6.Size = new System.Drawing.Size(42, 19);
             this.КолодкаУКК1_6.TabIndex = 15;
             this.КолодкаУКК1_6.UseVisualStyleBackColor = false;
-            this.КолодкаУКК1_6.Click += new System.EventHandler(this.B3_1КолодкаУКК_Click);
+            this.КолодкаУКК1_6.Click += new System.EventHandler(this.КолодкаУКК_Click);
             // 
-            // B3_1КолодкаУКК1_5
+            // КолодкаУКК1_5
             // 
             this.КолодкаУКК1_5.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК1_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -775,13 +775,13 @@
             this.КолодкаУКК1_5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК1_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаУКК1_5.Location = new System.Drawing.Point(517, 168);
-            this.КолодкаУКК1_5.Name = "B3_1КолодкаУКК1_5";
+            this.КолодкаУКК1_5.Name = "КолодкаУКК1_5";
             this.КолодкаУКК1_5.Size = new System.Drawing.Size(42, 19);
             this.КолодкаУКК1_5.TabIndex = 14;
             this.КолодкаУКК1_5.UseVisualStyleBackColor = false;
-            this.КолодкаУКК1_5.Click += new System.EventHandler(this.B3_1КолодкаУКК_Click);
+            this.КолодкаУКК1_5.Click += new System.EventHandler(this.КолодкаУКК_Click);
             // 
-            // B3_1КолодкаУКК1_4
+            // КолодкаУКК1_4
             // 
             this.КолодкаУКК1_4.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК1_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -790,13 +790,13 @@
             this.КолодкаУКК1_4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК1_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаУКК1_4.Location = new System.Drawing.Point(517, 146);
-            this.КолодкаУКК1_4.Name = "B3_1КолодкаУКК1_4";
+            this.КолодкаУКК1_4.Name = "КолодкаУКК1_4";
             this.КолодкаУКК1_4.Size = new System.Drawing.Size(42, 19);
             this.КолодкаУКК1_4.TabIndex = 13;
             this.КолодкаУКК1_4.UseVisualStyleBackColor = false;
-            this.КолодкаУКК1_4.Click += new System.EventHandler(this.B3_1КолодкаУКК_Click);
+            this.КолодкаУКК1_4.Click += new System.EventHandler(this.КолодкаУКК_Click);
             // 
-            // B3_1КолодкаУКК1_3
+            // КолодкаУКК1_3
             // 
             this.КолодкаУКК1_3.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК1_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -805,13 +805,13 @@
             this.КолодкаУКК1_3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК1_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаУКК1_3.Location = new System.Drawing.Point(517, 124);
-            this.КолодкаУКК1_3.Name = "B3_1КолодкаУКК1_3";
+            this.КолодкаУКК1_3.Name = "КолодкаУКК1_3";
             this.КолодкаУКК1_3.Size = new System.Drawing.Size(42, 19);
             this.КолодкаУКК1_3.TabIndex = 12;
             this.КолодкаУКК1_3.UseVisualStyleBackColor = false;
-            this.КолодкаУКК1_3.Click += new System.EventHandler(this.B3_1КолодкаУКК_Click);
+            this.КолодкаУКК1_3.Click += new System.EventHandler(this.КолодкаУКК_Click);
             // 
-            // B3_1КолодкаУКК1_2
+            // КолодкаУКК1_2
             // 
             this.КолодкаУКК1_2.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК1_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -820,13 +820,13 @@
             this.КолодкаУКК1_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК1_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаУКК1_2.Location = new System.Drawing.Point(517, 104);
-            this.КолодкаУКК1_2.Name = "B3_1КолодкаУКК1_2";
+            this.КолодкаУКК1_2.Name = "КолодкаУКК1_2";
             this.КолодкаУКК1_2.Size = new System.Drawing.Size(42, 19);
             this.КолодкаУКК1_2.TabIndex = 11;
             this.КолодкаУКК1_2.UseVisualStyleBackColor = false;
-            this.КолодкаУКК1_2.Click += new System.EventHandler(this.B3_1КолодкаУКК_Click);
+            this.КолодкаУКК1_2.Click += new System.EventHandler(this.КолодкаУКК_Click);
             // 
-            // B3_1КолодкаУКК1_1
+            // КолодкаУКК1_1
             // 
             this.КолодкаУКК1_1.BackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -835,13 +835,13 @@
             this.КолодкаУКК1_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаУКК1_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаУКК1_1.Location = new System.Drawing.Point(517, 82);
-            this.КолодкаУКК1_1.Name = "B3_1КолодкаУКК1_1";
+            this.КолодкаУКК1_1.Name = "КолодкаУКК1_1";
             this.КолодкаУКК1_1.Size = new System.Drawing.Size(42, 19);
             this.КолодкаУКК1_1.TabIndex = 10;
             this.КолодкаУКК1_1.UseVisualStyleBackColor = false;
-            this.КолодкаУКК1_1.Click += new System.EventHandler(this.B3_1КолодкаУКК_Click);
+            this.КолодкаУКК1_1.Click += new System.EventHandler(this.КолодкаУКК_Click);
             // 
-            // B3_1Form
+            // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -849,7 +849,7 @@
             this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "B3_1Form";
+            this.Name = "Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Б3-1";
             this.Panel.ResumeLayout(false);

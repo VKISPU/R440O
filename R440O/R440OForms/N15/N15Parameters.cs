@@ -1,4 +1,5 @@
 ﻿using R440O.R440OForms.B1_2;
+using R440O.R440OForms.B3_2;
 
 namespace R440O.R440OForms.N15
 {
@@ -708,8 +709,7 @@ namespace R440O.R440OForms.N15
 
         public static bool ЛампочкаБ3_2
         {
-            get { return _лампочкаБ32; }
-            set { _лампочкаБ32 = value; }
+            get { return B3_2Parameters.Включен; }
         }
 
         public static bool ЛампочкаДАБ_5

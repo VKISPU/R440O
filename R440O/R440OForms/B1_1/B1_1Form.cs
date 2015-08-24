@@ -132,7 +132,7 @@ namespace R440O.R440OForms.B1_1
                 var item = itemIn;
                 if (!item.Name.Contains("Лампочка")) continue;
                 var propertiesList = typeof(B1_1Parameters).GetProperties();
-                foreach (var prop in propertiesList.Where(field => item.Name == "B1_1" + field.Name))
+                foreach (var prop in propertiesList.Where(field => item.Name == field.Name))
                 {
                     if (item.Name.Contains("ЛампочкаПУЛ_2") ||
                         item.Name.Contains("ЛампочкаТКБтк1_2") ||

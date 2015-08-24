@@ -1,20 +1,14 @@
-﻿//-----------------------------------------------------------------------
-// <copyright file="B3_2Form.cs" company="VKISPU">
-//      R440O station.
-// </copyright>
-//-----------------------------------------------------------------------
-using System.Reflection;
-using System.Windows.Forms;
-
-namespace R440O.R440OForms.B3_2
+﻿namespace R440O.R440OForms.B3_2
 {
     using System;
-    using Parameters;
+    using System.Linq;
+    using System.Windows.Forms;
+    using BaseClasses;
 
     /// <summary>
-    /// Форма блока Б3-1
+    /// Форма блока Б3-2
     /// </summary>
-    public partial class B3_2Form : Form
+    public partial class B3_2Form : Form, IRefreshableForm
     {
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="B3_2Form"/>
@@ -22,338 +16,158 @@ namespace R440O.R440OForms.B3_2
         public B3_2Form()
         {
             InitializeComponent();
-            InitializeButtonsPosition();
-            InitializeTumblersPosition();
+            B3_2Parameters.ParameterChanged += RefreshFormElements;
+            RefreshFormElements();
         }
 
-        #region Колодки УКК1 и УКК2
-        private void B3_2КолодкаУКК_Click(object sender, EventArgs e)
+        #region Колодки УКК
+        private void КолодкаУКК_Click(object sender, EventArgs e)
         {
             var button = sender as Button;
+            var numberOfButton = (int)Char.GetNumericValue(button.Name[12]);
+            var numberOfComplect = button.Name[10];
 
-            var numberOfButton = (int)Char.GetNumericValue(button.Name[16]);
-            var numberOfComplect = button.Name[14];
-
-            PropertyInfo Property = typeof(B3_2Parameters).GetProperty("B3_2КолодкаУКК" + numberOfComplect);
-
-            int value = (int)Property.GetValue(null);
-
-            if (value != 0)
-            {
-                var oldButton = B3_2Panel.Controls.Find("B3_2КолодкаУКК" + numberOfComplect + "_" + value, true)[0] as Button;
-                oldButton.BackgroundImage = null;
-            }
-
-            if (numberOfButton == value)
-            {
-                Property.SetValue(null, 0);
-                button.BackgroundImage = null;
-            }
-            else
-            {
-                Property.SetValue(null, numberOfButton);
-                button.BackgroundImage = ControlElementImages.jumperType2;
-            }
+            var property = typeof(B3_2Parameters).GetProperty("КолодкаУКК" + numberOfComplect);
+            var value = (int)property.GetValue(null);
+            property.SetValue(null, numberOfButton == value ? 0 : numberOfButton);
         }
         #endregion
 
         #region Колодки КРПР
-        private void B3_2КолодкаКРПР_Click(object sender, EventArgs e)
+        private void КолодкаКРПР_Click(object sender, EventArgs e)
         {
             var button = sender as Button;
+            var numberOfButton = (int)Char.GetNumericValue(button.Name[12]);
 
-            var numberOfButton = (int)Char.GetNumericValue(button.Name[16]);
-
-            PropertyInfo Property = typeof(B3_2Parameters).GetProperty("B3_2КолодкаКРПР");
-
-            var value = (int)Property.GetValue(null);
-
-            if (value != 0)
-            {
-                var oldButton = B3_2Panel.Controls.Find("B3_2КолодкаКРПР_" + value, true)[0] as Button;
-                oldButton.BackgroundImage = null;
-            }
-
-            if (numberOfButton == value)
-            {
-                Property.SetValue(null, 0);
-                button.BackgroundImage = null;
-            }
-            else
-            {
-                Property.SetValue(null, numberOfButton);
-                button.BackgroundImage = ControlElementImages.jumperType2;
-            }
+            var property = typeof(B3_2Parameters).GetProperty("КолодкаКРПР");
+            var value = (int)property.GetValue(null);
+            property.SetValue(null, numberOfButton == value ? 0 : numberOfButton);
         }
         #endregion
 
-        #region ОКпр1 Колодки
-        private void B3_2КолодкаОКпр1_син_Click(object sender, System.EventArgs e)
+        #region ОКпр Колодки
+        private void КолодкаОКпр1_син_Click(object sender, System.EventArgs e)
         {
-            if (B3_2Parameters.B3_2КолодкаОКпр1_син)
-            {
-                this.B3_2КолодкаОКпр1_син.BackgroundImage = null;
-                B3_2Parameters.B3_2КолодкаОКпр1_син = false;
-            }
-            else
-            {
-                this.B3_2КолодкаОКпр1_син.BackgroundImage = ControlElementImages.jumperType2;
-                B3_2Parameters.B3_2КолодкаОКпр1_син = true;
-                this.B3_2КолодкаОКпр1_ас.BackgroundImage = null;
-                B3_2Parameters.B3_2КолодкаОКпр1_ас = false;
-            }
+            B3_2Parameters.КолодкаОКпр1Син = !B3_2Parameters.КолодкаОКпр1Син;
         }
 
-        private void B3_2КолодкаОКпр1_ас_Click(object sender, System.EventArgs e)
+        private void КолодкаОКпр1_ас_Click(object sender, System.EventArgs e)
         {
-            if (B3_2Parameters.B3_2КолодкаОКпр1_ас)
-            {
-                this.B3_2КолодкаОКпр1_ас.BackgroundImage = null;
-                B3_2Parameters.B3_2КолодкаОКпр1_ас = false;
-            }
-            else
-            {
-                this.B3_2КолодкаОКпр1_ас.BackgroundImage = ControlElementImages.jumperType2;
-                B3_2Parameters.B3_2КолодкаОКпр1_ас = true;
-                this.B3_2КолодкаОКпр1_син.BackgroundImage = null;
-                B3_2Parameters.B3_2КолодкаОКпр1_син = false;
-            }
+            B3_2Parameters.КолодкаОКпр1Ас = !B3_2Parameters.КолодкаОКпр1Ас;
+        }
+
+        private void КолодкаОКпр2_син_Click(object sender, System.EventArgs e)
+        {
+            B3_2Parameters.КолодкаОКпр2Син = !B3_2Parameters.КолодкаОКпр2Син;
+        }
+
+        private void КолодкаОКпр2_ас_Click(object sender, System.EventArgs e)
+        {
+            B3_2Parameters.КолодкаОКпр2Ас = !B3_2Parameters.КолодкаОКпр2Ас;
         }
         #endregion
 
-        #region ОКпр2 Колодки
-        private void B3_2КолодкаОКпр2_син_Click(object sender, System.EventArgs e)
+        #region ТЛГпр Колодки
+        private void КолодкаТЛГпр1_1_Click(object sender, System.EventArgs e)
         {
-            if (B3_2Parameters.B3_2КолодкаОКпр2_син)
-            {
-                B3_2КолодкаОКпр2_син.BackgroundImage = null;
-                B3_2Parameters.B3_2КолодкаОКпр2_син = false;
-            }
-            else
-            {
-                B3_2КолодкаОКпр2_син.BackgroundImage = ControlElementImages.jumperType2;
-                B3_2Parameters.B3_2КолодкаОКпр2_син = true;
-                B3_2КолодкаОКпр2_ас.BackgroundImage = null;
-                B3_2Parameters.B3_2КолодкаОКпр2_ас = false;
-            }
+            B3_2Parameters.КолодкаТлГпр11 = !B3_2Parameters.КолодкаТлГпр11;
         }
 
-        private void B3_2КолодкаОКпр2_ас_Click(object sender, System.EventArgs e)
+        private void КолодкаТЛГпр1_2_Click(object sender, System.EventArgs e)
         {
-            if (B3_2Parameters.B3_2КолодкаОКпр2_ас)
-            {
-                B3_2КолодкаОКпр2_ас.BackgroundImage = null;
-                B3_2Parameters.B3_2КолодкаОКпр2_ас = false;
-            }
-            else
-            {
-                B3_2КолодкаОКпр2_ас.BackgroundImage = ControlElementImages.jumperType2;
-                B3_2Parameters.B3_2КолодкаОКпр2_ас = true;
-                B3_2КолодкаОКпр2_син.BackgroundImage = null;
-                B3_2Parameters.B3_2КолодкаОКпр2_син = false;
-            }
+            B3_2Parameters.КолодкаТлГпр12 = !B3_2Parameters.КолодкаТлГпр12;
+        }
+
+        private void КолодкаТЛГпр2_1_Click(object sender, System.EventArgs e)
+        {
+            B3_2Parameters.КолодкаТлГпр21 = !B3_2Parameters.КолодкаТлГпр21;
+        }
+        private void КолодкаТЛГпр2_2_Click(object sender, System.EventArgs e)
+        {
+            B3_2Parameters.КолодкаТлГпр22 = !B3_2Parameters.КолодкаТлГпр22;
+        }
+
+        private void КолодкаТЛГпр3_1_Click(object sender, System.EventArgs e)
+        {
+            B3_2Parameters.КолодкаТлГпр31 = !B3_2Parameters.КолодкаТлГпр31;
+        }
+
+        private void КолодкаТЛГпр3_2_Click(object sender, System.EventArgs e)
+        {
+            B3_2Parameters.КолодкаТлГпр32 = !B3_2Parameters.КолодкаТлГпр32;
         }
         #endregion
 
-
-        #region ТЛГпр1 Колодки
-        private void B3_2КолодкаТЛГпр1_1_Click(object sender, System.EventArgs e)
+        private void ТумблерМуДу_Click(object sender, System.EventArgs e)
         {
-            if (B3_2Parameters.B3_2КолодкаТЛГпр1_1)
-            {
-                this.B3_2КолодкаТЛГпр1_1.BackgroundImage = null;
-                B3_2Parameters.B3_2КолодкаТЛГпр1_1 = false;
-                this.B3_2КолодкаТЛГпр1_2.Visible = true;
-            }
-            else
-            {
-                this.B3_2КолодкаТЛГпр1_1.BackgroundImage = ControlElementImages.jumperType1;
-                this.B3_2КолодкаТЛГпр1_2.Visible = false;
-                B3_2Parameters.B3_2КолодкаТЛГпр1_1 = true;
-                this.B3_2КолодкаТЛГпр1_2.BackgroundImage = null;
-                B3_2Parameters.B3_2КолодкаТЛГпр1_2 = false;
-            }
+            B3_2Parameters.ТумблерМуДу = !B3_2Parameters.ТумблерМуДу;
         }
 
-        private void B3_2КолодкаТЛГпр1_2_Click(object sender, System.EventArgs e)
+        public void RefreshFormElements()
         {
-            if (B3_2Parameters.B3_2КолодкаТЛГпр1_2)
+            foreach (Control item in Panel.Controls)
             {
-                this.B3_2КолодкаТЛГпр1_1.Visible = true;
-                this.B3_2КолодкаТЛГпр1_2.BackgroundImage = null;
-                B3_2Parameters.B3_2КолодкаТЛГпр1_2 = false;
-            }
-            else
-            {
-                this.B3_2КолодкаТЛГпр1_2.BackgroundImage = ControlElementImages.jumperType1;
-                this.B3_2КолодкаТЛГпр1_1.Visible = false;
-                B3_2Parameters.B3_2КолодкаТЛГпр1_2 = true;
-                this.B3_2КолодкаТЛГпр1_1.BackgroundImage = null;
-                B3_2Parameters.B3_2КолодкаТЛГпр1_1 = false;
-            }
-        }
-        #endregion
-
-        #region ТЛГпр2 Колодки
-        private void B3_2КолодкаТЛГпр2_1_Click(object sender, System.EventArgs e)
-        {
-            if (B3_2Parameters.B3_2КолодкаТЛГпр2_1)
-            {
-                this.B3_2КолодкаТЛГпр2_2.Visible = true;
-                this.B3_2КолодкаТЛГпр2_1.BackgroundImage = null;
-                B3_2Parameters.B3_2КолодкаТЛГпр2_1 = false;
-            }
-            else
-            {
-                this.B3_2КолодкаТЛГпр2_1.BackgroundImage = ControlElementImages.jumperType1;
-                this.B3_2КолодкаТЛГпр2_2.Visible = false;
-                B3_2Parameters.B3_2КолодкаТЛГпр2_1 = true;
-                this.B3_2КолодкаТЛГпр2_2.BackgroundImage = null;
-                B3_2Parameters.B3_2КолодкаТЛГпр2_2 = false;
-            }
-        }
-        private void B3_2КолодкаТЛГпр2_2_Click(object sender, System.EventArgs e)
-        {
-            if (B3_2Parameters.B3_2КолодкаТЛГпр2_2)
-            {
-                this.B3_2КолодкаТЛГпр2_1.Visible = true;
-                this.B3_2КолодкаТЛГпр2_2.BackgroundImage = null;
-                B3_2Parameters.B3_2КолодкаТЛГпр2_2 = false;
-            }
-            else
-            {
-                this.B3_2КолодкаТЛГпр2_2.BackgroundImage = ControlElementImages.jumperType1;
-                this.B3_2КолодкаТЛГпр2_1.Visible = false;
-                B3_2Parameters.B3_2КолодкаТЛГпр2_2 = true;
-                this.B3_2КолодкаТЛГпр2_1.BackgroundImage = null;
-                B3_2Parameters.B3_2КолодкаТЛГпр2_1 = false;
-            }
-        }
-        #endregion
-
-        #region ТЛГпр3 Колодки
-        private void B3_2КолодкаТЛГпр3_1_Click(object sender, System.EventArgs e)
-        {
-            if (B3_2Parameters.B3_2КолодкаТЛГпр3_1)
-            {
-                this.B3_2КолодкаТЛГпр3_2.Visible = true;
-                this.B3_2КолодкаТЛГпр3_1.BackgroundImage = null;
-                B3_2Parameters.B3_2КолодкаТЛГпр3_1 = false;
-            }
-            else
-            {
-                this.B3_2КолодкаТЛГпр3_1.BackgroundImage = ControlElementImages.jumperType1;
-                this.B3_2КолодкаТЛГпр3_2.Visible = false;
-                B3_2Parameters.B3_2КолодкаТЛГпр3_1 = true;
-                this.B3_2КолодкаТЛГпр3_2.BackgroundImage = null;
-                B3_2Parameters.B3_2КолодкаТЛГпр3_2 = false;
-            }
-        }
-
-        private void B3_2КолодкаТЛГпр3_2_Click(object sender, System.EventArgs e)
-        {
-            if (B3_2Parameters.B3_2КолодкаТЛГпр3_2)
-            {
-                this.B3_2КолодкаТЛГпр3_1.Visible = true;
-                this.B3_2КолодкаТЛГпр3_2.BackgroundImage = null;
-                B3_2Parameters.B3_2КолодкаТЛГпр3_2 = false;
-            }
-            else
-            {
-                this.B3_2КолодкаТЛГпр3_2.BackgroundImage = ControlElementImages.jumperType1;
-                this.B3_2КолодкаТЛГпр3_1.Visible = false;
-                B3_2Parameters.B3_2КолодкаТЛГпр3_2 = true;
-                this.B3_2КолодкаТЛГпр3_1.BackgroundImage = null;
-                B3_2Parameters.B3_2КолодкаТЛГпр3_1 = false;
-            }
-        }
-        #endregion
-
-        private void B3_2ТумблерМуДу_Click(object sender, System.EventArgs e)
-        {
-            if (B3_2Parameters.B3_2ТумблерМуДу == "Му")
-            {
-                this.B3_2ТумблерМуДу.BackgroundImage = ControlElementImages.tumblerType4Down;
-                B3_2Parameters.B3_2ТумблерМуДу = "Ду";
-            }
-            else
-            {
-                this.B3_2ТумблерМуДу.BackgroundImage = ControlElementImages.tumblerType4Up;
-                B3_2Parameters.B3_2ТумблерМуДу = "Му";
-            }
-        }
-
-        private void InitializeButtonsPosition()
-        {
-            foreach (Control item in B3_2Panel.Controls)
-            {
-                if (item.Name.Contains("B3_2КолодкаУКК1"))
-                    item.BackgroundImage = (item.Name.Contains("B3_2КолодкаУКК1_" + B3_2Parameters.B3_2КолодкаУКК1))
+                if (item.Name.Contains("КолодкаУКК1"))
+                    item.BackgroundImage = (item.Name.Contains("КолодкаУКК1_" + B3_2Parameters.КолодкаУКК1))
                     ? ControlElementImages.jumperType2
                     : null;
 
-                if (item.Name.Contains("B3_2КолодкаУКК2"))
-                    item.BackgroundImage = (item.Name.Contains("B3_2КолодкаУКК2_" + B3_2Parameters.B3_2КолодкаУКК2))
+                if (item.Name.Contains("КолодкаУКК2"))
+                    item.BackgroundImage = (item.Name.Contains("КолодкаУКК2_" + B3_2Parameters.КолодкаУКК2))
                     ? ControlElementImages.jumperType2
                     : null;
 
-                if (item.Name.Contains("B3_2КолодкаКРПР"))
-                    item.BackgroundImage = (item.Name.Contains("B3_2КолодкаКРПР_" + B3_2Parameters.B3_2КолодкаКРПР))
+                if (item.Name.Contains("КолодкаКРПР"))
+                    item.BackgroundImage = (item.Name.Contains("КолодкаКРПР_" + B3_2Parameters.КолодкаКРПР))
                     ? ControlElementImages.jumperType2
                     : null;
+
+                if (!item.Name.Contains("Лампочка")) continue;
+                var propertiesList = typeof(B3_2Parameters).GetProperties();
+                foreach (var prop in propertiesList.Where(field => item.Name == field.Name))
+                {
+                    if (item.Name.Contains("ЛампочкаПУЛГ_2") ||
+                        item.Name.Contains("ЛампочкаРС_синхр") ||
+                        item.Name.Contains("ЛампочкаПФТК1_2") ||
+                        item.Name.Contains("ЛампочкаПФТК2_2") ||
+                        item.Name.Contains("ЛампочкаВУП1"))
+                        item.BackgroundImage = (bool)prop.GetValue(null)
+                            ? ControlElementImages.lampType3OnRed
+                            : null;
+                    else if (item.Name.Contains("ЛампочкаТЛГпр"))
+                        item.BackgroundImage = (bool)prop.GetValue(null)
+                            ? ControlElementImages.lampType4OnRed
+                            : null;
+                    else
+                        item.BackgroundImage = (bool)prop.GetValue(null)
+                            ? ControlElementImages.lampType2OnRed
+                            : null;
+                    break;
+                }
             }
 
-            if (B3_2Parameters.B3_2КолодкаОКпр1_син)
-                B3_2КолодкаОКпр1_син.BackgroundImage = ControlElementImages.jumperType2;
-            else if (B3_2Parameters.B3_2КолодкаОКпр1_ас)
-                B3_2КолодкаОКпр1_син.BackgroundImage = ControlElementImages.jumperType2;
+            КолодкаОКпр1Син.BackgroundImage = B3_2Parameters.КолодкаОКпр1Син ? ControlElementImages.jumperType2 : null;
+            КолодкаОКпр2Син.BackgroundImage = B3_2Parameters.КолодкаОКпр2Син ? ControlElementImages.jumperType2 : null;
+            КолодкаОКпр1Ас.BackgroundImage = B3_2Parameters.КолодкаОКпр1Ас ? ControlElementImages.jumperType2 : null;
+            КолодкаОКпр2Ас.BackgroundImage = B3_2Parameters.КолодкаОКпр2Ас ? ControlElementImages.jumperType2 : null;
 
-            if (B3_2Parameters.B3_2КолодкаОКпр2_син)
-                B3_2КолодкаОКпр2_син.BackgroundImage = ControlElementImages.jumperType2;
-            else if (B3_2Parameters.B3_2КолодкаОКпр2_ас)
-                B3_2КолодкаОКпр2_син.BackgroundImage = ControlElementImages.jumperType2;
+            КолодкаТЛГпр11.BackgroundImage = B3_2Parameters.КолодкаТлГпр11 ? ControlElementImages.jumperType1 : null;
+            КолодкаТЛГпр12.BackgroundImage = B3_2Parameters.КолодкаТлГпр12 ? ControlElementImages.jumperType1 : null;
+            КолодкаТЛГпр21.BackgroundImage = B3_2Parameters.КолодкаТлГпр21 ? ControlElementImages.jumperType1 : null;
+            КолодкаТЛГпр22.BackgroundImage = B3_2Parameters.КолодкаТлГпр22 ? ControlElementImages.jumperType1 : null;
+            КолодкаТЛГпр31.BackgroundImage = B3_2Parameters.КолодкаТлГпр31 ? ControlElementImages.jumperType1 : null;
+            КолодкаТЛГпр32.BackgroundImage = B3_2Parameters.КолодкаТлГпр32 ? ControlElementImages.jumperType1 : null;
 
+            КолодкаТЛГпр11.Visible = !B3_2Parameters.КолодкаТлГпр12;
+            КолодкаТЛГпр12.Visible = !B3_2Parameters.КолодкаТлГпр11;
+            КолодкаТЛГпр21.Visible = !B3_2Parameters.КолодкаТлГпр22;
+            КолодкаТЛГпр22.Visible = !B3_2Parameters.КолодкаТлГпр21;
+            КолодкаТЛГпр31.Visible = !B3_2Parameters.КолодкаТлГпр32;
+            КолодкаТЛГпр32.Visible = !B3_2Parameters.КолодкаТлГпр31;
 
-            if (B3_2Parameters.B3_2КолодкаТЛГпр1_1)
-            {
-                this.B3_2КолодкаТЛГпр1_1.BackgroundImage = ControlElementImages.jumperType1;
-                this.B3_2КолодкаТЛГпр1_2.Visible = false;
-            }
-            else if (B3_2Parameters.B3_2КолодкаТЛГпр1_2)
-            {
-                this.B3_2КолодкаТЛГпр1_2.BackgroundImage = ControlElementImages.jumperType1;
-                this.B3_2КолодкаТЛГпр1_1.Visible = false;
-            }
-
-            if (B3_2Parameters.B3_2КолодкаТЛГпр2_1)
-            {
-                this.B3_2КолодкаТЛГпр2_1.BackgroundImage = ControlElementImages.jumperType1;
-                this.B3_2КолодкаТЛГпр2_2.Visible = false;
-            }
-            else if (B3_2Parameters.B3_2КолодкаТЛГпр2_2)
-            {
-                this.B3_2КолодкаТЛГпр2_2.BackgroundImage = ControlElementImages.jumperType1;
-                this.B3_2КолодкаТЛГпр2_1.Visible = false;
-            }
-
-            if (B3_2Parameters.B3_2КолодкаТЛГпр3_1)
-            {
-                this.B3_2КолодкаТЛГпр3_1.BackgroundImage = ControlElementImages.jumperType1;
-                this.B3_2КолодкаТЛГпр3_2.Visible = false;
-            }
-            else if (B3_2Parameters.B3_2КолодкаТЛГпр3_2)
-            {
-                this.B3_2КолодкаТЛГпр3_2.BackgroundImage = ControlElementImages.jumperType1;
-                this.B3_2КолодкаТЛГпр3_1.Visible = false;
-            }
+            this.ТумблерМуДу.BackgroundImage = B3_2Parameters.ТумблерМуДу
+                ? ControlElementImages.tumblerType4Up
+                : ControlElementImages.tumblerType4Down;
         }
-
-        private void InitializeTumblersPosition()
-        {
-            this.B3_2ТумблерМуДу.BackgroundImage = B3_2Parameters.B3_2ТумблерМуДу == "Ду"
-                ? ControlElementImages.tumblerType4Down
-                : ControlElementImages.tumblerType4Up;
-        }
-
     }
 }

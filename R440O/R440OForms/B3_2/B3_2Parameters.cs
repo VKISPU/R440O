@@ -1,11 +1,11 @@
-﻿namespace R440O.R440OForms.B3_1
+﻿namespace R440O.R440OForms.B3_2
 {
     using BaseClasses;
     using N15;
     using N15Inside;
     using N18_M;
 
-    class B3_1Parameters
+    class B3_2Parameters
     {
         #region Работа блока
         public static bool Включен
@@ -13,7 +13,7 @@
             get
             {
                 return (N15Parameters.ЛампочкаП220272 || N15Parameters.ЛампочкаП220273) &&
-                       (ТумблерМуДу || !ТумблерМуДу && N15Parameters.ТумблерБ3_1);
+                       (ТумблерМуДу || !ТумблерМуДу && N15Parameters.ТумблерБ3_2);
             }
         }
 
@@ -23,7 +23,7 @@
             {
                 if (Включен &&
                     N15InsideParameters.ВыходПриемногоТракта != null &&
-                    N18_MParameters.ПереключательПРМ1 == 1 &&
+                    N18_MParameters.ПереключательПРМ2 == 1 &&
                     ПравильнаяКолодка(N15InsideParameters.ВыходПриемногоТракта.GroupSpeed))
                     return N15InsideParameters.ВыходПриемногоТракта;
                 return null;
@@ -81,8 +81,11 @@
 
         public static bool ЛампочкаПУЛГ_2
         {
-            get { return Включен && N15InsideParameters.Включен && N18_MParameters.ПереключательПРМ1 == 1
-                && КолодкаКРПР != 5; }
+            get
+            {
+                return Включен && N15InsideParameters.Включен && N18_MParameters.ПереключательПРМ1 == 1
+                    && КолодкаКРПР != 5;
+            }
         }
 
         public static bool ЛампочкаПРИавар

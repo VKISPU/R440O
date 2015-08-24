@@ -20,12 +20,12 @@
             RefreshFormElements();
         }
 
-        #region Колодки УКК1 и УКК2
-        private void B3_1КолодкаУКК_Click(object sender, EventArgs e)
+        #region Колодки УКК
+        private void КолодкаУКК_Click(object sender, EventArgs e)
         {
             var button = sender as Button;
-            var numberOfButton = (int)Char.GetNumericValue(button.Name[16]);
-            var numberOfComplect = button.Name[14];
+            var numberOfButton = (int)Char.GetNumericValue(button.Name[12]);
+            var numberOfComplect = button.Name[10];
 
             var property = typeof(B3_1Parameters).GetProperty("КолодкаУКК" + numberOfComplect);
             var value = (int)property.GetValue(null);
@@ -34,10 +34,10 @@
         #endregion 
 
         #region Колодки КРПР
-        private void B3_1КолодкаКРПР_Click(object sender, EventArgs e)
+        private void КолодкаКРПР_Click(object sender, EventArgs e)
         {
             var button = sender as Button;
-            var numberOfButton = (int)Char.GetNumericValue(button.Name[16]);
+            var numberOfButton = (int)Char.GetNumericValue(button.Name[11]);
 
             var property = typeof(B3_1Parameters).GetProperty("КолодкаКРПР");
             var value = (int)property.GetValue(null);
@@ -45,115 +45,60 @@
         }
         #endregion
 
-        #region ОКпр1 Колодки
-        private void B3_1КолодкаОКпр1_син_Click(object sender, System.EventArgs e)
+        #region ОКпр Колодки
+        private void КолодкаОКпр1_син_Click(object sender, System.EventArgs e)
         {
             B3_1Parameters.КолодкаОКпр1Син = !B3_1Parameters.КолодкаОКпр1Син;
         }
 
-        private void B3_1КолодкаОКпр1_ас_Click(object sender, System.EventArgs e)
+        private void КолодкаОКпр1_ас_Click(object sender, System.EventArgs e)
         {
             B3_1Parameters.КолодкаОКпр1Ас = !B3_1Parameters.КолодкаОКпр1Ас;
         }
-        #endregion
 
-        #region ОКпр2 Колодки
-        private void B3_1КолодкаОКпр2_син_Click(object sender, System.EventArgs e)
+        private void КолодкаОКпр2_син_Click(object sender, System.EventArgs e)
         {
             B3_1Parameters.КолодкаОКпр2Син = !B3_1Parameters.КолодкаОКпр2Син;
         }
 
-        private void B3_1КолодкаОКпр2_ас_Click(object sender, System.EventArgs e)
+        private void КолодкаОКпр2_ас_Click(object sender, System.EventArgs e)
         {
             B3_1Parameters.КолодкаОКпр2Ас = !B3_1Parameters.КолодкаОКпр2Ас;
         }
         #endregion
 
-
-        #region ТЛГпр1 Колодки
-        private void B3_1КолодкаТЛГпр1_1_Click(object sender, System.EventArgs e)
+        #region ТЛГпр Колодки
+        private void КолодкаТЛГпр1_1_Click(object sender, System.EventArgs e)
         {
-            if (B3_1Parameters.КолодкаТлГпр11)
-            {
-                B3_1Parameters.КолодкаТлГпр11 = false;
-            }
-            else
-            {
-                B3_1Parameters.КолодкаТлГпр11 = true;
-                B3_1Parameters.КолодкаТлГпр12 = false;
-            }
+            B3_1Parameters.КолодкаТлГпр11 = !B3_1Parameters.КолодкаТлГпр11;
         }
 
-        private void B3_1КолодкаТЛГпр1_2_Click(object sender, System.EventArgs e)
+        private void КолодкаТЛГпр1_2_Click(object sender, System.EventArgs e)
         {
-            if (B3_1Parameters.КолодкаТлГпр12)
-            {
-                B3_1Parameters.КолодкаТлГпр12 = false;
-            }
-            else
-            {
-                B3_1Parameters.КолодкаТлГпр12 = true;
-                B3_1Parameters.КолодкаТлГпр11 = false;
-            }
+            B3_1Parameters.КолодкаТлГпр12 = !B3_1Parameters.КолодкаТлГпр12;
         }
-        #endregion
+        
+        private void КолодкаТЛГпр2_1_Click(object sender, System.EventArgs e)
+        {
+            B3_1Parameters.КолодкаТлГпр21 = !B3_1Parameters.КолодкаТлГпр21;
+        }
+        private void КолодкаТЛГпр2_2_Click(object sender, System.EventArgs e)
+        {
+            B3_1Parameters.КолодкаТлГпр22 = !B3_1Parameters.КолодкаТлГпр22;
+        }
 
-        #region ТЛГпр2 Колодки
-        private void B3_1КолодкаТЛГпр2_1_Click(object sender, System.EventArgs e)
+        private void КолодкаТЛГпр3_1_Click(object sender, System.EventArgs e)
         {
-            if (B3_1Parameters.КолодкаТлГпр21)
-            {
-                B3_1Parameters.КолодкаТлГпр21 = false;
-            }
-            else
-            {
-                B3_1Parameters.КолодкаТлГпр21 = true;
-                B3_1Parameters.КолодкаТлГпр22 = false;
-            }
+            B3_1Parameters.КолодкаТлГпр31 = !B3_1Parameters.КолодкаТлГпр31;
         }
-        private void B3_1КолодкаТЛГпр2_2_Click(object sender, System.EventArgs e)
+
+        private void КолодкаТЛГпр3_2_Click(object sender, System.EventArgs e)
         {
-            if (B3_1Parameters.КолодкаТлГпр22)
-            {
-                B3_1Parameters.КолодкаТлГпр22 = false;
-            }
-            else
-            {
-                B3_1Parameters.КолодкаТлГпр22 = true;
-                B3_1Parameters.КолодкаТлГпр21 = false;
-            }
+            B3_1Parameters.КолодкаТлГпр32 = !B3_1Parameters.КолодкаТлГпр32;
         }
         #endregion
 
-        #region ТЛГпр3 Колодки
-        private void B3_1КолодкаТЛГпр3_1_Click(object sender, System.EventArgs e)
-        {
-            if (B3_1Parameters.КолодкаТлГпр31)
-            {
-                B3_1Parameters.КолодкаТлГпр31 = false;
-            }
-            else
-            {
-                B3_1Parameters.КолодкаТлГпр31 = true;
-                B3_1Parameters.КолодкаТлГпр32 = false;
-            }
-        }
-
-        private void B3_1КолодкаТЛГпр3_2_Click(object sender, System.EventArgs e)
-        {
-            if (B3_1Parameters.КолодкаТлГпр32)
-            {
-                B3_1Parameters.КолодкаТлГпр32 = false;
-            }
-            else
-            {
-                B3_1Parameters.КолодкаТлГпр32 = true;
-                B3_1Parameters.КолодкаТлГпр31 = false;
-            }
-        }
-        #endregion
-
-        private void B3_1ТумблерМуДу_Click(object sender, System.EventArgs e)
+        private void ТумблерМуДу_Click(object sender, System.EventArgs e)
         {
             B3_1Parameters.ТумблерМуДу = !B3_1Parameters.ТумблерМуДу;
         }
@@ -179,7 +124,7 @@
 
                 if (!item.Name.Contains("Лампочка")) continue;
                 var propertiesList = typeof(B3_1Parameters).GetProperties();
-                foreach (var prop in propertiesList.Where(field => item.Name == "B3_1" + field.Name))
+                foreach (var prop in propertiesList.Where(field => item.Name == field.Name))
                 {
                     if (item.Name.Contains("ЛампочкаПУЛГ_2") ||
                         item.Name.Contains("ЛампочкаРС_синхр") ||
