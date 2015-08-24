@@ -1,11 +1,12 @@
 ﻿using R440O.R440OForms.B3_1;
+using R440O.R440OForms.B3_2;
 
-namespace R440O.R440OForms.B2_1
+namespace R440O.R440OForms.B2_2
 {
     using N15;
     using BaseClasses;
 
-    static class B2_1Parameters
+    static class B2_2Parameters
     {
         #region Работа блока
         public static bool Включен
@@ -13,7 +14,7 @@ namespace R440O.R440OForms.B2_1
             get
             {
                 return (N15Parameters.ЛампочкаП220272 || N15Parameters.ЛампочкаП220273) &&
-                       (ТумблерМуДу || !ТумблерМуДу && N15Parameters.ТумблерБ2_1);
+                       (ТумблерМуДу || !ТумблерМуДу && N15Parameters.ТумблерБ2_2);
             }
         }
 
@@ -21,8 +22,8 @@ namespace R440O.R440OForms.B2_1
         {
             get
             {
-                if (Включен && B3_1Parameters.ВыходнойСигнал1 != null)
-                    return B3_1Parameters.ВыходнойСигнал1;
+                if (Включен && B3_2Parameters.ВыходнойСигнал1 != null)
+                    return B3_2Parameters.ВыходнойСигнал1;
                 return null;
             }
         }
@@ -71,8 +72,8 @@ namespace R440O.R440OForms.B2_1
             get
             {
                 if (Включен && ВходнойСигнал != null)
-                    return (ВходнойСигнал.Synchronization && B3_1Parameters.КолодкаОКпр1Син) ||
-                           (!ВходнойСигнал.Synchronization && B3_1Parameters.КолодкаОКпр1Ас);
+                    return (ВходнойСигнал.Synchronization && B3_2Parameters.КолодкаОКпр1Син) ||
+                           (!ВходнойСигнал.Synchronization && B3_2Parameters.КолодкаОКпр1Ас);
                 return false;
             }
         }
@@ -98,7 +99,7 @@ namespace R440O.R440OForms.B2_1
             get
             {
                 return Включен &&
-                       (ЛампочкаПрРПрС_Авар || 
+                       (ЛампочкаПрРПрС_Авар ||
                        (ЛампочкаПрРПрС_1 || ВыходнойСигнал1.SelectedGroupElements.Count == 0));
             }
         }
@@ -133,7 +134,7 @@ namespace R440O.R440OForms.B2_1
         private static int _кнопкаБК1;
         private static int _кнопкаБК2;
         private static bool _тумблерМуДу;
-        
+
         public static int КнопкаБК1
         {
             get { return _кнопкаБК1; }
@@ -183,7 +184,7 @@ namespace R440O.R440OForms.B2_1
             set
             {
                 if (value) _колодкаТлГпр2 = false;
-                _колодкаТлГпр1 = value; 
+                _колодкаТлГпр1 = value;
                 OnParameterChanged();
             }
         }

@@ -44,56 +44,24 @@
 
         #region Колодки
         private void КолодкаТЛГпр_1_Click(object sender,  EventArgs e)
-        {                                                     
-            if (B2_1Parameters.КолодкаТЛГпр1 == false)        
-            {                                                 
-                B2_1Parameters.КолодкаТЛГпр1 = true;          
-                B2_1Parameters.КолодкаТЛГпр2 = false;         
-            }                                                 
-            else                                              
-            {                                                 
-                B2_1Parameters.КолодкаТЛГпр1 = false;         
-            }                                                 
+        {
+            B2_1Parameters.КолодкаТЛГпр1 = !B2_1Parameters.КолодкаТЛГпр1;                                     
         }                                                     
                                                               
         private void КолодкаТЛГпр_2_Click(object sender,  EventArgs e)
-        {                                                     
-            if (B2_1Parameters.КолодкаТЛГпр2 == false)        
-            {                                                 
-                B2_1Parameters.КолодкаТЛГпр2 = true;          
-                B2_1Parameters.КолодкаТЛГпр1 = false;         
-            }                                                 
-            else                                              
-            {                                                 
-                B2_1Parameters.КолодкаТЛГпр2 = false;         
-            }                                                 
+        {
+            B2_1Parameters.КолодкаТЛГпр2 = !B2_1Parameters.КолодкаТЛГпр2;                                                 
         }                                                     
                                                               
                                                               
         private void КолодкаТКСпр2_1_Click(object sender, EventArgs e)
-        {                                                     
-            if (B2_1Parameters.КолодкаТКСпр21 == false)       
-            {                                                 
-                B2_1Parameters.КолодкаТКСпр21 = true;         
-                B2_1Parameters.КолодкаТКСпр22 = false;        
-            }                                                 
-            else                                              
-            {                                                 
-                B2_1Parameters.КолодкаТКСпр21 = false;        
-            }                                                 
+        {
+            B2_1Parameters.КолодкаТКСпр21 = !B2_1Parameters.КолодкаТКСпр21;
         }                                                     
                                                               
         private void КолодкаТКСпр2_2_Click(object sender, EventArgs e)
         {
-            if (B2_1Parameters.КолодкаТКСпр22 == false)
-            {
-                B2_1Parameters.КолодкаТКСпр22 = true;
-                B2_1Parameters.КолодкаТКСпр21 = false;
-            }
-            else
-            {
-                B2_1Parameters.КолодкаТКСпр22 = false;
-            }
+            B2_1Parameters.КолодкаТКСпр22 = !B2_1Parameters.КолодкаТКСпр22;
         }
         #endregion
 

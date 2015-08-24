@@ -1,22 +1,14 @@
-﻿//-----------------------------------------------------------------------
-// <copyright file="B2_2Form.cs" company="VKISPU">
-//      R440O station.
-// </copyright>
-//-----------------------------------------------------------------------
-
-using System;
-using System.Linq;
-using System.Reflection;
-
-namespace R440O.R440OForms.B2_2
+﻿namespace R440O.R440OForms.B2_2
 {
+    using System;
+    using System.Linq;
     using System.Windows.Forms;
-    using Parameters;
+    using BaseClasses;
 
     /// <summary>
     /// Форма блока Б2-1
     /// </summary>
-    public partial class B2_2Form : Form
+    public partial class B2_2Form : Form, IRefreshableForm
     {
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="B2_2Form"/>.
@@ -24,197 +16,112 @@ namespace R440O.R440OForms.B2_2
         public B2_2Form()
         {
             this.InitializeComponent();
-            this.InitializeTumblersPosition();
-            this.InitializeButtonsPosition();
-        }
-
-        private void B2_2ТумблерМуДу_Click(object sender, System.EventArgs e)
-        {
-            if (B2_2Parameters.B2_2ТумблерМуДу == "Му")
-            {
-                this.B2_2ТумблерМуДу.BackgroundImage = ControlElementImages.tumblerType4Down;
-                B2_2Parameters.B2_2ТумблерМуДу = "Ду";
-            }
-            else
-            {
-                this.B2_2ТумблерМуДу.BackgroundImage = ControlElementImages.tumblerType4Up;
-                B2_2Parameters.B2_2ТумблерМуДу = "Му";
-            }
+            B2_2Parameters.ParameterChanged += RefreshFormElements;
+            RefreshFormElements();
         }
 
         #region Кнопки
+
+        private void ТумблерМуДу_Click(object sender, EventArgs e)
+        {
+            B2_2Parameters.ТумблерМуДу = !B2_2Parameters.ТумблерМуДу;
+        }
+
         /// <summary>
         /// Универсальный метод обработки нажатий на кнопки данного блока
         /// </summary>
-        private void B2_2КнопкаБК_Click(object sender, System.EventArgs e)
+        private void КнопкаБК_Click(object sender, System.EventArgs e)
         {
             var button = sender as Button;
-            //Т.к имена кнопок практически одинаковы, получим 2 числа которые меняются в названиях
-            char numberOfComplect = button.Name[12];
-            char numberOfButton = button.Name[14];
+            var numberOfComplect = Convert.ToInt32(button.Name[8].ToString());
+            var numberOfButton = Convert.ToInt32(button.Name[9].ToString());
 
-            //Получим список get set полей из класса параметров
-            PropertyInfo[] PropertyList = typeof(B2_2Parameters).GetProperties();
+            if (numberOfComplect == 1) B2_2Parameters.КнопкаБК1 = numberOfButton;
+            else B2_2Parameters.КнопкаБК2 = numberOfButton;
 
-            //Переберём список контролов
-            foreach (Control item in B2_2Panel.Controls)
-            {
-                //С помощью условия отсеем все контролы кроме тех, которые являются кнопками и содержат в имени один из номеров(1-2 столбик) 
-                if (item.Name.Contains("B2_2КнопкаБК" + numberOfComplect))
-                {
-                    //Отжимаем кнопку если она нажата
-                    if (item.Visible == false) item.Visible = true;
-                    //Остановимся на контроле, который отвечает за кнопку которую мы нажали
-                    if (item.Name.Contains("B2_2КнопкаБК" + numberOfComplect + "_" + numberOfButton))
-                    {
-                        //Пройдемся лишь по тем полям класса параметров, которые относятся к нужной категории
-                        foreach (PropertyInfo Property in
-                            PropertyList.Where(Property => Property.Name.Contains("B2_2КнопкаБК" + numberOfComplect)))
-                        {
-                            //Если параметр и нажатая нами клавиша совпадают, то делаем анимацию нажатия, 
-                            //и присваиваем полю значение true/ Иначе присваиваем значение false.
-                            if (Property.Name == item.Name)
-                            {
-                                item.Visible = false;
-                                Property.SetValue(null, true);
-                            }
-                            else Property.SetValue(null, false);
-                        }
-                    }
-                }
-            }
         }
         #endregion Кнопки
 
         #region Колодки
-        private void B2_2КолодкаТЛГпр_1_Click(object sender, System.EventArgs e)
+        private void КолодкаТЛГпр_1_Click(object sender, EventArgs e)
         {
-            if (B2_2Parameters.B2_2КолодкаТЛГпр_1 == false)
-            {
-                this.B2_2КолодкаТЛГпр_1.BackgroundImage = ControlElementImages.jumperType1;
-                this.B2_2КолодкаТЛГпр_2.Visible = false;
-                B2_2Parameters.B2_2КолодкаТЛГпр_1 = true;
-                this.B2_2КолодкаТЛГпр_2.BackgroundImage = null;
-                B2_2Parameters.B2_2КолодкаТЛГпр_2 = false;
-            }
-            else
-            {
-                this.B2_2КолодкаТЛГпр_1.BackgroundImage = null;
-                B2_2Parameters.B2_2КолодкаТЛГпр_1 = false;
-                this.B2_2КолодкаТЛГпр_2.Visible = true;
-            }
+            B2_2Parameters.КолодкаТЛГпр1 = !B2_2Parameters.КолодкаТЛГпр1;
         }
 
-        private void B2_2КолодкаТЛГпр_2_Click(object sender, System.EventArgs e)
+        private void КолодкаТЛГпр_2_Click(object sender, EventArgs e)
         {
-            if (B2_2Parameters.B2_2КолодкаТЛГпр_2 == false)
-            {
-                this.B2_2КолодкаТЛГпр_2.BackgroundImage = ControlElementImages.jumperType1;
-                this.B2_2КолодкаТЛГпр_1.Visible = false;
-                B2_2Parameters.B2_2КолодкаТЛГпр_2 = true;
-                this.B2_2КолодкаТЛГпр_1.BackgroundImage = null;
-                B2_2Parameters.B2_2КолодкаТЛГпр_1 = false;
-            }
-            else
-            {
-                this.B2_2КолодкаТЛГпр_1.Visible = true;
-                this.B2_2КолодкаТЛГпр_2.BackgroundImage = null;
-                B2_2Parameters.B2_2КолодкаТЛГпр_2 = false;
-            }
+            B2_2Parameters.КолодкаТЛГпр2 = !B2_2Parameters.КолодкаТЛГпр2;
         }
 
 
-        private void B2_2КолодкаТКСпр2_1_Click(object sender, System.EventArgs e)
+        private void КолодкаТКСпр2_1_Click(object sender, EventArgs e)
         {
-            if (B2_2Parameters.B2_2КолодкаТКСпр2_1 == false)
-            {
-                this.B2_2КолодкаТКСпр2_1.BackgroundImage = ControlElementImages.jumperType1;
-                this.B2_2КолодкаТКСпр2_2.Visible = false;
-                B2_2Parameters.B2_2КолодкаТКСпр2_1 = true;
-                this.B2_2КолодкаТКСпр2_2.BackgroundImage = null;
-                B2_2Parameters.B2_2КолодкаТКСпр2_2 = false;
-            }
-            else
-            {
-                this.B2_2КолодкаТКСпр2_1.BackgroundImage = null;
-                B2_2Parameters.B2_2КолодкаТКСпр2_1 = false;
-                this.B2_2КолодкаТКСпр2_2.Visible = true;
-            }
+            B2_2Parameters.КолодкаТКСпр21 = !B2_2Parameters.КолодкаТКСпр21;
         }
 
-        private void B2_2КолодкаТКСпр2_2_Click(object sender, System.EventArgs e)
+        private void КолодкаТКСпр2_2_Click(object sender, EventArgs e)
         {
-            if (B2_2Parameters.B2_2КолодкаТКСпр2_2 == false)
-            {
-                this.B2_2КолодкаТКСпр2_2.BackgroundImage = ControlElementImages.jumperType1;
-                this.B2_2КолодкаТКСпр2_1.Visible = false;
-                B2_2Parameters.B2_2КолодкаТКСпр2_2 = true;
-                this.B2_2КолодкаТКСпр2_1.BackgroundImage = null;
-                B2_2Parameters.B2_2КолодкаТКСпр2_1 = false;
-            }
-            else
-            {
-                this.B2_2КолодкаТКСпр2_1.Visible = true;
-                this.B2_2КолодкаТКСпр2_2.BackgroundImage = null;
-                B2_2Parameters.B2_2КолодкаТКСпр2_2 = false;
-            }
+            B2_2Parameters.КолодкаТКСпр22 = !B2_2Parameters.КолодкаТКСпр22;
         }
         #endregion
 
         #region Инициализация
-        private void InitializeTumblersPosition()
+        public void RefreshFormElements()
         {
-            this.B2_2ТумблерМуДу.BackgroundImage = B2_2Parameters.B2_2ТумблерМуДу == "Ду"
-                ? ControlElementImages.tumblerType4Down
-                : ControlElementImages.tumblerType4Up;
-        }
 
-        private void InitializeButtonsPosition()
-        {
-            foreach (Control item in B2_2Panel.Controls)
+            this.ТумблерМуДу.BackgroundImage = B2_2Parameters.ТумблерМуДу
+                ? ControlElementImages.tumblerType4Up
+                : ControlElementImages.tumblerType4Down;
+
+            foreach (Control item in Panel.Controls)
             {
                 if (item.Name.Contains("Кнопка"))
                 {
-                    PropertyInfo[] fieldList = typeof(B2_2Parameters).GetProperties();
-                    foreach (PropertyInfo property in fieldList)
+                    item.BackgroundImage = ControlElementImages.buttonRectType1;
+                    var button = item as Button;
+                    var numberOfComplect = Convert.ToInt32(button.Name[8].ToString());
+                    var numberOfButton = Convert.ToInt32(button.Name[9].ToString());
+                    if (numberOfComplect == 1 && B2_2Parameters.КнопкаБК1 == numberOfButton ||
+                        numberOfComplect == 2 && B2_2Parameters.КнопкаБК2 == numberOfButton)
                     {
-                        if (item.Name == property.Name)
-                        {
-                            bool value = Convert.ToBoolean(property.GetValue(null));
-                            item.Visible = !value;
-                            break;
-                        }
+                        item.BackgroundImage = null;
                     }
+                }
+
+                if (!item.Name.Contains("Лампочка")) continue;
+                var propertiesList = typeof(B2_2Parameters).GetProperties();
+                foreach (var prop in propertiesList.Where(field => item.Name == field.Name))
+                {
+                    if (item.Name.Contains("ЛампочкаПУЛГ_2") ||
+                        item.Name.Contains("ЛампочкаПрРПрС_2") ||
+                        item.Name.Contains("ЛампочкаПрТС1_2") ||
+                        item.Name.Contains("ЛампочкаПрТС2_2") ||
+                        item.Name.Contains("ЛампочкаВУП_1"))
+                        item.BackgroundImage = (bool)prop.GetValue(null)
+                            ? ControlElementImages.lampType3OnRed
+                            : null;
+                    else if (item.Name.Contains("ЛампочкаТЛГпр") ||
+                             item.Name.Contains("ЛампочкаТКСпр2"))
+                        item.BackgroundImage = (bool)prop.GetValue(null)
+                            ? ControlElementImages.lampType4OnRed
+                            : null;
+                    else
+                        item.BackgroundImage = (bool)prop.GetValue(null)
+                            ? ControlElementImages.lampType2OnRed
+                            : null;
+                    break;
                 }
             }
 
-            if (B2_2Parameters.B2_2КолодкаТЛГпр_1 == true)
-            {
-                this.B2_2КолодкаТЛГпр_1.BackgroundImage = ControlElementImages.jumperType1;
-                this.B2_2КолодкаТЛГпр_2.Visible = false;
-                this.B2_2КолодкаТЛГпр_2.BackgroundImage = null;
-            }
-            else if (B2_2Parameters.B2_2КолодкаТЛГпр_2 == true)
-            {
-                this.B2_2КолодкаТЛГпр_2.BackgroundImage = ControlElementImages.jumperType1;
-                this.B2_2КолодкаТЛГпр_1.Visible = false;
-                this.B2_2КолодкаТЛГпр_1.BackgroundImage = null;
-            }
+            КолодкаТЛГпр_1.BackgroundImage = B2_2Parameters.КолодкаТЛГпр1 ? ControlElementImages.jumperType1 : null;
+            КолодкаТЛГпр_2.BackgroundImage = B2_2Parameters.КолодкаТЛГпр2 ? ControlElementImages.jumperType1 : null;
+            КолодкаТКСпр2_1.BackgroundImage = B2_2Parameters.КолодкаТКСпр21 ? ControlElementImages.jumperType1 : null;
+            КолодкаТКСпр2_2.BackgroundImage = B2_2Parameters.КолодкаТКСпр22 ? ControlElementImages.jumperType1 : null;
 
-
-            if (B2_2Parameters.B2_2КолодкаТКСпр2_1 == true)
-            {
-                this.B2_2КолодкаТКСпр2_1.BackgroundImage = ControlElementImages.jumperType1;
-                this.B2_2КолодкаТКСпр2_2.Visible = false;
-                this.B2_2КолодкаТКСпр2_2.BackgroundImage = null;
-            }
-            else if (B2_2Parameters.B2_2КолодкаТКСпр2_2 == true)
-            {
-                this.B2_2КолодкаТКСпр2_2.BackgroundImage = ControlElementImages.jumperType1;
-                this.B2_2КолодкаТКСпр2_1.Visible = false;
-                this.B2_2КолодкаТКСпр2_1.BackgroundImage = null;
-            }
-
+            КолодкаТЛГпр_1.Visible = !B2_2Parameters.КолодкаТЛГпр2;
+            КолодкаТЛГпр_2.Visible = !B2_2Parameters.КолодкаТЛГпр1;
+            КолодкаТКСпр2_1.Visible = !B2_2Parameters.КолодкаТКСпр22;
+            КолодкаТКСпр2_2.Visible = !B2_2Parameters.КолодкаТКСпр21;
         }
         #endregion
     }

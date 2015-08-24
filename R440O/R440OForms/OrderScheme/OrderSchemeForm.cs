@@ -1,4 +1,6 @@
-﻿namespace R440O.R440OForms.OrderScheme
+﻿using R440O.R440OForms.B3_2;
+
+namespace R440O.R440OForms.OrderScheme
 {
     using System.Windows.Forms;
     using C300M_1;
@@ -38,6 +40,10 @@
             B3_1Parameters.КолодкаКРПР = 2;
             B3_1Parameters.КолодкаОКпр1Ас = true;
             B3_1Parameters.КолодкаУКК1 = 9;
+
+            B3_2Parameters.КолодкаКРПР = 2;
+            B3_2Parameters.КолодкаОКпр1Ас = true;
+            B3_2Parameters.КолодкаУКК1 = 9;
         }
 
         private void InitializeParameters()

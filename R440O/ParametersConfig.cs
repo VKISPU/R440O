@@ -123,6 +123,9 @@ namespace R440O
             N15LocalParameters.локТумблерБ1_1 = true;
             N15LocalParameters.локТумблерБ2_1 = true;
             N15LocalParameters.локТумблерБ3_1 = true;
+            N15LocalParameters.локТумблерБ1_2 = true;
+            N15LocalParameters.локТумблерБ2_2 = true;
+            N15LocalParameters.локТумблерБ3_2 = true;
 
             #endregion
 
