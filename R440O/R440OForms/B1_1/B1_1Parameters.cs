@@ -227,6 +227,7 @@
             get { return _колодкаТлГпр11; }
             set
             {
+                if (value) _колодкаТлГпр12 = false;
                 _колодкаТлГпр11 = value; 
                 OnParameterChanged();
             }
@@ -237,6 +238,7 @@
             get { return _колодкаТлГпр12; }
             set
             {
+                if (value) _колодкаТлГпр11 = false;
                 _колодкаТлГпр12 = value;
                 OnParameterChanged();
             }
@@ -247,6 +249,7 @@
             get { return _колодкаТлГпр21; }
             set
             {
+                if (value) _колодкаТлГпр22 = false;
                 _колодкаТлГпр21 = value;
                 OnParameterChanged();
             }
@@ -257,6 +260,7 @@
             get { return _колодкаТлГпр22; }
             set
             {
+                if (value) _колодкаТлГпр21 = false;
                 _колодкаТлГпр22 = value;
                 OnParameterChanged();
             }
@@ -267,6 +271,7 @@
             get { return _колодкаТлГпр31; }
             set
             {
+                if (value) _колодкаТлГпр32 = false;
                 _колодкаТлГпр31 = value;
                 OnParameterChanged();
             }
@@ -277,6 +282,7 @@
             get { return _колодкаТлГпр32; }
             set
             {
+                if (value) _колодкаТлГпр31 = false;
                 _колодкаТлГпр32 = value;
                 OnParameterChanged();
             }

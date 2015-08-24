@@ -6,7 +6,7 @@ namespace R440O.R440OForms.B1_2
     using BaseClasses;
 
     /// <summary>
-    /// Форма блока Б1-1
+    /// Форма блока Б1-2
     /// </summary>
     public partial class B1_2Form : Form, IRefreshableForm
     {
@@ -34,86 +34,33 @@ namespace R440O.R440OForms.B1_2
 
         #endregion
 
-        #region ТЛГпр1 Колодки
+        #region ТЛГпр
         private void КолодкаТЛГпр1_1_Click(object sender, System.EventArgs e)
         {
-            if (B1_2Parameters.КолодкаТлГпр11)
-            {
-                B1_2Parameters.КолодкаТлГпр11 = false;
-            }
-            else
-            {
-                B1_2Parameters.КолодкаТлГпр11 = true;
-                B1_2Parameters.КолодкаТлГпр12 = false;
-            }
+            B1_2Parameters.КолодкаТлГпр11 = !B1_2Parameters.КолодкаТлГпр11;
         }
 
         private void КолодкаТЛГпр1_2_Click(object sender, System.EventArgs e)
         {
-            if (B1_2Parameters.КолодкаТлГпр12)
-            {
-                B1_2Parameters.КолодкаТлГпр12 = false;
-            }
-            else
-            {
-                B1_2Parameters.КолодкаТлГпр12 = true;
-                B1_2Parameters.КолодкаТлГпр11 = false;
-            }
+            B1_2Parameters.КолодкаТлГпр12 = !B1_2Parameters.КолодкаТлГпр11;
         }
-        #endregion
 
-        #region ТЛГпр2 Колодки
         private void КолодкаТЛГпр2_1_Click(object sender, System.EventArgs e)
         {
-            if (B1_2Parameters.КолодкаТлГпр21)
-            {
-                B1_2Parameters.КолодкаТлГпр21 = false;
-            }
-            else
-            {
-                B1_2Parameters.КолодкаТлГпр21 = true;
-                B1_2Parameters.КолодкаТлГпр22 = false;
-            }
+            B1_2Parameters.КолодкаТлГпр21 = !B1_2Parameters.КолодкаТлГпр21;
         }
         private void КолодкаТЛГпр2_2_Click(object sender, System.EventArgs e)
         {
-            if (B1_2Parameters.КолодкаТлГпр22)
-            {
-                B1_2Parameters.КолодкаТлГпр22 = false;
-            }
-            else
-            {
-                B1_2Parameters.КолодкаТлГпр22 = true;
-                B1_2Parameters.КолодкаТлГпр21 = false;
-            }
+            B1_2Parameters.КолодкаТлГпр22 = !B1_2Parameters.КолодкаТлГпр21;
         }
-        #endregion
-
-        #region ТЛГпр3 Колодки
         private void КолодкаТЛГпр3_1_Click(object sender, System.EventArgs e)
         {
-            if (B1_2Parameters.КолодкаТлГпр31)
-            {
-                B1_2Parameters.КолодкаТлГпр31 = false;
-            }
-            else
-            {
-                B1_2Parameters.КолодкаТлГпр31 = true;
-                B1_2Parameters.КолодкаТлГпр32 = false;
-            }
+            B1_2Parameters.КолодкаТлГпр31 = !B1_2Parameters.КолодкаТлГпр31;
         }
 
         private void КолодкаТЛГпр3_2_Click(object sender, System.EventArgs e)
         {
-            if (B1_2Parameters.КолодкаТлГпр32)
-            {
-                B1_2Parameters.КолодкаТлГпр32 = false;
-            }
-            else
-            {
-                B1_2Parameters.КолодкаТлГпр32 = true;
-                B1_2Parameters.КолодкаТлГпр31 = false;
-            }
+            B1_2Parameters.КолодкаТлГпр32 = !B1_2Parameters.КолодкаТлГпр32;
         }
         #endregion
 
@@ -166,44 +113,19 @@ namespace R440O.R440OForms.B1_2
                 ? null
                 : ControlElementImages.buttonRectType1;
 
-            if (B1_2Parameters.КолодкаТлГпр11)
-            {
-                this.КолодкаТЛГпр1_1.BackgroundImage = ControlElementImages.jumperType1;
-                this.КолодкаТЛГпр1_2.Visible = false;
-                this.КолодкаТЛГпр1_2.BackgroundImage = null;
-            }
-            else if (B1_2Parameters.КолодкаТлГпр12)
-            {
-                this.КолодкаТЛГпр1_2.BackgroundImage = ControlElementImages.jumperType1;
-                this.КолодкаТЛГпр1_1.Visible = false;
-                this.КолодкаТЛГпр1_1.BackgroundImage = null;
-            }
+            КолодкаТЛГпр1_1.BackgroundImage = B1_2Parameters.КолодкаТлГпр11 ? ControlElementImages.jumperType1 : null;
+            КолодкаТЛГпр1_2.BackgroundImage = B1_2Parameters.КолодкаТлГпр12 ? ControlElementImages.jumperType1 : null;
+            КолодкаТЛГпр2_1.BackgroundImage = B1_2Parameters.КолодкаТлГпр21 ? ControlElementImages.jumperType1 : null;
+            КолодкаТЛГпр2_2.BackgroundImage = B1_2Parameters.КолодкаТлГпр22 ? ControlElementImages.jumperType1 : null;
+            КолодкаТЛГпр3_1.BackgroundImage = B1_2Parameters.КолодкаТлГпр31 ? ControlElementImages.jumperType1 : null;
+            КолодкаТЛГпр3_2.BackgroundImage = B1_2Parameters.КолодкаТлГпр32 ? ControlElementImages.jumperType1 : null;
 
-            if (B1_2Parameters.КолодкаТлГпр21)
-            {
-                this.КолодкаТЛГпр2_1.BackgroundImage = ControlElementImages.jumperType1;
-                this.КолодкаТЛГпр2_2.Visible = false;
-                this.КолодкаТЛГпр2_2.BackgroundImage = null;
-            }
-            else if (B1_2Parameters.КолодкаТлГпр22)
-            {
-                this.КолодкаТЛГпр2_2.BackgroundImage = ControlElementImages.jumperType1;
-                this.КолодкаТЛГпр2_1.Visible = false;
-                this.КолодкаТЛГпр2_1.BackgroundImage = null;
-            }
-
-            if (B1_2Parameters.КолодкаТлГпр31)
-            {
-                this.КолодкаТЛГпр3_1.BackgroundImage = ControlElementImages.jumperType1;
-                this.КолодкаТЛГпр3_2.Visible = false;
-                this.КолодкаТЛГпр3_2.BackgroundImage = null;
-            }
-            else if (B1_2Parameters.КолодкаТлГпр32)
-            {
-                this.КолодкаТЛГпр3_2.BackgroundImage = ControlElementImages.jumperType1;
-                this.КолодкаТЛГпр3_1.Visible = false;
-                this.КолодкаТЛГпр3_1.BackgroundImage = null;
-            }
+            КолодкаТЛГпр1_1.Visible = !B1_2Parameters.КолодкаТлГпр11;
+            КолодкаТЛГпр1_2.Visible = !B1_2Parameters.КолодкаТлГпр12;
+            КолодкаТЛГпр2_1.Visible = !B1_2Parameters.КолодкаТлГпр21;
+            КолодкаТЛГпр2_2.Visible = !B1_2Parameters.КолодкаТлГпр22;
+            КолодкаТЛГпр3_1.Visible = !B1_2Parameters.КолодкаТлГпр31;
+            КолодкаТЛГпр3_2.Visible = !B1_2Parameters.КолодкаТлГпр32;
         }
     }
 }
