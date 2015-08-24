@@ -1,5 +1,4 @@
-﻿using R440O.R440OForms.B1_1;
-using R440O.R440OForms.B3_1;
+﻿using R440O.R440OForms.B3_1;
 
 namespace R440O.R440OForms.B2_1
 {
@@ -141,7 +140,7 @@ namespace R440O.R440OForms.B2_1
             set
             {
                 _кнопкаБК1 = _кнопкаБК1 == value ? 0 : value;
-                B1_1Parameters.ResetParameters();
+                N15Parameters.ResetDiscret();
                 OnParameterChanged();
             }
         }
@@ -152,6 +151,7 @@ namespace R440O.R440OForms.B2_1
             set
             {
                 _кнопкаБК2 = _кнопкаБК2 == value ? 0 : value;
+                N15Parameters.ResetDiscret();
                 OnParameterChanged();
             }
         }
@@ -165,7 +165,7 @@ namespace R440O.R440OForms.B2_1
             set
             {
                 _тумблерМуДу = value;
-                N15Parameters.ResetParameters();
+                N15Parameters.ResetDiscret();
             }
         }
         #endregion

@@ -1,4 +1,6 @@
-﻿namespace R440O.R440OForms.N15
+﻿using R440O.R440OForms.B1_2;
+
+namespace R440O.R440OForms.N15
 {
     using Parameters;
     using A1;
@@ -685,8 +687,7 @@
 
         public static bool ЛампочкаБ1_2
         {
-            get { return _лампочкаБ12; }
-            set { _лампочкаБ12 = value; }
+            get { return B1_2Parameters.Включен; }
         }
 
         public static bool ЛампочкаБ2_1
@@ -788,10 +789,7 @@
 
             #region Дискрет и Генераторы
 
-            A1Parameters.ResetParameters();
-            B1_1Parameters.ResetParameters();
-            B2_1Parameters.ResetParameters();
-            B3_1Parameters.ResetParameters();
+            ResetDiscret();
             P220_27G_2Parameters.ResetParameters();
             P220_27G_3Parameters.ResetParameters();
 
@@ -799,6 +797,20 @@
 
             OnParameterChanged();
         }
+
+        /// <summary>
+        /// Отдельная перезагрузка аппаратуры Дискрет.
+        /// </summary>
+        public static void ResetDiscret()
+        {
+            A1Parameters.ResetParameters();
+            B1_1Parameters.ResetParameters();
+            B1_2Parameters.ResetParameters();
+            B2_1Parameters.ResetParameters();
+            B3_1Parameters.ResetParameters();
+        }
+
+
 
         public delegate void ParameterChangedHandler();
 

@@ -182,7 +182,7 @@
             set
             {
                 _кнопкаСкоростьГР = value;
-                N15Parameters.ResetParameters();
+                N15Parameters.ResetDiscret();
                 OnParameterChanged();
             }
         }
@@ -193,7 +193,7 @@
             set
             {
                 _кнопкаСкоростьАб_1ТЛФК = value;
-                N15Parameters.ResetParameters();
+                N15Parameters.ResetDiscret();
                 OnParameterChanged();
             }
         }

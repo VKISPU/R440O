@@ -65,7 +65,7 @@
             {
                 _тумблерПул480ЧтОфт1 = value;
                 OnParameterChanged();
-                N15Parameters.ResetParameters();
+                N15Parameters.ResetDiscret();
             }
         }
 
@@ -86,7 +86,7 @@
             {
                 _тумблерПУЛ48ПРДЧтОфт1 = value;
                 OnParameterChanged();
-                N15Parameters.ResetParameters();
+                N15Parameters.ResetDiscret();
             }
         }
 
@@ -155,7 +155,7 @@
                 {
                     _переключательПУЛ4801 = value;
                     OnParameterChanged();
-                    N15Parameters.ResetParameters();
+                    N15Parameters.ResetDiscret();
                 }
             }
         }
@@ -230,7 +230,7 @@
                 {
                     _переключательПУЛ48ПРД1 = value;
                     OnParameterChanged();
-                    N15Parameters.ResetParameters();
+                    N15Parameters.ResetDiscret();
                 }
             }
         }

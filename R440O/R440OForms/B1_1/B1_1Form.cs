@@ -4,7 +4,6 @@ namespace R440O.R440OForms.B1_1
 {
     using System.Windows.Forms;
     using BaseClasses;
-    using Parameters;
 
     /// <summary>
     /// Форма блока Б1-1
@@ -23,12 +22,12 @@ namespace R440O.R440OForms.B1_1
 
         #region Кнопки
 
-        private void B1_1КнопкаСкоростьГР_Click(object sender, System.EventArgs e)
+        private void КнопкаСкоростьГР_Click(object sender, System.EventArgs e)
         {
             B1_1Parameters.КнопкаСкоростьГР = !B1_1Parameters.КнопкаСкоростьГР;
         }
 
-        private void B1_1КнопкаСкоростьАБ_1ТЛФ_К_Click(object sender, System.EventArgs e)
+        private void КнопкаСкоростьАБ_1ТЛФ_К_Click(object sender, System.EventArgs e)
         {
             B1_1Parameters.КнопкаСкоростьАб1ТлфК = !B1_1Parameters.КнопкаСкоростьАб1ТлфК;
         }
@@ -36,7 +35,7 @@ namespace R440O.R440OForms.B1_1
         #endregion
 
         #region ТЛГпр1 Колодки
-        private void B1_1КолодкаТЛГпр1_1_Click(object sender, System.EventArgs e)
+        private void КолодкаТЛГпр1_1_Click(object sender, System.EventArgs e)
         {
             if (B1_1Parameters.КолодкаТлГпр11)
             {
@@ -49,7 +48,7 @@ namespace R440O.R440OForms.B1_1
             }
         }
 
-        private void B1_1КолодкаТЛГпр1_2_Click(object sender, System.EventArgs e)
+        private void КолодкаТЛГпр1_2_Click(object sender, System.EventArgs e)
         {
             if (B1_1Parameters.КолодкаТлГпр12)
             {
@@ -64,7 +63,7 @@ namespace R440O.R440OForms.B1_1
         #endregion
 
         #region ТЛГпр2 Колодки
-        private void B1_1КолодкаТЛГпр2_1_Click(object sender, System.EventArgs e)
+        private void КолодкаТЛГпр2_1_Click(object sender, System.EventArgs e)
         {
             if (B1_1Parameters.КолодкаТлГпр21)
             {
@@ -76,7 +75,7 @@ namespace R440O.R440OForms.B1_1
                 B1_1Parameters.КолодкаТлГпр22 = false;
             }
         }
-        private void B1_1КолодкаТЛГпр2_2_Click(object sender, System.EventArgs e)
+        private void КолодкаТЛГпр2_2_Click(object sender, System.EventArgs e)
         {
             if (B1_1Parameters.КолодкаТлГпр22)
             {
@@ -91,7 +90,7 @@ namespace R440O.R440OForms.B1_1
         #endregion
 
         #region ТЛГпр3 Колодки
-        private void B1_1КолодкаТЛГпр3_1_Click(object sender, System.EventArgs e)
+        private void КолодкаТЛГпр3_1_Click(object sender, System.EventArgs e)
         {
             if (B1_1Parameters.КолодкаТлГпр31)
             {
@@ -104,7 +103,7 @@ namespace R440O.R440OForms.B1_1
             }
         }
 
-        private void B1_1КолодкаТЛГпр3_2_Click(object sender, System.EventArgs e)
+        private void КолодкаТЛГпр3_2_Click(object sender, System.EventArgs e)
         {
             if (B1_1Parameters.КолодкаТлГпр32)
             {
@@ -121,7 +120,7 @@ namespace R440O.R440OForms.B1_1
         /// <summary>
         /// Переключение тумблера управления питанием блока
         /// </summary>
-        private void B1_1ТумблерМуДу_Click(object sender, System.EventArgs e)
+        private void ТумблерМуДу_Click(object sender, System.EventArgs e)
         {
             B1_1Parameters.ТумблерМуДу = !B1_1Parameters.ТумблерМуДу;
         }
