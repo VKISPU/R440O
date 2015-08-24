@@ -28,8 +28,8 @@ namespace R440O.R440OForms.N18_M
         private static int _переключательВходБ22 = 1;
        
         /// <summary>
-        /// 1 - б1-1,
-        /// 2 - даб-5
+        /// 1 - б3-2,
+        /// 2 - б3-1,
         /// </summary>
         public static int ПереключательВходБ22
         {
@@ -166,6 +166,7 @@ namespace R440O.R440OForms.N18_M
             set
             {
                 if (value > 0 && value < 6) _переключательПРД = value;
+                N15Parameters.ResetDiscret();
                 OnParameterChanged();
             }
         }

@@ -1,4 +1,6 @@
 ﻿using R440O.R440OForms.B3_1;
+using R440O.R440OForms.N15Inside;
+using R440O.R440OForms.N18_M;
 
 namespace R440O.R440OForms.B2_1
 {
@@ -23,6 +25,10 @@ namespace R440O.R440OForms.B2_1
             {
                 if (Включен && B3_1Parameters.ВыходнойСигнал1 != null)
                     return B3_1Parameters.ВыходнойСигнал1;
+                if (Включен &&
+                    N15InsideParameters.ВыходПриемногоТракта != null &&
+                    N18_MParameters.ПереключательПРМ1 == 2)
+                    return N15InsideParameters.ВыходПриемногоТракта;
                 return null;
             }
         }

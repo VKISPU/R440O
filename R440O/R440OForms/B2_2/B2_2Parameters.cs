@@ -1,5 +1,7 @@
 ﻿using R440O.R440OForms.B3_1;
 using R440O.R440OForms.B3_2;
+using R440O.R440OForms.N15Inside;
+using R440O.R440OForms.N18_M;
 
 namespace R440O.R440OForms.B2_2
 {
@@ -22,8 +24,14 @@ namespace R440O.R440OForms.B2_2
         {
             get
             {
-                if (Включен && B3_2Parameters.ВыходнойСигнал1 != null)
+                if (Включен && B3_2Parameters.ВыходнойСигнал1 != null && N18_MParameters.ПереключательВходБ22 == 1)
                     return B3_2Parameters.ВыходнойСигнал1;
+                if (Включен && B3_1Parameters.ВыходнойСигнал2 != null && N18_MParameters.ПереключательВходБ22 == 2)
+                    return B3_1Parameters.ВыходнойСигнал1;
+                if (Включен &&
+                    N15InsideParameters.ВыходПриемногоТракта != null &&
+                    N18_MParameters.ПереключательПРМ2 == 2)
+                    return N15InsideParameters.ВыходПриемногоТракта;
                 return null;
             }
         }
@@ -72,8 +80,12 @@ namespace R440O.R440OForms.B2_2
             get
             {
                 if (Включен && ВходнойСигнал != null)
-                    return (ВходнойСигнал.Synchronization && B3_2Parameters.КолодкаОКпр1Син) ||
-                           (!ВходнойСигнал.Synchronization && B3_2Parameters.КолодкаОКпр1Ас);
+                    return (ВходнойСигнал.Synchronization &&
+                            (B3_2Parameters.КолодкаОКпр1Син && N18_MParameters.ПереключательВходБ22 == 1) ||
+                            (B3_1Parameters.КолодкаОКпр2Син && N18_MParameters.ПереключательВходБ22 == 2)) ||
+                           (!ВходнойСигнал.Synchronization &&
+                            (B3_2Parameters.КолодкаОКпр1Ас && N18_MParameters.ПереключательВходБ22 == 1) ||
+                            (B3_1Parameters.КолодкаОКпр2Ас && N18_MParameters.ПереключательВходБ22 == 2));
                 return false;
             }
         }
