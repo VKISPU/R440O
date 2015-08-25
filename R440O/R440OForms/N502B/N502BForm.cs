@@ -1,23 +1,16 @@
-﻿//-----------------------------------------------------------------------
-// <copyright file="N502BForm.cs" company="VKISPU">
-//      R440O station.
-// </copyright>
-//-----------------------------------------------------------------------
-
-using System;
-using System.Globalization;
-using R440O.ThirdParty;
-
-namespace R440O.R440OForms.N502B
+﻿namespace R440O.R440OForms.N502B
 {
+    using System;
+    using System.Globalization;
     using System.Windows.Forms;
+    using ThirdParty;
 
     public partial class N502BForm : Form
     {
         public N502BForm()
         {
             InitializeComponent();
-            N502BParameters.RefreshForm += RefreshForm;
+            N502BParameters.ParameterChanged += RefreshForm;
             N502BParameters.СтанцияСгорела += ВыводСообщенияСтанцияСгорела;
             N502BParameters.СледитьЗаВременем();
             RefreshForm();

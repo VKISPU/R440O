@@ -108,7 +108,7 @@
         private static int _кабельВход;
 
         /// <summary>
-        /// Значение, которому должен соответствовать КаюельВход.
+        /// Значение, которому должен соответствовать КабельВход.
         /// </summary>
         public static int ПравильныйВход { get; set; }
 
@@ -141,9 +141,12 @@
             ПравильныйВход = zeroToOne > 0.5F ? 380 : 220;
         }
 
-        public static bool ПодключенПравильно()
+        /// <summary>
+        /// Условие определяющее, подключён ли кабель питания к нужному входу.
+        /// </summary>
+        public static bool КабельПодключенПравильно
         {
-            return _кабельВход == ПравильныйВход;
+            get { return _кабельВход == ПравильныйВход; }
         }
 
         #endregion
@@ -154,15 +157,19 @@
         {
             ЛампочкаСетьВкл = N502BParameters.ПереключательСеть &&
                              N502BParameters.ЛампочкаСеть
-                               && ПодключенПравильно();
+                               && КабельПодключенПравильно;
 
             ЛампочкаАвария = N502BParameters.ПереключательСеть &&
                              N502BParameters.ЛампочкаСеть
-                               && !ПодключенПравильно();
+                               && !КабельПодключенПравильно;
         }
 
         public delegate void ParameterChangedHandler();
         public static event ParameterChangedHandler RefreshForm;
+
+        /// <summary>
+        /// Вызывается, если пользователь совершил неправильные действия по обесточиванию станции.
+        /// </summary>
         public static event ParameterChangedHandler ОператорСтанцииПоражёнТоком;
         #endregion
     }

@@ -1,8 +1,8 @@
-﻿using R440O.R440OForms.N502B;
-
-namespace R440O.R440OForms.PowerCabel
+﻿namespace R440O.R440OForms.PowerCabel
 {
-    public class PowerCabelParameters
+    using N502B;
+
+    public static class PowerCabelParameters
     {
         public static bool ТумблерОсвещение;
 
