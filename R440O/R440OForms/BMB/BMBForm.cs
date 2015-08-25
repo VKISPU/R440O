@@ -1,16 +1,9 @@
-﻿//-----------------------------------------------------------------------
-// <copyright file="BMBForm.cs" company="VKISPU">
-//      R440O station.
-// </copyright>
-//-----------------------------------------------------------------------
-
-using System;
-using System.Drawing;
-using System.IO;
-using System.Media;
-
-namespace R440O.R440OForms.BMB
+﻿namespace R440O.R440OForms.BMB
 {
+    using System;
+    using System.Drawing;
+    using System.IO;
+    using System.Media;
     using System.Windows.Forms;
     using BaseClasses;
     using ThirdParty;
@@ -37,12 +30,12 @@ namespace R440O.R440OForms.BMB
         {
             if (e.Button == MouseButtons.Left)
             {
-                BMBParameters.BMBПереключательПодключениеРезерва += 1;
+                BMBParameters.ПереключательПодключениеРезерва += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                BMBParameters.BMBПереключательПодключениеРезерва -= 1;
+                BMBParameters.ПереключательПодключениеРезерва -= 1;
             }
         }
 
@@ -136,7 +129,7 @@ namespace R440O.R440OForms.BMB
             ПереключательРаботаКонтроль.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = BMBParameters.BMBПереключательПодключениеРезерва * 40 - 80;
+            angle = BMBParameters.ПереключательПодключениеРезерва * 40 - 80;
             BMBПереключательПодключениеРезерва.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
@@ -214,13 +207,13 @@ namespace R440O.R440OForms.BMB
 
         #region КнопкаПередачаКоманды
 
-        private void КнопкаНаборКоманды_MouseUp(object sender, System.Windows.Forms.MouseEventArgs e)
+        private void КнопкаНаборКоманды_MouseUp(object sender, MouseEventArgs e)
         {
             var button = sender as Button;
             if (button != null) button.BackgroundImage = ControlElementImages.buttonSquareBlue;
         }
 
-        private void КнопкаНаборКоманды_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+        private void КнопкаНаборКоманды_MouseDown(object sender, MouseEventArgs e)
         {
             var button = sender as Button;
             if (button != null)

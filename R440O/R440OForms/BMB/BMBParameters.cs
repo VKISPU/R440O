@@ -1,14 +1,11 @@
-﻿using System.Drawing.Text;
-using R440O.Parameters;
-using R440O.R440OForms.BMA_M_2;
-using R440O.R440OForms.N15;
-
-namespace R440O.R440OForms.BMB
+﻿namespace R440O.R440OForms.BMB
 {
+    using Parameters;
+    using N15;
     using N502B;
     using СостоянияЭлементов.БМБ;
 
-    internal static class BMBParameters
+    public static class BMBParameters
     {
         #region ПереключательРаботаКонтроль
 
@@ -34,30 +31,20 @@ namespace R440O.R440OForms.BMB
         /// <summary>
         /// Положение переключателя подключение резерва
         /// </summary>
-        private static int _BMBПереключательПодключениеРезерва = 1;
+        private static int _переключательПодключениеРезерва = 1;
 
-        public static int BMBПереключательПодключениеРезерва
+        public static int ПереключательПодключениеРезерва
         {
-            get { return _BMBПереключательПодключениеРезерва; }
+            get { return _переключательПодключениеРезерва; }
             set
             {
-                if (value > 0 && value < 4) _BMBПереключательПодключениеРезерва = value;
+                if (value > 0 && value < 4) _переключательПодключениеРезерва = value;
                 if (RefreshForm != null)
                 {
                     RefreshForm();
                 }
             }
         }
-
-        /// <summary>
-        /// Названия положений переключателя подключение резерва
-        /// </summary>
-        private static int[] BMBПоложенияПереключательПодключениеРезерва =
-        {
-            1,
-            2,
-            3
-        };
 
         #endregion
 
@@ -85,6 +72,10 @@ namespace R440O.R440OForms.BMB
 
         #region Кнопки
 
+        /// <summary>
+        /// Горит, если включено питание и сама кнопка нажата.
+        /// При нажатии обнуляется команда набранная на блоке. Включается передача вызова по каналу ТЧ.
+        /// </summary>
         public static Кнопка КнопкаПередачаВызоваТч
         {
             get
@@ -111,6 +102,10 @@ namespace R440O.R440OForms.BMB
 
         private static Кнопка _кнопкаПередачаВызоваТч;
 
+        /// <summary>
+        /// Горит, если включено питание и сама кнопка нажата.
+        /// При нажатии обнуляется команда набранная на блоке. Включается передача вызова по каналу ДК.
+        /// </summary>
         public static Кнопка КнопкаПередачаВызоваДк
         {
             get
@@ -137,6 +132,10 @@ namespace R440O.R440OForms.BMB
 
         private static Кнопка _кнопкаПередачаВызоваДк;
 
+        /// <summary>
+        /// Горит, если включено питание и сама кнопка нажата.
+        /// При нажатии включается режим передачи служебной связи.
+        /// </summary>
         public static Кнопка КнопкаСлСвязь
         {
             get
@@ -184,6 +183,10 @@ namespace R440O.R440OForms.BMB
 
         private static Кнопка _кнопкаПитание;
 
+        /// <summary>
+        /// Горит, если включено питание и сама кнопка нажата.
+        /// При нажатии включается режим звуковой синализации.
+        /// </summary>
         public static Кнопка КнопкаЗвСигнал
         {
             get
@@ -206,6 +209,10 @@ namespace R440O.R440OForms.BMB
 
         #region Лампочки
 
+        /// <summary>
+        /// Горит если включена кнопка передачи вызова ДК и режим контроль.
+        /// В режиме работа лампочка горит, если правильно настроен блок БМА.
+        /// </summary>
         public static bool ЛампочкаДк
         {
             get
@@ -218,6 +225,10 @@ namespace R440O.R440OForms.BMB
             }
         }
 
+        /// <summary>
+        /// Горит если включена кнопка передачи вызова ТЧ и режим контроль.
+        /// В режиме работа лампочка горит, если правильно настроен блок БМА.
+        /// </summary>
         public static bool ЛампочкаТч
         {
             get
@@ -230,8 +241,9 @@ namespace R440O.R440OForms.BMB
             }
         }
 
-
-
+        /// <summary>
+        /// Лампочка-табло прием вызова.
+        /// </summary>
         public static bool ЛампочкаПриемВызова
         {
             get
@@ -242,6 +254,9 @@ namespace R440O.R440OForms.BMB
 
         private static bool _лампочкаРезервВкл;
 
+        /// <summary>
+        /// Горит если идёт прием вызова и выбрано данное направление.
+        /// </summary>
         public static bool ЛампочкаНаправление1
         {
             get { return ЛампочкаПриемВызова && ПереключательРаботаКонтроль == 1 && ПереключательНаправление == 1; }
@@ -343,6 +358,9 @@ namespace R440O.R440OForms.BMB
             }
         }
 
+        /// <summary>
+        /// Команда передаётся, если отжаты режимы ТЧ и ДК, и набрана правильная команда.
+        /// </summary>
         public static Кнопка КнопкаПередачаКоманды
         {
             get
@@ -366,7 +384,7 @@ namespace R440O.R440OForms.BMB
         private static Кнопка _кнопкаПередачаКоманды;
 
         /// <summary>
-        /// Обработка нажатия на клавишу передать команду, с правильным заннулением.
+        /// Обработка нажатия на клавишу передать команду, с правильным заннулением предыдущих цифр.
         /// </summary>
         public static void ПередатьКоманду()
         {
@@ -402,7 +420,6 @@ namespace R440O.R440OForms.BMB
         }
 
         public delegate void VoidVoidSignature();
-
         public static event VoidVoidSignature RefreshForm;
     }
 }
