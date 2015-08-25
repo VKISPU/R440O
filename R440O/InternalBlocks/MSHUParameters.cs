@@ -1,10 +1,10 @@
-﻿using R440O.BaseClasses;
-using R440O.R440OForms.A304;
-using R440O.R440OForms.N15;
-using R440O.R440OForms.OrderScheme;
-
-namespace R440O.InternalBlocks
+﻿namespace R440O.InternalBlocks
 {
+    using BaseClasses;
+    using R440OForms.A304;
+    using R440OForms.N15;
+    using R440OForms.OrderScheme;
+
     public static class MSHUParameters
     {
         public static bool Включен
@@ -13,8 +13,8 @@ namespace R440O.InternalBlocks
         }
 
         /// <summary>
-        /// Волна равна номинальной волне на приём. 
-        /// Проходит, если правильно выбран ствол.
+        /// Волна приводится в соответствие номинальной волне на приём. 
+        /// Значение выходного сигнала, как после блока А304, т.к. его включение зависит от включения МШУ.
         /// </summary>
         public static Signal ВыходнойСигнал
         {

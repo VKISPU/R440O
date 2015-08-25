@@ -23,6 +23,7 @@
         public double Speed { get; private set; }
 
         /// <summary>
+        /// Наличие информационной составляющей в потоке.
         /// true - информация присутствует, false - отсутствует.
         /// </summary>
         public bool Information { get; private set; }

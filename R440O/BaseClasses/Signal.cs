@@ -32,22 +32,23 @@
         public double GroupSpeed = -1;
 
         /// <summary>
-        /// Уровень передачи сигнала.
+        /// Уровень мощности передачи сигнала.
         /// </summary>
         public double Level = -1;
 
         /// <summary>
+        /// Тип режима работы.
         /// True - синхронный режим работы, false - асинхронный режим работы.
         /// </summary>
         public bool Synchronization;
 
         /// <summary>
-        /// Элементы информационного канала
+        /// Список всех элементов информационного сигнала.
         /// </summary>
         public List<SignalElement> Elements;
 
         /// <summary>
-        /// Выбранный элемент информационного сигнала.
+        /// Элементы информационного сигнала, содержащиеся в потоке, выбранном по заданным аппаратурой условиям. Уровень Б3.
         /// </summary>
         public List<SignalElement> SelectedFlowElements
         {
@@ -59,7 +60,7 @@
         }
 
         /// <summary>
-        /// Выбранный элемент информационного сигнала.
+        /// Элементы информационного сигнала, содержащиеся в потоке и группе, выбранных по заданным аппаратурой условиям. Уровень Б2.
         /// </summary>
         public List<SignalElement> SelectedGroupElements
         {
@@ -81,7 +82,7 @@
         public int SelectedGroup { get; private set; }
 
         /// <summary>
-        /// Выбрать информационный поток.
+        /// Выбрать информационный поток, если его номер соответствует настройкам аппаратуры. Уровень Б3.
         /// </summary>
         /// <param name="flow">Номер потока.</param>
         public void SelectFlow(int flow)
@@ -90,7 +91,7 @@
         }
 
         /// <summary>
-        /// Выбрать информационную группу.
+        /// Выбрать информационную группу, если её номер соответствует настройкам аппаратуры. Уровень Б2.
         /// </summary>
         /// <param name="group">Номер группы.</param>
         public void SelectGroup(int group)
@@ -99,7 +100,7 @@
         }
 
         /// <summary>
-        /// Скорость в информационном канале.
+        /// Скорость передачи в определённом информационном канале. Уровень Б1.
         /// </summary>
         /// <param name="chanelNumber">Номер канала.</param>
         public double SpeedOfChanel(int chanelNumber)
@@ -110,7 +111,7 @@
         }
 
         /// <summary>
-        /// Наличие информации в информационном канале.
+        /// Наличие информации в определённом информационном канале. Уровень Б1.
         /// </summary>
         /// <param name="chanelNumber">Номер канала.</param>
         public bool InformationOfChanel(int chanelNumber)
@@ -121,10 +122,9 @@
         }
 
         /// <summary>
-        /// Проверка, правильно ли заданы скорости.
+        /// Проверка, соответствуют ли друг другу скорости передачи информации.
+        /// Условия выбраны таким образом, чтобы 4.8 и 5.2 соответствовали другу другу.
         /// </summary>
-        /// <param name="inputSpeed">Номер канала, с чьей скоростью производится сравнение.</param>
-        /// <param name="outputSpeed">Скорость для сравнения.</param>
         /// <returns>Возвращает true, если скорости соответствуют</returns>
         public static bool IsEquivalentSpeed(double inputSpeed, double outputSpeed)
         {

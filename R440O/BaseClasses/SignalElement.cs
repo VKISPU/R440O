@@ -2,6 +2,9 @@
 {
     using System.Collections.Generic;
 
+    /// <summary>
+    /// Одиночный элемент сигнала, содержит номер потока, группы и список каналов.
+    /// </summary>
     public class SignalElement
     {
         public SignalElement(int flow, int group, double[] chanels)
