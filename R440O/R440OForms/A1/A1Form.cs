@@ -1,9 +1,8 @@
-﻿using System.Linq;
-using R440O.BaseClasses;
-
-namespace R440O.R440OForms.A1
+﻿namespace R440O.R440OForms.A1
 {
+    using System.Linq;
     using System.Windows.Forms;
+    using BaseClasses;
 
     public partial class A1Form : Form, IRefreshableForm
     {

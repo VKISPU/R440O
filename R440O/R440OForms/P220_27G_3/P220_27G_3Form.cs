@@ -1,14 +1,7 @@
-﻿//-----------------------------------------------------------------------
-// <copyright file="P220_27G_3Form.cs" company="VKISPU">
-//      R440O station.
-// </copyright>
-//-----------------------------------------------------------------------
-
-using R440O.BaseClasses;
-
-namespace R440O.R440OForms.P220_27G_3
+﻿namespace R440O.R440OForms.P220_27G_3
 {
     using System.Windows.Forms;
+    using BaseClasses;
 
     /// <summary>
     /// Форма блока П220-27Г-3

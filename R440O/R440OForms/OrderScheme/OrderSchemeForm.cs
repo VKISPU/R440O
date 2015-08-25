@@ -1,12 +1,11 @@
-﻿using R440O.R440OForms.B3_2;
-
-namespace R440O.R440OForms.OrderScheme
+﻿namespace R440O.R440OForms.OrderScheme
 {
     using System.Windows.Forms;
     using C300M_1;
     using N15Inside;
     using N18_M;
     using B3_1;
+    using B3_2;
     using N15;
 
     /// <summary>
