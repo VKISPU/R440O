@@ -1,15 +1,9 @@
-﻿//-----------------------------------------------------------------------
-// <copyright file="N18_MForm.cs" company="VKISPU">
-//      R440O station.
-// </copyright>
-//-----------------------------------------------------------------------
-
-namespace R440O.R440OForms.N18_M
+﻿namespace R440O.R440OForms.N18_M
 {
     using System.Windows.Forms;
     using BaseClasses;
     using ThirdParty;
-    using СостоянияЭлементов.Н18;
+    using СостоянияЭлементов;
 
     /// <summary>
     /// Форма блока Н-18-М

@@ -1,10 +1,10 @@
-﻿using R440O.R440OForms.A205M_1;
-using R440O.R440OForms.A205M_2;
-using R440O.R440OForms.N15;
-using R440O.СостоянияЭлементов.Н18;
-
-namespace R440O.R440OForms.N18_M
+﻿namespace R440O.R440OForms.N18_M
 {
+    using A205M_1;
+    using A205M_2;
+    using N15;
+    using СостоянияЭлементов;
+
     class N18_MParameters
     {
         #region Лампочки
@@ -282,6 +282,9 @@ namespace R440O.R440OForms.N18_M
         public delegate void ParameterChangedHandler();
         public static event ParameterChangedHandler ParameterChanged;
 
+        /// <summary>
+        /// Вызов события, что значения параметров данной формы изменились.
+        /// </summary>
         private static void OnParameterChanged()
         {
             N15Parameters.ResetDiscret();
