@@ -54,9 +54,9 @@ namespace R440O.R440OForms.R440O
                 var newForm = (Form)thisForm;
                 newForm.Show(this);
             }
-            catch
+            catch(Exception ex)
             {
-                throw new Exception();
+                throw;
             }
         }
     }

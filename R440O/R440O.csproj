@@ -76,6 +76,7 @@
     <Compile Include="R440OForms\Kontur_P3\Параметры\Общие.cs" />
     <Compile Include="ThirdParty\EasyTimer.cs" />
     <Compile Include="ОбщиеТипыДанных\Модуляция.cs" />
+    <Compile Include="СостоянияЭлементов\ДАБ5.cs" />
     <Compile Include="СостоянияЭлементов\Контур_П.cs" />
     <Compile Include="СостоянияЭлементов\БМА_М.cs" />
     <Compile Include="InternalBlocks\A503BParameters.cs" />
@@ -115,7 +116,7 @@
     <Compile Include="R440OForms\BMA_M_2\BMA_M_2Parameters.cs" />
     <Compile Include="R440OForms\BMA_M_1\BMA_M_1Parameters.cs" />
     <Compile Include="R440OForms\BMB\BMBParameters.cs" />
-    <Compile Include="Parameters\DAB_5Parameters.cs" />
+    <Compile Include="R440OForms\DAB_5\DAB_5Parameters.cs" />
     <Compile Include="R440OForms\C300M_2\C300M_2Parameters.cs" />
     <Compile Include="R440OForms\C300PM_1\C300PM_1Parameters.cs" />
     <Compile Include="R440OForms\C300PM_2\C300PM_2Parameters.cs" />

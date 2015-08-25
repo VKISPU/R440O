@@ -714,8 +714,7 @@ namespace R440O.R440OForms.N15
 
         public static bool ЛампочкаДАБ_5
         {
-            get { return _лампочкаДаб5; }
-            set { _лампочкаДаб5 = value; }
+            get { return Лампочка27В && ЛампочкаН15БП && ТумблерДАБ_5 && DAB_5Parameters.ТумблерПитание == СостоянияЭлементов.ДАБ5.EТумблерПитание.ВКЛ; }
         }
 
         public static bool ЛампочкаР_Н
@@ -795,6 +794,9 @@ namespace R440O.R440OForms.N15
 
             #endregion
 
+            #region ДАБ_5
+            DAB_5Parameters.Refresh();
+            #endregion
             OnParameterChanged();
         }
 
