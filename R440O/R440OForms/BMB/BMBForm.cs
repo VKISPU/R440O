@@ -84,37 +84,37 @@
                 ? null
                 : BMBParameters.КнопкаПередачаВызоваДк == Кнопка.Отжата
                     ? ControlElementImages.buttonSquareYellow1
-                    : TransformImageHelper.Scale(ControlElementImages.buttonSquareYellow1, 0.65F);
+                    : TransformImageHelper.Scale(ControlElementImages.buttonSquareYellow1, 65);
 
             this.КнопкаПередачаВызоваТч.BackgroundImage = BMBParameters.КнопкаПередачаВызоваТч == Кнопка.Горит
                 ? null
                 : BMBParameters.КнопкаПередачаВызоваТч == Кнопка.Отжата
                     ? ControlElementImages.buttonSquareYellow1
-                    : TransformImageHelper.Scale(ControlElementImages.buttonSquareYellow1, 0.65F);
+                    : TransformImageHelper.Scale(ControlElementImages.buttonSquareYellow1, 65);
 
             this.КнопкаСлСвязь.BackgroundImage = BMBParameters.КнопкаСлСвязь == Кнопка.Горит
                  ? null
                  : BMBParameters.КнопкаСлСвязь == Кнопка.Отжата
                      ? ControlElementImages.buttonSquareYellow1
-                     : TransformImageHelper.Scale(ControlElementImages.buttonSquareYellow1, 0.65F);
+                     : TransformImageHelper.Scale(ControlElementImages.buttonSquareYellow1, 65);
 
             this.КнопкаПитание.BackgroundImage = BMBParameters.КнопкаПитание == Кнопка.Горит
                  ? null
                  : BMBParameters.КнопкаПитание == Кнопка.Отжата
                      ? ControlElementImages.buttonSquareGreen
-                     : TransformImageHelper.Scale(ControlElementImages.buttonSquareGreen, 0.65F);
+                     : TransformImageHelper.Scale(ControlElementImages.buttonSquareGreen, 65);
 
             this.КнопкаЗвСигнал.BackgroundImage = BMBParameters.КнопкаЗвСигнал == Кнопка.Горит
                  ? null
                  : BMBParameters.КнопкаЗвСигнал == Кнопка.Отжата
                      ? ControlElementImages.buttonSquareGreen
-                     : TransformImageHelper.Scale(ControlElementImages.buttonSquareGreen, 0.65F);
+                     : TransformImageHelper.Scale(ControlElementImages.buttonSquareGreen, 65);
 
             this.КнопкаПередачаКоманды.BackgroundImage = BMBParameters.КнопкаПередачаКоманды == Кнопка.Горит
                  ? ControlElementImages.buttonSquareBlueOn
                  : BMBParameters.КнопкаПередачаКоманды == Кнопка.Отжата
                      ? ControlElementImages.buttonSquareBlueOff
-                     : TransformImageHelper.Scale(ControlElementImages.buttonSquareBlueOff, 0.85F);
+                     : TransformImageHelper.Scale(ControlElementImages.buttonSquareBlueOff, 85);
 
             this.КнопкаПередачаВызоваДк.Text = BMBParameters.КнопкаПередачаВызоваДк == Кнопка.Горит ? null : "ДК";
             this.КнопкаПередачаВызоваТч.Text = BMBParameters.КнопкаПередачаВызоваТч == Кнопка.Горит ? null : "ТЧ";

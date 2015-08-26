@@ -105,28 +105,10 @@
             ЛампочкаАвария.BackgroundImage = VoltageStabilizerParameters.ЛампочкаАвария
                 ? ControlElementImages.lampType6OnRed
                 : null;
-        }
 
-        #region Отрисовка индикатора напряжения
-
-        private void ИндикаторНапряжения_Paint(object sender, PaintEventArgs e)
-        {
-            switch (VoltageStabilizerParameters.ИндикаторНапряжение)
-            {
-                case 0:
-                    TransformImageHelper.DrawLine(e.Graphics, 10, 50, 50, 80);
-                    break;
-                case 127:
-                    TransformImageHelper.DrawLine(e.Graphics, 35, 40, 60, 80);
-                    break;
-                case 220:
-                    TransformImageHelper.DrawLine(e.Graphics, 55, 30, 65, 80);
-                    break;
-                case 380:
-                    TransformImageHelper.DrawLine(e.Graphics, 100, 30, 70, 80);
-                    break;
-            }
+            angle = (int) (VoltageStabilizerParameters.ИндикаторНапряжение * 0.3 - 75);
+            ИндикаторНапряжения.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
         }
-        #endregion
     }
 }
