@@ -1,9 +1,8 @@
-﻿using R440O.R440OForms.B3_1;
-using R440O.R440OForms.N15Inside;
-using R440O.R440OForms.N18_M;
-
-namespace R440O.R440OForms.B2_1
+﻿namespace R440O.R440OForms.B2_1
 {
+    using B3_1;
+    using N15Inside;
+    using N18_M;
     using N15;
     using BaseClasses;
 
@@ -19,6 +18,9 @@ namespace R440O.R440OForms.B2_1
             }
         }
 
+        /// <summary>
+        /// Сигнал от ПУЛ ПРМ или от Б3.
+        /// </summary>
         public static Signal ВходнойСигнал
         {
             get
@@ -33,6 +35,9 @@ namespace R440O.R440OForms.B2_1
             }
         }
 
+        /// <summary>
+        /// Первый выход блока, номер группы определяется кнопкой БК1.
+        /// </summary>
         public static Signal ВыходнойСигнал1
         {
             get
@@ -44,6 +49,9 @@ namespace R440O.R440OForms.B2_1
             }
         }
 
+        /// <summary>
+        /// Второй выход блока, номер группы определяется кнопкой БК1.
+        /// </summary>
         public static Signal ВыходнойСигнал2
         {
             get
@@ -64,6 +72,9 @@ namespace R440O.R440OForms.B2_1
         public static bool ЛампочкаПУЛ_1 { get { return Включен && ВходнойСигнал == null; } }
         public static bool ЛампочкаПУЛ_2 { get { return Включен && !ЛампочкаПУЛ_1; } }
 
+        /// <summary>
+        /// Горит, если НЕ правильно выбран режим синхронизации на Б3.
+        /// </summary>
         public static bool ЛампочкаПрРПрС_1
         {
             get
@@ -72,6 +83,9 @@ namespace R440O.R440OForms.B2_1
             }
         }
 
+        /// <summary>
+        /// Горит, если правильно выбран режим синхронизации на Б3.
+        /// </summary>
         public static bool ЛампочкаПрРПрС_2
         {
             get
@@ -83,6 +97,9 @@ namespace R440O.R440OForms.B2_1
             }
         }
 
+        /// <summary>
+        /// Не правильная синхронизация или кнопки отжаты.
+        /// </summary>
         public static bool ЛампочкаПрРПрС_Авар
         {
             get { return Включен && ЛампочкаПрРПрС_1 || (ЛампочкаПрРПрС_2 && КнопкаБК1 == 0 && КнопкаБК2 == 0); }
@@ -99,6 +116,9 @@ namespace R440O.R440OForms.B2_1
             get { return Включен && (ЛампочкаПрРПрС_Авар || ЛампочкаПрРПрС_1); }
         }
 
+        /// <summary>
+        /// Авария группы, если группа отсутствует.
+        /// </summary>
         public static bool ЛампочкаПрТС1_2
         {
             get

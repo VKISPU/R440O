@@ -17,6 +17,9 @@
             }
         }
 
+        /// <summary>
+        /// Сигнал от ПУЛ ПРМ, при условии, что выбрана правильная колодка.
+        /// </summary>
         public static Signal ВходнойСигнал
         {
             get
@@ -30,6 +33,9 @@
             }
         }
 
+        /// <summary>
+        /// Первый выход, выходной поток определяется колодкой УКК1.
+        /// </summary>
         public static Signal ВыходнойСигнал1
         {
             get
@@ -41,6 +47,9 @@
             }
         }
 
+        /// <summary>
+        /// Второй выход, выходной поток определяется колодкой УКК2.
+        /// </summary>
         public static Signal ВыходнойСигнал2
         {
             get
@@ -52,6 +61,9 @@
             }
         }
 
+        /// <summary>
+        /// Соответствии скорости и выбранной колодки КРПР.
+        /// </summary>
         private static bool ПравильнаяКолодка(double groupSpeed)
         {
             switch (КолодкаКРПР)
@@ -79,12 +91,18 @@
             get { return Включен && !ЛампочкаПУЛГ_2; }
         }
 
+        /// <summary>
+        /// Горит, если есть сигнал от ПУЛа ПРМ.
+        /// </summary>
         public static bool ЛампочкаПУЛГ_2
         {
             get { return Включен && N15InsideParameters.Включен && N18_MParameters.ПереключательПРМ1 == 1
                 && КолодкаКРПР != 5; }
         }
 
+        /// <summary>
+        /// Горит, если не установлена ни одна колодка.
+        /// </summary>
         public static bool ЛампочкаПРИавар
         {
             get
@@ -105,6 +123,9 @@
             get { return Включен && !ЛампочкаРС_синхр; }
         }
 
+        /// <summary>
+        /// Горит, если от ПУЛа ПРМ сигнал есть и правильно выбрана скорость.
+        /// </summary>
         public static bool ЛампочкаРС_синхр
         {
             get { return Включен && ВходнойСигнал != null; }
@@ -114,12 +135,19 @@
         public static bool ЛампочкаТЛГпр2 { get; set; }
         public static bool ЛампочкаТЛГпр3 { get; set; }
 
+        /// <summary>
+        /// Горит, если выбранный колодкой поток отсутствует.
+        /// </summary>
         public static bool ЛампочкаОКпр1
         {
             get { return ЛампочкаРС_синхр && ВыходнойСигнал1.SelectedFlowElements.Count == 0; }
         }
 
         public static bool ЛампочкаПФТК1_1 { get { return ЛампочкаРС_1; } }
+
+        /// <summary>
+        /// Горит, если выбранный поток присутствует.
+        /// </summary>
         public static bool ЛампочкаПФТК1_2 { get { return ЛампочкаПУЛГ_2 && !ЛампочкаОКпр1; } }
 
         public static bool ЛампочкаОКпр2

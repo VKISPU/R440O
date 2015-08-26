@@ -20,6 +20,9 @@
             }
         }
 
+        /// <summary>
+        /// Сигнал от блока Б2 или от ПУЛ ПРМ.
+        /// </summary>
         public static Signal ВходнойСигнал
         {
             get
@@ -35,46 +38,42 @@
             }
         }
 
+        /// <summary>
+        /// Сигнал с одним элементом, скорости каналов которого соответствуют текущим выбранным настройкам.
+        /// </summary>
         private static Signal НеобходимыйСигнал
         {
             get
             {
-                Signal signal;
-                if (!КнопкаСкоростьГР)
-                    if (КнопкаСкоростьАб1ТлфК)
+                if (КнопкаСкоростьГР)
+                    return new Signal
                     {
-                        return new Signal
+                        GroupSpeed = 2.4,
+                        Elements = new List<SignalElement>
                         {
-                            GroupSpeed = 4.8,
-                            Elements = new List<SignalElement>
-                            {
-                                new SignalElement(new[] {-1, 2.4, 1.2, 0, 0.1, 0.1, 0.05, 0.025})
-                            },
-                            Level = 50
-                        };
-                    }
+                            new SignalElement(new[] {-1, 0, 1.2, 0, 0.1, 0.1, 0.05, 0.025})
+                        }
+                    };
 
-                    else
+                if (КнопкаСкоростьАб1ТлфК)
+                {
+                    return new Signal
                     {
-                        return new Signal
+                        GroupSpeed = 4.8,
+                        Elements = new List<SignalElement>
                         {
-                            GroupSpeed = 4.8,
-                            Elements = new List<SignalElement>
-                            {
-                                new SignalElement(new[] {-1, 1.2, 1.2, 1.2, 0.1, 0.1, 0.05, 0.025})
-                            },
-                            Level = 50
-                        };
-                    }
+                            new SignalElement(new[] {-1, 2.4, 1.2, 0, 0.1, 0.1, 0.05, 0.025})
+                        }
+                    };
+                }
 
                 return new Signal
                 {
-                    GroupSpeed = 2.4,
+                    GroupSpeed = 4.8,
                     Elements = new List<SignalElement>
                     {
-                        new SignalElement(new[] {-1, 0, 1.2, 0, 0.1, 0.1, 0.05, 0.025})
-                    },
-                    Level = 50
+                        new SignalElement(new[] {-1, 1.2, 1.2, 1.2, 0.1, 0.1, 0.05, 0.025})
+                    }
                 };
             }
         }
@@ -113,6 +112,9 @@
 
         #region Каналы
 
+        /// <summary>
+        /// Лампочка Авария горит: не соответствуют скорости.
+        /// </summary>
         public static bool ЛампочкаТКБтк1_1
         {
             get
@@ -123,6 +125,10 @@
                 return false;
             }
         }
+
+        /// <summary>
+        /// Лампочка Сигнал горит: сигнал в наличии (имеет опр. скорость) и нет информации в канале.
+        /// </summary>
         public static bool ЛампочкаТКБтк1_2
         {
             get
@@ -181,6 +187,10 @@
         #endregion
 
         #region Эластичная память
+
+        /// <summary>
+        /// Лампочка Авария эластичной памяти горит, если не совпадают скорости, либо канал отсутствует(скорости нет).
+        /// </summary>
         public static bool ЛампочкаДФАПЧ1
         {
             get
