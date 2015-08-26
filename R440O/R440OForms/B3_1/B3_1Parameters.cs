@@ -171,6 +171,10 @@
         #region Колодки
 
         private static int _колодкаКРПР;
+
+        /// <summary>
+        /// Выбор скорости обрабатываемой блоком.
+        /// </summary>
         public static int КолодкаКРПР
         {
             get { return _колодкаКРПР; }
@@ -183,6 +187,10 @@
         }
 
         private static int _колодкаУКК1;
+
+        /// <summary>
+        /// Выбор номера потока, который будет передаваться с первого выхода.
+        /// </summary>
         public static int КолодкаУКК1
         {
             get { return _колодкаУКК1; }
@@ -195,6 +203,10 @@
         }
 
         private static int _колодкаУКК2;
+
+        /// <summary>
+        /// Выбор номера потока, который будет передаваться со второго выхода.
+        /// </summary>
         public static int КолодкаУКК2
         {
             get { return _колодкаУКК2; }
