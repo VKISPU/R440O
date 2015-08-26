@@ -105,6 +105,7 @@ namespace R440O.R440OForms.DAB_5
         private void КнопкаРежимВыкл1К_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаРежимВыкл1К.BackgroundImage = ControlElementImages.buttonRoundType3;
+            DAB_5Parameters.НажатьКнопкуРежимВыкл1К();
         }
 
         private void КнопкаРежимВыкл1К_MouseUp(object sender, MouseEventArgs e)
@@ -161,6 +162,7 @@ namespace R440O.R440OForms.DAB_5
         private void КнопкаРежимВыкл2К_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаРежимВыкл2К.BackgroundImage = ControlElementImages.buttonRoundType3;
+            DAB_5Parameters.НажатьКнопкуРежимВыкл2К();
         }
 
         private void КнопкаРежимВыкл2К_MouseUp(object sender, MouseEventArgs e)
