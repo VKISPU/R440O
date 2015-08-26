@@ -1,10 +1,4 @@
-﻿//-----------------------------------------------------------------------
-// <copyright file="N15Inside.cs" company="VKISPU">
-//      R440O station.
-// </copyright>
-//-----------------------------------------------------------------------
-
-namespace R440O.R440OForms.N15Inside
+﻿namespace R440O.R440OForms.N15Inside
 {
     using System.Windows.Forms;
     using BaseClasses;

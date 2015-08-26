@@ -10,6 +10,7 @@
     class N15InsideParameters
     {
         #region Работа блока
+
         public static bool Включен
         {
             get
@@ -18,6 +19,10 @@
             }
         }
 
+        /// <summary>
+        /// Выходной сигнал передающего тракта, проходит если выбрана необходимая скорость. Задаёт тип модуляции сигнала.
+        /// ПУЛ на Н15 должен быть включен.
+        /// </summary>
         public static Signal ВыходПередающегоТракта
         {
             get
@@ -33,9 +38,12 @@
                 }
                 return null;
             }
-
         }
 
+        /// <summary>
+        /// Выходной сигнал передающего тракта, проходит если выбраны необходимая скорость и модуляция. 
+        /// ПУЛ на Н15 должен быть включен.
+        /// </summary>
         public static Signal ВыходПриемногоТракта
         {
             get
@@ -47,7 +55,6 @@
                     return C300M_1Parameters.ВыходнойСигнал;
                 return null;
             }
-
         } 
 
         #endregion
@@ -261,7 +268,6 @@
 
         public delegate void ParameterChangedHandler();
         public static event ParameterChangedHandler ParameterChanged;
-
 
         private static void OnParameterChanged()
         {

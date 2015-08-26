@@ -1,8 +1,4 @@
-﻿using R440O.R440OForms.B1_2;
-using R440O.R440OForms.B2_2;
-using R440O.R440OForms.B3_2;
-
-namespace R440O.R440OForms.N15
+﻿namespace R440O.R440OForms.N15
 {
     using Parameters;
     using A1;
@@ -20,6 +16,9 @@ namespace R440O.R440OForms.N15
     using B1_1;
     using B2_1;
     using B3_1;
+    using B1_2;
+    using B2_2;
+    using B3_2;
     using BMB;
     using Kontur_P3.Параметры;
     using P220_27G_2;
@@ -36,6 +35,19 @@ namespace R440O.R440OForms.N15
                        && N502BParameters.ТумблерЭлектрооборудование
                        && N502BParameters.ТумблерВыпрямитель27В
                        && N502BParameters.ТумблерН15;
+            }
+        }
+
+        /// <summary>
+        /// Угол от -120 до 120
+        /// </summary>
+        public static double РегуляторУровень
+        {
+            get { return _регуляторУровень; }
+            set
+            {
+                if (value > -120 && value < 120) _регуляторУровень = value;
+                C300M_1Parameters.ResetParameters();
             }
         }
 
@@ -749,19 +761,7 @@ namespace R440O.R440OForms.N15
 
         #endregion
 
-        /// <summary>
-        /// Угол от -120 до 120
-        /// </summary>
-        public static double РегуляторУровень
-        {
-            get { return _регуляторУровень; }
-            set
-            {
-                if (value > -120 && value < 120) _регуляторУровень = value;
-                C300M_1Parameters.ResetParameters();
-            }
-        }
-
+        #region Обновление формы
         public static void ResetParameters()
         {
             C300M_1Parameters.Search();
@@ -797,6 +797,7 @@ namespace R440O.R440OForms.N15
             #region ДАБ_5
             DAB_5Parameters.Refresh();
             #endregion
+
             OnParameterChanged();
         }
 
@@ -814,8 +815,6 @@ namespace R440O.R440OForms.N15
             B3_2Parameters.ResetParameters();
         }
 
-
-
         public delegate void ParameterChangedHandler();
 
         public static event ParameterChangedHandler ParameterChanged;
@@ -823,6 +822,7 @@ namespace R440O.R440OForms.N15
         public static void OnParameterChanged()
         {
             if (ParameterChanged != null) ParameterChanged();
-        }
+        } 
+        #endregion
     }
 }
