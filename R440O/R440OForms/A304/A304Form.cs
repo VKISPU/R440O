@@ -4,19 +4,16 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-using R440O.R440OForms.N15;
-
 namespace R440O.R440OForms.A304
 {
     using System.Windows.Forms;
-    using Parameters;
-    using Properties;
+    using BaseClasses;
     using ThirdParty;
 
     /// <summary>
     /// Форма блока A304
     /// </summary>
-    public partial class A304Form : Form
+    public partial class A304Form : Form, IRefreshableForm
     {
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="A304Form"/>.
@@ -24,13 +21,13 @@ namespace R440O.R440OForms.A304
         public A304Form()
         {
             this.InitializeComponent();
-            A304Parameters.RefreshForm += RefreshForm;
-
-            RefreshForm();
+            A304Parameters.ParameterChanged += RefreshFormElements;
+            RefreshFormElements();
         }
 
         #region Инициализация состояний элементов управления
-        private void RefreshForm()
+
+        public void RefreshFormElements()
         {
             //Инициализация тумблеров
             this.ТумблерУправление1.BackgroundImage = A304Parameters.ТумблерУправление1

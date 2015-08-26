@@ -685,13 +685,13 @@
         {
             get
             {
-                return ЛампочкаМШУ && A304Parameters.Лампочка1К; 
+                return A304Parameters.Лампочка1К; 
             }
         }
 
         public static bool ЛампочкаА3042
         {
-            get { return ЛампочкаМШУ && A304Parameters.Лампочка2К; }
+            get { return A304Parameters.Лампочка2К; }
         }
 
         public static bool ЛампочкаБ1_1
