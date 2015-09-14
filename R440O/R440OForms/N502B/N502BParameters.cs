@@ -1,5 +1,6 @@
 ﻿namespace R440O.R440OForms.N502B
 {
+
     using System;
     using System.Linq;
     using System.Windows.Forms;
@@ -39,7 +40,11 @@
         public static void СледитьЗаВременем()
         {
             ВремяРаботыСтанции = Settings.Default.TimeofWork;
-            StationTimer = new Timer { Enabled = false, Interval = 60 * 1000 };
+            StationTimer = new Timer
+            {
+                Enabled = false,
+                Interval = 60 * 1000
+            };
             StationTimer.Tick += StationTimer_Tick;
             if (ЛампочкаСеть && ПереключательСеть) StationTimer.Start();
             else StationTimer.Stop();
@@ -61,42 +66,33 @@
             get { return PowerCabelParameters.КабельСеть; }
         }
 
-        private static bool _лампочкаСфазировано;
         public static bool ЛампочкаСфазировано
         {
             get
             {
-                return _лампочкаСфазировано;
-            }
-            set
-            {
-                _лампочкаСфазировано = value;
-                NKN_1Parameters.ResetParameters();
-                NKN_2Parameters.ResetParameters();
-                A205M_1Parameters.RefreshIndicators();
-                C300M_1Parameters.ResetParameters();
-                C300M_2Parameters.ResetParameters();
-                C300M_3Parameters.ResetParameters();
-                C300M_4Parameters.ResetParameters();
-                C300M_1Parameters.RefreshIndicators();
-                C300M_2Parameters.RefreshIndicators();
-                C300M_3Parameters.RefreshIndicators();
-                C300M_4Parameters.RefreshIndicators();
-                A304Parameters.ResetParameters();
-                N15Parameters.ResetParameters();
-                if (ParameterChanged != null) ParameterChanged();
+                return ПереключательФазировка == Фазировка && ЛампочкаСеть &&
+                                  ПереключательСеть && VoltageStabilizerParameters.КабельПодключенПравильно && Нагрузка;
             }
         }
 
-        public static bool ЛампочкаРбпПроверка;
-        public static bool ЛампочкаРбпПредохранитель;
+        //public static bool ЛампочкаРбпПроверка;
+        //public static bool ЛампочкаРбпПредохранитель;
 
         #endregion
 
         #region Тумблеры
-
+        #region private
         private static bool _тумблерЭлектрооборудование;
+        private static bool _тумблерВыпрямитель27В;
+        private static bool _тумблерН15;
+        private static bool _тумблерОсвещение;
+        private static bool _тумблерН131;
+        private static bool _тумблерН132;
+        private static int _тумблерОсвещение1 = 2;
+        private static int _тумблерОсвещение2 = 2;
+        #endregion 
 
+        #region public
         public static bool ТумблерЭлектрооборудование
         {
             get { return _тумблерЭлектрооборудование; }
@@ -106,7 +102,6 @@
                 NKN_1Parameters.ResetParameters();
                 NKN_2Parameters.ResetParameters();
                 N15Parameters.ResetParameters();
-                
                 C300M_1Parameters.ResetParameters();
                 C300M_2Parameters.ResetParameters();
                 C300M_3Parameters.ResetParameters();
@@ -115,16 +110,11 @@
                 C300M_2Parameters.RefreshIndicators();
                 C300M_3Parameters.RefreshIndicators();
                 C300M_4Parameters.RefreshIndicators();
-
                 A304Parameters.ResetParameters();
                 A306Parameters.ResetParameters();
-                if (ParameterChanged != null)
-                    ParameterChanged();
+                OnParameterChanged();
             }
         }
-
-
-        private static bool _тумблерВыпрямитель27В;
 
         public static bool ТумблерВыпрямитель27В
         {
@@ -136,21 +126,17 @@
                 NKN_2Parameters.ResetParameters();
                 N15Parameters.ResetParameters();
                 BMBParameters.ResetParameters();
-
                 C300M_1Parameters.ResetParameters();
                 C300M_2Parameters.ResetParameters();
                 C300M_3Parameters.ResetParameters();
                 C300M_4Parameters.ResetParameters();
-
                 A304Parameters.ResetParameters();
                 A306Parameters.ResetParameters();
-
-                if (ParameterChanged != null)
-                    ParameterChanged();
+                OnParameterChanged();
             }
         }
 
-        private static bool _тумблерН15;
+        
         public static bool ТумблерН15
         {
             get { return _тумблерН15; }
@@ -164,19 +150,10 @@
                 C300M_2Parameters.ResetParameters();
                 C300M_3Parameters.ResetParameters();
                 C300M_4Parameters.ResetParameters();
-
                 A304Parameters.ResetParameters();
-
-                if (ParameterChanged != null)
-                    ParameterChanged();
+                OnParameterChanged();
             }
         }
-
-        private static bool _тумблерОсвещение;
-        private static bool _тумблерН131;
-        private static bool _тумблерН132;
-        private static int _тумблерОсвещение1 = 2;
-        private static int _тумблерОсвещение2 = 2;
 
         public static bool ТумблерОсвещение
         {
@@ -184,8 +161,7 @@
             set
             {
                 _тумблерОсвещение = value;
-                if (ParameterChanged != null)
-                    ParameterChanged();
+                OnParameterChanged();
             }
         }
 
@@ -195,8 +171,7 @@
             set
             {
                 _тумблерН131 = value;
-                if (ParameterChanged != null)
-                    ParameterChanged();
+                OnParameterChanged();
             }
         }
 
@@ -206,8 +181,7 @@
             set
             {
                 _тумблерН132 = value;
-                if (ParameterChanged != null)
-                    ParameterChanged();
+                OnParameterChanged();
             }
         }
 
@@ -220,8 +194,7 @@
             set
             {
                 _тумблерОсвещение1 = value;
-                if (ParameterChanged != null)
-                    ParameterChanged();
+                OnParameterChanged();
             }
         }
 
@@ -234,15 +207,20 @@
             set
             {
                 _тумблерОсвещение2 = value;
-                if (ParameterChanged != null)
-                    ParameterChanged();
+                OnParameterChanged();
             }
         }
+        #endregion
         #endregion
 
         #region Переключатели
 
         private static bool _переключательСеть;
+        private static int _переключательНапряжение = 1;
+        private static int _переключательФазировка = 1;
+        private static int _переключательКонтрольНапряжения = 2;
+        private static int _переключательТокНагрузкиИЗаряда = 1;
+
         public static bool ПереключательСеть
         {
             get { return _переключательСеть; }
@@ -251,11 +229,10 @@
                 _переключательСеть = value;
                 Нагрузка = false;
                 VoltageStabilizerParameters.ResetParameters();
-                if (ParameterChanged != null)
-                    ParameterChanged();
+                OnParameterChanged();
 
                 if (!VoltageStabilizerParameters.КабельПодключенПравильно
-                    && VoltageStabilizerParameters.КабельВход !=0
+                    && VoltageStabilizerParameters.КабельВход != 0
                     && _переключательСеть
                     && ЛампочкаСеть
                     && СтанцияСгорела != null)
@@ -265,7 +242,7 @@
             }
         }
 
-        private static int _переключательНапряжение = 1;
+        
         /// <summary>
         /// 1,2,3 - сеть. 4 - нейтральное. 5,6,7 - нагрузка. 
         /// </summary>
@@ -276,12 +253,11 @@
             {
                 if (value > 0 && value < 8)
                     _переключательНапряжение = value;
-                if (ParameterChanged != null)
-                    ParameterChanged();
+                OnParameterChanged();
             }
         }
 
-        private static int _переключательФазировка = 1;
+        
         public static int ПереключательФазировка
         {
             get { return _переключательФазировка; }
@@ -289,40 +265,36 @@
             {
                 if (value >= 0 && value <= 5) _переключательФазировка = value;
                 Нагрузка = false;
-                if (ParameterChanged != null)
-                    ParameterChanged();
+                OnParameterChanged();
             }
         }
 
-        private static int _переключательКонтрольНапряжения = 2;
+        
         public static int ПереключательКонтрольНапряжения
         {
             get { return _переключательКонтрольНапряжения; }
             set
             {
                 if (value > 0 && value < 4) _переключательКонтрольНапряжения = value;
-                if (ParameterChanged != null)
-                    ParameterChanged();
+                OnParameterChanged();
 
             }
         }
 
-        private static int _переключательТокНагрузкиИЗаряда = 1;
         public static int ПереключательТокНагрузкиИЗаряда
         {
             get { return _переключательТокНагрузкиИЗаряда; }
             set
             {
                 if (value > 0 && value < 9) _переключательТокНагрузкиИЗаряда = value;
-                if (ParameterChanged != null)
-                    ParameterChanged();
+                OnParameterChanged();
 
             }
         }
         #endregion
 
         #region Нагрузка
-        private static bool _нагрузка;
+        private static bool _нагрузка = false;
 
         /// <summary>
         /// Переменная определяющая наличие нагрузки.
@@ -333,8 +305,36 @@
             set
             {
                 _нагрузка = value;
-                ResetParameters();
             }
+        }
+        #endregion
+
+        #region Фазировка
+        /// <summary>
+        /// Текущее требуемое для фазировки положение.
+        /// </summary>
+        public static int Фазировка;
+
+        /// <summary>
+        /// Задание случайной фазировки.
+        /// </summary>
+        private static void СлучайнаяФазировка()
+        {
+            var generator = new Random();
+            var zeroToOne = generator.NextDouble();
+            Фазировка = zeroToOne > 0.5F ? 4 : 2;
+        }
+
+        private static bool _кнопкаВклНагрузки;
+        public static bool КнопкаВклНагрузки 
+        {
+            get { return _кнопкаВклНагрузки; }
+            set
+            {
+                _кнопкаВклНагрузки = value;
+                if (value) Нагрузка = true;
+                OnParameterChanged(); 
+            } 
         }
 
         #endregion
@@ -344,38 +344,23 @@
         {
             get
             {
-                if (ФазировкаГорит || ЛампочкаСфазировано)
+                if (ЛампочкаСеть && ПереключательСеть && (ПереключательФазировка==2 || ПереключательФазировка==4))
                 {
                     switch (ПереключательНапряжение)
                     {
                         case 1:
                         case 2:
                         case 3:
-                            return VoltageStabilizerParameters.КабельВход;
-                        case 4:
-                            return 0;
+                            return PowerCabelParameters.Напряжение;
                         case 5:
                         case 6:
                         case 7:
-                            return 220;
-                    }
-                }
+                            if ((Нагрузка && VoltageStabilizerParameters.КабельПодключенПравильно) &&
+                                (ЛампочкаСфазировано || (КнопкаВклНагрузки && !ЛампочкаСфазировано))) return 220;
+                            else return 0;
+                        default:
+                            return 0;
 
-                // Если не включено питание, напряжение также показывается.
-                if (ЛампочкаСеть && ПереключательСеть &&
-                        (ПереключательФазировка == 2 || ПереключательФазировка == 4) && VoltageStabilizerParameters.КабельВход == 0)
-                {
-                    switch (ПереключательНапряжение)
-                    {
-                        case 1:
-                        case 2:
-                        case 3:
-                            return VoltageStabilizerParameters.ПравильныйВход;
-                        case 4:
-                        case 5:
-                        case 6:
-                        case 7:
-                            return 0;
                     }
                 }
                 return 0;
@@ -389,7 +374,7 @@
         {
             get
             {
-                return (ФазировкаГорит || ЛампочкаСфазировано) ? ВключенныеБлоки() * 5 : 0;
+                return ((КнопкаВклНагрузки && !ЛампочкаСфазировано) || ЛампочкаСфазировано) ? ВключенныеБлоки() * 5 : 0;
             }
         }
 
@@ -405,7 +390,7 @@
             {
                 if (property.Name.Contains("Лампочка"))
                 {
-                    if ((bool) property.GetValue(null))
+                    if ((bool)property.GetValue(null))
                     {
                         quantity++;
                     }
@@ -447,40 +432,9 @@
                     return ПереключательТокНагрузкиИЗаряда * 5;
                 }
 
-                return 0;
-            }
-        } 
-        #endregion
-
-        #region Фазировка
-        /// <summary>
-        /// Текущее требуемое для фазировки положение.
-        /// </summary>
-        public static int Фазировка;
-
-        /// <summary>
-        /// Задание случайной фазировки.
-        /// </summary>
-        private static void СлучайнаяФазировка()
-        {
-            var generator = new Random();
-            var zeroToOne = generator.NextDouble();
-            Фазировка = zeroToOne > 0.5F ? 4 : 2;
-        }
-
-        /// <summary>
-        /// Определение, горит ли лампочка сфазировано при нажатии на кнопку включения нагрузки.
-        /// </summary>
-        public static bool ФазировкаГорит {
-            get
-            {
-                return (ПереключательФазировка == 2 || ПереключательФазировка == 4) && ЛампочкаСеть &&
-                       ПереключательСеть && VoltageStabilizerParameters.КабельПодключенПравильно && КнопкаНагрузка;
+                return 5;
             }
         }
-
-        public static bool КнопкаНагрузка { private get; set; }
-
         #endregion
 
         public delegate void ParameterChangedHandler();
@@ -491,10 +445,69 @@
         /// </summary>
         public static event ParameterChangedHandler СтанцияСгорела;
 
+        private static void OnParameterChanged()
+        {
+            var handler = ParameterChanged;
+            if (handler != null) handler();
+        }
+
         public static void ResetParameters()
         {
-            ЛампочкаСфазировано = ПереключательФазировка == Фазировка && ЛампочкаСеть &&
-                                  ПереключательСеть && VoltageStabilizerParameters.КабельПодключенПравильно && Нагрузка;
+            OnParameterChanged();
+            VoltageStabilizerParameters.ResetParameters();
+            NKN_1Parameters.ResetParameters();
+            NKN_2Parameters.ResetParameters();
+            N15Parameters.ResetParameters();
+            C300M_1Parameters.ResetParameters();
+            C300M_2Parameters.ResetParameters();
+            C300M_3Parameters.ResetParameters();
+            C300M_4Parameters.ResetParameters();
+            C300M_1Parameters.RefreshIndicators();
+            C300M_2Parameters.RefreshIndicators();
+            C300M_3Parameters.RefreshIndicators();
+            C300M_4Parameters.RefreshIndicators();
+            A304Parameters.ResetParameters();
+            A306Parameters.ResetParameters();
         }
+
+        #region Вспомогательные переменные, для обращения к блоку
+
+        ///// <summary>
+        ///// Определение, горит ли лампочка сфазировано при нажатии на кнопку включения нагрузки.
+        ///// </summary>
+        //public static bool ФазировкаГорит
+        //{
+        //    get
+        //    {
+        //        return ПереключательФазировка == Фазировка && ЛампочкаСеть &&
+        //               ПереключательСеть && VoltageStabilizerParameters.КабельПодключенПравильно && КнопкаВклНагрузки;
+        //    }
+        //}
+
+        /// <summary>
+        /// Определение, включено ли Электрообуродование
+        /// </summary>
+        public static bool ЭлектрообуродованиеВключено
+        {
+            get { return ЛампочкаСфазировано && ТумблерЭлектрооборудование; }
+        }
+
+        /// <summary>
+        /// Определение, включён ли Выпрямитель
+        /// </summary>
+        public static bool ВыпрямительВключен
+        {
+            get { return ЛампочкаСфазировано && ТумблерВыпрямитель27В; }
+        }
+
+        /// <summary>
+        /// Определение, включён ли Н15
+        /// </summary>
+        public static bool Н15Включен
+        {
+            get { return ЛампочкаСфазировано && ТумблерН15; }
+        }
+        #endregion
+
     }
 }

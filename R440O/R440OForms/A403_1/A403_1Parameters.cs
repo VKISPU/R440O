@@ -16,7 +16,7 @@ namespace R440O.R440OForms.A403_1
 
         public static void timer_Tick(object sender, EventArgs e)
         {
-            if (ТумблерСеть && PowerCabelParameters.КабельСеть && N502BParameters.ЛампочкаСфазировано)
+            if (ТумблерСеть && N502BParameters.ЛампочкаСфазировано)
             {
                 if (Array.IndexOf(КнопкиПараметры, true) == -1)
                 {
@@ -257,7 +257,7 @@ namespace R440O.R440OForms.A403_1
             {
                 _кнопкаПараметр = value;
                 //запись в массив значений текущего значения
-                if (Array.IndexOf(КнопкиПараметры, true) != -1 && ТумблерСеть && PowerCabelParameters.КабельСеть
+                if (Array.IndexOf(КнопкиПараметры, true) != -1 && ТумблерСеть
                     && N502BParameters.ЛампочкаСфазировано)
                 {
                     switch (Значение.Length)
@@ -337,8 +337,8 @@ namespace R440O.R440OForms.A403_1
 
         public static void ResetParameters()
         {
-            ЛампочкаКомплект1 = ТумблерКомплект && ТумблерСеть && PowerCabelParameters.КабельСеть && N502BParameters.ЛампочкаСфазировано;
-            ЛампочкаКомплект2 = !ТумблерКомплект && ТумблерСеть && PowerCabelParameters.КабельСеть && N502BParameters.ЛампочкаСфазировано;
+            ЛампочкаКомплект1 = ТумблерКомплект && ТумблерСеть && N502BParameters.ЛампочкаСфазировано;
+            ЛампочкаКомплект2 = !ТумблерКомплект && ТумблерСеть && N502BParameters.ЛампочкаСфазировано;
 
             if (!ТумблерСеть)
             {

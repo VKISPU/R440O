@@ -74,6 +74,7 @@
     <Compile Include="R440OForms\Kontur_P3\Параметры\КП5.cs" />
     <Compile Include="R440OForms\Kontur_P3\Параметры\КП6.cs" />
     <Compile Include="R440OForms\Kontur_P3\Параметры\Общие.cs" />
+    <Compile Include="R440OForms\N502B\N502BParameters.cs" />
     <Compile Include="ThirdParty\EasyTimer.cs" />
     <Compile Include="ОбщиеТипыДанных\Модуляция.cs" />
     <Compile Include="СостоянияЭлементов\ДАБ5.cs" />
@@ -104,7 +105,7 @@
     <Compile Include="Parameters\K02M_02Parameters.cs" />
     <Compile Include="Parameters\K02M_01Parameters.cs" />
     <Compile Include="R440OForms\Kontur_P3\Параметры\КП7.cs" />
-    <Compile Include="Parameters\N12SParameters.cs" />
+    <Compile Include="R440OForms\N12S\N12SParameters.cs" />
     <Compile Include="Parameters\N13_1Parameters.cs" />
     <Compile Include="Parameters\N13_2Parameters.cs" />
     <Compile Include="R440OForms\N15Inside\N15InsideParameters.cs" />
@@ -134,7 +135,6 @@
     <Compile Include="R440OForms\C300M_1\C300M_1Parameters.cs" />
     <Compile Include="R440OForms\C300M_3\C300M_3Parameters.cs" />
     <Compile Include="R440OForms\C300M_4\C300M_4Parameters.cs" />
-    <Compile Include="R440OForms\N502B\N502BParameters.cs" />
     <Compile Include="R440OForms\NKN_2\NKN_2Parameters.cs" />
     <Compile Include="R440OForms\NKN_1\NKN_1Parameters.cs" />
     <Compile Include="R440OForms\P220_27G_2\P220_27G_2Parameters.cs" />
@@ -547,7 +547,6 @@
     <Compile Include="BaseClasses\Signal.cs" />
     <Compile Include="ThirdParty\TransformImageHelper.cs" />
     <Compile Include="СостоянияЭлементов\БМБ.cs" />
-    <Compile Include="СостоянияЭлементов\Н18.cs" />
     <EmbeddedResource Include="BackgroundImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>

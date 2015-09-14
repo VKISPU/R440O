@@ -1,12 +1,13 @@
 ﻿namespace R440O.R440OForms.PowerCabel
 {
+    using BaseClasses;
     using System;
     using System.Windows.Forms;
 
     /// <summary>
     /// Форма блока кабель питания
     /// </summary>
-    public partial class PowerCabelForm : Form
+    public partial class PowerCabelForm : Form, IRefreshableForm
     {
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="PowerCabelForm"/>
@@ -14,17 +15,18 @@
         public PowerCabelForm()
         {
             InitializeComponent();
-            InitializeTumblersPosition();
-            InitializeCabelPosition();
+            PowerCabelParameters.ParameterChanged += RefreshFormElements;
+            PowerCabelParameters.СтанцияСгорела += ВыводСообщенияСтанцияСгорела;
+            this.RefreshFormElements();
+        }
+        private void ВыводСообщенияСтанцияСгорела()
+        {
+            MessageBox.Show("Станция сгорела!", "ОШИБКА");
         }
 
         #region Кабель СЕТЬ
         private void КабельСеть_Click(object sender, EventArgs e)
         {
-            КабельСеть.BackgroundImage = (PowerCabelParameters.КабельСеть)
-                ? null
-                : ControlElementImages.powerCabelEnter;
-
             PowerCabelParameters.КабельСеть = !PowerCabelParameters.КабельСеть;
         }
         #endregion
@@ -32,29 +34,24 @@
         #region Тумблер ОСВЕЩЕНИЕ
         private void ТумблерОсвещение_Click(object sender, EventArgs e)
         {
-            ТумблерОсвещение.BackgroundImage = (PowerCabelParameters.ТумблерОсвещение)
-                ? ControlElementImages.tumblerType4Left
-                : ControlElementImages.tumblerType4Right;
-
             PowerCabelParameters.ТумблерОсвещение = !PowerCabelParameters.ТумблерОсвещение;
         }
         #endregion
 
         #region Инициализация
-        private void InitializeTumblersPosition()
+
+        public void RefreshFormElements()
         {
             ТумблерОсвещение.BackgroundImage = (PowerCabelParameters.ТумблерОсвещение)
                 ? ControlElementImages.tumblerType4Right
                 : ControlElementImages.tumblerType4Left;
-        }
 
-        private void InitializeCabelPosition()
-        {
             КабельСеть.BackgroundImage = (PowerCabelParameters.КабельСеть)
                 ? ControlElementImages.powerCabelEnter
                 : null;
         }
         #endregion
+
 
     }
 }

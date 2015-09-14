@@ -13,7 +13,7 @@
         /// </summary>
         public static bool ЛампочкаСеть
         {
-            get { return N15Parameters.Включен && ТумблерСеть && ((ТумблерМуДу && N15Parameters.Тумблер5МГц25МГц3) || !ТумблерМуДу); }
+            get { return N15Parameters.Включен && ТумблерСеть && ((ТумблерМуДу && N15Parameters.Тумблер5Мгц == 1) || !ТумблерМуДу); }
         }
 
         public static bool Лампочка27В { get; set; }

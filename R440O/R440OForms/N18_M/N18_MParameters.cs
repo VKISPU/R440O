@@ -9,16 +9,16 @@
     {
         #region Лампочки
         //Лампочки
-        public static string N18_MЛампочкаКЗТЛГ1 { get; set; }
-        public static string N18_MЛампочкаКЗТЛГ2 { get; set; }
-        public static string N18_MЛампочкаКЗТЛГ3 { get; set; }
-        public static string N18_MЛампочкаКЗТЛГ4 { get; set; }
-        public static string N18_MЛампочкаСПСТест { get; set; }
-        public static string N18_MЛампочкаСПСИнформ { get; set; }
-        public static string N18_MЛампочкаПилотК1_1 { get; set; }
-        public static string N18_MЛампочкаПилотК1_2 { get; set; }
-        public static string N18_MЛампочкаИнформК1_1 { get; set; }
-        public static string N18_MЛампочкаИнформК1_2 { get; set; }
+        public static bool ЛампочкаК3ТЛГ1 { get; set; }
+        public static bool ЛампочкаК3ТЛГ2 { get; set; }
+        public static bool ЛампочкаК3ТЛГ3 { get; set; }
+        public static bool ЛампочкаК3ТЛГ4 { get; set; }
+        public static bool ЛампочкаСПСТест { get; set; }
+        public static bool ЛампочкаСПСИнформ { get; set; }
+        public static bool ЛампочкаПилотК1_1 { get; set; }
+        public static bool ЛампочкаПилотК1_2 { get; set; }
+        public static bool ЛампочкаИнформК1_1 { get; set; }
+        public static bool ЛампочкаИнформК1_2 { get; set; }
         #endregion
 
         #region Переключатели
@@ -26,6 +26,16 @@
         #region Двухпозиционные
 
         private static int _переключательВходБ22 = 1;
+        private static int _переключательВыход1РН = 1;
+        private static int _переключательВыход2РН = 1;
+        private static int _переключатель48ПрмЩв = 1;
+        private static int _переключательПрмСс2 = 3;
+        private static int _переключательПрмСс1 = 3;
+        private static int _переключательПрдБма12 = 6;
+        private static int _переключательПРД = 3;
+        private static int _переключательВходК121 = 1;
+        private static int _переключательПРМ1 = 3;
+
        
         /// <summary>
         /// 1 - б3-2,
@@ -41,7 +51,7 @@
             }
         }
 
-        private static int _переключательВыход1РН = 1;
+        
 
         /// <summary>
         /// 1 - б1-1,
@@ -57,7 +67,7 @@
             }
         }
 
-        private static int _переключательВыход2РН = 1;
+       
 
         /// <summary>
         /// 1 - б1-2,
@@ -73,7 +83,7 @@
             }
         }
 
-        private static int _переключатель48ПрмЩв = 1;
+        
 
         /// <summary>
         /// 1 - б2,
@@ -90,7 +100,7 @@
         } 
         #endregion
 
-        private static int _переключательПрмСс2 = 3;
+        
 
         /// <summary>
         /// 1 - прм-2,
@@ -109,7 +119,7 @@
             }
         }
 
-        private static int _переключательПрмСс1 = 3;
+        
 
         /// <summary>
         /// 1 - прм-1,
@@ -128,7 +138,7 @@
             }
         }
         
-        private static int _переключательПрдБма12 = 6;
+       
 
         /// <summary>
         /// 1 - тлф-1/2,
@@ -151,7 +161,7 @@
             }
         }
 
-        private static int _переключательПРД = 3;
+        
 
         /// <summary>
         /// 1 - даб-5,
@@ -171,7 +181,7 @@
             }
         }
 
-        private static int _переключательВходК121 = 1;
+       
 
         /// <summary>
         /// 1 - откл,
@@ -192,7 +202,7 @@
             }
         }
 
-        private static int _переключательПРМ1 = 3;
+        
 
         /// <summary>
         /// 1 - б3-1,
@@ -233,12 +243,12 @@
         #endregion
 
         #region Тумблеры
-        private static ТумблерДаб5 _тумблерДАБ5 = ТумблерДаб5.Прм1;
-        private static ТумблерКауПрм _тумблерКАУ_ПРМ = ТумблерКауПрм.Б11;
-        private static ТумблерПрдСс _тумблерПРД_СС = ТумблерПрдСс.КонтурП;
-        private static ТумблерТлфПрм _тумблерТЛФ_ПРМ = ТумблерТлфПрм.Осн;
+        private static bool _тумблерДАБ5 = false;
+        private static bool _тумблерКАУ_ПРМ = false;
+        private static bool _тумблерПРД_СС = false;
+        private static bool _тумблерТЛФ_ПРМ = false;
 
-        public static ТумблерДаб5 ТумблерДАБ5
+        public static bool ТумблерДАБ5
         {
             get { return _тумблерДАБ5; }
             set
@@ -248,7 +258,7 @@
             }
         }
 
-        public static ТумблерКауПрм ТумблерКАУ_ПРМ
+        public static bool ТумблерКАУ_ПРМ
         {
             get { return _тумблерКАУ_ПРМ; }
             set
@@ -258,7 +268,7 @@
             }
         }
 
-        public static ТумблерПрдСс ТумблерПРД_СС
+        public static bool ТумблерПРД_СС
         {
             get { return _тумблерПРД_СС; }
             set
@@ -268,7 +278,7 @@
             }
         }
 
-        public static ТумблерТлфПрм ТумблерТЛФ_ПРМ
+        public static bool ТумблерТЛФ_ПРМ
         {
             get { return _тумблерТЛФ_ПРМ; }
             set

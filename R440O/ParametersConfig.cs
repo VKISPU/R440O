@@ -1,5 +1,6 @@
 ﻿namespace R440O
 {
+    using System;
     using Parameters;
     using R440OForms.A205M_1;
     using R440OForms.A304;
@@ -57,20 +58,17 @@
             // Голополосов Игорь.
 
             #endregion
-
-            //// Сброс случайных значений Фазировка и Напряжение
-            N502BParameters.Фазировка = 4;
-            VoltageStabilizerParameters.ПравильныйВход = 380;
-
-            #region Подключение питания
+            
+            #region Подключение питания   
             //Подключаем кабели
             PowerCabelParameters.КабельСеть = true;
-            VoltageStabilizerParameters.КабельВход = 380;
+            VoltageStabilizerParameters.КабельВход = PowerCabelParameters.Напряжение;
 
-            //Включаем Н502Б и Нагрузку
+            // Сброс случайных значений Фазировка и Напряжение, Включаем Н502Б и Нагрузку
             N502BParameters.ПереключательСеть = true;
-            N502BParameters.ПереключательФазировка = 4;
-            N502BParameters.Нагрузка = true;
+            N502BParameters.ПереключательФазировка = N502BParameters.Фазировка;
+            N502BParameters.КнопкаВклНагрузки = true;
+            N502BParameters.КнопкаВклНагрузки = false;
 
             //Устанавливаем переключатели
             N502BParameters.ТумблерЭлектрооборудование = true;
@@ -139,7 +137,7 @@
             N18_MParameters.ПереключательПРМ1 = 4;
 
             // Генераторы
-            N15Parameters.Тумблер5МГц25МГц3 = true;
+            N15Parameters.Тумблер5Мгц = 0;
             P220_27G_2Parameters.ТумблерСеть = true;
             P220_27G_2Parameters.ТумблерМуДу = true;
             P220_27G_3Parameters.ТумблерСеть = true;
@@ -164,6 +162,15 @@
             N15LocalParameters.локТумблерБ2_2 = true;
             N15LocalParameters.локТумблерБ3_2 = true;
 
+
+            var generator = new Random();
+            var zeroToOne = generator.Next(2);
+            N15Parameters.КнопкаН13_1 = zeroToOne == 0;
+            N15Parameters.КнопкаН13_2 = zeroToOne == 1;
+            N15Parameters.КнопкаН13_12 = zeroToOne == 2;
+
+            zeroToOne = generator.Next(1);
+            N15Parameters.ТумблерАнтЭкв = (zeroToOne == 0) ? true : false;
             #endregion
 
         }

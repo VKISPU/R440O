@@ -5,8 +5,6 @@
 //-----------------------------------------------------------------------
 
 using System;
-using System.Diagnostics;
-using System.Diagnostics.Eventing.Reader;
 using R440O.Parameters;
 using R440O.ThirdParty;
 
@@ -24,525 +22,138 @@ namespace R440O.R440OForms.N12S
         /// </summary>
         public N12SForm()
         {
-            InitializeComponent();
-            InitializeButtonsPosition();
-            InitializeIndicatorsPosition();         
-
-            timer = new Timer();
-            timer.Enabled = false;
-
-            FormClosing += IndicatorsToNull;
-            N12SТумблерСеть.Click += IndicatorsToNull;
+            this.InitializeComponent();
+            N12SParameters.ParameterChanged += RefreshFormElements;
+            this.RefreshFormElements();
         }
 
-        private readonly Timer timer;
-
-        #region Индикаторы
-        private void timerAlphaRight_Tick(object sender, EventArgs e)
-        {
-
-            if (N12SParameters.N12SIndicatorAlpha >= -270 && N12SParameters.N12SIndicatorAlpha <= 270)
-                N12SParameters.N12SIndicatorAlphaИ += 0.5F;
-            N12SParameters.N12SIndicatorAlpha += 0.5F;
-
-            //положение стрелок потенциометров
-            if (N12SParameters.N12SIndicatorAlphaИ != -270)
-                if (N12SParameters.N12SIndicatorAlphaV <= 10)
-                    N12SParameters.N12SIndicatorAlphaV += 0.1F;
-                else if (N12SParameters.N12SКнопкаУскор && N12SParameters.N12SIndicatorAlphaV <= 20)
-                    N12SParameters.N12SIndicatorAlphaV += 0.1F;
-                else if (N12SParameters.N12SIndicatorAlphaИ == -270 || N12SParameters.N12SIndicatorAlphaИ == 270)
-                    N12SParameters.N12SIndicatorAlphaV += 0.1F;
-
-            //отрисовка индикаторов (стрелок и кругов)
-            var angle = N12SParameters.N12SIndicatorAlpha * (-36) + 36;
-            N12SIndicatorAlphaCenter.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorCenter, angle);
-
-            angle = - N12SParameters.N12SIndicatorAlpha - 67;
-            N12SIndicatorAlpha.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorAlpha, angle);
-
-            angle = N12SParameters.N12SIndicatorAlphaИ * 0.18F ;
-            N12SIndicatorAlphaИ.BackgroundImage =
-                   TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow, angle);
-
-            angle = N12SParameters.N12SIndicatorAlphaV * 1.5F;
-            N12SIndicatorAlphaV.BackgroundImage =
-                   TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow, angle);
-
-            if (N12SParameters.N12SIndicatorAlphaИ == -270 || N12SParameters.N12SIndicatorAlphaИ == 270)
-            {
-                N12SParameters.N12SЛампочкаУпорА = true;
-                N12SЛампочкаУпорА.BackgroundImage = ControlElementImages.lampType6OnRed;
-            }
-            else
-            {
-                N12SParameters.N12SЛампочкаУпорА = false;
-                N12SЛампочкаУпорА.BackgroundImage = null;
-            }
-        }
-
-        private void timerAlphaLeft_Tick(object sender, EventArgs e)
-        {
-            if (N12SParameters.N12SIndicatorAlpha >= -270 && N12SParameters.N12SIndicatorAlpha <= 270)
-                N12SParameters.N12SIndicatorAlphaИ -= 0.5F;
-            N12SParameters.N12SIndicatorAlpha -= 0.5F;
-
-            //положение стрелок потенциометров
-            if (N12SParameters.N12SIndicatorAlphaИ != 270)
-                if (N12SParameters.N12SIndicatorAlphaV >= -10)
-                    N12SParameters.N12SIndicatorAlphaV -= 0.1F;
-                else if (N12SParameters.N12SКнопкаУскор && N12SParameters.N12SIndicatorAlphaV >= -20)
-                    N12SParameters.N12SIndicatorAlphaV -= 0.1F;
-                else if (N12SParameters.N12SIndicatorAlphaИ == -270 || N12SParameters.N12SIndicatorAlphaИ == 270)
-                    N12SParameters.N12SIndicatorAlphaV -= 0.1F;
-            
-
-            var angle = N12SParameters.N12SIndicatorAlpha * (-36) + 36;
-            N12SIndicatorAlphaCenter.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorCenter, angle);
-
-            angle = - N12SParameters.N12SIndicatorAlpha - 67;
-            N12SIndicatorAlpha.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorAlpha, angle);
-
-            angle = N12SParameters.N12SIndicatorAlphaИ * 0.18F ;
-            N12SIndicatorAlphaИ.BackgroundImage =
-                   TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow, angle);
-
-            angle = N12SParameters.N12SIndicatorAlphaV * 1.5F;
-            N12SIndicatorAlphaV.BackgroundImage =
-                   TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow, angle);
-
-            if (N12SParameters.N12SIndicatorAlphaИ == -270 || N12SParameters.N12SIndicatorAlphaИ == 270)
-            {
-                N12SParameters.N12SЛампочкаУпорА = true;
-                N12SЛампочкаУпорА.BackgroundImage = ControlElementImages.lampType6OnRed;
-            }
-            else
-            {
-                N12SParameters.N12SЛампочкаУпорА = true;
-                N12SЛампочкаУпорА.BackgroundImage = null;
-            }
-
-        }
-
-        private void timerBetaLeft_Tick(object sender, EventArgs e)
-        {
-            if (N12SParameters.N12SIndicatorBeta >= 0 && N12SParameters.N12SIndicatorBeta <= 90)
-                N12SParameters.N12SIndicatorBetaИ += 0.5F;
-            N12SParameters.N12SIndicatorBeta += 0.5F;
-            
-            //работа стрелок потенциометра
-            if (N12SParameters.N12SIndicatorBetaИ != 0)
-                if (N12SParameters.N12SIndicatorBetaV <= 10)
-                    N12SParameters.N12SIndicatorBetaV += 0.2F;
-                else if (N12SParameters.N12SКнопкаУскор && N12SParameters.N12SIndicatorBetaV <= 20)
-                    N12SParameters.N12SIndicatorBetaV += 0.2F;
-                else if (N12SParameters.N12SIndicatorBetaИ == 0 || N12SParameters.N12SIndicatorBetaИ == 90)
-                    N12SParameters.N12SIndicatorBetaV += 0.2F;
-
-            var angle = N12SParameters.N12SIndicatorBeta * (-36)  + 36;
-                N12SIndicatorBetaCenter.BackgroundImage =
-                    TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorCenter, angle);
-
-                angle = - N12SParameters.N12SIndicatorBeta + 48;
-                N12SIndicatorBeta.BackgroundImage =
-                    TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorBeta, angle);
-
-                angle = N12SParameters.N12SIndicatorBetaИ * 1.1F - 50;
-                N12SIndicatorBetaИ.BackgroundImage =
-                       TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow, angle);
-
-                angle = N12SParameters.N12SIndicatorBetaV * 1.5F;
-                N12SIndicatorBetaV.BackgroundImage =
-                       TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow, angle);
-
-            if (N12SParameters.N12SIndicatorBetaИ == 90 || N12SParameters.N12SIndicatorBetaИ == 0)
-            {
-                N12SParameters.N12SЛампочкаУпорБ = true;
-                N12SЛампочкаУпорБ.BackgroundImage = ControlElementImages.lampType6OnRed;
-            }
-            else
-            {
-                N12SParameters.N12SЛампочкаУпорБ = false;
-                N12SЛампочкаУпорБ.BackgroundImage = null;
-            }
-        }
-
-        private void timerBetaRight_Tick(object sender, EventArgs e)
-        {
-            if (N12SParameters.N12SIndicatorBeta >= 0 && N12SParameters.N12SIndicatorBeta <= 90)
-                N12SParameters.N12SIndicatorBetaИ -= 0.5F;
-            N12SParameters.N12SIndicatorBeta -= 0.5F;
-
-            //работа потенциометров
-            if (N12SParameters.N12SIndicatorBetaИ != 90)
-                if (N12SParameters.N12SIndicatorBetaV >= -10)
-                    N12SParameters.N12SIndicatorBetaV -= 0.2F;
-                else if (N12SParameters.N12SКнопкаУскор && N12SParameters.N12SIndicatorBetaV >= -20)
-                    N12SParameters.N12SIndicatorBetaV -= 0.2F;
-                else if (N12SParameters.N12SIndicatorBetaИ == 0 || N12SParameters.N12SIndicatorBetaИ == 90)
-                    N12SParameters.N12SIndicatorBetaV -= 0.2F;
-
-
-
-            var angle = N12SParameters.N12SIndicatorBetaV * 1.5F;
-            N12SIndicatorBetaV.BackgroundImage =
-                   TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow, angle);
-
-            angle = N12SParameters.N12SIndicatorBeta *(-36) + 36;
-            N12SIndicatorBetaCenter.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorCenter, angle);
-
-            angle = - N12SParameters.N12SIndicatorBeta + 48;
-            N12SIndicatorBeta.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorBeta, angle);
-
-            angle = N12SParameters.N12SIndicatorBetaИ*1.1F - 50;
-            N12SIndicatorBetaИ.BackgroundImage =
-                   TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow, angle);
-
-            if (N12SParameters.N12SIndicatorBetaИ == 0 || N12SParameters.N12SIndicatorBetaИ == 90)
-            {
-                N12SParameters.N12SЛампочкаУпорБ = true;
-                N12SЛампочкаУпорБ.BackgroundImage = ControlElementImages.lampType6OnRed;
-            }
-            else
-            {
-                N12SParameters.N12SЛампочкаУпорБ = false;
-                N12SЛампочкаУпорБ.BackgroundImage = null;
-            }
-        }
-
+        #region Кнопка
         private void N12SКнопкаУскор_Click(object sender, System.EventArgs e)
         {
-            if (N12SParameters.N12SКнопкаУскор)
-                N12SКнопкаУскор.BackgroundImage = null;
-            else
-                N12SКнопкаУскор.BackgroundImage = ControlElementImages.buttonRoundType8;
-            N12SParameters.N12SКнопкаУскор = !N12SParameters.N12SКнопкаУскор;
+            N12SParameters.КнопкаУскор = !N12SParameters.КнопкаУскор;
         }
         #endregion
 
-        #region Потенциометры
-        /// <summary>
-        /// Сброс потенциометров при закрытии формы и отключении питания
-        /// </summary>
-        private void IndicatorsToNull(object sender, EventArgs e)
-        {
- 
-
-            if (N12SParameters.N12SIndicatorBetaИ == 0)
-                N12SParameters.N12SIndicatorBetaV = -30;
-            else if (N12SParameters.N12SIndicatorBetaИ == 90)
-                N12SParameters.N12SIndicatorBetaV = 30;
-            else N12SParameters.N12SIndicatorBetaV = 0;
-
-            if (N12SParameters.N12SIndicatorAlphaИ == -270)
-                N12SParameters.N12SIndicatorAlphaV = -30;
-            else if (N12SParameters.N12SIndicatorAlphaИ == 270)
-                N12SParameters.N12SIndicatorAlphaV = 30;
-            else N12SParameters.N12SIndicatorAlphaV = 0;
-        }
-
-        /// <summary>
-        /// возврат стрелки потенциометра альфа
-        /// </summary>
-        private void timerAlphaReturn_Tick(object sender, EventArgs e)
-        {
-            if (N12SParameters.N12SIndicatorAlphaV == 0 || N12SParameters.N12SIndicatorAlphaИ == 270
-                || N12SParameters.N12SIndicatorAlphaИ == -270)
-                timer.Stop();
-            else if (N12SParameters.N12SIndicatorAlphaV > 0)
-            {
-                N12SParameters.N12SIndicatorAlphaV -= 0.1F;
-
-            }
-            else
-                N12SParameters.N12SIndicatorAlphaV += 0.1F;
-
-            var angle = N12SParameters.N12SIndicatorAlphaV * 1.5F;
-            N12SIndicatorAlphaV.BackgroundImage =
-                   TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow, angle);
-
-        }
-
-        /// <summary>
-        /// возврат стрелки потенциометра бета
-        /// </summary>
-        private void timerBetaReturn_Tick(object sender, EventArgs e)
-        {
-            if (N12SParameters.N12SIndicatorBetaV == 0 || N12SParameters.N12SIndicatorBetaИ == 90
-                || N12SParameters.N12SIndicatorBetaИ == 0)
-                timer.Stop();
-            else if (N12SParameters.N12SIndicatorBetaV > 0)
-                N12SParameters.N12SIndicatorBetaV -= 0.2F;
-            else
-                N12SParameters.N12SIndicatorBetaV += 0.2F;
-
-            var angle = N12SParameters.N12SIndicatorBetaV * 1.5F;
-            N12SIndicatorBetaV.BackgroundImage =
-                   TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow, angle);
-        }
-
-        /// <summary>
-        /// возврат стрелки потенциометра бета до 30 при упоре
-        /// </summary>
-        private void timerBetaReturnTo30_Tick(object sender, EventArgs e)
-        {
-            if (N12SParameters.N12SIndicatorBetaV >= 30 || N12SParameters.N12SIndicatorBetaV <= -30)
-                timer.Stop();
-            else if (N12SParameters.N12SIndicatorBetaИ == 90)
-                N12SParameters.N12SIndicatorBetaV += 0.2F;
-            else if (N12SParameters.N12SIndicatorBetaИ == 0)
-                N12SParameters.N12SIndicatorBetaV -= 0.2F;
-
-            var angle = N12SParameters.N12SIndicatorBetaV * 1.5F;
-            N12SIndicatorBetaV.BackgroundImage =
-                   TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow, angle);
-        }
-
-        /// <summary>
-        /// возврат стрелки потенциометра бета до 30 при упоре
-        /// </summary>
-        private void timerAlphaReturnTo30_Tick(object sender, EventArgs e)
-        {
-            if (N12SParameters.N12SIndicatorAlphaV >= 30 || N12SParameters.N12SIndicatorAlphaV <= -30)
-                timer.Stop();
-            else if (N12SParameters.N12SIndicatorAlphaИ == 270)
-                N12SParameters.N12SIndicatorAlphaV += 0.1F;
-            else if (N12SParameters.N12SIndicatorAlphaИ == -270)
-                N12SParameters.N12SIndicatorAlphaV -= 0.1F;
-
-            var angle = N12SParameters.N12SIndicatorAlphaV * 1.5F;
-            N12SIndicatorAlphaV.BackgroundImage =
-                   TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow, angle);
-        }
-        #endregion
 
         #region Тумблеры
         private void N12SТумблерА_MouseDown(object sender, MouseEventArgs e)
         {
-            timer.Tick -= timerAlphaReturnTo30_Tick;
-            timer.Tick -= timerAlphaReturn_Tick;
             if (e.Button == MouseButtons.Left)
-            {
-                if (N12SParameters.N12SТумблерСеть)
-                {
-                    timer.Tick += timerAlphaLeft_Tick;
-                    if (N12SParameters.N12SКнопкаУскор)
-                        timer.Interval = 5;
-                    else
-                        timer.Interval = 50;
-                    timer.Start();
-                }
-                N12SТумблерА.BackgroundImage = ControlElementImages.tumblerType8Left;
-            }
+                N12SParameters.ТумблерА = -1;
+
             if (e.Button == MouseButtons.Right)
-            {
-                if (N12SParameters.N12SТумблерСеть)
-                {
-                    timer.Tick += timerAlphaRight_Tick;
-                    if (N12SParameters.N12SКнопкаУскор)
-                        timer.Interval = 5;
-                    else
-                        timer.Interval = 50;
-                    timer.Start();
-                }
-                N12SТумблерА.BackgroundImage = ControlElementImages.tumblerType8Right;
-            }
-                
+                N12SParameters.ТумблерА = 1;
         }
 
         private void N12SТумблерА_MouseUp(object sender, MouseEventArgs e)
         {
-            N12SТумблерА.BackgroundImage = null;
-            if (N12SParameters.N12SТумблерСеть)
-            {
-                timer.Stop();
-                timer.Tick -= timerAlphaRight_Tick;
-                timer.Tick -= timerAlphaLeft_Tick;
-
-                //возвращаем назад потенциометр
-                timer.Interval = 50;
-                timer.Start();
-                if (N12SParameters.N12SIndicatorAlphaИ == -270 || N12SParameters.N12SIndicatorAlphaИ == 270)
-                    timer.Tick += timerAlphaReturnTo30_Tick;
-                else
-                    timer.Tick += timerAlphaReturn_Tick;
-            }
-
+            N12SParameters.ТумблерА = 0;
         }
 
         private void N12SТумблерБ_MouseDown(object sender, MouseEventArgs e)
         {
-            timer.Tick -= timerBetaReturn_Tick;
-            timer.Tick -= timerBetaReturnTo30_Tick;
             if (e.Button == MouseButtons.Left)
-            {
-                if (N12SParameters.N12SТумблерСеть)
-                {
-                    timer.Tick += timerBetaLeft_Tick;
-                    if (N12SParameters.N12SКнопкаУскор)
-                        timer.Interval = 5;
-                    else
-                        timer.Interval = 50;
-                    timer.Start();
-                }
-                N12SТумблерБ.BackgroundImage = ControlElementImages.tumblerType8Up;
+                N12SParameters.ТумблерБ = 1;
 
-            }
             if (e.Button == MouseButtons.Right)
-            {
-                if (N12SParameters.N12SТумблерСеть)
-                {
-                    timer.Tick += timerBetaRight_Tick;
-                    if (N12SParameters.N12SКнопкаУскор)
-                        timer.Interval = 5;
-                    else
-                        timer.Interval = 50;
-                    timer.Start();
-                }
-                N12SТумблерБ.BackgroundImage = ControlElementImages.tumblerType8Down;
-            }
+                N12SParameters.ТумблерБ = -1;
         }
 
         private void N12SТумблерБ_MouseUp(object sender, MouseEventArgs e)
         {
-            N12SТумблерБ.BackgroundImage = null;
-            if (N12SParameters.N12SТумблерСеть)
-            {
-                timer.Stop();
-                timer.Tick -= timerBetaRight_Tick;
-                timer.Tick -= timerBetaLeft_Tick;
-
-                //возвращаем назад потенциометр
-                timer.Interval = 50;
-                timer.Start();
-                if (N12SParameters.N12SIndicatorBetaИ == 0 || N12SParameters.N12SIndicatorBetaИ == 90)
-                    timer.Tick += timerBetaReturnTo30_Tick;
-                else
-                    timer.Tick += timerBetaReturn_Tick;
-            }
-
+            N12SParameters.ТумблерБ = 0;
         }
 
         private void N12SТумблерСеть_Click(object sender, System.EventArgs e)
         {
-            if (N12SParameters.N12SТумблерСеть)
-            {
-                N12SТумблерСеть.BackgroundImage = ControlElementImages.tumblerType8Down;
-                N12SParameters.N12SЛампочкаГотовность = false;
-                
-                //сбрасываем потенциометры
-                timer.Stop();
-                var angle = 0;
-                N12SIndicatorBetaV.BackgroundImage =
-                       TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow, angle);
-                angle = -50;
-                N12SIndicatorBetaИ.BackgroundImage =
-                       TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow, angle);
-                angle = 0;
-                N12SIndicatorAlphaV.BackgroundImage =
-                       TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow, angle);
-                angle = 0;
-                N12SIndicatorAlphaИ.BackgroundImage =
-                       TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow, angle);
-
-                //гасим лампочки
-                N12SЛампочкаГотовность.BackgroundImage = null;
-                N12SЛампочкаУпорА.BackgroundImage = null;
-                N12SЛампочкаУпорБ.BackgroundImage = null;
-
-                //остановка таймера
-                timer.Stop();
-
-                timer.Tick -= timerAlphaReturnTo30_Tick;
-                timer.Tick -= timerAlphaReturn_Tick;
-                timer.Tick -= timerAlphaRight_Tick;
-                timer.Tick -= timerAlphaLeft_Tick;
-
-                timer.Tick -= timerBetaReturnTo30_Tick;
-                timer.Tick -= timerBetaReturn_Tick;
-                timer.Tick -= timerBetaRight_Tick;
-                timer.Tick -= timerBetaLeft_Tick;
-            }
-            else
-            {
-                N12SТумблерСеть.BackgroundImage = ControlElementImages.tumblerType8Up;
-                N12SParameters.N12SЛампочкаГотовность = true;
-                N12SЛампочкаГотовность.BackgroundImage = ControlElementImages.lampType10OnGreen;
-                
-            }
-            N12SParameters.N12SТумблерСеть = !N12SParameters.N12SТумблерСеть;
-            if (N12SParameters.N12SТумблерСеть) InitializeIndicatorsPosition();
+            N12SParameters.ТумблерСеть = !N12SParameters.ТумблерСеть;
         }
         #endregion
 
-        #region Инициализация
-        private void InitializeButtonsPosition()
-        {
-            if (!N12SParameters.N12SКнопкаУскор)
-                N12SКнопкаУскор.BackgroundImage = null;
-            else
-                N12SКнопкаУскор.BackgroundImage =  ControlElementImages.buttonRoundType8;
 
-            if (!N12SParameters.N12SТумблерСеть)
-                N12SТумблерСеть.BackgroundImage = ControlElementImages.tumblerType8Down;
-            else
-                N12SТумблерСеть.BackgroundImage = ControlElementImages.tumblerType8Up;
-        }
-
-        private void InitializeIndicatorsPosition()
+        public void RefreshFormElements()
         {
-            var angle = N12SParameters.N12SIndicatorBeta * (-36) + 36;
-            N12SIndicatorBetaCenter.BackgroundImage =
+            ТумблерСеть.BackgroundImage = N12SParameters.ТумблерСеть
+                ? ControlElementImages.tumblerType8Up
+                : ControlElementImages.tumblerType8Down;
+
+            N12SКнопкаУскор.BackgroundImage = N12SParameters.КнопкаУскор
+                ? ControlElementImages.buttonRoundType8
+                : null;
+
+            switch (N12SParameters.ТумблерА)
+            {
+                case -1:
+                    ТумблерА.BackgroundImage = ControlElementImages.tumblerType8Left;
+                    break;
+                case 0:
+                    ТумблерА.BackgroundImage = null;
+                    break;
+                case 1:
+                    ТумблерА.BackgroundImage = ControlElementImages.tumblerType8Right;
+                    break;
+            }
+
+            switch (N12SParameters.ТумблерБ)
+            {
+                case -1:
+                    ТумблерБ.BackgroundImage = ControlElementImages.tumblerType8Down;
+                    break;
+                case 0:
+                    ТумблерБ.BackgroundImage = null;
+                    break;
+                case 1:
+                    ТумблерБ.BackgroundImage = ControlElementImages.tumblerType8Up;
+                    break;
+            }
+
+            //Индикаторы
+
+            var angle = N12SParameters.ИндикаторAlpha * (-36) + 36;
+            ИндикаторAlphaCenter.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorCenter, angle);
 
-            angle = - N12SParameters.N12SIndicatorBeta + 48;
-            N12SIndicatorBeta.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorBeta, angle);
-
-            angle = N12SParameters.N12SIndicatorAlpha * (-36) + 36;
-            N12SIndicatorAlphaCenter.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorCenter, angle);
-
-            angle = - N12SParameters.N12SIndicatorAlpha - 67;
-            N12SIndicatorAlpha.BackgroundImage =
+            angle = -N12SParameters.ИндикаторAlpha - 67;
+            ИндикаторAlpha.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorAlpha, angle);
 
-            angle = (N12SParameters.N12SТумблерСеть) ? N12SParameters.N12SIndicatorBetaИ*1.1F - 50 : -50;
-            N12SIndicatorBetaИ.BackgroundImage =
+            angle = N12SParameters.ИндикаторBeta * (-36) + 36;
+            ИндикаторBetaCenter.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorCenter, angle);
+
+            angle = -N12SParameters.ИндикаторBeta + 48;
+            ИндикаторBeta.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.N12SIndicatorBeta, angle);
+
+            //Потенциометры
+
+            angle = N12SParameters.ПотенциометрBetaИ * 1.1F - 50;
+            ПотенциометрBetaИ.BackgroundImage =
                    TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow, angle);
 
-            angle = (N12SParameters.N12SТумблерСеть) ? N12SParameters.N12SIndicatorAlphaИ*0.18F : 0;
-            N12SIndicatorAlphaИ.BackgroundImage =
+            angle = N12SParameters.ПотенциометрBetaV * 1.5F;
+            ПотенциометрBetaV.BackgroundImage =
                    TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow, angle);
 
-            angle = (N12SParameters.N12SТумблерСеть) ? N12SParameters.N12SIndicatorAlphaV * 1.5F : 0;
-            N12SIndicatorAlphaV.BackgroundImage =
+            angle = N12SParameters.ПотенциометрAlphaИ * 0.18F;
+            ПотенциометрAlphaИ.BackgroundImage =
                    TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow, angle);
 
-            angle = (N12SParameters.N12SТумблерСеть) ? N12SParameters.N12SIndicatorBetaV * 1.5F : 0;
-            N12SIndicatorBetaV.BackgroundImage =
+            angle = N12SParameters.ПотенциометрAlphaV * 1.5F;
+            ПотенциометрAlphaV.BackgroundImage =
                    TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow, angle);
 
-            N12SЛампочкаГотовность.BackgroundImage = (N12SParameters.N12SТумблерСеть) 
+
+            ЛампочкаУпорА.BackgroundImage = N12SParameters.ЛампочкаУпорА
+                ? ControlElementImages.lampType6OnRed
+                : null;
+
+            ЛампочкаУпорБ.BackgroundImage = N12SParameters.ЛампочкаУпорБ
+                ? ControlElementImages.lampType6OnRed
+                : null;
+
+            ЛампочкаГотовность.BackgroundImage = (N12SParameters.ТумблерСеть)
                 ? ControlElementImages.lampType10OnGreen : null;
-
-            N12SЛампочкаУпорА.BackgroundImage = ((N12SParameters.N12SIndicatorAlphaИ == -270 || 
-                N12SParameters.N12SIndicatorAlphaИ == 270) && N12SParameters.N12SТумблерСеть)
-                ? ControlElementImages.lampType6OnRed
-                : null;
-
-            N12SЛампочкаУпорБ.BackgroundImage = ((N12SParameters.N12SIndicatorBetaИ == 0 || 
-                N12SParameters.N12SIndicatorBetaИ == 90) && N12SParameters.N12SТумблерСеть)
-                ? ControlElementImages.lampType6OnRed
-                : null;
         }
-        #endregion
-
     }
 }

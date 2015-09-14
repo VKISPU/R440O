@@ -120,12 +120,12 @@ namespace R440O.R440OForms.B1_1
             КолодкаТЛГпр3_1.BackgroundImage = B1_1Parameters.КолодкаТлГпр31 ? ControlElementImages.jumperType1 : null;
             КолодкаТЛГпр3_2.BackgroundImage = B1_1Parameters.КолодкаТлГпр32 ? ControlElementImages.jumperType1 : null;
 
-            КолодкаТЛГпр1_1.Visible = !B1_1Parameters.КолодкаТлГпр11;
-            КолодкаТЛГпр1_2.Visible = !B1_1Parameters.КолодкаТлГпр12;
-            КолодкаТЛГпр2_1.Visible = !B1_1Parameters.КолодкаТлГпр21;
-            КолодкаТЛГпр2_2.Visible = !B1_1Parameters.КолодкаТлГпр22;
-            КолодкаТЛГпр3_1.Visible = !B1_1Parameters.КолодкаТлГпр31;
-            КолодкаТЛГпр3_2.Visible = !B1_1Parameters.КолодкаТлГпр32;
+            //КолодкаТЛГпр1_1.Visible = !B1_1Parameters.КолодкаТлГпр11;
+            //КолодкаТЛГпр1_2.Visible = !B1_1Parameters.КолодкаТлГпр12;
+            //КолодкаТЛГпр2_1.Visible = !B1_1Parameters.КолодкаТлГпр21;
+            //КолодкаТЛГпр2_2.Visible = !B1_1Parameters.КолодкаТлГпр22;
+            //КолодкаТЛГпр3_1.Visible = !B1_1Parameters.КолодкаТлГпр31;
+            //КолодкаТЛГпр3_2.Visible = !B1_1Parameters.КолодкаТлГпр32;
         }
     }
 }

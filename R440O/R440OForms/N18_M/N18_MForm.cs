@@ -21,30 +21,30 @@
         }
         
         #region Тумблеры
-        private void N18_MТумблерДАБ5_Click(object sender, System.EventArgs e)
+        private void ТумблерДАБ5_Click(object sender, System.EventArgs e)
         {
-            N18_MParameters.ТумблерДАБ5 = N18_MParameters.ТумблерДАБ5 == ТумблерДаб5.Прм1 ? ТумблерДаб5.Прм2 : ТумблерДаб5.Прм1;
+            N18_MParameters.ТумблерДАБ5 = !N18_MParameters.ТумблерДАБ5;
         }
 
-        private void N18_MТумблерКАУ_ПРМ_Click(object sender, System.EventArgs e)
+        private void ТумблерКАУ_ПРМ_Click(object sender, System.EventArgs e)
         {
-            N18_MParameters.ТумблерКАУ_ПРМ = N18_MParameters.ТумблерКАУ_ПРМ == ТумблерКауПрм.Б11 ? ТумблерКауПрм.Б31 : ТумблерКауПрм.Б11;
+            N18_MParameters.ТумблерКАУ_ПРМ = !N18_MParameters.ТумблерКАУ_ПРМ;
         }
 
-        private void N18_MТумблерПРД_СС_Click(object sender, System.EventArgs e)
+        private void ТумблерПРД_СС_Click(object sender, System.EventArgs e)
         {
-            N18_MParameters.ТумблерПРД_СС = N18_MParameters.ТумблерПРД_СС == ТумблерПрдСс.КонтурП ? ТумблерПрдСс.Щв : ТумблерПрдСс.КонтурП;
+            N18_MParameters.ТумблерПРД_СС = !N18_MParameters.ТумблерПРД_СС;
         }
 
-        private void N18_MТумблерТЛФ_ПРМ_Click(object sender, System.EventArgs e)
+        private void ТумблерТЛФ_ПРМ_Click(object sender, System.EventArgs e)
         {
-            N18_MParameters.ТумблерТЛФ_ПРМ = N18_MParameters.ТумблерТЛФ_ПРМ == ТумблерТлфПрм.Осн ? ТумблерТлфПрм.Резерв : ТумблерТлфПрм.Осн;
+            N18_MParameters.ТумблерТЛФ_ПРМ = !N18_MParameters.ТумблерТЛФ_ПРМ;
         }
 
         #endregion
 
         #region Переключатели
-        private void N18_MПереключательПРМ1_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательПРМ1_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -57,7 +57,7 @@
             }
         }
 
-        private void N18_MПереключательПРМ2_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательПРМ2_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -70,7 +70,7 @@
             }
         }
 
-        private void N18_MПереключательВходК1_2_1_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательВходК1_2_1_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -83,7 +83,7 @@
             }
         }
 
-        private void N18_MПереключательПРД_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательПРД_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -96,7 +96,7 @@
             }
         }
 
-        private void N18_MПереключательПРДБМА12_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательПРДБМА12_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -109,7 +109,7 @@
             }
         }
 
-        private void N18_MПереключательПРМСС1_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательПРМСС1_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -122,7 +122,7 @@
             }
         }
 
-        private void N18_MПереключательПРМСС2_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательПРМСС2_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -135,7 +135,7 @@
             }
         }
 
-        private void N18_MПереключатель48ПРМЩВ_MouseUp(object sender, MouseEventArgs e)
+        private void Переключатель48ПРМЩВ_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -148,7 +148,7 @@
             }
         }
 
-        private void N18_MПереключательВыход2РН_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательВыход2РН_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -161,7 +161,7 @@
             }
         }
 
-        private void N18_MПереключательВыход1РН_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательВыход1РН_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -174,7 +174,7 @@
             }
         }
 
-        private void N18_MПереключательВходБ22_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательВходБ22_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -190,66 +190,66 @@
 
         public void RefreshFormElements()
         {
-            this.N18_MТумблерДАБ5.BackgroundImage = N18_MParameters.ТумблерДАБ5 == ТумблерДаб5.Прм1
-                ? ControlElementImages.tumblerType5Left
-                : ControlElementImages.tumblerType5Right;
+            ТумблерДАБ5.BackgroundImage = N18_MParameters.ТумблерДАБ5
+                ? ControlElementImages.tumblerType5Right
+                : ControlElementImages.tumblerType5Left;
 
-            this.N18_MТумблерКАУ_ПРМ.BackgroundImage = N18_MParameters.ТумблерКАУ_ПРМ == ТумблерКауПрм.Б11
-                ? ControlElementImages.tumblerType5Left
-                : ControlElementImages.tumblerType5Right;
+            ТумблерКАУ_ПРМ.BackgroundImage = N18_MParameters.ТумблерКАУ_ПРМ
+                ? ControlElementImages.tumblerType5Right
+                : ControlElementImages.tumblerType5Left;
 
-            this.N18_MТумблерПРД_СС.BackgroundImage = N18_MParameters.ТумблерПРД_СС == ТумблерПрдСс.КонтурП
-                ? ControlElementImages.tumblerType5Left
-                : ControlElementImages.tumblerType5Right;
+            ТумблерПРД_СС.BackgroundImage = N18_MParameters.ТумблерПРД_СС
+                ? ControlElementImages.tumblerType5Right
+                : ControlElementImages.tumblerType5Left;
 
-            this.N18_MТумблерТЛФ_ПРМ.BackgroundImage = N18_MParameters.ТумблерТЛФ_ПРМ == ТумблерТлфПрм.Осн
-                ? ControlElementImages.tumblerType5Left
-                : ControlElementImages.tumblerType5Right;
+            ТумблерТЛФ_ПРМ.BackgroundImage = N18_MParameters.ТумблерТЛФ_ПРМ
+                ? ControlElementImages.tumblerType5Right
+                : ControlElementImages.tumblerType5Left;
 
             var angle = N18_MParameters.ПереключательПРМ1 * 40 - 120;
-            N18_MПереключательПРМ1.BackgroundImage =
+            ПереключательПРМ1.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
             angle = N18_MParameters.ПереключательПРМ2 * 40 - 120;
-            N18_MПереключательПРМ2.BackgroundImage =
+            ПереключательПРМ2.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
             angle = N18_MParameters.ПереключательВходК121 * 40 - 120;
-            N18_MПереключательВходК1_2_1.BackgroundImage =
+            ПереключательВходК1_2_1.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
             angle = N18_MParameters.ПереключательПРД * 40 - 120;
-            N18_MПереключательПРД.BackgroundImage =
+            ПереключательПРД.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
             angle = N18_MParameters.ПереключательПрдБма12 * 28 - 180;
             if (N18_MParameters.ПереключательПрдБма12 == 6) angle += 12;
             else if (N18_MParameters.ПереключательПрдБма12 > 6) angle += 28;   ////Смещение
-            N18_MПереключательПРДБМА12.BackgroundImage =
+            ПереключательПРДБМА12.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
             angle = N18_MParameters.ПереключательПрмСс1 * 40 - 120;
-            N18_MПереключательПРМСС1.BackgroundImage =
+            ПереключательПРМСС1.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
             angle = N18_MParameters.ПереключательПрмСс2 * 40 - 120;
-            N18_MПереключательПРМСС2.BackgroundImage =
+            ПереключательПРМСС2.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
             angle = N18_MParameters.Переключатель48ПрмЩв * 50 - 75;
-            N18_MПереключатель48ПРМЩВ.BackgroundImage =
+            Переключатель48ПРМЩВ.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
             angle = N18_MParameters.ПереключательВыход2РН * 50 - 75;
-            N18_MПереключательВыход2РН.BackgroundImage =
+            ПереключательВыход2РН.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
             angle = N18_MParameters.ПереключательВыход1РН * 50 - 75;
-            N18_MПереключательВыход1РН.BackgroundImage =
+            ПереключательВыход1РН.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
             angle = N18_MParameters.ПереключательВходБ22 * 50 - 75;
-            N18_MПереключательВходБ22.BackgroundImage =
+            ПереключательВходБ22.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
     }

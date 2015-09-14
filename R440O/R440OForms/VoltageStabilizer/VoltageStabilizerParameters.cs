@@ -1,48 +1,39 @@
-﻿namespace R440O.R440OForms.VoltageStabilizer
+﻿using R440O.R440OForms.PowerCabel;
+
+namespace R440O.R440OForms.VoltageStabilizer
 {
     using System;
     using N502B;
 
     public static class VoltageStabilizerParameters
     {
-        static VoltageStabilizerParameters()
-        {
-            СлучайноеНапряжение();
-        }
-
         #region Лампочки
-        private static bool _лампочкаСетьВкл;
-        public static bool ЛампочкаСетьВкл
-        {
-            get { return _лампочкаСетьВкл; }
 
-            set
+        public static bool ЛампочкаСеть
+        {
+            get
             {
-                _лампочкаСетьВкл = value;
-                if (RefreshForm != null) RefreshForm();
+                return N502BParameters.ПереключательСеть &&
+                           N502BParameters.ЛампочкаСеть
+                             && КабельПодключенПравильно;
             }
         }
-
-        private static bool _лампочкаАвария;
         public static bool ЛампочкаАвария
         {
-            get { return _лампочкаАвария; }
-
-            set
+            get
             {
-                _лампочкаАвария = value;
-                if (RefreshForm != null) RefreshForm();
+                return N502BParameters.ПереключательСеть &&
+                           N502BParameters.ЛампочкаСеть
+                             && !КабельПодключенПравильно;
             }
         }
         #endregion
 
         #region Контроль Напряжения
-
+        private static int _переключательКонтрольНапр = 1;
         /// <summary>
         /// Положение переключателя Контроль напряжения
         /// </summary>
-        private static int _переключательКонтрольНапр = 1;
-
         public static int ПереключательКонтрольНапр
         {
             get { return _переключательКонтрольНапр; }
@@ -50,30 +41,15 @@
             set
             {
                 if (value > 0 && value < 13) _переключательКонтрольНапр = value;
-                if (RefreshForm != null) RefreshForm();
+                OnParameterChanged();
             }
         }
 
-        /// <summary>
-        /// Названия положений:
-        /// 1 - линейное_ca,
-        /// 2 - линейное_bc,
-        /// 3 - линейное_ab,
-        /// 4 - вход220_AB,
-        /// 5 - вход220_BC,
-        /// 6 - вход220_CA,
-        /// 7 - вход380_AB,
-        /// 8 - вход380_BC,
-        /// 9 - вход380_CA,
-        /// 10 - фазное_0с,
-        /// 11 - фазное_0b,
-        /// 12 - фазное_0a
-        /// </summary>
         public static int ИндикаторНапряжение
         {
             get
             {
-                if (!ЛампочкаСетьВкл) return 0;
+                if (!ЛампочкаСеть) return 0;
                 switch (_переключательКонтрольНапр)
                 {
                     case 1:
@@ -107,11 +83,6 @@
         /// </summary>
         private static int _кабельВход;
 
-        /// <summary>
-        /// Значение, которому должен соответствовать КабельВход.
-        /// </summary>
-        public static int ПравильныйВход { get; set; }
-
         public static int КабельВход
         {
             get { return _кабельВход; }
@@ -119,10 +90,9 @@
             set
             {
                 _кабельВход = value;
-                if (RefreshForm != null) RefreshForm();
-                ResetParameters();
+                OnParameterChanged();
                 N502BParameters.Нагрузка = false;
-
+                N502BParameters.ResetParameters();
                 if (N502BParameters.ЛампочкаСеть && N502BParameters.ПереключательСеть
                     && ОператорСтанцииПоражёнТоком != null)
                 {
@@ -132,45 +102,36 @@
         }
 
         /// <summary>
-        /// Задание случайной фазировки.
-        /// </summary>
-        private static void СлучайноеНапряжение()
-        {
-            var generator = new Random();
-            var zeroToOne = generator.NextDouble();
-            ПравильныйВход = zeroToOne > 0.5F ? 380 : 220;
-        }
-
-        /// <summary>
         /// Условие определяющее, подключён ли кабель питания к нужному входу.
         /// </summary>
         public static bool КабельПодключенПравильно
         {
-            get { return _кабельВход == ПравильныйВход; }
+            get { return _кабельВход == PowerCabelParameters.Напряжение; }
         }
 
         #endregion
 
         #region Обновление переменных и формы
+        public delegate void ParameterChangedHandler();
+        public static event ParameterChangedHandler ParameterChanged;
+
+        private static void OnParameterChanged()
+        {
+            var handler = ParameterChanged;
+            if (handler != null) handler();
+        }
 
         public static void ResetParameters()
         {
-            ЛампочкаСетьВкл = N502BParameters.ПереключательСеть &&
-                             N502BParameters.ЛампочкаСеть
-                               && КабельПодключенПравильно;
-
-            ЛампочкаАвария = N502BParameters.ПереключательСеть &&
-                             N502BParameters.ЛампочкаСеть
-                               && !КабельПодключенПравильно;
+            OnParameterChanged();
         }
-
-        public delegate void ParameterChangedHandler();
-        public static event ParameterChangedHandler RefreshForm;
 
         /// <summary>
         /// Вызывается, если пользователь совершил неправильные действия по обесточиванию станции.
         /// </summary>
         public static event ParameterChangedHandler ОператорСтанцииПоражёнТоком;
         #endregion
+
+        
     }
 }

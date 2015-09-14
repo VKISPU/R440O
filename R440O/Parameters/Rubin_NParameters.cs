@@ -8,6 +8,7 @@ namespace R440O.Parameters
 {
     class Rubin_NParameters
     {
+
         #region Переключатели
         #region Rubin_NПереключательГрупСкор
         /// <summary>
@@ -246,59 +247,153 @@ namespace R440O.Parameters
         /// <summary>
         /// Возможные состояния: +, -
         /// </summary>
-        public static string Rubin_NТумблерПолярность { get { return _Rubin_NТумблерПолярность; } set { _Rubin_NТумблерПолярность = value; } }
-        private static string _Rubin_NТумблерПолярность = "+";
+        public static bool ТумблерПолярность
+        {
+            get { return _тумблерПолярность; }
+            set { _тумблерПолярность = value; }
+        }
+
+        private static bool _тумблерПолярность = true;
+        private static bool _тумблерРнБас1 = true;
+        private static bool _тумблерРнБас2 = true;
+        private static bool _тумблерРнБас3 = true;
 
         /// <summary>
         /// Возможные состояния: 4.8, 5.2
         /// </summary>
-        public static string Rubin_NТумблерБлок5063 { get { return _Rubin_NТумблерБлок5063; } set { _Rubin_NТумблерБлок5063 = value; } }
-        private static string _Rubin_NТумблерБлок5063 = "4.8";
+        public static bool ТумблерРнБас1
+        {
+            get { return _тумблерРнБас1; }
+            set { _тумблерРнБас1 = value; }
+        }
 
         /// <summary>
         /// Возможные состояния: 4.8, 5.2
         /// </summary>
-        public static string Rubin_NТумблерБлок4923 { get { return _Rubin_NТумблерБлок4923; } set { _Rubin_NТумблерБлок4923 = value; } }
-        private static string _Rubin_NТумблерБлок4923 = "4.8";
+        public static bool ТумблерРнБас2
+        {
+            get { return _тумблерРнБас2; }
+            set { _тумблерРнБас2 = value; }
+        }
 
         /// <summary>
         /// Возможные состояния: 4.8, 5.2
         /// </summary>
-        public static string Rubin_NТумблерБлок4963 { get { return _Rubin_NТумблерБлок4963; } set { _Rubin_NТумблерБлок4963 = value; } }
-        private static string _Rubin_NТумблерБлок4963 = "4.8";
+        public static bool ТумблерРнБас3
+        {
+            get { return _тумблерРнБас3; }
+            set { _тумблерРнБас3 = value; }
+        }
         #endregion
 
         #region Лампочки
-        public static bool Rubin_NЛампочкаN3349Неиспр = false;
-        public static bool Rubin_NЛампочкаN3349МУ = false;
-        public static bool Rubin_NЛампочкаN3349ДУ = false;
-        public static bool Rubin_NЛампочкаN3349ПР2А = false;
-        public static bool Rubin_NЛампочкаN3349_5В = false;
-        public static bool Rubin_NЛампочкаN3349_27В = false;
+        public static bool ЛампочкаРнБпНеиспр
+        {
+            get { return false; }
+        }
 
-        public static bool Rubin_NЛампочкаN1422Осн1 = false;
-        public static bool Rubin_NЛампочкаN1422Осн2 = false;
-        public static bool Rubin_NЛампочкаN1422Осн3 = false;
-        public static bool Rubin_NЛампочкаN1422Резервный = false;
-        public static bool Rubin_NЛампочкаN1422РезервированиеВкл = false;
-        public static bool Rubin_NЛампочкаN1422РезервированиеОткл = false;
-        public static bool Rubin_NЛампочкаN1422Транзит = false;
+        public static bool ЛампочкаРнБпМу
+        {
+            get { return false; }
+        }
 
-        public static bool Rubin_NЛампочкаN2215_1 = false;
-        public static bool Rubin_NЛампочкаN2215_2 = false;
-        public static bool Rubin_NЛампочкаN2215_3 = false;
-        public static bool Rubin_NЛампочкаN2215_II1 = false;
-        public static bool Rubin_NЛампочкаN2215_II2 = false;
-        public static bool Rubin_NЛампочкаN2215_II3 = false;
-        public static bool Rubin_NЛампочкаN2215_ТИ = false;
-        public static bool Rubin_NЛампочкаN2215_48кГц = false;
-        public static bool Rubin_NЛампочкаN2215_ЧтСи = false;
+        public static bool ЛампочкаРнБпДу
+        {
+            get { return false; }
+        }
+        public static bool ЛампочкаРнБпПР2А
+        {
+            get { return false; }
+        }
+        public static bool ЛампочкаРнБп_5В
+        {
+            get { return false; }
+        }
+        public static bool ЛампочкаРнБп_27В
+        {
+            get { return false; }
+        }
 
-        public static bool Rubin_NЛампочкаN5063СрывСинхр = false;
-         
-        public static bool Rubin_NЛампочкаN4923СрывСинхр = false;
+        public static bool ЛампочкаРнКОсн1
+        {
+            get { return false; }
+        }
+        public static bool ЛампочкаРнКОсн2
+        {
+            get { return false; }
+        }
+        public static bool ЛампочкаРнКОсн3
+        {
+            get { return false; }
+        }
+        public static bool ЛампочкаРнКРезервный
+        {
+            get { return false; }
+        }
+        public static bool ЛампочкаРнКРезервированиеВкл
+        {
+            get { return false; }
+        }
+        public static bool ЛампочкаРнКРезервированиеОткл
+        {
+            get { return false; }
+        }
+        public static bool ЛампочкаРнКТранзит
+        {
+            get { return false; }
+        }
 
-        public static bool Rubin_NЛампочкаN4963СрывСинхр = false;
+        public static bool ЛампочкаРнЦр_1
+        {
+            get { return false; }
+        }
+        public static bool ЛампочкаРнЦр_2
+        {
+            get { return false; }
+        }
+        public static bool ЛампочкаРнЦр_3
+        {
+            get { return false; }
+        }
+        public static bool ЛампочкаРнЦр_II1
+        {
+            get { return false; }
+        }
+        public static bool ЛампочкаРнЦр_II2
+        {
+            get { return false; }
+        }
+        public static bool ЛампочкаРнЦр_II3
+        {
+            get { return false; }
+        }
+        public static bool ЛампочкаРнЦрНеисправностьТи
+        {
+            get { return false; }
+        }
+        public static bool ЛампочкаРнЦрНеисправность48кГц
+        {
+            get { return false; }
+        }
+        public static bool ЛампочкаРнЦрНеисправностьЧтСи
+        {
+            get { return false; }
+        }
+
+        public static bool ЛампочкаРнБас1СрывСинхр
+        {
+            get { return false; }
+        }
+
+        public static bool ЛампочкаРнБас2СрывСинхр
+        {
+            get { return false; }
+        }
+
+        public static bool ЛампочкаРнБас3СрывСинхр
+        {
+            get { return false; }
+        }
         #endregion
 
         public static bool Rubin_NКнопкаОткл = false;

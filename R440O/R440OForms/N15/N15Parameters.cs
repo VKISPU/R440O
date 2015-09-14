@@ -1,5 +1,8 @@
-﻿namespace R440O.R440OForms.N15
+﻿using System.Windows.Forms;
+
+namespace R440O.R440OForms.N15
 {
+    using System;
     using Parameters;
     using A1;
     using A205M_1;
@@ -31,13 +34,12 @@
         {
             get
             {
-                return N502BParameters.ЛампочкаСфазировано
-                       && N502BParameters.ТумблерЭлектрооборудование
-                       && N502BParameters.ТумблерВыпрямитель27В
-                       && N502BParameters.ТумблерН15;
+                return N502BParameters.Н15Включен && N502BParameters.ВыпрямительВключен &&
+                       N502BParameters.ЭлектрообуродованиеВключено;
             }
         }
 
+        private static double _регуляторУровень = -120;
         /// <summary>
         /// Угол от -120 до 120
         /// </summary>
@@ -52,28 +54,48 @@
         }
 
         #region Кнопки
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
+        private static bool _кнопкаСтанцияВкл;
+        private static bool _кнопкаСтанцияВыкл;
+
+        private static bool _кнопкаПрмНаведениеЦ300М1;
+        private static bool _кнопкаПрмНаведениеЦ300М2;
+        private static bool _кнопкаПрмНаведениеЦ300М3;
+        private static bool _кнопкаПрмНаведениеЦ300М4;
+        private static bool _кнопкаМощностьН16;
+        private static bool _кнопкаМощностьАнт;
+        private static bool _кнопкаМощностьСброс;
+
+        private static bool _кнопкаН131;
+        private static bool _кнопкаН132;
+        private static bool _кнопкаН1312;
+        private static bool _кнопкаСброс;
+
         public static bool КнопкаСтанцияВкл
         {
             get
             {
-                return _станцияВкл;
+                return _кнопкаСтанцияВкл;
             }
             set
             {
-                _станцияВкл = value;
+                _кнопкаСтанцияВкл = value;
                 OnParameterChanged();
             }
         }
-        public static bool _станцияВкл;
 
-        public static bool КнопкаСтанцияВыкл { get; set; }
+        public static bool КнопкаСтанцияВыкл
+        {
+            get
+            {
+                return _кнопкаСтанцияВыкл;
+            }
+            set
+            {
+                _кнопкаСтанцияВыкл = value;
+                OnParameterChanged();
+            }
+        }
 
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
         public static bool КнопкаПРМНаведениеЦ300М1
         {
             get { return _кнопкаПрмНаведениеЦ300М1; }
@@ -84,11 +106,7 @@
             }
         }
 
-        private static bool _кнопкаПрмНаведениеЦ300М1;
 
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
         public static bool КнопкаПРМНаведениеЦ300М2
         {
             get { return _кнопкаПрмНаведениеЦ300М2; }
@@ -99,11 +117,6 @@
             }
         }
 
-        private static bool _кнопкаПрмНаведениеЦ300М2;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
         public static bool КнопкаПРМНаведениеЦ300М3
         {
             get { return _кнопкаПрмНаведениеЦ300М3; }
@@ -114,11 +127,6 @@
             }
         }
 
-        private static bool _кнопкаПрмНаведениеЦ300М3;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
         public static bool КнопкаПРМНаведениеЦ300М4
         {
             get { return _кнопкаПрмНаведениеЦ300М4; }
@@ -129,11 +137,6 @@
             }
         }
 
-        private static bool _кнопкаПрмНаведениеЦ300М4;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
         public static bool КнопкаМощностьН16
         {
             get { return _кнопкаМощностьН16; }
@@ -144,11 +147,6 @@
             }
         }
 
-        private static bool _кнопкаМощностьН16;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
         public static bool КнопкаМощностьАнт
         {
             get { return _кнопкаМощностьАнт; }
@@ -159,11 +157,6 @@
             }
         }
 
-        private static bool _кнопкаМощностьАнт;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
         public static bool КнопкаМощностьСброс
         {
             get { return _кнопкаМощностьСброс; }
@@ -174,11 +167,6 @@
             }
         }
 
-        private static bool _кнопкаМощностьСброс;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
         public static bool КнопкаН13_1
         {
             get { return _кнопкаН131; }
@@ -189,11 +177,6 @@
             }
         }
 
-        private static bool _кнопкаН131;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
         public static bool КнопкаН13_2
         {
             get { return _кнопкаН132; }
@@ -204,11 +187,6 @@
             }
         }
 
-        private static bool _кнопкаН132;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
         public static bool КнопкаН13_12
         {
             get { return _кнопкаН1312; }
@@ -219,11 +197,6 @@
             }
         }
 
-        private static bool _кнопкаН1312;
-
-        /// <summary>
-        /// Возможные состояния: true, false
-        /// </summary>
         public static bool КнопкаСброс
         {
             get { return _кнопкаСброс; }
@@ -233,13 +206,9 @@
                 OnParameterChanged();
             }
         }
-
-        private static bool _кнопкаСброс;
-
         #endregion
 
         #region Тумблеры левая часть
-
         private static bool _тумблерЦ300М1;
         private static bool _тумблерЦ300М2;
         private static bool _тумблерЦ300М3;
@@ -271,7 +240,7 @@
             set
             {
                 _тумблерЦ300М1 = value;
-                if (ParameterChanged != null) ParameterChanged();
+                OnParameterChanged();
                 C300M_1Parameters.ResetParameters();
             }
         }
@@ -282,7 +251,7 @@
             set
             {
                 _тумблерЦ300М2 = value;
-                if (ParameterChanged != null) ParameterChanged();
+                OnParameterChanged();
                 C300M_2Parameters.ResetParameters();
             }
         }
@@ -293,7 +262,7 @@
             set
             {
                 _тумблерЦ300М3 = value;
-                if (ParameterChanged != null) ParameterChanged();
+                OnParameterChanged();
                 C300M_3Parameters.ResetParameters();
             }
         }
@@ -304,7 +273,7 @@
             set
             {
                 _тумблерЦ300М4 = value;
-                if (ParameterChanged != null) ParameterChanged();
+                OnParameterChanged();
                 C300M_4Parameters.ResetParameters();
             }
         }
@@ -315,7 +284,7 @@
             set
             {
                 _тумблерН12С = value;
-                if (ParameterChanged != null) ParameterChanged();
+                OnParameterChanged();
             }
         }
 
@@ -325,9 +294,7 @@
             set
             {
                 _тумблерМшу = value;
-                if (ParameterChanged != null) ParameterChanged();
-
-                ResetParameters();
+                OnParameterChanged();
                 A304Parameters.ResetParameters();
             }
         }
@@ -338,14 +305,18 @@
             set
             {
                 _тумблерБма1 = value;
-                if (ParameterChanged != null) ParameterChanged();
+                OnParameterChanged();
             }
         }
 
         public static bool ТумблерБМА_2
         {
             get { return _тумблерБма2; }
-            set { _тумблерБма2 = value; if (ParameterChanged != null) ParameterChanged(); }
+            set
+            {
+                _тумблерБма2 = value;
+                OnParameterChanged();
+            }
         }
 
         public static bool ТумблерА205Base
@@ -356,7 +327,7 @@
                 _тумблерА205Base = value;
                 NKN_1Parameters.ResetParameters();
                 NKN_2Parameters.ResetParameters();
-                if (ParameterChanged != null) ParameterChanged();
+                OnParameterChanged();
             }
         }
 
@@ -368,7 +339,7 @@
                 _тумблерА20512 = value;
                 NKN_1Parameters.ResetParameters();
                 NKN_2Parameters.ResetParameters();
-                if (ParameterChanged != null) ParameterChanged();
+                OnParameterChanged();
             }
         }
 
@@ -378,7 +349,7 @@
             set
             {
                 _тумблерА30412 = value;
-                if (ParameterChanged != null) ParameterChanged();
+                OnParameterChanged();
                 A304Parameters.ResetParameters();
             }
         }
@@ -386,79 +357,131 @@
         public static bool ТумблерАФСС
         {
             get { return _тумблерАфсс; }
-            set { _тумблерАфсс = value; if (ParameterChanged != null) ParameterChanged(); }
+            set
+            {
+                _тумблерАфсс = value;
+                OnParameterChanged();
+            }
         }
 
         public static bool ТумблерА1
         {
             get { return _тумблерА1; }
-            set { _тумблерА1 = value; if (ParameterChanged != null) ParameterChanged(); }
+            set
+            {
+                _тумблерА1 = value;
+                OnParameterChanged();
+            }
         }
 
         public static bool ТумблерА403
         {
             get { return _тумблерА403; }
-            set { _тумблерА403 = value; if (ParameterChanged != null) ParameterChanged(); }
+            set
+            {
+                _тумблерА403 = value;
+                OnParameterChanged();
+            }
         }
 
         public static bool ТумблерК1_1
         {
             get { return _тумблерК11; }
-            set { _тумблерК11 = value; if (ParameterChanged != null) ParameterChanged(); }
+            set
+            {
+                _тумблерК11 = value;
+                OnParameterChanged();
+            }
         }
 
         public static bool ТумблерК1_2
         {
             get { return _тумблерК12; }
-            set { _тумблерК12 = value; if (ParameterChanged != null) ParameterChanged(); }
+            set
+            {
+                _тумблерК12 = value;
+                OnParameterChanged();
+            }
         }
 
         public static bool ТумблерБ1_1
         {
             get { return _тумблерБ11; }
-            set { _тумблерБ11 = value; if (ParameterChanged != null) ParameterChanged(); }
+            set
+            {
+                _тумблерБ11 = value;
+                OnParameterChanged();
+            }
         }
 
         public static bool ТумблерБ1_2
         {
             get { return _тумблерБ12; }
-            set { _тумблерБ12 = value; if (ParameterChanged != null) ParameterChanged(); }
+            set
+            {
+                _тумблерБ12 = value;
+                OnParameterChanged();
+            }
         }
 
         public static bool ТумблерБ2_1
         {
             get { return _тумблерБ21; }
-            set { _тумблерБ21 = value; if (ParameterChanged != null) ParameterChanged(); }
+            set
+            {
+                _тумблерБ21 = value;
+                OnParameterChanged();
+            }
         }
 
         public static bool ТумблерБ2_2
         {
             get { return _тумблерБ22; }
-            set { _тумблерБ22 = value; if (ParameterChanged != null) ParameterChanged(); }
+            set
+            {
+                _тумблерБ22 = value;
+                OnParameterChanged();
+            }
         }
 
         public static bool ТумблерБ3_1
         {
             get { return _тумблерБ31; }
-            set { _тумблерБ31 = value; if (ParameterChanged != null) ParameterChanged(); }
+            set
+            {
+                _тумблерБ31 = value;
+                OnParameterChanged();
+            }
         }
 
         public static bool ТумблерБ3_2
         {
             get { return _тумблерБ32; }
-            set { _тумблерБ32 = value; if (ParameterChanged != null) ParameterChanged(); }
+            set
+            {
+                _тумблерБ32 = value;
+                OnParameterChanged();
+            }
         }
 
         public static bool ТумблерДАБ_5
         {
             get { return _тумблерДаб5; }
-            set { _тумблерДаб5 = value; if (ParameterChanged != null) ParameterChanged(); }
+            set
+            {
+                _тумблерДаб5 = value;
+                OnParameterChanged();
+            }
         }
 
         public static bool ТумблерР_Н
         {
             get { return _тумблерРН; }
-            set { _тумблерРН = value; if (ParameterChanged != null) ParameterChanged(); }
+            set
+            {
+                _тумблерРН = value;
+                OnParameterChanged();
+            }
         }
 
         #endregion
@@ -466,13 +489,14 @@
         #region Тумблеры правая часть
 
         private static bool _тумблерА503Б;
-        private static bool _тумблерФаза;
-        private static bool _тумблерУров1;
-        private static bool _тумблерУров2;
+        private static int _тумблерФаза = 0;
+        private static int _тумблерУров1 = 0;
+        private static int _тумблерУров2 = 0;
+        private static int _тумблер5Мгц = 0;
         private static bool _тумблерАнтЭкв;
         private static bool _тумблерТлфТлгПрм;
         private static bool _тумблерТлфТлгПрд;
-        private static bool _тумблер5МГц25МГц3;
+
 
         public static bool ТумблерА503Б
         {
@@ -485,51 +509,72 @@
             }
         }
 
-        public static bool ТумблерФаза
+        public static int ТумблерФаза
         {
             get { return _тумблерФаза; }
-            set { _тумблерФаза = value; OnParameterChanged(); }
+            set
+            {
+                _тумблерФаза = value;
+                OnParameterChanged();
+            }
         }
 
-        public static bool ТумблерУров1
+        public static int ТумблерУров1
         {
             get { return _тумблерУров1; }
-            set { _тумблерУров1 = value; OnParameterChanged(); }
+            set
+            {
+                _тумблерУров1 = value;
+                OnParameterChanged();
+            }
         }
 
-        public static bool ТумблерУров2
+        public static int ТумблерУров2
         {
             get { return _тумблерУров2; }
-            set { _тумблерУров2 = value; OnParameterChanged(); }
+            set
+            {
+                _тумблерУров2 = value;
+                OnParameterChanged();
+            }
+        }
+
+        public static int Тумблер5Мгц
+        {
+            get { return _тумблер5Мгц; }
+            set
+            {
+                _тумблер5Мгц = value;
+                OnParameterChanged();
+            }
         }
 
         public static bool ТумблерАнтЭкв
         {
             get { return _тумблерАнтЭкв; }
-            set { _тумблерАнтЭкв = value; OnParameterChanged(); }
+            set
+            {
+                _тумблерАнтЭкв = value;
+                OnParameterChanged();
+            }
         }
 
         public static bool ТумблерТлфТлгПрм
         {
             get { return _тумблерТлфТлгПрм; }
-            set { _тумблерТлфТлгПрм = value; OnParameterChanged(); }
+            set
+            {
+                _тумблерТлфТлгПрм = value;
+                OnParameterChanged();
+            }
         }
 
         public static bool ТумблерТлфТлгПрд
         {
             get { return _тумблерТлфТлгПрд; }
-            set { _тумблерТлфТлгПрд = value; OnParameterChanged(); }
-        }
-
-        /// <summary>
-        /// true - 2, false - 3
-        /// </summary>
-        public static bool Тумблер5МГц25МГц3
-        {
-            get { return _тумблер5МГц25МГц3; }
             set
             {
-                _тумблер5МГц25МГц3 = value;
+                _тумблерТлфТлгПрд = value;
                 OnParameterChanged();
             }
         }
@@ -595,23 +640,10 @@
 
         #region Лампочки левая часть
 
-        private static bool _лампочкаН12С;
-        private static bool _лампочкаА403Вкл;
-        private static bool _лампочкаА403Неиспр;
-        private static bool _лампочкаБ12;
-        private static bool _лампочкаБ21;
-        private static bool _лампочкаБ22;
-        private static bool _лампочкаБ31;
-        private static bool _лампочкаБ32;
-        private static bool _лампочкаДаб5;
-        private static bool _лампочкаРН;
-        private static double _регуляторУровень = -120;
-
 
         public static bool ЛампочкаН12С
         {
-            get { return _лампочкаН12С; }
-            set { _лампочкаН12С = value; }
+            get { return false; }
         }
 
         public static bool ЛампочкаМШУ
@@ -641,7 +673,9 @@
 
         public static bool ЛампочкаН15БП
         {
-            get { return Включен; }
+            get { return N502BParameters.ЛампочкаСфазировано
+                        && N502BParameters.ТумблерЭлектрооборудование
+                        && N502BParameters.ТумблерВыпрямитель27В; }
         }
 
         public static bool ЛампочкаАФСС
@@ -656,24 +690,22 @@
 
         public static bool ЛампочкаА403Вкл
         {
-            get { return _лампочкаА403Вкл; }
-            set { _лампочкаА403Вкл = value; }
+            get { return false; }
         }
 
         public static bool ЛампочкаА403Неиспр
         {
-            get { return _лампочкаА403Неиспр; }
-            set { _лампочкаА403Неиспр = value; }
+            get { return false; }
         }
 
         public static bool ЛампочкаП220272
         {
-            get { return P220_27G_2Parameters.ЛампочкаСеть; }
+            get { return Лампочка27В && P220_27G_2Parameters.ЛампочкаСеть; }
         }
 
         public static bool ЛампочкаП220273
         {
-            get { return P220_27G_3Parameters.ЛампочкаСеть; }
+            get { return Лампочка27В; }
         }
 
         public static bool ЛампочкаА306
@@ -731,33 +763,32 @@
 
         public static bool ЛампочкаР_Н
         {
-            get { return _лампочкаРН; }
-            set { _лампочкаРН = value; }
+            get { return false; }
         }
 
         #endregion
 
         #region Лампочки правая часть
 
-        public static bool ЛампочкаН16Н13_1 { get; set; }
-        public static bool ЛампочкаН16Н13_2 { get; set; }
-        public static bool ЛампочкаН16Н13_12 { get; set; }
+        public static bool ЛампочкаН16Н13_1 { get { return Лампочка27В && КнопкаН13_1; } }
+        public static bool ЛампочкаН16Н13_2 { get { return Лампочка27В && КнопкаН13_2; } }
+        public static bool ЛампочкаН16Н13_12 { get { return Лампочка27В && КнопкаН13_12; } }
         public static bool ЛампочкаН13_11Ступень { get; set; }
         public static bool ЛампочкаН13_21Ступень { get; set; }
         public static bool ЛампочкаН13_1ПолноеВкл { get; set; }
         public static bool ЛампочкаН13_2ПолноеВкл { get; set; }
         public static bool ЛампочкаН13_1Неисправность { get; set; }
         public static bool ЛампочкаН13_2Неисправность { get; set; }
-        public static bool Лампочка5мГц2 { get; set; }
-        public static bool Лампочка5мГц3 { get; set; }
+        public static bool Лампочка5мГц2 { get { return Лампочка27В && Тумблер5Мгц == 1; } }
+        public static bool Лампочка5мГц3 { get { return Лампочка27В && (Тумблер5Мгц == -1); } }
 
         public static bool ЛампочкаА503Б
         {
             get { return Лампочка27В && ТумблерА503Б; }
         }
 
-        public static bool ЛампочкаАнт { get; set; }
-        public static bool ЛампочкаЭкв { get; set; }
+        public static bool ЛампочкаАнт { get { return Лампочка27В && ТумблерАнтЭкв; } }
+        public static bool ЛампочкаЭкв { get { return Лампочка27В && !ТумблерАнтЭкв; } }
 
         #endregion
 

@@ -103,19 +103,19 @@ namespace R440O.R440OForms.Rubin_N
 
         private void InitializeTumblersPosition()
         {
-            this.Rubin_NТумблерПолярность.BackgroundImage = Rubin_NParameters.Rubin_NТумблерПолярность == "+"
+            this.Rubin_NТумблерПолярность.BackgroundImage = Rubin_NParameters.ТумблерПолярность
               ? ControlElementImages.tumblerType4Left
               : ControlElementImages.tumblerType4Right;
 
-            this.Rubin_NТумблерБлок5063.BackgroundImage = Rubin_NParameters.Rubin_NТумблерБлок5063 == "4.8"
+            this.Rubin_NТумблерБлок5063.BackgroundImage = Rubin_NParameters.ТумблерРнБас1
               ? ControlElementImages.tumblerType4Left
               : ControlElementImages.tumblerType4Right;
 
-            this.Rubin_NТумблерБлок4923.BackgroundImage = Rubin_NParameters.Rubin_NТумблерБлок4923 == "4.8"
+            this.Rubin_NТумблерБлок4923.BackgroundImage = Rubin_NParameters.ТумблерРнБас2
               ? ControlElementImages.tumblerType4Left
               : ControlElementImages.tumblerType4Right;
 
-            this.Rubin_NТумблерБлок4963.BackgroundImage = Rubin_NParameters.Rubin_NТумблерБлок4963 == "4.8"
+            this.Rubin_NТумблерБлок4963.BackgroundImage = Rubin_NParameters.ТумблерРнБас3
               ? ControlElementImages.tumblerType4Left
               : ControlElementImages.tumblerType4Right;
         }
@@ -401,58 +401,22 @@ namespace R440O.R440OForms.Rubin_N
         #region Тумблеры
         private void Rubin_NТумблерПолярность_Click(object sender, System.EventArgs e)
         {
-            if (Rubin_NParameters.Rubin_NТумблерПолярность == "+")
-            {
-                this.Rubin_NТумблерПолярность.BackgroundImage = ControlElementImages.tumblerType4Right;
-                Rubin_NParameters.Rubin_NТумблерПолярность = "-";
-            }
-            else
-            {
-                this.Rubin_NТумблерПолярность.BackgroundImage = ControlElementImages.tumblerType4Left;
-                Rubin_NParameters.Rubin_NТумблерПолярность = "+";
-            }
+            Rubin_NParameters.ТумблерПолярность = !Rubin_NParameters.ТумблерПолярность;
         }
 
         private void Rubin_NТумблерБлок5063_Click(object sender, System.EventArgs e)
         {
-            if (Rubin_NParameters.Rubin_NТумблерБлок5063 == "4.8")
-            {
-                this.Rubin_NТумблерБлок5063.BackgroundImage = ControlElementImages.tumblerType4Right;
-                Rubin_NParameters.Rubin_NТумблерБлок5063 = "5.2";
-            }
-            else
-            {
-                this.Rubin_NТумблерБлок5063.BackgroundImage = ControlElementImages.tumblerType4Left;
-                Rubin_NParameters.Rubin_NТумблерБлок5063 = "4.8";
-            }
+            Rubin_NParameters.ТумблерРнБас1 = !Rubin_NParameters.ТумблерРнБас1;
         }
 
         private void Rubin_NТумблерБлок4923_Click(object sender, System.EventArgs e)
         {
-            if (Rubin_NParameters.Rubin_NТумблерБлок4923 == "4.8")
-            {
-                this.Rubin_NТумблерБлок4923.BackgroundImage = ControlElementImages.tumblerType4Right;
-                Rubin_NParameters.Rubin_NТумблерБлок4923 = "5.2";
-            }
-            else
-            {
-                this.Rubin_NТумблерБлок4923.BackgroundImage = ControlElementImages.tumblerType4Left;
-                Rubin_NParameters.Rubin_NТумблерБлок4923 = "4.8";
-            }
+            Rubin_NParameters.ТумблерРнБас2 = !Rubin_NParameters.ТумблерРнБас2;
         }
 
         private void Rubin_NТумблерБлок4963_Click(object sender, System.EventArgs e)
         {
-            if (Rubin_NParameters.Rubin_NТумблерБлок4963 == "4.8")
-            {
-                this.Rubin_NТумблерБлок4963.BackgroundImage = ControlElementImages.tumblerType4Right;
-                Rubin_NParameters.Rubin_NТумблерБлок4963 = "5.2";
-            }
-            else
-            {
-                this.Rubin_NТумблерБлок4963.BackgroundImage = ControlElementImages.tumblerType4Left;
-                Rubin_NParameters.Rubin_NТумблерБлок4963 = "4.8";
-            }
+            Rubin_NParameters.ТумблерРнБас3 = !Rubin_NParameters.ТумблерРнБас3;
         }
         #endregion
     }

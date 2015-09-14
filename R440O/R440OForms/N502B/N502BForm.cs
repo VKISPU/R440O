@@ -1,19 +1,23 @@
-﻿namespace R440O.R440OForms.N502B
+﻿using R440O.BaseClasses;
+
+namespace R440O.R440OForms.N502B
 {
+    
     using System;
     using System.Globalization;
     using System.Windows.Forms;
     using ThirdParty;
+    using BaseClasses;
 
-    public partial class N502BForm : Form
+    public partial class N502BForm : Form, IRefreshableForm
     {
         public N502BForm()
         {
             InitializeComponent();
-            N502BParameters.ParameterChanged += RefreshForm;
+            N502BParameters.ParameterChanged += RefreshFormElements;
             N502BParameters.СтанцияСгорела += ВыводСообщенияСтанцияСгорела;
             N502BParameters.СледитьЗаВременем();
-            RefreshForm();
+            RefreshFormElements();
         }
 
         private void ВыводСообщенияСтанцияСгорела()
@@ -137,27 +141,13 @@
         private void КнопкаВклНагрузки_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаВклНагрузки.BackgroundImage = null;
-            N502BParameters.Нагрузка = true;
-            N502BParameters.КнопкаНагрузка = true;
-            ЛампочкаСфазировано.BackgroundImage = N502BParameters.ФазировкаГорит
-                ? ControlElementImages.lampType12OnRed
-                : null;
-
-            var angle = N502BParameters.ИндикаторНапряжение * 0.25F - 70;
-            ИндикаторНапряжение.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
-
-            angle = N502BParameters.ИндикаторТокНагрузки * 0.25F - 70;
-            ИндикаторТокНагрузки.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
-            
+            N502BParameters.КнопкаВклНагрузки = true;  
         }
 
         private void КнопкаВклНагрузки_MouseUp(object sender, MouseEventArgs e)
         {
             КнопкаВклНагрузки.BackgroundImage = ControlElementImages.buttonRoundType3;
-            N502BParameters.КнопкаНагрузка = false;
-            RefreshForm();
+            N502BParameters.КнопкаВклНагрузки = false;
         }
         #endregion
 
@@ -234,7 +224,7 @@
 
         #region Обновление формы
 
-        private void RefreshForm()
+        public void RefreshFormElements()
         {
             ВремяРаботы.Text = Math.Round(N502BParameters.ВремяРаботыСтанции.TotalHours, 1).ToString(CultureInfo.CurrentCulture);
 

@@ -15,7 +15,7 @@
         public VoltageStabilizerForm()
         {
             InitializeComponent();
-            VoltageStabilizerParameters.RefreshForm += RefreshFormElements;
+            VoltageStabilizerParameters.ParameterChanged += RefreshFormElements;
             VoltageStabilizerParameters.ОператорСтанцииПоражёнТоком += ВыводСообщенияОператорСтанцииПоражёнТоком;
             RefreshFormElements();
         }
@@ -98,7 +98,7 @@
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
             ИндикаторНапряжения.Invalidate();
 
-            ЛампочкаСетьВкл.BackgroundImage = VoltageStabilizerParameters.ЛампочкаСетьВкл
+            ЛампочкаСетьВкл.BackgroundImage = VoltageStabilizerParameters.ЛампочкаСеть
                 ? ControlElementImages.lampType13OnGreen
                 : null;
 

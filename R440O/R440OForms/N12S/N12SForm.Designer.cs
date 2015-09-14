@@ -30,52 +30,52 @@
         {
             this.N12SPanel = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.N12SIndicatorAlphaV = new System.Windows.Forms.PictureBox();
+            this.ПотенциометрAlphaV = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.N12SIndicatorAlphaИ = new System.Windows.Forms.PictureBox();
+            this.ПотенциометрAlphaИ = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.N12SIndicatorBetaV = new System.Windows.Forms.PictureBox();
+            this.ПотенциометрBetaV = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.N12SIndicatorBetaИ = new System.Windows.Forms.PictureBox();
-            this.N12SIndicatorAlpha = new System.Windows.Forms.Panel();
+            this.ПотенциометрBetaИ = new System.Windows.Forms.PictureBox();
+            this.ИндикаторAlpha = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.N12SIndicatorAlphaCenter = new System.Windows.Forms.Panel();
+            this.ИндикаторAlphaCenter = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.N12SIndicatorBeta = new System.Windows.Forms.Panel();
+            this.Sticker2 = new System.Windows.Forms.PictureBox();
+            this.ИндикаторBeta = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.N12SIndicatorBetaCenter = new System.Windows.Forms.Panel();
-            this.N12SSticker = new System.Windows.Forms.PictureBox();
+            this.ИндикаторBetaCenter = new System.Windows.Forms.Panel();
+            this.Sticker = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.N12SТумблерСеть = new System.Windows.Forms.Button();
-            this.N12SЛампочкаГотовность = new System.Windows.Forms.PictureBox();
-            this.N12SЛампочкаУпорБ = new System.Windows.Forms.PictureBox();
-            this.N12SЛампочкаУпорА = new System.Windows.Forms.PictureBox();
-            this.N12SТумблерБ = new System.Windows.Forms.Button();
+            this.ТумблерСеть = new System.Windows.Forms.Button();
+            this.ЛампочкаГотовность = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаУпорБ = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаУпорА = new System.Windows.Forms.PictureBox();
+            this.ТумблерБ = new System.Windows.Forms.Button();
             this.N12SКнопкаУскор = new System.Windows.Forms.Button();
-            this.N12SТумблерА = new System.Windows.Forms.Button();
+            this.ТумблерА = new System.Windows.Forms.Button();
             this.N12SPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N12SIndicatorAlphaV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ПотенциометрAlphaV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N12SIndicatorAlphaИ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ПотенциометрAlphaИ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N12SIndicatorBetaV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ПотенциометрBetaV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N12SIndicatorBetaИ)).BeginInit();
-            this.N12SIndicatorAlpha.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ПотенциометрBetaИ)).BeginInit();
+            this.ИндикаторAlpha.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.N12SIndicatorAlphaCenter.SuspendLayout();
+            this.ИндикаторAlphaCenter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.N12SIndicatorBeta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Sticker2)).BeginInit();
+            this.ИндикаторBeta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.N12SIndicatorBetaCenter.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.N12SSticker)).BeginInit();
+            this.ИндикаторBetaCenter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Sticker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N12SЛампочкаГотовность)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N12SЛампочкаУпорБ)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N12SЛампочкаУпорА)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаГотовность)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаУпорБ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаУпорА)).BeginInit();
             this.SuspendLayout();
             // 
             // N12SPanel
@@ -83,22 +83,22 @@
             this.N12SPanel.BackgroundImage = global::R440O.BackgroundImages.N12S;
             this.N12SPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.N12SPanel.Controls.Add(this.pictureBox10);
-            this.N12SPanel.Controls.Add(this.N12SIndicatorAlphaV);
+            this.N12SPanel.Controls.Add(this.ПотенциометрAlphaV);
             this.N12SPanel.Controls.Add(this.pictureBox8);
-            this.N12SPanel.Controls.Add(this.N12SIndicatorAlphaИ);
+            this.N12SPanel.Controls.Add(this.ПотенциометрAlphaИ);
             this.N12SPanel.Controls.Add(this.pictureBox7);
-            this.N12SPanel.Controls.Add(this.N12SIndicatorBetaV);
+            this.N12SPanel.Controls.Add(this.ПотенциометрBetaV);
             this.N12SPanel.Controls.Add(this.pictureBox6);
-            this.N12SPanel.Controls.Add(this.N12SIndicatorBetaИ);
-            this.N12SPanel.Controls.Add(this.N12SIndicatorAlpha);
-            this.N12SPanel.Controls.Add(this.N12SIndicatorBeta);
-            this.N12SPanel.Controls.Add(this.N12SТумблерСеть);
-            this.N12SPanel.Controls.Add(this.N12SЛампочкаГотовность);
-            this.N12SPanel.Controls.Add(this.N12SЛампочкаУпорБ);
-            this.N12SPanel.Controls.Add(this.N12SЛампочкаУпорА);
-            this.N12SPanel.Controls.Add(this.N12SТумблерБ);
+            this.N12SPanel.Controls.Add(this.ПотенциометрBetaИ);
+            this.N12SPanel.Controls.Add(this.ИндикаторAlpha);
+            this.N12SPanel.Controls.Add(this.ИндикаторBeta);
+            this.N12SPanel.Controls.Add(this.ТумблерСеть);
+            this.N12SPanel.Controls.Add(this.ЛампочкаГотовность);
+            this.N12SPanel.Controls.Add(this.ЛампочкаУпорБ);
+            this.N12SPanel.Controls.Add(this.ЛампочкаУпорА);
+            this.N12SPanel.Controls.Add(this.ТумблерБ);
             this.N12SPanel.Controls.Add(this.N12SКнопкаУскор);
-            this.N12SPanel.Controls.Add(this.N12SТумблерА);
+            this.N12SPanel.Controls.Add(this.ТумблерА);
             this.N12SPanel.Location = new System.Drawing.Point(0, 0);
             this.N12SPanel.Name = "N12SPanel";
             this.N12SPanel.Size = new System.Drawing.Size(768, 465);
@@ -115,17 +115,17 @@
             this.pictureBox10.TabIndex = 81;
             this.pictureBox10.TabStop = false;
             // 
-            // N12SIndicatorAlphaV
+            // ПотенциометрAlphaV
             // 
-            this.N12SIndicatorAlphaV.BackColor = System.Drawing.Color.Transparent;
-            this.N12SIndicatorAlphaV.BackgroundImage = global::R440O.ControlElementImages.arrow;
-            this.N12SIndicatorAlphaV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.N12SIndicatorAlphaV.InitialImage = null;
-            this.N12SIndicatorAlphaV.Location = new System.Drawing.Point(95, 30);
-            this.N12SIndicatorAlphaV.Name = "N12SIndicatorAlphaV";
-            this.N12SIndicatorAlphaV.Size = new System.Drawing.Size(99, 78);
-            this.N12SIndicatorAlphaV.TabIndex = 82;
-            this.N12SIndicatorAlphaV.TabStop = false;
+            this.ПотенциометрAlphaV.BackColor = System.Drawing.Color.Transparent;
+            this.ПотенциометрAlphaV.BackgroundImage = global::R440O.ControlElementImages.arrow;
+            this.ПотенциометрAlphaV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ПотенциометрAlphaV.InitialImage = null;
+            this.ПотенциометрAlphaV.Location = new System.Drawing.Point(95, 30);
+            this.ПотенциометрAlphaV.Name = "ПотенциометрAlphaV";
+            this.ПотенциометрAlphaV.Size = new System.Drawing.Size(99, 78);
+            this.ПотенциометрAlphaV.TabIndex = 82;
+            this.ПотенциометрAlphaV.TabStop = false;
             // 
             // pictureBox8
             // 
@@ -138,17 +138,17 @@
             this.pictureBox8.TabIndex = 79;
             this.pictureBox8.TabStop = false;
             // 
-            // N12SIndicatorAlphaИ
+            // ПотенциометрAlphaИ
             // 
-            this.N12SIndicatorAlphaИ.BackColor = System.Drawing.Color.Transparent;
-            this.N12SIndicatorAlphaИ.BackgroundImage = global::R440O.ControlElementImages.arrow;
-            this.N12SIndicatorAlphaИ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.N12SIndicatorAlphaИ.InitialImage = null;
-            this.N12SIndicatorAlphaИ.Location = new System.Drawing.Point(195, 30);
-            this.N12SIndicatorAlphaИ.Name = "N12SIndicatorAlphaИ";
-            this.N12SIndicatorAlphaИ.Size = new System.Drawing.Size(99, 78);
-            this.N12SIndicatorAlphaИ.TabIndex = 80;
-            this.N12SIndicatorAlphaИ.TabStop = false;
+            this.ПотенциометрAlphaИ.BackColor = System.Drawing.Color.Transparent;
+            this.ПотенциометрAlphaИ.BackgroundImage = global::R440O.ControlElementImages.arrow;
+            this.ПотенциометрAlphaИ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ПотенциометрAlphaИ.InitialImage = null;
+            this.ПотенциометрAlphaИ.Location = new System.Drawing.Point(195, 30);
+            this.ПотенциометрAlphaИ.Name = "ПотенциометрAlphaИ";
+            this.ПотенциометрAlphaИ.Size = new System.Drawing.Size(99, 78);
+            this.ПотенциометрAlphaИ.TabIndex = 80;
+            this.ПотенциометрAlphaИ.TabStop = false;
             // 
             // pictureBox7
             // 
@@ -161,17 +161,17 @@
             this.pictureBox7.TabIndex = 77;
             this.pictureBox7.TabStop = false;
             // 
-            // N12SIndicatorBetaV
+            // ПотенциометрBetaV
             // 
-            this.N12SIndicatorBetaV.BackColor = System.Drawing.Color.Transparent;
-            this.N12SIndicatorBetaV.BackgroundImage = global::R440O.ControlElementImages.arrow;
-            this.N12SIndicatorBetaV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.N12SIndicatorBetaV.InitialImage = null;
-            this.N12SIndicatorBetaV.Location = new System.Drawing.Point(364, 30);
-            this.N12SIndicatorBetaV.Name = "N12SIndicatorBetaV";
-            this.N12SIndicatorBetaV.Size = new System.Drawing.Size(99, 78);
-            this.N12SIndicatorBetaV.TabIndex = 78;
-            this.N12SIndicatorBetaV.TabStop = false;
+            this.ПотенциометрBetaV.BackColor = System.Drawing.Color.Transparent;
+            this.ПотенциометрBetaV.BackgroundImage = global::R440O.ControlElementImages.arrow;
+            this.ПотенциометрBetaV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ПотенциометрBetaV.InitialImage = null;
+            this.ПотенциометрBetaV.Location = new System.Drawing.Point(364, 30);
+            this.ПотенциометрBetaV.Name = "ПотенциометрBetaV";
+            this.ПотенциометрBetaV.Size = new System.Drawing.Size(99, 78);
+            this.ПотенциометрBetaV.TabIndex = 78;
+            this.ПотенциометрBetaV.TabStop = false;
             // 
             // pictureBox6
             // 
@@ -184,29 +184,29 @@
             this.pictureBox6.TabIndex = 76;
             this.pictureBox6.TabStop = false;
             // 
-            // N12SIndicatorBetaИ
+            // ПотенциометрBetaИ
             // 
-            this.N12SIndicatorBetaИ.BackColor = System.Drawing.Color.Transparent;
-            this.N12SIndicatorBetaИ.BackgroundImage = global::R440O.ControlElementImages.arrow;
-            this.N12SIndicatorBetaИ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.N12SIndicatorBetaИ.InitialImage = null;
-            this.N12SIndicatorBetaИ.Location = new System.Drawing.Point(464, 29);
-            this.N12SIndicatorBetaИ.Name = "N12SIndicatorBetaИ";
-            this.N12SIndicatorBetaИ.Size = new System.Drawing.Size(99, 78);
-            this.N12SIndicatorBetaИ.TabIndex = 76;
-            this.N12SIndicatorBetaИ.TabStop = false;
+            this.ПотенциометрBetaИ.BackColor = System.Drawing.Color.Transparent;
+            this.ПотенциометрBetaИ.BackgroundImage = global::R440O.ControlElementImages.arrow;
+            this.ПотенциометрBetaИ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ПотенциометрBetaИ.InitialImage = null;
+            this.ПотенциометрBetaИ.Location = new System.Drawing.Point(464, 29);
+            this.ПотенциометрBetaИ.Name = "ПотенциометрBetaИ";
+            this.ПотенциометрBetaИ.Size = new System.Drawing.Size(99, 78);
+            this.ПотенциометрBetaИ.TabIndex = 76;
+            this.ПотенциометрBetaИ.TabStop = false;
             // 
-            // N12SIndicatorAlpha
+            // ИндикаторAlpha
             // 
-            this.N12SIndicatorAlpha.BackColor = System.Drawing.Color.Transparent;
-            this.N12SIndicatorAlpha.BackgroundImage = global::R440O.ControlElementImages.N12SIndicatorAlpha;
-            this.N12SIndicatorAlpha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N12SIndicatorAlpha.Controls.Add(this.pictureBox3);
-            this.N12SIndicatorAlpha.Controls.Add(this.N12SIndicatorAlphaCenter);
-            this.N12SIndicatorAlpha.Location = new System.Drawing.Point(137, 114);
-            this.N12SIndicatorAlpha.Name = "N12SIndicatorAlpha";
-            this.N12SIndicatorAlpha.Size = new System.Drawing.Size(212, 202);
-            this.N12SIndicatorAlpha.TabIndex = 72;
+            this.ИндикаторAlpha.BackColor = System.Drawing.Color.Transparent;
+            this.ИндикаторAlpha.BackgroundImage = global::R440O.ControlElementImages.N12SIndicatorAlpha;
+            this.ИндикаторAlpha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ИндикаторAlpha.Controls.Add(this.pictureBox3);
+            this.ИндикаторAlpha.Controls.Add(this.ИндикаторAlphaCenter);
+            this.ИндикаторAlpha.Location = new System.Drawing.Point(137, 114);
+            this.ИндикаторAlpha.Name = "ИндикаторAlpha";
+            this.ИндикаторAlpha.Size = new System.Drawing.Size(212, 202);
+            this.ИндикаторAlpha.TabIndex = 72;
             // 
             // pictureBox3
             // 
@@ -220,17 +220,17 @@
             this.pictureBox3.TabIndex = 70;
             this.pictureBox3.TabStop = false;
             // 
-            // N12SIndicatorAlphaCenter
+            // ИндикаторAlphaCenter
             // 
-            this.N12SIndicatorAlphaCenter.BackColor = System.Drawing.Color.Transparent;
-            this.N12SIndicatorAlphaCenter.BackgroundImage = global::R440O.ControlElementImages.N12SIndicatorCenter;
-            this.N12SIndicatorAlphaCenter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N12SIndicatorAlphaCenter.Controls.Add(this.pictureBox2);
-            this.N12SIndicatorAlphaCenter.Controls.Add(this.pictureBox1);
-            this.N12SIndicatorAlphaCenter.Location = new System.Drawing.Point(38, 34);
-            this.N12SIndicatorAlphaCenter.Name = "N12SIndicatorAlphaCenter";
-            this.N12SIndicatorAlphaCenter.Size = new System.Drawing.Size(138, 134);
-            this.N12SIndicatorAlphaCenter.TabIndex = 73;
+            this.ИндикаторAlphaCenter.BackColor = System.Drawing.Color.Transparent;
+            this.ИндикаторAlphaCenter.BackgroundImage = global::R440O.ControlElementImages.N12SIndicatorCenter;
+            this.ИндикаторAlphaCenter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ИндикаторAlphaCenter.Controls.Add(this.pictureBox2);
+            this.ИндикаторAlphaCenter.Controls.Add(this.Sticker2);
+            this.ИндикаторAlphaCenter.Location = new System.Drawing.Point(38, 34);
+            this.ИндикаторAlphaCenter.Name = "ИндикаторAlphaCenter";
+            this.ИндикаторAlphaCenter.Size = new System.Drawing.Size(138, 134);
+            this.ИндикаторAlphaCenter.TabIndex = 73;
             // 
             // pictureBox2
             // 
@@ -244,29 +244,29 @@
             this.pictureBox2.TabIndex = 69;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
+            // Sticker2
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::R440O.ControlElementImages.N12SSticker;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(32, 29);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(76, 77);
-            this.pictureBox1.TabIndex = 68;
-            this.pictureBox1.TabStop = false;
+            this.Sticker2.BackColor = System.Drawing.Color.Transparent;
+            this.Sticker2.BackgroundImage = global::R440O.ControlElementImages.N12SSticker;
+            this.Sticker2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Sticker2.InitialImage = null;
+            this.Sticker2.Location = new System.Drawing.Point(32, 29);
+            this.Sticker2.Name = "Sticker2";
+            this.Sticker2.Size = new System.Drawing.Size(76, 77);
+            this.Sticker2.TabIndex = 68;
+            this.Sticker2.TabStop = false;
             // 
-            // N12SIndicatorBeta
+            // ИндикаторBeta
             // 
-            this.N12SIndicatorBeta.BackColor = System.Drawing.Color.Transparent;
-            this.N12SIndicatorBeta.BackgroundImage = global::R440O.ControlElementImages.N12SIndicatorBeta;
-            this.N12SIndicatorBeta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N12SIndicatorBeta.Controls.Add(this.pictureBox4);
-            this.N12SIndicatorBeta.Controls.Add(this.N12SIndicatorBetaCenter);
-            this.N12SIndicatorBeta.Location = new System.Drawing.Point(409, 115);
-            this.N12SIndicatorBeta.Name = "N12SIndicatorBeta";
-            this.N12SIndicatorBeta.Size = new System.Drawing.Size(212, 202);
-            this.N12SIndicatorBeta.TabIndex = 71;
+            this.ИндикаторBeta.BackColor = System.Drawing.Color.Transparent;
+            this.ИндикаторBeta.BackgroundImage = global::R440O.ControlElementImages.N12SIndicatorBeta;
+            this.ИндикаторBeta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ИндикаторBeta.Controls.Add(this.pictureBox4);
+            this.ИндикаторBeta.Controls.Add(this.ИндикаторBetaCenter);
+            this.ИндикаторBeta.Location = new System.Drawing.Point(409, 115);
+            this.ИндикаторBeta.Name = "ИндикаторBeta";
+            this.ИндикаторBeta.Size = new System.Drawing.Size(212, 202);
+            this.ИндикаторBeta.TabIndex = 71;
             // 
             // pictureBox4
             // 
@@ -280,29 +280,29 @@
             this.pictureBox4.TabIndex = 74;
             this.pictureBox4.TabStop = false;
             // 
-            // N12SIndicatorBetaCenter
+            // ИндикаторBetaCenter
             // 
-            this.N12SIndicatorBetaCenter.BackColor = System.Drawing.Color.Transparent;
-            this.N12SIndicatorBetaCenter.BackgroundImage = global::R440O.ControlElementImages.N12SIndicatorCenter;
-            this.N12SIndicatorBetaCenter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N12SIndicatorBetaCenter.Controls.Add(this.N12SSticker);
-            this.N12SIndicatorBetaCenter.Controls.Add(this.pictureBox5);
-            this.N12SIndicatorBetaCenter.Location = new System.Drawing.Point(38, 34);
-            this.N12SIndicatorBetaCenter.Name = "N12SIndicatorBetaCenter";
-            this.N12SIndicatorBetaCenter.Size = new System.Drawing.Size(138, 134);
-            this.N12SIndicatorBetaCenter.TabIndex = 72;
+            this.ИндикаторBetaCenter.BackColor = System.Drawing.Color.Transparent;
+            this.ИндикаторBetaCenter.BackgroundImage = global::R440O.ControlElementImages.N12SIndicatorCenter;
+            this.ИндикаторBetaCenter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ИндикаторBetaCenter.Controls.Add(this.Sticker);
+            this.ИндикаторBetaCenter.Controls.Add(this.pictureBox5);
+            this.ИндикаторBetaCenter.Location = new System.Drawing.Point(38, 34);
+            this.ИндикаторBetaCenter.Name = "ИндикаторBetaCenter";
+            this.ИндикаторBetaCenter.Size = new System.Drawing.Size(138, 134);
+            this.ИндикаторBetaCenter.TabIndex = 72;
             // 
-            // N12SSticker
+            // Sticker
             // 
-            this.N12SSticker.BackColor = System.Drawing.Color.Transparent;
-            this.N12SSticker.BackgroundImage = global::R440O.ControlElementImages.N12SSticker;
-            this.N12SSticker.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.N12SSticker.InitialImage = null;
-            this.N12SSticker.Location = new System.Drawing.Point(32, 29);
-            this.N12SSticker.Name = "N12SSticker";
-            this.N12SSticker.Size = new System.Drawing.Size(76, 77);
-            this.N12SSticker.TabIndex = 68;
-            this.N12SSticker.TabStop = false;
+            this.Sticker.BackColor = System.Drawing.Color.Transparent;
+            this.Sticker.BackgroundImage = global::R440O.ControlElementImages.N12SSticker;
+            this.Sticker.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Sticker.InitialImage = null;
+            this.Sticker.Location = new System.Drawing.Point(32, 29);
+            this.Sticker.Name = "Sticker";
+            this.Sticker.Size = new System.Drawing.Size(76, 77);
+            this.Sticker.TabIndex = 68;
+            this.Sticker.TabStop = false;
             // 
             // pictureBox5
             // 
@@ -316,73 +316,73 @@
             this.pictureBox5.TabIndex = 75;
             this.pictureBox5.TabStop = false;
             // 
-            // N12SТумблерСеть
+            // ТумблерСеть
             // 
-            this.N12SТумблерСеть.BackColor = System.Drawing.Color.Transparent;
-            this.N12SТумблерСеть.BackgroundImage = global::R440O.ControlElementImages.tumblerType8Up;
-            this.N12SТумблерСеть.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.N12SТумблерСеть.FlatAppearance.BorderSize = 0;
-            this.N12SТумблерСеть.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N12SТумблерСеть.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N12SТумблерСеть.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N12SТумблерСеть.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.N12SТумблерСеть.Location = new System.Drawing.Point(645, 357);
-            this.N12SТумблерСеть.Name = "N12SТумблерСеть";
-            this.N12SТумблерСеть.Size = new System.Drawing.Size(42, 53);
-            this.N12SТумблерСеть.TabIndex = 70;
-            this.N12SТумблерСеть.UseVisualStyleBackColor = false;
-            this.N12SТумблерСеть.Click += new System.EventHandler(this.N12SТумблерСеть_Click);
+            this.ТумблерСеть.BackColor = System.Drawing.Color.Transparent;
+            this.ТумблерСеть.BackgroundImage = global::R440O.ControlElementImages.tumblerType8Up;
+            this.ТумблерСеть.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ТумблерСеть.FlatAppearance.BorderSize = 0;
+            this.ТумблерСеть.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерСеть.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерСеть.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТумблерСеть.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.ТумблерСеть.Location = new System.Drawing.Point(645, 357);
+            this.ТумблерСеть.Name = "ТумблерСеть";
+            this.ТумблерСеть.Size = new System.Drawing.Size(42, 53);
+            this.ТумблерСеть.TabIndex = 70;
+            this.ТумблерСеть.UseVisualStyleBackColor = false;
+            this.ТумблерСеть.Click += new System.EventHandler(this.N12SТумблерСеть_Click);
             // 
-            // N12SЛампочкаГотовность
+            // ЛампочкаГотовность
             // 
-            this.N12SЛампочкаГотовность.BackColor = System.Drawing.Color.Transparent;
-            this.N12SЛампочкаГотовность.BackgroundImage = global::R440O.ControlElementImages.lampType10OnGreen;
-            this.N12SЛампочкаГотовность.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.N12SЛампочкаГотовность.InitialImage = null;
-            this.N12SЛампочкаГотовность.Location = new System.Drawing.Point(399, 350);
-            this.N12SЛампочкаГотовность.Name = "N12SЛампочкаГотовность";
-            this.N12SЛампочкаГотовность.Size = new System.Drawing.Size(45, 45);
-            this.N12SЛампочкаГотовность.TabIndex = 61;
-            this.N12SЛампочкаГотовность.TabStop = false;
+            this.ЛампочкаГотовность.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаГотовность.BackgroundImage = global::R440O.ControlElementImages.lampType10OnGreen;
+            this.ЛампочкаГотовность.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ЛампочкаГотовность.InitialImage = null;
+            this.ЛампочкаГотовность.Location = new System.Drawing.Point(399, 350);
+            this.ЛампочкаГотовность.Name = "ЛампочкаГотовность";
+            this.ЛампочкаГотовность.Size = new System.Drawing.Size(45, 45);
+            this.ЛампочкаГотовность.TabIndex = 61;
+            this.ЛампочкаГотовность.TabStop = false;
             // 
-            // N12SЛампочкаУпорБ
+            // ЛампочкаУпорБ
             // 
-            this.N12SЛампочкаУпорБ.BackColor = System.Drawing.Color.Transparent;
-            this.N12SЛампочкаУпорБ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.N12SЛампочкаУпорБ.InitialImage = null;
-            this.N12SЛампочкаУпорБ.Location = new System.Drawing.Point(448, 379);
-            this.N12SЛампочкаУпорБ.Name = "N12SЛампочкаУпорБ";
-            this.N12SЛампочкаУпорБ.Size = new System.Drawing.Size(33, 33);
-            this.N12SЛампочкаУпорБ.TabIndex = 61;
-            this.N12SЛампочкаУпорБ.TabStop = false;
+            this.ЛампочкаУпорБ.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаУпорБ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ЛампочкаУпорБ.InitialImage = null;
+            this.ЛампочкаУпорБ.Location = new System.Drawing.Point(448, 379);
+            this.ЛампочкаУпорБ.Name = "ЛампочкаУпорБ";
+            this.ЛампочкаУпорБ.Size = new System.Drawing.Size(33, 33);
+            this.ЛампочкаУпорБ.TabIndex = 61;
+            this.ЛампочкаУпорБ.TabStop = false;
             // 
-            // N12SЛампочкаУпорА
+            // ЛампочкаУпорА
             // 
-            this.N12SЛампочкаУпорА.BackColor = System.Drawing.Color.Transparent;
-            this.N12SЛампочкаУпорА.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.N12SЛампочкаУпорА.InitialImage = null;
-            this.N12SЛампочкаУпорА.Location = new System.Drawing.Point(225, 345);
-            this.N12SЛампочкаУпорА.Name = "N12SЛампочкаУпорА";
-            this.N12SЛампочкаУпорА.Size = new System.Drawing.Size(33, 33);
-            this.N12SЛампочкаУпорА.TabIndex = 61;
-            this.N12SЛампочкаУпорА.TabStop = false;
+            this.ЛампочкаУпорА.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаУпорА.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ЛампочкаУпорА.InitialImage = null;
+            this.ЛампочкаУпорА.Location = new System.Drawing.Point(225, 345);
+            this.ЛампочкаУпорА.Name = "ЛампочкаУпорА";
+            this.ЛампочкаУпорА.Size = new System.Drawing.Size(33, 33);
+            this.ЛампочкаУпорА.TabIndex = 61;
+            this.ЛампочкаУпорА.TabStop = false;
             // 
-            // N12SТумблерБ
+            // ТумблерБ
             // 
-            this.N12SТумблерБ.BackColor = System.Drawing.Color.Transparent;
-            this.N12SТумблерБ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.N12SТумблерБ.FlatAppearance.BorderSize = 0;
-            this.N12SТумблерБ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N12SТумблерБ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N12SТумблерБ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N12SТумблерБ.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.N12SТумблерБ.Location = new System.Drawing.Point(498, 371);
-            this.N12SТумблерБ.Name = "N12SТумблерБ";
-            this.N12SТумблерБ.Size = new System.Drawing.Size(50, 60);
-            this.N12SТумблерБ.TabIndex = 60;
-            this.N12SТумблерБ.UseVisualStyleBackColor = false;
-            this.N12SТумблерБ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N12SТумблерБ_MouseDown);
-            this.N12SТумблерБ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.N12SТумблерБ_MouseUp);
+            this.ТумблерБ.BackColor = System.Drawing.Color.Transparent;
+            this.ТумблерБ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ТумблерБ.FlatAppearance.BorderSize = 0;
+            this.ТумблерБ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерБ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерБ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТумблерБ.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.ТумблерБ.Location = new System.Drawing.Point(498, 371);
+            this.ТумблерБ.Name = "ТумблерБ";
+            this.ТумблерБ.Size = new System.Drawing.Size(50, 60);
+            this.ТумблерБ.TabIndex = 60;
+            this.ТумблерБ.UseVisualStyleBackColor = false;
+            this.ТумблерБ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N12SТумблерБ_MouseDown);
+            this.ТумблерБ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.N12SТумблерБ_MouseUp);
             // 
             // N12SКнопкаУскор
             // 
@@ -400,22 +400,22 @@
             this.N12SКнопкаУскор.UseVisualStyleBackColor = false;
             this.N12SКнопкаУскор.Click += new System.EventHandler(this.N12SКнопкаУскор_Click);
             // 
-            // N12SТумблерА
+            // ТумблерА
             // 
-            this.N12SТумблерА.BackColor = System.Drawing.Color.Transparent;
-            this.N12SТумблерА.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.N12SТумблерА.FlatAppearance.BorderSize = 0;
-            this.N12SТумблерА.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N12SТумблерА.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N12SТумблерА.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N12SТумблерА.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.N12SТумблерА.Location = new System.Drawing.Point(194, 373);
-            this.N12SТумблерА.Name = "N12SТумблерА";
-            this.N12SТумблерА.Size = new System.Drawing.Size(98, 89);
-            this.N12SТумблерА.TabIndex = 60;
-            this.N12SТумблерА.UseVisualStyleBackColor = false;
-            this.N12SТумблерА.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N12SТумблерА_MouseDown);
-            this.N12SТумблерА.MouseUp += new System.Windows.Forms.MouseEventHandler(this.N12SТумблерА_MouseUp);
+            this.ТумблерА.BackColor = System.Drawing.Color.Transparent;
+            this.ТумблерА.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ТумблерА.FlatAppearance.BorderSize = 0;
+            this.ТумблерА.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерА.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерА.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТумблерА.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.ТумблерА.Location = new System.Drawing.Point(194, 373);
+            this.ТумблерА.Name = "ТумблерА";
+            this.ТумблерА.Size = new System.Drawing.Size(98, 89);
+            this.ТумблерА.TabIndex = 60;
+            this.ТумблерА.UseVisualStyleBackColor = false;
+            this.ТумблерА.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N12SТумблерА_MouseDown);
+            this.ТумблерА.MouseUp += new System.Windows.Forms.MouseEventHandler(this.N12SТумблерА_MouseUp);
             // 
             // N12SForm
             // 
@@ -430,26 +430,26 @@
             this.Text = "Н12С";
             this.N12SPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N12SIndicatorAlphaV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ПотенциометрAlphaV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N12SIndicatorAlphaИ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ПотенциометрAlphaИ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N12SIndicatorBetaV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ПотенциометрBetaV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N12SIndicatorBetaИ)).EndInit();
-            this.N12SIndicatorAlpha.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ПотенциометрBetaИ)).EndInit();
+            this.ИндикаторAlpha.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.N12SIndicatorAlphaCenter.ResumeLayout(false);
+            this.ИндикаторAlphaCenter.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.N12SIndicatorBeta.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Sticker2)).EndInit();
+            this.ИндикаторBeta.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.N12SIndicatorBetaCenter.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.N12SSticker)).EndInit();
+            this.ИндикаторBetaCenter.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Sticker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N12SЛампочкаГотовность)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N12SЛампочкаУпорБ)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N12SЛампочкаУпорА)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаГотовность)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаУпорБ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаУпорА)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -457,30 +457,30 @@
         #endregion
 
         private System.Windows.Forms.Panel N12SPanel;
-        private System.Windows.Forms.Button N12SТумблерА;
-        private System.Windows.Forms.Button N12SТумблерБ;
-        private System.Windows.Forms.PictureBox N12SЛампочкаГотовность;
-        private System.Windows.Forms.PictureBox N12SЛампочкаУпорБ;
-        private System.Windows.Forms.PictureBox N12SЛампочкаУпорА;
+        private System.Windows.Forms.Button ТумблерА;
+        private System.Windows.Forms.Button ТумблерБ;
+        private System.Windows.Forms.PictureBox ЛампочкаГотовность;
+        private System.Windows.Forms.PictureBox ЛампочкаУпорБ;
+        private System.Windows.Forms.PictureBox ЛампочкаУпорА;
         private System.Windows.Forms.Button N12SКнопкаУскор;
-        private System.Windows.Forms.PictureBox N12SSticker;
-        private System.Windows.Forms.Button N12SТумблерСеть;
-        private System.Windows.Forms.Panel N12SIndicatorBeta;
-        private System.Windows.Forms.Panel N12SIndicatorAlpha;
-        private System.Windows.Forms.Panel N12SIndicatorBetaCenter;
-        private System.Windows.Forms.Panel N12SIndicatorAlphaCenter;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox Sticker;
+        private System.Windows.Forms.Button ТумблерСеть;
+        private System.Windows.Forms.Panel ИндикаторBeta;
+        private System.Windows.Forms.Panel ИндикаторAlpha;
+        private System.Windows.Forms.Panel ИндикаторBetaCenter;
+        private System.Windows.Forms.Panel ИндикаторAlphaCenter;
+        private System.Windows.Forms.PictureBox Sticker2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox N12SIndicatorBetaИ;
+        private System.Windows.Forms.PictureBox ПотенциометрBetaИ;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox N12SIndicatorBetaV;
+        private System.Windows.Forms.PictureBox ПотенциометрBetaV;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox N12SIndicatorAlphaV;
+        private System.Windows.Forms.PictureBox ПотенциометрAlphaV;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox N12SIndicatorAlphaИ;
+        private System.Windows.Forms.PictureBox ПотенциометрAlphaИ;
     }
 }
