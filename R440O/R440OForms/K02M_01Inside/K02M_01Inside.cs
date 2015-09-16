@@ -15,15 +15,21 @@ namespace R440O.R440OForms.K02M_01Inside
     /// </summary>
     public partial class K02M_01InsideForm : Form
     {
+        public void RefreshFormElements()
+        {
+            K02M_01InsideТумблерБ5.BackgroundImage = K02M_01InsideParameters.K02M_01InsideТумблерБ5
+                ? ControlElementImages.tumblerType7Left
+                : ControlElementImages.tumblerType7Right;
+        }
+
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="K02M_01InsideForm"/>
         /// </summary>
         public K02M_01InsideForm()
         {
+            K02M_01InsideParameters.ParameterChanged += RefreshFormElements;
             this.InitializeComponent();
-            K02M_01InsideТумблерБ5.BackgroundImage = K02M_01InsideParameters.K02M_01InsideТумблерБ5
-                ? ControlElementImages.tumblerType7Left
-                : ControlElementImages.tumblerType7Right;
+            RefreshFormElements();
         }
 
         /// <summary>
@@ -39,9 +45,9 @@ namespace R440O.R440OForms.K02M_01Inside
         private void K02M_01InsideТумблерБ5_Click(object sender, System.EventArgs e)
         {
             K02M_01InsideParameters.K02M_01InsideТумблерБ5 = !K02M_01InsideParameters.K02M_01InsideТумблерБ5;
-            K02M_01InsideТумблерБ5.BackgroundImage = K02M_01InsideParameters.K02M_01InsideТумблерБ5
+         /*   K02M_01InsideТумблерБ5.BackgroundImage = K02M_01InsideParameters.K02M_01InsideТумблерБ5
                 ? ControlElementImages.tumblerType7Left
-                : ControlElementImages.tumblerType7Right;
+                : ControlElementImages.tumblerType7Right;*/
         }
     }
 }

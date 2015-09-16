@@ -19,11 +19,17 @@ namespace R440O.R440OForms.K03M_01Inside
     /// </summary>
     public partial class K03M_01InsideForm : Form
     {
+
+        public void RefreshFormElements()
+        {
+            this.InitializeTumblers();
+        }
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="K03M_01InsideForm"/>
         /// </summary>
         public K03M_01InsideForm()
         {
+            K03M_01InsideParameters.ParameterChanged += RefreshFormElements;
             this.InitializeComponent();
             this.InitializeTumblers();
         }
@@ -88,10 +94,6 @@ namespace R440O.R440OForms.K03M_01Inside
             {
                 K03M_01InsideParameters.K03M_01InsideПереключатель[index] -= 1;
             }
-            
-            var angle = K03M_01InsideParameters.K03M_01InsideПереключатель[index]*30 - 10;
-            item.BackgroundImage = TransformImageHelper.RotateImageByAngle(
-                ControlElementImages.toggleType2, angle);
         }
 
         private void K03M_01InsideТумблер_MouseDown(object sender, MouseEventArgs e)
@@ -105,28 +107,16 @@ namespace R440O.R440OForms.K03M_01Inside
                     K03M_01InsideParameters.K03M_01InsideПереключатель[index] = 1;
                 else K03M_01InsideParameters.K03M_01InsideПереключатель[index] = 0;
             }
-            if (item.Name.Contains("K03M_01InsideТумблер"))
-            {
-                item.BackgroundImage = (K03M_01InsideParameters.K03M_01InsideПереключатель[index] == 0)
-                    ? ControlElementImages.tumblerType3Left
-                    : ControlElementImages.tumblerType3Right;
-            }
         }
 
         private void K03M_01InsideТумблерИП_Click(object sender, EventArgs e)
         {
             K03M_01InsideParameters.K03M_01InsideТумблерИП = !K03M_01InsideParameters.K03M_01InsideТумблерИП;
-            K03M_01InsideТумблерИП.BackgroundImage = K03M_01InsideParameters.K03M_01InsideТумблерИП
-                ? ControlElementImages.tumblerType4Left
-                : ControlElementImages.tumblerType4Right;
         }
 
         private void K03M_01InsideТумблерВклОткл_Click(object sender, EventArgs e)
         {
             K03M_01InsideParameters.K03M_01InsideТумблерВклОткл = !K03M_01InsideParameters.K03M_01InsideТумблерВклОткл;
-            K03M_01InsideТумблерВклОткл.BackgroundImage = K03M_01InsideParameters.K03M_01InsideТумблерВклОткл
-                ? ControlElementImages.tumblerType4Left
-                : ControlElementImages.tumblerType4Right;
         }
     }
 }

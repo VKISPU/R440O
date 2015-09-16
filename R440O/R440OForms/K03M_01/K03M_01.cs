@@ -21,22 +21,31 @@ namespace R440O.R440OForms.K03M_01
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="K03M_01Form"/>
         /// </summary>
-        public K03M_01Form()
+        /// 
+        public void RefreshFormElements()
         {
-            this.InitializeComponent();
             this.InitializeLamps();
             this.InitializeTumblers();
         }
 
+        public K03M_01Form()
+        {
+            K03M_01Parameters.ParameterChanged += RefreshFormElements;
+            this.InitializeComponent();
+            RefreshFormElements();
+
+        }
+
         #region Инициализация
         private void InitializeTumblers()
-        {
-            foreach (Control item in K03M_01Panel.Controls)
+        {            
+           foreach (Control item in K03M_01Panel.Controls)
             {
-                var fieldList = typeof(K03M_01Parameters).GetFields();
+                var fieldList = typeof(K03M_01Parameters).GetProperties();
                 foreach (var property in fieldList.Where(property => item.Name == property.Name))
                 {
-                    if (item.Name.Contains("K03M_01Переключатель"))
+                    if (item.Name.Contains("K03M_01Переключатель") 
+                        && !item.Name.Contains("K03M_01ПереключательНапряжение"))
                     {
                         item.BackgroundImage = (bool)property.GetValue(null)
                             ? ControlElementImages.tumblerType3Up
@@ -98,16 +107,10 @@ namespace R440O.R440OForms.K03M_01
         private void K03M_01Переключатель0_Click(object sender, System.EventArgs e)
         {
             var item = sender as Button;
-            var fieldList = typeof(K03M_01Parameters).GetFields();
+            var fieldList = typeof(K03M_01Parameters).GetProperties();
             foreach (var property in fieldList.Where(property => item.Name == property.Name))
             {
-                property.SetValue(null, !(bool)property.GetValue(null));
-                if (item.Name.Contains("K03M_01Переключатель"))
-                {
-                    item.BackgroundImage = (bool)property.GetValue(null)
-                        ? ControlElementImages.tumblerType3Up
-                        : ControlElementImages.tumblerType3Down;
-                }
+                property.SetValue(null, !(bool)property.GetValue(null));            
             }
         } 
         #endregion
@@ -137,9 +140,6 @@ namespace R440O.R440OForms.K03M_01
             {
                 K03M_01Parameters.K03M_01ПереключательНапряжение -= 1;
             }
-            var angle = K03M_01Parameters.K03M_01ПереключательНапряжение * 30 - 75;
-            K03M_01ПереключательНапряжение.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
     }
 }

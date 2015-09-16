@@ -2,6 +2,20 @@
 {
     internal class K02M_01Parameters
     {
+
+        public delegate void ParameterChangedHandler();
+        public static event ParameterChangedHandler ParameterChanged;
+
+        private static void OnParameterChanged()
+        {
+            var handler = ParameterChanged;
+            if (handler != null) handler();
+        }
+
+        public static void ResetParameters()
+        {
+            OnParameterChanged();
+        }
         ////Лампочки
         public static bool K02M_01ЛампочкаКаналыОбнаруженияЛ;
         public static bool K02M_01ЛампочкаКаналыОбнаруженияЦ;
@@ -28,6 +42,7 @@
                 if (value > 0 && value < 4)
                 {
                     _k02M_01ПереключательСкорость = value;
+                    ResetParameters();
                 }
             }
         }
@@ -49,6 +64,7 @@
                 if (value > 0 && value < 3)
                 {
                     _k02M_01ПереключательВклОткл = value;
+                    ResetParameters();
                 }
             }
         }
@@ -70,6 +86,7 @@
                 if (value > 0 && value < 5)
                 {
                     _k02M_01ПереключательНапряжение1К = value;
+                    ResetParameters();
                 }
             }
         }
@@ -91,6 +108,7 @@
                 if (value > 0 && value < 4)
                 {
                     _k02M_01ПереключательНапряжение2К = value;
+                    ResetParameters();
                 }
             }
         }  

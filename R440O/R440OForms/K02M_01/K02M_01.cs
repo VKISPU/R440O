@@ -23,11 +23,17 @@ namespace R440O.R440OForms.K02M_01
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="K02M_01Form"/>
         /// </summary>
-        public K02M_01Form()
+
+        public void RefreshFormElements()
         {
-            this.InitializeComponent();
             this.InitializeLamps();
             this.InitializeToggles();
+        }
+        public K02M_01Form()
+        {
+            K02M_01Parameters.ParameterChanged += RefreshFormElements;
+            this.InitializeComponent();
+            RefreshFormElements();
         }
 
         #region Инициализация
@@ -111,10 +117,6 @@ namespace R440O.R440OForms.K02M_01
             {
                 K02M_01Parameters.K02M_01ПереключательСкорость -= 1;
             }
-
-            var angle = K02M_01Parameters.K02M_01ПереключательСкорость * 45 - 90;
-            K02M_01ПереключательСкорость.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
 
         private void K02M_01ПереключательВклОткл_MouseDown(object sender, MouseEventArgs e)
@@ -128,10 +130,6 @@ namespace R440O.R440OForms.K02M_01
             {
                 K02M_01Parameters.K02M_01ПереключательВклОткл -= 1;
             }
-
-            var angle = K02M_01Parameters.K02M_01ПереключательВклОткл * 60 - 90;
-            K02M_01ПереключательВклОткл.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
 
         private void K02M_01ПереключательНапряжение1К_MouseDown(object sender, MouseEventArgs e)
@@ -145,10 +143,6 @@ namespace R440O.R440OForms.K02M_01
             {
                 K02M_01Parameters.K02M_01ПереключательНапряжение1К -= 1;
             }
-
-            var angle = K02M_01Parameters.K02M_01ПереключательНапряжение1К * 30 - 75;
-            K02M_01ПереключательНапряжение1К.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
 
         private void K02M_01ПереключательНапряжение2К_MouseDown(object sender, MouseEventArgs e)
@@ -162,10 +156,6 @@ namespace R440O.R440OForms.K02M_01
             {
                 K02M_01Parameters.K02M_01ПереключательНапряжение2К -= 1;
             }
-
-            var angle = K02M_01Parameters.K02M_01ПереключательНапряжение2К * 30 - 75;
-            K02M_01ПереключательНапряжение2К.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         } 
         #endregion
     }
