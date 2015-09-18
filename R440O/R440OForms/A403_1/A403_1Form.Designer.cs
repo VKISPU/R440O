@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.A403_1Panel = new System.Windows.Forms.Panel();
+            this.Panel = new System.Windows.Forms.Panel();
             this.Дисплей = new System.Windows.Forms.Button();
             this.ЛампочкаКомплект2 = new System.Windows.Forms.PictureBox();
             this.ЛампочкаКомплект1 = new System.Windows.Forms.PictureBox();
@@ -64,7 +64,7 @@
             this.ТумблерГотов = new System.Windows.Forms.Button();
             this.ТумблерКомплект = new System.Windows.Forms.Button();
             this.ТумблерСеть = new System.Windows.Forms.Button();
-            this.A403_1Panel.SuspendLayout();
+            this.Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКомплект2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКомплект1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаНеисправностьРИ)).BeginInit();
@@ -72,49 +72,49 @@
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаНеисправностьАПН)).BeginInit();
             this.SuspendLayout();
             // 
-            // A403_1Panel
+            // Panel
             // 
-            this.A403_1Panel.BackgroundImage = global::R440O.BackgroundImages.A403_1;
-            this.A403_1Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.A403_1Panel.Controls.Add(this.Дисплей);
-            this.A403_1Panel.Controls.Add(this.ЛампочкаКомплект2);
-            this.A403_1Panel.Controls.Add(this.ЛампочкаКомплект1);
-            this.A403_1Panel.Controls.Add(this.ЛампочкаНеисправностьРИ);
-            this.A403_1Panel.Controls.Add(this.ЛампочкаНеисправностьФС);
-            this.A403_1Panel.Controls.Add(this.ЛампочкаНеисправностьАПН);
-            this.A403_1Panel.Controls.Add(this.ПереключательПроверка);
-            this.A403_1Panel.Controls.Add(this.ПереключательРежимРаботы);
-            this.A403_1Panel.Controls.Add(this.КнопкаУстВремени);
-            this.A403_1Panel.Controls.Add(this.КнопкаПараметрыСброс);
-            this.A403_1Panel.Controls.Add(this.КнопкаПараметры8);
-            this.A403_1Panel.Controls.Add(this.КнопкаПараметры7);
-            this.A403_1Panel.Controls.Add(this.КнопкаПараметры6);
-            this.A403_1Panel.Controls.Add(this.КнопкаПараметры5);
-            this.A403_1Panel.Controls.Add(this.КнопкаПараметры4);
-            this.A403_1Panel.Controls.Add(this.КнопкаПараметры3);
-            this.A403_1Panel.Controls.Add(this.КнопкаПараметры2);
-            this.A403_1Panel.Controls.Add(this.КнопкаПараметры1);
-            this.A403_1Panel.Controls.Add(this.КнопкаПараметры0);
-            this.A403_1Panel.Controls.Add(this.КнопкаМинус);
-            this.A403_1Panel.Controls.Add(this.Кнопка0);
-            this.A403_1Panel.Controls.Add(this.Кнопка9);
-            this.A403_1Panel.Controls.Add(this.Кнопка8);
-            this.A403_1Panel.Controls.Add(this.Кнопка7);
-            this.A403_1Panel.Controls.Add(this.Кнопка6);
-            this.A403_1Panel.Controls.Add(this.Кнопка5);
-            this.A403_1Panel.Controls.Add(this.Кнопка4);
-            this.A403_1Panel.Controls.Add(this.Кнопка3);
-            this.A403_1Panel.Controls.Add(this.Кнопка2);
-            this.A403_1Panel.Controls.Add(this.Кнопка1);
-            this.A403_1Panel.Controls.Add(this.ТумблерАвтКоррекция);
-            this.A403_1Panel.Controls.Add(this.A403_1ТумблерГруппа);
-            this.A403_1Panel.Controls.Add(this.ТумблерГотов);
-            this.A403_1Panel.Controls.Add(this.ТумблерКомплект);
-            this.A403_1Panel.Controls.Add(this.ТумблерСеть);
-            this.A403_1Panel.Location = new System.Drawing.Point(0, 0);
-            this.A403_1Panel.Name = "A403_1Panel";
-            this.A403_1Panel.Size = new System.Drawing.Size(684, 578);
-            this.A403_1Panel.TabIndex = 0;
+            this.Panel.BackgroundImage = global::R440O.BackgroundImages.A403_1;
+            this.Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Panel.Controls.Add(this.Дисплей);
+            this.Panel.Controls.Add(this.ЛампочкаКомплект2);
+            this.Panel.Controls.Add(this.ЛампочкаКомплект1);
+            this.Panel.Controls.Add(this.ЛампочкаНеисправностьРИ);
+            this.Panel.Controls.Add(this.ЛампочкаНеисправностьФС);
+            this.Panel.Controls.Add(this.ЛампочкаНеисправностьАПН);
+            this.Panel.Controls.Add(this.ПереключательПроверка);
+            this.Panel.Controls.Add(this.ПереключательРежимРаботы);
+            this.Panel.Controls.Add(this.КнопкаУстВремени);
+            this.Panel.Controls.Add(this.КнопкаПараметрыСброс);
+            this.Panel.Controls.Add(this.КнопкаПараметры8);
+            this.Panel.Controls.Add(this.КнопкаПараметры7);
+            this.Panel.Controls.Add(this.КнопкаПараметры6);
+            this.Panel.Controls.Add(this.КнопкаПараметры5);
+            this.Panel.Controls.Add(this.КнопкаПараметры4);
+            this.Panel.Controls.Add(this.КнопкаПараметры3);
+            this.Panel.Controls.Add(this.КнопкаПараметры2);
+            this.Panel.Controls.Add(this.КнопкаПараметры1);
+            this.Panel.Controls.Add(this.КнопкаПараметры0);
+            this.Panel.Controls.Add(this.КнопкаМинус);
+            this.Panel.Controls.Add(this.Кнопка0);
+            this.Panel.Controls.Add(this.Кнопка9);
+            this.Panel.Controls.Add(this.Кнопка8);
+            this.Panel.Controls.Add(this.Кнопка7);
+            this.Panel.Controls.Add(this.Кнопка6);
+            this.Panel.Controls.Add(this.Кнопка5);
+            this.Panel.Controls.Add(this.Кнопка4);
+            this.Panel.Controls.Add(this.Кнопка3);
+            this.Panel.Controls.Add(this.Кнопка2);
+            this.Panel.Controls.Add(this.Кнопка1);
+            this.Panel.Controls.Add(this.ТумблерАвтКоррекция);
+            this.Panel.Controls.Add(this.A403_1ТумблерГруппа);
+            this.Panel.Controls.Add(this.ТумблерГотов);
+            this.Panel.Controls.Add(this.ТумблерКомплект);
+            this.Panel.Controls.Add(this.ТумблерСеть);
+            this.Panel.Location = new System.Drawing.Point(0, 0);
+            this.Panel.Name = "Panel";
+            this.Panel.Size = new System.Drawing.Size(684, 578);
+            this.Panel.TabIndex = 0;
             // 
             // Дисплей
             // 
@@ -230,8 +230,8 @@
             this.КнопкаУстВремени.Size = new System.Drawing.Size(38, 37);
             this.КнопкаУстВремени.TabIndex = 49;
             this.КнопкаУстВремени.UseVisualStyleBackColor = false;
-            this.КнопкаУстВремени.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаУстВремени_MouseDown);
-            this.КнопкаУстВремени.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаУстВремени_MouseUp);
+            this.КнопкаУстВремени.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаУстВремени_MouseDown);
+            this.КнопкаУстВремени.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаУстВремени_MouseUp);
             // 
             // КнопкаПараметрыСброс
             // 
@@ -249,8 +249,8 @@
             this.КнопкаПараметрыСброс.Size = new System.Drawing.Size(38, 37);
             this.КнопкаПараметрыСброс.TabIndex = 48;
             this.КнопкаПараметрыСброс.UseVisualStyleBackColor = false;
-            this.КнопкаПараметрыСброс.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаСброс_MouseDown);
-            this.КнопкаПараметрыСброс.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A403_1КнопкаСброс_MouseUp);
+            this.КнопкаПараметрыСброс.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаПараметрыСброс_MouseDown);
+            this.КнопкаПараметрыСброс.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаПараметрыСброс_MouseUp);
             // 
             // КнопкаПараметры8
             // 
@@ -719,12 +719,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 578);
-            this.Controls.Add(this.A403_1Panel);
+            this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "A403_1Form";
             this.Text = "A403-1";
-            this.A403_1Panel.ResumeLayout(false);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.A403_1Form_FormClosed);
+            this.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКомплект2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКомплект1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаНеисправностьРИ)).EndInit();
@@ -736,7 +737,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel A403_1Panel;
+        private System.Windows.Forms.Panel Panel;
         private System.Windows.Forms.Button ТумблерСеть;
         private System.Windows.Forms.Button ТумблерКомплект;
         private System.Windows.Forms.Button ТумблерГотов;

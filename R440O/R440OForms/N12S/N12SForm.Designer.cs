@@ -331,7 +331,7 @@
             this.ТумблерСеть.Size = new System.Drawing.Size(42, 53);
             this.ТумблерСеть.TabIndex = 70;
             this.ТумблерСеть.UseVisualStyleBackColor = false;
-            this.ТумблерСеть.Click += new System.EventHandler(this.N12SТумблерСеть_Click);
+            this.ТумблерСеть.Click += new System.EventHandler(this.ТумблерСеть_Click);
             // 
             // ЛампочкаГотовность
             // 
@@ -381,8 +381,8 @@
             this.ТумблерБ.Size = new System.Drawing.Size(50, 60);
             this.ТумблерБ.TabIndex = 60;
             this.ТумблерБ.UseVisualStyleBackColor = false;
-            this.ТумблерБ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N12SТумблерБ_MouseDown);
-            this.ТумблерБ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.N12SТумблерБ_MouseUp);
+            this.ТумблерБ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ТумблерБ_MouseDown);
+            this.ТумблерБ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ТумблерБ_MouseUp);
             // 
             // N12SКнопкаУскор
             // 
@@ -414,8 +414,8 @@
             this.ТумблерА.Size = new System.Drawing.Size(98, 89);
             this.ТумблерА.TabIndex = 60;
             this.ТумблерА.UseVisualStyleBackColor = false;
-            this.ТумблерА.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N12SТумблерА_MouseDown);
-            this.ТумблерА.MouseUp += new System.Windows.Forms.MouseEventHandler(this.N12SТумблерА_MouseUp);
+            this.ТумблерА.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ТумблерА_MouseDown);
+            this.ТумблерА.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ТумблерА_MouseUp);
             // 
             // N12SForm
             // 
@@ -428,6 +428,7 @@
             this.Name = "N12SForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Н12С";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.N12SForm_FormClosed);
             this.N12SPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ПотенциометрAlphaV)).EndInit();

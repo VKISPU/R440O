@@ -5,11 +5,6 @@
 //-----------------------------------------------------------------------
 
 using System;
-using System.Reflection;
-using R440O.R440OForms.A205M_1;
-using R440O.R440OForms.N502B;
-using R440O.R440OForms.PowerCabel;
-using R440O.R440OForms.R440O;
 
 namespace R440O.R440OForms.A403_1
 {
@@ -28,8 +23,8 @@ namespace R440O.R440OForms.A403_1
         public A403_1Form()
         {
             InitializeComponent();
-            RefreshForm();
-            A403_1Parameters.RefreshForm += RefreshForm;
+            A403_1Parameters.ParameterChanged += RefreshFormElements;
+            this.RefreshFormElements();
         }
 
         #region Тумблеры
@@ -51,10 +46,6 @@ namespace R440O.R440OForms.A403_1
         private void ТумблерГруппа_Click(object sender, System.EventArgs e)
         {
             A403_1Parameters.ТумблерГруппа = !A403_1Parameters.ТумблерГруппа;
-            //отобразим значения
-            if (Array.IndexOf(A403_1Parameters.КнопкиПараметры, true) != -1 && A403_1Parameters.ТумблерСеть)
-                Дисплей.Text = FormatString(A403_1Parameters.ДисплейЗначения[(A403_1Parameters.ТумблерГруппа) ? 0 : 1,
-                    Array.IndexOf(A403_1Parameters.КнопкиПараметры, true)]);
         }
 
         private void ТумблерАвтКоррекция_Click(object sender, System.EventArgs e)
@@ -64,6 +55,28 @@ namespace R440O.R440OForms.A403_1
         #endregion
 
         #region Кнопки
+
+        #region Кнопки выбора параметров
+        /// <summary>
+        /// Универсальный метод обработки нажатий на кнопки параметров
+        /// </summary>
+        private void КнопкаПараметры_Click(object sender, System.EventArgs e)
+        {
+            var button = sender as Button;
+            int buttonNumber = int.Parse(button.Name[15].ToString());
+            A403_1Parameters.КнопкиПараметры[buttonNumber] = !A403_1Parameters.КнопкиПараметры[buttonNumber];
+        }
+        private void КнопкаПараметрыСброс_MouseDown(object sender, MouseEventArgs e)
+        {
+            КнопкаПараметрыСброс.BackgroundImage = null;
+        }
+
+        private void КнопкаПараметрыСброс_MouseUp(object sender, MouseEventArgs e)
+        {
+            A403_1Parameters.КнопкиПараметры[0] = false;
+            КнопкаПараметрыСброс.BackgroundImage = ControlElementImages.buttonSquareLightBlue;
+        }
+        #endregion
 
         #region Кнопки набора значений
         /// <summary>
@@ -91,60 +104,28 @@ namespace R440O.R440OForms.A403_1
                         : Convert.ToString(number);
 
             //Записываем значение
+            if (A403_1Parameters.Значение.Length == 0)
+                A403_1Parameters.Значение = "+"; //явно укажем знак числа
+
             if (number == 'М')
-            {
-                if (A403_1Parameters.Значение.Length > 0)
-                    if (A403_1Parameters.Значение[0] != '-')
-                        A403_1Parameters.Значение = "-" + A403_1Parameters.Значение;
-                    else
-                        A403_1Parameters.Значение = A403_1Parameters.Значение.Substring(1);
-                else
-                    A403_1Parameters.Значение = "-" + A403_1Parameters.Значение;
-            }
+                A403_1Parameters.Значение = (A403_1Parameters.Значение[0] == '+')
+                    ? "-" + A403_1Parameters.Значение.Substring(1)
+                    : "+" + A403_1Parameters.Значение.Substring(1);
             else
+            {
                 A403_1Parameters.Значение += Convert.ToString(number);
+            }
         }
         #endregion
 
-        #region Кнопки выбора параметров
-        /// <summary>
-        /// Универсальный метод обработки нажатий на кнопки параметров
-        /// </summary>
-        private void КнопкаПараметры_Click(object sender, System.EventArgs e)
-        {
-            var button = sender as Button;
-            A403_1Parameters.КнопкаПараметр = (int)Char.GetNumericValue(button.Name[15]);
-
-            //очистим время
-            A403_1Parameters.Значение = "";
-
-            //отобразим значение
-            if (Array.IndexOf(A403_1Parameters.КнопкиПараметры, true) != -1 && A403_1Parameters.ТумблерСеть)
-                Дисплей.Text = FormatString(A403_1Parameters.ДисплейЗначения[(A403_1Parameters.ТумблерГруппа) ? 0 : 1,
-                    Array.IndexOf(A403_1Parameters.КнопкиПараметры, true)]);
-        }
-
-        private void A403_1КнопкаСброс_MouseDown(object sender, MouseEventArgs e)
-        {
-            КнопкаПараметрыСброс.BackgroundImage = null;
-        }
-
-        private void A403_1КнопкаСброс_MouseUp(object sender, MouseEventArgs e)
-        {
-            КнопкаПараметрыСброс.BackgroundImage = ControlElementImages.buttonSquareLightBlue;
-            A403_1Parameters.КнопкаПараметр = 9;
-
-        }
-        #endregion
-
-        private void A403_1КнопкаУстВремени_MouseUp(object sender, MouseEventArgs e)
-        {
-            КнопкаУстВремени.BackgroundImage = ControlElementImages.buttonSquareLightBlue;
-        }
-
-        private void A403_1КнопкаУстВремени_MouseDown(object sender, MouseEventArgs e)
+        private void КнопкаУстВремени_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаУстВремени.BackgroundImage = null;
+        }
+
+        private void КнопкаУстВремени_MouseUp(object sender, MouseEventArgs e)
+        {
+            КнопкаУстВремени.BackgroundImage = ControlElementImages.buttonSquareLightBlue;
         }
         #endregion
 
@@ -175,29 +156,28 @@ namespace R440O.R440OForms.A403_1
         {
             string minus = "  ";
             if (inputStr.Length > 0)
-                if (inputStr[0] == '-')
-                {
-                    minus = "* ";
-                    inputStr = inputStr.Substring(1);
-                }
+                minus = (inputStr[0] == '-') ? "* " : "  ";
+
             switch (inputStr.Length)
             {
                 case 0:
-                    return (minus + inputStr + "_ _ _ _ _ _");
+                    return ("  _ _ _ _ _ _");
                 case 1:
-                    return (minus + inputStr + " _ _ _ _ _");
+                    return (minus + "_ _ _ _ _ _");
                 case 2:
-                    return (minus + inputStr[0] + " " + inputStr[1] + " _ _ _ _");
+                    return (minus + inputStr[1] + " _ _ _ _ _");
                 case 3:
-                    return (minus + inputStr[0] + " " + inputStr[1] + " " + inputStr[2] + " _ _ _");
+                    return (minus + inputStr[1] + " " + inputStr[2] + " _ _ _ _");
                 case 4:
-                    return (minus + inputStr[0] + " " + inputStr[1] + " " + inputStr[2] + " " + inputStr[3] + " _ _");
+                    return (minus + inputStr[1] + " " + inputStr[2] + " " + inputStr[3] + " _ _ _");
                 case 5:
-                    return (minus + inputStr[0] + " " + inputStr[1] + " " + inputStr[2] +
-                        " " + inputStr[3] + " " + inputStr[4] + " _");
+                    return (minus + inputStr[1] + " " + inputStr[2] + " " + inputStr[3] + " " + inputStr[4] + " _ _");
                 case 6:
-                    return (minus + inputStr[0] + " " + inputStr[1] + " " + inputStr[2] + " " +
-                        inputStr[3] + " " + inputStr[4] + " " + inputStr[5]);
+                    return (minus + inputStr[1] + " " + inputStr[2] + " " + inputStr[3] +
+                        " " + inputStr[4] + " " + inputStr[5] + " _");
+                case 7:
+                    return (minus + inputStr[1] + " " + inputStr[2] + " " + inputStr[3] + " " +
+                        inputStr[4] + " " + inputStr[5] + " " + inputStr[6]);
             }
             return "";
         }
@@ -205,19 +185,16 @@ namespace R440O.R440OForms.A403_1
         /// <summary>
         /// обновление формы
         /// </summary>
-        private void RefreshForm()
+        public void RefreshFormElements()
         {
             //для разного отображения пустой строки при выключенном и включенном питании
-            if (A403_1Parameters.ТумблерСеть)
-                Дисплей.Text = FormatString(A403_1Parameters.Значение);
-            else
-                Дисплей.Text = "";
+            Дисплей.Text = A403_1Parameters.Включен ? FormatString(A403_1Parameters.Значение) : "";
 
-            //отобразим значение
-            if (Array.IndexOf(A403_1Parameters.КнопкиПараметры, true) != -1
-                && A403_1Parameters.ТумблерСеть && A403_1Parameters.Значение == "")
+            //получим значение если зажата кнопка параметров
+            if (Array.IndexOf(A403_1Parameters.КнопкиПараметры.ToArray(), true) != -1
+                && A403_1Parameters.Значение == "" && A403_1Parameters.Включен)
                 Дисплей.Text = FormatString(A403_1Parameters.ДисплейЗначения[(A403_1Parameters.ТумблерГруппа) ? 0 : 1,
-                    Array.IndexOf(A403_1Parameters.КнопкиПараметры, true)]);
+                    Array.IndexOf(A403_1Parameters.КнопкиПараметры.ToArray(), true)]);
 
             ЛампочкаКомплект1.BackgroundImage = A403_1Parameters.ЛампочкаКомплект1
                 ? ControlElementImages.lampType12OnRed
@@ -259,13 +236,19 @@ namespace R440O.R440OForms.A403_1
             ПереключательПроверка.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-
-            foreach (Control item in A403_1Panel.Controls)
+            //отрисовка кнопок параметров
+            foreach (Control item in Panel.Controls)
             {
                 if (item.Name.Contains("КнопкаПараметры") && !item.Name.Contains("Сброс"))
-                    item.Visible = !(A403_1Parameters.КнопкиПараметры[(int)Char.GetNumericValue(item.Name[15])]);
+                    item.BackgroundImage = A403_1Parameters.КнопкиПараметры[int.Parse(item.Name[15].ToString())]
+                        ? null
+                        : ControlElementImages.buttonSquareWhite;
             }
+        }
 
+        private void A403_1Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            A403_1Parameters.ParameterChanged -= RefreshFormElements;
         }
     }
 }

@@ -44,7 +44,6 @@ namespace R440O.Parameters
                                 timer.Enabled = true;
                                 timer.Interval = КнопкаУскор ? 5 : 50;
                                 timer.Tick += timerAlphaLeft_Tick;
-                                timer.Tick -= timerAlphaReturnTo30_Tick;
                                 timer.Tick -= timerAlphaReturn_Tick;
                                 timer.Start();
                                 break;
@@ -54,7 +53,6 @@ namespace R440O.Parameters
                                 timer.Tick -= timerAlphaLeft_Tick;
                                 timer.Tick -= timerAlphaRight_Tick;
                                 timer.Tick += timerAlphaReturn_Tick;
-                                timer.Tick += timerAlphaReturnTo30_Tick;
                                 break;
                             }
                         case 1:
@@ -62,7 +60,6 @@ namespace R440O.Parameters
                                 timer.Enabled = true;
                                 timer.Interval = КнопкаУскор ? 5 : 50;
                                 timer.Tick += timerAlphaRight_Tick;
-                                timer.Tick -= timerAlphaReturnTo30_Tick;
                                 timer.Tick -= timerAlphaReturn_Tick;
                                 timer.Start();
                                 break;
@@ -88,6 +85,7 @@ namespace R440O.Parameters
                                 timer.Enabled = true;
                                 timer.Interval = КнопкаУскор ? 5 : 50;
                                 timer.Tick += timerBetaLeft_Tick;
+                                timer.Tick -= timerBetaReturn_Tick;
                                 timer.Start();
                                 break;
                             }
@@ -95,12 +93,14 @@ namespace R440O.Parameters
                             {
                                 timer.Tick -= timerBetaLeft_Tick;
                                 timer.Tick -= timerBetaRight_Tick;
+                                timer.Tick += timerBetaReturn_Tick;
                                 break;
                             }
                         case 1:
                             {
                                 timer.Enabled = true;
                                 timer.Interval = КнопкаУскор ? 5 : 50;
+                                timer.Tick -= timerBetaReturn_Tick;
                                 timer.Tick += timerBetaRight_Tick;
                                 timer.Start();
                                 break;
@@ -162,7 +162,8 @@ namespace R440O.Parameters
             get { return _потенциометрBetaИ; }
             set
             {
-                if (value >= 0 && value <= 90) _потенциометрBetaИ = value;
+                if (value >= 0 && value <= 90 && !ЛампочкаУпорБ) _потенциометрBetaИ = value;
+                OnParameterChanged();
             }
         }
         #endregion
@@ -172,10 +173,33 @@ namespace R440O.Parameters
 
         public static float ПотенциометрBetaV
         {
-            get { return _потенциометрBetaV; }
+            get
+            {
+                if (!Включен)
+                {
+                    _потенциометрBetaV = 0;
+                    timer.Stop();
+                    timer.Enabled = false;
+                }
+                else
+                {
+                    if (ЛампочкаУпорБ && !timer.Enabled)
+                        _потенциометрBetaV = 0;
+                }
+
+                if (_потенциометрBetaV >= -0.2 && _потенциометрBetaV <= 0.2)
+                    timer.Tick -= timerBetaReturn_Tick;
+
+                return _потенциометрBetaV;
+            }
             set
             {
-                if (value >= -30 && value <= 30) _потенциометрBetaV = value;
+                if (((!КнопкаУскор && value >= -10 && value <= 10) || (КнопкаУскор && value >= -20 && value <= 20))
+                    && !(_потенциометрBetaV - value < 0 && ПотенциометрBetaИ < 45 && ЛампочкаУпорБ)
+                    && !(_потенциометрBetaV - value > 0 && ПотенциометрBetaИ > 45 && ЛампочкаУпорБ)
+                    && !(_потенциометрBetaV >= -0.2 && _потенциометрBetaV <= 0.2 && ЛампочкаУпорБ))
+
+                    _потенциометрBetaV = value;
             }
         }
         #endregion
@@ -210,19 +234,20 @@ namespace R440O.Parameters
                 else
                 {
                     if (ЛампочкаУпорА && !timer.Enabled)
-                        _потенциометрAlphaV = (_потенциометрAlphaИ < 0) ? -30 : 30;
+                        _потенциометрAlphaV = 0;
                 }
+
+                if (_потенциометрAlphaV >= -0.05 && _потенциометрAlphaV <= 0.05)
+                    timer.Tick -= timerAlphaReturn_Tick;
+
                 return _потенциометрAlphaV;
             }
             set
             {
-                if (((_потенциометрAlphaV - value < 0 && ПотенциометрAlphaИ < 0)
-                    || (_потенциометрAlphaV - value > 0 && ПотенциометрAlphaИ > 0)
-                    || (!КнопкаУскор && value >= -10 && value <= 10)
-                    || (КнопкаУскор && value >= -20 && value <= 20)
-                    || (ЛампочкаУпорА && value >= -30 && value <= 30))
-                    && !(_потенциометрAlphaV - value < 0 && ПотенциометрAlphaИ < 0 && ЛампочкаУпорА)
-                    && !(_потенциометрAlphaV - value > 0 && ПотенциометрAlphaИ > 0 && ЛампочкаУпорА))
+                if (((!КнопкаУскор && value >= -10 && value <= 10) || (КнопкаУскор && value >= -20 && value <= 20))
+                    && !(_потенциометрAlphaV - value < 0 && ПотенциометрAlphaИ < 0 && ЛампочкаУпорА )
+                    && !(_потенциометрAlphaV - value > 0 && ПотенциометрAlphaИ > 0 && ЛампочкаУпорА )
+                    && !(_потенциометрAlphaV >= -0.05 && _потенциометрAlphaV <= 0.05 && ЛампочкаУпорА))
 
                     _потенциометрAlphaV = value;
             }
@@ -242,7 +267,14 @@ namespace R440O.Parameters
         {
             ИндикаторAlpha += 0.5F;
             ПотенциометрAlphaИ += 0.5F;
-            ПотенциометрAlphaV += 0.1F;
+            ПотенциометрAlphaV -= 0.1F;
+
+            if (ЛампочкаУпорА)
+                if (ПотенциометрAlphaV > 0)
+                    ПотенциометрAlphaV -= 0.1F;
+                else
+                    ПотенциометрAlphaV += 0.1F;
+
             OnParameterChanged();
         }
 
@@ -253,16 +285,9 @@ namespace R440O.Parameters
         {
             ИндикаторAlpha -= 0.5F;
             ПотенциометрAlphaИ -= 0.5F;
-            ПотенциометрAlphaV -= 0.1F;
-            OnParameterChanged();
-        }
+            ПотенциометрAlphaV += 0.1F;
 
-        /// <summary>
-        /// возврат стрелки потенциометра альфа
-        /// </summary>
-        static void timerAlphaReturn_Tick(object sender, EventArgs e)
-        {
-            if (!ЛампочкаУпорА)
+            if (ЛампочкаУпорА)
                 if (ПотенциометрAlphaV > 0)
                     ПотенциометрAlphaV -= 0.1F;
                 else
@@ -272,15 +297,14 @@ namespace R440O.Parameters
         }
 
         /// <summary>
-        /// возврат стрелки потенциометра альфа до 30 при упоре
+        /// возврат стрелки потенциометра альфа
         /// </summary>
-        static void timerAlphaReturnTo30_Tick(object sender, EventArgs e)
+        static void timerAlphaReturn_Tick(object sender, EventArgs e)
         {
-            if (ЛампочкаУпорА)
-                if (ПотенциометрAlphaИ >= 0)
-                    ПотенциометрAlphaV += 0.1F;
-                else if (ПотенциометрAlphaИ <= 0)
-                    ПотенциометрAlphaV -= 0.1F;
+            if (ПотенциометрAlphaV > 0)
+                ПотенциометрAlphaV -= 0.1F;
+            else
+                ПотенциометрAlphaV += 0.1F;
 
             OnParameterChanged();
         }
@@ -294,6 +318,14 @@ namespace R440O.Parameters
         {
             ИндикаторBeta += 0.5F;
             ПотенциометрBetaИ += 0.5F;
+            ПотенциометрBetaV -= 0.2F;
+
+            if (ЛампочкаУпорБ)
+                if (ПотенциометрBetaV > 0)
+                    ПотенциометрBetaV -= 0.2F;
+                else
+                    ПотенциометрBetaV += 0.2F;
+
             OnParameterChanged();
         }
 
@@ -304,6 +336,27 @@ namespace R440O.Parameters
         {
             ИндикаторBeta -= 0.5F;
             ПотенциометрBetaИ -= 0.5F;
+            ПотенциометрBetaV += 0.2F;
+
+            if (ЛампочкаУпорБ)
+                if (ПотенциометрBetaV > 0)
+                    ПотенциометрBetaV -= 0.2F;
+                else
+                    ПотенциометрBetaV += 0.2F;
+
+            OnParameterChanged();
+        }
+
+        /// <summary>
+        /// возврат стрелки потенциометра бета
+        /// </summary>
+        static void timerBetaReturn_Tick(object sender, EventArgs e)
+        {
+            if (ПотенциометрBetaV > 0)
+                ПотенциометрBetaV -= КнопкаУскор ? 0.2F : 0.4F;
+            else
+                ПотенциометрBetaV += КнопкаУскор ? 0.2F : 0.4F;
+
             OnParameterChanged();
         }
         #endregion

@@ -34,9 +34,8 @@ namespace R440O.R440OForms.N12S
         }
         #endregion
 
-
         #region Тумблеры
-        private void N12SТумблерА_MouseDown(object sender, MouseEventArgs e)
+        private void ТумблерА_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
                 N12SParameters.ТумблерА = -1;
@@ -45,12 +44,12 @@ namespace R440O.R440OForms.N12S
                 N12SParameters.ТумблерА = 1;
         }
 
-        private void N12SТумблерА_MouseUp(object sender, MouseEventArgs e)
+        private void ТумблерА_MouseUp(object sender, MouseEventArgs e)
         {
             N12SParameters.ТумблерА = 0;
         }
 
-        private void N12SТумблерБ_MouseDown(object sender, MouseEventArgs e)
+        private void ТумблерБ_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
                 N12SParameters.ТумблерБ = 1;
@@ -59,17 +58,16 @@ namespace R440O.R440OForms.N12S
                 N12SParameters.ТумблерБ = -1;
         }
 
-        private void N12SТумблерБ_MouseUp(object sender, MouseEventArgs e)
+        private void ТумблерБ_MouseUp(object sender, MouseEventArgs e)
         {
             N12SParameters.ТумблерБ = 0;
         }
 
-        private void N12SТумблерСеть_Click(object sender, System.EventArgs e)
+        private void ТумблерСеть_Click(object sender, System.EventArgs e)
         {
             N12SParameters.ТумблерСеть = !N12SParameters.ТумблерСеть;
         }
         #endregion
-
 
         public void RefreshFormElements()
         {
@@ -154,6 +152,11 @@ namespace R440O.R440OForms.N12S
 
             ЛампочкаГотовность.BackgroundImage = (N12SParameters.ТумблерСеть)
                 ? ControlElementImages.lampType10OnGreen : null;
+        }
+
+        private void N12SForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            N12SParameters.ParameterChanged -= RefreshFormElements;
         }
     }
 }
