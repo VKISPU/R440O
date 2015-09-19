@@ -10,69 +10,108 @@ namespace R440O.R440OForms.A403_1
         {
             get
             {
-                return ТумблерСеть && N15Parameters.ТумблерА403;
+                return Включен = ТумблерСеть && N15Parameters.ТумблерА403;
             }
-        }
-
-        #region Таймер
-        public static int Time = 0;
-
-        public static Timer timer = new Timer();
-
-        public static void timer_Tick(object sender, EventArgs e)
-        {
-            if (Array.IndexOf(КнопкиПараметры.ToArray(), true) == -1)
-            {
-                Значение = " " + (Time / 3600 / 10) + (Time / 3600 % 10) +
-                           (Time / 60 % 60 / 10) + (Time / 60 % 60 % 10) +
-                           (Time % 60 / 10) + (Time % 60 % 10);
-            }
-            Time++;
-        }
-        #endregion
-
-        #region Лампочки
-        public static bool ЛампочкаКомплект1
-        {
-            get { return Включен && ТумблерКомплект; }
-        }
-
-        public static bool ЛампочкаКомплект2
-        {
-            get { return Включен && !ТумблерКомплект; }
-        }
-        #endregion
-
-        #region Тумблеры
-        private static bool _тумблерСеть;
-        public static bool ТумблерСеть
-        {
-            get { return _тумблерСеть; }
             set
             {
-                _тумблерСеть = value;
-
-                if (value)
+                if (!_включен && value) //включение
                 {
                     timer.Enabled = true;
                     timer.Tick += timer_Tick;
                     timer.Interval = 1000;
                     timer.Start();
                 }
-                else
+                else if (_включен && !value) //отключение
                 {
+                    ДисплейЗначения.ОчиститьЗначения();
+
                     timer.Enabled = false;
                     timer.Tick -= timer_Tick;
                     timer.Stop();
                     Time = 0;
+
                     _значение = "";
                 }
 
+                _включен = value;
+            }
+        }
+
+        private static bool _включен;
+        private static bool _тумблерСеть;
+        private static bool _тумблерГотов;
+        private static bool _тумблерАвтКоррекция;
+        private static bool _тумблерГруппа;
+        private static bool _тумблерКомплект;
+        private static string _значение = "";
+
+        #region Таймер
+
+        /// <summary>
+        /// Переменная для хранения времени работы
+        /// </summary>
+        public static int Time = 0;
+
+        /// <summary>
+        /// Таймер для времени работы
+        /// </summary>
+        public static Timer timer = new Timer();
+
+        /// <summary>
+        /// Обработчик события тика таймера: инкремент времени
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public static void timer_Tick(object sender, EventArgs e)
+        {
+            if (Array.IndexOf(КнопкиПараметры.ToArray(), true) == -1)
+            {
+                //форматированная запись в значение для последующего отображения на дисплее
+                Значение = " " + (Time / 3600 / 10) + (Time / 3600 % 10) +
+                           (Time / 60 % 60 / 10) + (Time / 60 % 60 % 10) +
+                           (Time % 60 / 10) + (Time % 60 % 10);
+            }
+            Time++;
+            OnParameterChanged();
+        }
+
+        #endregion
+
+        #region Лампочки
+
+        /// <summary>
+        /// Возможные состояния: true - работает 1 комплект, false - не работает 1 комплект
+        /// </summary>
+        public static bool ЛампочкаКомплект1
+        {
+            get { return Включен && ТумблерКомплект; }
+        }
+
+        /// <summary>
+        /// Возможные состояния: true - работает 2 комплект, false - не работает 2 комплект
+        /// </summary>
+        public static bool ЛампочкаКомплект2
+        {
+            get { return Включен && !ТумблерКомплект; }
+        }
+
+        #endregion
+
+        #region Тумблеры
+
+        public static bool ТумблерСеть
+        {
+            get
+            {
+                return _тумблерСеть;
+            }
+            set
+            {
+                _тумблерСеть = value;
                 OnParameterChanged();
             }
         }
 
-        private static bool _тумблерГотов;
         public static bool ТумблерГотов
         {
             get { return _тумблерГотов; }
@@ -83,7 +122,6 @@ namespace R440O.R440OForms.A403_1
             }
         }
 
-        private static bool _тумблерАвтКоррекция;
         public static bool ТумблерАвтКоррекция
         {
             get { return _тумблерАвтКоррекция; }
@@ -109,7 +147,6 @@ namespace R440O.R440OForms.A403_1
                 OnParameterChanged();
             }
         }
-        private static bool _тумблерГруппа;
 
 
         /// <summary>
@@ -124,7 +161,6 @@ namespace R440O.R440OForms.A403_1
                 OnParameterChanged();
             }
         }
-        private static bool _тумблерКомплект;
 
         #endregion
 
@@ -215,8 +251,11 @@ namespace R440O.R440OForms.A403_1
         /// </summary>
         public static A403_1ЗначенияПараметров ДисплейЗначения = new A403_1ЗначенияПараметров();
 
-        private static string _значение = "";
-
+        /// <summary>
+        /// Свойство для хранения:
+        /// введенного на табло значения но не сохраненного в ДисплейЗначения 
+        /// отображения времени таймера
+        /// </summary>
         public static string Значение
         {
             get { return _значение; }
@@ -243,6 +282,7 @@ namespace R440O.R440OForms.A403_1
                 }
             }
         }
+
         #endregion
 
         public delegate void ParameterChangedHandler();
@@ -262,7 +302,10 @@ namespace R440O.R440OForms.A403_1
 
     public class A403_1Кнопки
     {
-        public static bool[] КнопкиПараметры = { false, false, false, false, false, false, false, false, false };
+        // Для кнопки сброс также есть параметр чтобы отслеживать ее нажатие в данном классе, иначе не получается реализовать 
+        // запрет пользователю на отжатие кнопок (нельзя отследить что инициатором является кнопка сброс а не пользователь)
+
+        public static bool[] КнопкиПараметры = { false, false, false, false, false, false, false, false, false, false };
         public bool this[int buttonNumber]
         {
             get
@@ -271,7 +314,7 @@ namespace R440O.R440OForms.A403_1
             }
             set
             {
-                ////если нажата кнопка ввода параметров и мы ее отжимаем, запоминаем значение
+                //если нажата кнопка ввода параметров и мы ее отжимаем, запоминаем значение
                 if (Array.IndexOf(КнопкиПараметры, true) != -1)
                 {
                     A403_1Parameters.ДисплейЗначения[(A403_1Parameters.ТумблерГруппа) ? 0 : 1,
@@ -279,9 +322,18 @@ namespace R440O.R440OForms.A403_1
                 }
                 A403_1Parameters.Значение = "";
 
-                for (int i = 0; i < 9; i++)
-                { КнопкиПараметры[i] = false; }
-                КнопкиПараметры[buttonNumber] = value;
+                if (buttonNumber == 9) //если кнопка сброс - отжать все кнопки
+                {
+                    for (int i = 0; i < 9; i++)
+                        КнопкиПараметры[i] = false;
+                }
+                else if (value) //если value == false, не давать пользователю отжать кнопку
+                {
+                    for (int i = 0; i < 9; i++)
+                        КнопкиПараметры[i] = false;
+
+                    КнопкиПараметры[buttonNumber] = true;
+                }
 
                 A403_1Parameters.ResetParameters();
             }
@@ -302,6 +354,7 @@ namespace R440O.R440OForms.A403_1
             get { return ДисплейЗначения[комплект, номерКнопки]; }
             set
             {
+                //ограничения на размер хранимых значений
                 if (комплект == 1 && value.Length == 2
                     && (Array.IndexOf(A403_1Parameters.КнопкиПараметры.ToArray(), true) == 2
                     || Array.IndexOf(A403_1Parameters.КнопкиПараметры.ToArray(), true) == 3))
@@ -318,6 +371,15 @@ namespace R440O.R440OForms.A403_1
         public string[,] ToArray()
         {
             return ДисплейЗначения;
+        }
+
+        public void ОчиститьЗначения()
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                ДисплейЗначения[0, i] = "";
+                ДисплейЗначения[1, i] = "";
+            }
         }
     }
 }

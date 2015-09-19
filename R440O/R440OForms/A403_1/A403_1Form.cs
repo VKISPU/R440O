@@ -75,7 +75,7 @@ namespace R440O.R440OForms.A403_1
 
         private void КнопкаПараметрыСброс_MouseUp(object sender, MouseEventArgs e)
         {
-            A403_1Parameters.КнопкиПараметры[0] = false;
+            A403_1Parameters.КнопкиПараметры[9] = false;
             КнопкаПараметрыСброс.BackgroundImage = ControlElementImages.buttonSquareLightBlue;
         }
         #endregion
@@ -151,6 +151,8 @@ namespace R440O.R440OForms.A403_1
         }
         #endregion
 
+        #region Табло
+
         /// <summary>
         /// функция форматирования для табло
         /// </summary>
@@ -183,6 +185,8 @@ namespace R440O.R440OForms.A403_1
             }
             return "";
         }
+
+        #endregion
 
         /// <summary>
         /// обновление формы

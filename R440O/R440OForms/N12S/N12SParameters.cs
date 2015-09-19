@@ -18,8 +18,13 @@ namespace R440O.Parameters
         private static int _тумблерБ;
         private static bool _тумблерСеть;
         private static bool _кнопкаУскор;
+        private static float _потенциометрBetaИ = 0;
+        private static float _потенциометрBetaV = 0;
+        private static float _потенциометрAlphaИ = 0;
+        private static float _потенциометрAlphaV = 0;
 
         #region Тумблеры и кнопка
+
         public static bool ТумблерСеть
         {
             get { return _тумблерСеть; }
@@ -30,6 +35,10 @@ namespace R440O.Parameters
             }
         }
 
+        /// <summary>
+        /// Тумблер для вращения индикатора альфа
+        /// Возможные состояния: -1 - вращение влево, 0 - никуда, 1 - вправо
+        /// </summary>
         public static int ТумблерА
         {
             get { return _тумблерА; }
@@ -71,6 +80,10 @@ namespace R440O.Parameters
             }
         }
 
+        /// <summary>
+        /// Тумблер для вращения индикатора бета
+        /// Возможные состояния: -1 - вращение влево, 0 - никуда, 1 - вправо
+        /// </summary>
         public static int ТумблерБ
         {
             get { return _тумблерБ; }
@@ -111,6 +124,9 @@ namespace R440O.Parameters
             }
         }
 
+        /// <summary>
+        /// Кнопка для увеличения скорости вращения индикаторов
+        /// </summary>
         public static bool КнопкаУскор
         {
             get { return _кнопкаУскор; }
@@ -156,11 +172,13 @@ namespace R440O.Parameters
         #region Потенциометры
 
         #region ПотенциометрBetaИ
-        private static float _потенциометрBetaИ = 0;
 
         public static float ПотенциометрBetaИ
         {
-            get { return _потенциометрBetaИ; }
+            get
+            {
+                return Включен ? _потенциометрBetaИ : 0;
+            }
             set
             {
                 if (value >= 0 && value <= 90 && !ЛампочкаУпорБ) _потенциометрBetaИ = value;
@@ -170,7 +188,6 @@ namespace R440O.Parameters
         #endregion
 
         #region ПотенциометрBetaV
-        private static float _потенциометрBetaV = 0;
 
         public static float ПотенциометрBetaV
         {
@@ -206,11 +223,13 @@ namespace R440O.Parameters
         #endregion
 
         #region ПотенциометрAlphaИ
-        private static float _потенциометрAlphaИ = 0;
 
         public static float ПотенциометрAlphaИ
         {
-            get { return _потенциометрAlphaИ; }
+            get
+            {
+                return Включен ? _потенциометрAlphaИ : 0;
+            }
             set
             {
                 if (value >= -270 && value <= 270 && !ЛампочкаУпорА) _потенциометрAlphaИ = value;
@@ -220,7 +239,6 @@ namespace R440O.Parameters
         #endregion
 
         #region ПотенциометрAlphaV
-        private static float _потенциометрAlphaV = 0;
 
         public static float ПотенциометрAlphaV
         {
@@ -258,6 +276,10 @@ namespace R440O.Parameters
         #endregion
 
         #region Вращение индикаторов и потенциометров
+
+        /// <summary>
+        /// Таймер для доведения потенциометров
+        /// </summary>
         private static Timer timer = new Timer();
 
         #region Альфа
