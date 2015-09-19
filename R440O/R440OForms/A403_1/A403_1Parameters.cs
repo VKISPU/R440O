@@ -67,7 +67,7 @@ namespace R440O.R440OForms.A403_1
             if (Array.IndexOf(КнопкиПараметры.ToArray(), true) == -1)
             {
                 //форматированная запись в значение для последующего отображения на дисплее
-                Значение = " " + (Time / 3600 / 10) + (Time / 3600 % 10) +
+                _значение = " " + (Time / 3600 / 10) + (Time / 3600 % 10) +
                            (Time / 60 % 60 / 10) + (Time / 60 % 60 % 10) +
                            (Time % 60 / 10) + (Time % 60 % 10);
             }
@@ -271,11 +271,6 @@ namespace R440O.R440OForms.A403_1
                     }
                 }
                 else if (Включен && value.Length <= 7 && Array.IndexOf(A403_1Кнопки.КнопкиПараметры, true) != -1)
-                {
-                    _значение = value;
-                    OnParameterChanged();
-                }
-                else if (Array.IndexOf(A403_1Кнопки.КнопкиПараметры, true) == -1)
                 {
                     _значение = value;
                     OnParameterChanged();

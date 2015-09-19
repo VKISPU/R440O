@@ -67,6 +67,7 @@ namespace R440O.R440OForms.A403_1
             var button = sender as Button;
             int buttonNumber = int.Parse(button.Name[15].ToString());
             A403_1Parameters.КнопкиПараметры[buttonNumber] = !A403_1Parameters.КнопкиПараметры[buttonNumber];
+            A403_1Parameters.Значение = "";
         }
         private void КнопкаПараметрыСброс_MouseDown(object sender, MouseEventArgs e)
         {
@@ -114,9 +115,7 @@ namespace R440O.R440OForms.A403_1
                     ? "-" + A403_1Parameters.Значение.Substring(1)
                     : "+" + A403_1Parameters.Значение.Substring(1);
             else
-            {
                 A403_1Parameters.Значение += Convert.ToString(number);
-            }
         }
         #endregion
 
