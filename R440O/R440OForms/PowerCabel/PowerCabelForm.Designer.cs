@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.PowerCabelPanel = new System.Windows.Forms.Panel();
+            this.Panel = new System.Windows.Forms.Panel();
             this.КабельСеть = new System.Windows.Forms.Button();
             this.ТумблерОсвещение = new System.Windows.Forms.Button();
-            this.PowerCabelPanel.SuspendLayout();
+            this.Panel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // PowerCabelPanel
+            // Panel
             // 
-            this.PowerCabelPanel.BackgroundImage = global::R440O.BackgroundImages.PowerCabel;
-            this.PowerCabelPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.PowerCabelPanel.Controls.Add(this.КабельСеть);
-            this.PowerCabelPanel.Controls.Add(this.ТумблерОсвещение);
-            this.PowerCabelPanel.Location = new System.Drawing.Point(0, 0);
-            this.PowerCabelPanel.Name = "PowerCabelPanel";
-            this.PowerCabelPanel.Size = new System.Drawing.Size(862, 648);
-            this.PowerCabelPanel.TabIndex = 4;
+            this.Panel.BackgroundImage = global::R440O.BackgroundImages.PowerCabel;
+            this.Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Panel.Controls.Add(this.КабельСеть);
+            this.Panel.Controls.Add(this.ТумблерОсвещение);
+            this.Panel.Location = new System.Drawing.Point(0, 0);
+            this.Panel.Name = "Panel";
+            this.Panel.Size = new System.Drawing.Size(862, 648);
+            this.Panel.TabIndex = 4;
             // 
             // КабельСеть
             // 
@@ -81,20 +81,21 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(862, 648);
-            this.Controls.Add(this.PowerCabelPanel);
+            this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "PowerCabelForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "КАБЕЛЬ ЭЛЕКТРОПИТАНИЯ";
-            this.PowerCabelPanel.ResumeLayout(false);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PowerCabelForm_FormClosed);
+            this.Panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel PowerCabelPanel;
+        private System.Windows.Forms.Panel Panel;
         private System.Windows.Forms.Button ТумблерОсвещение;
         private System.Windows.Forms.Button КабельСеть;
     }

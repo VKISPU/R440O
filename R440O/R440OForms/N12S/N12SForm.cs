@@ -5,6 +5,7 @@
 //-----------------------------------------------------------------------
 
 using System;
+using R440O.BaseClasses;
 using R440O.Parameters;
 using R440O.ThirdParty;
 
@@ -15,7 +16,7 @@ namespace R440O.R440OForms.N12S
     /// <summary>
     /// Форма блока Н-12-С
     /// </summary>
-    public partial class N12SForm : Form
+    public partial class N12SForm : Form, IRefreshableForm
     {
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="N12SForm"/>
@@ -28,7 +29,7 @@ namespace R440O.R440OForms.N12S
         }
 
         #region Кнопка
-        private void N12SКнопкаУскор_Click(object sender, System.EventArgs e)
+        private void КнопкаУскор_Click(object sender, System.EventArgs e)
         {
             N12SParameters.КнопкаУскор = !N12SParameters.КнопкаУскор;
         }
@@ -75,7 +76,7 @@ namespace R440O.R440OForms.N12S
                 ? ControlElementImages.tumblerType8Up
                 : ControlElementImages.tumblerType8Down;
 
-            N12SКнопкаУскор.BackgroundImage = N12SParameters.КнопкаУскор
+            КнопкаУскор.BackgroundImage = N12SParameters.КнопкаУскор
                 ? ControlElementImages.buttonRoundType8
                 : null;
 
@@ -150,7 +151,7 @@ namespace R440O.R440OForms.N12S
                 ? ControlElementImages.lampType6OnRed
                 : null;
 
-            ЛампочкаГотовность.BackgroundImage = (N12SParameters.ТумблерСеть)
+            ЛампочкаГотовность.BackgroundImage = (N12SParameters.ЛампочкаГотовность)
                 ? ControlElementImages.lampType10OnGreen : null;
         }
 

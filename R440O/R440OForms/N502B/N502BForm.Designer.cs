@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.N502BPanel = new System.Windows.Forms.Panel();
+            this.Panel = new System.Windows.Forms.Panel();
             this.ВремяРаботы = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -46,8 +46,8 @@
             this.ПереключательНапряжение = new System.Windows.Forms.Button();
             this.ПереключательСеть = new System.Windows.Forms.Button();
             this.КнопкаВклНагрузки = new System.Windows.Forms.Button();
-            this.N502BКнопкаРБППроверка = new System.Windows.Forms.Button();
-            this.N502BКнопкаРБПСброс = new System.Windows.Forms.Button();
+            this.КнопкаРБППроверка = new System.Windows.Forms.Button();
+            this.КнопкаРБПСброс = new System.Windows.Forms.Button();
             this.ТумблерОсвещение2 = new System.Windows.Forms.Button();
             this.ТумблерОсвещение1 = new System.Windows.Forms.Button();
             this.ТумблерН15 = new System.Windows.Forms.Button();
@@ -56,7 +56,7 @@
             this.ТумблерОсвещение = new System.Windows.Forms.Button();
             this.ТумблерВыпрямитель27В = new System.Windows.Forms.Button();
             this.ТумблерЭлектрооборудование = new System.Windows.Forms.Button();
-            this.N502BPanel.SuspendLayout();
+            this.Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -69,41 +69,41 @@
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСеть)).BeginInit();
             this.SuspendLayout();
             // 
-            // N502BPanel
+            // Panel
             // 
-            this.N502BPanel.BackgroundImage = global::R440O.BackgroundImages.N502B;
-            this.N502BPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N502BPanel.Controls.Add(this.ВремяРаботы);
-            this.N502BPanel.Controls.Add(this.pictureBox5);
-            this.N502BPanel.Controls.Add(this.pictureBox3);
-            this.N502BPanel.Controls.Add(this.pictureBox2);
-            this.N502BPanel.Controls.Add(this.ИндикаторТокНагрузкиИЗаряда);
-            this.N502BPanel.Controls.Add(this.pictureBox1);
-            this.N502BPanel.Controls.Add(this.ИндикаторКонтрольНапряжения);
-            this.N502BPanel.Controls.Add(this.ИндикаторТокНагрузки);
-            this.N502BPanel.Controls.Add(this.ИндикаторНапряжение);
-            this.N502BPanel.Controls.Add(this.ЛампочкаСфазировано);
-            this.N502BPanel.Controls.Add(this.ЛампочкаСеть);
-            this.N502BPanel.Controls.Add(this.ПереключательТокНагрузкиИЗаряда);
-            this.N502BPanel.Controls.Add(this.ПереключательКонтрольНапряжения);
-            this.N502BPanel.Controls.Add(this.ПереключательФазировка);
-            this.N502BPanel.Controls.Add(this.ПереключательНапряжение);
-            this.N502BPanel.Controls.Add(this.ПереключательСеть);
-            this.N502BPanel.Controls.Add(this.КнопкаВклНагрузки);
-            this.N502BPanel.Controls.Add(this.N502BКнопкаРБППроверка);
-            this.N502BPanel.Controls.Add(this.N502BКнопкаРБПСброс);
-            this.N502BPanel.Controls.Add(this.ТумблерОсвещение2);
-            this.N502BPanel.Controls.Add(this.ТумблерОсвещение1);
-            this.N502BPanel.Controls.Add(this.ТумблерН15);
-            this.N502BPanel.Controls.Add(this.ТумблерН132);
-            this.N502BPanel.Controls.Add(this.ТумблерН131);
-            this.N502BPanel.Controls.Add(this.ТумблерОсвещение);
-            this.N502BPanel.Controls.Add(this.ТумблерВыпрямитель27В);
-            this.N502BPanel.Controls.Add(this.ТумблерЭлектрооборудование);
-            this.N502BPanel.Location = new System.Drawing.Point(0, 0);
-            this.N502BPanel.Name = "N502BPanel";
-            this.N502BPanel.Size = new System.Drawing.Size(749, 745);
-            this.N502BPanel.TabIndex = 1;
+            this.Panel.BackgroundImage = global::R440O.BackgroundImages.N502B;
+            this.Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Panel.Controls.Add(this.ВремяРаботы);
+            this.Panel.Controls.Add(this.pictureBox5);
+            this.Panel.Controls.Add(this.pictureBox3);
+            this.Panel.Controls.Add(this.pictureBox2);
+            this.Panel.Controls.Add(this.ИндикаторТокНагрузкиИЗаряда);
+            this.Panel.Controls.Add(this.pictureBox1);
+            this.Panel.Controls.Add(this.ИндикаторКонтрольНапряжения);
+            this.Panel.Controls.Add(this.ИндикаторТокНагрузки);
+            this.Panel.Controls.Add(this.ИндикаторНапряжение);
+            this.Panel.Controls.Add(this.ЛампочкаСфазировано);
+            this.Panel.Controls.Add(this.ЛампочкаСеть);
+            this.Panel.Controls.Add(this.ПереключательТокНагрузкиИЗаряда);
+            this.Panel.Controls.Add(this.ПереключательКонтрольНапряжения);
+            this.Panel.Controls.Add(this.ПереключательФазировка);
+            this.Panel.Controls.Add(this.ПереключательНапряжение);
+            this.Panel.Controls.Add(this.ПереключательСеть);
+            this.Panel.Controls.Add(this.КнопкаВклНагрузки);
+            this.Panel.Controls.Add(this.КнопкаРБППроверка);
+            this.Panel.Controls.Add(this.КнопкаРБПСброс);
+            this.Panel.Controls.Add(this.ТумблерОсвещение2);
+            this.Panel.Controls.Add(this.ТумблерОсвещение1);
+            this.Panel.Controls.Add(this.ТумблерН15);
+            this.Panel.Controls.Add(this.ТумблерН132);
+            this.Panel.Controls.Add(this.ТумблерН131);
+            this.Panel.Controls.Add(this.ТумблерОсвещение);
+            this.Panel.Controls.Add(this.ТумблерВыпрямитель27В);
+            this.Panel.Controls.Add(this.ТумблерЭлектрооборудование);
+            this.Panel.Location = new System.Drawing.Point(0, 0);
+            this.Panel.Name = "Panel";
+            this.Panel.Size = new System.Drawing.Size(749, 745);
+            this.Panel.TabIndex = 1;
             // 
             // ВремяРаботы
             // 
@@ -316,39 +316,39 @@
             this.КнопкаВклНагрузки.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаВклНагрузки_MouseDown);
             this.КнопкаВклНагрузки.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаВклНагрузки_MouseUp);
             // 
-            // N502BКнопкаРБППроверка
+            // КнопкаРБППроверка
             // 
-            this.N502BКнопкаРБППроверка.BackColor = System.Drawing.Color.Transparent;
-            this.N502BКнопкаРБППроверка.BackgroundImage = global::R440O.ControlElementImages.buttonRoundType3;
-            this.N502BКнопкаРБППроверка.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N502BКнопкаРБППроверка.FlatAppearance.BorderSize = 0;
-            this.N502BКнопкаРБППроверка.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N502BКнопкаРБППроверка.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N502BКнопкаРБППроверка.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N502BКнопкаРБППроверка.Location = new System.Drawing.Point(461, 69);
-            this.N502BКнопкаРБППроверка.Name = "N502BКнопкаРБППроверка";
-            this.N502BКнопкаРБППроверка.Size = new System.Drawing.Size(16, 18);
-            this.N502BКнопкаРБППроверка.TabIndex = 29;
-            this.N502BКнопкаРБППроверка.UseVisualStyleBackColor = false;
-            this.N502BКнопкаРБППроверка.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N502BКнопкаРБППроверка_MouseDown);
-            this.N502BКнопкаРБППроверка.MouseUp += new System.Windows.Forms.MouseEventHandler(this.N502BКнопкаРБППроверка_MouseUp);
+            this.КнопкаРБППроверка.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаРБППроверка.BackgroundImage = global::R440O.ControlElementImages.buttonRoundType3;
+            this.КнопкаРБППроверка.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.КнопкаРБППроверка.FlatAppearance.BorderSize = 0;
+            this.КнопкаРБППроверка.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаРБППроверка.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаРБППроверка.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаРБППроверка.Location = new System.Drawing.Point(461, 69);
+            this.КнопкаРБППроверка.Name = "КнопкаРБППроверка";
+            this.КнопкаРБППроверка.Size = new System.Drawing.Size(16, 18);
+            this.КнопкаРБППроверка.TabIndex = 29;
+            this.КнопкаРБППроверка.UseVisualStyleBackColor = false;
+            this.КнопкаРБППроверка.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаРБППроверка_MouseDown);
+            this.КнопкаРБППроверка.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаРБППроверка_MouseUp);
             // 
-            // N502BКнопкаРБПСброс
+            // КнопкаРБПСброс
             // 
-            this.N502BКнопкаРБПСброс.BackColor = System.Drawing.Color.Transparent;
-            this.N502BКнопкаРБПСброс.BackgroundImage = global::R440O.ControlElementImages.buttonRoundType3;
-            this.N502BКнопкаРБПСброс.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N502BКнопкаРБПСброс.FlatAppearance.BorderSize = 0;
-            this.N502BКнопкаРБПСброс.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N502BКнопкаРБПСброс.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N502BКнопкаРБПСброс.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N502BКнопкаРБПСброс.Location = new System.Drawing.Point(520, 69);
-            this.N502BКнопкаРБПСброс.Name = "N502BКнопкаРБПСброс";
-            this.N502BКнопкаРБПСброс.Size = new System.Drawing.Size(16, 18);
-            this.N502BКнопкаРБПСброс.TabIndex = 28;
-            this.N502BКнопкаРБПСброс.UseVisualStyleBackColor = false;
-            this.N502BКнопкаРБПСброс.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N502BКнопкаРБПСброс_MouseDown);
-            this.N502BКнопкаРБПСброс.MouseUp += new System.Windows.Forms.MouseEventHandler(this.N502BКнопкаРБПСброс_MouseUp);
+            this.КнопкаРБПСброс.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаРБПСброс.BackgroundImage = global::R440O.ControlElementImages.buttonRoundType3;
+            this.КнопкаРБПСброс.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.КнопкаРБПСброс.FlatAppearance.BorderSize = 0;
+            this.КнопкаРБПСброс.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаРБПСброс.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаРБПСброс.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаРБПСброс.Location = new System.Drawing.Point(520, 69);
+            this.КнопкаРБПСброс.Name = "КнопкаРБПСброс";
+            this.КнопкаРБПСброс.Size = new System.Drawing.Size(16, 18);
+            this.КнопкаРБПСброс.TabIndex = 28;
+            this.КнопкаРБПСброс.UseVisualStyleBackColor = false;
+            this.КнопкаРБПСброс.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаРБПСброс_MouseDown);
+            this.КнопкаРБПСброс.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаРБПСброс_MouseUp);
             // 
             // ТумблерОсвещение2
             // 
@@ -483,13 +483,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(744, 733);
-            this.Controls.Add(this.N502BPanel);
+            this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "N502BForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Н502Б";
-            this.N502BPanel.ResumeLayout(false);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.N502BForm_FormClosed);
+            this.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -506,7 +507,7 @@
 
         #endregion
 
-        public System.Windows.Forms.Panel N502BPanel;
+        public System.Windows.Forms.Panel Panel;
         public System.Windows.Forms.Button ТумблерЭлектрооборудование;
         public System.Windows.Forms.Button ТумблерВыпрямитель27В;
         public System.Windows.Forms.Button ТумблерОсвещение;
@@ -515,8 +516,8 @@
         public System.Windows.Forms.Button ТумблерН15;
         public System.Windows.Forms.Button ТумблерОсвещение2;
         public System.Windows.Forms.Button ТумблерОсвещение1;
-        public System.Windows.Forms.Button N502BКнопкаРБПСброс;
-        public System.Windows.Forms.Button N502BКнопкаРБППроверка;
+        public System.Windows.Forms.Button КнопкаРБПСброс;
+        public System.Windows.Forms.Button КнопкаРБППроверка;
         public System.Windows.Forms.Button КнопкаВклНагрузки;
         public System.Windows.Forms.Button ПереключательСеть;
         public System.Windows.Forms.Button ПереключательНапряжение;

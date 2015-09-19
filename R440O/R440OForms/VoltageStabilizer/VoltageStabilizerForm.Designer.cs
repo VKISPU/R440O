@@ -28,36 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.VoltageStabilizerPanel = new System.Windows.Forms.Panel();
+            this.Panel = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ИндикаторНапряжения = new System.Windows.Forms.PictureBox();
             this.ЛампочкаАвария = new System.Windows.Forms.PictureBox();
             this.ЛампочкаСетьВкл = new System.Windows.Forms.PictureBox();
             this.ПереключательКонтрольНапр = new System.Windows.Forms.Button();
             this.КабельВход2 = new System.Windows.Forms.Button();
             this.КабельВход1 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.VoltageStabilizerPanel.SuspendLayout();
+            this.Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторНапряжения)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаАвария)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСетьВкл)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // VoltageStabilizerPanel
+            // Panel
             // 
-            this.VoltageStabilizerPanel.BackgroundImage = global::R440O.BackgroundImages.VoltageStabilizer;
-            this.VoltageStabilizerPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.VoltageStabilizerPanel.Controls.Add(this.pictureBox2);
-            this.VoltageStabilizerPanel.Controls.Add(this.ИндикаторНапряжения);
-            this.VoltageStabilizerPanel.Controls.Add(this.ЛампочкаАвария);
-            this.VoltageStabilizerPanel.Controls.Add(this.ЛампочкаСетьВкл);
-            this.VoltageStabilizerPanel.Controls.Add(this.ПереключательКонтрольНапр);
-            this.VoltageStabilizerPanel.Controls.Add(this.КабельВход2);
-            this.VoltageStabilizerPanel.Controls.Add(this.КабельВход1);
-            this.VoltageStabilizerPanel.Location = new System.Drawing.Point(0, 0);
-            this.VoltageStabilizerPanel.Name = "VoltageStabilizerPanel";
-            this.VoltageStabilizerPanel.Size = new System.Drawing.Size(1092, 773);
-            this.VoltageStabilizerPanel.TabIndex = 0;
+            this.Panel.BackgroundImage = global::R440O.BackgroundImages.VoltageStabilizer;
+            this.Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Panel.Controls.Add(this.pictureBox2);
+            this.Panel.Controls.Add(this.ИндикаторНапряжения);
+            this.Panel.Controls.Add(this.ЛампочкаАвария);
+            this.Panel.Controls.Add(this.ЛампочкаСетьВкл);
+            this.Panel.Controls.Add(this.ПереключательКонтрольНапр);
+            this.Panel.Controls.Add(this.КабельВход2);
+            this.Panel.Controls.Add(this.КабельВход1);
+            this.Panel.Location = new System.Drawing.Point(0, 0);
+            this.Panel.Name = "Panel";
+            this.Panel.Size = new System.Drawing.Size(1092, 773);
+            this.Panel.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Location = new System.Drawing.Point(335, 118);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(134, 51);
+            this.pictureBox2.TabIndex = 41;
+            this.pictureBox2.TabStop = false;
             // 
             // ИндикаторНапряжения
             // 
@@ -138,38 +147,30 @@
             this.КабельВход1.UseVisualStyleBackColor = false;
             this.КабельВход1.Click += new System.EventHandler(this.КабельВход1_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Location = new System.Drawing.Point(335, 118);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(134, 51);
-            this.pictureBox2.TabIndex = 41;
-            this.pictureBox2.TabStop = false;
-            // 
             // VoltageStabilizerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1093, 733);
-            this.Controls.Add(this.VoltageStabilizerPanel);
+            this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "VoltageStabilizerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "СТАБИЛИЗАТОР НАПРЯЖЕНИЯ";
-            this.VoltageStabilizerPanel.ResumeLayout(false);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VoltageStabilizerForm_FormClosed);
+            this.Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторНапряжения)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаАвария)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСетьВкл)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel VoltageStabilizerPanel;
+        private System.Windows.Forms.Panel Panel;
         private System.Windows.Forms.Button КабельВход2;
         private System.Windows.Forms.Button КабельВход1;
         private System.Windows.Forms.Button ПереключательКонтрольНапр;

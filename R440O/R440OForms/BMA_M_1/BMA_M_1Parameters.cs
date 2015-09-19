@@ -17,7 +17,7 @@ namespace R440O.Parameters
             set
             {
                 _питание = value;
-                N15Parameters.OnParameterChanged();
+                N15Parameters.ResetParameters();
                 BMBParameters.ResetParameters();
             }
         }

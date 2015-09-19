@@ -28,349 +28,350 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.N16Panel = new System.Windows.Forms.Panel();
-            this.N16ЛампочкаЭквивалент = new System.Windows.Forms.PictureBox();
-            this.N16ЛампочкаАнтенна = new System.Windows.Forms.PictureBox();
-            this.N16ЛампочкаН2 = new System.Windows.Forms.PictureBox();
-            this.N16ЛампочкаН1 = new System.Windows.Forms.PictureBox();
-            this.N16ЛампочкаН12 = new System.Windows.Forms.PictureBox();
-            this.N16ТумблерУровень2 = new System.Windows.Forms.Button();
-            this.N16ТумблерФаза = new System.Windows.Forms.Button();
-            this.N16КнопкаВыкл = new System.Windows.Forms.Button();
-            this.N16КнопкаЭквивалент = new System.Windows.Forms.Button();
-            this.N16КнопкаАнтенна = new System.Windows.Forms.Button();
-            this.N16КнопкаН2 = new System.Windows.Forms.Button();
-            this.N16КнопкаН1 = new System.Windows.Forms.Button();
-            this.N16КнопкаН12 = new System.Windows.Forms.Button();
-            this.N16КнопкаВкл = new System.Windows.Forms.Button();
-            this.N16ТумблерУровень1 = new System.Windows.Forms.Button();
-            this.N16ИндикаторКонтрольМощностиРнагр = new System.Windows.Forms.PictureBox();
-            this.N16ИндикаторКонтрольМощностиРвых = new System.Windows.Forms.PictureBox();
-            this.N16Panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.N16ЛампочкаЭквивалент)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N16ЛампочкаАнтенна)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N16ЛампочкаН2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N16ЛампочкаН1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N16ЛампочкаН12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N16ИндикаторКонтрольМощностиРнагр)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N16ИндикаторКонтрольМощностиРвых)).BeginInit();
+            this.Panel = new System.Windows.Forms.Panel();
+            this.ИндикаторМощностьВыхода = new System.Windows.Forms.PictureBox();
+            this.ИндикаторМощностьНагрузки = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаЭквивалент = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаАнтенна = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаН13_2 = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаН13_1 = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаН13_12 = new System.Windows.Forms.PictureBox();
+            this.ТумблерУровень2 = new System.Windows.Forms.Button();
+            this.ТумблерФаза = new System.Windows.Forms.Button();
+            this.КнопкаОткл = new System.Windows.Forms.Button();
+            this.КнопкаЭквивалент = new System.Windows.Forms.Button();
+            this.КнопкаАнтенна = new System.Windows.Forms.Button();
+            this.КнопкаН13_2 = new System.Windows.Forms.Button();
+            this.КнопкаН13_1 = new System.Windows.Forms.Button();
+            this.КнопкаН13_12 = new System.Windows.Forms.Button();
+            this.КнопкаВкл = new System.Windows.Forms.Button();
+            this.ТумблерУровень1 = new System.Windows.Forms.Button();
+            this.Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторМощностьВыхода)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторМощностьНагрузки)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаЭквивалент)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаАнтенна)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаН13_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаН13_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаН13_12)).BeginInit();
             this.SuspendLayout();
             // 
-            // N16Panel
+            // Panel
             // 
-            this.N16Panel.BackgroundImage = global::R440O.BackgroundImages.N16;
-            this.N16Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N16Panel.Controls.Add(this.N16ИндикаторКонтрольМощностиРвых);
-            this.N16Panel.Controls.Add(this.N16ИндикаторКонтрольМощностиРнагр);
-            this.N16Panel.Controls.Add(this.N16ЛампочкаЭквивалент);
-            this.N16Panel.Controls.Add(this.N16ЛампочкаАнтенна);
-            this.N16Panel.Controls.Add(this.N16ЛампочкаН2);
-            this.N16Panel.Controls.Add(this.N16ЛампочкаН1);
-            this.N16Panel.Controls.Add(this.N16ЛампочкаН12);
-            this.N16Panel.Controls.Add(this.N16ТумблерУровень2);
-            this.N16Panel.Controls.Add(this.N16ТумблерФаза);
-            this.N16Panel.Controls.Add(this.N16КнопкаВыкл);
-            this.N16Panel.Controls.Add(this.N16КнопкаЭквивалент);
-            this.N16Panel.Controls.Add(this.N16КнопкаАнтенна);
-            this.N16Panel.Controls.Add(this.N16КнопкаН2);
-            this.N16Panel.Controls.Add(this.N16КнопкаН1);
-            this.N16Panel.Controls.Add(this.N16КнопкаН12);
-            this.N16Panel.Controls.Add(this.N16КнопкаВкл);
-            this.N16Panel.Controls.Add(this.N16ТумблерУровень1);
-            this.N16Panel.Location = new System.Drawing.Point(0, 0);
-            this.N16Panel.Name = "N16Panel";
-            this.N16Panel.Size = new System.Drawing.Size(1104, 435);
-            this.N16Panel.TabIndex = 0;
+            this.Panel.BackgroundImage = global::R440O.BackgroundImages.N16;
+            this.Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Panel.Controls.Add(this.ИндикаторМощностьВыхода);
+            this.Panel.Controls.Add(this.ИндикаторМощностьНагрузки);
+            this.Panel.Controls.Add(this.ЛампочкаЭквивалент);
+            this.Panel.Controls.Add(this.ЛампочкаАнтенна);
+            this.Panel.Controls.Add(this.ЛампочкаН13_2);
+            this.Panel.Controls.Add(this.ЛампочкаН13_1);
+            this.Panel.Controls.Add(this.ЛампочкаН13_12);
+            this.Panel.Controls.Add(this.ТумблерУровень2);
+            this.Panel.Controls.Add(this.ТумблерФаза);
+            this.Panel.Controls.Add(this.КнопкаОткл);
+            this.Panel.Controls.Add(this.КнопкаЭквивалент);
+            this.Panel.Controls.Add(this.КнопкаАнтенна);
+            this.Panel.Controls.Add(this.КнопкаН13_2);
+            this.Panel.Controls.Add(this.КнопкаН13_1);
+            this.Panel.Controls.Add(this.КнопкаН13_12);
+            this.Panel.Controls.Add(this.КнопкаВкл);
+            this.Panel.Controls.Add(this.ТумблерУровень1);
+            this.Panel.Location = new System.Drawing.Point(0, 0);
+            this.Panel.Name = "Panel";
+            this.Panel.Size = new System.Drawing.Size(1104, 435);
+            this.Panel.TabIndex = 0;
             // 
-            // N16ЛампочкаЭквивалент
+            // ИндикаторМощностьВыхода
             // 
-            this.N16ЛампочкаЭквивалент.BackColor = System.Drawing.Color.Transparent;
-            this.N16ЛампочкаЭквивалент.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.N16ЛампочкаЭквивалент.InitialImage = null;
-            this.N16ЛампочкаЭквивалент.Location = new System.Drawing.Point(813, 280);
-            this.N16ЛампочкаЭквивалент.Name = "N16ЛампочкаЭквивалент";
-            this.N16ЛампочкаЭквивалент.Size = new System.Drawing.Size(33, 33);
-            this.N16ЛампочкаЭквивалент.TabIndex = 60;
-            this.N16ЛампочкаЭквивалент.TabStop = false;
+            this.ИндикаторМощностьВыхода.BackColor = System.Drawing.Color.Transparent;
+            this.ИндикаторМощностьВыхода.BackgroundImage = global::R440O.ControlElementImages.arrowNormal;
+            this.ИндикаторМощностьВыхода.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ИндикаторМощностьВыхода.Location = new System.Drawing.Point(405, 70);
+            this.ИндикаторМощностьВыхода.Name = "ИндикаторМощностьВыхода";
+            this.ИндикаторМощностьВыхода.Size = new System.Drawing.Size(64, 59);
+            this.ИндикаторМощностьВыхода.TabIndex = 81;
+            this.ИндикаторМощностьВыхода.TabStop = false;
             // 
-            // N16ЛампочкаАнтенна
+            // ИндикаторМощностьНагрузки
             // 
-            this.N16ЛампочкаАнтенна.BackColor = System.Drawing.Color.Transparent;
-            this.N16ЛампочкаАнтенна.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.N16ЛампочкаАнтенна.InitialImage = null;
-            this.N16ЛампочкаАнтенна.Location = new System.Drawing.Point(755, 280);
-            this.N16ЛампочкаАнтенна.Name = "N16ЛампочкаАнтенна";
-            this.N16ЛампочкаАнтенна.Size = new System.Drawing.Size(33, 33);
-            this.N16ЛампочкаАнтенна.TabIndex = 60;
-            this.N16ЛампочкаАнтенна.TabStop = false;
+            this.ИндикаторМощностьНагрузки.BackColor = System.Drawing.Color.Transparent;
+            this.ИндикаторМощностьНагрузки.BackgroundImage = global::R440O.ControlElementImages.arrowNormal;
+            this.ИндикаторМощностьНагрузки.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ИндикаторМощностьНагрузки.Location = new System.Drawing.Point(253, 69);
+            this.ИндикаторМощностьНагрузки.Name = "ИндикаторМощностьНагрузки";
+            this.ИндикаторМощностьНагрузки.Size = new System.Drawing.Size(64, 59);
+            this.ИндикаторМощностьНагрузки.TabIndex = 80;
+            this.ИндикаторМощностьНагрузки.TabStop = false;
             // 
-            // N16ЛампочкаН2
+            // ЛампочкаЭквивалент
             // 
-            this.N16ЛампочкаН2.BackColor = System.Drawing.Color.Transparent;
-            this.N16ЛампочкаН2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.N16ЛампочкаН2.InitialImage = null;
-            this.N16ЛампочкаН2.Location = new System.Drawing.Point(696, 280);
-            this.N16ЛампочкаН2.Name = "N16ЛампочкаН2";
-            this.N16ЛампочкаН2.Size = new System.Drawing.Size(33, 33);
-            this.N16ЛампочкаН2.TabIndex = 60;
-            this.N16ЛампочкаН2.TabStop = false;
+            this.ЛампочкаЭквивалент.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаЭквивалент.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ЛампочкаЭквивалент.InitialImage = null;
+            this.ЛампочкаЭквивалент.Location = new System.Drawing.Point(814, 281);
+            this.ЛампочкаЭквивалент.Name = "ЛампочкаЭквивалент";
+            this.ЛампочкаЭквивалент.Size = new System.Drawing.Size(33, 33);
+            this.ЛампочкаЭквивалент.TabIndex = 60;
+            this.ЛампочкаЭквивалент.TabStop = false;
             // 
-            // N16ЛампочкаН1
+            // ЛампочкаАнтенна
             // 
-            this.N16ЛампочкаН1.BackColor = System.Drawing.Color.Transparent;
-            this.N16ЛампочкаН1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.N16ЛампочкаН1.InitialImage = null;
-            this.N16ЛампочкаН1.Location = new System.Drawing.Point(639, 280);
-            this.N16ЛампочкаН1.Name = "N16ЛампочкаН1";
-            this.N16ЛампочкаН1.Size = new System.Drawing.Size(33, 33);
-            this.N16ЛампочкаН1.TabIndex = 60;
-            this.N16ЛампочкаН1.TabStop = false;
+            this.ЛампочкаАнтенна.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаАнтенна.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ЛампочкаАнтенна.InitialImage = null;
+            this.ЛампочкаАнтенна.Location = new System.Drawing.Point(755, 281);
+            this.ЛампочкаАнтенна.Name = "ЛампочкаАнтенна";
+            this.ЛампочкаАнтенна.Size = new System.Drawing.Size(33, 33);
+            this.ЛампочкаАнтенна.TabIndex = 60;
+            this.ЛампочкаАнтенна.TabStop = false;
             // 
-            // N16ЛампочкаН12
+            // ЛампочкаН13_2
             // 
-            this.N16ЛампочкаН12.BackColor = System.Drawing.Color.Transparent;
-            this.N16ЛампочкаН12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.N16ЛампочкаН12.InitialImage = null;
-            this.N16ЛампочкаН12.Location = new System.Drawing.Point(581, 280);
-            this.N16ЛампочкаН12.Name = "N16ЛампочкаН12";
-            this.N16ЛампочкаН12.Size = new System.Drawing.Size(33, 33);
-            this.N16ЛампочкаН12.TabIndex = 60;
-            this.N16ЛампочкаН12.TabStop = false;
+            this.ЛампочкаН13_2.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаН13_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ЛампочкаН13_2.InitialImage = null;
+            this.ЛампочкаН13_2.Location = new System.Drawing.Point(697, 281);
+            this.ЛампочкаН13_2.Name = "ЛампочкаН13_2";
+            this.ЛампочкаН13_2.Size = new System.Drawing.Size(33, 33);
+            this.ЛампочкаН13_2.TabIndex = 60;
+            this.ЛампочкаН13_2.TabStop = false;
             // 
-            // N16ТумблерУровень2
+            // ЛампочкаН13_1
             // 
-            this.N16ТумблерУровень2.BackColor = System.Drawing.Color.Transparent;
-            this.N16ТумблерУровень2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.N16ТумблерУровень2.FlatAppearance.BorderSize = 0;
-            this.N16ТумблерУровень2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N16ТумблерУровень2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N16ТумблерУровень2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N16ТумблерУровень2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.N16ТумблерУровень2.Location = new System.Drawing.Point(757, 106);
-            this.N16ТумблерУровень2.Name = "N16ТумблерУровень2";
-            this.N16ТумблерУровень2.Size = new System.Drawing.Size(50, 60);
-            this.N16ТумблерУровень2.TabIndex = 59;
-            this.N16ТумблерУровень2.UseVisualStyleBackColor = false;
-            this.N16ТумблерУровень2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N16Тумблер_MouseDown);
-            this.N16ТумблерУровень2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.N16Тумблер_MouseUp);
+            this.ЛампочкаН13_1.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаН13_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ЛампочкаН13_1.InitialImage = null;
+            this.ЛампочкаН13_1.Location = new System.Drawing.Point(639, 281);
+            this.ЛампочкаН13_1.Name = "ЛампочкаН13_1";
+            this.ЛампочкаН13_1.Size = new System.Drawing.Size(33, 33);
+            this.ЛампочкаН13_1.TabIndex = 60;
+            this.ЛампочкаН13_1.TabStop = false;
             // 
-            // N16ТумблерФаза
+            // ЛампочкаН13_12
             // 
-            this.N16ТумблерФаза.BackColor = System.Drawing.Color.Transparent;
-            this.N16ТумблерФаза.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.N16ТумблерФаза.FlatAppearance.BorderSize = 0;
-            this.N16ТумблерФаза.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N16ТумблерФаза.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N16ТумблерФаза.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N16ТумблерФаза.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.N16ТумблерФаза.Location = new System.Drawing.Point(693, 106);
-            this.N16ТумблерФаза.Name = "N16ТумблерФаза";
-            this.N16ТумблерФаза.Size = new System.Drawing.Size(50, 60);
-            this.N16ТумблерФаза.TabIndex = 59;
-            this.N16ТумблерФаза.UseVisualStyleBackColor = false;
-            this.N16ТумблерФаза.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N16Тумблер_MouseDown);
-            this.N16ТумблерФаза.MouseUp += new System.Windows.Forms.MouseEventHandler(this.N16Тумблер_MouseUp);
+            this.ЛампочкаН13_12.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаН13_12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ЛампочкаН13_12.InitialImage = null;
+            this.ЛампочкаН13_12.Location = new System.Drawing.Point(581, 281);
+            this.ЛампочкаН13_12.Name = "ЛампочкаН13_12";
+            this.ЛампочкаН13_12.Size = new System.Drawing.Size(33, 33);
+            this.ЛампочкаН13_12.TabIndex = 60;
+            this.ЛампочкаН13_12.TabStop = false;
             // 
-            // N16КнопкаВыкл
+            // ТумблерУровень2
             // 
-            this.N16КнопкаВыкл.BackColor = System.Drawing.Color.Transparent;
-            this.N16КнопкаВыкл.BackgroundImage = global::R440O.ControlElementImages.buttonSquareRedLarge;
-            this.N16КнопкаВыкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.N16КнопкаВыкл.FlatAppearance.BorderSize = 0;
-            this.N16КнопкаВыкл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N16КнопкаВыкл.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N16КнопкаВыкл.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N16КнопкаВыкл.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.N16КнопкаВыкл.Location = new System.Drawing.Point(435, 341);
-            this.N16КнопкаВыкл.Name = "N16КнопкаВыкл";
-            this.N16КнопкаВыкл.Size = new System.Drawing.Size(44, 44);
-            this.N16КнопкаВыкл.TabIndex = 59;
-            this.N16КнопкаВыкл.UseVisualStyleBackColor = false;
-            this.N16КнопкаВыкл.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N16КнопкаВыкл_MouseDown);
-            this.N16КнопкаВыкл.MouseUp += new System.Windows.Forms.MouseEventHandler(this.N16КнопкаВыкл_MouseUp);
+            this.ТумблерУровень2.BackColor = System.Drawing.Color.Transparent;
+            this.ТумблерУровень2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ТумблерУровень2.FlatAppearance.BorderSize = 0;
+            this.ТумблерУровень2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерУровень2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерУровень2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТумблерУровень2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.ТумблерУровень2.Location = new System.Drawing.Point(757, 106);
+            this.ТумблерУровень2.Name = "ТумблерУровень2";
+            this.ТумблерУровень2.Size = new System.Drawing.Size(50, 60);
+            this.ТумблерУровень2.TabIndex = 59;
+            this.ТумблерУровень2.UseVisualStyleBackColor = false;
+            this.ТумблерУровень2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ТумблерУровень2_MouseDown);
+            this.ТумблерУровень2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ТумблерУровень2_MouseUp);
             // 
-            // N16КнопкаЭквивалент
+            // ТумблерФаза
             // 
-            this.N16КнопкаЭквивалент.BackColor = System.Drawing.Color.Transparent;
-            this.N16КнопкаЭквивалент.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlackLarge;
-            this.N16КнопкаЭквивалент.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.N16КнопкаЭквивалент.FlatAppearance.BorderSize = 0;
-            this.N16КнопкаЭквивалент.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N16КнопкаЭквивалент.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N16КнопкаЭквивалент.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N16КнопкаЭквивалент.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.N16КнопкаЭквивалент.Location = new System.Drawing.Point(808, 342);
-            this.N16КнопкаЭквивалент.Name = "N16КнопкаЭквивалент";
-            this.N16КнопкаЭквивалент.Size = new System.Drawing.Size(44, 44);
-            this.N16КнопкаЭквивалент.TabIndex = 59;
-            this.N16КнопкаЭквивалент.UseVisualStyleBackColor = false;
-            this.N16КнопкаЭквивалент.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N16Кнопка_MouseDown);
+            this.ТумблерФаза.BackColor = System.Drawing.Color.Transparent;
+            this.ТумблерФаза.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ТумблерФаза.FlatAppearance.BorderSize = 0;
+            this.ТумблерФаза.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерФаза.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерФаза.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТумблерФаза.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.ТумблерФаза.Location = new System.Drawing.Point(693, 106);
+            this.ТумблерФаза.Name = "ТумблерФаза";
+            this.ТумблерФаза.Size = new System.Drawing.Size(50, 60);
+            this.ТумблерФаза.TabIndex = 59;
+            this.ТумблерФаза.UseVisualStyleBackColor = false;
+            this.ТумблерФаза.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ТумблерФаза_MouseDown);
+            this.ТумблерФаза.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ТумблерФаза_MouseUp);
             // 
-            // N16КнопкаАнтенна
+            // КнопкаОткл
             // 
-            this.N16КнопкаАнтенна.BackColor = System.Drawing.Color.Transparent;
-            this.N16КнопкаАнтенна.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlackLarge;
-            this.N16КнопкаАнтенна.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.N16КнопкаАнтенна.FlatAppearance.BorderSize = 0;
-            this.N16КнопкаАнтенна.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N16КнопкаАнтенна.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N16КнопкаАнтенна.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N16КнопкаАнтенна.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.N16КнопкаАнтенна.Location = new System.Drawing.Point(750, 342);
-            this.N16КнопкаАнтенна.Name = "N16КнопкаАнтенна";
-            this.N16КнопкаАнтенна.Size = new System.Drawing.Size(44, 44);
-            this.N16КнопкаАнтенна.TabIndex = 59;
-            this.N16КнопкаАнтенна.UseVisualStyleBackColor = false;
-            this.N16КнопкаАнтенна.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N16Кнопка_MouseDown);
+            this.КнопкаОткл.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаОткл.BackgroundImage = global::R440O.ControlElementImages.buttonSquareRedLarge;
+            this.КнопкаОткл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.КнопкаОткл.FlatAppearance.BorderSize = 0;
+            this.КнопкаОткл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаОткл.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаОткл.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаОткл.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.КнопкаОткл.Location = new System.Drawing.Point(435, 342);
+            this.КнопкаОткл.Name = "КнопкаОткл";
+            this.КнопкаОткл.Size = new System.Drawing.Size(44, 44);
+            this.КнопкаОткл.TabIndex = 59;
+            this.КнопкаОткл.UseVisualStyleBackColor = false;
+            this.КнопкаОткл.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаОткл_MouseDown);
+            this.КнопкаОткл.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаОткл_MouseUp);
             // 
-            // N16КнопкаН2
+            // КнопкаЭквивалент
             // 
-            this.N16КнопкаН2.BackColor = System.Drawing.Color.Transparent;
-            this.N16КнопкаН2.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlackLarge;
-            this.N16КнопкаН2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.N16КнопкаН2.FlatAppearance.BorderSize = 0;
-            this.N16КнопкаН2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N16КнопкаН2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N16КнопкаН2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N16КнопкаН2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.N16КнопкаН2.Location = new System.Drawing.Point(691, 342);
-            this.N16КнопкаН2.Name = "N16КнопкаН2";
-            this.N16КнопкаН2.Size = new System.Drawing.Size(44, 44);
-            this.N16КнопкаН2.TabIndex = 59;
-            this.N16КнопкаН2.UseVisualStyleBackColor = false;
-            this.N16КнопкаН2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N16Кнопка_MouseDown);
+            this.КнопкаЭквивалент.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаЭквивалент.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlackLarge;
+            this.КнопкаЭквивалент.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.КнопкаЭквивалент.FlatAppearance.BorderSize = 0;
+            this.КнопкаЭквивалент.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаЭквивалент.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаЭквивалент.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаЭквивалент.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.КнопкаЭквивалент.Location = new System.Drawing.Point(808, 342);
+            this.КнопкаЭквивалент.Name = "КнопкаЭквивалент";
+            this.КнопкаЭквивалент.Size = new System.Drawing.Size(44, 44);
+            this.КнопкаЭквивалент.TabIndex = 59;
+            this.КнопкаЭквивалент.UseVisualStyleBackColor = false;
+            this.КнопкаЭквивалент.Click += new System.EventHandler(this.КнопкаЭквивалент_Click);
             // 
-            // N16КнопкаН1
+            // КнопкаАнтенна
             // 
-            this.N16КнопкаН1.BackColor = System.Drawing.Color.Transparent;
-            this.N16КнопкаН1.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlackLarge;
-            this.N16КнопкаН1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.N16КнопкаН1.FlatAppearance.BorderSize = 0;
-            this.N16КнопкаН1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N16КнопкаН1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N16КнопкаН1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N16КнопкаН1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.N16КнопкаН1.Location = new System.Drawing.Point(633, 342);
-            this.N16КнопкаН1.Name = "N16КнопкаН1";
-            this.N16КнопкаН1.Size = new System.Drawing.Size(44, 44);
-            this.N16КнопкаН1.TabIndex = 59;
-            this.N16КнопкаН1.UseVisualStyleBackColor = false;
-            this.N16КнопкаН1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N16Кнопка_MouseDown);
+            this.КнопкаАнтенна.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаАнтенна.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlackLarge;
+            this.КнопкаАнтенна.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.КнопкаАнтенна.FlatAppearance.BorderSize = 0;
+            this.КнопкаАнтенна.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаАнтенна.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаАнтенна.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаАнтенна.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.КнопкаАнтенна.Location = new System.Drawing.Point(750, 342);
+            this.КнопкаАнтенна.Name = "КнопкаАнтенна";
+            this.КнопкаАнтенна.Size = new System.Drawing.Size(44, 44);
+            this.КнопкаАнтенна.TabIndex = 59;
+            this.КнопкаАнтенна.UseVisualStyleBackColor = false;
+            this.КнопкаАнтенна.Click += new System.EventHandler(this.КнопкаАнтенна_Click);
             // 
-            // N16КнопкаН12
+            // КнопкаН13_2
             // 
-            this.N16КнопкаН12.BackColor = System.Drawing.Color.Transparent;
-            this.N16КнопкаН12.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlackLarge;
-            this.N16КнопкаН12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.N16КнопкаН12.FlatAppearance.BorderSize = 0;
-            this.N16КнопкаН12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N16КнопкаН12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N16КнопкаН12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N16КнопкаН12.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.N16КнопкаН12.Location = new System.Drawing.Point(578, 342);
-            this.N16КнопкаН12.Name = "N16КнопкаН12";
-            this.N16КнопкаН12.Size = new System.Drawing.Size(44, 44);
-            this.N16КнопкаН12.TabIndex = 59;
-            this.N16КнопкаН12.UseVisualStyleBackColor = false;
-            this.N16КнопкаН12.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N16Кнопка_MouseDown);
+            this.КнопкаН13_2.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаН13_2.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlackLarge;
+            this.КнопкаН13_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.КнопкаН13_2.FlatAppearance.BorderSize = 0;
+            this.КнопкаН13_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаН13_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаН13_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаН13_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.КнопкаН13_2.Location = new System.Drawing.Point(691, 342);
+            this.КнопкаН13_2.Name = "КнопкаН13_2";
+            this.КнопкаН13_2.Size = new System.Drawing.Size(44, 44);
+            this.КнопкаН13_2.TabIndex = 59;
+            this.КнопкаН13_2.UseVisualStyleBackColor = false;
+            this.КнопкаН13_2.Click += new System.EventHandler(this.КнопкаН13_2_Click);
             // 
-            // N16КнопкаВкл
+            // КнопкаН13_1
             // 
-            this.N16КнопкаВкл.BackColor = System.Drawing.Color.Transparent;
-            this.N16КнопкаВкл.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlackLarge;
-            this.N16КнопкаВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.N16КнопкаВкл.FlatAppearance.BorderSize = 0;
-            this.N16КнопкаВкл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N16КнопкаВкл.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N16КнопкаВкл.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N16КнопкаВкл.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.N16КнопкаВкл.Location = new System.Drawing.Point(395, 342);
-            this.N16КнопкаВкл.Name = "N16КнопкаВкл";
-            this.N16КнопкаВкл.Size = new System.Drawing.Size(44, 44);
-            this.N16КнопкаВкл.TabIndex = 59;
-            this.N16КнопкаВкл.UseVisualStyleBackColor = false;
-            this.N16КнопкаВкл.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N16КнопкаВкл_MouseDown);
+            this.КнопкаН13_1.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаН13_1.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlackLarge;
+            this.КнопкаН13_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.КнопкаН13_1.FlatAppearance.BorderSize = 0;
+            this.КнопкаН13_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаН13_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаН13_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаН13_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.КнопкаН13_1.Location = new System.Drawing.Point(633, 342);
+            this.КнопкаН13_1.Name = "КнопкаН13_1";
+            this.КнопкаН13_1.Size = new System.Drawing.Size(44, 44);
+            this.КнопкаН13_1.TabIndex = 59;
+            this.КнопкаН13_1.UseVisualStyleBackColor = false;
+            this.КнопкаН13_1.Click += new System.EventHandler(this.КнопкаН13_1_Click);
             // 
-            // N16ТумблерУровень1
+            // КнопкаН13_12
             // 
-            this.N16ТумблерУровень1.BackColor = System.Drawing.Color.Transparent;
-            this.N16ТумблерУровень1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.N16ТумблерУровень1.FlatAppearance.BorderSize = 0;
-            this.N16ТумблерУровень1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N16ТумблерУровень1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N16ТумблерУровень1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N16ТумблерУровень1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.N16ТумблерУровень1.Location = new System.Drawing.Point(627, 106);
-            this.N16ТумблерУровень1.Name = "N16ТумблерУровень1";
-            this.N16ТумблерУровень1.Size = new System.Drawing.Size(50, 60);
-            this.N16ТумблерУровень1.TabIndex = 59;
-            this.N16ТумблерУровень1.UseVisualStyleBackColor = false;
-            this.N16ТумблерУровень1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N16Тумблер_MouseDown);
-            this.N16ТумблерУровень1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.N16Тумблер_MouseUp);
+            this.КнопкаН13_12.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаН13_12.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlackLarge;
+            this.КнопкаН13_12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.КнопкаН13_12.FlatAppearance.BorderSize = 0;
+            this.КнопкаН13_12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаН13_12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаН13_12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаН13_12.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.КнопкаН13_12.Location = new System.Drawing.Point(578, 342);
+            this.КнопкаН13_12.Name = "КнопкаН13_12";
+            this.КнопкаН13_12.Size = new System.Drawing.Size(44, 44);
+            this.КнопкаН13_12.TabIndex = 59;
+            this.КнопкаН13_12.UseVisualStyleBackColor = false;
+            this.КнопкаН13_12.Click += new System.EventHandler(this.КнопкаН13_12_Click);
             // 
-            // N16ИндикаторКонтрольМощностиРнагр
+            // КнопкаВкл
             // 
-            this.N16ИндикаторКонтрольМощностиРнагр.BackColor = System.Drawing.Color.Transparent;
-            this.N16ИндикаторКонтрольМощностиРнагр.BackgroundImage = global::R440O.ControlElementImages.arrowNormal;
-            this.N16ИндикаторКонтрольМощностиРнагр.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.N16ИндикаторКонтрольМощностиРнагр.Location = new System.Drawing.Point(253, 69);
-            this.N16ИндикаторКонтрольМощностиРнагр.Name = "N16ИндикаторКонтрольМощностиРнагр";
-            this.N16ИндикаторКонтрольМощностиРнагр.Size = new System.Drawing.Size(64, 59);
-            this.N16ИндикаторКонтрольМощностиРнагр.TabIndex = 80;
-            this.N16ИндикаторКонтрольМощностиРнагр.TabStop = false;
+            this.КнопкаВкл.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаВкл.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlackLarge;
+            this.КнопкаВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.КнопкаВкл.FlatAppearance.BorderSize = 0;
+            this.КнопкаВкл.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаВкл.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаВкл.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаВкл.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.КнопкаВкл.Location = new System.Drawing.Point(395, 342);
+            this.КнопкаВкл.Name = "КнопкаВкл";
+            this.КнопкаВкл.Size = new System.Drawing.Size(44, 44);
+            this.КнопкаВкл.TabIndex = 59;
+            this.КнопкаВкл.UseVisualStyleBackColor = false;
+            this.КнопкаВкл.Click += new System.EventHandler(this.КнопкаВкл_Click);
             // 
-            // N16ИндикаторКонтрольМощностиРвых
+            // ТумблерУровень1
             // 
-            this.N16ИндикаторКонтрольМощностиРвых.BackColor = System.Drawing.Color.Transparent;
-            this.N16ИндикаторКонтрольМощностиРвых.BackgroundImage = global::R440O.ControlElementImages.arrowNormal;
-            this.N16ИндикаторКонтрольМощностиРвых.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.N16ИндикаторКонтрольМощностиРвых.Location = new System.Drawing.Point(405, 70);
-            this.N16ИндикаторКонтрольМощностиРвых.Name = "N16ИндикаторКонтрольМощностиРвых";
-            this.N16ИндикаторКонтрольМощностиРвых.Size = new System.Drawing.Size(64, 59);
-            this.N16ИндикаторКонтрольМощностиРвых.TabIndex = 81;
-            this.N16ИндикаторКонтрольМощностиРвых.TabStop = false;
+            this.ТумблерУровень1.BackColor = System.Drawing.Color.Transparent;
+            this.ТумблерУровень1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ТумблерУровень1.FlatAppearance.BorderSize = 0;
+            this.ТумблерУровень1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерУровень1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерУровень1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТумблерУровень1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.ТумблерУровень1.Location = new System.Drawing.Point(627, 106);
+            this.ТумблерУровень1.Name = "ТумблерУровень1";
+            this.ТумблерУровень1.Size = new System.Drawing.Size(50, 60);
+            this.ТумблерУровень1.TabIndex = 59;
+            this.ТумблерУровень1.UseVisualStyleBackColor = false;
+            this.ТумблерУровень1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ТумблерУровень1_MouseDown);
+            this.ТумблерУровень1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ТумблерУровень1_MouseUp);
             // 
             // N16Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1106, 434);
-            this.Controls.Add(this.N16Panel);
+            this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "N16Form";
             this.Text = "Н16";
-            this.N16Panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.N16ЛампочкаЭквивалент)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N16ЛампочкаАнтенна)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N16ЛампочкаН2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N16ЛампочкаН1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N16ЛампочкаН12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N16ИндикаторКонтрольМощностиРнагр)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N16ИндикаторКонтрольМощностиРвых)).EndInit();
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.N16Form_FormClosed);
+            this.Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторМощностьВыхода)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторМощностьНагрузки)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаЭквивалент)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаАнтенна)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаН13_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаН13_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаН13_12)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel N16Panel;
-        private System.Windows.Forms.Button N16ТумблерУровень1;
-        private System.Windows.Forms.Button N16ТумблерУровень2;
-        private System.Windows.Forms.Button N16ТумблерФаза;
-        private System.Windows.Forms.Button N16КнопкаВкл;
-        private System.Windows.Forms.PictureBox N16ЛампочкаН12;
-        private System.Windows.Forms.PictureBox N16ЛампочкаЭквивалент;
-        private System.Windows.Forms.PictureBox N16ЛампочкаАнтенна;
-        private System.Windows.Forms.PictureBox N16ЛампочкаН2;
-        private System.Windows.Forms.PictureBox N16ЛампочкаН1;
-        private System.Windows.Forms.Button N16КнопкаВыкл;
-        private System.Windows.Forms.Button N16КнопкаН12;
-        private System.Windows.Forms.Button N16КнопкаЭквивалент;
-        private System.Windows.Forms.Button N16КнопкаАнтенна;
-        private System.Windows.Forms.Button N16КнопкаН2;
-        private System.Windows.Forms.Button N16КнопкаН1;
-        private System.Windows.Forms.PictureBox N16ИндикаторКонтрольМощностиРвых;
-        private System.Windows.Forms.PictureBox N16ИндикаторКонтрольМощностиРнагр;
+        private System.Windows.Forms.Panel Panel;
+        private System.Windows.Forms.Button ТумблерУровень1;
+        private System.Windows.Forms.Button ТумблерУровень2;
+        private System.Windows.Forms.Button ТумблерФаза;
+        private System.Windows.Forms.Button КнопкаВкл;
+        private System.Windows.Forms.PictureBox ЛампочкаН13_12;
+        private System.Windows.Forms.PictureBox ЛампочкаЭквивалент;
+        private System.Windows.Forms.PictureBox ЛампочкаАнтенна;
+        private System.Windows.Forms.PictureBox ЛампочкаН13_2;
+        private System.Windows.Forms.PictureBox ЛампочкаН13_1;
+        private System.Windows.Forms.Button КнопкаОткл;
+        private System.Windows.Forms.Button КнопкаН13_12;
+        private System.Windows.Forms.Button КнопкаЭквивалент;
+        private System.Windows.Forms.Button КнопкаАнтенна;
+        private System.Windows.Forms.Button КнопкаН13_2;
+        private System.Windows.Forms.Button КнопкаН13_1;
+        private System.Windows.Forms.PictureBox ИндикаторМощностьВыхода;
+        private System.Windows.Forms.PictureBox ИндикаторМощностьНагрузки;
     }
 }

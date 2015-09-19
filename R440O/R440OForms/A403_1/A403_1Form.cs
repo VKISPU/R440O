@@ -5,6 +5,7 @@
 //-----------------------------------------------------------------------
 
 using System;
+using R440O.BaseClasses;
 
 namespace R440O.R440OForms.A403_1
 {
@@ -15,8 +16,9 @@ namespace R440O.R440OForms.A403_1
     /// <summary>
     /// Форма блока А403-1
     /// </summary>
-    public partial class A403_1Form : Form
+    public partial class A403_1Form : Form, IRefreshableForm
     {
+
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="A403_1Form"/>.
         /// </summary>
@@ -216,7 +218,7 @@ namespace R440O.R440OForms.A403_1
                 ? ControlElementImages.tumblerType4Up
                 : ControlElementImages.tumblerType4Down;
 
-            A403_1ТумблерГруппа.BackgroundImage = A403_1Parameters.ТумблерГруппа
+            ТумблерГруппа.BackgroundImage = A403_1Parameters.ТумблерГруппа
                 ? ControlElementImages.tumblerType4Up
                 : ControlElementImages.tumblerType4Down;
 

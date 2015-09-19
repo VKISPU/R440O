@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using R440O.R440OForms.A403_1;
 
 namespace R440O.R440OForms.N15
 {
@@ -32,10 +33,14 @@ namespace R440O.R440OForms.N15
     {
         public static bool Включен
         {
+            get { return N502BParameters.Н15Включен && НеполноеВключение; }
+        }
+
+        public static bool НеполноеВключение
+        {
             get
             {
-                return N502BParameters.Н15Включен && N502BParameters.ВыпрямительВключен &&
-                       N502BParameters.ЭлектрообуродованиеВключено;
+                return N502BParameters.ВыпрямительВключен && N502BParameters.ЭлектрообуродованиеВключено;
             }
         }
 
@@ -173,6 +178,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _кнопкаН131 = value;
+                if (value) N15LocalParameters.локКнопкаН13 = 1;
                 OnParameterChanged();
             }
         }
@@ -183,6 +189,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _кнопкаН132 = value;
+                if (value) N15LocalParameters.локКнопкаН13 = 2;
                 OnParameterChanged();
             }
         }
@@ -193,6 +200,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _кнопкаН1312 = value;
+                if (value) N15LocalParameters.локКнопкаН13 = 3;
                 OnParameterChanged();
             }
         }
@@ -285,6 +293,7 @@ namespace R440O.R440OForms.N15
             {
                 _тумблерН12С = value;
                 OnParameterChanged();
+                N12SParameters.ResetParameters();
             }
         }
 
@@ -381,6 +390,7 @@ namespace R440O.R440OForms.N15
             {
                 _тумблерА403 = value;
                 OnParameterChanged();
+                A403_1Parameters.ResetParameters();
             }
         }
 
@@ -509,42 +519,73 @@ namespace R440O.R440OForms.N15
             }
         }
 
+        /// <summary>
+        /// Тумблер Фаза
+        /// -1 - Верхнее положение
+        /// 0 - Среднее положение
+        /// 1 - Нижнее положение
+        /// </summary>
         public static int ТумблерФаза
         {
             get { return _тумблерФаза; }
             set
             {
                 _тумблерФаза = value;
-                OnParameterChanged();
             }
         }
 
+        /// <summary>
+        /// Тумблер уровень 1
+        /// -1 - Верхнее положение
+        /// 0 - Среднее положение
+        /// 1 - Нижнее положение
+        /// </summary>
         public static int ТумблерУров1
         {
             get { return _тумблерУров1; }
             set
             {
                 _тумблерУров1 = value;
-                OnParameterChanged();
             }
         }
 
+        /// <summary>
+        /// Тумблер уровень 2
+        /// -1 - Верхнее положение
+        /// 0 - Среднее положение
+        /// 1 - Нижнее положение
+        /// </summary>
         public static int ТумблерУров2
         {
             get { return _тумблерУров2; }
             set
             {
                 _тумблерУров2 = value;
-                OnParameterChanged();
             }
         }
 
+        /// <summary>
+        /// Тумблер 5МГЦ
+        /// -1 - Верхнее положение
+        /// 0 - Среднее положение
+        /// 1 - Нижнее положение
+        /// </summary>
         public static int Тумблер5Мгц
         {
             get { return _тумблер5Мгц; }
             set
             {
                 _тумблер5Мгц = value;
+                if (НеполноеВключение)
+                    switch (value)
+                    {
+                        case -1:
+                            N15LocalParameters.локТумблер5Мгц = true;
+                            break;
+                        case 1:
+                            N15LocalParameters.локТумблер5Мгц = false;
+                            break;
+                    }
                 OnParameterChanged();
             }
         }
@@ -555,6 +596,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _тумблерАнтЭкв = value;
+                N15LocalParameters.локТумблерАнтЭкв = value;
                 OnParameterChanged();
             }
         }
@@ -643,7 +685,7 @@ namespace R440O.R440OForms.N15
 
         public static bool ЛампочкаН12С
         {
-            get { return false; }
+            get { return Включен && ТумблерН12С; }
         }
 
         public static bool ЛампочкаМШУ
@@ -663,19 +705,12 @@ namespace R440O.R440OForms.N15
 
         public static bool Лампочка27В
         {
-            get
-            {
-                return N502BParameters.ЛампочкаСфазировано
-                        && N502BParameters.ТумблерЭлектрооборудование
-                        && N502BParameters.ТумблерВыпрямитель27В;
-            }
+            get { return НеполноеВключение; }
         }
 
         public static bool ЛампочкаН15БП
         {
-            get { return N502BParameters.ЛампочкаСфазировано
-                        && N502BParameters.ТумблерЭлектрооборудование
-                        && N502BParameters.ТумблерВыпрямитель27В; }
+            get { return НеполноеВключение; }
         }
 
         public static bool ЛампочкаАФСС
@@ -770,31 +805,43 @@ namespace R440O.R440OForms.N15
 
         #region Лампочки правая часть
 
-        public static bool ЛампочкаН16Н13_1 { get { return Лампочка27В && КнопкаН13_1; } }
-        public static bool ЛампочкаН16Н13_2 { get { return Лампочка27В && КнопкаН13_2; } }
-        public static bool ЛампочкаН16Н13_12 { get { return Лампочка27В && КнопкаН13_12; } }
+        public static bool ЛампочкаН16Н13_1
+        {
+            get { return N502BParameters.ВыпрямительВключен && (N15LocalParameters.локКнопкаН13 == 1); }
+        }
+
+        public static bool ЛампочкаН16Н13_2
+        {
+            get { return Лампочка27В && (N15LocalParameters.локКнопкаН13 == 2); }
+        }
+
+        public static bool ЛампочкаН16Н13_12
+        {
+            get { return Лампочка27В && (N15LocalParameters.локКнопкаН13 == 3); }
+        }
         public static bool ЛампочкаН13_11Ступень { get; set; }
         public static bool ЛампочкаН13_21Ступень { get; set; }
         public static bool ЛампочкаН13_1ПолноеВкл { get; set; }
         public static bool ЛампочкаН13_2ПолноеВкл { get; set; }
         public static bool ЛампочкаН13_1Неисправность { get; set; }
         public static bool ЛампочкаН13_2Неисправность { get; set; }
-        public static bool Лампочка5мГц2 { get { return Лампочка27В && Тумблер5Мгц == 1; } }
-        public static bool Лампочка5мГц3 { get { return Лампочка27В && (Тумблер5Мгц == -1); } }
+        public static bool Лампочка5мГц2 { get { return НеполноеВключение && N15LocalParameters.локТумблер5Мгц; } }
+        public static bool Лампочка5мГц3 { get { return НеполноеВключение && !N15LocalParameters.локТумблер5Мгц; } }
 
         public static bool ЛампочкаА503Б
         {
             get { return Лампочка27В && ТумблерА503Б; }
         }
 
-        public static bool ЛампочкаАнт { get { return Лампочка27В && ТумблерАнтЭкв; } }
-        public static bool ЛампочкаЭкв { get { return Лампочка27В && !ТумблерАнтЭкв; } }
+        public static bool ЛампочкаАнт { get { return Лампочка27В && N15LocalParameters.локТумблерАнтЭкв; } }
+        public static bool ЛампочкаЭкв { get { return Лампочка27В && !N15LocalParameters.локТумблерАнтЭкв; } }
 
         #endregion
 
         #region Обновление формы
         public static void ResetParameters()
         {
+            OnParameterChanged();
             C300M_1Parameters.Search();
 
             #region БМА
@@ -828,8 +875,6 @@ namespace R440O.R440OForms.N15
             #region ДАБ_5
             DAB_5Parameters.Refresh();
             #endregion
-
-            OnParameterChanged();
         }
 
         /// <summary>
@@ -847,13 +892,13 @@ namespace R440O.R440OForms.N15
         }
 
         public delegate void ParameterChangedHandler();
-
         public static event ParameterChangedHandler ParameterChanged;
 
-        public static void OnParameterChanged()
+        private static void OnParameterChanged()
         {
-            if (ParameterChanged != null) ParameterChanged();
-        } 
+            var handler = ParameterChanged;
+            if (handler != null) handler();
+        }
         #endregion
     }
 }

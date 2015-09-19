@@ -1,6 +1,4 @@
-﻿using R440O.BaseClasses;
-
-namespace R440O.R440OForms.N502B
+﻿namespace R440O.R440OForms.N502B
 {
     
     using System;
@@ -118,24 +116,24 @@ namespace R440O.R440OForms.N502B
         #endregion
 
         #region Кнопки
-        private void N502BКнопкаРБПСброс_MouseUp(object sender, MouseEventArgs e)
+        private void КнопкаРБПСброс_MouseUp(object sender, MouseEventArgs e)
         {
-            N502BКнопкаРБПСброс.BackgroundImage = ControlElementImages.buttonRoundType3;
+            КнопкаРБПСброс.BackgroundImage = ControlElementImages.buttonRoundType3;
         }
 
-        private void N502BКнопкаРБПСброс_MouseDown(object sender, MouseEventArgs e)
+        private void КнопкаРБПСброс_MouseDown(object sender, MouseEventArgs e)
         {
-            N502BКнопкаРБПСброс.BackgroundImage = null;
+            КнопкаРБПСброс.BackgroundImage = null;
         }
 
-        private void N502BКнопкаРБППроверка_MouseUp(object sender, MouseEventArgs e)
+        private void КнопкаРБППроверка_MouseUp(object sender, MouseEventArgs e)
         {
-            N502BКнопкаРБППроверка.BackgroundImage = ControlElementImages.buttonRoundType3;
+            КнопкаРБППроверка.BackgroundImage = ControlElementImages.buttonRoundType3;
         }
 
-        private void N502BКнопкаРБППроверка_MouseDown(object sender, MouseEventArgs e)
+        private void КнопкаРБППроверка_MouseDown(object sender, MouseEventArgs e)
         {
-            N502BКнопкаРБППроверка.BackgroundImage = null;
+            КнопкаРБППроверка.BackgroundImage = null;
         }
 
         private void КнопкаВклНагрузки_MouseDown(object sender, MouseEventArgs e)
@@ -331,5 +329,11 @@ namespace R440O.R440OForms.N502B
         }
 
         #endregion
+
+        private void N502BForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            N502BParameters.ParameterChanged -= RefreshFormElements;
+            N502BParameters.СтанцияСгорела -= ВыводСообщенияСтанцияСгорела;
+        }
     }
 }

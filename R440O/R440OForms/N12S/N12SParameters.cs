@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using R440O.R440OForms.N15;
 
 namespace R440O.Parameters
 {
@@ -9,7 +10,7 @@ namespace R440O.Parameters
         {
             get
             {
-                return ТумблерСеть;  //добавить привязку к N15
+                return ТумблерСеть && N15Parameters.ТумблерН12С; 
             }
         }
 
@@ -245,8 +246,8 @@ namespace R440O.Parameters
             set
             {
                 if (((!КнопкаУскор && value >= -10 && value <= 10) || (КнопкаУскор && value >= -20 && value <= 20))
-                    && !(_потенциометрAlphaV - value < 0 && ПотенциометрAlphaИ < 0 && ЛампочкаУпорА )
-                    && !(_потенциометрAlphaV - value > 0 && ПотенциометрAlphaИ > 0 && ЛампочкаУпорА )
+                    && !(_потенциометрAlphaV - value < 0 && ПотенциометрAlphaИ < 0 && ЛампочкаУпорА)
+                    && !(_потенциометрAlphaV - value > 0 && ПотенциометрAlphaИ > 0 && ЛампочкаУпорА)
                     && !(_потенциометрAlphaV >= -0.05 && _потенциометрAlphaV <= 0.05 && ЛампочкаУпорА))
 
                     _потенциометрAlphaV = value;

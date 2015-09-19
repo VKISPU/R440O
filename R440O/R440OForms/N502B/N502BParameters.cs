@@ -1,4 +1,6 @@
-﻿namespace R440O.R440OForms.N502B
+﻿using R440O.R440OForms.N16;
+
+namespace R440O.R440OForms.N502B
 {
 
     using System;
@@ -6,7 +8,6 @@
     using System.Windows.Forms;
     using Parameters;
     using Properties;
-    using A205M_1;
     using NKN_1;
     using NKN_2;
     using PowerCabel;
@@ -112,6 +113,7 @@
                 C300M_4Parameters.RefreshIndicators();
                 A304Parameters.ResetParameters();
                 A306Parameters.ResetParameters();
+                N16Parameters.ResetParameters();
                 OnParameterChanged();
             }
         }
@@ -132,11 +134,10 @@
                 C300M_4Parameters.ResetParameters();
                 A304Parameters.ResetParameters();
                 A306Parameters.ResetParameters();
+                N16Parameters.ResetParameters();
                 OnParameterChanged();
             }
-        }
-
-        
+        }  
         public static bool ТумблерН15
         {
             get { return _тумблерН15; }
@@ -471,19 +472,6 @@
         }
 
         #region Вспомогательные переменные, для обращения к блоку
-
-        ///// <summary>
-        ///// Определение, горит ли лампочка сфазировано при нажатии на кнопку включения нагрузки.
-        ///// </summary>
-        //public static bool ФазировкаГорит
-        //{
-        //    get
-        //    {
-        //        return ПереключательФазировка == Фазировка && ЛампочкаСеть &&
-        //               ПереключательСеть && VoltageStabilizerParameters.КабельПодключенПравильно && КнопкаВклНагрузки;
-        //    }
-        //}
-
         /// <summary>
         /// Определение, включено ли Электрообуродование
         /// </summary>

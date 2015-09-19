@@ -52,6 +52,13 @@
         }
         #endregion
 
+        private void PowerCabelForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            PowerCabelParameters.ParameterChanged -= RefreshFormElements;
+            PowerCabelParameters.СтанцияСгорела -= ВыводСообщенияСтанцияСгорела;
+        }
+
+        
 
     }
 }

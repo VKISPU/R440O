@@ -16,7 +16,7 @@
         {
             InitializeComponent();
             VoltageStabilizerParameters.ParameterChanged += RefreshFormElements;
-            VoltageStabilizerParameters.ОператорСтанцииПоражёнТоком += ВыводСообщенияОператорСтанцииПоражёнТоком;
+            VoltageStabilizerParameters.ОператорСтанцииПораженТоком += ВыводСообщенияОператорСтанцииПоражёнТоком;
             RefreshFormElements();
         }
 
@@ -109,6 +109,12 @@
             angle = (int) (VoltageStabilizerParameters.ИндикаторНапряжение * 0.3 - 75);
             ИндикаторНапряжения.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
+        }
+
+        private void VoltageStabilizerForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            VoltageStabilizerParameters.ParameterChanged -= RefreshFormElements;
+            VoltageStabilizerParameters.ОператорСтанцииПораженТоком -= ВыводСообщенияОператорСтанцииПоражёнТоком;
         }
     }
 }

@@ -94,9 +94,9 @@ namespace R440O.R440OForms.VoltageStabilizer
                 N502BParameters.Нагрузка = false;
                 N502BParameters.ResetParameters();
                 if (N502BParameters.ЛампочкаСеть && N502BParameters.ПереключательСеть
-                    && ОператорСтанцииПоражёнТоком != null)
+                    && ОператорСтанцииПораженТоком != null)
                 {
-                    ОператорСтанцииПоражёнТоком();
+                    ОператорСтанцииПораженТоком();
                 }
             }
         }
@@ -129,9 +129,10 @@ namespace R440O.R440OForms.VoltageStabilizer
         /// <summary>
         /// Вызывается, если пользователь совершил неправильные действия по обесточиванию станции.
         /// </summary>
-        public static event ParameterChangedHandler ОператорСтанцииПоражёнТоком;
+        public static event ParameterChangedHandler ОператорСтанцииПораженТоком;
+
         #endregion
 
-        
+
     }
 }

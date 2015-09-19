@@ -60,7 +60,7 @@
             this.Кнопка2 = new System.Windows.Forms.Button();
             this.Кнопка1 = new System.Windows.Forms.Button();
             this.ТумблерАвтКоррекция = new System.Windows.Forms.Button();
-            this.A403_1ТумблерГруппа = new System.Windows.Forms.Button();
+            this.ТумблерГруппа = new System.Windows.Forms.Button();
             this.ТумблерГотов = new System.Windows.Forms.Button();
             this.ТумблерКомплект = new System.Windows.Forms.Button();
             this.ТумблерСеть = new System.Windows.Forms.Button();
@@ -107,7 +107,7 @@
             this.Panel.Controls.Add(this.Кнопка2);
             this.Panel.Controls.Add(this.Кнопка1);
             this.Panel.Controls.Add(this.ТумблерАвтКоррекция);
-            this.Panel.Controls.Add(this.A403_1ТумблерГруппа);
+            this.Panel.Controls.Add(this.ТумблерГруппа);
             this.Panel.Controls.Add(this.ТумблерГотов);
             this.Panel.Controls.Add(this.ТумблерКомплект);
             this.Panel.Controls.Add(this.ТумблерСеть);
@@ -650,21 +650,21 @@
             this.ТумблерАвтКоррекция.UseVisualStyleBackColor = false;
             this.ТумблерАвтКоррекция.Click += new System.EventHandler(this.ТумблерАвтКоррекция_Click);
             // 
-            // A403_1ТумблерГруппа
+            // ТумблерГруппа
             // 
-            this.A403_1ТумблерГруппа.BackColor = System.Drawing.Color.Transparent;
-            this.A403_1ТумблерГруппа.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
-            this.A403_1ТумблерГруппа.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.A403_1ТумблерГруппа.FlatAppearance.BorderSize = 0;
-            this.A403_1ТумблерГруппа.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.A403_1ТумблерГруппа.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.A403_1ТумблерГруппа.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.A403_1ТумблерГруппа.Location = new System.Drawing.Point(471, 373);
-            this.A403_1ТумблерГруппа.Name = "A403_1ТумблерГруппа";
-            this.A403_1ТумблерГруппа.Size = new System.Drawing.Size(39, 64);
-            this.A403_1ТумблерГруппа.TabIndex = 25;
-            this.A403_1ТумблерГруппа.UseVisualStyleBackColor = false;
-            this.A403_1ТумблерГруппа.Click += new System.EventHandler(this.ТумблерГруппа_Click);
+            this.ТумблерГруппа.BackColor = System.Drawing.Color.Transparent;
+            this.ТумблерГруппа.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
+            this.ТумблерГруппа.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ТумблерГруппа.FlatAppearance.BorderSize = 0;
+            this.ТумблерГруппа.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерГруппа.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерГруппа.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТумблерГруппа.Location = new System.Drawing.Point(471, 373);
+            this.ТумблерГруппа.Name = "ТумблерГруппа";
+            this.ТумблерГруппа.Size = new System.Drawing.Size(39, 64);
+            this.ТумблерГруппа.TabIndex = 25;
+            this.ТумблерГруппа.UseVisualStyleBackColor = false;
+            this.ТумблерГруппа.Click += new System.EventHandler(this.ТумблерГруппа_Click);
             // 
             // ТумблерГотов
             // 
@@ -741,7 +741,7 @@
         private System.Windows.Forms.Button ТумблерСеть;
         private System.Windows.Forms.Button ТумблерКомплект;
         private System.Windows.Forms.Button ТумблерГотов;
-        private System.Windows.Forms.Button A403_1ТумблерГруппа;
+        private System.Windows.Forms.Button ТумблерГруппа;
         private System.Windows.Forms.Button ТумблерАвтКоррекция;
         private System.Windows.Forms.Button Кнопка1;
         private System.Windows.Forms.Button Кнопка2;

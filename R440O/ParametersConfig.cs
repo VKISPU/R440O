@@ -75,6 +75,12 @@
             N502BParameters.ТумблерВыпрямитель27В = true;
             N502BParameters.ТумблерН15 = true;
 
+            //Установка некоторых значений в память Н15
+            N15LocalParameters.локКнопкаН13 = 2;
+            N15LocalParameters.локТумблерАнтЭкв = true;
+            N15LocalParameters.локТумблер5Мгц = false;
+
+
             //A304
             A304Parameters.ТумблерУправление1 = true;
             A304Parameters.ТумблерУправление2 = true; 
@@ -128,6 +134,7 @@
 
             //// Подключение ДАБ-5
             N15LocalParameters.локТумблерАФСС= true; 
+
             #endregion
 
             #region Дискрет и ПУЛы
@@ -163,14 +170,7 @@
             N15LocalParameters.локТумблерБ3_2 = true;
 
 
-            var generator = new Random();
-            var zeroToOne = generator.Next(2);
-            N15Parameters.КнопкаН13_1 = zeroToOne == 0;
-            N15Parameters.КнопкаН13_2 = zeroToOne == 1;
-            N15Parameters.КнопкаН13_12 = zeroToOne == 2;
 
-            zeroToOne = generator.Next(1);
-            N15Parameters.ТумблерАнтЭкв = (zeroToOne == 0) ? true : false;
             #endregion
 
         }

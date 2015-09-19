@@ -3,18 +3,17 @@
 //      R440O station.
 // </copyright>
 //-----------------------------------------------------------------------
-
-using System.IO;
-using R440O.Parameters;
-
 namespace R440O.R440OForms.N16
 {
+    using System;
+    using System.Globalization;
     using System.Windows.Forms;
-
+    using ThirdParty;
+    using BaseClasses;
     /// <summary>
     /// Форма блока Н-16
     /// </summary>
-    public partial class N16Form : Form
+    public partial class N16Form : Form, IRefreshableForm
     {
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="N16Form"/>
@@ -22,179 +21,157 @@ namespace R440O.R440OForms.N16
         public N16Form()
         {
             this.InitializeComponent();
-            this.InitializeButtons();
+
+            N16Parameters.ParameterChanged += RefreshFormElements;
+            RefreshFormElements();
         }
 
-        private void InitializeButtons()
+
+        public void RefreshFormElements()
         {
-            N16КнопкаВкл.BackgroundImage = !N16Parameters.N16КнопкаВкл
+            КнопкаВкл.BackgroundImage = !N16Parameters.КнопкаВкл
                 ? ControlElementImages.buttonSquareBlackLarge
                 : null;
-            N16КнопкаН12.BackgroundImage = !N16Parameters.N16КнопкаН12
+            КнопкаН13_12.BackgroundImage = !N16Parameters.КнопкаН13_12
                 ? ControlElementImages.buttonSquareBlackLarge
                 : null;
-            N16КнопкаН1.BackgroundImage = !N16Parameters.N16КнопкаН1
+            КнопкаН13_1.BackgroundImage = !N16Parameters.КнопкаН13_1
                 ? ControlElementImages.buttonSquareBlackLarge
                 : null;
-            N16КнопкаН2.BackgroundImage = !N16Parameters.N16КнопкаН2
+            КнопкаН13_2.BackgroundImage = !N16Parameters.КнопкаН13_2
                 ? ControlElementImages.buttonSquareBlackLarge
                 : null;
-            N16КнопкаАнтенна.BackgroundImage = !N16Parameters.N16КнопкаАнтенна
+            КнопкаАнтенна.BackgroundImage = !N16Parameters.КнопкаАнтенна
                 ? ControlElementImages.buttonSquareBlackLarge
                 : null;
-            N16КнопкаЭквивалент.BackgroundImage = !N16Parameters.N16КнопкаЭквивалент
+            КнопкаЭквивалент.BackgroundImage = !N16Parameters.КнопкаЭквивалент
                 ? ControlElementImages.buttonSquareBlackLarge
+                : null;
+
+            ЛампочкаН13_12.BackgroundImage = N16Parameters.ЛампочкаН13_12
+                ? ControlElementImages.lampType6OnRed
+                : null;
+            ЛампочкаН13_1.BackgroundImage = N16Parameters.ЛампочкаН13_1
+                ? ControlElementImages.lampType6OnRed
+                : null;
+            ЛампочкаН13_2.BackgroundImage = N16Parameters.ЛампочкаН13_2
+                ? ControlElementImages.lampType6OnRed
+                : null;
+            ЛампочкаАнтенна.BackgroundImage = N16Parameters.ЛампочкаАнтенна
+                ? ControlElementImages.lampType6OnRed
+                : null;
+            ЛампочкаЭквивалент.BackgroundImage = N16Parameters.ЛампочкаЭквивалент
+                ? ControlElementImages.lampType6OnRed
                 : null;
         }
 
-        #region Тумблеры
-        private void N16Тумблер_MouseDown(object sender, MouseEventArgs e)
+        #region Тумблеры 
+        private void ТумблерУровень1_MouseUp(object sender, MouseEventArgs e)
         {
-            var button = sender as Button;
+            N16Parameters.ТумблерУровень1 = 0;
+            ТумблерУровень1.BackgroundImage = null;
+        }
+
+        private void ТумблерУровень1_MouseDown(object sender, MouseEventArgs e)
+        {
             if (e.Button == MouseButtons.Left)
             {
-                switch (button.Name)
-                {
-                    case "N16ТумблерУровень1":
-                        {
-                            N16Parameters.N16ТумблерУровень1++;
-                            N16ТумблерУровень1.BackgroundImage = ControlElementImages.tumblerType6Up;
-                        }
-                        break;
-                    case "N16ТумблерФаза":
-                        {
-                            N16Parameters.N16ТумблерФаза++;
-                            N16ТумблерФаза.BackgroundImage = ControlElementImages.tumblerType6Up;
-                        }
-                        break;
-                    case "N16ТумблерУровень2":
-                        {
-                            N16Parameters.N16ТумблерУровень2++;
-                            N16ТумблерУровень2.BackgroundImage = ControlElementImages.tumblerType6Up;
-                        }
-                        break;
-                }
-                
+                N16Parameters.ТумблерУровень1 = 1;
+                ТумблерУровень1.BackgroundImage = ControlElementImages.tumblerType6Down;
             }
             if (e.Button == MouseButtons.Right)
             {
-                switch (button.Name)
-                {
-                    case "N16ТумблерУровень1":
-                        {
-                            N16Parameters.N16ТумблерУровень1--;
-                            N16ТумблерУровень1.BackgroundImage = ControlElementImages.tumblerType6Down;
-                        }
-                        break;
-                    case "N16ТумблерФаза":
-                        {
-                            N16Parameters.N16ТумблерФаза--;
-                            N16ТумблерФаза.BackgroundImage = ControlElementImages.tumblerType6Down;
-                        }
-                        break;
-                    case "N16ТумблерУровень2":
-                        {
-                            N16Parameters.N16ТумблерУровень2--;
-                            N16ТумблерУровень2.BackgroundImage = ControlElementImages.tumblerType6Down;
-                        }
-                        break;
-                }
+                N16Parameters.ТумблерУровень1 = -1;
+                ТумблерУровень1.BackgroundImage = ControlElementImages.tumblerType6Up;
             }
         }
 
-        private void N16Тумблер_MouseUp(object sender, MouseEventArgs e)
+        private void ТумблерФаза_MouseDown(object sender, MouseEventArgs e)
         {
-            var button = sender as Button;
-            switch (button.Name)
+            if (e.Button == MouseButtons.Left)
             {
-                case "N16ТумблерУровень1":
-                    {
-                        N16Parameters.N16ТумблерУровень1 = 0;
-                        N16ТумблерУровень1.BackgroundImage = null;
-                    }
-                    break;
-                case "N16ТумблерФаза":
-                    {
-                        N16Parameters.N16ТумблерФаза = 0;
-                        N16ТумблерФаза.BackgroundImage = null;
-                    }
-                    break;
-                case "N16ТумблерУровень2":
-                    {
-                        N16Parameters.N16ТумблерУровень2 = 0;
-                        N16ТумблерУровень2.BackgroundImage = null;
-                    }
-                    break;
+                N16Parameters.ТумблерФаза = 1;
+                ТумблерФаза.BackgroundImage = ControlElementImages.tumblerType6Down;
             }
-        } 
+            if (e.Button == MouseButtons.Right)
+            {
+                N16Parameters.ТумблерФаза = -1;
+                ТумблерФаза.BackgroundImage = ControlElementImages.tumblerType6Up;
+            }
+        }
+
+        private void ТумблерФаза_MouseUp(object sender, MouseEventArgs e)
+        {
+            N16Parameters.ТумблерФаза = 0;
+            ТумблерФаза.BackgroundImage = null;
+        }
+
+        private void ТумблерУровень2_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                N16Parameters.ТумблерУровень2 = 1;
+                ТумблерУровень2.BackgroundImage = ControlElementImages.tumblerType6Down;
+            }
+            if (e.Button == MouseButtons.Right)
+            {
+                N16Parameters.ТумблерУровень2 = -1;
+                ТумблерУровень2.BackgroundImage = ControlElementImages.tumblerType6Up;
+            }
+        }
+
+        private void ТумблерУровень2_MouseUp(object sender, MouseEventArgs e)
+        {
+            N16Parameters.ТумблерУровень2 = 0;
+            ТумблерУровень2.BackgroundImage = null;
+        }
+
         #endregion
 
-        #region Кнопки ВклОткл
-        private void N16КнопкаВыкл_MouseDown(object sender, MouseEventArgs e)
+        private void КнопкаН13_12_Click(object sender, EventArgs e)
         {
-            N16Parameters.N16КнопкаВкл = false;
-            N16КнопкаВыкл.BackgroundImage = null;
-            N16КнопкаВкл.BackgroundImage = ControlElementImages.buttonSquareBlackLarge;
+            N16Parameters.КнопкаН13_12 = !N16Parameters.КнопкаН13_12;
         }
 
-        private void N16КнопкаВыкл_MouseUp(object sender, MouseEventArgs e)
+        private void КнопкаН13_1_Click(object sender, EventArgs e)
         {
-            N16КнопкаВыкл.BackgroundImage = ControlElementImages.buttonSquareRedLarge;
+            N16Parameters.КнопкаН13_1 = !N16Parameters.КнопкаН13_1;
         }
 
-        private void N16КнопкаВкл_MouseDown(object sender, MouseEventArgs e)
+        private void КнопкаН13_2_Click(object sender, EventArgs e)
         {
-            N16КнопкаВкл.BackgroundImage = null;
-            N16Parameters.N16КнопкаВкл = true;
+            N16Parameters.КнопкаН13_2 = !N16Parameters.КнопкаН13_2;
         }
-        #endregion
 
-        private void N16Кнопка_MouseDown(object sender, MouseEventArgs e)
+        private void КнопкаАнтенна_Click(object sender, EventArgs e)
         {
-            var button = sender as Button;
-            switch (button.Name)
-            {
-                case "N16КнопкаН12":
-                {
-                    N16Parameters.N16КнопкаН12 = !N16Parameters.N16КнопкаН12;
-                    N16КнопкаН12.BackgroundImage = !N16Parameters.N16КнопкаН12
-                        ? ControlElementImages.buttonSquareBlackLarge
-                        : null;
-                }
-                    break;
-                case "N16КнопкаН1":
-                {
-                    N16Parameters.N16КнопкаН1 = !N16Parameters.N16КнопкаН1;
-                    N16КнопкаН1.BackgroundImage = !N16Parameters.N16КнопкаН1
-                        ? ControlElementImages.buttonSquareBlackLarge
-                        : null;
-                }
-                    break;
-                case "N16КнопкаН2":
-                {
-                    N16Parameters.N16КнопкаН2 = !N16Parameters.N16КнопкаН2;
-                    N16КнопкаН2.BackgroundImage = !N16Parameters.N16КнопкаН2
-                        ? ControlElementImages.buttonSquareBlackLarge
-                        : null;
-                }
-                    break;
-                case "N16КнопкаАнтенна":
-                {
-                    N16Parameters.N16КнопкаАнтенна = !N16Parameters.N16КнопкаАнтенна;
-                    N16КнопкаАнтенна.BackgroundImage = !N16Parameters.N16КнопкаАнтенна
-                        ? ControlElementImages.buttonSquareBlackLarge
-                        : null;
-                }
-                    break;
-                case "N16КнопкаЭквивалент":
-                {
-                    N16Parameters.N16КнопкаЭквивалент = !N16Parameters.N16КнопкаЭквивалент;
-                    N16КнопкаЭквивалент.BackgroundImage = !N16Parameters.N16КнопкаЭквивалент
-                        ? ControlElementImages.buttonSquareBlackLarge
-                        : null;
-                }
-                    break;
-            }
+            N16Parameters.КнопкаАнтенна = !N16Parameters.КнопкаАнтенна;
+        }
+
+        private void КнопкаЭквивалент_Click(object sender, EventArgs e)
+        {
+            N16Parameters.КнопкаЭквивалент = !N16Parameters.КнопкаЭквивалент;
+        }
+
+        private void КнопкаВкл_Click(object sender, EventArgs e)
+        {
+            if(!N16Parameters.КнопкаВкл) N16Parameters.КнопкаВкл = true;
+        }
+
+        private void КнопкаОткл_MouseDown(object sender, MouseEventArgs e)
+        {
+            КнопкаОткл.BackgroundImage = null;
+            N16Parameters.КнопкаВкл = false;
+        }
+
+        private void КнопкаОткл_MouseUp(object sender, MouseEventArgs e)
+        {
+            КнопкаОткл.BackgroundImage = ControlElementImages.buttonSquareRedLarge;
+        }
+
+        private void N16Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            N16Parameters.ParameterChanged -= RefreshFormElements;
         }
     }
 }

@@ -9,10 +9,12 @@ using System.Reflection;
 using System.Threading.Tasks;
 using R440O.InternalBlocks;
 using R440O.R440OForms.N15Inside;
+using R440O.R440OForms.N502B;
 using R440O.ThirdParty;
 
 namespace R440O.R440OForms.N15
 {
+    using BaseClasses;
     using System;
     using System.Linq;
     using System.Windows.Forms;
@@ -20,7 +22,7 @@ namespace R440O.R440OForms.N15
     /// <summary>
     /// Форма блока Н-15
     /// </summary>
-    public partial class N15Form : Form
+    public partial class N15Form : Form, IRefreshableForm
     {
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="N15Form"/>
@@ -28,19 +30,19 @@ namespace R440O.R440OForms.N15
         public N15Form()
         {
             this.InitializeComponent();
-            N15Parameters.ParameterChanged += RefreshForm;
-            RefreshForm();
+            N15Parameters.ParameterChanged += RefreshFormElements;
+            RefreshFormElements();
         }
 
         #region Инициализация элементов управления
 
-        private void RefreshForm()
+        public void RefreshFormElements()
         {
             InitializeButtons();
             InitializeTumblers();
             InitializeLamps();
 
-            N15РегуляторУровень.BackgroundImage = TransformImageHelper.RotateImageByAngle(
+            РегуляторУровень.BackgroundImage = TransformImageHelper.RotateImageByAngle(
                     ControlElementImages.revolverRoundSmall,
                     (float)N15Parameters.РегуляторУровень);
         }
@@ -50,31 +52,16 @@ namespace R440O.R440OForms.N15
         /// </summary>
         private void InitializeButtons()
         {
-            foreach (Control item in Panel.Controls)
-            {
-                if (!item.Name.Contains("Кнопка")) continue;
-                var fieldList = typeof(N15LocalParameters).GetProperties();
-                foreach (var property in fieldList.Where(property => property.Name.Contains(item.Name)))
-                {
-                    var val = !(bool)property.GetValue(null);
-                    item.Visible = val;
-                    break;
-                }
-            }
+            КнопкаПРМНаведениеЦ300М1.Visible = !N15Parameters.КнопкаПРМНаведениеЦ300М1;
+            КнопкаПРМНаведениеЦ300М2.Visible = !N15Parameters.КнопкаПРМНаведениеЦ300М2;
+            КнопкаПРМНаведениеЦ300М3.Visible = !N15Parameters.КнопкаПРМНаведениеЦ300М3;
+            КнопкаПРМНаведениеЦ300М4.Visible = !N15Parameters.КнопкаПРМНаведениеЦ300М4;
+            КнопкаМощностьАнт.Visible = !N15Parameters.КнопкаМощностьАнт;
+            КнопкаМощностьН16.Visible = !N15Parameters.КнопкаМощностьН16;
 
-            foreach (Control item in Panel.Controls)
-            {
-                if (!item.Name.Contains("Кнопка")) continue;
-                var fieldList = typeof(N15Parameters).GetProperties();
-                foreach (var property in fieldList.Where(property => item.Name == property.Name))
-                {
-                    var val = !(bool)property.GetValue(null);
-                    item.Visible = val;
-                    break;
-                }
-            }
-
-
+            КнопкаН13_1.Visible = !N15Parameters.КнопкаН13_1;
+            КнопкаН13_2.Visible = !N15Parameters.КнопкаН13_2;
+            КнопкаН13_12.Visible = !N15Parameters.КнопкаН13_12;
         }
 
         /// <summary>
@@ -85,10 +72,10 @@ namespace R440O.R440OForms.N15
             PropertyInfo[] propertyList;
             foreach (Control item in Panel.Controls)
             {
-                if (!item.Name.Contains("Тумблер")) continue;
+                if (!item.Name.Contains("Тумблер") || item.Name.Contains("Тумблер5Мгц") || item.Name.Contains("ТумблерАнтЭкв")) continue;
                 propertyList = typeof (N15LocalParameters).GetProperties();
                 foreach (var property in propertyList.Where(property => ("лок" + item.Name) == property.Name
-                    && !property.Name.Contains("Фаза") && !property.Name.Contains("Уров") && !property.Name.Contains("5Мгц")))
+                                         && !property.Name.Contains("5Мгц") && !property.Name.Contains("АнтЭкв")))
                 {
                     item.BackgroundImage = (bool) property.GetValue(null)
                         ? ControlElementImages.tumblerType3Up
@@ -101,61 +88,15 @@ namespace R440O.R440OForms.N15
                             : ControlElementImages.tumblerType4Down;
 
             #region Тумблеры работающие без нажатия кнопки ВКЛ
+
             ТумблерА503Б.BackgroundImage = N15Parameters.ТумблерА503Б 
                 ? ControlElementImages.tumblerType3Up
                 : ControlElementImages.tumblerType3Down;
 
-            switch (N15Parameters.Тумблер5Мгц)
-            {
-                case 0:
-                    Тумблер5Мгц.BackgroundImage = null;
-                    break;
-                case 1:
-                    Тумблер5Мгц.BackgroundImage = ControlElementImages.tumblerType2Up;
-                    break;
-                default:
-                    Тумблер5Мгц.BackgroundImage = ControlElementImages.tumblerType2Down;
-                    break;
-            }
-
-            switch (N15Parameters.ТумблерФаза)
-            {
-                case 0:
-                    ТумблерФаза.BackgroundImage = null;
-                    break;
-                case 1:
-                    ТумблерФаза.BackgroundImage = ControlElementImages.tumblerType2Up;
-                    break;
-                default:
-                    ТумблерФаза.BackgroundImage = ControlElementImages.tumblerType2Down;
-                    break;
-            }
-
-            switch (N15Parameters.ТумблерУров1)
-            {
-                case 0:
-                    ТумблерУров1.BackgroundImage = null;
-                    break;
-                case 1:
-                    ТумблерУров1.BackgroundImage = ControlElementImages.tumblerType2Up;
-                    break;
-                default:
-                    ТумблерУров1.BackgroundImage = ControlElementImages.tumblerType2Down;
-                    break;
-            }
-
-            switch (N15Parameters.ТумблерУров2)
-            {
-                case 0:
-                    ТумблерУров2.BackgroundImage = null;
-                    break;
-                case 1:
-                    ТумблерУров2.BackgroundImage = ControlElementImages.tumblerType2Up;
-                    break;
-                default:
-                    ТумблерУров2.BackgroundImage = ControlElementImages.tumblerType2Down;
-                    break;
-            }
+            ТумблерФаза.BackgroundImage = null;
+            ТумблерУров1.BackgroundImage = null;
+            ТумблерУров2.BackgroundImage = null;
+            Тумблер5Мгц.BackgroundImage = null;
 
             ТумблерАнтЭкв.BackgroundImage = N15Parameters.ТумблерАнтЭкв
                             ? ControlElementImages.tumblerType4Up
@@ -237,7 +178,7 @@ namespace R440O.R440OForms.N15
             var localParametersList = typeof(N15LocalParameters).GetProperties();
             foreach (var localProperty in localParametersList)
             {
-                foreach (var property in parametersList.Where(property => localProperty.Name.Contains(property.Name)))
+                foreach (var property in parametersList.Where(property => localProperty.Name.Contains(property.Name) && localProperty.Name != "локТумблер5Мгц" && localProperty.Name != "локТумблерАнтЭкв"))
                 {
                     property.SetValue(this, localProperty.GetValue(this));
                 }
@@ -261,12 +202,12 @@ namespace R440O.R440OForms.N15
             var d = MSHUParameters.ВыходнойСигнал;
         }
 
-        private void Н15КнопкаСтанцияВыкл_MouseDown(object sender, MouseEventArgs e)
+        private void КнопкаСтанцияВыкл_MouseDown(object sender, MouseEventArgs e)
         {
             this.КнопкаСтанцияВыкл.BackgroundImage = null;
         }
 
-        private void Н15КнопкаСтанцияВыкл_MouseUp(object sender, MouseEventArgs e)
+        private void КнопкаСтанцияВыкл_MouseUp(object sender, MouseEventArgs e)
         {
             this.КнопкаСтанцияВыкл.BackgroundImage = ControlElementImages.buttonN15Off;
         }
@@ -287,7 +228,7 @@ namespace R440O.R440OForms.N15
 
         #region Кнопки ПРМ НАВЕДЕНИЕ/Ц300М 1 2 3 4 и МОЩНОСТЬ Н16 АНТ Сброс
 
-        private void Н15КнопкаПРМНаведениеЦ300М1_Click(object sender, EventArgs e)
+        private void КнопкаПРМНаведениеЦ300М1_Click(object sender, EventArgs e)
         {
             N15Parameters.КнопкаПРМНаведениеЦ300М1 = true;
             N15Parameters.КнопкаПРМНаведениеЦ300М2 = false;
@@ -297,7 +238,7 @@ namespace R440O.R440OForms.N15
             N15Parameters.КнопкаМощностьАнт = false;
         }
 
-        private void Н15КнопкаПРМНаведениеЦ300М2_Click(object sender, EventArgs e)
+        private void КнопкаПРМНаведениеЦ300М2_Click(object sender, EventArgs e)
         {
             N15Parameters.КнопкаПРМНаведениеЦ300М1 = false;
             N15Parameters.КнопкаПРМНаведениеЦ300М2 = true;
@@ -307,7 +248,7 @@ namespace R440O.R440OForms.N15
             N15Parameters.КнопкаМощностьАнт = false;
         }
 
-        private void Н15КнопкаПРМНаведениеЦ300М3_Click(object sender, EventArgs e)
+        private void КнопкаПРМНаведениеЦ300М3_Click(object sender, EventArgs e)
         {
             N15Parameters.КнопкаПРМНаведениеЦ300М1 = false;
             N15Parameters.КнопкаПРМНаведениеЦ300М2 = false;
@@ -317,7 +258,7 @@ namespace R440O.R440OForms.N15
             N15Parameters.КнопкаМощностьАнт = false;
         }
 
-        private void Н15КнопкаПРМНаведениеЦ300М4_Click(object sender, EventArgs e)
+        private void КнопкаПРМНаведениеЦ300М4_Click(object sender, EventArgs e)
         {
             N15Parameters.КнопкаПРМНаведениеЦ300М1 = false;
             N15Parameters.КнопкаПРМНаведениеЦ300М2 = false;
@@ -327,7 +268,7 @@ namespace R440O.R440OForms.N15
             N15Parameters.КнопкаМощностьАнт = false;
         }
 
-        private void Н15КнопкаМощностьН16_Click(object sender, EventArgs e)
+        private void КнопкаМощностьН16_Click(object sender, EventArgs e)
         {
             N15Parameters.КнопкаПРМНаведениеЦ300М1 = false;
             N15Parameters.КнопкаПРМНаведениеЦ300М2 = false;
@@ -337,7 +278,7 @@ namespace R440O.R440OForms.N15
             N15Parameters.КнопкаМощностьАнт = false;
         }
 
-        private void Н15КнопкаМощностьАнт_Click(object sender, EventArgs e)
+        private void КнопкаМощностьАнт_Click(object sender, EventArgs e)
         {
             N15Parameters.КнопкаПРМНаведениеЦ300М1 = false;
             N15Parameters.КнопкаПРМНаведениеЦ300М2 = false;
@@ -347,16 +288,11 @@ namespace R440O.R440OForms.N15
             N15Parameters.КнопкаМощностьАнт = true;
         }
 
-        private void Н15КнопкаМощностьСброс_MouseDown(object sender, MouseEventArgs e)
+        private void КнопкаМощностьСброс_MouseDown(object sender, MouseEventArgs e)
         {
             this.КнопкаМощностьСброс.BackgroundImage = null;
             this.КнопкаМощностьСброс.Text = string.Empty;
-        }
 
-        private void Н15КнопкаМощностьСброс_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.КнопкаМощностьСброс.BackgroundImage = ControlElementImages.buttonSquareWhite;
-            this.КнопкаМощностьСброс.Text = "СБРОС";
             N15Parameters.КнопкаПРМНаведениеЦ300М1 = false;
             N15Parameters.КнопкаПРМНаведениеЦ300М2 = false;
             N15Parameters.КнопкаПРМНаведениеЦ300М3 = false;
@@ -365,121 +301,123 @@ namespace R440O.R440OForms.N15
             N15Parameters.КнопкаМощностьАнт = false;
         }
 
+        private void КнопкаМощностьСброс_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.КнопкаМощностьСброс.BackgroundImage = ControlElementImages.buttonSquareWhite;
+            this.КнопкаМощностьСброс.Text = "СБРОС";
+        }
+
         #endregion
 
         #region Кнопки Н13-1 Н13-2 Н13-1,2 СБРОС
-        private async void Н15КнопкаН13_1_Click(object sender, EventArgs e)
+        private async void КнопкаН13_1_Click(object sender, EventArgs e)
         {
 
             this.КнопкаН13_1.Visible = false;
             this.КнопкаН13_2.Visible = true;
             this.КнопкаН13_12.Visible = true;
-
-            if (N15Parameters.КнопкаН13_2 == false && N15Parameters.КнопкаН13_12 == false)
+            if (N15Parameters.НеполноеВключение)
             {
-                await Task.Delay(300);
-                this.ЛампочкаН16Н13_1.BackgroundImage = ControlElementImages.lampType5OnRed;
-            }
-            else
-            {
-                await Task.Delay(300);
-                this.ЛампочкаН16Н13_12.BackgroundImage = ControlElementImages.lampType5OnRed;
-                this.ЛампочкаН16Н13_2.BackgroundImage = null;
+                if (N15Parameters.КнопкаН13_2 == false && N15Parameters.КнопкаН13_12 == false)
+                {
+                    await Task.Delay(300);
+                    this.ЛампочкаН16Н13_1.BackgroundImage = ControlElementImages.lampType5OnRed;
+                }
+                else
+                {
+                    await Task.Delay(300);
+                    this.ЛампочкаН16Н13_12.BackgroundImage = ControlElementImages.lampType5OnRed;
+                    this.ЛампочкаН16Н13_2.BackgroundImage = null;
 
-                await Task.Delay(300);
-                this.ЛампочкаН16Н13_1.BackgroundImage = ControlElementImages.lampType5OnRed;
-                this.ЛампочкаН16Н13_12.BackgroundImage = null;
+                    await Task.Delay(300);
+                    this.ЛампочкаН16Н13_1.BackgroundImage = ControlElementImages.lampType5OnRed;
+                    this.ЛампочкаН16Н13_12.BackgroundImage = null;
+                }
             }
+            
 
             N15Parameters.КнопкаН13_1 = true;
             N15Parameters.КнопкаН13_2 = false;
             N15Parameters.КнопкаН13_12 = false;
-
-
         }
 
-        private async void Н15КнопкаН13_2_Click(object sender, EventArgs e)
+        private async void КнопкаН13_2_Click(object sender, EventArgs e)
         {
             this.КнопкаН13_2.Visible = false;
             this.КнопкаН13_1.Visible = true;
             this.КнопкаН13_12.Visible = true;
 
-            if (N15Parameters.КнопкаН13_1 == false && N15Parameters.КнопкаН13_12 == false)
+            if (N15Parameters.НеполноеВключение)
             {
-                await Task.Delay(300);
-                this.ЛампочкаН16Н13_2.BackgroundImage = ControlElementImages.lampType5OnRed;
-            }
-            else
-            {
-                await Task.Delay(300);
-                this.ЛампочкаН16Н13_1.BackgroundImage = ControlElementImages.lampType5OnRed;
-                this.ЛампочкаН16Н13_12.BackgroundImage = null;
+                if (N15Parameters.КнопкаН13_1 == false && N15Parameters.КнопкаН13_12 == false)
+                {
+                    await Task.Delay(300);
+                    this.ЛампочкаН16Н13_2.BackgroundImage = ControlElementImages.lampType5OnRed;
+                }
+                else
+                {
+                    await Task.Delay(300);
+                    this.ЛампочкаН16Н13_1.BackgroundImage = ControlElementImages.lampType5OnRed;
+                    this.ЛампочкаН16Н13_12.BackgroundImage = null;
 
-                await Task.Delay(300);
-                this.ЛампочкаН16Н13_2.BackgroundImage = ControlElementImages.lampType5OnRed;
-                this.ЛампочкаН16Н13_1.BackgroundImage = null;
+                    await Task.Delay(300);
+                    this.ЛампочкаН16Н13_2.BackgroundImage = ControlElementImages.lampType5OnRed;
+                    this.ЛампочкаН16Н13_1.BackgroundImage = null;
+                }
+            
             }
 
             N15Parameters.КнопкаН13_1 = false;
             N15Parameters.КнопкаН13_2 = true;
             N15Parameters.КнопкаН13_12 = false;
-
-
         }
 
-        private async void Н15КнопкаН13_12_Click(object sender, EventArgs e)
+        private async void КнопкаН13_12_Click(object sender, EventArgs e)
         {
             this.КнопкаН13_12.Visible = false;
             this.КнопкаН13_1.Visible = true;
             this.КнопкаН13_2.Visible = true;
 
-            if (N15Parameters.КнопкаН13_1 == false && N15Parameters.КнопкаН13_2 == false)
+            if (N15Parameters.НеполноеВключение)
             {
-                await Task.Delay(300);
-                this.ЛампочкаН16Н13_12.BackgroundImage = ControlElementImages.lampType5OnRed;
-            }
-            else
-            {
-                await Task.Delay(300);
-                this.ЛампочкаН16Н13_2.BackgroundImage = ControlElementImages.lampType5OnRed;
-                this.ЛампочкаН16Н13_1.BackgroundImage = null;
+                if (N15Parameters.КнопкаН13_1 == false && N15Parameters.КнопкаН13_2 == false)
+                {
+                    await Task.Delay(300);
+                    this.ЛампочкаН16Н13_12.BackgroundImage = ControlElementImages.lampType5OnRed;
+                }
+                else
+                {
+                    await Task.Delay(300);
+                    this.ЛампочкаН16Н13_2.BackgroundImage = ControlElementImages.lampType5OnRed;
+                    this.ЛампочкаН16Н13_1.BackgroundImage = null;
 
-                await Task.Delay(300);
-                this.ЛампочкаН16Н13_12.BackgroundImage = ControlElementImages.lampType5OnRed;
-                this.ЛампочкаН16Н13_2.BackgroundImage = null;
+                    await Task.Delay(300);
+                    this.ЛампочкаН16Н13_12.BackgroundImage = ControlElementImages.lampType5OnRed;
+                    this.ЛампочкаН16Н13_2.BackgroundImage = null;
+                }
             }
 
             N15Parameters.КнопкаН13_1 = false;
             N15Parameters.КнопкаН13_2 = false;
             N15Parameters.КнопкаН13_12 = true;
-
-
         }
 
-        private async void Н15КнопкаСброс_MouseUp(object sender, MouseEventArgs e)
+        private void КнопкаСброс_MouseUp(object sender, MouseEventArgs e)
         {
             this.КнопкаСброс.BackgroundImage = ControlElementImages.buttonSquareWhite;
             this.КнопкаСброс.Text = "СБРОС";
+        }
 
-            this.КнопкаН13_1.Visible = true;
-            this.КнопкаН13_2.Visible = true;
-            this.КнопкаН13_12.Visible = true;
-
-            await Task.Delay(300);
-            this.ЛампочкаН16Н13_1.BackgroundImage = null;
-            this.ЛампочкаН16Н13_2.BackgroundImage = null;
-            this.ЛампочкаН16Н13_12.BackgroundImage = null;
+        private async void КнопкаСброс_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.КнопкаСброс.BackgroundImage = null;
+            this.КнопкаСброс.Text = string.Empty;
 
             N15Parameters.КнопкаН13_1 = false;
             N15Parameters.КнопкаН13_2 = false;
             N15Parameters.КнопкаН13_12 = false;
 
-        }
-
-        private void Н15КнопкаСброс_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.КнопкаСброс.BackgroundImage = null;
-            this.КнопкаСброс.Text = string.Empty;
+            
         }
         #endregion
 
@@ -487,12 +425,12 @@ namespace R440O.R440OForms.N15
 
         private static bool isManipulation;
 
-        private void N15Регулятор_MouseDown(object sender, MouseEventArgs e)
+        private void Регулятор_MouseDown(object sender, MouseEventArgs e)
         {
             isManipulation = true;
         }
 
-        private void N15Регулятор_MouseMove(object sender, MouseEventArgs e)
+        private void Регулятор_MouseMove(object sender, MouseEventArgs e)
         {
             if (!isManipulation) return;
             var button = sender as Button;
@@ -503,7 +441,7 @@ namespace R440O.R440OForms.N15
                     (float)N15Parameters.РегуляторУровень);
         }
 
-        private void N15Регулятор_MouseUp(object sender, MouseEventArgs e)
+        private void Регулятор_MouseUp(object sender, MouseEventArgs e)
         {
             isManipulation = false;
         }
@@ -544,6 +482,7 @@ namespace R440O.R440OForms.N15
         private void Тумблер5Мгц_MouseUp(object sender, MouseEventArgs e)
         {
             N15Parameters.Тумблер5Мгц = 0;
+            Тумблер5Мгц.BackgroundImage = null;
         }
 
         private void Тумблер5Мгц_MouseDown(object sender, MouseEventArgs e)
@@ -551,16 +490,19 @@ namespace R440O.R440OForms.N15
             if (e.Button == MouseButtons.Left)
             {
                 N15Parameters.Тумблер5Мгц = 1;
+                Тумблер5Мгц.BackgroundImage = ControlElementImages.tumblerType2Down;
             }
             if (e.Button == MouseButtons.Right)
             {
                 N15Parameters.Тумблер5Мгц = -1;
+                Тумблер5Мгц.BackgroundImage = ControlElementImages.tumblerType2Up;
             }
         }
 
         private void ТумблерФаза_MouseUp(object sender, MouseEventArgs e)
         {
             N15Parameters.ТумблерФаза = 0;
+            ТумблерФаза.BackgroundImage = null;
         }
 
         private void ТумблерФаза_MouseDown(object sender, MouseEventArgs e)
@@ -568,16 +510,19 @@ namespace R440O.R440OForms.N15
             if (e.Button == MouseButtons.Left)
             {
                 N15Parameters.ТумблерФаза = 1;
+                ТумблерФаза.BackgroundImage = ControlElementImages.tumblerType2Down;
             }
             if (e.Button == MouseButtons.Right)
             {
                 N15Parameters.ТумблерФаза = -1;
+                ТумблерФаза.BackgroundImage = ControlElementImages.tumblerType2Up;
             }
         }
 
         private void ТумблерУров1_MouseUp(object sender, MouseEventArgs e)
         {
             N15Parameters.ТумблерУров1 = 0;
+            ТумблерУров1.BackgroundImage = null;
         }
 
         private void ТумблерУров1_MouseDown(object sender, MouseEventArgs e)
@@ -585,16 +530,19 @@ namespace R440O.R440OForms.N15
             if (e.Button == MouseButtons.Left)
             {
                 N15Parameters.ТумблерУров1 = 1;
+                ТумблерУров1.BackgroundImage = ControlElementImages.tumblerType2Down;
             }
             if (e.Button == MouseButtons.Right)
             {
                 N15Parameters.ТумблерУров1 = -1;
+                ТумблерУров1.BackgroundImage = ControlElementImages.tumblerType2Up;
             }
         }
 
         private void ТумблерУров2_MouseUp(object sender, MouseEventArgs e)
         {
             N15Parameters.ТумблерУров2 = 0;
+            ТумблерУров2.BackgroundImage = null;
         }
 
         private void ТумблерУров2_MouseDown(object sender, MouseEventArgs e)
@@ -602,11 +550,18 @@ namespace R440O.R440OForms.N15
             if (e.Button == MouseButtons.Left)
             {
                 N15Parameters.ТумблерУров2 = 1;
+                ТумблерУров2.BackgroundImage = ControlElementImages.tumblerType2Down;
             }
             if (e.Button == MouseButtons.Right)
             {
                 N15Parameters.ТумблерУров2 = -1;
+                ТумблерУров2.BackgroundImage = ControlElementImages.tumblerType2Up;
             }
+        }
+
+        private void N15Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            N15Parameters.ParameterChanged -= RefreshFormElements;
         }
 
 

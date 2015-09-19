@@ -24,7 +24,7 @@ namespace R440O.Parameters
         public static int ВаттметрПереключательГрубо
         {
             get { return _ВаттметрПереключательГрубо; }
-            set { if (value <= 120 && value >= -120) _ВаттметрПереключательГрубо = value; }
+            set { if (value <= 120 && value >= -360) _ВаттметрПереключательГрубо = value; }
         }
         public static int _ВаттметрПереключательГрубо = -120;
 

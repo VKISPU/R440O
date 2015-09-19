@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.N12SPanel = new System.Windows.Forms.Panel();
+            this.Panel = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.ПотенциометрAlphaV = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -52,9 +52,9 @@
             this.ЛампочкаУпорБ = new System.Windows.Forms.PictureBox();
             this.ЛампочкаУпорА = new System.Windows.Forms.PictureBox();
             this.ТумблерБ = new System.Windows.Forms.Button();
-            this.N12SКнопкаУскор = new System.Windows.Forms.Button();
+            this.КнопкаУскор = new System.Windows.Forms.Button();
             this.ТумблерА = new System.Windows.Forms.Button();
-            this.N12SPanel.SuspendLayout();
+            this.Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ПотенциометрAlphaV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -78,31 +78,31 @@
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаУпорА)).BeginInit();
             this.SuspendLayout();
             // 
-            // N12SPanel
+            // Panel
             // 
-            this.N12SPanel.BackgroundImage = global::R440O.BackgroundImages.N12S;
-            this.N12SPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N12SPanel.Controls.Add(this.pictureBox10);
-            this.N12SPanel.Controls.Add(this.ПотенциометрAlphaV);
-            this.N12SPanel.Controls.Add(this.pictureBox8);
-            this.N12SPanel.Controls.Add(this.ПотенциометрAlphaИ);
-            this.N12SPanel.Controls.Add(this.pictureBox7);
-            this.N12SPanel.Controls.Add(this.ПотенциометрBetaV);
-            this.N12SPanel.Controls.Add(this.pictureBox6);
-            this.N12SPanel.Controls.Add(this.ПотенциометрBetaИ);
-            this.N12SPanel.Controls.Add(this.ИндикаторAlpha);
-            this.N12SPanel.Controls.Add(this.ИндикаторBeta);
-            this.N12SPanel.Controls.Add(this.ТумблерСеть);
-            this.N12SPanel.Controls.Add(this.ЛампочкаГотовность);
-            this.N12SPanel.Controls.Add(this.ЛампочкаУпорБ);
-            this.N12SPanel.Controls.Add(this.ЛампочкаУпорА);
-            this.N12SPanel.Controls.Add(this.ТумблерБ);
-            this.N12SPanel.Controls.Add(this.N12SКнопкаУскор);
-            this.N12SPanel.Controls.Add(this.ТумблерА);
-            this.N12SPanel.Location = new System.Drawing.Point(0, 0);
-            this.N12SPanel.Name = "N12SPanel";
-            this.N12SPanel.Size = new System.Drawing.Size(768, 465);
-            this.N12SPanel.TabIndex = 3;
+            this.Panel.BackgroundImage = global::R440O.BackgroundImages.N12S;
+            this.Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Panel.Controls.Add(this.pictureBox10);
+            this.Panel.Controls.Add(this.ПотенциометрAlphaV);
+            this.Panel.Controls.Add(this.pictureBox8);
+            this.Panel.Controls.Add(this.ПотенциометрAlphaИ);
+            this.Panel.Controls.Add(this.pictureBox7);
+            this.Panel.Controls.Add(this.ПотенциометрBetaV);
+            this.Panel.Controls.Add(this.pictureBox6);
+            this.Panel.Controls.Add(this.ПотенциометрBetaИ);
+            this.Panel.Controls.Add(this.ИндикаторAlpha);
+            this.Panel.Controls.Add(this.ИндикаторBeta);
+            this.Panel.Controls.Add(this.ТумблерСеть);
+            this.Panel.Controls.Add(this.ЛампочкаГотовность);
+            this.Panel.Controls.Add(this.ЛампочкаУпорБ);
+            this.Panel.Controls.Add(this.ЛампочкаУпорА);
+            this.Panel.Controls.Add(this.ТумблерБ);
+            this.Panel.Controls.Add(this.КнопкаУскор);
+            this.Panel.Controls.Add(this.ТумблерА);
+            this.Panel.Location = new System.Drawing.Point(0, 0);
+            this.Panel.Name = "Panel";
+            this.Panel.Size = new System.Drawing.Size(768, 465);
+            this.Panel.TabIndex = 3;
             // 
             // pictureBox10
             // 
@@ -384,21 +384,21 @@
             this.ТумблерБ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ТумблерБ_MouseDown);
             this.ТумблерБ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ТумблерБ_MouseUp);
             // 
-            // N12SКнопкаУскор
+            // КнопкаУскор
             // 
-            this.N12SКнопкаУскор.BackColor = System.Drawing.Color.Transparent;
-            this.N12SКнопкаУскор.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.N12SКнопкаУскор.FlatAppearance.BorderSize = 0;
-            this.N12SКнопкаУскор.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N12SКнопкаУскор.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N12SКнопкаУскор.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N12SКнопкаУскор.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.N12SКнопкаУскор.Location = new System.Drawing.Point(125, 378);
-            this.N12SКнопкаУскор.Name = "N12SКнопкаУскор";
-            this.N12SКнопкаУскор.Size = new System.Drawing.Size(33, 37);
-            this.N12SКнопкаУскор.TabIndex = 60;
-            this.N12SКнопкаУскор.UseVisualStyleBackColor = false;
-            this.N12SКнопкаУскор.Click += new System.EventHandler(this.N12SКнопкаУскор_Click);
+            this.КнопкаУскор.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаУскор.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.КнопкаУскор.FlatAppearance.BorderSize = 0;
+            this.КнопкаУскор.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаУскор.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаУскор.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаУскор.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.КнопкаУскор.Location = new System.Drawing.Point(125, 378);
+            this.КнопкаУскор.Name = "КнопкаУскор";
+            this.КнопкаУскор.Size = new System.Drawing.Size(33, 37);
+            this.КнопкаУскор.TabIndex = 60;
+            this.КнопкаУскор.UseVisualStyleBackColor = false;
+            this.КнопкаУскор.Click += new System.EventHandler(this.КнопкаУскор_Click);
             // 
             // ТумблерА
             // 
@@ -422,14 +422,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(769, 463);
-            this.Controls.Add(this.N12SPanel);
+            this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MinimizeBox = false;
             this.Name = "N12SForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Н12С";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.N12SForm_FormClosed);
-            this.N12SPanel.ResumeLayout(false);
+            this.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ПотенциометрAlphaV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -457,13 +457,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel N12SPanel;
+        private System.Windows.Forms.Panel Panel;
         private System.Windows.Forms.Button ТумблерА;
         private System.Windows.Forms.Button ТумблерБ;
         private System.Windows.Forms.PictureBox ЛампочкаГотовность;
         private System.Windows.Forms.PictureBox ЛампочкаУпорБ;
         private System.Windows.Forms.PictureBox ЛампочкаУпорА;
-        private System.Windows.Forms.Button N12SКнопкаУскор;
+        private System.Windows.Forms.Button КнопкаУскор;
         private System.Windows.Forms.PictureBox Sticker;
         private System.Windows.Forms.Button ТумблерСеть;
         private System.Windows.Forms.Panel ИндикаторBeta;

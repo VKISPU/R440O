@@ -1,7 +1,21 @@
-﻿namespace R440O.R440OForms.N15
+﻿using System;
+using System.Security.Cryptography;
+
+namespace R440O.R440OForms.N15
 {
     public static class N15LocalParameters
     {
+        static N15LocalParameters()
+        {
+            var generator = new Random();
+
+            int rnd = generator.Next(1);
+            _локТумблерАнтЭкв = rnd == 1;
+
+            rnd = generator.Next(1);
+            _локТумблер5Мгц = rnd == 1;
+        }
+
         #region Тумблеры левая часть
         private static bool _локТумблерЦ300М1;
         private static bool _локТумблерЦ300М2;
@@ -178,133 +192,44 @@
         }
         #endregion
 
-        #region Тумблеры правая часть
-        private static bool _локТумблерА503Б;
-        private static int _локТумблерФаза = 0;
-        private static int _локТумблерУров1 = 0;
-        private static int _локТумблерУров2 = 0;
-        private static int _локТумблер5Мгц = 0;
+        #region Кнопки и Тумблеры правая часть (Значения в памяти блока)
+        private static bool _локТумблер5Мгц ;
         private static bool _локТумблерАнтЭкв;
-        private static bool _локТумблерТлфТлгПрм;
-        private static bool _локТумблерТлфТлгПрд;
+        private static int _локКнопкаН13;
 
-        public static bool локТумблерА503Б
-        {
-            get { return _локТумблерА503Б; }
-            set { _локТумблерА503Б = value; }
-        }
-
-        public static int локТумблерФаза
-        {
-            get { return _локТумблерФаза; }
-            set { _локТумблерФаза = value; }
-        }
-
-        public static int локТумблерУров1
-        {
-            get { return _локТумблерУров1; }
-            set { _локТумблерУров1 = value; }
-        }
-
-        public static int локТумблерУров2
-        {
-            get { return _локТумблерУров2; }
-            set { _локТумблерУров2 = value; }
-        }
-
-        public static int локТумблер5Мгц
+        /// <summary>
+        /// Значение, хранимое в памяти блока для тумблера 5Мгц
+        /// true - 2, false - 3
+        /// </summary>
+        public static bool локТумблер5Мгц
         {
             get { return _локТумблер5Мгц; }
             set { _локТумблер5Мгц = value; }
         }
 
+        /// <summary>
+        /// Значение, хранимое в памяти блока для тумблера Антенна/Эквивалент
+        /// true - Антенна, false - Эквивалент
+        /// </summary>
         public static bool локТумблерАнтЭкв
         {
             get { return _локТумблерАнтЭкв; }
             set { _локТумблерАнтЭкв = value; }
         }
 
-        public static bool локТумблерТлфТлгПрм
+        /// <summary>
+        /// Значение, хранимое в памяти блока для комплектов Н13
+        /// 0 - Комплекты не включены (Последняя нажатая клавиша - Сброс)
+        /// 1 - КнопкаН13_1 (Последняя нажатая клавиша - Н13_1)
+        /// 2 - КнопкаН13_2 (Последняя нажатая клавиша - Н13_2)
+        /// 3 - КнопкаН13_12 (Последняя нажатая клавиша - Н13_12)
+        /// </summary>
+        public static int локКнопкаН13
         {
-            get { return _локТумблерТлфТлгПрм; }
-            set { _локТумблерТлфТлгПрм = value; }
-        }
-
-        public static bool локТумблерТлфТлгПрд
-        {
-            get { return _локТумблерТлфТлгПрд; }
-            set { _локТумблерТлфТлгПрд = value; }
-        }
-
-        #endregion
-
-        #region Кнопки
-        private static bool _локКнопкаПрмНаведениеЦ300М1;
-        private static bool _локКнопкаПрмНаведениеЦ300М2;
-        private static bool _локКнопкаПрмНаведениеЦ300М3;
-        private static bool _локКнопкаПрмНаведениеЦ300М4;
-        private static bool _локКнопкаМощностьН16;
-        private static bool _локКнопкаМощностьАнт;
-
-        private static bool _локКнопкаН131;
-        private static bool _локКнопкаН132;
-        private static bool _локКнопкаН1312;
-
-
-        public static bool локКнопкаПРМНаведениеЦ300М1
-        {
-            get { return _локКнопкаПрмНаведениеЦ300М1; }
-            set { _локКнопкаПрмНаведениеЦ300М1 = value; }
-        }
-
-
-        public static bool локКнопкаПРМНаведениеЦ300М2
-        {
-            get { return _локКнопкаПрмНаведениеЦ300М2; }
-            set { _локКнопкаПрмНаведениеЦ300М2 = value; }
-        }
-
-        public static bool локКнопкаПРМНаведениеЦ300М3
-        {
-            get { return _локКнопкаПрмНаведениеЦ300М3; }
-            set { _локКнопкаПрмНаведениеЦ300М3 = value; }
-        }
-
-        public static bool локКнопкаПРМНаведениеЦ300М4
-        {
-            get { return _локКнопкаПрмНаведениеЦ300М4; }
-            set { _локКнопкаПрмНаведениеЦ300М4 = value; }
-        }
-
-        public static bool локКнопкаМощностьН16
-        {
-            get { return _локКнопкаМощностьН16; }
-            set { _локКнопкаМощностьН16 = value; }
-        }
-
-        public static bool локКнопкаМощностьАнт
-        {
-            get { return _локКнопкаМощностьАнт; }
-            set { _локКнопкаМощностьАнт = value; }
-        }
-
-        public static bool локКнопкаН13_1
-        {
-            get { return _локКнопкаН131; }
-            set { _локКнопкаН131 = value; }
-        }
-
-        public static bool локКнопкаН13_2
-        {
-            get { return _локКнопкаН132; }
-            set { _локКнопкаН132 = value; }
-        }
-
-        public static bool локКнопкаН13_12
-        {
-            get { return _локКнопкаН1312; }
-            set { _локКнопкаН1312 = value; }
+            get { return _локКнопкаН13; }
+            set { _локКнопкаН13 = value; }
         }
         #endregion
+
     }
 }

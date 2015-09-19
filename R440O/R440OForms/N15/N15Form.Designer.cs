@@ -32,7 +32,7 @@
             this.ТумблерУров2 = new System.Windows.Forms.Button();
             this.ТумблерУров1 = new System.Windows.Forms.Button();
             this.ТумблерФаза = new System.Windows.Forms.Button();
-            this.N15РегуляторУровень = new System.Windows.Forms.Button();
+            this.РегуляторУровень = new System.Windows.Forms.Button();
             this.ЛампочкаА205Неиспр2 = new System.Windows.Forms.PictureBox();
             this.ЛампочкаА205Неиспр1 = new System.Windows.Forms.PictureBox();
             this.OpenInsideButtonRight = new System.Windows.Forms.Button();
@@ -201,7 +201,7 @@
             this.Panel.Controls.Add(this.ТумблерУров2);
             this.Panel.Controls.Add(this.ТумблерУров1);
             this.Panel.Controls.Add(this.ТумблерФаза);
-            this.Panel.Controls.Add(this.N15РегуляторУровень);
+            this.Panel.Controls.Add(this.РегуляторУровень);
             this.Panel.Controls.Add(this.ЛампочкаА205Неиспр2);
             this.Panel.Controls.Add(this.ЛампочкаА205Неиспр1);
             this.Panel.Controls.Add(this.OpenInsideButtonRight);
@@ -359,23 +359,23 @@
             this.ТумблерФаза.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ТумблерФаза_MouseDown);
             this.ТумблерФаза.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ТумблерФаза_MouseUp);
             // 
-            // N15РегуляторУровень
+            // РегуляторУровень
             // 
-            this.N15РегуляторУровень.BackColor = System.Drawing.Color.Transparent;
-            this.N15РегуляторУровень.BackgroundImage = global::R440O.ControlElementImages.revolverRoundSmall;
-            this.N15РегуляторУровень.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N15РегуляторУровень.FlatAppearance.BorderSize = 0;
-            this.N15РегуляторУровень.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.N15РегуляторУровень.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.N15РегуляторУровень.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.N15РегуляторУровень.Location = new System.Drawing.Point(835, 342);
-            this.N15РегуляторУровень.Name = "N15РегуляторУровень";
-            this.N15РегуляторУровень.Size = new System.Drawing.Size(50, 51);
-            this.N15РегуляторУровень.TabIndex = 50;
-            this.N15РегуляторУровень.UseVisualStyleBackColor = false;
-            this.N15РегуляторУровень.MouseDown += new System.Windows.Forms.MouseEventHandler(this.N15Регулятор_MouseDown);
-            this.N15РегуляторУровень.MouseMove += new System.Windows.Forms.MouseEventHandler(this.N15Регулятор_MouseMove);
-            this.N15РегуляторУровень.MouseUp += new System.Windows.Forms.MouseEventHandler(this.N15Регулятор_MouseUp);
+            this.РегуляторУровень.BackColor = System.Drawing.Color.Transparent;
+            this.РегуляторУровень.BackgroundImage = global::R440O.ControlElementImages.revolverRoundSmall;
+            this.РегуляторУровень.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.РегуляторУровень.FlatAppearance.BorderSize = 0;
+            this.РегуляторУровень.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.РегуляторУровень.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.РегуляторУровень.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.РегуляторУровень.Location = new System.Drawing.Point(835, 342);
+            this.РегуляторУровень.Name = "РегуляторУровень";
+            this.РегуляторУровень.Size = new System.Drawing.Size(50, 51);
+            this.РегуляторУровень.TabIndex = 50;
+            this.РегуляторУровень.UseVisualStyleBackColor = false;
+            this.РегуляторУровень.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Регулятор_MouseDown);
+            this.РегуляторУровень.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Регулятор_MouseMove);
+            this.РегуляторУровень.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Регулятор_MouseUp);
             // 
             // ЛампочкаА205Неиспр2
             // 
@@ -439,7 +439,6 @@
             this.Тумблер5Мгц.Size = new System.Drawing.Size(34, 51);
             this.Тумблер5Мгц.TabIndex = 70;
             this.Тумблер5Мгц.UseVisualStyleBackColor = false;
-            this.Тумблер5Мгц.Click += new System.EventHandler(this.Н15КнопкаПРМНаведениеЦ300М2_Click);
             this.Тумблер5Мгц.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Тумблер5Мгц_MouseDown);
             this.Тумблер5Мгц.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Тумблер5Мгц_MouseUp);
             // 
@@ -535,7 +534,7 @@
             // 
             this.ЛампочкаЭкв.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаЭкв.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаЭкв.Location = new System.Drawing.Point(710, 404);
+            this.ЛампочкаЭкв.Location = new System.Drawing.Point(710, 403);
             this.ЛампочкаЭкв.Name = "ЛампочкаЭкв";
             this.ЛампочкаЭкв.Size = new System.Drawing.Size(23, 19);
             this.ЛампочкаЭкв.TabIndex = 65;
@@ -545,7 +544,7 @@
             // 
             this.ЛампочкаАнт.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаАнт.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаАнт.Location = new System.Drawing.Point(710, 322);
+            this.ЛампочкаАнт.Location = new System.Drawing.Point(710, 321);
             this.ЛампочкаАнт.Name = "ЛампочкаАнт";
             this.ЛампочкаАнт.Size = new System.Drawing.Size(23, 19);
             this.ЛампочкаАнт.TabIndex = 65;
@@ -555,7 +554,7 @@
             // 
             this.Лампочка5мГц3.BackColor = System.Drawing.Color.Transparent;
             this.Лампочка5мГц3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Лампочка5мГц3.Location = new System.Drawing.Point(798, 404);
+            this.Лампочка5мГц3.Location = new System.Drawing.Point(799, 403);
             this.Лампочка5мГц3.Name = "Лампочка5мГц3";
             this.Лампочка5мГц3.Size = new System.Drawing.Size(23, 19);
             this.Лампочка5мГц3.TabIndex = 65;
@@ -565,7 +564,7 @@
             // 
             this.Лампочка5мГц2.BackColor = System.Drawing.Color.Transparent;
             this.Лампочка5мГц2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Лампочка5мГц2.Location = new System.Drawing.Point(760, 404);
+            this.Лампочка5мГц2.Location = new System.Drawing.Point(760, 403);
             this.Лампочка5мГц2.Name = "Лампочка5мГц2";
             this.Лампочка5мГц2.Size = new System.Drawing.Size(23, 19);
             this.Лампочка5мГц2.TabIndex = 65;
@@ -1457,8 +1456,8 @@
             this.КнопкаСброс.TabIndex = 12;
             this.КнопкаСброс.Text = "СБРОС";
             this.КнопкаСброс.UseVisualStyleBackColor = false;
-            this.КнопкаСброс.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Н15КнопкаСброс_MouseDown);
-            this.КнопкаСброс.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Н15КнопкаСброс_MouseUp);
+            this.КнопкаСброс.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаСброс_MouseDown);
+            this.КнопкаСброс.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаСброс_MouseUp);
             // 
             // КнопкаН13_12
             // 
@@ -1476,7 +1475,7 @@
             this.КнопкаН13_12.TabIndex = 11;
             this.КнопкаН13_12.Text = "Н13-1,2";
             this.КнопкаН13_12.UseVisualStyleBackColor = false;
-            this.КнопкаН13_12.Click += new System.EventHandler(this.Н15КнопкаН13_12_Click);
+            this.КнопкаН13_12.Click += new System.EventHandler(this.КнопкаН13_12_Click);
             // 
             // КнопкаН13_2
             // 
@@ -1494,7 +1493,7 @@
             this.КнопкаН13_2.TabIndex = 10;
             this.КнопкаН13_2.Text = "Н13-2";
             this.КнопкаН13_2.UseVisualStyleBackColor = false;
-            this.КнопкаН13_2.Click += new System.EventHandler(this.Н15КнопкаН13_2_Click);
+            this.КнопкаН13_2.Click += new System.EventHandler(this.КнопкаН13_2_Click);
             // 
             // КнопкаН13_1
             // 
@@ -1512,7 +1511,7 @@
             this.КнопкаН13_1.TabIndex = 9;
             this.КнопкаН13_1.Text = "H13-1";
             this.КнопкаН13_1.UseVisualStyleBackColor = false;
-            this.КнопкаН13_1.Click += new System.EventHandler(this.Н15КнопкаН13_1_Click);
+            this.КнопкаН13_1.Click += new System.EventHandler(this.КнопкаН13_1_Click);
             // 
             // КнопкаМощностьСброс
             // 
@@ -1530,8 +1529,8 @@
             this.КнопкаМощностьСброс.TabIndex = 8;
             this.КнопкаМощностьСброс.Text = "СБРОС";
             this.КнопкаМощностьСброс.UseVisualStyleBackColor = false;
-            this.КнопкаМощностьСброс.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Н15КнопкаМощностьСброс_MouseDown);
-            this.КнопкаМощностьСброс.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Н15КнопкаМощностьСброс_MouseUp);
+            this.КнопкаМощностьСброс.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаМощностьСброс_MouseDown);
+            this.КнопкаМощностьСброс.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаМощностьСброс_MouseUp);
             // 
             // КнопкаМощностьАнт
             // 
@@ -1549,7 +1548,7 @@
             this.КнопкаМощностьАнт.TabIndex = 7;
             this.КнопкаМощностьАнт.Text = "АНТ";
             this.КнопкаМощностьАнт.UseVisualStyleBackColor = false;
-            this.КнопкаМощностьАнт.Click += new System.EventHandler(this.Н15КнопкаМощностьАнт_Click);
+            this.КнопкаМощностьАнт.Click += new System.EventHandler(this.КнопкаМощностьАнт_Click);
             // 
             // КнопкаМощностьН16
             // 
@@ -1567,7 +1566,7 @@
             this.КнопкаМощностьН16.TabIndex = 6;
             this.КнопкаМощностьН16.Text = "H16";
             this.КнопкаМощностьН16.UseVisualStyleBackColor = false;
-            this.КнопкаМощностьН16.Click += new System.EventHandler(this.Н15КнопкаМощностьН16_Click);
+            this.КнопкаМощностьН16.Click += new System.EventHandler(this.КнопкаМощностьН16_Click);
             // 
             // КнопкаПРМНаведениеЦ300М4
             // 
@@ -1585,7 +1584,7 @@
             this.КнопкаПРМНаведениеЦ300М4.TabIndex = 5;
             this.КнопкаПРМНаведениеЦ300М4.Text = "4";
             this.КнопкаПРМНаведениеЦ300М4.UseVisualStyleBackColor = false;
-            this.КнопкаПРМНаведениеЦ300М4.Click += new System.EventHandler(this.Н15КнопкаПРМНаведениеЦ300М4_Click);
+            this.КнопкаПРМНаведениеЦ300М4.Click += new System.EventHandler(this.КнопкаПРМНаведениеЦ300М4_Click);
             // 
             // КнопкаПРМНаведениеЦ300М3
             // 
@@ -1603,7 +1602,7 @@
             this.КнопкаПРМНаведениеЦ300М3.TabIndex = 4;
             this.КнопкаПРМНаведениеЦ300М3.Text = "3";
             this.КнопкаПРМНаведениеЦ300М3.UseVisualStyleBackColor = false;
-            this.КнопкаПРМНаведениеЦ300М3.Click += new System.EventHandler(this.Н15КнопкаПРМНаведениеЦ300М3_Click);
+            this.КнопкаПРМНаведениеЦ300М3.Click += new System.EventHandler(this.КнопкаПРМНаведениеЦ300М3_Click);
             // 
             // КнопкаПРМНаведениеЦ300М2
             // 
@@ -1621,7 +1620,7 @@
             this.КнопкаПРМНаведениеЦ300М2.TabIndex = 3;
             this.КнопкаПРМНаведениеЦ300М2.Text = "2";
             this.КнопкаПРМНаведениеЦ300М2.UseVisualStyleBackColor = false;
-            this.КнопкаПРМНаведениеЦ300М2.Click += new System.EventHandler(this.Н15КнопкаПРМНаведениеЦ300М2_Click);
+            this.КнопкаПРМНаведениеЦ300М2.Click += new System.EventHandler(this.КнопкаПРМНаведениеЦ300М2_Click);
             // 
             // КнопкаПРМНаведениеЦ300М1
             // 
@@ -1640,7 +1639,7 @@
             this.КнопкаПРМНаведениеЦ300М1.Text = "1";
             this.КнопкаПРМНаведениеЦ300М1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.КнопкаПРМНаведениеЦ300М1.UseVisualStyleBackColor = false;
-            this.КнопкаПРМНаведениеЦ300М1.Click += new System.EventHandler(this.Н15КнопкаПРМНаведениеЦ300М1_Click);
+            this.КнопкаПРМНаведениеЦ300М1.Click += new System.EventHandler(this.КнопкаПРМНаведениеЦ300М1_Click);
             // 
             // КнопкаСтанцияВыкл
             // 
@@ -1656,8 +1655,8 @@
             this.КнопкаСтанцияВыкл.Size = new System.Drawing.Size(89, 48);
             this.КнопкаСтанцияВыкл.TabIndex = 1;
             this.КнопкаСтанцияВыкл.UseVisualStyleBackColor = false;
-            this.КнопкаСтанцияВыкл.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Н15КнопкаСтанцияВыкл_MouseDown);
-            this.КнопкаСтанцияВыкл.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Н15КнопкаСтанцияВыкл_MouseUp);
+            this.КнопкаСтанцияВыкл.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаСтанцияВыкл_MouseDown);
+            this.КнопкаСтанцияВыкл.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаСтанцияВыкл_MouseUp);
             // 
             // КнопкаСтанцияВкл
             // 
@@ -1687,6 +1686,7 @@
             this.Name = "N15Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Н15";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.N15Form_FormClosed);
             this.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаА205Неиспр2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаА205Неиспр1)).EndInit();
@@ -1852,7 +1852,7 @@
         private System.Windows.Forms.PictureBox ЛампочкаА205Неиспр2;
         private System.Windows.Forms.PictureBox ЛампочкаА205Неиспр1;
         private System.Windows.Forms.Button ТумблерА503Б;
-        private System.Windows.Forms.Button N15РегуляторУровень;
+        private System.Windows.Forms.Button РегуляторУровень;
         private System.Windows.Forms.Button ТумблерУров2;
         private System.Windows.Forms.Button ТумблерУров1;
         private System.Windows.Forms.Button ТумблерФаза;

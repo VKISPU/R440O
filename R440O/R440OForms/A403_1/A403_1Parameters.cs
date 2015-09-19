@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using R440O.R440OForms.N15;
 
 namespace R440O.R440OForms.A403_1
 {
@@ -9,7 +10,7 @@ namespace R440O.R440OForms.A403_1
         {
             get
             {
-                return ТумблерСеть;
+                return ТумблерСеть && N15Parameters.ТумблерА403;
             }
         }
 
@@ -301,7 +302,7 @@ namespace R440O.R440OForms.A403_1
             get { return ДисплейЗначения[комплект, номерКнопки]; }
             set
             {
-                if (комплект == 1 && value.Length == 2 
+                if (комплект == 1 && value.Length == 2
                     && (Array.IndexOf(A403_1Parameters.КнопкиПараметры.ToArray(), true) == 2
                     || Array.IndexOf(A403_1Parameters.КнопкиПараметры.ToArray(), true) == 3))
                 {
