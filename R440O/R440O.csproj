@@ -67,6 +67,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ControlElementImages.resx</DependentUpon>
     </Compile>
+    <Compile Include="R440OForms\K02M_01Inside\K02M_01InsideParameters.cs" />
+    <Compile Include="R440OForms\K02M_01\K02M_01Parameters.cs" />
+    <Compile Include="R440OForms\K02M_02Inside\K02M_02InsideParameters.cs" />
+    <Compile Include="R440OForms\K03M_01Inside\K03M_01InsideParameters.cs" />
+    <Compile Include="R440OForms\K03M_01\K03M_01Parameters.cs" />
     <Compile Include="R440OForms\Kontur_P3\Параметры\КП1.cs" />
     <Compile Include="R440OForms\Kontur_P3\Параметры\КП2.cs" />
     <Compile Include="R440OForms\Kontur_P3\Параметры\КП3.cs" />
@@ -93,17 +98,12 @@
     <Compile Include="Parameters\K05M_02InsideParameters.cs" />
     <Compile Include="Parameters\K05M_01InsideParameters.cs" />
     <Compile Include="Parameters\K03M_02InsideParameters.cs" />
-    <Compile Include="Parameters\K03M_01InsideParameters.cs" />
-    <Compile Include="Parameters\K02M_02InsideParameters.cs" />
-    <Compile Include="Parameters\K02M_01InsideParameters.cs" />
     <Compile Include="Parameters\K05M_02Parameters.cs" />
     <Compile Include="Parameters\K05M_01Parameters.cs" />
     <Compile Include="Parameters\K04M_02Parameters.cs" />
     <Compile Include="Parameters\K04M_01Parameters.cs" />
     <Compile Include="Parameters\K03M_02Parameters.cs" />
-    <Compile Include="Parameters\K03M_01Parameters.cs" />
     <Compile Include="Parameters\K02M_02Parameters.cs" />
-    <Compile Include="Parameters\K02M_01Parameters.cs" />
     <Compile Include="R440OForms\Kontur_P3\Параметры\КП7.cs" />
     <Compile Include="R440OForms\N12S\N12SParameters.cs" />
     <Compile Include="Parameters\N13_1Parameters.cs" />
