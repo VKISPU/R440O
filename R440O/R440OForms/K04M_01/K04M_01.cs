@@ -4,14 +4,13 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+using System;
 using System.Linq;
-using R440O.Parameters;
+using System.Windows.Forms;
 using R440O.ThirdParty;
 
 namespace R440O.R440OForms.K04M_01
 {
-    using System.Windows.Forms;
-
     /// <summary>
     /// Форма блока К04-М-1
     /// </summary>
@@ -31,9 +30,10 @@ namespace R440O.R440OForms.K04M_01
             foreach (Control item in K04M_01Panel.Controls)
             {
                 var fieldList = typeof(K04M_01Parameters).GetProperties();
-                foreach (var field in fieldList.Where(property => item.Name == property.Name))
+                var item1 = item;
+                foreach (var field in fieldList.Where(property => item1.Name == property.Name))
                 {
-                    if (item.Name.Contains("K04M_01Переключатель"))
+                    if (item.Name.Contains("Переключатель"))
                     {
                         var angle = (int)field.GetValue(null) * 26 - 120;
                         item.BackgroundImage =
@@ -43,28 +43,31 @@ namespace R440O.R440OForms.K04M_01
             }
         }
 
-        private void K04M_01Переключатель_MouseDown(object sender, MouseEventArgs e)
+        private void Переключатель_MouseDown(object sender, MouseEventArgs e)
         {
             var item = sender as Button;
-            var property = typeof (K04M_01Parameters).GetProperty(item.Name);
-            if (e.Button == MouseButtons.Left)
+            if (item != null)
             {
-                property.SetValue(null, (int) property.GetValue(null) + 1);
-            }
+                var property = typeof(K04M_01Parameters).GetProperty(item.Name);
+                if (e.Button == MouseButtons.Left)
+                {
+                    property.SetValue(null, (int)property.GetValue(null) + 1);
+                }
 
-            if (e.Button == MouseButtons.Right)
-            {
-                property.SetValue(null, (int) property.GetValue(null) - 1);
-            }
+                if (e.Button == MouseButtons.Right)
+                {
+                    property.SetValue(null, (int)property.GetValue(null) - 1);
+                }
 
-            var angle = (int) property.GetValue(null)*26 - 120;
-            item.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+                var angle = (int)property.GetValue(null) * 26 - 120;
+                item.BackgroundImage =
+                    TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+            }
         }
 
-        private void K04M_01Крышка_Click(object sender, System.EventArgs e)
+        private void Крышка_Click(object sender, EventArgs e)
         {
-            K04M_01Крышка.Visible = false;
+            Крышка.Visible = false;
         }
     }
 }

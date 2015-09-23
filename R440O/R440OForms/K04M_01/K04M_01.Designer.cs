@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.K04M_01Panel = new System.Windows.Forms.Panel();
-            this.K04M_01ПереключательПрмКгц100 = new System.Windows.Forms.Button();
-            this.K04M_01ПереключательПрмМгц = new System.Windows.Forms.Button();
-            this.K04M_01ПереключательПрдКгц1 = new System.Windows.Forms.Button();
-            this.K04M_01ПереключательПрдКгц10 = new System.Windows.Forms.Button();
-            this.K04M_01ПереключательПрдКгц100 = new System.Windows.Forms.Button();
-            this.K04M_01ПереключательПрдМгц = new System.Windows.Forms.Button();
-            this.K04M_01Крышка = new System.Windows.Forms.Button();
+            this.ПереключательПрмКгц100 = new System.Windows.Forms.Button();
+            this.ПереключательПрмМгц = new System.Windows.Forms.Button();
+            this.ПереключательПрдКгц1 = new System.Windows.Forms.Button();
+            this.ПереключательПрдКгц10 = new System.Windows.Forms.Button();
+            this.ПереключательПрдКгц100 = new System.Windows.Forms.Button();
+            this.ПереключательПрдМгц = new System.Windows.Forms.Button();
+            this.Крышка = new System.Windows.Forms.Button();
             this.K04M_01Panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,128 +43,128 @@
             // 
             this.K04M_01Panel.BackgroundImage = global::R440O.BackgroundImages.K04M_01;
             this.K04M_01Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.K04M_01Panel.Controls.Add(this.K04M_01Крышка);
-            this.K04M_01Panel.Controls.Add(this.K04M_01ПереключательПрмКгц100);
-            this.K04M_01Panel.Controls.Add(this.K04M_01ПереключательПрмМгц);
-            this.K04M_01Panel.Controls.Add(this.K04M_01ПереключательПрдКгц1);
-            this.K04M_01Panel.Controls.Add(this.K04M_01ПереключательПрдКгц10);
-            this.K04M_01Panel.Controls.Add(this.K04M_01ПереключательПрдКгц100);
-            this.K04M_01Panel.Controls.Add(this.K04M_01ПереключательПрдМгц);
+            this.K04M_01Panel.Controls.Add(this.Крышка);
+            this.K04M_01Panel.Controls.Add(this.ПереключательПрмКгц100);
+            this.K04M_01Panel.Controls.Add(this.ПереключательПрмМгц);
+            this.K04M_01Panel.Controls.Add(this.ПереключательПрдКгц1);
+            this.K04M_01Panel.Controls.Add(this.ПереключательПрдКгц10);
+            this.K04M_01Panel.Controls.Add(this.ПереключательПрдКгц100);
+            this.K04M_01Panel.Controls.Add(this.ПереключательПрдМгц);
             this.K04M_01Panel.Location = new System.Drawing.Point(0, 0);
             this.K04M_01Panel.Name = "K04M_01Panel";
             this.K04M_01Panel.Size = new System.Drawing.Size(496, 707);
             this.K04M_01Panel.TabIndex = 0;
             // 
-            // K04M_01ПереключательПрмКгц100
+            // ПереключательПрмКгц100
             // 
-            this.K04M_01ПереключательПрмКгц100.BackColor = System.Drawing.Color.Transparent;
-            this.K04M_01ПереключательПрмКгц100.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
-            this.K04M_01ПереключательПрмКгц100.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.K04M_01ПереключательПрмКгц100.FlatAppearance.BorderSize = 0;
-            this.K04M_01ПереключательПрмКгц100.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.K04M_01ПереключательПрмКгц100.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.K04M_01ПереключательПрмКгц100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.K04M_01ПереключательПрмКгц100.Location = new System.Drawing.Point(354, 480);
-            this.K04M_01ПереключательПрмКгц100.Name = "K04M_01ПереключательПрмКгц100";
-            this.K04M_01ПереключательПрмКгц100.Size = new System.Drawing.Size(71, 71);
-            this.K04M_01ПереключательПрмКгц100.TabIndex = 43;
-            this.K04M_01ПереключательПрмКгц100.UseVisualStyleBackColor = false;
-            this.K04M_01ПереключательПрмКгц100.MouseDown += new System.Windows.Forms.MouseEventHandler(this.K04M_01Переключатель_MouseDown);
+            this.ПереключательПрмКгц100.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательПрмКгц100.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.ПереключательПрмКгц100.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательПрмКгц100.FlatAppearance.BorderSize = 0;
+            this.ПереключательПрмКгц100.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательПрмКгц100.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательПрмКгц100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательПрмКгц100.Location = new System.Drawing.Point(354, 480);
+            this.ПереключательПрмКгц100.Name = "ПереключательПрмКгц100";
+            this.ПереключательПрмКгц100.Size = new System.Drawing.Size(71, 71);
+            this.ПереключательПрмКгц100.TabIndex = 43;
+            this.ПереключательПрмКгц100.UseVisualStyleBackColor = false;
+            this.ПереключательПрмКгц100.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Переключатель_MouseDown);
             // 
-            // K04M_01ПереключательПрмМгц
+            // ПереключательПрмМгц
             // 
-            this.K04M_01ПереключательПрмМгц.BackColor = System.Drawing.Color.Transparent;
-            this.K04M_01ПереключательПрмМгц.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
-            this.K04M_01ПереключательПрмМгц.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.K04M_01ПереключательПрмМгц.FlatAppearance.BorderSize = 0;
-            this.K04M_01ПереключательПрмМгц.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.K04M_01ПереключательПрмМгц.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.K04M_01ПереключательПрмМгц.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.K04M_01ПереключательПрмМгц.Location = new System.Drawing.Point(197, 480);
-            this.K04M_01ПереключательПрмМгц.Name = "K04M_01ПереключательПрмМгц";
-            this.K04M_01ПереключательПрмМгц.Size = new System.Drawing.Size(71, 71);
-            this.K04M_01ПереключательПрмМгц.TabIndex = 43;
-            this.K04M_01ПереключательПрмМгц.UseVisualStyleBackColor = false;
-            this.K04M_01ПереключательПрмМгц.MouseDown += new System.Windows.Forms.MouseEventHandler(this.K04M_01Переключатель_MouseDown);
+            this.ПереключательПрмМгц.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательПрмМгц.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.ПереключательПрмМгц.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательПрмМгц.FlatAppearance.BorderSize = 0;
+            this.ПереключательПрмМгц.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательПрмМгц.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательПрмМгц.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательПрмМгц.Location = new System.Drawing.Point(197, 480);
+            this.ПереключательПрмМгц.Name = "ПереключательПрмМгц";
+            this.ПереключательПрмМгц.Size = new System.Drawing.Size(71, 71);
+            this.ПереключательПрмМгц.TabIndex = 43;
+            this.ПереключательПрмМгц.UseVisualStyleBackColor = false;
+            this.ПереключательПрмМгц.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Переключатель_MouseDown);
             // 
-            // K04M_01ПереключательПрдКгц1
+            // ПереключательПрдКгц1
             // 
-            this.K04M_01ПереключательПрдКгц1.BackColor = System.Drawing.Color.Transparent;
-            this.K04M_01ПереключательПрдКгц1.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
-            this.K04M_01ПереключательПрдКгц1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.K04M_01ПереключательПрдКгц1.FlatAppearance.BorderSize = 0;
-            this.K04M_01ПереключательПрдКгц1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.K04M_01ПереключательПрдКгц1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.K04M_01ПереключательПрдКгц1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.K04M_01ПереключательПрдКгц1.Location = new System.Drawing.Point(352, 306);
-            this.K04M_01ПереключательПрдКгц1.Name = "K04M_01ПереключательПрдКгц1";
-            this.K04M_01ПереключательПрдКгц1.Size = new System.Drawing.Size(71, 71);
-            this.K04M_01ПереключательПрдКгц1.TabIndex = 43;
-            this.K04M_01ПереключательПрдКгц1.UseVisualStyleBackColor = false;
-            this.K04M_01ПереключательПрдКгц1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.K04M_01Переключатель_MouseDown);
+            this.ПереключательПрдКгц1.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательПрдКгц1.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.ПереключательПрдКгц1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательПрдКгц1.FlatAppearance.BorderSize = 0;
+            this.ПереключательПрдКгц1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательПрдКгц1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательПрдКгц1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательПрдКгц1.Location = new System.Drawing.Point(352, 306);
+            this.ПереключательПрдКгц1.Name = "ПереключательПрдКгц1";
+            this.ПереключательПрдКгц1.Size = new System.Drawing.Size(71, 71);
+            this.ПереключательПрдКгц1.TabIndex = 43;
+            this.ПереключательПрдКгц1.UseVisualStyleBackColor = false;
+            this.ПереключательПрдКгц1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Переключатель_MouseDown);
             // 
-            // K04M_01ПереключательПрдКгц10
+            // ПереключательПрдКгц10
             // 
-            this.K04M_01ПереключательПрдКгц10.BackColor = System.Drawing.Color.Transparent;
-            this.K04M_01ПереключательПрдКгц10.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
-            this.K04M_01ПереключательПрдКгц10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.K04M_01ПереключательПрдКгц10.FlatAppearance.BorderSize = 0;
-            this.K04M_01ПереключательПрдКгц10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.K04M_01ПереключательПрдКгц10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.K04M_01ПереключательПрдКгц10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.K04M_01ПереключательПрдКгц10.Location = new System.Drawing.Point(196, 306);
-            this.K04M_01ПереключательПрдКгц10.Name = "K04M_01ПереключательПрдКгц10";
-            this.K04M_01ПереключательПрдКгц10.Size = new System.Drawing.Size(71, 71);
-            this.K04M_01ПереключательПрдКгц10.TabIndex = 43;
-            this.K04M_01ПереключательПрдКгц10.UseVisualStyleBackColor = false;
-            this.K04M_01ПереключательПрдКгц10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.K04M_01Переключатель_MouseDown);
+            this.ПереключательПрдКгц10.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательПрдКгц10.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.ПереключательПрдКгц10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательПрдКгц10.FlatAppearance.BorderSize = 0;
+            this.ПереключательПрдКгц10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательПрдКгц10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательПрдКгц10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательПрдКгц10.Location = new System.Drawing.Point(196, 306);
+            this.ПереключательПрдКгц10.Name = "ПереключательПрдКгц10";
+            this.ПереключательПрдКгц10.Size = new System.Drawing.Size(71, 71);
+            this.ПереключательПрдКгц10.TabIndex = 43;
+            this.ПереключательПрдКгц10.UseVisualStyleBackColor = false;
+            this.ПереключательПрдКгц10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Переключатель_MouseDown);
             // 
-            // K04M_01ПереключательПрдКгц100
+            // ПереключательПрдКгц100
             // 
-            this.K04M_01ПереключательПрдКгц100.BackColor = System.Drawing.Color.Transparent;
-            this.K04M_01ПереключательПрдКгц100.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
-            this.K04M_01ПереключательПрдКгц100.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.K04M_01ПереключательПрдКгц100.FlatAppearance.BorderSize = 0;
-            this.K04M_01ПереключательПрдКгц100.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.K04M_01ПереключательПрдКгц100.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.K04M_01ПереключательПрдКгц100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.K04M_01ПереключательПрдКгц100.Location = new System.Drawing.Point(349, 153);
-            this.K04M_01ПереключательПрдКгц100.Name = "K04M_01ПереключательПрдКгц100";
-            this.K04M_01ПереключательПрдКгц100.Size = new System.Drawing.Size(71, 71);
-            this.K04M_01ПереключательПрдКгц100.TabIndex = 43;
-            this.K04M_01ПереключательПрдКгц100.UseVisualStyleBackColor = false;
-            this.K04M_01ПереключательПрдКгц100.MouseDown += new System.Windows.Forms.MouseEventHandler(this.K04M_01Переключатель_MouseDown);
+            this.ПереключательПрдКгц100.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательПрдКгц100.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.ПереключательПрдКгц100.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательПрдКгц100.FlatAppearance.BorderSize = 0;
+            this.ПереключательПрдКгц100.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательПрдКгц100.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательПрдКгц100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательПрдКгц100.Location = new System.Drawing.Point(349, 153);
+            this.ПереключательПрдКгц100.Name = "ПереключательПрдКгц100";
+            this.ПереключательПрдКгц100.Size = new System.Drawing.Size(71, 71);
+            this.ПереключательПрдКгц100.TabIndex = 43;
+            this.ПереключательПрдКгц100.UseVisualStyleBackColor = false;
+            this.ПереключательПрдКгц100.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Переключатель_MouseDown);
             // 
-            // K04M_01ПереключательПрдМгц
+            // ПереключательПрдМгц
             // 
-            this.K04M_01ПереключательПрдМгц.BackColor = System.Drawing.Color.Transparent;
-            this.K04M_01ПереключательПрдМгц.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
-            this.K04M_01ПереключательПрдМгц.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.K04M_01ПереключательПрдМгц.FlatAppearance.BorderSize = 0;
-            this.K04M_01ПереключательПрдМгц.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.K04M_01ПереключательПрдМгц.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.K04M_01ПереключательПрдМгц.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.K04M_01ПереключательПрдМгц.Location = new System.Drawing.Point(192, 153);
-            this.K04M_01ПереключательПрдМгц.Name = "K04M_01ПереключательПрдМгц";
-            this.K04M_01ПереключательПрдМгц.Size = new System.Drawing.Size(71, 71);
-            this.K04M_01ПереключательПрдМгц.TabIndex = 43;
-            this.K04M_01ПереключательПрдМгц.UseVisualStyleBackColor = false;
-            this.K04M_01ПереключательПрдМгц.MouseDown += new System.Windows.Forms.MouseEventHandler(this.K04M_01Переключатель_MouseDown);
+            this.ПереключательПрдМгц.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательПрдМгц.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.ПереключательПрдМгц.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательПрдМгц.FlatAppearance.BorderSize = 0;
+            this.ПереключательПрдМгц.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательПрдМгц.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательПрдМгц.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательПрдМгц.Location = new System.Drawing.Point(192, 153);
+            this.ПереключательПрдМгц.Name = "ПереключательПрдМгц";
+            this.ПереключательПрдМгц.Size = new System.Drawing.Size(71, 71);
+            this.ПереключательПрдМгц.TabIndex = 43;
+            this.ПереключательПрдМгц.UseVisualStyleBackColor = false;
+            this.ПереключательПрдМгц.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Переключатель_MouseDown);
             // 
-            // K04M_01Крышка
+            // Крышка
             // 
-            this.K04M_01Крышка.BackColor = System.Drawing.Color.Transparent;
-            this.K04M_01Крышка.BackgroundImage = global::R440O.ControlElementImages.kulonCover;
-            this.K04M_01Крышка.FlatAppearance.BorderSize = 0;
-            this.K04M_01Крышка.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.K04M_01Крышка.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.K04M_01Крышка.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.K04M_01Крышка.Location = new System.Drawing.Point(126, 92);
-            this.K04M_01Крышка.Name = "K04M_01Крышка";
-            this.K04M_01Крышка.Size = new System.Drawing.Size(356, 559);
-            this.K04M_01Крышка.TabIndex = 44;
-            this.K04M_01Крышка.UseVisualStyleBackColor = false;
-            this.K04M_01Крышка.Click += new System.EventHandler(this.K04M_01Крышка_Click);
+            this.Крышка.BackColor = System.Drawing.Color.Transparent;
+            this.Крышка.BackgroundImage = global::R440O.ControlElementImages.kulonCover;
+            this.Крышка.FlatAppearance.BorderSize = 0;
+            this.Крышка.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.Крышка.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Крышка.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Крышка.Location = new System.Drawing.Point(126, 92);
+            this.Крышка.Name = "Крышка";
+            this.Крышка.Size = new System.Drawing.Size(356, 559);
+            this.Крышка.TabIndex = 44;
+            this.Крышка.UseVisualStyleBackColor = false;
+            this.Крышка.Click += new System.EventHandler(this.Крышка_Click);
             // 
             // K04M_01Form
             // 
@@ -185,12 +185,12 @@
         #endregion
 
         private System.Windows.Forms.Panel K04M_01Panel;
-        private System.Windows.Forms.Button K04M_01ПереключательПрмКгц100;
-        private System.Windows.Forms.Button K04M_01ПереключательПрмМгц;
-        private System.Windows.Forms.Button K04M_01ПереключательПрдКгц1;
-        private System.Windows.Forms.Button K04M_01ПереключательПрдКгц10;
-        private System.Windows.Forms.Button K04M_01ПереключательПрдКгц100;
-        private System.Windows.Forms.Button K04M_01ПереключательПрдМгц;
-        private System.Windows.Forms.Button K04M_01Крышка;
+        private System.Windows.Forms.Button ПереключательПрмКгц100;
+        private System.Windows.Forms.Button ПереключательПрмМгц;
+        private System.Windows.Forms.Button ПереключательПрдКгц1;
+        private System.Windows.Forms.Button ПереключательПрдКгц10;
+        private System.Windows.Forms.Button ПереключательПрдКгц100;
+        private System.Windows.Forms.Button ПереключательПрдМгц;
+        private System.Windows.Forms.Button Крышка;
     }
 }
