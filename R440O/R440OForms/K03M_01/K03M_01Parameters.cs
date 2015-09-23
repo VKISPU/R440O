@@ -1,7 +1,9 @@
-﻿namespace R440O.Parameters
+﻿namespace R440O.R440OForms.K03M_01
 {
     internal class K03M_01Parameters
     {
+        #region событие
+
         public delegate void ParameterChangedHandler();
         public static event ParameterChangedHandler ParameterChanged;
 
@@ -15,6 +17,8 @@
         {
             OnParameterChanged();
         }
+
+        #endregion
 
         ////Лампочки
         public static bool K03M_01Лампочка0;
@@ -36,6 +40,8 @@
         private static bool _K03M_01Переключатель32;
         private static bool _K03M_01ПереключательНепрОднокр;
         private static bool _K03M_01ПереключательАвтРучн;
+
+
         /// <summary>
         /// Положение переключателя контроля
         /// </summary>
