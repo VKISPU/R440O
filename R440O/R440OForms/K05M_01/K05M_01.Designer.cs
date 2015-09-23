@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.K05M_01Panel = new System.Windows.Forms.Panel();
-            this.K05M_01ButtonInside = new System.Windows.Forms.Button();
-            this.K05M_01ПереключательПередачаКонтроль = new System.Windows.Forms.Button();
-            this.K05M_01ПереключательОслабление = new System.Windows.Forms.Button();
-            this.K05M_01ПереключательРодРаботы = new System.Windows.Forms.Button();
-            this.K05M_01ПереключательКанал1 = new System.Windows.Forms.Button();
-            this.K05M_01ПереключательКанал2 = new System.Windows.Forms.Button();
+            this.ПереключательКанал2 = new System.Windows.Forms.Button();
+            this.ПереключательКанал1 = new System.Windows.Forms.Button();
+            this.ПереключательРодРаботы = new System.Windows.Forms.Button();
+            this.ПереключательОслабление = new System.Windows.Forms.Button();
+            this.ПереключательПередачаКонтроль = new System.Windows.Forms.Button();
+            this.ButtonInside = new System.Windows.Forms.Button();
             this.K05M_01Panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,110 +42,110 @@
             // 
             this.K05M_01Panel.BackgroundImage = global::R440O.BackgroundImages.K05M_01;
             this.K05M_01Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.K05M_01Panel.Controls.Add(this.K05M_01ПереключательКанал2);
-            this.K05M_01Panel.Controls.Add(this.K05M_01ПереключательКанал1);
-            this.K05M_01Panel.Controls.Add(this.K05M_01ПереключательРодРаботы);
-            this.K05M_01Panel.Controls.Add(this.K05M_01ПереключательОслабление);
-            this.K05M_01Panel.Controls.Add(this.K05M_01ПереключательПередачаКонтроль);
-            this.K05M_01Panel.Controls.Add(this.K05M_01ButtonInside);
+            this.K05M_01Panel.Controls.Add(this.ПереключательКанал2);
+            this.K05M_01Panel.Controls.Add(this.ПереключательКанал1);
+            this.K05M_01Panel.Controls.Add(this.ПереключательРодРаботы);
+            this.K05M_01Panel.Controls.Add(this.ПереключательОслабление);
+            this.K05M_01Panel.Controls.Add(this.ПереключательПередачаКонтроль);
+            this.K05M_01Panel.Controls.Add(this.ButtonInside);
             this.K05M_01Panel.Location = new System.Drawing.Point(0, 0);
             this.K05M_01Panel.Name = "K05M_01Panel";
             this.K05M_01Panel.Size = new System.Drawing.Size(496, 707);
             this.K05M_01Panel.TabIndex = 0;
             // 
-            // K05M_01ButtonInside
+            // ПереключательКанал2
             // 
-            this.K05M_01ButtonInside.BackColor = System.Drawing.Color.Transparent;
-            this.K05M_01ButtonInside.FlatAppearance.BorderSize = 0;
-            this.K05M_01ButtonInside.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.K05M_01ButtonInside.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.K05M_01ButtonInside.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.K05M_01ButtonInside.Location = new System.Drawing.Point(37, 265);
-            this.K05M_01ButtonInside.Name = "K05M_01ButtonInside";
-            this.K05M_01ButtonInside.Size = new System.Drawing.Size(105, 140);
-            this.K05M_01ButtonInside.TabIndex = 9;
-            this.K05M_01ButtonInside.UseVisualStyleBackColor = false;
-            this.K05M_01ButtonInside.Click += new System.EventHandler(this.K05M_01ButtonInside_Click);
+            this.ПереключательКанал2.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательКанал2.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.ПереключательКанал2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательКанал2.FlatAppearance.BorderSize = 0;
+            this.ПереключательКанал2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательКанал2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательКанал2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательКанал2.Location = new System.Drawing.Point(360, 470);
+            this.ПереключательКанал2.Name = "ПереключательКанал2";
+            this.ПереключательКанал2.Size = new System.Drawing.Size(71, 71);
+            this.ПереключательКанал2.TabIndex = 44;
+            this.ПереключательКанал2.UseVisualStyleBackColor = false;
+            this.ПереключательКанал2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Переключатель_MouseDown);
             // 
-            // K05M_01ПереключательПередачаКонтроль
+            // ПереключательКанал1
             // 
-            this.K05M_01ПереключательПередачаКонтроль.BackColor = System.Drawing.Color.Transparent;
-            this.K05M_01ПереключательПередачаКонтроль.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
-            this.K05M_01ПереключательПередачаКонтроль.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.K05M_01ПереключательПередачаКонтроль.FlatAppearance.BorderSize = 0;
-            this.K05M_01ПереключательПередачаКонтроль.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.K05M_01ПереключательПередачаКонтроль.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.K05M_01ПереключательПередачаКонтроль.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.K05M_01ПереключательПередачаКонтроль.Location = new System.Drawing.Point(203, 292);
-            this.K05M_01ПереключательПередачаКонтроль.Name = "K05M_01ПереключательПередачаКонтроль";
-            this.K05M_01ПереключательПередачаКонтроль.Size = new System.Drawing.Size(71, 71);
-            this.K05M_01ПереключательПередачаКонтроль.TabIndex = 44;
-            this.K05M_01ПереключательПередачаКонтроль.UseVisualStyleBackColor = false;
-            this.K05M_01ПереключательПередачаКонтроль.MouseDown += new System.Windows.Forms.MouseEventHandler(this.K05M_01Переключатель_MouseDown);
+            this.ПереключательКанал1.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательКанал1.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.ПереключательКанал1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательКанал1.FlatAppearance.BorderSize = 0;
+            this.ПереключательКанал1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательКанал1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательКанал1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательКанал1.Location = new System.Drawing.Point(203, 470);
+            this.ПереключательКанал1.Name = "ПереключательКанал1";
+            this.ПереключательКанал1.Size = new System.Drawing.Size(71, 71);
+            this.ПереключательКанал1.TabIndex = 44;
+            this.ПереключательКанал1.UseVisualStyleBackColor = false;
+            this.ПереключательКанал1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Переключатель_MouseDown);
             // 
-            // K05M_01ПереключательОслабление
+            // ПереключательРодРаботы
             // 
-            this.K05M_01ПереключательОслабление.BackColor = System.Drawing.Color.Transparent;
-            this.K05M_01ПереключательОслабление.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
-            this.K05M_01ПереключательОслабление.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.K05M_01ПереключательОслабление.FlatAppearance.BorderSize = 0;
-            this.K05M_01ПереключательОслабление.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.K05M_01ПереключательОслабление.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.K05M_01ПереключательОслабление.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.K05M_01ПереключательОслабление.Location = new System.Drawing.Point(360, 121);
-            this.K05M_01ПереключательОслабление.Name = "K05M_01ПереключательОслабление";
-            this.K05M_01ПереключательОслабление.Size = new System.Drawing.Size(71, 71);
-            this.K05M_01ПереключательОслабление.TabIndex = 44;
-            this.K05M_01ПереключательОслабление.UseVisualStyleBackColor = false;
-            this.K05M_01ПереключательОслабление.MouseDown += new System.Windows.Forms.MouseEventHandler(this.K05M_01Переключатель_MouseDown);
+            this.ПереключательРодРаботы.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательРодРаботы.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.ПереключательРодРаботы.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательРодРаботы.FlatAppearance.BorderSize = 0;
+            this.ПереключательРодРаботы.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательРодРаботы.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательРодРаботы.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательРодРаботы.Location = new System.Drawing.Point(360, 292);
+            this.ПереключательРодРаботы.Name = "ПереключательРодРаботы";
+            this.ПереключательРодРаботы.Size = new System.Drawing.Size(71, 71);
+            this.ПереключательРодРаботы.TabIndex = 44;
+            this.ПереключательРодРаботы.UseVisualStyleBackColor = false;
+            this.ПереключательРодРаботы.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Переключатель_MouseDown);
             // 
-            // K05M_01ПереключательРодРаботы
+            // ПереключательОслабление
             // 
-            this.K05M_01ПереключательРодРаботы.BackColor = System.Drawing.Color.Transparent;
-            this.K05M_01ПереключательРодРаботы.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
-            this.K05M_01ПереключательРодРаботы.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.K05M_01ПереключательРодРаботы.FlatAppearance.BorderSize = 0;
-            this.K05M_01ПереключательРодРаботы.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.K05M_01ПереключательРодРаботы.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.K05M_01ПереключательРодРаботы.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.K05M_01ПереключательРодРаботы.Location = new System.Drawing.Point(360, 292);
-            this.K05M_01ПереключательРодРаботы.Name = "K05M_01ПереключательРодРаботы";
-            this.K05M_01ПереключательРодРаботы.Size = new System.Drawing.Size(71, 71);
-            this.K05M_01ПереключательРодРаботы.TabIndex = 44;
-            this.K05M_01ПереключательРодРаботы.UseVisualStyleBackColor = false;
-            this.K05M_01ПереключательРодРаботы.MouseDown += new System.Windows.Forms.MouseEventHandler(this.K05M_01Переключатель_MouseDown);
+            this.ПереключательОслабление.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательОслабление.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.ПереключательОслабление.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательОслабление.FlatAppearance.BorderSize = 0;
+            this.ПереключательОслабление.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательОслабление.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательОслабление.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательОслабление.Location = new System.Drawing.Point(360, 121);
+            this.ПереключательОслабление.Name = "ПереключательОслабление";
+            this.ПереключательОслабление.Size = new System.Drawing.Size(71, 71);
+            this.ПереключательОслабление.TabIndex = 44;
+            this.ПереключательОслабление.UseVisualStyleBackColor = false;
+            this.ПереключательОслабление.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Переключатель_MouseDown);
             // 
-            // K05M_01ПереключательКанал1
+            // ПереключательПередачаКонтроль
             // 
-            this.K05M_01ПереключательКанал1.BackColor = System.Drawing.Color.Transparent;
-            this.K05M_01ПереключательКанал1.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
-            this.K05M_01ПереключательКанал1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.K05M_01ПереключательКанал1.FlatAppearance.BorderSize = 0;
-            this.K05M_01ПереключательКанал1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.K05M_01ПереключательКанал1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.K05M_01ПереключательКанал1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.K05M_01ПереключательКанал1.Location = new System.Drawing.Point(203, 470);
-            this.K05M_01ПереключательКанал1.Name = "K05M_01ПереключательКанал1";
-            this.K05M_01ПереключательКанал1.Size = new System.Drawing.Size(71, 71);
-            this.K05M_01ПереключательКанал1.TabIndex = 44;
-            this.K05M_01ПереключательКанал1.UseVisualStyleBackColor = false;
-            this.K05M_01ПереключательКанал1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.K05M_01Переключатель_MouseDown);
+            this.ПереключательПередачаКонтроль.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательПередачаКонтроль.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.ПереключательПередачаКонтроль.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательПередачаКонтроль.FlatAppearance.BorderSize = 0;
+            this.ПереключательПередачаКонтроль.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательПередачаКонтроль.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательПередачаКонтроль.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательПередачаКонтроль.Location = new System.Drawing.Point(203, 292);
+            this.ПереключательПередачаКонтроль.Name = "ПереключательПередачаКонтроль";
+            this.ПереключательПередачаКонтроль.Size = new System.Drawing.Size(71, 71);
+            this.ПереключательПередачаКонтроль.TabIndex = 44;
+            this.ПереключательПередачаКонтроль.UseVisualStyleBackColor = false;
+            this.ПереключательПередачаКонтроль.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Переключатель_MouseDown);
             // 
-            // K05M_01ПереключательКанал2
+            // ButtonInside
             // 
-            this.K05M_01ПереключательКанал2.BackColor = System.Drawing.Color.Transparent;
-            this.K05M_01ПереключательКанал2.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
-            this.K05M_01ПереключательКанал2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.K05M_01ПереключательКанал2.FlatAppearance.BorderSize = 0;
-            this.K05M_01ПереключательКанал2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.K05M_01ПереключательКанал2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.K05M_01ПереключательКанал2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.K05M_01ПереключательКанал2.Location = new System.Drawing.Point(360, 470);
-            this.K05M_01ПереключательКанал2.Name = "K05M_01ПереключательКанал2";
-            this.K05M_01ПереключательКанал2.Size = new System.Drawing.Size(71, 71);
-            this.K05M_01ПереключательКанал2.TabIndex = 44;
-            this.K05M_01ПереключательКанал2.UseVisualStyleBackColor = false;
-            this.K05M_01ПереключательКанал2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.K05M_01Переключатель_MouseDown);
+            this.ButtonInside.BackColor = System.Drawing.Color.Transparent;
+            this.ButtonInside.FlatAppearance.BorderSize = 0;
+            this.ButtonInside.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.ButtonInside.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ButtonInside.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonInside.Location = new System.Drawing.Point(37, 265);
+            this.ButtonInside.Name = "ButtonInside";
+            this.ButtonInside.Size = new System.Drawing.Size(105, 140);
+            this.ButtonInside.TabIndex = 9;
+            this.ButtonInside.UseVisualStyleBackColor = false;
+            this.ButtonInside.Click += new System.EventHandler(this.ButtonInside_Click);
             // 
             // K05M_01Form
             // 
@@ -166,11 +166,11 @@
         #endregion
 
         private System.Windows.Forms.Panel K05M_01Panel;
-        private System.Windows.Forms.Button K05M_01ButtonInside;
-        private System.Windows.Forms.Button K05M_01ПереключательПередачаКонтроль;
-        private System.Windows.Forms.Button K05M_01ПереключательКанал2;
-        private System.Windows.Forms.Button K05M_01ПереключательКанал1;
-        private System.Windows.Forms.Button K05M_01ПереключательРодРаботы;
-        private System.Windows.Forms.Button K05M_01ПереключательОслабление;
+        private System.Windows.Forms.Button ButtonInside;
+        private System.Windows.Forms.Button ПереключательПередачаКонтроль;
+        private System.Windows.Forms.Button ПереключательКанал2;
+        private System.Windows.Forms.Button ПереключательКанал1;
+        private System.Windows.Forms.Button ПереключательРодРаботы;
+        private System.Windows.Forms.Button ПереключательОслабление;
     }
 }
