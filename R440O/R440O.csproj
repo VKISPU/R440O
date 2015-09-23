@@ -96,7 +96,7 @@
     <Compile Include="R440OForms\B3_1\B3_1Parameters.cs" />
     <Compile Include="Parameters\C1_67Parameters.cs" />
     <Compile Include="Parameters\K05M_02InsideParameters.cs" />
-    <Compile Include="Parameters\K05M_01InsideParameters.cs" />
+    <Compile Include="R440OForms\K05M_01Inside\K05M_01InsideParameters.cs" />
     <Compile Include="Parameters\K03M_02InsideParameters.cs" />
     <Compile Include="Parameters\K05M_02Parameters.cs" />
     <Compile Include="R440OForms\K05M_01\K05M_01Parameters.cs" />
@@ -305,9 +305,7 @@
     <Compile Include="R440OForms\K03M_02Inside\K03M_02Inside.Designer.cs">
       <DependentUpon>K03M_02Inside.cs</DependentUpon>
     </Compile>
-    <Compile Include="R440OForms\K05M_01Inside\K05M_01Inside.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="R440OForms\K05M_01Inside\K05M_01Inside.cs" />
     <Compile Include="R440OForms\K05M_01Inside\K05M_01Inside.Designer.cs">
       <DependentUpon>K05M_01Inside.cs</DependentUpon>
     </Compile>
@@ -335,9 +333,7 @@
     <Compile Include="R440OForms\K05M_02\K05M_02.Designer.cs">
       <DependentUpon>K05M_02.cs</DependentUpon>
     </Compile>
-    <Compile Include="R440OForms\K05M_01\K05M_01.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="R440OForms\K05M_01\K05M_01.cs" />
     <Compile Include="R440OForms\K05M_01\K05M_01.Designer.cs">
       <DependentUpon>K05M_01.cs</DependentUpon>
     </Compile>
