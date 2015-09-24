@@ -305,7 +305,9 @@
     <Compile Include="R440OForms\K03M_02Inside\K03M_02Inside.Designer.cs">
       <DependentUpon>K03M_02Inside.cs</DependentUpon>
     </Compile>
-    <Compile Include="R440OForms\K05M_01Inside\K05M_01Inside.cs" />
+    <Compile Include="R440OForms\K05M_01Inside\K05M_01Inside.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="R440OForms\K05M_01Inside\K05M_01Inside.Designer.cs">
       <DependentUpon>K05M_01Inside.cs</DependentUpon>
     </Compile>
@@ -333,7 +335,9 @@
     <Compile Include="R440OForms\K05M_02\K05M_02.Designer.cs">
       <DependentUpon>K05M_02.cs</DependentUpon>
     </Compile>
-    <Compile Include="R440OForms\K05M_01\K05M_01.cs" />
+    <Compile Include="R440OForms\K05M_01\K05M_01.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="R440OForms\K05M_01\K05M_01.Designer.cs">
       <DependentUpon>K05M_01.cs</DependentUpon>
     </Compile>
