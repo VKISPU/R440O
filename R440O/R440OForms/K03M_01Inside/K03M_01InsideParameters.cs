@@ -1,37 +1,43 @@
-﻿namespace R440O.Parameters
+﻿namespace R440O.R440OForms.K03M_01Inside
 {
     internal class K03M_01InsideParameters
     {
-        public static KulonIndexerClass K03M_01InsideПереключатель = new KulonIndexerClass();
-        private static bool _K03M_01InsideТумблерИП;
-        private static bool _K03M_01InsideТумблерВклОткл;
+        public static KulonIndexerClass Переключатель = new KulonIndexerClass();
 
-        public static bool K03M_01InsideТумблерИП
+        #region ТумблерИП и ВклВыкл
+        private static bool _тумблерИП;
+        private static bool _тумблерВклОткл;
+
+        public static bool ТумблерИП
         {
             get
             {
-                return _K03M_01InsideТумблерИП;
+                return _тумблерИП;
             }
             set
             {
-                _K03M_01InsideТумблерИП = value;
+                _тумблерИП = value;
                 OnParameterChanged();
             }
 
         }
-        public static bool K03M_01InsideТумблерВклОткл
+        public static bool ТумблерВклОткл
         {
             get
             {
-                return _K03M_01InsideТумблерВклОткл;
+                return _тумблерВклОткл;
             }
             set
             {
-                _K03M_01InsideТумблерВклОткл = value;
+                _тумблерВклОткл = value;
                 OnParameterChanged();
             }
 
         }
+
+        #endregion
+
+        #region событие
 
         public delegate void ParameterChangedHandler();
         public static event ParameterChangedHandler ParameterChanged;
@@ -46,8 +52,14 @@
         {
             OnParameterChanged();
         }
+
+        #endregion
     }
 
+    /// <summary>
+    /// Класс нужен чтоб удобнее было работать с кучей тумблеров
+    /// (используется индексатор вместо свойства)
+    /// </summary>
     class KulonIndexerClass
     {
         private int[] myArray = new int[31];

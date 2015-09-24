@@ -39,13 +39,14 @@ namespace R440O.R440OForms.K03M_01
         #region Инициализация
         private void InitializeTumblers()
         {            
-           foreach (Control item in K03M_01Panel.Controls)
+           foreach (Control item in Panel.Controls)
             {
                 var fieldList = typeof(K03M_01Parameters).GetProperties();
-                foreach (var property in fieldList.Where(property => item.Name == property.Name))
+                var item1 = item;
+                foreach (var property in fieldList.Where(property => item1.Name == property.Name))
                 {
-                    if (item.Name.Contains("K03M_01Переключатель") 
-                        && !item.Name.Contains("K03M_01ПереключательНапряжение"))
+                    if (item.Name.Contains("Переключатель") 
+                        && !item.Name.Contains("ПереключательНапряжение"))
                     {
                         item.BackgroundImage = (bool)property.GetValue(null)
                             ? ControlElementImages.tumblerType3Up
@@ -53,19 +54,20 @@ namespace R440O.R440OForms.K03M_01
                     }
                 }
             }
-            var angle = K03M_01Parameters.K03M_01ПереключательНапряжение * 30 - 75;
-            K03M_01ПереключательНапряжение.BackgroundImage =
+            var angle = K03M_01Parameters.ПереключательНапряжение * 30 - 75;
+            ПереключательНапряжение.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
 
         private void InitializeLamps()
         {
-            foreach (Control item in K03M_01Panel.Controls)
+            foreach (Control item in Panel.Controls)
             {
                 var fieldList = typeof(K03M_01Parameters).GetFields();
-                foreach (var property in fieldList.Where(property => item.Name == property.Name))
+                var item1 = item;
+                foreach (var property in fieldList.Where(property => item1.Name == property.Name))
                 {
-                    if (item.Name.Contains("K03M_01Лампочка"))
+                    if (item.Name.Contains("Лампочка"))
                     {
                         item.BackgroundImage = (bool)property.GetValue(null)
                             ? ControlElementImages.lampType9OnGreen
@@ -82,9 +84,9 @@ namespace R440O.R440OForms.K03M_01
         /// </summary>
         /// <param name="sender">Объет вызвавший событие</param>
         /// <param name="e">Событие закрытия формы</param>
-        private void K03M_01Крышка_Click(object sender, System.EventArgs e)
+        private void Крышка_Click(object sender, System.EventArgs e)
         {
-            K03M_01Крышка.Visible = false;
+            Крышка.Visible = false;
         }
 
         /// <summary>
@@ -92,7 +94,7 @@ namespace R440O.R440OForms.K03M_01
         /// </summary>
         /// <param name="sender">Объет вызвавший событие</param>
         /// <param name="e">Событие закрытия формы</param>
-        private void K03M_01ButtonInside_Click(object sender, System.EventArgs e)
+        private void ButtonInside_Click(object sender, System.EventArgs e)
         {
             this.Hide();
             Form thisForm = new K03M_01InsideForm();
@@ -104,11 +106,11 @@ namespace R440O.R440OForms.K03M_01
         /// <summary>
         /// Для переключателей ввода данных с АПН
         /// </summary>
-        private void K03M_01Переключатель0_Click(object sender, System.EventArgs e)
+        private void Переключатель0_Click(object sender, System.EventArgs e)
         {
             var item = sender as Button;
             var fieldList = typeof(K03M_01Parameters).GetProperties();
-            foreach (var property in fieldList.Where(property => item.Name == property.Name))
+            foreach (var property in fieldList.Where(property => item != null && item.Name == property.Name))
             {
                 property.SetValue(null, !(bool)property.GetValue(null));            
             }
@@ -116,29 +118,30 @@ namespace R440O.R440OForms.K03M_01
         #endregion
 
         #region Кнопки
-        private void K03M_01Кнопка_MouseDown(object sender, MouseEventArgs e)
+        private void Кнопка_MouseDown(object sender, MouseEventArgs e)
         {
             var item = sender as Button;
-            item.BackgroundImage = null;
+            if (item != null) item.BackgroundImage = null;
         }
 
-        private void K03M_01Кнопка_MouseUp(object sender, MouseEventArgs e)
+        private void Кнопка_MouseUp(object sender, MouseEventArgs e)
         {
             var item = sender as Button;
-            item.BackgroundImage = ControlElementImages.buttonRoundType5;
+            if (item != null) item.BackgroundImage = ControlElementImages.buttonRoundType5;
         }
+
         #endregion
 
-        private void K03M_01ПереключательНапряжение_MouseDown(object sender, MouseEventArgs e)
+        private void ПереключательНапряжение_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                K03M_01Parameters.K03M_01ПереключательНапряжение += 1;
+                K03M_01Parameters.ПереключательНапряжение += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                K03M_01Parameters.K03M_01ПереключательНапряжение -= 1;
+                K03M_01Parameters.ПереключательНапряжение -= 1;
             }
         }
     }

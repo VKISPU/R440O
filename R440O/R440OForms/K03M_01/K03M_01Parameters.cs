@@ -20,154 +20,175 @@
 
         #endregion
 
-        ////Лампочки
-        public static bool K03M_01Лампочка0;
-        public static bool K03M_01Лампочка1;
-        public static bool K03M_01Лампочка2;
-        public static bool K03M_01Лампочка4;
-        public static bool K03M_01Лампочка8;
-        public static bool K03M_01Лампочка16;
-        public static bool K03M_01Лампочка32;
+        #region Лампочки
+        public static bool Лампочка0
+        {
+            get { return false; }
+        }
+        public static bool Лампочка1
+        {
+            get { return false; }
+        }
+        public static bool Лампочка2
+        {
+            get { return false; }
+        }
+        public static bool Лампочка4
+        {
+            get { return false; }
+        }
+        public static bool Лампочка8
+        {
+            get { return false; }
+        }
+        public static bool Лампочка16
+        {
+            get { return false; }
+        }
+        public static bool Лампочка32
+        {
+            get { return false; }
+        }
+        #endregion
 
-        
         #region Переключатели
-        private static bool _K03M_01Переключатель0;
-        private static bool _K03M_01Переключатель1;
-        private static bool _K03M_01Переключатель2;
-        private static bool _K03M_01Переключатель4;
-        private static bool _K03M_01Переключатель8;
-        private static bool _K03M_01Переключатель16;
-        private static bool _K03M_01Переключатель32;
-        private static bool _K03M_01ПереключательНепрОднокр;
-        private static bool _K03M_01ПереключательАвтРучн;
+        private static bool _переключатель0;
+        private static bool _переключатель1;
+        private static bool _переключатель2;
+        private static bool _переключатель4;
+        private static bool _переключатель8;
+        private static bool _переключатель16;
+        private static bool _переключатель32;
+        private static bool _переключательНепрОднокр;
+        private static bool _переключательАвтРучн;
 
 
         /// <summary>
         /// Положение переключателя контроля
         /// </summary>
-        private static int _k03M_01ПереключательНапряжение = 1;
+        private static int _переключательНапряжение = 1;
 
-        public static bool K03M_01Переключатель0
+        public static bool Переключатель0
         {
             get
             {
-                return _K03M_01Переключатель0;
+                return _переключатель0;
             }
             set
             {
-                _K03M_01Переключатель0 = value;
+                _переключатель0 = value;
                 ResetParameters();
             }
         }
-        public static bool K03M_01Переключатель1
+        public static bool Переключатель1
         {
             get
             {
-                return _K03M_01Переключатель1;
+                return _переключатель1;
             }
             set
             {
-                _K03M_01Переключатель1 = value;
+                _переключатель1 = value;
                 ResetParameters();
             }
         }
-        public static bool K03M_01Переключатель2
+        public static bool Переключатель2
         {
             get
             {
-                return _K03M_01Переключатель2;
+                return _переключатель2;
             }
             set
             {
-                _K03M_01Переключатель2 = value;
+                _переключатель2 = value;
                 ResetParameters();
             }
         }
-        public static bool K03M_01Переключатель4
+        public static bool Переключатель4
         {
             get
             {
-                return _K03M_01Переключатель4;
+                return _переключатель4;
             }
             set
             {
-                _K03M_01Переключатель4 = value;
+                _переключатель4 = value;
                 ResetParameters();
             }
         }
-        public static bool K03M_01Переключатель8
+        public static bool Переключатель8
         {
             get
             {
-                return _K03M_01Переключатель8;
+                return _переключатель8;
             }
             set
             {
-                _K03M_01Переключатель8 = value;
+                _переключатель8 = value;
                 ResetParameters();
             }
         }
-        public static bool K03M_01Переключатель16
+        public static bool Переключатель16
         {
             get
             {
-                return _K03M_01Переключатель16;
+                return _переключатель16;
             }
             set
             {
-                _K03M_01Переключатель16 = value;
+                _переключатель16 = value;
                 ResetParameters();
             }
         }
-        public static bool K03M_01Переключатель32
+        public static bool Переключатель32
         {
             get
             {
-                return _K03M_01Переключатель32;
+                return _переключатель32;
             }
             set
             {
-                _K03M_01Переключатель32 = value;
+                _переключатель32 = value;
                 ResetParameters();
             }
         }
-        public static bool K03M_01ПереключательНепрОднокр
+        public static bool ПереключательНепрОднокр
         {
             get
             {
-                return _K03M_01ПереключательНепрОднокр;
+                return _переключательНепрОднокр;
             }
             set
             {
-                _K03M_01ПереключательНепрОднокр = value;
+                _переключательНепрОднокр = value;
                 ResetParameters();
             }
         }
-        public static bool K03M_01ПереключательАвтРучн
+        public static bool ПереключательАвтРучн
         {
             get
             {
-                return _K03M_01ПереключательАвтРучн;
+                return _переключательАвтРучн;
             }
             set
             {
-                _K03M_01ПереключательАвтРучн = value;
+                _переключательАвтРучн = value;
                 ResetParameters();
             }
         }
 
-        public static int K03M_01ПереключательНапряжение
+        public static int ПереключательНапряжение
         {
             get
             {
-                return _k03M_01ПереключательНапряжение;
+                return _переключательНапряжение;
             }
 
             set
             {
                 if (value > 0 && value < 5)
                 {
-                    _k03M_01ПереключательНапряжение = value;
+                    _переключательНапряжение = value;
                     ResetParameters();
                 }
             }

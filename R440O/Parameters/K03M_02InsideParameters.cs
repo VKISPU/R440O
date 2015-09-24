@@ -1,4 +1,6 @@
-﻿namespace R440O.Parameters
+﻿using R440O.R440OForms.K03M_01Inside;
+
+namespace R440O.Parameters
 {
     internal class K03M_02InsideParameters
     {
