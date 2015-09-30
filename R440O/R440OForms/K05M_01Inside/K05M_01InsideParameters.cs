@@ -19,8 +19,28 @@
 #endregion
 
         public static KulonIndexerClass Переключатель = new KulonIndexerClass();
-        public static bool ТумблерВ4;
-        public static bool ТумблерВ7;
+        private static bool _ТумблерВ4;
+        private static bool _ТумблерВ7;
+
+        public static bool ТумблерВ4
+        {
+            get { return _ТумблерВ4; }
+            set
+            {
+                _ТумблерВ4 = value;
+                ResetParameters();
+            }
+        }
+
+        public static bool ТумблерВ7
+        {
+            get { return _ТумблерВ7; }
+            set
+            {
+                _ТумблерВ7 = value;
+                ResetParameters();
+            }
+        }
 
     }
     class KulonIndexerClass
@@ -36,7 +56,8 @@
             {
                 if ((index >= 1 && index <= 3) || (index >= 5 && index <= 9))
                 {
-                    if (value >= 0 && value <= 7) myArray[index] = value;
+                    if (value >= 0 && value <= 7) 
+                        myArray[index] = value;
                 }
                 else
                 {
