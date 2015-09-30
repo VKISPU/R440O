@@ -1,7 +1,9 @@
-﻿namespace R440O.Parameters
+﻿namespace R440O.R440OForms.K02M_01Inside
 {
     internal class K02M_01InsideParameters
     {
+        #region Событие
+
         public delegate void ParameterChangedHandler();
         public static event ParameterChangedHandler ParameterChanged;
 
@@ -14,20 +16,26 @@
         {
             OnParameterChanged();
         }
-        ////Лампочки
-        private static bool _K02M_01InsideТумблерБ5;
-        public static bool K02M_01InsideТумблерБ5
+
+        #endregion
+
+        #region Тумблер единственный на блоке
+
+        private static bool _тумблерБ5;
+        public static bool ТумблерБ5
         {
             get
             {
-                return _K02M_01InsideТумблерБ5;
+                return _тумблерБ5;
             }
             set
             {
-                _K02M_01InsideТумблерБ5 = value;
+                _тумблерБ5 = value;
                 ResetParameters();
             }
         }
+
+        #endregion
            
     }
 }

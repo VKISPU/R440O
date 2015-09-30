@@ -4,17 +4,14 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+using System;
 using System.Linq;
+using System.Windows.Forms;
+using R440O.R440OForms.K02M_01Inside;
 using R440O.ThirdParty;
 
 namespace R440O.R440OForms.K02M_01
 {
-    using System;
-    using System.Reflection;
-    using System.Windows.Forms;
-    using K02M_01Inside;
-    using Parameters;
-
     /// <summary>
     /// Форма блока К02-М-1
     /// </summary>
@@ -39,37 +36,38 @@ namespace R440O.R440OForms.K02M_01
         #region Инициализация
         private void InitializeToggles()
         {
-            var angle = K02M_01Parameters.K02M_01ПереключательСкорость * 45 - 90;
-            K02M_01ПереключательСкорость.BackgroundImage =
+            var angle = K02M_01Parameters.ПереключательСкорость * 45 - 90;
+            ПереключательСкорость.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = K02M_01Parameters.K02M_01ПереключательВклОткл * 60 - 90;
-            K02M_01ПереключательВклОткл.BackgroundImage =
+            angle = K02M_01Parameters.ПереключательВклОткл * 60 - 90;
+            ПереключательВклОткл.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = K02M_01Parameters.K02M_01ПереключательНапряжение1К * 30 - 75;
-            K02M_01ПереключательНапряжение1К.BackgroundImage =
+            angle = K02M_01Parameters.ПереключательНапряжение1К * 30 - 75;
+            ПереключательНапряжение1К.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = K02M_01Parameters.K02M_01ПереключательНапряжение2К * 30 - 75;
-            K02M_01ПереключательНапряжение2К.BackgroundImage =
+            angle = K02M_01Parameters.ПереключательНапряжение2К * 30 - 75;
+            ПереключательНапряжение2К.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
 
         private void InitializeLamps()
         {
-            foreach (Control item in K02M_01Panel.Controls)
+            foreach (Control item in Panel.Controls)
             {
-                var fieldList = typeof(K02M_01Parameters).GetFields();
-                foreach (var property in fieldList.Where(property => item.Name == property.Name))
+                var fieldList = typeof(K02M_01Parameters).GetProperties();
+                var item1 = item;
+                foreach (var property in fieldList.Where(property => item1.Name == property.Name))
                 {
-                    if (item.Name == "K02M_01ЛампочкаПоискСигналов")
+                    if (item.Name == "ЛампочкаПоискСигналов")
                     {
                         item.BackgroundImage = (bool)property.GetValue(null)
                             ? ControlElementImages.lampType1OnRed
                             : null;
                     }
-                    else if (item.Name.Contains("K02M_01Лампочка"))
+                    else if (item.Name.Contains("Лампочка"))
                     {
                         item.BackgroundImage = (bool)property.GetValue(null)
                             ? ControlElementImages.lampType9OnGreen
@@ -86,7 +84,7 @@ namespace R440O.R440OForms.K02M_01
         /// </summary>
         /// <param name="sender">Объет вызвавший событие</param>
         /// <param name="e">Событие закрытия формы</param>
-        private void K02M_01ButtonInside_Click(object sender, System.EventArgs e)
+        private void ButtonInside_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form thisForm = new K02M_01InsideForm();
@@ -94,67 +92,67 @@ namespace R440O.R440OForms.K02M_01
         }
 
         
-        private void K02M_01КнопкаПоиск_MouseDown(object sender, MouseEventArgs e)
+        private void КнопкаПоиск_MouseDown(object sender, MouseEventArgs e)
         {
-            K02M_01КнопкаПоиск.BackgroundImage = null;
+            КнопкаПоиск.BackgroundImage = null;
         }
 
         private void K02M_01КнопкаПоиск_MouseUp(object sender, MouseEventArgs e)
         {
-            K02M_01КнопкаПоиск.BackgroundImage = ControlElementImages.buttonRoundType5;
+            КнопкаПоиск.BackgroundImage = ControlElementImages.buttonRoundType5;
         } 
         #endregion
 
         #region Переключатели
-        private void K02M_01ПереключательСкорость_MouseDown(object sender, MouseEventArgs e)
+        private void ПереключательСкорость_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                K02M_01Parameters.K02M_01ПереключательСкорость += 1;
+                K02M_01Parameters.ПереключательСкорость += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                K02M_01Parameters.K02M_01ПереключательСкорость -= 1;
+                K02M_01Parameters.ПереключательСкорость -= 1;
             }
         }
 
-        private void K02M_01ПереключательВклОткл_MouseDown(object sender, MouseEventArgs e)
+        private void ПереключательВклОткл_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                K02M_01Parameters.K02M_01ПереключательВклОткл += 1;
+                K02M_01Parameters.ПереключательВклОткл += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                K02M_01Parameters.K02M_01ПереключательВклОткл -= 1;
+                K02M_01Parameters.ПереключательВклОткл -= 1;
             }
         }
 
-        private void K02M_01ПереключательНапряжение1К_MouseDown(object sender, MouseEventArgs e)
+        private void ПереключательНапряжение1К_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                K02M_01Parameters.K02M_01ПереключательНапряжение1К += 1;
+                K02M_01Parameters.ПереключательНапряжение1К += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                K02M_01Parameters.K02M_01ПереключательНапряжение1К -= 1;
+                K02M_01Parameters.ПереключательНапряжение1К -= 1;
             }
         }
 
-        private void K02M_01ПереключательНапряжение2К_MouseDown(object sender, MouseEventArgs e)
+        private void ПереключательНапряжение2К_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                K02M_01Parameters.K02M_01ПереключательНапряжение2К += 1;
+                K02M_01Parameters.ПереключательНапряжение2К += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                K02M_01Parameters.K02M_01ПереключательНапряжение2К -= 1;
+                K02M_01Parameters.ПереключательНапряжение2К -= 1;
             }
         } 
         #endregion

@@ -63,7 +63,7 @@ namespace R440O.R440OForms.K03M_01
         {
             foreach (Control item in Panel.Controls)
             {
-                var fieldList = typeof(K03M_01Parameters).GetFields();
+                var fieldList = typeof (K03M_01Parameters).GetProperties();
                 var item1 = item;
                 foreach (var property in fieldList.Where(property => item1.Name == property.Name))
                 {
