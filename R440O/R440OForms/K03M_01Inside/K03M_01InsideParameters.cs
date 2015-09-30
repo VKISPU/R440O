@@ -2,7 +2,11 @@
 {
     internal class K03M_01InsideParameters
     {
-        public static KulonIndexerClass Переключатель = new KulonIndexerClass();
+        #region Переключатели
+
+        public static KulonIndexerClass Переключатели = new KulonIndexerClass();
+
+        #endregion
 
         #region ТумблерИП и ВклВыкл
         private static bool _тумблерИП;

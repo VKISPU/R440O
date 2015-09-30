@@ -5,16 +5,11 @@
 //-----------------------------------------------------------------------
 
 using System;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using R440O.Parameters;
-using R440O.R440OForms.K05M_01;
+using System.Windows.Forms;
 using R440O.ThirdParty;
 
 namespace R440O.R440OForms.K03M_01Inside
 {
-    using System.Windows.Forms;
-
     /// <summary>
     /// Форма внутренней части блока К03-М-1
     /// </summary>
@@ -53,7 +48,7 @@ namespace R440O.R440OForms.K03M_01Inside
                 {
                     var index = Convert.ToInt32(item.Name.Substring(item.Name.IndexOf("Переключатель", StringComparison.Ordinal) +
                                                                     "Переключатель".Length));
-                    var angle = K03M_01InsideParameters.Переключатель[index]*30 - 10;
+                    var angle = K03M_01InsideParameters.Переключатели[index]*30 - 10;
                         item.BackgroundImage = TransformImageHelper.RotateImageByAngle(
                             ControlElementImages.toggleType2, angle);
                 }
@@ -63,11 +58,11 @@ namespace R440O.R440OForms.K03M_01Inside
                     {
                         var index = Convert.ToInt32(item.Name.Substring(item.Name.IndexOf("Тумблер", StringComparison.Ordinal) +
                                                                         "Тумблер".Length));
-                        item.BackgroundImage = (K03M_01InsideParameters.Переключатель[index] == 0)
+                        item.BackgroundImage = (K03M_01InsideParameters.Переключатели[index] == 0)
                         ? ControlElementImages.tumblerType3Left
                         : ControlElementImages.tumblerType3Right;
                     }
-                    catch (System.FormatException)
+                    catch (FormatException)
                     {
                     }
                 }
@@ -83,30 +78,35 @@ namespace R440O.R440OForms.K03M_01Inside
         private void Переключатель_MouseDown(object sender, MouseEventArgs e)
         {
             var item = sender as Button;
-            var index = Convert.ToInt32(item.Name.Substring(item.Name.IndexOf("Переключатель", StringComparison.Ordinal) +
-                                                            "Переключатель".Length));
-            var property = typeof (K05M_01Parameters).GetProperty(item.Name);
-            if (e.Button == MouseButtons.Left)
+            if (item != null)
             {
-                K03M_01InsideParameters.Переключатель[index] += 1;
-            }
+                var index = Convert.ToInt32(item.Name.Substring(item.Name.IndexOf("Переключатель", StringComparison.Ordinal) +
+                                                                "Переключатель".Length));
+                if (e.Button == MouseButtons.Left)
+                {
+                    K03M_01InsideParameters.Переключатели[index] += 1;
+                }
 
-            if (e.Button == MouseButtons.Right)
-            {
-                K03M_01InsideParameters.Переключатель[index] -= 1;
+                if (e.Button == MouseButtons.Right)
+                {
+                    K03M_01InsideParameters.Переключатели[index] -= 1;
+                }
             }
         }
 
         private void Тумблер_MouseDown(object sender, MouseEventArgs e)
         {
             var item = sender as Button;
-            var index = Convert.ToInt32(item.Name.Substring(item.Name.IndexOf("Тумблер", StringComparison.Ordinal) +
-                                                            "Тумблер".Length));
-            if (e.Button == MouseButtons.Left)
+            if (item != null)
             {
-                if (K03M_01InsideParameters.Переключатель[index] == 0)
-                    K03M_01InsideParameters.Переключатель[index] = 1;
-                else K03M_01InsideParameters.Переключатель[index] = 0;
+                var index = Convert.ToInt32(item.Name.Substring(item.Name.IndexOf("Тумблер", StringComparison.Ordinal) +
+                                                                "Тумблер".Length));
+                if (e.Button == MouseButtons.Left)
+                {
+                    if (K03M_01InsideParameters.Переключатели[index] == 0)
+                        K03M_01InsideParameters.Переключатели[index] = 1;
+                    else K03M_01InsideParameters.Переключатели[index] = 0;
+                }
             }
         }
 
