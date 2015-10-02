@@ -1,8 +1,5 @@
-﻿using R440O.R440OForms.N16;
-
-namespace R440O.R440OForms.N502B
+﻿namespace R440O.R440OForms.N502B
 {
-
     using System;
     using System.Linq;
     using System.Windows.Forms;
@@ -19,6 +16,7 @@ namespace R440O.R440OForms.N502B
     using A304;
     using BMB;
     using N15;
+    using N16;
 
     public static class N502BParameters
     {
@@ -56,7 +54,7 @@ namespace R440O.R440OForms.N502B
             ВремяРаботыСтанции += new TimeSpan(0, 0, 1, 0);
             Settings.Default.TimeofWork = ВремяРаботыСтанции;
             Settings.Default.Save();
-            ResetParameters();
+            OnParameterChanged();
         }
         #endregion
 
@@ -91,7 +89,7 @@ namespace R440O.R440OForms.N502B
         private static bool _тумблерН132;
         private static int _тумблерОсвещение1 = 2;
         private static int _тумблерОсвещение2 = 2;
-        #endregion 
+        #endregion
 
         #region public
         public static bool ТумблерЭлектрооборудование
@@ -137,7 +135,7 @@ namespace R440O.R440OForms.N502B
                 N16Parameters.ResetParameters();
                 OnParameterChanged();
             }
-        }  
+        }
         public static bool ТумблерН15
         {
             get { return _тумблерН15; }
@@ -243,7 +241,7 @@ namespace R440O.R440OForms.N502B
             }
         }
 
-        
+
         /// <summary>
         /// 1,2,3 - сеть. 4 - нейтральное. 5,6,7 - нагрузка. 
         /// </summary>
@@ -258,19 +256,24 @@ namespace R440O.R440OForms.N502B
             }
         }
 
-        
+
         public static int ПереключательФазировка
         {
             get { return _переключательФазировка; }
             set
             {
-                if (value >= 0 && value <= 5) _переключательФазировка = value;
+                if (value >= 0 && value <= 5) if (ЛампочкаСфазировано && ПереключательСеть
+                    && НекорректноеДействие != null)
+                    {
+                        НекорректноеДействие();
+                    }
+                _переключательФазировка = value;
                 Нагрузка = false;
                 OnParameterChanged();
             }
         }
 
-        
+
         public static int ПереключательКонтрольНапряжения
         {
             get { return _переключательКонтрольНапряжения; }
@@ -305,6 +308,7 @@ namespace R440O.R440OForms.N502B
             get { return _нагрузка; }
             set
             {
+                if (value != _нагрузка) N15Parameters.ResetParametersAlternative();
                 _нагрузка = value;
             }
         }
@@ -327,15 +331,15 @@ namespace R440O.R440OForms.N502B
         }
 
         private static bool _кнопкаВклНагрузки;
-        public static bool КнопкаВклНагрузки 
+        public static bool КнопкаВклНагрузки
         {
             get { return _кнопкаВклНагрузки; }
             set
             {
                 _кнопкаВклНагрузки = value;
                 if (value) Нагрузка = true;
-                OnParameterChanged(); 
-            } 
+                OnParameterChanged();
+            }
         }
 
         #endregion
@@ -345,7 +349,7 @@ namespace R440O.R440OForms.N502B
         {
             get
             {
-                if (ЛампочкаСеть && ПереключательСеть && (ПереключательФазировка==2 || ПереключательФазировка==4))
+                if (ЛампочкаСеть && ПереключательСеть && (ПереключательФазировка == 2 || ПереключательФазировка == 4))
                 {
                     switch (ПереключательНапряжение)
                     {
@@ -438,6 +442,7 @@ namespace R440O.R440OForms.N502B
         }
         #endregion
 
+
         public delegate void ParameterChangedHandler();
         public static event ParameterChangedHandler ParameterChanged;
 
@@ -445,6 +450,7 @@ namespace R440O.R440OForms.N502B
         /// Событие возникающее, если пользователь осуществил неправильные действия, которые привели к выходу станции из строя.
         /// </summary>
         public static event ParameterChangedHandler СтанцияСгорела;
+        public static event ParameterChangedHandler НекорректноеДействие;
 
         private static void OnParameterChanged()
         {
@@ -467,7 +473,6 @@ namespace R440O.R440OForms.N502B
             C300M_2Parameters.RefreshIndicators();
             C300M_3Parameters.RefreshIndicators();
             C300M_4Parameters.RefreshIndicators();
-            A304Parameters.ResetParameters();
             A306Parameters.ResetParameters();
         }
 

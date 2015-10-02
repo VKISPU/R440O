@@ -1,6 +1,6 @@
 ﻿namespace R440O.R440OForms.N502B
 {
-    
+
     using System;
     using System.Globalization;
     using System.Windows.Forms;
@@ -14,13 +14,18 @@
             InitializeComponent();
             N502BParameters.ParameterChanged += RefreshFormElements;
             N502BParameters.СтанцияСгорела += ВыводСообщенияСтанцияСгорела;
-            N502BParameters.СледитьЗаВременем();
+            N502BParameters.НекорректноеДействие += ВыводСообщенияНекорректноеДействие;
             RefreshFormElements();
         }
 
         private void ВыводСообщенияСтанцияСгорела()
         {
             MessageBox.Show("Станция сгорела!", "ОШИБКА");
+        }
+
+        private void ВыводСообщенияНекорректноеДействие()
+        {
+            MessageBox.Show("Некорректное действие!", "ОШИБКА");
         }
 
         #region Тумблеры
@@ -139,7 +144,7 @@
         private void КнопкаВклНагрузки_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаВклНагрузки.BackgroundImage = null;
-            N502BParameters.КнопкаВклНагрузки = true;  
+            N502BParameters.КнопкаВклНагрузки = true;
         }
 
         private void КнопкаВклНагрузки_MouseUp(object sender, MouseEventArgs e)
@@ -334,6 +339,7 @@
         {
             N502BParameters.ParameterChanged -= RefreshFormElements;
             N502BParameters.СтанцияСгорела -= ВыводСообщенияСтанцияСгорела;
+            N502BParameters.НекорректноеДействие -= ВыводСообщенияНекорректноеДействие;
         }
     }
 }

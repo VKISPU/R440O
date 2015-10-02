@@ -40,7 +40,6 @@ namespace R440O.R440OForms.PowerCabel
                 if (N502BParameters.ПереключательСеть) СтанцияСгорела();
 
                 N502BParameters.Нагрузка = false;
-
                 N502BParameters.ResetParameters();
                 VoltageStabilizerParameters.ResetParameters();
             }
