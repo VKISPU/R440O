@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.A304Panel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ИндикаторНапряжение = new System.Windows.Forms.PictureBox();
             this.ПереключательВыборСтвола = new System.Windows.Forms.Button();
             this.ПереключательКонтроль = new System.Windows.Forms.Button();
@@ -41,12 +42,11 @@
             this.Кнопка2КОткл = new System.Windows.Forms.Button();
             this.ТумблерУправление2 = new System.Windows.Forms.Button();
             this.ТумблерУправление1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.A304Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторНапряжение)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Лампочка2К)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Лампочка1К)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // A304Panel
@@ -70,6 +70,15 @@
             this.A304Panel.Name = "A304Panel";
             this.A304Panel.Size = new System.Drawing.Size(906, 626);
             this.A304Panel.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Location = new System.Drawing.Point(551, 223);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(160, 50);
+            this.pictureBox1.TabIndex = 83;
+            this.pictureBox1.TabStop = false;
             // 
             // ИндикаторНапряжение
             // 
@@ -262,15 +271,6 @@
             this.ТумблерУправление1.UseVisualStyleBackColor = false;
             this.ТумблерУправление1.Click += new System.EventHandler(this.ТумблерУправление1_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(551, 223);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(160, 50);
-            this.pictureBox1.TabIndex = 83;
-            this.pictureBox1.TabStop = false;
-            // 
             // A304Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -282,11 +282,12 @@
             this.Name = "A304Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "A304";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.A304Form_FormClosed);
             this.A304Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторНапряжение)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Лампочка2К)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Лампочка1К)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

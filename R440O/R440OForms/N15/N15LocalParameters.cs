@@ -27,9 +27,9 @@ namespace R440O.R440OForms.N15
         private static bool _локТумблерБМА2;
         private static bool _локТумблерА205Base; //чтобы при записи локальных параметров в него не записывалось значение _локТумблерА20512
         private static bool _локТумблерА20512;
+        private static bool _локТумблерА403;
         private static bool _локТумблерАФСС;
         private static bool _локТумблерА1;
-        private static bool _локТумблерА403;
         private static bool _локТумблерК1_1;
         private static bool _локТумблерК1_2;
         private static bool _локТумблерА30412;
@@ -132,17 +132,6 @@ namespace R440O.R440OForms.N15
             set { _локТумблерК1_2 = value; }
         }
 
-        public static bool локТумблерА30412
-        {
-            get { return _локТумблерА30412; }
-            set
-            {
-                _локТумблерА30412 = value;
-                N15Parameters.ResetParameters();
-                A304.A304Parameters.ResetParameters();
-            }
-        }
-
         public static bool локТумблерБ1_1
         {
             get { return _локТумблерБ1_1; }
@@ -193,7 +182,7 @@ namespace R440O.R440OForms.N15
         #endregion
 
         #region Кнопки и Тумблеры правая часть (Значения в памяти блока)
-        private static bool _локТумблер5Мгц ;
+        private static bool _локТумблер5Мгц;
         private static bool _локТумблерАнтЭкв;
         private static int _локКнопкаН13;
 

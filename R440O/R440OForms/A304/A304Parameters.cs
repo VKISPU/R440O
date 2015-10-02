@@ -1,4 +1,6 @@
-﻿namespace R440O.R440OForms.A304
+﻿using System.Security.Policy;
+
+namespace R440O.R440OForms.A304
 {
     using InternalBlocks;
     using C300PM_3;
@@ -7,6 +9,11 @@
 
     public static class A304Parameters
     {
+        public static bool Включен
+        {
+            get { return N15Parameters.Включен; }
+        }
+
         #region Лампочки
         /// <summary>
         /// Параметр для лампочки. Возможные состояния: true, false
@@ -15,9 +22,9 @@
         {
             get
             {
-                return N15Parameters.Включен
-                && ((!ТумблерУправление1 && Кнопка1К)
-                || (ТумблерУправление1 && N15Parameters.ЛампочкаМШУ && N15LocalParameters.локТумблерА30412));
+                return Включен &&
+                    ((!ТумблерУправление1 && Кнопка1К) ||
+                     (ТумблерУправление1 && N15Parameters.ЛампочкаМШУ && N15Parameters.ТумблерА30412));
             }
         }
 
@@ -28,9 +35,9 @@
         {
             get
             {
-                return N15Parameters.Включен
-                && ((!ТумблерУправление2 && Кнопка2К)
-                || (ТумблерУправление2 && N15Parameters.ЛампочкаМШУ && !N15LocalParameters.локТумблерА30412));
+                return Включен &&
+                    ((!ТумблерУправление2 && Кнопка2К) ||
+                     (ТумблерУправление2 && N15Parameters.ЛампочкаМШУ && !N15Parameters.ТумблерА30412));
             }
         }
         #endregion
@@ -50,13 +57,8 @@
             set
             {
                 _тумблерУправление1 = value;
-                if (!value) Кнопка1К = true;
-                C300PM_3Parameters.ResetParameters();
-                N15Parameters.ResetParameters();
-                OnParameterChanged();
-                
-
-
+                Кнопка1К = (MSHUParameters.Включен && Включен && !value && N15Parameters.ТумблерА30412);
+                N15Parameters.ResetParametersAlternative();
             }
         }
         private static bool _тумблерУправление1;
@@ -74,11 +76,8 @@
             set
             {
                 _тумблерУправление2 = value;
-                if (!value) Кнопка2К = true;
-                C300PM_3Parameters.ResetParameters();
-                N15Parameters.ResetParameters();
-                OnParameterChanged();
-                
+                Кнопка2К = (MSHUParameters.Включен && Включен && !value && !N15Parameters.ТумблерА30412);
+                N15Parameters.ResetParametersAlternative();
             }
         }
         private static bool _тумблерУправление2;
@@ -166,8 +165,12 @@
 
             set
             {
-                if (!ТумблерУправление1 && N15Parameters.Включен) _кнопка1К = value;
-                OnParameterChanged();
+                if (!ТумблерУправление1 && Включен) _кнопка1К = value;
+                //OnParameterChanged();
+                //C300PM_3Parameters.ResetParameters();
+                ResetParameters();
+
+                N15Parameters.ResetParametersAlternative();
             }
         }
 
@@ -182,8 +185,12 @@
 
             set
             {
-                if (!ТумблерУправление2 && N15Parameters.Включен) _кнопка2К = value;
-                OnParameterChanged();
+                if (!ТумблерУправление2 && Включен) _кнопка2К = value;
+                //OnParameterChanged();
+                //C300PM_3Parameters.ResetParameters();
+                ResetParameters();
+
+                N15Parameters.ResetParametersAlternative();
             }
         }
 
@@ -195,69 +202,47 @@
         {
             get
             {
-                if (!MSHUParameters.Включен) return 0;
-                if (!N502BParameters.ТумблерН15) return 0;
-                if (ТумблерКомплект)
-                {
-                    if (Лампочка1К)
+                if (MSHUParameters.Включен && (Лампочка1К && ТумблерКомплект || Лампочка2К && !ТумблерКомплект))
+                    switch (ПереключательКонтроль)
                     {
-                        switch (ПереключательКонтроль)
-                        {
-                            case 0: return -35;
-                            case 1: return 30;
-                            case 2: return 30;
-                            case 3: return -35;
-                            case 4: return 30;
-                            case 5: return 30;
-                            case 6: return 30;
-                            case 7: return -35;
-                            case 8: return -35;
-                        }
+                        case 0:
+                            return -35;
+                        case 1:
+                            return 30;
+                        case 2:
+                            return 30;
+                        case 3:
+                            return -35;
+                        case 4:
+                            return 30;
+                        case 5:
+                            return 30;
+                        case 6:
+                            return 30;
+                        case 7:
+                            return -35;
+                        case 8:
+                            return -35;
                     }
-                    else
-                    {
-                        switch (ПереключательКонтроль)
-                        {
-                            case 0: return -35;
-                            case 6: return 27;
-                            default: return 0;
-                        }
-                    }
-                    return 0;
-                }
                 else
                 {
-                    if (Лампочка2К)
+                    switch (ПереключательКонтроль)
                     {
-                        switch (ПереключательКонтроль)
-                        {
-                            case 0: return -35;
-                            case 1: return 30;
-                            case 2: return 30;
-                            case 3: return -35;
-                            case 4: return 30;
-                            case 5: return 30;
-                            case 6: return 30;
-                            case 7: return -35;
-                            case 8: return -35;
-                        }
+                        case 0:
+                            return -35;
+                        case 6:
+                            return 27;
+                        default:
+                            return 0;
                     }
-                    else
-                    {
-                        switch (ПереключательКонтроль)
-                        {
-                            case 0: return -35;
-                            case 6: return 27;
-                            default: return 0;
-                        }
-                    }
-                    return 0;
                 }
+                return 0;
             }
         }
 
         public static void ResetParameters()
         {
+            C300PM_3Parameters.ResetParameters();
             OnParameterChanged();
         }
 

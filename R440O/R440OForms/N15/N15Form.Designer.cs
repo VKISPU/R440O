@@ -1054,7 +1054,7 @@
             this.ТумблерА30412.Size = new System.Drawing.Size(24, 29);
             this.ТумблерА30412.TabIndex = 36;
             this.ТумблерА30412.UseVisualStyleBackColor = false;
-            this.ТумблерА30412.Click += new System.EventHandler(this.Тумблер_Click);
+            this.ТумблерА30412.Click += new System.EventHandler(this.ТумблерА30412_Click);
             // 
             // ТумблерА20512
             // 
