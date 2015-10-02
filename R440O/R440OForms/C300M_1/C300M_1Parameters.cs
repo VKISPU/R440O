@@ -17,7 +17,7 @@ namespace R440O.R440OForms.C300M_1
             set
             {
                 _питание = value;
-                N15Parameters.ResetParameters();
+                N15Parameters.ResetParametersAlternative();
                 if (value) Search();
                 OnParameterChanged();
             }
@@ -137,7 +137,7 @@ namespace R440O.R440OForms.C300M_1
                 ИндикаторСигнал = _диапазонПойманногоСигнала;
                 OnParameterChanged();
                 Search();
-                
+
             }
         }
         private static int _кнопкаКонтрольРежима = -1;
@@ -160,7 +160,7 @@ namespace R440O.R440OForms.C300M_1
         }
         private static bool _кнопкаКонтрольРежимаМинус27;
         #endregion
-        
+
         #region Кнопки Поиск и Индикация волны
         public static bool КнопкаПоиск
         {
@@ -284,17 +284,17 @@ namespace R440O.R440OForms.C300M_1
         /// <summary>
         /// Возможные состояния: true - Дистанционное; false - Местное;
         /// </summary>
-        public static bool ТумблерУправление 
-        { 
-            get { return _тумблерУправление; } 
-            set 
-            { 
+        public static bool ТумблерУправление
+        {
+            get { return _тумблерУправление; }
+            set
+            {
                 _тумблерУправление = value;
-                if(value)
+                if (value)
                     ResetParameters();
                 Search();
-                if (ParameterChanged != null) ParameterChanged(); 
-            } 
+                if (ParameterChanged != null) ParameterChanged();
+            }
         }
         private static bool _тумблерУправление = false;
 
@@ -424,16 +424,16 @@ namespace R440O.R440OForms.C300M_1
                         {
                             case 0:
                                 return (A306Parameters.ВыходнойСигнал1 != null)
-                                    ? _индикаторСигнал = (float) A306Parameters.ВыходнойСигнал1.Level
+                                    ? _индикаторСигнал = (float)A306Parameters.ВыходнойСигнал1.Level
                                     : _индикаторСигнал = 0;
                             case 1:
                                 if (ТумблерРегулировкаУровня && A306Parameters.ВыходнойСигнал1 != null)
                                     return (Array.IndexOf(КнопкиВидРаботы, true) == -1)
                                         ? _индикаторСигнал = 50
-                                        : _индикаторСигнал = 50 - (float) A306Parameters.ВыходнойСигнал1.Level;
+                                        : _индикаторСигнал = 50 - (float)A306Parameters.ВыходнойСигнал1.Level;
                                 return (Array.IndexOf(КнопкиВидРаботы, true) == -1 &&
                                         A306Parameters.ВыходнойСигнал1 != null)
-                                    ? _индикаторСигнал = 50 - (float) A306Parameters.ВыходнойСигнал1.Level
+                                    ? _индикаторСигнал = 50 - (float)A306Parameters.ВыходнойСигнал1.Level
                                     : _индикаторСигнал = 50;
                             case 2:
                                 if (!ТумблерРегулировкаУровня)

@@ -22,8 +22,8 @@ namespace R440O.Parameters
             set
             {
                 _питание = value;
-                    N15Parameters.ResetParameters();
-                    BMBParameters.ResetParameters();
+                N15Parameters.ResetParametersAlternative();
+                BMBParameters.ResetParameters();
             }
         }
         private static bool _питание;

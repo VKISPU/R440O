@@ -18,7 +18,6 @@ namespace R440O.R440OForms.NKN_1
             {
                 _питание220Включено = value;
                 if (RefreshForm != null) RefreshForm();
-                N15Parameters.ResetParameters();
             }
         }
 

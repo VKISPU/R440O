@@ -18,7 +18,6 @@ namespace R440O.R440OForms.NKN_2
             {
                 _питание220Включено = value;
                 if (RefreshForm != null) RefreshForm();
-                N15Parameters.ResetParameters();
             }
         }
 
@@ -67,8 +66,8 @@ namespace R440O.R440OForms.NKN_2
                           && N502BParameters.ТумблерЭлектрооборудование
                           && N502BParameters.ТумблерВыпрямитель27В);
 
-            Питание220Включено = !N15Parameters.ТумблерА20512 
-                && ЛампочкаМУ 
+            Питание220Включено = !N15Parameters.ТумблерА20512
+                && ЛампочкаМУ
                 && N15Parameters.ТумблерА205Base
                 && N502BParameters.ТумблерН15;
 
