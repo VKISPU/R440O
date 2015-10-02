@@ -1,47 +1,39 @@
-﻿using R440O.R440OForms.C300M_1;
-using R440O.R440OForms.C300M_2;
-
-namespace R440O.R440OForms.C300PM_1
+﻿namespace R440O.R440OForms.C300PM_1
 {
-    class C300PM_1Parameters
+    using C300M_1;
+    using C300M_2;
+
+    public static class C300PM_1Parameters
     {
         /// <summary>
         /// Параметр для лампочки 1 комплекта. Возможные состояния: true, false
         /// </summary>
-
-        private static bool _лампочкаКомплект1 = false;
         public static bool ЛампочкаКомплект1
         {
-            get { return _лампочкаКомплект1; }
-            set
-            {
-                _лампочкаКомплект1 = value;
-                if (RefreshForm != null) RefreshForm();
-            }
+            get { return C300M_1Parameters.ЛампочкаПитание; }
         }
 
         /// <summary>
         /// Параметр для лампочки 2 комплекта. Возможные состояния: true, false
         /// </summary>
-        private static bool _лампочкаКомплект2 = false;
         public static bool ЛампочкаКомплект2
         {
-            get { return _лампочкаКомплект2; }
-            set
-            {
-                _лампочкаКомплект2 = value;
-                if (RefreshForm != null) RefreshForm();
-            }
+            get { return C300M_2Parameters.ЛампочкаПитание; }
+        }
+
+        public delegate void ParameterChangedHandler();
+
+        public static event ParameterChangedHandler ParameterChanged;
+
+        private static void OnParameterChanged()
+        {
+            var handler = ParameterChanged;
+            if (handler != null) handler();
         }
 
         public static void ResetParameters()
         {
-            ЛампочкаКомплект1 = C300M_1Parameters.ЛампочкаПитание;
-            ЛампочкаКомплект2 = C300M_2Parameters.ЛампочкаПитание; 
+            OnParameterChanged();
         }
-
-
-        public delegate void VoidVoidSignature();
-        public static event VoidVoidSignature RefreshForm;
     }
 }

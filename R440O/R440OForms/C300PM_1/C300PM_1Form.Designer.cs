@@ -155,6 +155,7 @@
             this.Name = "C300PM_1Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ц300 ПM-1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.C300PM_1Form_FormClosed);
             this.C300PM_1Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.C300PM_1Лампочка2_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.C300PM_1Лампочка1_1)).EndInit();
