@@ -7,6 +7,7 @@
 using System;
 using System.Linq;
 using System.Windows.Forms;
+using R440O.BaseClasses;
 using R440O.R440OForms.K02M_01Inside;
 using R440O.ThirdParty;
 
@@ -15,22 +16,22 @@ namespace R440O.R440OForms.K02M_01
     /// <summary>
     /// Форма блока К02-М-1
     /// </summary>
-    public partial class K02M_01Form : Form
+    public partial class K02M_01Form : Form, IRefreshableForm
     {
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="K02M_01Form"/>
         /// </summary>
+        public K02M_01Form()
+        {
+            InitializeComponent();
+            K02M_01Parameters.ParameterChanged += RefreshFormElements;
+            RefreshFormElements();
+        }
 
         public void RefreshFormElements()
         {
-            this.InitializeLamps();
-            this.InitializeToggles();
-        }
-        public K02M_01Form()
-        {
-            K02M_01Parameters.ParameterChanged += RefreshFormElements;
-            this.InitializeComponent();
-            RefreshFormElements();
+            InitializeLamps();
+            InitializeToggles();
         }
 
         #region Инициализация
@@ -75,7 +76,7 @@ namespace R440O.R440OForms.K02M_01
                     }
                 }
             }
-        } 
+        }
         #endregion
 
         #region Кнопки
@@ -91,7 +92,7 @@ namespace R440O.R440OForms.K02M_01
             thisForm.Show(this);
         }
 
-        
+
         private void КнопкаПоиск_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаПоиск.BackgroundImage = null;
@@ -100,7 +101,7 @@ namespace R440O.R440OForms.K02M_01
         private void K02M_01КнопкаПоиск_MouseUp(object sender, MouseEventArgs e)
         {
             КнопкаПоиск.BackgroundImage = ControlElementImages.buttonRoundType5;
-        } 
+        }
         #endregion
 
         #region Переключатели
@@ -154,7 +155,12 @@ namespace R440O.R440OForms.K02M_01
             {
                 K02M_01Parameters.ПереключательНапряжение2К -= 1;
             }
-        } 
+        }
         #endregion
+
+        private void K02M_01Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            K02M_01Parameters.ParameterChanged -= RefreshFormElements;
+        }
     }
 }

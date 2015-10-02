@@ -50,7 +50,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаКаналыОбнаруженияЛ)).BeginInit();
             this.SuspendLayout();
             // 
-            // K02M_01Panel
+            // Panel
             // 
             this.Panel.BackgroundImage = global::R440O.BackgroundImages.K02M_01;
             this.Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -226,7 +226,7 @@
             this.ButtonInside.UseVisualStyleBackColor = false;
             this.ButtonInside.Click += new System.EventHandler(this.ButtonInside_Click);
             // 
-            // Form
+            // K02M_01Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -237,6 +237,7 @@
             this.Name = "K02M_01Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "K02M-1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.K02M_01Form_FormClosed);
             this.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаИнформ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПилот)).EndInit();
