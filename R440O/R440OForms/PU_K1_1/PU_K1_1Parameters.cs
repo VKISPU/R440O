@@ -1,6 +1,6 @@
 ﻿namespace R440O.Parameters
 {
-    internal class PU_K1_1Parameters
+    static class PU_K1_1Parameters
     {
         #region событие
 

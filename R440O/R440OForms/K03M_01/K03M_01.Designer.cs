@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.Panel = new System.Windows.Forms.Panel();
-            this.ButtonInside = new System.Windows.Forms.Button();
             this.Крышка = new System.Windows.Forms.Button();
+            this.ButtonInside = new System.Windows.Forms.Button();
             this.ПереключательНапряжение = new System.Windows.Forms.Button();
             this.ПереключательАвтРучн = new System.Windows.Forms.Button();
             this.ПереключательНепрОднокр = new System.Windows.Forms.Button();
@@ -102,20 +102,6 @@
             this.Panel.Size = new System.Drawing.Size(496, 707);
             this.Panel.TabIndex = 0;
             // 
-            // ButtonInside
-            // 
-            this.ButtonInside.BackColor = System.Drawing.Color.Transparent;
-            this.ButtonInside.FlatAppearance.BorderSize = 0;
-            this.ButtonInside.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.ButtonInside.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ButtonInside.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonInside.Location = new System.Drawing.Point(37, 265);
-            this.ButtonInside.Name = "ButtonInside";
-            this.ButtonInside.Size = new System.Drawing.Size(105, 140);
-            this.ButtonInside.TabIndex = 9;
-            this.ButtonInside.UseVisualStyleBackColor = false;
-            this.ButtonInside.Click += new System.EventHandler(this.ButtonInside_Click);
-            // 
             // Крышка
             // 
             this.Крышка.BackColor = System.Drawing.Color.Transparent;
@@ -131,6 +117,20 @@
             this.Крышка.UseVisualStyleBackColor = false;
             this.Крышка.Click += new System.EventHandler(this.Крышка_Click);
             // 
+            // ButtonInside
+            // 
+            this.ButtonInside.BackColor = System.Drawing.Color.Transparent;
+            this.ButtonInside.FlatAppearance.BorderSize = 0;
+            this.ButtonInside.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.ButtonInside.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ButtonInside.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonInside.Location = new System.Drawing.Point(37, 265);
+            this.ButtonInside.Name = "ButtonInside";
+            this.ButtonInside.Size = new System.Drawing.Size(105, 140);
+            this.ButtonInside.TabIndex = 9;
+            this.ButtonInside.UseVisualStyleBackColor = false;
+            this.ButtonInside.Click += new System.EventHandler(this.ButtonInside_Click);
+            // 
             // ПереключательНапряжение
             // 
             this.ПереключательНапряжение.BackColor = System.Drawing.Color.Transparent;
@@ -145,7 +145,7 @@
             this.ПереключательНапряжение.Size = new System.Drawing.Size(71, 71);
             this.ПереключательНапряжение.TabIndex = 42;
             this.ПереключательНапряжение.UseVisualStyleBackColor = false;
-            this.ПереключательНапряжение.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ПереключательНапряжение_MouseDown);
+            this.ПереключательНапряжение.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ПереключательЗонаПоиска_MouseDown);
             // 
             // ПереключательАвтРучн
             // 

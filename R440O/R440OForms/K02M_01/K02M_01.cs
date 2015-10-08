@@ -9,6 +9,7 @@ using System.Linq;
 using System.Windows.Forms;
 using R440O.BaseClasses;
 using R440O.R440OForms.K02M_01Inside;
+using R440O.R440OForms.K03M_01;
 using R440O.ThirdParty;
 
 namespace R440O.R440OForms.K02M_01
@@ -95,11 +96,13 @@ namespace R440O.R440OForms.K02M_01
 
         private void КнопкаПоиск_MouseDown(object sender, MouseEventArgs e)
         {
+            K03M_01Parameters.ПоискИдёт = false;
             КнопкаПоиск.BackgroundImage = null;
         }
 
         private void K02M_01КнопкаПоиск_MouseUp(object sender, MouseEventArgs e)
         {
+            K03M_01Parameters.ПоискИдёт = true;
             КнопкаПоиск.BackgroundImage = ControlElementImages.buttonRoundType5;
         }
         #endregion

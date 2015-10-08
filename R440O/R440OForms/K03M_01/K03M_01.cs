@@ -33,7 +33,7 @@ namespace R440O.R440OForms.K03M_01
             K03M_01Parameters.ParameterChanged += RefreshFormElements;
             this.InitializeComponent();
             RefreshFormElements();
-
+            K03M_01Parameters.ПоискИдёт = true;
         }
 
         #region Инициализация
@@ -54,7 +54,7 @@ namespace R440O.R440OForms.K03M_01
                     }
                 }
             }
-            var angle = K03M_01Parameters.ПереключательНапряжение * 30 - 75;
+            var angle = K03M_01Parameters.ПереключательЗонаПоиска * 30 - 75;
             ПереключательНапряжение.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
@@ -132,16 +132,16 @@ namespace R440O.R440OForms.K03M_01
 
         #endregion
 
-        private void ПереключательНапряжение_MouseDown(object sender, MouseEventArgs e)
+        private void ПереключательЗонаПоиска_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                K03M_01Parameters.ПереключательНапряжение += 1;
+                K03M_01Parameters.ПереключательЗонаПоиска += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                K03M_01Parameters.ПереключательНапряжение -= 1;
+                K03M_01Parameters.ПереключательЗонаПоиска -= 1;
             }
         }
     }
