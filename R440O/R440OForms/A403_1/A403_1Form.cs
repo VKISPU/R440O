@@ -110,12 +110,14 @@ namespace R440O.R440OForms.A403_1
             if (A403_1Parameters.Значение.Length == 0)
                 A403_1Parameters.Значение = "+"; //явно укажем знак числа
 
-            if (number == 'М')
-                A403_1Parameters.Значение = (A403_1Parameters.Значение[0] == '+')
-                    ? "-" + A403_1Parameters.Значение.Substring(1)
-                    : "+" + A403_1Parameters.Значение.Substring(1);
-            else
-                A403_1Parameters.Значение += Convert.ToString(number);
+
+            if (Array.IndexOf(A403_1Parameters.КнопкиПараметры.ToArray(), true) != -1)
+                if (number == 'М')
+                    A403_1Parameters.Значение = (A403_1Parameters.Значение[0] == '+')
+                        ? "-" + A403_1Parameters.Значение.Substring(1)
+                        : "+" + A403_1Parameters.Значение.Substring(1);
+                else
+                    A403_1Parameters.Значение += Convert.ToString(number);
         }
         #endregion
 

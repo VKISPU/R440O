@@ -5,6 +5,7 @@ using R440O.R440OForms.N502B;
 using System.Windows.Forms;
 using R440O.BaseClasses;
 using R440O.Parameters;
+using R440O.R440OForms.A306;
 using R440O.ОбщиеТипыДанных;
 
 namespace R440O.R440OForms.C300M_1

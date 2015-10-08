@@ -1,4 +1,6 @@
-﻿namespace R440O.R440OForms.N502B
+﻿using R440O.R440OForms.A306;
+
+namespace R440O.R440OForms.N502B
 {
     using System;
     using System.Linq;

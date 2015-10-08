@@ -1,4 +1,6 @@
-﻿namespace R440O
+﻿using R440O.R440OForms.A306;
+
+namespace R440O
 {
     using System;
     using Parameters;
@@ -108,8 +110,7 @@
             // Настройка А-306
 
             A306Parameters.ТумблерДистанцМестн = true;
-            A306Parameters.АктивныйВход = 0;
-            A306Parameters.ЦелевойВыход = 0;
+            A306Parameters.Выходы[0] = 0;
 
             // Настройка Ц300М-1
 
