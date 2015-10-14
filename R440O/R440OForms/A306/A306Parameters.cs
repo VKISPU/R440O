@@ -4,11 +4,15 @@ using R440O.R440OForms.N15;
 
 namespace R440O.R440OForms.A306
 {
-    public class A306Parameters
+    public static class A306Parameters
     {
         public static bool Включен
         {
-            get { return N15Parameters.НеполноеВключение; }
+            get
+            {
+                return (MSHUParameters.Включен && ТумблерДистанцМестн && N15Parameters.Включен)
+                       || (MSHUParameters.Включен && !ТумблерДистанцМестн && ТумблерПитание && N15Parameters.Включен);
+            }
         }
 
         #region Выход блока
@@ -60,12 +64,12 @@ namespace R440O.R440OForms.A306
 
         public static bool ЛампочкаНО1Вкл
         {
-            get { return !КабелиВходы[4]; }
+            get { return !КабелиВходы[4] && Включен; }
         }
 
         public static bool ЛампочкаНО2Вкл
         {
-            get { return !КабелиВходы[5]; }
+            get { return !КабелиВходы[5] && Включен; }
         }
         #endregion
 
@@ -158,7 +162,7 @@ namespace R440O.R440OForms.A306
 
     public class A306Outputs
     {
-        public static int[] Outputs = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
+        public static int[] Outputs = { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 };
 
         public int this[int outputNumber]
         {

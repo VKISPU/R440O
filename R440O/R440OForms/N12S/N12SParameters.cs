@@ -10,7 +10,7 @@ namespace R440O.Parameters
         {
             get
             {
-                return ТумблерСеть && N15Parameters.ТумблерН12С; 
+                return ТумблерСеть && N15Parameters.ТумблерН12С && N15Parameters.Включен; 
             }
         }
 
@@ -32,6 +32,7 @@ namespace R440O.Parameters
             {
                 _тумблерСеть = value;
                 OnParameterChanged();
+                N15Parameters.ResetParametersAlternative();
             }
         }
 
