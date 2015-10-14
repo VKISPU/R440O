@@ -4,13 +4,13 @@ using R440O.R440OForms.N15;
 
 namespace R440O.R440OForms.A403_1
 {
-    public class A403_1Parameters
+    public static class A403_1Parameters
     {
         public static bool Включен
         {
             get
             {
-                return Включен = ТумблерСеть && N15Parameters.ТумблерА403;
+                return Включен = ТумблерСеть && N15Parameters.ТумблерА403 && N15Parameters.Включен;
             }
             set
             {
@@ -109,6 +109,7 @@ namespace R440O.R440OForms.A403_1
             {
                 _тумблерСеть = value;
                 OnParameterChanged();
+                N15Parameters.ResetParametersAlternative();
             }
         }
 

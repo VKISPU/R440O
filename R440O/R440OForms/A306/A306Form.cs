@@ -47,9 +47,9 @@
             //названия кнопок отличются на 11й символ
             int numberOfButton = 0;
             if (button.Name.Length >= 11) //входы каналов
-                numberOfButton = (int) Char.GetNumericValue(button.Name[10]);
+                numberOfButton = (int)Char.GetNumericValue(button.Name[10]);
             else //входы NO
-                numberOfButton = (int) Char.GetNumericValue(button.Name[7]) + 3;
+                numberOfButton = (int)Char.GetNumericValue(button.Name[7]) + 3;
 
             if (!button.Font.Bold)
                 FontChange(button);
@@ -113,9 +113,9 @@
                 if (item.Name.Contains("ВходКанала"))
                 {
                     //если кабели висят на планке
-                    if (A306Parameters.КабелиВходы[(int) char.GetNumericValue(item.Name[10])])
+                    if (A306Parameters.КабелиВходы[(int)char.GetNumericValue(item.Name[10])])
                     {
-                        var onePoint = new Point(Panel.Left + 55*(int) char.GetNumericValue(item.Name[10]) + 140,
+                        var onePoint = new Point(Panel.Left + 55 * (int)char.GetNumericValue(item.Name[10]) + 140,
                             Panel.Bottom - 85);
                         var twoPoint = new Point(item.Left + 8, item.Top + 100);
                         for (int i = 0; i < 10; i++)
@@ -134,7 +134,7 @@
                         int.Parse(Convert.ToString(Convert.ToString(item.Name[5]) + Convert.ToString(item.Name[6])));
                     if (A306Parameters.Выходы[index] != -1 && A306Parameters.Выходы[index] <= 3)
                     {
-                        var onePoint = new Point(Panel.Left + 55*A306Parameters.Выходы[index] + 142, Panel.Bottom - 80);
+                        var onePoint = new Point(Panel.Left + 55 * A306Parameters.Выходы[index] + 142, Panel.Bottom - 80);
                         if (index <= 10)
                         {
                             //для нижнего ряда выходов
@@ -235,7 +235,7 @@
             {
                 if (item.Name.Contains("ВходКанала"))
                 {
-                    if (A306Parameters.КабелиВходы[(int) Char.GetNumericValue(item.Name[10])])
+                    if (A306Parameters.КабелиВходы[(int)Char.GetNumericValue(item.Name[10])])
                     {
                         item.Visible = true;
                         item.BackgroundImage = ControlElementImages.A306Input;
@@ -250,7 +250,7 @@
                 }
                 else if (item.Name.Contains("ВходNO"))
                 {
-                    if (A306Parameters.КабелиВходы[(int) Char.GetNumericValue(item.Name[7]) + 3])
+                    if (A306Parameters.КабелиВходы[(int)Char.GetNumericValue(item.Name[7]) + 3])
                     {
                         item.Visible = true;
                         item.BackgroundImage = ControlElementImages.A306Input;
@@ -276,9 +276,15 @@
                     {
                         item.BackgroundImage = ControlElementImages.A306Input;
                         if (A306Parameters.Выходы[index] <= 3)
+                        {
                             item.Text = (A306Parameters.Выходы[index] + 1).ToString();
+                            item.Font = new Font("Microsoft Sans Serif", 8.25F, (FontStyle.Regular));
+                        }
                         else
-                            item.Text = "NO" + (A306Parameters.Выходы[index] - 3);
+                        {
+                            item.Text = "НО" + (A306Parameters.Выходы[index] - 3);
+                            item.Font = new Font("Microsoft Sans Serif", 5.25F, (FontStyle.Regular));
+                        }
                     }
                     else
                     {
