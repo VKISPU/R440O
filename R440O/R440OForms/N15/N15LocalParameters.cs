@@ -1,21 +1,10 @@
 ﻿using System;
-using System.Security.Cryptography;
+using R440O.R440OForms.N16;
 
 namespace R440O.R440OForms.N15
 {
     public static class N15LocalParameters
     {
-        static N15LocalParameters()
-        {
-            var generator = new Random();
-
-            int rnd = generator.Next(1);
-            _локТумблерАнтЭкв = rnd == 1;
-
-            rnd = generator.Next(1);
-            _локТумблер5Мгц = rnd == 1;
-        }
-
         #region Тумблеры левая часть
         private static bool _локТумблерЦ300М1;
         private static bool _локТумблерЦ300М2;
@@ -185,6 +174,9 @@ namespace R440O.R440OForms.N15
         private static bool _локТумблер5Мгц;
         private static bool _локТумблерАнтЭкв;
         private static int _локКнопкаН13;
+        private static bool _локКнопкаН13_1;
+        private static bool _локКнопкаН13_2;
+        private static bool _локКнопкаН13_12;
 
         /// <summary>
         /// Значение, хранимое в памяти блока для тумблера 5Мгц
@@ -203,20 +195,41 @@ namespace R440O.R440OForms.N15
         public static bool локТумблерАнтЭкв
         {
             get { return _локТумблерАнтЭкв; }
-            set { _локТумблерАнтЭкв = value; }
+            set
+            {
+                _локТумблерАнтЭкв = value;
+                N15Parameters.ТумблерАнтЭкв = value;
+            }
         }
 
-        /// <summary>
-        /// Значение, хранимое в памяти блока для комплектов Н13
-        /// 0 - Комплекты не включены (Последняя нажатая клавиша - Сброс)
-        /// 1 - КнопкаН13_1 (Последняя нажатая клавиша - Н13_1)
-        /// 2 - КнопкаН13_2 (Последняя нажатая клавиша - Н13_2)
-        /// 3 - КнопкаН13_12 (Последняя нажатая клавиша - Н13_12)
-        /// </summary>
-        public static int локКнопкаН13
+        public static bool локКнопкаН13_1
         {
-            get { return _локКнопкаН13; }
-            set { _локКнопкаН13 = value; }
+            get { return _локКнопкаН13_1; }
+            set
+            {
+                _локКнопкаН13_1 = value;
+                if(value) N15Parameters.КнопкаН13 = 1;
+            }
+        }
+
+        public static bool локКнопкаН13_2
+        {
+            get { return _локКнопкаН13_2; }
+            set
+            {
+                _локКнопкаН13_2 = value;
+                if (value) N15Parameters.КнопкаН13 = 2;
+            }
+        }
+
+        public static bool локКнопкаН13_12
+        {
+            get { return _локКнопкаН13_12; }
+            set
+            {
+                _локКнопкаН13_12 = value;
+                if (value) N15Parameters.КнопкаН13 = 3;
+            }
         }
         #endregion
 

@@ -1,4 +1,5 @@
 ﻿using R440O.R440OForms.A306;
+using R440O.R440OForms.N16;
 
 namespace R440O
 {
@@ -27,7 +28,7 @@ namespace R440O
         public static void SetParameters()
         {
             #region Сборы2015
-            
+
             // Привет, ребята!
             // Проведя много времени за разработкой станции на сборах, а именно: около 20 дней по 8 часов,
             // было обнаружено, что база для разработки и стиль разработки были выбраны не верно.
@@ -60,8 +61,8 @@ namespace R440O
             // Голополосов Игорь.
 
             #endregion
-            
-            #region Подключение питания   
+
+            #region Подключение питания
             //Подключаем кабели
             PowerCabelParameters.КабельСеть = true;
             VoltageStabilizerParameters.КабельВход = PowerCabelParameters.Напряжение;
@@ -78,14 +79,13 @@ namespace R440O
             N502BParameters.ТумблерН15 = true;
 
             //Установка некоторых значений в память Н15
-            N15LocalParameters.локКнопкаН13 = 2;
-            N15LocalParameters.локТумблерАнтЭкв = true;
             N15LocalParameters.локТумблер5Мгц = false;
-
+            N16Parameters.ЩелевойМостН13 = 2;
+            N15Parameters.ТумблерАнтЭкв = false;
 
             //A304
             A304Parameters.ТумблерУправление1 = true;
-            A304Parameters.ТумблерУправление2 = true; 
+            A304Parameters.ТумблерУправление2 = true;
             #endregion
 
             #region Настройка по малому шлейфу
@@ -119,7 +119,7 @@ namespace R440O
             C300M_1Parameters.ПереключательВолна1000 = 0;
             C300M_1Parameters.ПереключательВолна100 = 1;
             C300M_1Parameters.ПереключательВолна10 = 0;
-            C300M_1Parameters.ПереключательВолна1 = 0; 
+            C300M_1Parameters.ПереключательВолна1 = 0;
             #endregion
 
             #region Настройка аппаратуры служебной связи
@@ -131,10 +131,10 @@ namespace R440O
 
             //// Поключение АФСС
             N15LocalParameters.локТумблерАФСС = true;
-            Kontur_P3Parameters.ТумблерСеть = EТумблерСеть.ВКЛ; 
+            Kontur_P3Parameters.ТумблерСеть = EТумблерСеть.ВКЛ;
 
             //// Подключение ДАБ-5
-            N15LocalParameters.локТумблерАФСС= true; 
+            N15LocalParameters.локТумблерАФСС = true;
 
             #endregion
 
@@ -169,9 +169,6 @@ namespace R440O
             N15LocalParameters.локТумблерБ1_2 = true;
             N15LocalParameters.локТумблерБ2_2 = true;
             N15LocalParameters.локТумблерБ3_2 = true;
-
-
-
             #endregion
 
         }
