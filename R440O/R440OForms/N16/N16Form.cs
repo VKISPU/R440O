@@ -6,9 +6,7 @@
 namespace R440O.R440OForms.N16
 {
     using System;
-    using System.Globalization;
     using System.Windows.Forms;
-    using ThirdParty;
     using BaseClasses;
     /// <summary>
     /// Форма блока Н-16
@@ -20,12 +18,11 @@ namespace R440O.R440OForms.N16
         /// </summary>
         public N16Form()
         {
-            this.InitializeComponent();
+            InitializeComponent();
 
             N16Parameters.ParameterChanged += RefreshFormElements;
             RefreshFormElements();
         }
-
 
         public void RefreshFormElements()
         {

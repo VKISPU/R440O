@@ -1,4 +1,5 @@
-﻿using R440O.R440OForms.N15;
+﻿using System.Collections;
+using R440O.R440OForms.N15;
 using R440O.R440OForms.N502B;
 
 namespace R440O.R440OForms.N16
@@ -8,7 +9,7 @@ namespace R440O.R440OForms.N16
 
         public static bool Включен
         {
-            get { return (N15Parameters.НеполноеВключение); }
+            get { return N15Parameters.НеполноеВключение; }
         }
 
         #region Тумблеры
@@ -48,13 +49,103 @@ namespace R440O.R440OForms.N16
         #endregion
 
         #region Лампочки
-        public static bool ЛампочкаН13_12 { get { return N15Parameters.НеполноеВключение && КнопкаН13_12; }}
-        public static bool ЛампочкаН13_1 { get { return N15Parameters.НеполноеВключение && КнопкаН13_1; } }
-        public static bool ЛампочкаН13_2 { get { return N15Parameters.НеполноеВключение && КнопкаН13_2; } }
-        public static bool ЛампочкаАнтенна { get { return N15Parameters.НеполноеВключение && КнопкаАнтенна; } }
-        public static bool ЛампочкаЭквивалент { get { return N15Parameters.НеполноеВключение && КнопкаЭквивалент; } }
+        public static bool ЛампочкаН13_12 { get { return Включен && ЩелевойМостН13 == 3; } }
+        public static bool ЛампочкаН13_1 { get { return Включен && ЩелевойМостН13 == 1; } }
+        public static bool ЛампочкаН13_2 { get { return Включен && ЩелевойМостН13 == 2; } }
+        public static bool ЛампочкаАнтенна { get { return Включен && КоаксиальныйПереключательАнтЭкв; } }
+        public static bool ЛампочкаЭквивалент { get { return Включен && !КоаксиальныйПереключательАнтЭкв; } }
         #endregion
 
+        private static int _щелевойМостН13;
+        private static bool _коаксиальныйПереключательАнтЭкв;
+
+        /// <summary>
+        /// 1 - Н13-1 включён
+        /// 2 - Н13-2 включён
+        /// 3 - Н13-12 включены
+        /// </summary>
+        public static int ЩелевойМостН13
+        {
+            get { return _щелевойМостН13; }
+            set
+            {
+                switch (ЩелевойМостН13)
+                {
+                    case 1:
+                        switch (value)
+                        {
+                            case 2:
+                                _щелевойМостН13 = (КнопкаН13_1)
+                                    ? 1
+                                    : 2;
+                                break;
+                            case 3:
+                                _щелевойМостН13 = (КнопкаН13_1)
+                                    ? 1
+                                    : (КнопкаН13_2) ? 2 : 3;
+                                break;
+                        }
+                        break;
+                    case 2:
+                        switch (value)
+                        {
+                            case 1:
+                                _щелевойМостН13 = (КнопкаН13_2)
+                                    ? 2
+                                    : (КнопкаН13_12) ? 3 : 1;
+                                break;
+                            case 3:
+                                _щелевойМостН13 = (КнопкаН13_2)
+                                    ? 2
+                                    : 3;
+                                break;
+                        }
+                        break;
+                    case 3:
+                        switch (value)
+                        {
+                            case 1:
+                                _щелевойМостН13 = (КнопкаН13_12)
+                                    ? 3
+                                    : 1;
+                                break;
+                            case 2:
+                                _щелевойМостН13 = (КнопкаН13_12)
+                                    ? 3
+                                    : (КнопкаН13_1) ? 1 : 2;
+                                break;
+                        }
+                        break;
+                    default:
+                        _щелевойМостН13 = value;
+                        break;
+                }
+                OnParameterChanged();
+                N15Parameters.ResetParametersAlternative();
+            }
+        }
+
+        /// <summary>
+        /// true - Антенна
+        /// false - Эквивалент
+        /// </summary>
+        public static bool КоаксиальныйПереключательАнтЭкв
+        {
+            get { return _коаксиальныйПереключательАнтЭкв; }
+            set
+            {
+                if (КоаксиальныйПереключательАнтЭкв != value)
+                {
+                    _коаксиальныйПереключательАнтЭкв = (КоаксиальныйПереключательАнтЭкв)
+                        ? КнопкаАнтенна
+                        : !КнопкаЭквивалент;
+                }
+                OnParameterChanged();
+                N15Parameters.ResetParametersAlternative();
+            }
+        }
+
+        
         #region Кнопки
         private static bool _кнопкаВкл;
         private static bool _кнопкаН13_12;
@@ -79,7 +170,7 @@ namespace R440O.R440OForms.N16
             set
             {
                 _кнопкаН13_12 = value;
-                OnParameterChanged();
+                ЩелевойМостН13 = N15Parameters.КнопкаН13;
             }
         }
 
@@ -89,7 +180,7 @@ namespace R440O.R440OForms.N16
             set
             {
                 _кнопкаН13_1 = value;
-                OnParameterChanged();
+                ЩелевойМостН13 = N15Parameters.КнопкаН13;
             }
         }
 
@@ -99,7 +190,7 @@ namespace R440O.R440OForms.N16
             set
             {
                 _кнопкаН13_2 = value;
-                OnParameterChanged();
+                ЩелевойМостН13 = N15Parameters.КнопкаН13;
             }
         }
 
@@ -109,7 +200,7 @@ namespace R440O.R440OForms.N16
             set
             {
                 _кнопкаАнтенна = value;
-                OnParameterChanged();
+                КоаксиальныйПереключательАнтЭкв = N15Parameters.ТумблерАнтЭкв;
             }
         }
 
@@ -119,7 +210,7 @@ namespace R440O.R440OForms.N16
             set
             {
                 _кнопкаЭквивалент = value;
-                OnParameterChanged();
+                КоаксиальныйПереключательАнтЭкв = N15Parameters.ТумблерАнтЭкв;
             }
         }
         #endregion
