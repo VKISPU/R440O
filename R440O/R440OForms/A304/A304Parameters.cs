@@ -244,6 +244,13 @@ namespace R440O.R440OForms.A304
         {
             C300PM_3Parameters.ResetParameters();
             OnParameterChanged();
+
+            //Для сброса лампочек
+            if (!Включен)
+            {
+                _кнопка1К = false;
+                _кнопка2К = false;
+            }
         }
 
         public delegate void ParameterChangedHandler();
