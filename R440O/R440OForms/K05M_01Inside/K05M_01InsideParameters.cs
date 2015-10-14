@@ -1,8 +1,10 @@
-﻿namespace R440O.R440OForms.K05M_01Inside
+﻿using R440O.R440OForms.K03M_01;
+
+namespace R440O.R440OForms.K05M_01Inside
 {
-    internal class K05M_01InsideParameters
+    static class K05M_01InsideParameters
     {
-#region событие
+        #region событие
         public delegate void ParameterChangedHandler();
         public static event ParameterChangedHandler ParameterChanged;
 
@@ -16,9 +18,16 @@
         {
             OnParameterChanged();
         }
-#endregion
+        #endregion
+
+        #region Переключатели
 
         public static KulonIndexerClass Переключатель = new KulonIndexerClass();
+
+        #endregion
+
+        #region Тумблеры B4, B7
+
         private static bool _ТумблерВ4;
         private static bool _ТумблерВ7;
 
@@ -42,6 +51,8 @@
             }
         }
 
+        #endregion
+
     }
     class KulonIndexerClass
     {
@@ -64,7 +75,13 @@
                     if (value >= 0 && value <= 1) myArray[index] = value;
                 }
                 K05M_01InsideParameters.ResetParameters();
+                K03M_01Parameters.ПересчитатьНайденоИлиНеНайдено();
             }
+        }
+
+        public int[] GetArray()
+        {
+            return myArray;
         }
     }
 

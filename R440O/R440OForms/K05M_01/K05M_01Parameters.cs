@@ -1,14 +1,10 @@
-﻿namespace R440O.R440OForms.K05M_01
-{
-    internal class K05M_01Parameters
-    {
-        /// <summary>
-        /// Положение переключателя контроля
-        /// </summary>
-        /// 
-        /// 
+﻿using R440O.R440OForms.K03M_01;
 
-#region событие
+namespace R440O.R440OForms.K05M_01
+{
+    static class K05M_01Parameters
+    {
+        #region событие
 
         public delegate void ParameterChangedHandler();
         public static event ParameterChangedHandler ParameterChanged;
@@ -24,9 +20,10 @@
             OnParameterChanged();
         }
 
-#endregion
+        #endregion
 
-#region  Перекючатели
+        #region  Перекючатели
+
         private static int _ПереключательПередачаКонтроль;
         private static int _ПереключательОслабление;
         private static int _ПереключательРодРаботы;
@@ -47,6 +44,7 @@
                 if (value >= 0 && value <= 3)
                 {
                     _ПереключательПередачаКонтроль = value;
+                    K03M_01Parameters.ПересчитатьНайденоИлиНеНайдено();
                     ResetParameters();
                 }
             }
@@ -115,6 +113,6 @@
                 }
             }
         }
-#endregion
+        #endregion
     }
 }

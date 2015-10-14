@@ -1,4 +1,6 @@
-﻿namespace R440O.R440OForms.K02M_01
+﻿using R440O.R440OForms.K03M_01;
+
+namespace R440O.R440OForms.K02M_01
 {
     public static class K02M_01Parameters
     {
@@ -10,7 +12,7 @@
 
         public static bool ЛампочкаКаналыОбнаруженияЦ
         {
-            get { return false; }
+            get { return K03M_01Parameters.СтатусПоиска==2; }
         }
 
         public static bool ЛампочкаКаналыОбнаруженияП
@@ -20,17 +22,17 @@
 
         public static bool ЛампочкаПоискСигналов
         {
-            get { return false; }
+            get { return (K03M_01Parameters.СтатусПоиска == 1 || K03M_01Parameters.СтатусПоиска == 3); }
         }
 
         public static bool ЛампочкаПилот
         {
-            get { return false; }
+            get { return K03M_01Parameters.СтатусПоиска == 2; }
         }
 
         public static bool ЛампочкаИнформ
         {
-            get { return false; }
+            get { return K03M_01Parameters.СтатусПоиска == 2; }
         }
 
         #endregion
@@ -114,6 +116,19 @@
         public static void ResetParameters()
         {
             OnParameterChanged();
+        }
+
+        #endregion
+
+        #region Кнопки
+
+        public static void КнопкаНачатьПоиск_MouseDown()
+        {
+            K03M_01Parameters.НачатьПоискСНачала();
+        }
+
+        public static void КнопкаНачатьПоиск_MouseUp()
+        {
         }
 
         #endregion

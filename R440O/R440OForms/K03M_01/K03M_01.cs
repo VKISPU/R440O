@@ -33,7 +33,7 @@ namespace R440O.R440OForms.K03M_01
             K03M_01Parameters.ParameterChanged += RefreshFormElements;
             this.InitializeComponent();
             RefreshFormElements();
-            K03M_01Parameters.ПоискИдёт = true;
+            K03M_01Parameters.НачатьПоискСНачала();
         }
 
         #region Инициализация

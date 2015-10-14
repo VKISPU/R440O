@@ -96,13 +96,13 @@ namespace R440O.R440OForms.K02M_01
 
         private void КнопкаПоиск_MouseDown(object sender, MouseEventArgs e)
         {
-            K03M_01Parameters.ПоискИдёт = false;
+            K02M_01Parameters.КнопкаНачатьПоиск_MouseDown();
             КнопкаПоиск.BackgroundImage = null;
         }
 
         private void K02M_01КнопкаПоиск_MouseUp(object sender, MouseEventArgs e)
         {
-            K03M_01Parameters.ПоискИдёт = true;
+            K02M_01Parameters.КнопкаНачатьПоиск_MouseUp();
             КнопкаПоиск.BackgroundImage = ControlElementImages.buttonRoundType5;
         }
         #endregion

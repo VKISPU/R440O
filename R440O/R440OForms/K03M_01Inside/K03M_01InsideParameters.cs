@@ -1,6 +1,8 @@
-﻿namespace R440O.R440OForms.K03M_01Inside
+﻿using R440O.R440OForms.K03M_01;
+
+namespace R440O.R440OForms.K03M_01Inside
 {
-    internal class K03M_01InsideParameters
+    static class K03M_01InsideParameters
     {
         #region Переключатели
 
@@ -84,7 +86,12 @@
                     if (value >= 0 && value <= 1) myArray[index] = value;
                 }
                 K03M_01InsideParameters.ResetParameters();
+                K03M_01Parameters.ПересчитатьНайденоИлиНеНайдено();
             }            
+        }
+        public int[] GetArray()
+        {
+            return myArray;
         }
     }
 }

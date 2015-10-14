@@ -1,5 +1,13 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Linq;
 using System.Windows.Forms;
+using R440O.R440OForms.K02M_01;
+using R440O.R440OForms.K02M_01Inside;
+using R440O.R440OForms.K03M_01Inside;
+using R440O.R440OForms.K04M_01;
+using R440O.R440OForms.K05M_01;
+using R440O.R440OForms.K05M_01Inside;
 
 namespace R440O.R440OForms.K03M_01
 {
@@ -90,7 +98,7 @@ namespace R440O.R440OForms.K03M_01
         private static bool _переключатель16 = false;
         private static bool _переключатель32 = false;
         private static bool _переключательНепрОднокр = false;
-        private static bool _переключательАвтРучн = false;
+        private static bool _переключательАвтРучн = true;
 
 
         /// <summary>
@@ -204,6 +212,14 @@ namespace R440O.R440OForms.K03M_01
             {
                 _переключательАвтРучн = value;
                 ResetParameters();
+                if (value)
+                {
+                    НачатьПоискСНачала();
+                }
+                else
+                {
+                    НачатьРучнойПоиск();
+                }
             }
         }
 
@@ -232,29 +248,62 @@ namespace R440O.R440OForms.K03M_01
         // То есть -1 это на самом деле -0, а -2 это -1
         // 0 это и есть 0, то есть +0.
 
-        private static Timer _таймерДляПоиска = new Timer();
+        /// <summary>
+        /// 0 - Поиск не идёт и ничего не найдено
+        /// 1 - Ищется
+        /// 2 - Найдено
+        /// 3 - Ручной поиск
+        /// </summary>
+        public static int СтатусПоиска
+        {
+            get { return _статусПоиска; }
+        }
+
+        public static int ЗначениеПоиска
+        {
+            get { return (_текущееЗначениеПоиска < 0) ? _текущееЗначениеПоиска + 1 : _текущееЗначениеПоиска; }
+        }
+
+        public static void ПересчитатьНайденоИлиНеНайдено()
+        {
+            // Если частота совпадает при ПереключательПередачаКонтроль на к05 = прм
+            // Или если частота совпадает по другому при ПереключательПередачаКонтроль на к05 !=прм
+            // И ещё в придачу если все ключи совпадают
+            if (((K04M_01Parameters.ЧастотаПрм + ЗначениеПоиска == K04M_01Parameters.ЧастотаПрд) &&
+                 (K05M_01Parameters.ПереключательПередачаКонтроль == 1) ||
+                 (K04M_01Parameters.ЧастотаПрм + ЗначениеПоиска + K04M_01Parameters.ЧастотаПрд == 140000) &&
+                 (K05M_01Parameters.ПереключательПередачаКонтроль != 1)) &&
+                K05M_01InsideParameters.Переключатель.GetArray()
+                    .SequenceEqual(K03M_01InsideParameters.Переключатели.GetArray()))
+            {
+                // Найдено. Поиск останавливается.
+                Найдено();
+            }
+            else
+            {
+                // Не найдено. Поиск стартует или продолжается.
+                if (_статусПоиска == 2)
+                {
+                    НачатьПоискСНачала();
+                }
+            }
+            Debug.WriteLine("СтатусПоиска: " + СтатусПоиска);
+            Debug.WriteLine("Частота прм: " + K04M_01Parameters.ЧастотаПрм);
+            Debug.WriteLine("Частота прд: " + K04M_01Parameters.ЧастотаПрд);
+            Debug.WriteLine("ЗначениеПоиска: " + ЗначениеПоиска);
+        }
+
+
+        private static readonly Timer _таймерДляПоиска = new Timer();
         private static int _текущееЗначениеПоиска;
         private static int _максимальноеЗначениеПоиска;
         private static int _минимальноеЗначениеПоиска;
-        private static bool _поискИдёт = false;
+        private static int _статусПоиска;
 
-        /// <summary>
-        /// Чтобы начать поиск, нужно задать этому свойству = true и всё.
-        /// чтобы остановить, = false.
-        /// </summary>
-        public static bool ПоискИдёт
-        {
-            get { return _поискИдёт; }
-            set
-            {
-                if (value) { НачатьПоиск();}
-                else { ОстановитьПоиск();}
-                _поискИдёт = value;
-            }
-        }
 
-        private static void НачатьПоиск()
+        public static void НачатьПоискСНачала()
         {
+            _статусПоиска = 1;
             ПересчитатьМаксимальноеИМинимальноеЗнчения();
             _текущееЗначениеПоиска = ПолучитьНачальноеЗначениеПоиска();
             ResetParameters();
@@ -265,18 +314,48 @@ namespace R440O.R440OForms.K03M_01
                 _таймерДляПоиска.Enabled = true;
             }
 
+            K02M_01Parameters.ResetParameters();
         }
 
-        private static void ОстановитьПоиск()
+        public static void ОтменитьПоиск()
         {
-            _текущееЗначениеПоиска = ПолучитьНачальноеЗначениеПоиска();
+            _статусПоиска = 0;
             if (_таймерДляПоиска.Enabled)
             {
                 _таймерДляПоиска.Tick -= ТикТаймераДляПоиска;
                 _таймерДляПоиска.Enabled = false;
             }
             ResetParameters();
+
+            K02M_01Parameters.ResetParameters();
         }
+
+        private static void Найдено()
+        {
+            _статусПоиска = 2;
+            if (_таймерДляПоиска.Enabled)
+            {
+                _таймерДляПоиска.Tick -= ТикТаймераДляПоиска;
+                _таймерДляПоиска.Enabled = false;
+            }
+            ResetParameters();
+
+            K02M_01Parameters.ResetParameters();
+        }
+
+        private static void НачатьРучнойПоиск()
+        {
+            _статусПоиска = 3;
+            if (_таймерДляПоиска.Enabled)
+            {
+                _таймерДляПоиска.Tick -= ТикТаймераДляПоиска;
+                _таймерДляПоиска.Enabled = false;
+            }
+            ResetParameters();
+
+            K02M_01Parameters.ResetParameters();
+        }
+
 
         /// <summary>
         /// Когда меняются параметры (тумблеры или переключатель), надо изменять
@@ -324,6 +403,7 @@ namespace R440O.R440OForms.K03M_01
             {
                 _текущееЗначениеПоиска++;
             }
+            ПересчитатьНайденоИлиНеНайдено();
             ResetParameters();
         }
 
