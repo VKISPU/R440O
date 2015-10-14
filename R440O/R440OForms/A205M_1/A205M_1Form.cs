@@ -14,7 +14,7 @@
         public A205M_1Form()
         {
             this.InitializeComponent();
-            A205M_1Parameters.RefreshForm += RefreshForm;
+            A205M_1Parameters.ParameterChanged += RefreshForm;
             RefreshForm();
         }
 
@@ -80,12 +80,12 @@
         private void A205M_1КнопкаОтсчет_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаОтсчет.BackgroundImage = null;
-            if(NKN_1.NKN_1Parameters.ЛампочкиФаз[0])
-            Дисплей.Text = A205M_1Parameters.ПереключательВолнаX10000 + "  " +
-                           A205M_1Parameters.ПереключательВолнаX1000 + "  " +
-                           A205M_1Parameters.ПереключательВолнаX100 + "  " +
-                           A205M_1Parameters.ПереключательВолнаX10 + "  " +
-                           A205M_1Parameters.ПереключательВолнаX1;
+            if (NKN_1.NKN_1Parameters.ЛампочкаФаза1)
+                Дисплей.Text = A205M_1Parameters.ПереключательВолнаX10000 + "  " +
+                               A205M_1Parameters.ПереключательВолнаX1000 + "  " +
+                               A205M_1Parameters.ПереключательВолнаX100 + "  " +
+                               A205M_1Parameters.ПереключательВолнаX10 + "  " +
+                               A205M_1Parameters.ПереключательВолнаX1;
 
         }
 
@@ -208,5 +208,10 @@
         }
 
         #endregion
+
+        private void A205M_1Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            A205M_1Parameters.ParameterChanged -= RefreshForm;
+        }
     }
 }

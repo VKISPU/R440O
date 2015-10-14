@@ -150,6 +150,7 @@
             this.MaximizeBox = false;
             this.Name = "NKN_2Form";
             this.Text = "НКН-2";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NKN_2Form_FormClosed);
             this.Panel.ResumeLayout(false);
             this.ЛампочкиФаз.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаФаза3)).EndInit();

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(A205M_1Form));
             this.Panel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ПереключательВолнаX1000 = new System.Windows.Forms.Button();
@@ -284,7 +283,6 @@
             // ИндикаторКонтроль
             // 
             this.ИндикаторКонтроль.BackColor = System.Drawing.Color.Transparent;
-            this.ИндикаторКонтроль.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ИндикаторКонтроль.BackgroundImage")));
             this.ИндикаторКонтроль.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ИндикаторКонтроль.Location = new System.Drawing.Point(249, 66);
             this.ИндикаторКонтроль.Name = "ИндикаторКонтроль";
@@ -303,6 +301,7 @@
             this.Name = "A205M_1Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "A-205M-1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.A205M_1Form_FormClosed);
             this.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПерегрев)).EndInit();

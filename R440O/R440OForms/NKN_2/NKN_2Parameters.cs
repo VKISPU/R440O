@@ -5,73 +5,84 @@ using R440O.R440OForms.N502B;
 namespace R440O.R440OForms.NKN_2
 {
     /// <summary>
-    /// Параметры блока НКН-2
+    /// Параметры блока НКН-1
     /// </summary>
     public static class NKN_2Parameters
     {
-        #region Питание блока
+        private static bool _дистанционноеВключение;
+
+        public static bool ДистанционноеВключение
+        {
+            get { return _дистанционноеВключение; }
+            set
+            {
+                _питание220Включено = value;
+                _дистанционноеВключение = value;
+            }
+        }
+
+        private static bool _неполноеВключение;
+
+        public static bool НеполноеВключение
+        {
+            get { return _неполноеВключение && N502BParameters.ВыпрямительВключен; }
+            set { _неполноеВключение = value; }
+        }
+
+        public static bool Включен
+        {
+            get { return (ЛампочкаМУ && N15Parameters.Включен && Питание220Включено); }
+        }
+
+        public static bool ЛампочкаМУ
+        {
+            get { return N502BParameters.ВыпрямительВключен; }
+        }
+
+        public static bool ЛампочкаФаза1
+        {
+            get { return Включен; }
+        }
+
+        public static bool ЛампочкаФаза2
+        {
+            get { return Включен; }
+        }
+
+        public static bool ЛампочкаФаза3
+        {
+            get { return Включен; }
+        }
+
         private static bool _питание220Включено;
+
         public static bool Питание220Включено
         {
             get { return _питание220Включено; }
             set
             {
                 _питание220Включено = value;
-                if (RefreshForm != null) RefreshForm();
+                НеполноеВключение = N15Parameters.НеполноеВключение && Питание220Включено;
+                OnParameterChanged();
+                N15Parameters.ResetParametersAlternative();
+                A205M_2Parameters.ResetParameters();
             }
         }
 
-        private static bool _лампочкаМУ;
-        /// <summary>
-        /// Лампочка показывающая включено ли питание
-        /// </summary>
-        public static bool ЛампочкаМУ
+        public delegate void ParameterChangedHandler();
+
+        public static event ParameterChangedHandler ParameterChanged;
+
+        private static void OnParameterChanged()
         {
-            get { return _лампочкаМУ; }
-            set
-            {
-                _лампочкаМУ = value;
-                if (RefreshForm != null) RefreshForm();
-            }
+            var handler = ParameterChanged;
+            if (handler != null) handler();
         }
-        #endregion
-
-        #region Лампочки Фаз
-        /// <summary>
-        /// Лампочки показывающие есть ли питание на данной фазе
-        /// </summary>
-        public static bool[] ЛампочкиФаз = { false, false, false };
-
-        /// <summary>
-        /// Переключение всех лампочек фаз в одно из состояний
-        /// </summary>
-        /// <param name="isEnable">Новое состояние лампочек</param>
-        private static void ChangeLampsStateTo(bool isEnable)
-        {
-            for (var i = 0; i < ЛампочкиФаз.Length; i++)
-            {
-                ЛампочкиФаз[i] = isEnable;
-            }
-            A205M_2Parameters.ResetParameters();
-            if (RefreshForm != null) RefreshForm();
-        }
-        #endregion
-
-        public delegate void VoidVoidSignature();
-        public static event VoidVoidSignature RefreshForm;
 
         public static void ResetParameters()
         {
-            ЛампочкаМУ = (N502BParameters.ЛампочкаСфазировано
-                          && N502BParameters.ТумблерЭлектрооборудование
-                          && N502BParameters.ТумблерВыпрямитель27В);
 
-            Питание220Включено = !N15Parameters.ТумблерА20512
-                && ЛампочкаМУ
-                && N15Parameters.ТумблерА205Base
-                && N502BParameters.ТумблерН15;
-
-            ChangeLampsStateTo(_лампочкаМУ && _питание220Включено && N502BParameters.ТумблерН15);
+            OnParameterChanged();
         }
     }
 }

@@ -13,7 +13,7 @@
         public NKN_2Form()
         {
             this.InitializeComponent();
-            NKN_2Parameters.RefreshForm += RefreshForm;
+            NKN_2Parameters.ParameterChanged += RefreshForm;
             RefreshForm();
         }
 
@@ -25,13 +25,13 @@
             ЛампочкаМУ.BackgroundImage = NKN_2Parameters.ЛампочкаМУ
                 ? ControlElementImages.lampType9OnGreen
                 : null;
-            ЛампочкаФаза1.BackgroundImage = NKN_2Parameters.ЛампочкиФаз[0]
+            ЛампочкаФаза1.BackgroundImage = NKN_2Parameters.ЛампочкаФаза1
                 ? ControlElementImages.lampType9OnGreen
                 : null;
-            ЛампочкаФаза2.BackgroundImage = NKN_2Parameters.ЛампочкиФаз[1]
+            ЛампочкаФаза2.BackgroundImage = NKN_2Parameters.ЛампочкаФаза2
                 ? ControlElementImages.lampType9OnGreen
                 : null;
-            ЛампочкаФаза3.BackgroundImage = NKN_2Parameters.ЛампочкиФаз[2]
+            ЛампочкаФаза3.BackgroundImage = NKN_2Parameters.ЛампочкаФаза3
                 ? ControlElementImages.lampType9OnGreen
                 : null;
         }
@@ -59,5 +59,10 @@
             NKN_2Parameters.Питание220Включено = false;
         }
         #endregion
+
+        private void NKN_2Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            NKN_2Parameters.ParameterChanged -= RefreshForm;
+        }
     }
 }
