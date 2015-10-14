@@ -3,22 +3,62 @@
     using A205M_1;
     using A205M_2;
     using N15;
-    using СостоянияЭлементов;
 
-    class N18_MParameters
+    public static class N18_MParameters
     {
         #region Лампочки
+
         //Лампочки
-        public static bool ЛампочкаК3ТЛГ1 { get; set; }
-        public static bool ЛампочкаК3ТЛГ2 { get; set; }
-        public static bool ЛампочкаК3ТЛГ3 { get; set; }
-        public static bool ЛампочкаК3ТЛГ4 { get; set; }
-        public static bool ЛампочкаСПСТест { get; set; }
-        public static bool ЛампочкаСПСИнформ { get; set; }
-        public static bool ЛампочкаПилотК1_1 { get; set; }
-        public static bool ЛампочкаПилотК1_2 { get; set; }
-        public static bool ЛампочкаИнформК1_1 { get; set; }
-        public static bool ЛампочкаИнформК1_2 { get; set; }
+        public static bool ЛампочкаК3ТЛГ1
+        {
+            get { return false; }
+        }
+
+        public static bool ЛампочкаК3ТЛГ2
+        {
+            get { return false; }
+        }
+
+        public static bool ЛампочкаК3ТЛГ3
+        {
+            get { return false; }
+        }
+
+        public static bool ЛампочкаК3ТЛГ4
+        {
+            get { return false; }
+        }
+
+        public static bool ЛампочкаСПСТест
+        {
+            get { return false; }
+        }
+
+        public static bool ЛампочкаСПСИнформ
+        {
+            get { return false; }
+        }
+
+        public static bool ЛампочкаПилотК1_1
+        {
+            get { return false; }
+        }
+
+        public static bool ЛампочкаПилотК1_2
+        {
+            get { return false; }
+        }
+
+        public static bool ЛампочкаИнформК1_1
+        {
+            get { return false; }
+        }
+
+        public static bool ЛампочкаИнформК1_2
+        {
+            get { return false; }
+        }
+
         #endregion
 
         #region Переключатели
@@ -36,7 +76,7 @@
         private static int _переключательВходК121 = 1;
         private static int _переключательПРМ1 = 3;
 
-       
+
         /// <summary>
         /// 1 - б3-2,
         /// 2 - б3-1,
@@ -51,7 +91,6 @@
             }
         }
 
-        
 
         /// <summary>
         /// 1 - б1-1,
@@ -67,7 +106,6 @@
             }
         }
 
-       
 
         /// <summary>
         /// 1 - б1-2,
@@ -83,7 +121,6 @@
             }
         }
 
-        
 
         /// <summary>
         /// 1 - б2,
@@ -97,10 +134,9 @@
                 if (value > 0 && value < 3) _переключатель48ПрмЩв = value;
                 OnParameterChanged();
             }
-        } 
-        #endregion
+        }
 
-        
+        #endregion
 
         /// <summary>
         /// 1 - прм-2,
@@ -119,7 +155,6 @@
             }
         }
 
-        
 
         /// <summary>
         /// 1 - прм-1,
@@ -137,8 +172,7 @@
                 OnParameterChanged();
             }
         }
-        
-       
+
 
         /// <summary>
         /// 1 - тлф-1/2,
@@ -161,7 +195,6 @@
             }
         }
 
-        
 
         /// <summary>
         /// 1 - даб-5,
@@ -181,7 +214,6 @@
             }
         }
 
-       
 
         /// <summary>
         /// 1 - откл,
@@ -202,7 +234,6 @@
             }
         }
 
-        
 
         /// <summary>
         /// 1 - б3-1,
@@ -243,6 +274,7 @@
         #endregion
 
         #region Тумблеры
+
         private static bool _тумблерДАБ5 = false;
         private static bool _тумблерКАУ_ПРМ = false;
         private static bool _тумблерПРД_СС = false;
@@ -287,9 +319,11 @@
                 OnParameterChanged();
             }
         }
+
         #endregion
 
         public delegate void ParameterChangedHandler();
+
         public static event ParameterChangedHandler ParameterChanged;
 
         /// <summary>

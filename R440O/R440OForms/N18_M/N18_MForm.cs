@@ -19,7 +19,7 @@
             N18_MParameters.ParameterChanged += RefreshFormElements;
             RefreshFormElements();
         }
-        
+
         #region Тумблеры
         private void ТумблерДАБ5_Click(object sender, System.EventArgs e)
         {
@@ -190,6 +190,46 @@
 
         public void RefreshFormElements()
         {
+            ЛампочкаКЗТЛГ1.BackgroundImage = N18_MParameters.ЛампочкаК3ТЛГ1
+                ? ControlElementImages.lampType6OnRed
+                : null;
+
+            ЛампочкаКЗТЛГ2.BackgroundImage = N18_MParameters.ЛампочкаК3ТЛГ2
+                ? ControlElementImages.lampType6OnRed
+                : null;
+
+            ЛампочкаКЗТЛГ3.BackgroundImage = N18_MParameters.ЛампочкаК3ТЛГ3
+                ? ControlElementImages.lampType6OnRed
+                : null;
+
+            ЛампочкаКЗТЛГ4.BackgroundImage = N18_MParameters.ЛампочкаК3ТЛГ4
+                ? ControlElementImages.lampType6OnRed
+                : null;
+
+            ЛампочкаСПСТест.BackgroundImage = N18_MParameters.ЛампочкаСПСТест
+                ? ControlElementImages.lampType8OnRed
+                : null;
+
+            ЛампочкаСПСИнформ.BackgroundImage = N18_MParameters.ЛампочкаСПСИнформ
+                ? ControlElementImages.lampType8OnRed
+                : null;
+
+            ЛампочкаПилотК1_1.BackgroundImage = N18_MParameters.ЛампочкаПилотК1_1
+                ? ControlElementImages.lampType8OnRed
+                : null;
+
+            ЛампочкаПилотК1_2.BackgroundImage = N18_MParameters.ЛампочкаПилотК1_2
+                ? ControlElementImages.lampType8OnRed
+                : null;
+
+            ЛампочкаИнформК1_1.BackgroundImage = N18_MParameters.ЛампочкаИнформК1_1
+                ? ControlElementImages.lampType8OnRed
+                : null;
+
+            ЛампочкаИнформК1_2.BackgroundImage = N18_MParameters.ЛампочкаИнформК1_2
+                ? ControlElementImages.lampType8OnRed
+                : null;
+
             ТумблерДАБ5.BackgroundImage = N18_MParameters.ТумблерДАБ5
                 ? ControlElementImages.tumblerType5Right
                 : ControlElementImages.tumblerType5Left;
@@ -251,6 +291,11 @@
             angle = N18_MParameters.ПереключательВходБ22 * 50 - 75;
             ПереключательВходБ22.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+        }
+
+        private void N18_MForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            N18_MParameters.ParameterChanged -= RefreshFormElements;
         }
     }
 }
