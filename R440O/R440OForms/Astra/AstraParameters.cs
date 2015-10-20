@@ -118,10 +118,34 @@ namespace R440O.Parameters
 
         #region Кнопки
 
-        public static bool Кнопка150_270 { get; set; }
-        public static bool Кнопка270_480 { get; set; }
-        public static bool Кнопка480_860 { get; set; }
-        public static bool Кнопка860_1500 { get; set; }
+        private static bool _кнопка150_270;
+        private static bool _кнопка270_480;
+        private static bool _кнопка480_860;
+        private static bool _кнопка860_1500;
+
+        public static bool Кнопка150_270
+        {
+            get { return _кнопка150_270; }
+            set { _кнопка150_270 = value; }
+        }
+
+        public static bool Кнопка270_480
+        {
+            get { return _кнопка270_480; }
+            set { _кнопка270_480 = value; }
+        }
+
+        public static bool Кнопка480_860
+        {
+            get { return _кнопка480_860; }
+            set { _кнопка480_860 = value; }
+        }
+
+        public static bool Кнопка860_1500
+        {
+            get { return _кнопка860_1500; }
+            set { _кнопка860_1500 = value; }
+        }
 
         #endregion
 
