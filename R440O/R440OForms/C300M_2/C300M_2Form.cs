@@ -4,6 +4,8 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+using R440O.BaseClasses;
+
 namespace R440O.R440OForms.C300M_2
 {
     using System.Windows.Forms;
@@ -14,7 +16,7 @@ namespace R440O.R440OForms.C300M_2
     /// <summary>
     /// Форма блока С300М_2
     /// </summary>
-    public partial class C300M_2Form : Form
+    public partial class C300M_2Form : Form, IRefreshableForm
     {
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="C300M_2Form"/>
@@ -22,15 +24,12 @@ namespace R440O.R440OForms.C300M_2
         public C300M_2Form()
         {
             InitializeComponent();
-            C300M_2Parameters.RefreshForm += RefreshForm;
-            
-            RefreshForm();
+            C300M_2Parameters.ParameterChanged += RefreshFormElements;
+            C300M_2Parameters.IndicatorChanged += RefreshIndicator;
+            RefreshIndicator();
+            RefreshFormElements();
         }
 
-        private void timerSearch_Tick(object sender, EventArgs e)
-        {
-            
-        }
 
         #region Кнопки ВИД РАБОТЫ
         /// <summary>
@@ -39,8 +38,8 @@ namespace R440O.R440OForms.C300M_2
         private void КнопкаВидРаботы_Click(object sender, System.EventArgs e)
         {
             var button = sender as Button;
-            C300M_2Parameters.КнопкаВидРаботы= (int)Char.GetNumericValue(button.Name[15]);
-   
+            C300M_2Parameters.КнопкиВидРаботы[(int)Char.GetNumericValue(button.Name[15])] = true;
+
         }
 
         private void КнопкаВидРаботыСброс_MouseDown(object sender, MouseEventArgs e)
@@ -51,7 +50,7 @@ namespace R440O.R440OForms.C300M_2
             C300M_2Parameters.КнопкаВидРаботыСброс = true;
 
         }
-        
+
         private void КнопкаВидРаботыСброс_MouseUp(object sender, MouseEventArgs e)
         {
             this.КнопкаВидРаботыСброс.BackgroundImage = ControlElementImages.buttonSquareWhite;
@@ -65,7 +64,7 @@ namespace R440O.R440OForms.C300M_2
         private void КнопкаКонтрольРежима_Click(object sender, System.EventArgs e)
         {
             var button = sender as Button;
-            C300M_2Parameters.КнопкаКонтрольРежима = (int)Char.GetNumericValue(button.Name[20]);
+            C300M_2Parameters.КнопкиКонтрольРежима[(int)Char.GetNumericValue(button.Name[20])] = true;
         }
 
         private void КнопкаКонтрольРежимаМинус27_MouseDown(object sender, MouseEventArgs e)
@@ -101,7 +100,7 @@ namespace R440O.R440OForms.C300M_2
                 ИндикаторВолна1.Text = System.Convert.ToString(C300M_2Parameters.ПереключательВолна1);
                 ИндикаторВолна1.Visible = true;
             }
-            
+
         }
 
         private void КнопкаИндикацияВолны_MouseUp(object sender, MouseEventArgs e)
@@ -127,10 +126,6 @@ namespace R440O.R440OForms.C300M_2
             {
                 C300M_2Parameters.ПереключательВолна1000 -= 1;
             }
-
-            var angle = C300M_2Parameters.ПереключательВолна1000 * 30 - 135;
-            ПереключательВолна1000.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
         }
 
         private void ПереключательВолна100_MouseUp(object sender, MouseEventArgs e)
@@ -144,10 +139,6 @@ namespace R440O.R440OForms.C300M_2
             {
                 C300M_2Parameters.ПереключательВолна100 -= 1;
             }
-
-            var angle = C300M_2Parameters.ПереключательВолна100 * 30 - 135;
-            ПереключательВолна100.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
         }
 
         private void ПереключательВолна10_MouseUp(object sender, MouseEventArgs e)
@@ -161,10 +152,6 @@ namespace R440O.R440OForms.C300M_2
             {
                 C300M_2Parameters.ПереключательВолна10 -= 1;
             }
-
-            var angle = C300M_2Parameters.ПереключательВолна10 * 30 - 135;
-            ПереключательВолна10.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
         }
 
         private void ПереключательВолна1_MouseUp(object sender, MouseEventArgs e)
@@ -178,23 +165,22 @@ namespace R440O.R440OForms.C300M_2
             {
                 C300M_2Parameters.ПереключательВолна1 -= 1;
             }
-
-            var angle = C300M_2Parameters.ПереключательВолна1 * 30 - 135;
-            ПереключательВолна1.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
         }
         #endregion
 
         #region Инициализация
 
-        private void RefreshForm()
+        public void RefreshIndicator()
         {
             var angle = C300M_2Parameters.ИндикаторСигнал * 1.15F;
             ИндикаторСигнала.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
+        }
 
+        public void RefreshFormElements()
+        {
             // Установка переключателей в положение последней их установки
-            foreach (Control item in C300M_2Panel.Controls)
+            foreach (Control item in Panel.Controls)
             {
                 if (item.Name.Contains("Переключатель"))
                 {
@@ -203,7 +189,7 @@ namespace R440O.R440OForms.C300M_2
                     {
                         if (item.Name == property.Name)
                         {
-                            angle = System.Convert.ToInt32(property.GetValue(null)) * 30 - 135;
+                            var angle = System.Convert.ToInt32(property.GetValue(null)) * 30 - 135;
                             item.BackgroundImage = TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
                             break;
                         }
@@ -212,13 +198,13 @@ namespace R440O.R440OForms.C300M_2
             }
 
             /// Установка кнопок в положение последней их установки
-            foreach (Control item in C300M_2Panel.Controls)
+            foreach (Control item in Panel.Controls)
             {
                 if (item.Name.Contains("КнопкаВидРаботы") && !item.Name.Contains("Сброс"))
                     item.Visible = !(C300M_2Parameters.КнопкиВидРаботы[(int)Char.GetNumericValue(item.Name[15])]);
             }
 
-            foreach (Control item in C300M_2Panel.Controls)
+            foreach (Control item in Panel.Controls)
             {
                 if (item.Name.Contains("КнопкаКонтрольРежима") && !item.Name.Contains("Минус27"))
                     item.Visible = !(C300M_2Parameters.КнопкиКонтрольРежима[(int)Char.GetNumericValue(item.Name[20])]);
