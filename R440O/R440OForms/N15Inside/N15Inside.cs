@@ -27,118 +27,119 @@
         /// <param name="e">Событие закрытия формы</param>
         private void N15InsideForm_FormClosed(object sender, FormClosedEventArgs e)
         {
+            N15InsideParameters.ParameterChanged -= RefreshFormElements;
             Owner.Show();
         }
 
         #region Переключатели
-        private void N15InsideПереключательПУЛ480_1_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательПУЛ480_1_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                N15InsideParameters.ПереключательПУЛ4801 += 1;
+                N15InsideParameters.ПереключательПУЛ480ПРМ_1 += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                N15InsideParameters.ПереключательПУЛ4801 -= 1;
+                N15InsideParameters.ПереключательПУЛ480ПРМ_1 -= 1;
             }
         }
 
-        private void N15InsideПереключательПУЛ480_2_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательПУЛ480_2_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                N15InsideParameters.ПереключательПУЛ4802 += 1;
+                N15InsideParameters.ПереключательПУЛ480ПРМ_2 += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                N15InsideParameters.ПереключательПУЛ4802 -= 1;
+                N15InsideParameters.ПереключательПУЛ480ПРМ_2 -= 1;
             }
         }
 
-        private void N15InsideПереключательПУЛ48ПРД_1_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательПУЛ48ПРД_1_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                N15InsideParameters.ПереключательПУЛ48ПРД1 += 1;
+                N15InsideParameters.ПереключательПУЛ48ПРД_1 += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                N15InsideParameters.ПереключательПУЛ48ПРД1 -= 1;
+                N15InsideParameters.ПереключательПУЛ48ПРД_1 -= 1;
             }
         }
 
-        private void N15InsideПереключательПУЛ48ПРД_2_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательПУЛ48ПРД_2_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                N15InsideParameters.ПереключательПУЛ48ПРД2 += 1;
+                N15InsideParameters.ПереключательПУЛ48ПРД_2 += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                N15InsideParameters.ПереключательПУЛ48ПРД2 -= 1;
+                N15InsideParameters.ПереключательПУЛ48ПРД_2 -= 1;
             }
         }
         #endregion
 
         #region Тумблеры
-        private void N15InsideТумблерПУЛ480ЧтОфт1_Click(object sender, System.EventArgs e)
+        private void ТумблерПУЛ480ПРМ_1_Click(object sender, System.EventArgs e)
         {
-            N15InsideParameters.ТумблерПул480ЧтОфт1 = N15InsideParameters.ТумблерПул480ЧтОфт1 == Модуляция.ЧТ ? Модуляция.ОФТ : Модуляция.ЧТ;
+            N15InsideParameters.ТумблерПУЛ480ПРМ_1 = N15InsideParameters.ТумблерПУЛ480ПРМ_1 == Модуляция.ЧТ ? Модуляция.ОФТ : Модуляция.ЧТ;
         }
 
-        private void N15InsideТумблерПУЛ48ПРДЧтОфт1_Click(object sender, System.EventArgs e)
+        private void ТумблерПУЛ48ПРД_1_Click(object sender, System.EventArgs e)
         {
-            N15InsideParameters.ТумблерПул48ПРДЧтОфт1 = N15InsideParameters.ТумблерПул48ПРДЧтОфт1 == Модуляция.ЧТ ? Модуляция.ОФТ : Модуляция.ЧТ;
+            N15InsideParameters.ТумблерПУЛ48ПРД_1 = N15InsideParameters.ТумблерПУЛ48ПРД_1 == Модуляция.ЧТ ? Модуляция.ОФТ : Модуляция.ЧТ;
         }
 
-        private void N15InsideТумблерПУЛ480ЧтОфт2_Click(object sender, System.EventArgs e)
+        private void ТумблерПУЛ480ПРМ_2_Click(object sender, System.EventArgs e)
         {
-            N15InsideParameters.ТумблерПул480ЧтОфт2 = N15InsideParameters.ТумблерПул480ЧтОфт2 == Модуляция.ЧТ ? Модуляция.ОФТ : Модуляция.ЧТ;
+            N15InsideParameters.ТумблерПУЛ480ПРМ_2 = N15InsideParameters.ТумблерПУЛ480ПРМ_2 == Модуляция.ЧТ ? Модуляция.ОФТ : Модуляция.ЧТ;
         }
 
-        private void N15InsideТумблерПУЛ48ПРДЧтОфт2_Click(object sender, System.EventArgs e)
+        private void ТумблерПУЛ48ПРД_2_Click(object sender, System.EventArgs e)
         {
-            N15InsideParameters.ТумблерПул48ПРДЧтОфт2 = N15InsideParameters.ТумблерПул48ПРДЧтОфт2 == Модуляция.ЧТ ? Модуляция.ОФТ : Модуляция.ЧТ;
+            N15InsideParameters.ТумблерПУЛ48ПРД_2 = N15InsideParameters.ТумблерПУЛ48ПРД_2 == Модуляция.ЧТ ? Модуляция.ОФТ : Модуляция.ЧТ;
         }
 
         #endregion
 
         public void RefreshFormElements()
         {
-            this.N15InsideТумблерПУЛ480ЧтОфт1.BackgroundImage = N15InsideParameters.ТумблерПул480ЧтОфт1 == Модуляция.ЧТ
+            this.ТумблерПУЛ480ПРМ_1.BackgroundImage = N15InsideParameters.ТумблерПУЛ480ПРМ_1 == Модуляция.ЧТ
                ? ControlElementImages.tumblerType4Left
                : ControlElementImages.tumblerType4Right;
 
-            this.N15InsideТумблерПУЛ480ЧтОфт2.BackgroundImage = N15InsideParameters.ТумблерПул480ЧтОфт2 == Модуляция.ЧТ
+            this.ТумблерПУЛ480ПРМ_2.BackgroundImage = N15InsideParameters.ТумблерПУЛ480ПРМ_2 == Модуляция.ЧТ
                 ? ControlElementImages.tumblerType4Left
                 : ControlElementImages.tumblerType4Right;
 
-            this.N15InsideТумблерПУЛ48ПРДЧтОфт1.BackgroundImage = N15InsideParameters.ТумблерПул48ПРДЧтОфт1 == Модуляция.ОФТ
+            this.ТумблерПУЛ48ПРД_1.BackgroundImage = N15InsideParameters.ТумблерПУЛ48ПРД_1 == Модуляция.ОФТ
                 ? ControlElementImages.tumblerType4Left
                 : ControlElementImages.tumblerType4Right;
 
-            this.N15InsideТумблерПУЛ48ПРДЧтОфт2.BackgroundImage = N15InsideParameters.ТумблерПул48ПРДЧтОфт2 == Модуляция.ОФТ
+            this.ТумблерПУЛ48ПРД_2.BackgroundImage = N15InsideParameters.ТумблерПУЛ48ПРД_1 == Модуляция.ОФТ
                 ? ControlElementImages.tumblerType4Left
                 : ControlElementImages.tumblerType4Right;
 
-            var angle = N15InsideParameters.ПереключательПУЛ4801 * 36 + 72;
-            N15InsideПереключательПУЛ480_1.BackgroundImage =
+            var angle = N15InsideParameters.ПереключательПУЛ480ПРМ_1 * 36 + 72;
+            ПереключательПУЛ480ПРМ_1.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType8, angle);
 
-            angle = N15InsideParameters.ПереключательПУЛ4802 * 36 + 72;
-            N15InsideПереключательПУЛ480_2.BackgroundImage =
+            angle = N15InsideParameters.ПереключательПУЛ480ПРМ_2 * 36 + 72;
+            ПереключательПУЛ480ПРМ_2.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType8, angle);
 
-            angle = N15InsideParameters.ПереключательПУЛ48ПРД1 * 30 + 160;
-            N15InsideПереключательПУЛ48ПРД_1.BackgroundImage =
+            angle = N15InsideParameters.ПереключательПУЛ48ПРД_1 * 30 + 160;
+            ПереключательПУЛ48ПРД_1.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType8, angle);
 
-            angle = N15InsideParameters.ПереключательПУЛ48ПРД2 * 30 + 160;
-            N15InsideПереключательПУЛ48ПРД_2.BackgroundImage =
+            angle = N15InsideParameters.ПереключательПУЛ48ПРД_2 * 30 + 160;
+            ПереключательПУЛ48ПРД_2.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType8, angle);
         }
     }
