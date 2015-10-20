@@ -28,203 +28,127 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.N13_2Panel = new System.Windows.Forms.Panel();
-            this.N13_2ЛампочкаПерегрузкаИстКоллектора = new System.Windows.Forms.PictureBox();
-            this.N13_2ЛампочкаПерегрузкаИст3С = new System.Windows.Forms.PictureBox();
-            this.N13_2ЛампочкаАнодВключен = new System.Windows.Forms.PictureBox();
-            this.N13_2ЛампочкаПовторноеВкл = new System.Windows.Forms.PictureBox();
-            this.N13_2Лампочка115В = new System.Windows.Forms.PictureBox();
-            this.N13_2Лампочка27В = new System.Windows.Forms.PictureBox();
-            this.N13_2Лампочка3х200В1 = new System.Windows.Forms.PictureBox();
-            this.N13_2Лампочка3х200В2 = new System.Windows.Forms.PictureBox();
-            this.N13_2Лампочка3х200В3 = new System.Windows.Forms.PictureBox();
-            this.N13_2ИндикаторТокЗамедлСист = new System.Windows.Forms.PictureBox();
-            this.N13_2ИндикаторТокКоллектора = new System.Windows.Forms.PictureBox();
-            this.N13_2Panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.N13_2ЛампочкаПерегрузкаИстКоллектора)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N13_2ЛампочкаПерегрузкаИст3С)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N13_2ЛампочкаАнодВключен)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N13_2ЛампочкаПовторноеВкл)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N13_2Лампочка115В)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N13_2Лампочка27В)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N13_2Лампочка3х200В1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N13_2Лампочка3х200В2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N13_2Лампочка3х200В3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N13_2ИндикаторТокЗамедлСист)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N13_2ИндикаторТокКоллектора)).BeginInit();
+            this.Panel = new System.Windows.Forms.Panel();
+            this.ЛампочкаАнодВключен = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаПерегрузкаИстКоллектора = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.ИндикаторТокКоллектора = new System.Windows.Forms.PictureBox();
+            this.ИндикаторТокЗамедлСистемы = new System.Windows.Forms.PictureBox();
+            this.Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаАнодВключен)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПерегрузкаИстКоллектора)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторТокКоллектора)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторТокЗамедлСистемы)).BeginInit();
             this.SuspendLayout();
             // 
-            // N13_2Panel
+            // Panel
             // 
-            this.N13_2Panel.BackgroundImage = global::R440O.BackgroundImages.N13;
-            this.N13_2Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.N13_2Panel.Controls.Add(this.N13_2ИндикаторТокКоллектора);
-            this.N13_2Panel.Controls.Add(this.N13_2ИндикаторТокЗамедлСист);
-            this.N13_2Panel.Controls.Add(this.N13_2Лампочка3х200В3);
-            this.N13_2Panel.Controls.Add(this.N13_2Лампочка3х200В2);
-            this.N13_2Panel.Controls.Add(this.N13_2Лампочка3х200В1);
-            this.N13_2Panel.Controls.Add(this.N13_2Лампочка27В);
-            this.N13_2Panel.Controls.Add(this.N13_2Лампочка115В);
-            this.N13_2Panel.Controls.Add(this.N13_2ЛампочкаПовторноеВкл);
-            this.N13_2Panel.Controls.Add(this.N13_2ЛампочкаАнодВключен);
-            this.N13_2Panel.Controls.Add(this.N13_2ЛампочкаПерегрузкаИст3С);
-            this.N13_2Panel.Controls.Add(this.N13_2ЛампочкаПерегрузкаИстКоллектора);
-            this.N13_2Panel.Location = new System.Drawing.Point(0, 0);
-            this.N13_2Panel.Name = "N13_2Panel";
-            this.N13_2Panel.Size = new System.Drawing.Size(1104, 435);
-            this.N13_2Panel.TabIndex = 0;
+            this.Panel.BackgroundImage = global::R440O.BackgroundImages.N13;
+            this.Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Panel.Controls.Add(this.pictureBox1);
+            this.Panel.Controls.Add(this.pictureBox3);
+            this.Panel.Controls.Add(this.ИндикаторТокКоллектора);
+            this.Panel.Controls.Add(this.ИндикаторТокЗамедлСистемы);
+            this.Panel.Controls.Add(this.ЛампочкаАнодВключен);
+            this.Panel.Controls.Add(this.ЛампочкаПерегрузкаИстКоллектора);
+            this.Panel.Location = new System.Drawing.Point(0, 0);
+            this.Panel.Name = "Panel";
+            this.Panel.Size = new System.Drawing.Size(1104, 435);
+            this.Panel.TabIndex = 0;
             // 
-            // N13_2ЛампочкаПерегрузкаИстКоллектора
+            // ЛампочкаАнодВключен
             // 
-            this.N13_2ЛампочкаПерегрузкаИстКоллектора.BackColor = System.Drawing.Color.Transparent;
-            this.N13_2ЛампочкаПерегрузкаИстКоллектора.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.N13_2ЛампочкаПерегрузкаИстКоллектора.Location = new System.Drawing.Point(86, 221);
-            this.N13_2ЛампочкаПерегрузкаИстКоллектора.Name = "N13_2ЛампочкаПерегрузкаИстКоллектора";
-            this.N13_2ЛампочкаПерегрузкаИстКоллектора.Size = new System.Drawing.Size(24, 23);
-            this.N13_2ЛампочкаПерегрузкаИстКоллектора.TabIndex = 70;
-            this.N13_2ЛампочкаПерегрузкаИстКоллектора.TabStop = false;
+            this.ЛампочкаАнодВключен.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаАнодВключен.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаАнодВключен.Location = new System.Drawing.Point(637, 207);
+            this.ЛампочкаАнодВключен.Name = "ЛампочкаАнодВключен";
+            this.ЛампочкаАнодВключен.Size = new System.Drawing.Size(24, 23);
+            this.ЛампочкаАнодВключен.TabIndex = 72;
+            this.ЛампочкаАнодВключен.TabStop = false;
             // 
-            // N13_2ЛампочкаПерегрузкаИст3С
+            // ЛампочкаПерегрузкаИстКоллектора
             // 
-            this.N13_2ЛампочкаПерегрузкаИст3С.BackColor = System.Drawing.Color.Transparent;
-            this.N13_2ЛампочкаПерегрузкаИст3С.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.N13_2ЛампочкаПерегрузкаИст3С.Location = new System.Drawing.Point(233, 221);
-            this.N13_2ЛампочкаПерегрузкаИст3С.Name = "N13_2ЛампочкаПерегрузкаИст3С";
-            this.N13_2ЛампочкаПерегрузкаИст3С.Size = new System.Drawing.Size(24, 23);
-            this.N13_2ЛампочкаПерегрузкаИст3С.TabIndex = 71;
-            this.N13_2ЛампочкаПерегрузкаИст3С.TabStop = false;
+            this.ЛампочкаПерегрузкаИстКоллектора.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаПерегрузкаИстКоллектора.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаПерегрузкаИстКоллектора.Location = new System.Drawing.Point(86, 221);
+            this.ЛампочкаПерегрузкаИстКоллектора.Name = "ЛампочкаПерегрузкаИстКоллектора";
+            this.ЛампочкаПерегрузкаИстКоллектора.Size = new System.Drawing.Size(24, 23);
+            this.ЛампочкаПерегрузкаИстКоллектора.TabIndex = 70;
+            this.ЛампочкаПерегрузкаИстКоллектора.TabStop = false;
             // 
-            // N13_2ЛампочкаАнодВключен
+            // pictureBox1
             // 
-            this.N13_2ЛампочкаАнодВключен.BackColor = System.Drawing.Color.Transparent;
-            this.N13_2ЛампочкаАнодВключен.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.N13_2ЛампочкаАнодВключен.Location = new System.Drawing.Point(637, 207);
-            this.N13_2ЛампочкаАнодВключен.Name = "N13_2ЛампочкаАнодВключен";
-            this.N13_2ЛампочкаАнодВключен.Size = new System.Drawing.Size(24, 23);
-            this.N13_2ЛампочкаАнодВключен.TabIndex = 72;
-            this.N13_2ЛампочкаАнодВключен.TabStop = false;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Location = new System.Drawing.Point(454, 303);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(118, 56);
+            this.pictureBox1.TabIndex = 86;
+            this.pictureBox1.TabStop = false;
             // 
-            // N13_2ЛампочкаПовторноеВкл
+            // pictureBox3
             // 
-            this.N13_2ЛампочкаПовторноеВкл.BackColor = System.Drawing.Color.Transparent;
-            this.N13_2ЛампочкаПовторноеВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.N13_2ЛампочкаПовторноеВкл.Location = new System.Drawing.Point(638, 259);
-            this.N13_2ЛампочкаПовторноеВкл.Name = "N13_2ЛампочкаПовторноеВкл";
-            this.N13_2ЛампочкаПовторноеВкл.Size = new System.Drawing.Size(24, 23);
-            this.N13_2ЛампочкаПовторноеВкл.TabIndex = 73;
-            this.N13_2ЛампочкаПовторноеВкл.TabStop = false;
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Location = new System.Drawing.Point(300, 303);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(122, 56);
+            this.pictureBox3.TabIndex = 85;
+            this.pictureBox3.TabStop = false;
             // 
-            // N13_2Лампочка115В
+            // ИндикаторТокКоллектора
             // 
-            this.N13_2Лампочка115В.BackColor = System.Drawing.Color.Transparent;
-            this.N13_2Лампочка115В.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.N13_2Лампочка115В.Location = new System.Drawing.Point(738, 230);
-            this.N13_2Лампочка115В.Name = "N13_2Лампочка115В";
-            this.N13_2Лампочка115В.Size = new System.Drawing.Size(24, 23);
-            this.N13_2Лампочка115В.TabIndex = 74;
-            this.N13_2Лампочка115В.TabStop = false;
+            this.ИндикаторТокКоллектора.BackColor = System.Drawing.Color.Transparent;
+            this.ИндикаторТокКоллектора.BackgroundImage = global::R440O.ControlElementImages.arrow2;
+            this.ИндикаторТокКоллектора.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ИндикаторТокКоллектора.Location = new System.Drawing.Point(454, 245);
+            this.ИндикаторТокКоллектора.Name = "ИндикаторТокКоллектора";
+            this.ИндикаторТокКоллектора.Size = new System.Drawing.Size(118, 116);
+            this.ИндикаторТокКоллектора.TabIndex = 84;
+            this.ИндикаторТокКоллектора.TabStop = false;
             // 
-            // N13_2Лампочка27В
+            // ИндикаторТокЗамедлСистемы
             // 
-            this.N13_2Лампочка27В.BackColor = System.Drawing.Color.Transparent;
-            this.N13_2Лампочка27В.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.N13_2Лампочка27В.Location = new System.Drawing.Point(776, 230);
-            this.N13_2Лампочка27В.Name = "N13_2Лампочка27В";
-            this.N13_2Лампочка27В.Size = new System.Drawing.Size(24, 23);
-            this.N13_2Лампочка27В.TabIndex = 75;
-            this.N13_2Лампочка27В.TabStop = false;
-            // 
-            // N13_2Лампочка3х200В1
-            // 
-            this.N13_2Лампочка3х200В1.BackColor = System.Drawing.Color.Transparent;
-            this.N13_2Лампочка3х200В1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.N13_2Лампочка3х200В1.Location = new System.Drawing.Point(811, 230);
-            this.N13_2Лампочка3х200В1.Name = "N13_2Лампочка3х200В1";
-            this.N13_2Лампочка3х200В1.Size = new System.Drawing.Size(24, 23);
-            this.N13_2Лампочка3х200В1.TabIndex = 76;
-            this.N13_2Лампочка3х200В1.TabStop = false;
-            // 
-            // N13_2Лампочка3х200В2
-            // 
-            this.N13_2Лампочка3х200В2.BackColor = System.Drawing.Color.Transparent;
-            this.N13_2Лампочка3х200В2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.N13_2Лампочка3х200В2.Location = new System.Drawing.Point(846, 230);
-            this.N13_2Лампочка3х200В2.Name = "N13_2Лампочка3х200В2";
-            this.N13_2Лампочка3х200В2.Size = new System.Drawing.Size(24, 23);
-            this.N13_2Лампочка3х200В2.TabIndex = 77;
-            this.N13_2Лампочка3х200В2.TabStop = false;
-            // 
-            // N13_2Лампочка3х200В3
-            // 
-            this.N13_2Лампочка3х200В3.BackColor = System.Drawing.Color.Transparent;
-            this.N13_2Лампочка3х200В3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.N13_2Лампочка3х200В3.Location = new System.Drawing.Point(879, 230);
-            this.N13_2Лампочка3х200В3.Name = "N13_2Лампочка3х200В3";
-            this.N13_2Лампочка3х200В3.Size = new System.Drawing.Size(24, 23);
-            this.N13_2Лампочка3х200В3.TabIndex = 78;
-            this.N13_2Лампочка3х200В3.TabStop = false;
-            // 
-            // N13_2ИндикаторТокЗамедлСист
-            // 
-            this.N13_2ИндикаторТокЗамедлСист.BackColor = System.Drawing.Color.Transparent;
-            this.N13_2ИндикаторТокЗамедлСист.BackgroundImage = global::R440O.ControlElementImages.arrowNormal;
-            this.N13_2ИндикаторТокЗамедлСист.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.N13_2ИндикаторТокЗамедлСист.Location = new System.Drawing.Point(327, 244);
-            this.N13_2ИндикаторТокЗамедлСист.Name = "N13_2ИндикаторТокЗамедлСист";
-            this.N13_2ИндикаторТокЗамедлСист.Size = new System.Drawing.Size(64, 59);
-            this.N13_2ИндикаторТокЗамедлСист.TabIndex = 79;
-            this.N13_2ИндикаторТокЗамедлСист.TabStop = false;
-            // 
-            // N13_2ИндикаторТокКоллектора
-            // 
-            this.N13_2ИндикаторТокКоллектора.BackColor = System.Drawing.Color.Transparent;
-            this.N13_2ИндикаторТокКоллектора.BackgroundImage = global::R440O.ControlElementImages.arrowNormal;
-            this.N13_2ИндикаторТокКоллектора.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.N13_2ИндикаторТокКоллектора.Location = new System.Drawing.Point(481, 244);
-            this.N13_2ИндикаторТокКоллектора.Name = "N13_2ИндикаторТокКоллектора";
-            this.N13_2ИндикаторТокКоллектора.Size = new System.Drawing.Size(64, 59);
-            this.N13_2ИндикаторТокКоллектора.TabIndex = 80;
-            this.N13_2ИндикаторТокКоллектора.TabStop = false;
+            this.ИндикаторТокЗамедлСистемы.BackColor = System.Drawing.Color.Transparent;
+            this.ИндикаторТокЗамедлСистемы.BackgroundImage = global::R440O.ControlElementImages.arrow2;
+            this.ИндикаторТокЗамедлСистемы.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ИндикаторТокЗамедлСистемы.Location = new System.Drawing.Point(300, 245);
+            this.ИндикаторТокЗамедлСистемы.Name = "ИндикаторТокЗамедлСистемы";
+            this.ИндикаторТокЗамедлСистемы.Size = new System.Drawing.Size(122, 116);
+            this.ИндикаторТокЗамедлСистемы.TabIndex = 83;
+            this.ИндикаторТокЗамедлСистемы.TabStop = false;
             // 
             // N13_2Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1106, 434);
-            this.Controls.Add(this.N13_2Panel);
+            this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "N13_2Form";
-            this.Text = "Н13-1";
-            this.N13_2Panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.N13_2ЛампочкаПерегрузкаИстКоллектора)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N13_2ЛампочкаПерегрузкаИст3С)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N13_2ЛампочкаАнодВключен)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N13_2ЛампочкаПовторноеВкл)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N13_2Лампочка115В)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N13_2Лампочка27В)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N13_2Лампочка3х200В1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N13_2Лампочка3х200В2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N13_2Лампочка3х200В3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N13_2ИндикаторТокЗамедлСист)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.N13_2ИндикаторТокКоллектора)).EndInit();
+            this.Text = "Н13-2";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.N13_2Form_FormClosed);
+            this.Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаАнодВключен)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПерегрузкаИстКоллектора)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторТокКоллектора)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ИндикаторТокЗамедлСистемы)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel N13_2Panel;
-        private System.Windows.Forms.PictureBox N13_2Лампочка3х200В3;
-        private System.Windows.Forms.PictureBox N13_2Лампочка3х200В2;
-        private System.Windows.Forms.PictureBox N13_2Лампочка3х200В1;
-        private System.Windows.Forms.PictureBox N13_2Лампочка27В;
-        private System.Windows.Forms.PictureBox N13_2Лампочка115В;
-        private System.Windows.Forms.PictureBox N13_2ЛампочкаПовторноеВкл;
-        private System.Windows.Forms.PictureBox N13_2ЛампочкаАнодВключен;
-        private System.Windows.Forms.PictureBox N13_2ЛампочкаПерегрузкаИст3С;
-        private System.Windows.Forms.PictureBox N13_2ЛампочкаПерегрузкаИстКоллектора;
-        private System.Windows.Forms.PictureBox N13_2ИндикаторТокКоллектора;
-        private System.Windows.Forms.PictureBox N13_2ИндикаторТокЗамедлСист;
+        private System.Windows.Forms.Panel Panel;
+        private System.Windows.Forms.PictureBox ЛампочкаАнодВключен;
+        private System.Windows.Forms.PictureBox ЛампочкаПерегрузкаИстКоллектора;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox ИндикаторТокКоллектора;
+        private System.Windows.Forms.PictureBox ИндикаторТокЗамедлСистемы;
     }
 }
