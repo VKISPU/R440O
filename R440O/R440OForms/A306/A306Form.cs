@@ -1,4 +1,6 @@
-﻿namespace R440O.R440OForms.A306
+﻿using R440O.BaseClasses;
+
+namespace R440O.R440OForms.A306
 {
     using System;
     using System.Drawing;
@@ -7,7 +9,7 @@
     /// <summary>
     /// Форма блока А306
     /// </summary>
-    public partial class A306Form : Form
+    public partial class A306Form : Form, IRefreshableForm
     {
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="A306Form"/>.
@@ -15,7 +17,7 @@
         public A306Form()
         {
             InitializeComponent();
-            A306Parameters.ParameterChanged += RefreshForm;
+            A306Parameters.ParameterChanged += RefreshFormElements;
         }
 
         #region Тумблеры
@@ -206,7 +208,7 @@
         /// <summary>
         /// Обновление формы
         /// </summary>
-        private void RefreshForm()
+        public void RefreshFormElements()
         {
             //Лампочки
             ЛампочкаСетьВкл.BackgroundImage = A306Parameters.ЛампочкаСетьВкл
@@ -305,12 +307,12 @@
         /// </summary>
         private void PanelDraw_Enter(object sender, EventArgs e)
         {
-            RefreshForm();
+            RefreshFormElements();
         }
 
         private void A306Form_FormClosed(object sender, FormClosedEventArgs e)
         {
-            A306Parameters.ParameterChanged -= RefreshForm;
+            A306Parameters.ParameterChanged -= RefreshFormElements;
         }
     }
 }

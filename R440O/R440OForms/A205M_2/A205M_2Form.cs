@@ -1,4 +1,6 @@
-﻿namespace R440O.R440OForms.A205M_2
+﻿using R440O.BaseClasses;
+
+namespace R440O.R440OForms.A205M_2
 {
     using System.Windows.Forms;
     using ThirdParty;
@@ -6,7 +8,7 @@
     /// <summary>
     /// Форма блока А205М-1
     /// </summary>
-    public partial class A205M_2Form : Form
+    public partial class A205M_2Form : Form, IRefreshableForm
     {
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="A205M_2Form"/>.
@@ -14,13 +16,13 @@
         public A205M_2Form()
         {
             this.InitializeComponent();
-            A205M_2Parameters.ParameterChanged += RefreshForm;
-            RefreshForm();
+            A205M_2Parameters.ParameterChanged += RefreshFormElements;
+            RefreshFormElements();
         }
 
         #region Инициализация элементов управления формы
 
-        private void RefreshForm()
+        public void RefreshFormElements()
         {
             var angle = A205M_2Parameters.ИндикаторКонтроль * 2.2F - 55;
             ИндикаторКонтроль.BackgroundImage =
@@ -211,7 +213,7 @@
 
         private void A205M_2Form_FormClosed(object sender, FormClosedEventArgs e)
         {
-            A205M_2Parameters.ParameterChanged -= RefreshForm;
+            A205M_2Parameters.ParameterChanged -= RefreshFormElements;
         }
     }
 }

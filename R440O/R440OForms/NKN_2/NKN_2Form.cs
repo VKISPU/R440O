@@ -1,11 +1,13 @@
-﻿namespace R440O.R440OForms.NKN_2
+﻿using R440O.BaseClasses;
+
+namespace R440O.R440OForms.NKN_2
 {
     using System.Windows.Forms;
 
     /// <summary>
     /// Форма блока НКН-1
     /// </summary>
-    public partial class NKN_2Form : Form
+    public partial class NKN_2Form : Form, IRefreshableForm
     {
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="NKN_2Form"/>
@@ -13,14 +15,14 @@
         public NKN_2Form()
         {
             this.InitializeComponent();
-            NKN_2Parameters.ParameterChanged += RefreshForm;
-            RefreshForm();
+            NKN_2Parameters.ParameterChanged += RefreshFormElements;
+            RefreshFormElements();
         }
 
         /// <summary>
         /// Инициализация начальных положений
         /// </summary>
-        private void RefreshForm()
+        public void RefreshFormElements()
         {
             ЛампочкаМУ.BackgroundImage = NKN_2Parameters.ЛампочкаМУ
                 ? ControlElementImages.lampType9OnGreen
@@ -62,7 +64,7 @@
 
         private void NKN_2Form_FormClosed(object sender, FormClosedEventArgs e)
         {
-            NKN_2Parameters.ParameterChanged -= RefreshForm;
+            NKN_2Parameters.ParameterChanged -= RefreshFormElements;
         }
     }
 }

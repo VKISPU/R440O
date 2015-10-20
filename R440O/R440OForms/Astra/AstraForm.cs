@@ -4,6 +4,8 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+using R440O.BaseClasses;
+
 namespace R440O.R440OForms.Astra
 {
     using System.Windows.Forms;
@@ -13,7 +15,7 @@ namespace R440O.R440OForms.Astra
     /// <summary>
     /// Форма блока Астра
     /// </summary>
-    public partial class AstraForm : Form
+    public partial class AstraForm : Form, IRefreshableForm
     {
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="AstraForm"/>.
@@ -26,7 +28,7 @@ namespace R440O.R440OForms.Astra
         }
 
         #region Инициализация
-        private void RefreshFormElements()
+        public void RefreshFormElements()
         {
             //переключатели
 
@@ -76,29 +78,29 @@ namespace R440O.R440OForms.Astra
 
         private void AstraКнопка150_270_Click(object sender, System.EventArgs e)
         {
-            switchToButton(1);
+            SwitchToButton(1);
         }
 
         private void AstraКнопка270_480_Click(object sender, System.EventArgs e)
         {
-            switchToButton(2);
+            SwitchToButton(2);
         }
 
         private void AstraКнопка480_860_Click(object sender, System.EventArgs e)
         {
-            switchToButton(3);
+            SwitchToButton(3);
         }
 
         private void AstraКнопка860_1500_Click(object sender, System.EventArgs e)
         {
-            switchToButton(4);
+            SwitchToButton(4);
         }
 
         /// <summary>
         /// Переключает на нажатую пользователем кнопку, определяющую некоторый заданный диапазон.
         /// </summary>
         /// <param name="numberOfButton">Номер нажатой кнопки по порядку слева направо.</param>
-        private void switchToButton(int numberOfButton)
+        private void SwitchToButton(int numberOfButton)
         {
             AstraParameters.Кнопка150_270 = numberOfButton == 1;
             AstraParameters.Кнопка270_480 = numberOfButton == 2;
