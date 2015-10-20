@@ -37,7 +37,7 @@
             this.Лампочка1Комплект_3 = new System.Windows.Forms.PictureBox();
             this.Лампочка1Комплект_2 = new System.Windows.Forms.PictureBox();
             this.Лампочка1Комплект_1 = new System.Windows.Forms.PictureBox();
-            this.Тублер1К2К = new System.Windows.Forms.Button();
+            this.ТублерКомплект = new System.Windows.Forms.Button();
             this.A403_3Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Лампочка2Комплект_4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Лампочка2Комплект_3)).BeginInit();
@@ -61,7 +61,7 @@
             this.A403_3Panel.Controls.Add(this.Лампочка1Комплект_3);
             this.A403_3Panel.Controls.Add(this.Лампочка1Комплект_2);
             this.A403_3Panel.Controls.Add(this.Лампочка1Комплект_1);
-            this.A403_3Panel.Controls.Add(this.Тублер1К2К);
+            this.A403_3Panel.Controls.Add(this.ТублерКомплект);
             this.A403_3Panel.Location = new System.Drawing.Point(0, 0);
             this.A403_3Panel.Name = "A403_3Panel";
             this.A403_3Panel.Size = new System.Drawing.Size(721, 592);
@@ -147,21 +147,21 @@
             this.Лампочка1Комплект_1.TabIndex = 68;
             this.Лампочка1Комплект_1.TabStop = false;
             // 
-            // Тублер1К2К
+            // ТублерКомплект
             // 
-            this.Тублер1К2К.BackColor = System.Drawing.Color.Transparent;
-            this.Тублер1К2К.BackgroundImage = global::R440O.ControlElementImages.tumblerType1Left;
-            this.Тублер1К2К.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Тублер1К2К.FlatAppearance.BorderSize = 0;
-            this.Тублер1К2К.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Тублер1К2К.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Тублер1К2К.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Тублер1К2К.Location = new System.Drawing.Point(329, 86);
-            this.Тублер1К2К.Name = "Тублер1К2К";
-            this.Тублер1К2К.Size = new System.Drawing.Size(76, 55);
-            this.Тублер1К2К.TabIndex = 29;
-            this.Тублер1К2К.UseVisualStyleBackColor = false;
-            this.Тублер1К2К.Click += new System.EventHandler(this.Тублер1К2К_Click);
+            this.ТублерКомплект.BackColor = System.Drawing.Color.Transparent;
+            this.ТублерКомплект.BackgroundImage = global::R440O.ControlElementImages.tumblerType1Left;
+            this.ТублерКомплект.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ТублерКомплект.FlatAppearance.BorderSize = 0;
+            this.ТублерКомплект.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТублерКомплект.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТублерКомплект.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТублерКомплект.Location = new System.Drawing.Point(329, 86);
+            this.ТублерКомплект.Name = "ТублерКомплект";
+            this.ТублерКомплект.Size = new System.Drawing.Size(76, 55);
+            this.ТублерКомплект.TabIndex = 29;
+            this.ТублерКомплект.UseVisualStyleBackColor = false;
+            this.ТублерКомплект.Click += new System.EventHandler(this.ТублерКомплект_Click);
             // 
             // A403_3Form
             // 
@@ -174,6 +174,7 @@
             this.Name = "A403_3Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "A403-3";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.A403_3Form_FormClosed);
             this.A403_3Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Лампочка2Комплект_4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Лампочка2Комплект_3)).EndInit();
@@ -190,7 +191,7 @@
         #endregion
 
         private System.Windows.Forms.Panel A403_3Panel;
-        private System.Windows.Forms.Button Тублер1К2К;
+        private System.Windows.Forms.Button ТублерКомплект;
         private System.Windows.Forms.PictureBox Лампочка2Комплект_4;
         private System.Windows.Forms.PictureBox Лампочка2Комплект_3;
         private System.Windows.Forms.PictureBox Лампочка2Комплект_2;

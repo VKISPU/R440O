@@ -37,6 +37,27 @@ namespace R440O.R440OForms.A403_1
             }
         }
 
+        /// <summary>
+        /// Показывает, было ли записано значение в ДисплейЗначения
+        /// </summary>
+        public static bool IsWritten { get; set; }
+
+        /// <summary>
+        /// true - 1 комплект, false - 2 комплект
+        /// </summary>
+        public static bool Комплект
+        {
+            get { return _комплект; }
+            set
+            {
+                if (_комплект != value)
+                    Time = 0;
+                _комплект = value;
+            }
+        }
+
+        #region Private
+
         private static bool _включен;
         private static bool _тумблерСеть;
         private static bool _тумблерГотов;
@@ -44,6 +65,10 @@ namespace R440O.R440OForms.A403_1
         private static bool _тумблерГруппа;
         private static bool _тумблерКомплект;
         private static string _значение = "";
+        private static bool _кнопкаУстВремени;
+        private static bool _комплект;
+
+        #endregion
 
         #region Таймер
 
@@ -60,19 +85,22 @@ namespace R440O.R440OForms.A403_1
         /// <summary>
         /// Обработчик события тика таймера: инкремент времени
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         public static void timer_Tick(object sender, EventArgs e)
         {
-            if (Array.IndexOf(КнопкиПараметры.ToArray(), true) == -1)
+            if (КнопкиПараметры.PressedButton == -1)
             {
                 //форматированная запись в значение для последующего отображения на дисплее
                 _значение = " " + (Time / 3600 / 10) + (Time / 3600 % 10) +
                            (Time / 60 % 60 / 10) + (Time / 60 % 60 % 10) +
                            (Time % 60 / 10) + (Time % 60 % 10);
+                if (Time > 86400)
+                {
+                    _значение = "";
+                    Time = 0;
+                }
+                OnDisplayChanged();
             }
             Time++;
-            OnParameterChanged();
         }
 
         #endregion
@@ -84,7 +112,7 @@ namespace R440O.R440OForms.A403_1
         /// </summary>
         public static bool ЛампочкаКомплект1
         {
-            get { return Включен && ТумблерКомплект; }
+            get { return Включен && Комплект; }
         }
 
         /// <summary>
@@ -92,7 +120,7 @@ namespace R440O.R440OForms.A403_1
         /// </summary>
         public static bool ЛампочкаКомплект2
         {
-            get { return Включен && !ТумблерКомплект; }
+            get { return Включен && !Комплект; }
         }
 
         #endregion
@@ -101,10 +129,7 @@ namespace R440O.R440OForms.A403_1
 
         public static bool ТумблерСеть
         {
-            get
-            {
-                return _тумблерСеть;
-            }
+            get { return _тумблерСеть; }
             set
             {
                 _тумблерСеть = value;
@@ -141,10 +166,12 @@ namespace R440O.R440OForms.A403_1
             get { return _тумблерГруппа; }
             set
             {
-                ДисплейЗначения[(ТумблерГруппа) ? 0 : 1, Array.IndexOf(КнопкиПараметры.ToArray(), true)] = Значение;
-                Значение = "";
-
                 _тумблерГруппа = value;
+                if (Включен && КнопкиПараметры.PressedButton != -1)
+                {
+                    _значение = "";
+                    IsWritten = false;
+                }
                 OnParameterChanged();
             }
         }
@@ -158,6 +185,9 @@ namespace R440O.R440OForms.A403_1
             get { return _тумблерКомплект; }
             set
             {
+                if ((value && !Комплект) || (!value && Комплект))
+                    Комплект = !Комплект;
+
                 _тумблерКомплект = value;
                 OnParameterChanged();
             }
@@ -243,6 +273,22 @@ namespace R440O.R440OForms.A403_1
         /// </summary>
         public static A403_1Кнопки КнопкиПараметры = new A403_1Кнопки();
 
+        public static bool КнопкаУстВремени
+        {
+            get { return _кнопкаУстВремени; }
+            set
+            {
+                if (Включен && !value && !ТумблерАвтКоррекция)
+                {
+                    int hours = Int32.Parse(ДисплейЗначения[0, 8].Substring(1, 2));
+                    int minutes = Int32.Parse(ДисплейЗначения[0, 8].Substring(3, 2));
+                    int seconds = Int32.Parse(ДисплейЗначения[0, 8].Substring(5, 2));
+                    Time = hours * 3600 + minutes * 60 + seconds;
+                }
+
+                _кнопкаУстВремени = value;
+            }
+        }
         #endregion
 
         #region Табло
@@ -252,9 +298,10 @@ namespace R440O.R440OForms.A403_1
         /// </summary>
         public static A403_1ЗначенияПараметров ДисплейЗначения = new A403_1ЗначенияПараметров();
 
+
         /// <summary>
         /// Свойство для хранения:
-        /// введенного на табло значения но не сохраненного в ДисплейЗначения 
+        /// введенного на табло значения но не сохраненного в ДисплейЗначения, а также
         /// отображения времени таймера
         /// </summary>
         public static string Значение
@@ -262,19 +309,24 @@ namespace R440O.R440OForms.A403_1
             get { return _значение; }
             set
             {
-                if ((Array.IndexOf(КнопкиПараметры.ToArray(), true) == 2 ||
-                    Array.IndexOf(КнопкиПараметры.ToArray(), true) == 3) && !ТумблерГруппа)
+                if (Включен && !IsWritten)
                 {
-                    if (value.Length <= 2)
+                    if ((КнопкиПараметры.PressedButton == 2 || КнопкиПараметры.PressedButton == 3)
+                        && !ТумблерГруппа && value.Length == 2)
+                    {
+                            ДисплейЗначения[ТумблерГруппа ? 0 : 1, КнопкиПараметры.PressedButton] = value;
+                            _значение = "";
+                    }
+                    else if (value.Length == 7)
+                    {
+                        ДисплейЗначения[ТумблерГруппа ? 0 : 1, КнопкиПараметры.PressedButton] = value;
+                        _значение = "";
+                    }
+                    else if (value.Length <= 7 && КнопкиПараметры.PressedButton != -1)
                     {
                         _значение = value;
-                        OnParameterChanged();
+                        OnDisplayChanged();
                     }
-                }
-                else if (Включен && value.Length <= 7 && Array.IndexOf(A403_1Кнопки.КнопкиПараметры, true) != -1)
-                {
-                    _значение = value;
-                    OnParameterChanged();
                 }
             }
         }
@@ -282,6 +334,7 @@ namespace R440O.R440OForms.A403_1
         #endregion
 
         public delegate void ParameterChangedHandler();
+
         public static event ParameterChangedHandler ParameterChanged;
 
         private static void OnParameterChanged()
@@ -294,8 +347,28 @@ namespace R440O.R440OForms.A403_1
         {
             OnParameterChanged();
         }
-    }
 
+        #region DisplayReset
+
+        public delegate void DisplayChangedHandler();
+
+        public static event DisplayChangedHandler DisplayChanged;
+
+        private static void OnDisplayChanged()
+        {
+            var handler = DisplayChanged;
+            if (handler != null) handler();
+        }
+
+        public static void ResetDisplay()
+        {
+            OnDisplayChanged();
+        }
+
+        #endregion
+    }
+ 
+    #region IndexerClass
     public class A403_1Кнопки
     {
         // Для кнопки сброс также есть параметр чтобы отслеживать ее нажатие в данном классе, иначе не получается реализовать 
@@ -310,14 +383,6 @@ namespace R440O.R440OForms.A403_1
             }
             set
             {
-                //если нажата кнопка ввода параметров и мы ее отжимаем, запоминаем значение
-                if (Array.IndexOf(КнопкиПараметры, true) != -1)
-                {
-                    A403_1Parameters.ДисплейЗначения[(A403_1Parameters.ТумблерГруппа) ? 0 : 1,
-                        Array.IndexOf(КнопкиПараметры, true)] = A403_1Parameters.Значение;
-                }
-                A403_1Parameters.Значение = "";
-
                 if (buttonNumber == 9) //если кнопка сброс - отжать все кнопки
                 {
                     for (int i = 0; i < 9; i++)
@@ -329,44 +394,66 @@ namespace R440O.R440OForms.A403_1
                         КнопкиПараметры[i] = false;
 
                     КнопкиПараметры[buttonNumber] = true;
+                    A403_1Parameters.IsWritten = false;
                 }
 
                 A403_1Parameters.ResetParameters();
             }
         }
 
-        public bool[] ToArray()
+        public int PressedButton
         {
-            return КнопкиПараметры;
+            get { return Array.IndexOf(КнопкиПараметры, true); }
         }
     }
 
     public class A403_1ЗначенияПараметров
     {
-        public static string[,] ДисплейЗначения = {  { "", "", "", "", "", "", "", "", ""},
-                                                  { "", "", "", "", "", "", "", "", ""}    };
-        public string this[int комплект, int номерКнопки]
+        public static string[,] ДисплейЗначения =
         {
-            get { return ДисплейЗначения[комплект, номерКнопки]; }
+            {"", "", "", "", "", "", "", "", "+000000"},
+            {"", "", "", "", "", "", "", "", ""}
+        };
+
+        public string this[int группа, int номерКнопки]
+        {
+            get { return ДисплейЗначения[группа, номерКнопки]; }
             set
             {
                 //ограничения на размер хранимых значений
-                if (комплект == 1 && value.Length == 2
-                    && (Array.IndexOf(A403_1Parameters.КнопкиПараметры.ToArray(), true) == 2
-                    || Array.IndexOf(A403_1Parameters.КнопкиПараметры.ToArray(), true) == 3))
+                if (A403_1Parameters.КнопкиПараметры.PressedButton == 8 && группа == 0
+                    && value.Length == 7) //установка времени
                 {
-                    ДисплейЗначения[комплект, номерКнопки] = value;
-                }
-                else if (Array.IndexOf(A403_1Parameters.КнопкиПараметры.ToArray(), true) != -1 && value.Length == 7)
-                {
-                    ДисплейЗначения[комплект, номерКнопки] = value;
-                }
-            }
-        }
+                    int hours = Int32.Parse(value.Substring(1, 2));
+                    int minutes = Int32.Parse(value.Substring(3, 2));
+                    int seconds = Int32.Parse(value.Substring(5, 2));
+                    int time = hours*3600 + minutes*60 + seconds;
 
-        public string[,] ToArray()
-        {
-            return ДисплейЗначения;
+                    ДисплейЗначения[0, 8] = (time > 86400) 
+                        ? "+275135"
+                        : "+" + (time / 3600 / 10) + (time / 3600 % 10) +
+                           (time / 60 % 60 / 10) + (time / 60 % 60 % 10) +
+                           (time % 60 / 10) + (time % 60 % 10);
+                }
+                else if (группа == 1 && value.Length == 2
+                         && (A403_1Parameters.КнопкиПараметры.PressedButton == 2
+                             || A403_1Parameters.КнопкиПараметры.PressedButton == 3))
+                {
+                    ДисплейЗначения[группа, номерКнопки] = value;
+                }
+                else if (A403_1Parameters.КнопкиПараметры.PressedButton != -1 && value.Length == 7)
+                {
+                    ДисплейЗначения[группа, номерКнопки] = value;
+                }
+                else
+                {
+                    return;
+                }
+
+                A403_1Parameters.Значение = "";
+                A403_1Parameters.ResetDisplay();
+                A403_1Parameters.IsWritten = true;
+            }
         }
 
         public void ОчиститьЗначения()
@@ -378,4 +465,6 @@ namespace R440O.R440OForms.A403_1
             }
         }
     }
+
+    #endregion
 }

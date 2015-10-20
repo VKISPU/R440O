@@ -4,6 +4,8 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+using R440O.BaseClasses;
+
 namespace R440O.R440OForms.A403_3
 {
     using System.Windows.Forms;
@@ -11,33 +13,63 @@ namespace R440O.R440OForms.A403_3
     /// <summary>
     /// Форма блока A403-3
     /// </summary>
-    public partial class A403_3Form : Form
+    public partial class A403_3Form : Form, IRefreshableForm
     {
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="A403_3Form"/>.
         /// </summary>
         public A403_3Form()
         {
-            this.InitializeComponent();
-            this.InitializeControls();
+            InitializeComponent();
+            A403_3Parameters.ParameterChanged += RefreshFormElements;
+            RefreshFormElements();
         }
 
         /// <summary>
         /// Задание начального положения тумблера для выбора комплекта блока
         /// </summary>
-        private void InitializeControls()
+        public void RefreshFormElements()
         {
-            Тублер1К2К.BackgroundImage = A403_3Parameters.Тублер1К2К
+            ТублерКомплект.BackgroundImage = A403_3Parameters.ТублерКомплект
                 ? ControlElementImages.tumblerType4Left
                 : ControlElementImages.tumblerType4Right;
+
+            //лампочки
+            Лампочка1Комплект_1.BackgroundImage = A403_3Parameters.Лампочка1Комплект_1
+                ? ControlElementImages.lampType5OnRed
+                : null;
+            Лампочка1Комплект_2.BackgroundImage = A403_3Parameters.Лампочка1Комплект_2
+                ? ControlElementImages.lampType5OnRed
+                : null;
+            Лампочка1Комплект_3.BackgroundImage = A403_3Parameters.Лампочка1Комплект_3
+                ? ControlElementImages.lampType5OnRed
+                : null;
+            Лампочка1Комплект_4.BackgroundImage = A403_3Parameters.Лампочка1Комплект_4
+                ? ControlElementImages.lampType5OnRed
+                : null;
+
+            Лампочка2Комплект_1.BackgroundImage = A403_3Parameters.Лампочка2Комплект_1
+                ? ControlElementImages.lampType5OnRed
+                : null;
+            Лампочка2Комплект_2.BackgroundImage = A403_3Parameters.Лампочка2Комплект_2
+                ? ControlElementImages.lampType5OnRed
+                : null;
+            Лампочка2Комплект_3.BackgroundImage = A403_3Parameters.Лампочка2Комплект_3
+                ? ControlElementImages.lampType5OnRed
+                : null;
+            Лампочка2Комплект_4.BackgroundImage = A403_3Parameters.Лампочка2Комплект_4
+                ? ControlElementImages.lampType5OnRed
+                : null;
         }
 
-        private void Тублер1К2К_Click(object sender, System.EventArgs e)
+        private void ТублерКомплект_Click(object sender, System.EventArgs e)
         {
-            A403_3Parameters.Тублер1К2К = !A403_3Parameters.Тублер1К2К;
-            Тублер1К2К.BackgroundImage = A403_3Parameters.Тублер1К2К
-                ? ControlElementImages.tumblerType4Left
-                : ControlElementImages.tumblerType4Right;
+            A403_3Parameters.ТублерКомплект = !A403_3Parameters.ТублерКомплект;
+        }
+
+        private void A403_3Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            A403_3Parameters.ParameterChanged -= RefreshFormElements;
         }
     }
 }
