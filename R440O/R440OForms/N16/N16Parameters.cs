@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Windows.Forms;
 using R440O.R440OForms.N15;
 using R440O.R440OForms.N502B;
 
@@ -52,12 +53,13 @@ namespace R440O.R440OForms.N16
         public static bool ЛампочкаН13_12 { get { return Включен && ЩелевойМостН13 == 3; } }
         public static bool ЛампочкаН13_1 { get { return Включен && ЩелевойМостН13 == 1; } }
         public static bool ЛампочкаН13_2 { get { return Включен && ЩелевойМостН13 == 2; } }
-        public static bool ЛампочкаАнтенна { get { return Включен && КоаксиальныйПереключательАнтЭкв; } }
-        public static bool ЛампочкаЭквивалент { get { return Включен && !КоаксиальныйПереключательАнтЭкв; } }
+        public static bool ЛампочкаАнтенна { get { return Включен && КоаксиальныйПереключатель; } }
+        public static bool ЛампочкаЭквивалент { get { return Включен && !КоаксиальныйПереключатель; } }
         #endregion
 
+        #region Внутренние элементы блока
         private static int _щелевойМостН13;
-        private static bool _коаксиальныйПереключательАнтЭкв;
+        private static bool _коаксиальныйПереключатель;
 
         /// <summary>
         /// 1 - Н13-1 включён
@@ -129,14 +131,14 @@ namespace R440O.R440OForms.N16
         /// true - Антенна
         /// false - Эквивалент
         /// </summary>
-        public static bool КоаксиальныйПереключательАнтЭкв
+        public static bool КоаксиальныйПереключатель
         {
-            get { return _коаксиальныйПереключательАнтЭкв; }
+            get { return _коаксиальныйПереключатель; }
             set
             {
-                if (КоаксиальныйПереключательАнтЭкв != value)
+                if (КоаксиальныйПереключатель != value)
                 {
-                    _коаксиальныйПереключательАнтЭкв = (КоаксиальныйПереключательАнтЭкв)
+                    _коаксиальныйПереключатель = (КоаксиальныйПереключатель)
                         ? КнопкаАнтенна
                         : !КнопкаЭквивалент;
                 }
@@ -144,8 +146,8 @@ namespace R440O.R440OForms.N16
                 N15Parameters.ResetParametersAlternative();
             }
         }
+        #endregion
 
-        
         #region Кнопки
         private static bool _кнопкаВкл;
         private static bool _кнопкаН13_12;
@@ -200,7 +202,7 @@ namespace R440O.R440OForms.N16
             set
             {
                 _кнопкаАнтенна = value;
-                КоаксиальныйПереключательАнтЭкв = N15Parameters.ТумблерАнтЭкв;
+                КоаксиальныйПереключатель = N15Parameters.ТумблерАнтЭкв;
             }
         }
 
@@ -210,14 +212,26 @@ namespace R440O.R440OForms.N16
             set
             {
                 _кнопкаЭквивалент = value;
-                КоаксиальныйПереключательАнтЭкв = N15Parameters.ТумблерАнтЭкв;
+                КоаксиальныйПереключатель = N15Parameters.ТумблерАнтЭкв;
             }
         }
         #endregion
 
         #region Индикаторы
-        public static int ИндикаторМощностьНагрузки { get; set; }
-        public static int ИндикаторМощностьВыхода { get; set; }
+
+        private static int _индикаторМощностьНагрузки = 20;
+        private static int _индикаторМощностьВыхода = 80;
+
+        public static int ИндикаторМощностьНагрузки
+        {
+            get { return КнопкаВкл ? _индикаторМощностьНагрузки : 0; }
+            set { _индикаторМощностьНагрузки = value; }
+        }
+        public static int ИндикаторМощностьВыхода
+        {
+            get { return КнопкаВкл ? _индикаторМощностьВыхода : 0; }
+            set { _индикаторМощностьВыхода = value; }
+        }
         #endregion
 
         public delegate void ParameterChangedHandler();

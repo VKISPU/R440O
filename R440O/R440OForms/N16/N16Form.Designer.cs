@@ -46,6 +46,8 @@
             this.КнопкаН13_12 = new System.Windows.Forms.Button();
             this.КнопкаВкл = new System.Windows.Forms.Button();
             this.ТумблерУровень1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторМощностьВыхода)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторМощностьНагрузки)).BeginInit();
@@ -54,12 +56,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаН13_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаН13_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаН13_12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel
             // 
             this.Panel.BackgroundImage = global::R440O.BackgroundImages.N16;
             this.Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Panel.Controls.Add(this.pictureBox2);
+            this.Panel.Controls.Add(this.pictureBox1);
             this.Panel.Controls.Add(this.ИндикаторМощностьВыхода);
             this.Panel.Controls.Add(this.ИндикаторМощностьНагрузки);
             this.Panel.Controls.Add(this.ЛампочкаЭквивалент);
@@ -85,22 +91,22 @@
             // ИндикаторМощностьВыхода
             // 
             this.ИндикаторМощностьВыхода.BackColor = System.Drawing.Color.Transparent;
-            this.ИндикаторМощностьВыхода.BackgroundImage = global::R440O.ControlElementImages.arrowNormal;
-            this.ИндикаторМощностьВыхода.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ИндикаторМощностьВыхода.Location = new System.Drawing.Point(405, 70);
+            this.ИндикаторМощностьВыхода.BackgroundImage = global::R440O.ControlElementImages.arrow2;
+            this.ИндикаторМощностьВыхода.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ИндикаторМощностьВыхода.Location = new System.Drawing.Point(377, 81);
             this.ИндикаторМощностьВыхода.Name = "ИндикаторМощностьВыхода";
-            this.ИндикаторМощностьВыхода.Size = new System.Drawing.Size(64, 59);
+            this.ИндикаторМощностьВыхода.Size = new System.Drawing.Size(121, 97);
             this.ИндикаторМощностьВыхода.TabIndex = 81;
             this.ИндикаторМощностьВыхода.TabStop = false;
             // 
             // ИндикаторМощностьНагрузки
             // 
             this.ИндикаторМощностьНагрузки.BackColor = System.Drawing.Color.Transparent;
-            this.ИндикаторМощностьНагрузки.BackgroundImage = global::R440O.ControlElementImages.arrowNormal;
-            this.ИндикаторМощностьНагрузки.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ИндикаторМощностьНагрузки.Location = new System.Drawing.Point(253, 69);
+            this.ИндикаторМощностьНагрузки.BackgroundImage = global::R440O.ControlElementImages.arrow2;
+            this.ИндикаторМощностьНагрузки.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ИндикаторМощностьНагрузки.Location = new System.Drawing.Point(228, 81);
             this.ИндикаторМощностьНагрузки.Name = "ИндикаторМощностьНагрузки";
-            this.ИндикаторМощностьНагрузки.Size = new System.Drawing.Size(64, 59);
+            this.ИндикаторМощностьНагрузки.Size = new System.Drawing.Size(114, 97);
             this.ИндикаторМощностьНагрузки.TabIndex = 80;
             this.ИндикаторМощностьНагрузки.TabStop = false;
             // 
@@ -330,6 +336,24 @@
             this.ТумблерУровень1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ТумблерУровень1_MouseDown);
             this.ТумблерУровень1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ТумблерУровень1_MouseUp);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Location = new System.Drawing.Point(228, 127);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(114, 51);
+            this.pictureBox1.TabIndex = 82;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Location = new System.Drawing.Point(377, 127);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(121, 51);
+            this.pictureBox2.TabIndex = 83;
+            this.pictureBox2.TabStop = false;
+            // 
             // N16Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,6 +373,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаН13_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаН13_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаН13_12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -373,5 +399,7 @@
         private System.Windows.Forms.Button КнопкаН13_1;
         private System.Windows.Forms.PictureBox ИндикаторМощностьВыхода;
         private System.Windows.Forms.PictureBox ИндикаторМощностьНагрузки;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
