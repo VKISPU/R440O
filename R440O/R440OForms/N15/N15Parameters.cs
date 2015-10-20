@@ -1,5 +1,7 @@
 ﻿using R440O.R440OForms.A306;
 using R440O.R440OForms.A403_1;
+using R440O.R440OForms.N13_1;
+using R440O.R440OForms.N13_2;
 using R440O.R440OForms.N16;
 
 namespace R440O.R440OForms.N15
@@ -185,6 +187,35 @@ namespace R440O.R440OForms.N15
             set
             {
                 _кнопкаН13 = value;
+            }
+        }
+
+        private static bool _Н13_1;
+        private static bool _Н13_2;
+
+        /// <summary>
+        /// Параметр для включения блока Н13_1
+        /// </summary>
+        public static bool Н13_1
+        {
+            get { return _Н13_1; }
+            set
+            {
+                _Н13_1 = value;
+                N13_1Parameters.ResetParameters();
+            }
+        }
+
+        /// <summary>
+        /// Параметр для включения блока Н13_2
+        /// </summary>
+        public static bool Н13_2
+        {
+            get { return _Н13_2; }
+            set
+            {
+                _Н13_2 = value;
+                N13_2Parameters.ResetParameters();
             }
         }
 
@@ -783,12 +814,12 @@ namespace R440O.R440OForms.N15
         {
             get { return N16Parameters.ЛампочкаН13_12; }
         }
-        public static bool ЛампочкаН13_11Ступень { get; set; }
-        public static bool ЛампочкаН13_21Ступень { get; set; }
-        public static bool ЛампочкаН13_1ПолноеВкл { get; set; }
-        public static bool ЛампочкаН13_2ПолноеВкл { get; set; }
-        public static bool ЛампочкаН13_1Неисправность { get; set; }
-        public static bool ЛампочкаН13_2Неисправность { get; set; }
+        public static bool ЛампочкаН13_11Ступень { get { return N13_1Parameters.ЛампочкаАнодВключен; } }
+        public static bool ЛампочкаН13_21Ступень { get { return N13_2Parameters.ЛампочкаАнодВключен; } }
+        public static bool ЛампочкаН13_1ПолноеВкл { get { return N13_1Parameters.ЛампочкаАнодВключен; } }
+        public static bool ЛампочкаН13_2ПолноеВкл { get { return N13_2Parameters.ЛампочкаАнодВключен; } }
+        public static bool ЛампочкаН13_1Неисправность { get { return N13_1Parameters.Неисправен; } }
+        public static bool ЛампочкаН13_2Неисправность { get { return N13_2Parameters.Неисправен; } }
         public static bool Лампочка5мГц2 { get { return НеполноеВключение && N15LocalParameters.локТумблер5Мгц; } }
         public static bool Лампочка5мГц3 { get { return НеполноеВключение && !N15LocalParameters.локТумблер5Мгц; } }
 

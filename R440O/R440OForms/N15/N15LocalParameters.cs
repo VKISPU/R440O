@@ -208,7 +208,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _локКнопкаН13_1 = value;
-                if(value) N15Parameters.КнопкаН13 = 1;
+                if (value) N15Parameters.КнопкаН13 = 1;
             }
         }
 

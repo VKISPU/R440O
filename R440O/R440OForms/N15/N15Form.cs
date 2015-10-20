@@ -6,11 +6,9 @@
 
 
 using System.Reflection;
-using System.Threading.Tasks;
 using R440O.InternalBlocks;
 using R440O.R440OForms.N15Inside;
 using R440O.R440OForms.N16;
-using R440O.R440OForms.N502B;
 using R440O.ThirdParty;
 
 namespace R440O.R440OForms.N15
@@ -196,6 +194,9 @@ namespace R440O.R440OForms.N15
                     property.SetValue(this, localProperty.GetValue(this));
                 }
             }
+
+            N15Parameters.Ќ13_1 = (N15LocalParameters.лок нопкаЌ13_1 || N15LocalParameters.лок нопкаЌ13_12);
+            N15Parameters.Ќ13_2 = (N15LocalParameters.лок нопкаЌ13_2 || N15LocalParameters.лок нопкаЌ13_12);
         }
 
         private void ResetCurrentParameters()
@@ -208,6 +209,9 @@ namespace R440O.R440OForms.N15
             {
                 property.SetValue(this, false);
             }
+
+            N15Parameters.Ќ13_1 = false;
+            N15Parameters.Ќ13_2 = false;
         }
 
         #endregion
@@ -338,19 +342,19 @@ namespace R440O.R440OForms.N15
         #endregion
 
         #region  нопки Ќ13-1 Ќ13-2 Ќ13-1,2 —Ѕ–ќ—
-        private async void  нопкаЌ13_1_Click(object sender, EventArgs e)
+        private void  нопкаЌ13_1_Click(object sender, EventArgs e)
         {
             this. нопкаЌ13_1.Visible = false;
             this. нопкаЌ13_2.Visible = true;
             this. нопкаЌ13_12.Visible = true;
-            
+
             N15LocalParameters.лок нопкаЌ13_1 = true;
             N15LocalParameters.лок нопкаЌ13_2 = false;
             N15LocalParameters.лок нопкаЌ13_12 = false;
             N16Parameters.ўелевойћостЌ13 = 1;
         }
 
-        private  void  нопкаЌ13_2_Click(object sender, EventArgs e)
+        private void  нопкаЌ13_2_Click(object sender, EventArgs e)
         {
             this. нопкаЌ13_2.Visible = false;
             this. нопкаЌ13_1.Visible = true;
@@ -381,7 +385,7 @@ namespace R440O.R440OForms.N15
             N16Parameters.ўелевойћостЌ13 = 2;
         }
 
-        private async void  нопкаЌ13_12_Click(object sender, EventArgs e)
+        private void  нопкаЌ13_12_Click(object sender, EventArgs e)
         {
             this. нопкаЌ13_12.Visible = false;
             this. нопкаЌ13_1.Visible = true;
@@ -458,7 +462,7 @@ namespace R440O.R440OForms.N15
         private void “умблерјнтЁкв_Click(object sender, EventArgs e)
         {
             N15LocalParameters.лок“умблерјнтЁкв = !N15LocalParameters.лок“умблерјнтЁкв;
-            N16Parameters. оаксиальныйѕереключательјнтЁкв = N15LocalParameters.лок“умблерјнтЁкв;
+            N16Parameters. оаксиальныйѕереключатель = N15LocalParameters.лок“умблерјнтЁкв;
         }
 
         private void “умблер“лф“лгѕрм_Click(object sender, EventArgs e)
