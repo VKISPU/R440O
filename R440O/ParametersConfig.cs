@@ -156,11 +156,11 @@ namespace R440O
             //ПУЛы
             N15Parameters.ТумблерТлфТлгПрд = true;
             N15Parameters.ТумблерТлфТлгПрм = true;
-            N15InsideParameters.ПереключательПУЛ48ПРД1 = 3;
-            N15InsideParameters.ТумблерПул48ПРДЧтОфт1 = Модуляция.ОФТ;
+            N15InsideParameters.ПереключательПУЛ48ПРД_1 = 3;
+            N15InsideParameters.ТумблерПУЛ48ПРД_1 = Модуляция.ОФТ;
 
-            N15InsideParameters.ПереключательПУЛ4801 = 3;
-            N15InsideParameters.ТумблерПул480ЧтОфт1 = Модуляция.ОФТ;
+            N15InsideParameters.ПереключательПУЛ480ПРМ_1 = 3;
+            N15InsideParameters.ТумблерПУЛ480ПРМ_1 = Модуляция.ОФТ;
 
             // Приемная часть
             N15LocalParameters.локТумблерБ1_1 = true;

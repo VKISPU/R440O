@@ -1,11 +1,8 @@
-﻿using R440O.R440OForms.A306;
-
-namespace R440O.R440OForms.N502B
+﻿namespace R440O.R440OForms.N502B
 {
     using System;
     using System.Linq;
     using System.Windows.Forms;
-    using Parameters;
     using Properties;
     using NKN_1;
     using NKN_2;
@@ -16,6 +13,9 @@ namespace R440O.R440OForms.N502B
     using C300M_3;
     using C300M_4;
     using A304;
+    using A306;
+    using N13_1;
+    using N13_2;
     using BMB;
     using N15;
     using N16;
@@ -25,6 +25,7 @@ namespace R440O.R440OForms.N502B
         static N502BParameters()
         {
             СлучайнаяФазировка();
+            StationTimer = new Timer();
         }
 
         #region Время работы станции
@@ -87,8 +88,8 @@ namespace R440O.R440OForms.N502B
         private static bool _тумблерВыпрямитель27В;
         private static bool _тумблерН15;
         private static bool _тумблерОсвещение;
-        private static bool _тумблерН131;
-        private static bool _тумблерН132;
+        private static bool _тумблерН13_1;
+        private static bool _тумблерН13_2;
         private static int _тумблерОсвещение1 = 2;
         private static int _тумблерОсвещение2 = 2;
         #endregion
@@ -166,22 +167,26 @@ namespace R440O.R440OForms.N502B
             }
         }
 
-        public static bool ТумблерН131
+        public static bool ТумблерН13_1
         {
-            get { return _тумблерН131; }
+            get { return _тумблерН13_1; }
             set
             {
-                _тумблерН131 = value;
+                _тумблерН13_1 = value;
+                N13_1Parameters.ResetParameters();
+                N15Parameters.Н13_1 = false;
                 OnParameterChanged();
             }
         }
 
-        public static bool ТумблерН132
+        public static bool ТумблерН13_2
         {
-            get { return _тумблерН132; }
+            get { return _тумблерН13_2; }
             set
             {
-                _тумблерН132 = value;
+                _тумблерН13_2 = value;
+                N13_2Parameters.ResetParameters();
+                N15Parameters.Н13_2 = false;
                 OnParameterChanged();
             }
         }
@@ -227,19 +232,23 @@ namespace R440O.R440OForms.N502B
             get { return _переключательСеть; }
             set
             {
-                _переключательСеть = value;
-                Нагрузка = false;
-                VoltageStabilizerParameters.ResetParameters();
-                OnParameterChanged();
-
                 if (!VoltageStabilizerParameters.КабельПодключенПравильно
                     && VoltageStabilizerParameters.КабельВход != 0
-                    && _переключательСеть
+                    && !_переключательСеть
                     && ЛампочкаСеть
                     && СтанцияСгорела != null)
                 {
                     СтанцияСгорела();
                 }
+                else
+                {
+                    _переключательСеть = value;
+                    Нагрузка = false;
+                }
+                VoltageStabilizerParameters.ResetParameters();
+                OnParameterChanged();
+
+
             }
         }
 
@@ -264,13 +273,17 @@ namespace R440O.R440OForms.N502B
             get { return _переключательФазировка; }
             set
             {
-                if (value >= 0 && value <= 5) if (ЛампочкаСфазировано && ПереключательСеть
-                    && НекорректноеДействие != null)
+                if (value >= 0 && value <= 5)
+                    if (ЛампочкаСфазировано && ПереключательСеть
+                        && НекорректноеДействие != null)
                     {
                         НекорректноеДействие();
                     }
-                _переключательФазировка = value;
-                Нагрузка = false;
+                    else
+                    {
+                        _переключательФазировка = value;
+                        Нагрузка = false;
+                    }
                 OnParameterChanged();
             }
         }
@@ -310,12 +323,8 @@ namespace R440O.R440OForms.N502B
             get { return _нагрузка; }
             set
             {
-
-                if (value != _нагрузка)
-                {
-                    _нагрузка = value;
-                    N15Parameters.ResetParameters();
-                }
+                if (value != _нагрузка) N15Parameters.ResetParameters();
+                _нагрузка = value;
             }
         }
         #endregion

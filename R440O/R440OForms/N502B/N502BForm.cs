@@ -47,12 +47,12 @@
 
         private void ТумблерН131_Click(object sender, System.EventArgs e)
         {
-            N502BParameters.ТумблерН131 = !N502BParameters.ТумблерН131;
+            N502BParameters.ТумблерН13_1 = !N502BParameters.ТумблерН13_1;
         }
 
         private void ТумблерН132_Click(object sender, System.EventArgs e)
         {
-            N502BParameters.ТумблерН132 = !N502BParameters.ТумблерН132;
+            N502BParameters.ТумблерН13_2 = !N502BParameters.ТумблерН13_2;
         }
 
         private void ТумблерН15_Click(object sender, System.EventArgs e)
@@ -263,10 +263,10 @@
             ТумблерОсвещение.BackgroundImage = !N502BParameters.ТумблерОсвещение ?
                 ControlElementImages.tumblerType2Down : ControlElementImages.tumblerType2Up;
 
-            ТумблерН131.BackgroundImage = !N502BParameters.ТумблерН131 ?
+            ТумблерН13_1.BackgroundImage = !N502BParameters.ТумблерН13_1 ?
                 ControlElementImages.tumblerType2Down : ControlElementImages.tumblerType2Up;
 
-            ТумблерН132.BackgroundImage = !N502BParameters.ТумблерН132 ?
+            ТумблерН13_2.BackgroundImage = !N502BParameters.ТумблерН13_2 ?
                 ControlElementImages.tumblerType2Down : ControlElementImages.tumblerType2Up;
 
             ТумблерН15.BackgroundImage = !N502BParameters.ТумблерН15 ?

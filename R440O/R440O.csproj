@@ -80,6 +80,8 @@
     <Compile Include="R440OForms\Kontur_P3\Параметры\КП5.cs" />
     <Compile Include="R440OForms\Kontur_P3\Параметры\КП6.cs" />
     <Compile Include="R440OForms\Kontur_P3\Параметры\Общие.cs" />
+    <Compile Include="R440OForms\N13_1\N13_1Parameters.cs" />
+    <Compile Include="R440OForms\N13_2\N13_2Parameters.cs" />
     <Compile Include="R440OForms\N502B\N502BParameters.cs" />
     <Compile Include="ThirdParty\EasyTimer.cs" />
     <Compile Include="ОбщиеТипыДанных\Модуляция.cs" />
@@ -107,8 +109,6 @@
     <Compile Include="Parameters\K02M_02Parameters.cs" />
     <Compile Include="R440OForms\Kontur_P3\Параметры\КП7.cs" />
     <Compile Include="R440OForms\N12S\N12SParameters.cs" />
-    <Compile Include="Parameters\N13_1Parameters.cs" />
-    <Compile Include="Parameters\N13_2Parameters.cs" />
     <Compile Include="R440OForms\N15Inside\N15InsideParameters.cs" />
     <Compile Include="R440OForms\N16\N16Parameters.cs" />
     <Compile Include="R440OForms\OrderScheme\OrderSchemeParameters.cs" />

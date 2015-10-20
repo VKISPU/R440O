@@ -51,8 +51,8 @@
             this.ТумблерОсвещение2 = new System.Windows.Forms.Button();
             this.ТумблерОсвещение1 = new System.Windows.Forms.Button();
             this.ТумблерН15 = new System.Windows.Forms.Button();
-            this.ТумблерН132 = new System.Windows.Forms.Button();
-            this.ТумблерН131 = new System.Windows.Forms.Button();
+            this.ТумблерН13_2 = new System.Windows.Forms.Button();
+            this.ТумблерН13_1 = new System.Windows.Forms.Button();
             this.ТумблерОсвещение = new System.Windows.Forms.Button();
             this.ТумблерВыпрямитель27В = new System.Windows.Forms.Button();
             this.ТумблерЭлектрооборудование = new System.Windows.Forms.Button();
@@ -95,8 +95,8 @@
             this.Panel.Controls.Add(this.ТумблерОсвещение2);
             this.Panel.Controls.Add(this.ТумблерОсвещение1);
             this.Panel.Controls.Add(this.ТумблерН15);
-            this.Panel.Controls.Add(this.ТумблерН132);
-            this.Panel.Controls.Add(this.ТумблерН131);
+            this.Panel.Controls.Add(this.ТумблерН13_2);
+            this.Panel.Controls.Add(this.ТумблерН13_1);
             this.Panel.Controls.Add(this.ТумблерОсвещение);
             this.Panel.Controls.Add(this.ТумблерВыпрямитель27В);
             this.Panel.Controls.Add(this.ТумблерЭлектрооборудование);
@@ -398,37 +398,37 @@
             this.ТумблерН15.UseVisualStyleBackColor = false;
             this.ТумблерН15.Click += new System.EventHandler(this.ТумблерН15_Click);
             // 
-            // ТумблерН132
+            // ТумблерН13_2
             // 
-            this.ТумблерН132.BackColor = System.Drawing.Color.Transparent;
-            this.ТумблерН132.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Down;
-            this.ТумблерН132.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ТумблерН132.FlatAppearance.BorderSize = 0;
-            this.ТумблерН132.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.ТумблерН132.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.ТумблерН132.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ТумблерН132.Location = new System.Drawing.Point(284, 598);
-            this.ТумблерН132.Name = "ТумблерН132";
-            this.ТумблерН132.Size = new System.Drawing.Size(36, 56);
-            this.ТумблерН132.TabIndex = 24;
-            this.ТумблерН132.UseVisualStyleBackColor = false;
-            this.ТумблерН132.Click += new System.EventHandler(this.ТумблерН132_Click);
+            this.ТумблерН13_2.BackColor = System.Drawing.Color.Transparent;
+            this.ТумблерН13_2.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Down;
+            this.ТумблерН13_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ТумблерН13_2.FlatAppearance.BorderSize = 0;
+            this.ТумблерН13_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерН13_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерН13_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТумблерН13_2.Location = new System.Drawing.Point(284, 598);
+            this.ТумблерН13_2.Name = "ТумблерН13_2";
+            this.ТумблерН13_2.Size = new System.Drawing.Size(36, 56);
+            this.ТумблерН13_2.TabIndex = 24;
+            this.ТумблерН13_2.UseVisualStyleBackColor = false;
+            this.ТумблерН13_2.Click += new System.EventHandler(this.ТумблерН132_Click);
             // 
-            // ТумблерН131
+            // ТумблерН13_1
             // 
-            this.ТумблерН131.BackColor = System.Drawing.Color.Transparent;
-            this.ТумблерН131.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Down;
-            this.ТумблерН131.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ТумблерН131.FlatAppearance.BorderSize = 0;
-            this.ТумблерН131.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.ТумблерН131.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.ТумблерН131.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ТумблерН131.Location = new System.Drawing.Point(135, 598);
-            this.ТумблерН131.Name = "ТумблерН131";
-            this.ТумблерН131.Size = new System.Drawing.Size(36, 56);
-            this.ТумблерН131.TabIndex = 23;
-            this.ТумблерН131.UseVisualStyleBackColor = false;
-            this.ТумблерН131.Click += new System.EventHandler(this.ТумблерН131_Click);
+            this.ТумблерН13_1.BackColor = System.Drawing.Color.Transparent;
+            this.ТумблерН13_1.BackgroundImage = global::R440O.ControlElementImages.tumblerType2Down;
+            this.ТумблерН13_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ТумблерН13_1.FlatAppearance.BorderSize = 0;
+            this.ТумблерН13_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерН13_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерН13_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТумблерН13_1.Location = new System.Drawing.Point(135, 598);
+            this.ТумблерН13_1.Name = "ТумблерН13_1";
+            this.ТумблерН13_1.Size = new System.Drawing.Size(36, 56);
+            this.ТумблерН13_1.TabIndex = 23;
+            this.ТумблерН13_1.UseVisualStyleBackColor = false;
+            this.ТумблерН13_1.Click += new System.EventHandler(this.ТумблерН131_Click);
             // 
             // ТумблерОсвещение
             // 
@@ -511,8 +511,8 @@
         public System.Windows.Forms.Button ТумблерЭлектрооборудование;
         public System.Windows.Forms.Button ТумблерВыпрямитель27В;
         public System.Windows.Forms.Button ТумблерОсвещение;
-        public System.Windows.Forms.Button ТумблерН131;
-        public System.Windows.Forms.Button ТумблерН132;
+        public System.Windows.Forms.Button ТумблерН13_1;
+        public System.Windows.Forms.Button ТумблерН13_2;
         public System.Windows.Forms.Button ТумблерН15;
         public System.Windows.Forms.Button ТумблерОсвещение2;
         public System.Windows.Forms.Button ТумблерОсвещение1;

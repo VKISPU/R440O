@@ -2,7 +2,6 @@
 
 namespace R440O.R440OForms.VoltageStabilizer
 {
-    using System;
     using N502B;
 
     public static class VoltageStabilizerParameters
@@ -89,15 +88,14 @@ namespace R440O.R440OForms.VoltageStabilizer
 
             set
             {
-                _кабельВход = value;
-                OnParameterChanged();
-                N502BParameters.Нагрузка = false;
-                N502BParameters.ResetParameters();
-                if (N502BParameters.ЛампочкаСеть && N502BParameters.ПереключательСеть
-                    && ОператорСтанцииПораженТоком != null)
+                if (N502BParameters.ЛампочкаСеть && N502BParameters.ПереключательСеть && ОператорСтанцииПораженТоком != null)
                 {
                     ОператорСтанцииПораженТоком();
                 }
+                else _кабельВход = value;
+
+                OnParameterChanged();
+                N502BParameters.ResetParameters();
             }
         }
 
