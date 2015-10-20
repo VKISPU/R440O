@@ -310,8 +310,12 @@ namespace R440O.R440OForms.N502B
             get { return _нагрузка; }
             set
             {
-                if (value != _нагрузка) N15Parameters.ResetParameters();
-                _нагрузка = value;
+
+                if (value != _нагрузка)
+                {
+                    _нагрузка = value;
+                    N15Parameters.ResetParameters();
+                }
             }
         }
         #endregion
