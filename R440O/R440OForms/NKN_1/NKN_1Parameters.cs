@@ -25,7 +25,7 @@ namespace R440O.R440OForms.NKN_1
 
         public static bool НеполноеВключение
         {
-            get { return _неполноеВключение && N502BParameters.ВыпрямительВключен; }
+            get { return _неполноеВключение && N502BParameters.ВыпрямительВключен && N502BParameters.ЭлектрообуродованиеВключено; }
             set { _неполноеВключение = value; }
         }
 
