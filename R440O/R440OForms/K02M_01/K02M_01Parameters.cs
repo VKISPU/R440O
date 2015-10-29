@@ -1,4 +1,5 @@
-﻿using R440O.R440OForms.K03M_01;
+﻿using System;
+using R440O.R440OForms.K03M_01;
 
 namespace R440O.R440OForms.K02M_01
 {
@@ -7,17 +8,29 @@ namespace R440O.R440OForms.K02M_01
         #region Лампочки
         public static bool ЛампочкаКаналыОбнаруженияЛ
         {
-            get { return false; }
+            get
+            {
+                return (K03M_01Parameters.СтатусПоиска == 2 &&
+                      K03M_01Parameters.ВременнаяПозицияПоиска <= -100);
+            }
         }
 
         public static bool ЛампочкаКаналыОбнаруженияЦ
         {
-            get { return K03M_01Parameters.СтатусПоиска==2; }
+            get
+            {
+                return (K03M_01Parameters.СтатусПоиска == 2 &&
+                        Math.Abs(K03M_01Parameters.ВременнаяПозицияПоиска) < 100);
+            }
         }
 
         public static bool ЛампочкаКаналыОбнаруженияП
         {
-            get { return false; }
+            get
+            {
+                return (K03M_01Parameters.СтатусПоиска == 2 &&
+                    K03M_01Parameters.ВременнаяПозицияПоиска >= 100);
+            }
         }
 
         public static bool ЛампочкаПоискСигналов

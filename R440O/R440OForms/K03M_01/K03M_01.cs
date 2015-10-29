@@ -144,5 +144,35 @@ namespace R440O.R440OForms.K03M_01
                 K03M_01Parameters.ПереключательЗонаПоиска -= 1;
             }
         }
+
+        private void КнопкаЛТЧ_Click(object sender, System.EventArgs e)
+        {
+            K03M_01Parameters.ИзменитьВременнуюПозициюПоиска(-100);
+        }
+
+        private void КнопкаПТЧ_Click(object sender, System.EventArgs e)
+        {
+            K03M_01Parameters.ИзменитьВременнуюПозициюПоиска(100);
+        }
+
+        private void КнопкаЛТВ_Click(object sender, System.EventArgs e)
+        {
+            K03M_01Parameters.ИзменитьВременнуюПозициюПоиска(-10);
+        }
+
+        private void КнопкаПТВ_Click(object sender, System.EventArgs e)
+        {
+            K03M_01Parameters.ИзменитьВременнуюПозициюПоиска(10);
+        }
+
+        private void КнопкаЛГ_Click(object sender, System.EventArgs e)
+        {
+            K03M_01Parameters.ИзменитьВременнуюПозициюПоиска(-1);
+        }
+
+        private void КнопкаПГ_Click(object sender, System.EventArgs e)
+        {
+            K03M_01Parameters.ИзменитьВременнуюПозициюПоиска(1);
+        }
     }
 }

@@ -17,7 +17,7 @@
         /// <returns>Новое изображение, после изменения.</returns>
         public static Bitmap Scale(Image oldBitmap, int sizePercent)
         {
-            var coefficient = sizePercent / 100;
+            var coefficient = sizePercent * 1.0f / 100;
             var newBitmap = new Bitmap(oldBitmap.Width, oldBitmap.Height);
             var graphics = Graphics.FromImage(newBitmap);
             graphics.ScaleTransform(coefficient, coefficient);

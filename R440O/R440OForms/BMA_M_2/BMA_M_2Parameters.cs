@@ -22,6 +22,7 @@ namespace R440O.Parameters
             set
             {
                 _питание = value;
+                BMBParameters.МерцаниеЛампочиНаправления(2);
                 N15Parameters.ResetParametersAlternative();
                 BMBParameters.ResetParameters();
             }

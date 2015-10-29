@@ -110,7 +110,7 @@
             this.Крышка.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Крышка.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Крышка.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Крышка.Location = new System.Drawing.Point(126, 95);
+            this.Крышка.Location = new System.Drawing.Point(126, 81);
             this.Крышка.Name = "Крышка";
             this.Крышка.Size = new System.Drawing.Size(356, 559);
             this.Крышка.TabIndex = 10;
@@ -193,6 +193,7 @@
             this.КнопкаПГ.Size = new System.Drawing.Size(71, 71);
             this.КнопкаПГ.TabIndex = 39;
             this.КнопкаПГ.UseVisualStyleBackColor = false;
+            this.КнопкаПГ.Click += new System.EventHandler(this.КнопкаПГ_Click);
             this.КнопкаПГ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Кнопка_MouseDown);
             this.КнопкаПГ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Кнопка_MouseUp);
             // 
@@ -210,6 +211,7 @@
             this.КнопкаПТЧ.Size = new System.Drawing.Size(71, 71);
             this.КнопкаПТЧ.TabIndex = 39;
             this.КнопкаПТЧ.UseVisualStyleBackColor = false;
+            this.КнопкаПТЧ.Click += new System.EventHandler(this.КнопкаПТЧ_Click);
             this.КнопкаПТЧ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Кнопка_MouseDown);
             this.КнопкаПТЧ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Кнопка_MouseUp);
             // 
@@ -261,6 +263,7 @@
             this.КнопкаЛТЧ.Size = new System.Drawing.Size(71, 71);
             this.КнопкаЛТЧ.TabIndex = 39;
             this.КнопкаЛТЧ.UseVisualStyleBackColor = false;
+            this.КнопкаЛТЧ.Click += new System.EventHandler(this.КнопкаЛТЧ_Click);
             this.КнопкаЛТЧ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Кнопка_MouseDown);
             this.КнопкаЛТЧ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Кнопка_MouseUp);
             // 
@@ -278,6 +281,7 @@
             this.КнопкаПТВ.Size = new System.Drawing.Size(71, 71);
             this.КнопкаПТВ.TabIndex = 39;
             this.КнопкаПТВ.UseVisualStyleBackColor = false;
+            this.КнопкаПТВ.Click += new System.EventHandler(this.КнопкаПТВ_Click);
             this.КнопкаПТВ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Кнопка_MouseDown);
             this.КнопкаПТВ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Кнопка_MouseUp);
             // 
@@ -295,6 +299,7 @@
             this.КнопкаЛТВ.Size = new System.Drawing.Size(71, 71);
             this.КнопкаЛТВ.TabIndex = 39;
             this.КнопкаЛТВ.UseVisualStyleBackColor = false;
+            this.КнопкаЛТВ.Click += new System.EventHandler(this.КнопкаЛТВ_Click);
             this.КнопкаЛТВ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Кнопка_MouseDown);
             this.КнопкаЛТВ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Кнопка_MouseUp);
             // 
@@ -312,6 +317,7 @@
             this.КнопкаЛГ.Size = new System.Drawing.Size(71, 71);
             this.КнопкаЛГ.TabIndex = 39;
             this.КнопкаЛГ.UseVisualStyleBackColor = false;
+            this.КнопкаЛГ.Click += new System.EventHandler(this.КнопкаЛГ_Click);
             this.КнопкаЛГ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Кнопка_MouseDown);
             this.КнопкаЛГ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Кнопка_MouseUp);
             // 
