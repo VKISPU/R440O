@@ -39,7 +39,6 @@ namespace R440O.R440OForms.PowerCabel
 
                 OnParameterChanged();
                 N502BParameters.ResetParameters();
-                VoltageStabilizerParameters.ResetParameters();
             }
         }
 

@@ -1,4 +1,6 @@
-﻿namespace R440O.R440OForms.PowerCabel
+﻿using System.Runtime.CompilerServices;
+
+namespace R440O.R440OForms.PowerCabel
 {
     using BaseClasses;
     using System;
@@ -57,8 +59,5 @@
             PowerCabelParameters.ParameterChanged -= RefreshFormElements;
             PowerCabelParameters.СтанцияСгорела -= ВыводСообщенияСтанцияСгорела;
         }
-
-        
-
     }
 }

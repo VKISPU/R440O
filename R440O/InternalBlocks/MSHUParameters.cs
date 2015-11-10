@@ -9,7 +9,7 @@
     {
         public static bool Включен
         {
-            get { return N15Parameters.ЛампочкаМШУ; }
+            get { return N15Parameters.ТумблерМШУ; }
         }
 
         /// <summary>

@@ -72,6 +72,8 @@ namespace R440O
             N502BParameters.ПереключательФазировка = N502BParameters.Фазировка;
             N502BParameters.КнопкаВклНагрузки = true;
             N502BParameters.КнопкаВклНагрузки = false;
+            N502BParameters.ТумблерН13_1 = true;
+            N502BParameters.ТумблерН13_2 = true;
 
             //Устанавливаем переключатели
             N502BParameters.ТумблерЭлектрооборудование = true;
