@@ -5,10 +5,20 @@ using R440O.R440OForms.N502B;
 namespace R440O.R440OForms.NKN_2
 {
     /// <summary>
-    /// Параметры блока НКН-1
+    /// Параметры блока НКН-2
     /// </summary>
     public static class NKN_2Parameters
     {
+        public static bool НеполноеВключение //без н15, горит МУ и все
+        {
+            get { return N502BParameters.ВыпрямительВключен && N502BParameters.ЭлектрообуродованиеВключено; }
+        }
+
+        public static bool ПолноеВключение //горят лампочки фаз
+        {
+            get { return НеполноеВключение && Питание220Включено && N15Parameters.Включен; }
+        }
+
         private static bool _дистанционноеВключение;
 
         public static bool ДистанционноеВключение
@@ -16,42 +26,28 @@ namespace R440O.R440OForms.NKN_2
             get { return _дистанционноеВключение; }
             set
             {
-                _питание220Включено = value;
                 _дистанционноеВключение = value;
             }
         }
 
-        private static bool _неполноеВключение;
-
-        public static bool НеполноеВключение
-        {
-            get { return _неполноеВключение && N502BParameters.ВыпрямительВключен && N502BParameters.ЭлектрообуродованиеВключено; }
-            set { _неполноеВключение = value; }
-        }
-
-        public static bool Включен
-        {
-            get { return (ЛампочкаМУ && N15Parameters.Включен && Питание220Включено); }
-        }
-
         public static bool ЛампочкаМУ
         {
-            get { return N502BParameters.ВыпрямительВключен; }
+            get { return НеполноеВключение; }
         }
 
         public static bool ЛампочкаФаза1
         {
-            get { return Включен; }
+            get { return ПолноеВключение; }
         }
 
         public static bool ЛампочкаФаза2
         {
-            get { return Включен; }
+            get { return ПолноеВключение; }
         }
 
         public static bool ЛампочкаФаза3
         {
-            get { return Включен; }
+            get { return ПолноеВключение; }
         }
 
         private static bool _питание220Включено;
@@ -61,8 +57,9 @@ namespace R440O.R440OForms.NKN_2
             get { return _питание220Включено; }
             set
             {
+                if (!value) _дистанционноеВключение = false;
                 _питание220Включено = value;
-                НеполноеВключение = N15Parameters.НеполноеВключение && Питание220Включено;
+
                 OnParameterChanged();
                 N15Parameters.ResetParametersAlternative();
                 A205M_2Parameters.ResetParameters();
@@ -70,7 +67,6 @@ namespace R440O.R440OForms.NKN_2
         }
 
         public delegate void ParameterChangedHandler();
-
         public static event ParameterChangedHandler ParameterChanged;
 
         private static void OnParameterChanged()
@@ -81,7 +77,8 @@ namespace R440O.R440OForms.NKN_2
 
         public static void ResetParameters()
         {
-
+            if ((N15Parameters.НеполноеВключение && !N15Parameters.Включен && НеполноеВключение) || !НеполноеВключение)
+                _питание220Включено = false;
             OnParameterChanged();
         }
     }

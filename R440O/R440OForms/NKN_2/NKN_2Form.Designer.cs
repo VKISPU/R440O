@@ -63,7 +63,7 @@
             this.ЛампочкиФаз.Controls.Add(this.ЛампочкаФаза3);
             this.ЛампочкиФаз.Controls.Add(this.ЛампочкаФаза2);
             this.ЛампочкиФаз.Controls.Add(this.ЛампочкаФаза1);
-            this.ЛампочкиФаз.Location = new System.Drawing.Point(386, 58);
+            this.ЛампочкиФаз.Location = new System.Drawing.Point(387, 58);
             this.ЛампочкиФаз.Name = "ЛампочкиФаз";
             this.ЛампочкиФаз.Size = new System.Drawing.Size(138, 64);
             this.ЛампочкиФаз.TabIndex = 2;
@@ -140,7 +140,7 @@
             this.ЛампочкаМУ.TabIndex = 0;
             this.ЛампочкаМУ.TabStop = false;
             // 
-            // NKN_2Form
+            // NKN_1Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
