@@ -371,7 +371,7 @@ namespace R440O.R440OForms.C300M_2
 
         public static bool ЛампочкаПоиск
         {
-            get { return Включен && !ЛампочкаСигнал && timer.Enabled; }
+            get { return Включен && !ЛампочкаСигнал; }
         }
 
         #endregion
@@ -507,7 +507,7 @@ namespace R440O.R440OForms.C300M_2
 
             //Для сброса питания
             if (!Включен) _кнопкиПитание = false;
-            if (Включен) Search();
+            Search();
         }
 
         public delegate void IndicatorChangedHandler();
