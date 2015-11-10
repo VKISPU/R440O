@@ -158,7 +158,7 @@ namespace R440O.Parameters
             get { return _регуляторУсиление; }
             set
             {
-                if (value < 120 && value > -120 && Math.Abs(value - _регуляторУсиление) <= 20)
+                if (value < 120 && value > -120 && Math.Abs(value - _регуляторУсиление) <= 100)
                     _регуляторУсиление = value;
             }
         }
@@ -168,7 +168,7 @@ namespace R440O.Parameters
             get { return _регуляторУсилениеПЧ; }
             set
             {
-                if (value < 120 && value > -120 && Math.Abs(value - _регуляторУсилениеПЧ) <= 20)
+                if (value < 120 && value > -120 && Math.Abs(value - _регуляторУсилениеПЧ) <= 100)
                     _регуляторУсилениеПЧ = value;
             }
         }
@@ -176,7 +176,6 @@ namespace R440O.Parameters
         #endregion
 
         public delegate void ParameterChangedHandler();
-
         public static event ParameterChangedHandler ParameterChanged;
 
         private static void OnParameterChanged()

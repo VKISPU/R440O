@@ -76,22 +76,22 @@ namespace R440O.R440OForms.Astra
 
         #region Кнопки
 
-        private void AstraКнопка150_270_Click(object sender, System.EventArgs e)
+        private void Кнопка150_270_Click(object sender, System.EventArgs e)
         {
             SwitchToButton(1);
         }
 
-        private void AstraКнопка270_480_Click(object sender, System.EventArgs e)
+        private void Кнопка270_480_Click(object sender, System.EventArgs e)
         {
             SwitchToButton(2);
         }
 
-        private void AstraКнопка480_860_Click(object sender, System.EventArgs e)
+        private void Кнопка480_860_Click(object sender, System.EventArgs e)
         {
             SwitchToButton(3);
         }
 
-        private void AstraКнопка860_1500_Click(object sender, System.EventArgs e)
+        private void Кнопка860_1500_Click(object sender, System.EventArgs e)
         {
             SwitchToButton(4);
         }
@@ -116,7 +116,7 @@ namespace R440O.R440OForms.Astra
 
         #region Переключатели
 
-        private void AstraПереключательТлгТлф_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательТлгТлф_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -129,7 +129,7 @@ namespace R440O.R440OForms.Astra
             }
         }
 
-        private void AstraПереключательВнешнегоПитания_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательВнешнегоПитания_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -142,7 +142,7 @@ namespace R440O.R440OForms.Astra
             }
         }
 
-        private void AstraПереключательКонтроль_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательКонтроль_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -155,7 +155,7 @@ namespace R440O.R440OForms.Astra
             }
         }
 
-        private void AstraПереключательДиапазоны_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательДиапазоны_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -168,7 +168,7 @@ namespace R440O.R440OForms.Astra
             }
         }
 
-        private void AstraПереключательВыходаРеле_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательВыходаРеле_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -184,17 +184,17 @@ namespace R440O.R440OForms.Astra
         #endregion
 
         #region Переключатель комплекта и тумблер
-        private void AstraТумблерШпУп_Click(object sender, System.EventArgs e)
+        private void ТумблерШпУп_Click(object sender, System.EventArgs e)
         {
             AstraParameters.ТумблерШпУп = !AstraParameters.ТумблерШпУп;
         }
 
-        private void AstraКнопкаЧастота_MouseDown(object sender, MouseEventArgs e)
+        private void КнопкаЧастота_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаЧастота.BackgroundImage = ControlElementImages.buttonRoundType2;
         }
 
-        private void AstraКнопкаЧастота_MouseUp(object sender, MouseEventArgs e)
+        private void КнопкаЧастота_MouseUp(object sender, MouseEventArgs e)
         {
             КнопкаЧастота.BackgroundImage = null;
         }
@@ -203,17 +203,17 @@ namespace R440O.R440OForms.Astra
         #region Регуляторы
 
         private bool isManipulation;
-        private void AstraРегулятор_MouseDown(object sender, MouseEventArgs e)
+        private void Регулятор_MouseDown(object sender, MouseEventArgs e)
         {
             isManipulation = true;
         }
 
-        private void AstraРегулятор_MouseUp(object sender, MouseEventArgs e)
+        private void Регулятор_MouseUp(object sender, MouseEventArgs e)
         {
             isManipulation = false;
         }
 
-        private void AstraРегуляторЧастота_MouseMove(object sender, MouseEventArgs e)
+        private void РегуляторЧастота_MouseMove(object sender, MouseEventArgs e)
         {
             if (!isManipulation) return;
             var button = sender as Button;
@@ -223,7 +223,7 @@ namespace R440O.R440OForms.Astra
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRoundBlack, AstraParameters.РегуляторЧастота);
         }
 
-        private void AstraРегуляторУсиление_MouseMove(object sender, MouseEventArgs e)
+        private void РегуляторУсиление_MouseMove(object sender, MouseEventArgs e)
         {
             if (!isManipulation) return;
             var button = sender as Button;
@@ -233,7 +233,7 @@ namespace R440O.R440OForms.Astra
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRoundBlack, AstraParameters.РегуляторУсиление);
         }
 
-        private void AstraРегуляторУсилениеПЧ_MouseMove(object sender, MouseEventArgs e)
+        private void РегуляторУсилениеПЧ_MouseMove(object sender, MouseEventArgs e)
         {
             if (!isManipulation) return;
             var button = sender as Button;

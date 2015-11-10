@@ -83,9 +83,9 @@
             this.РегуляторУсилениеПЧ.Size = new System.Drawing.Size(106, 108);
             this.РегуляторУсилениеПЧ.TabIndex = 30;
             this.РегуляторУсилениеПЧ.UseVisualStyleBackColor = false;
-            this.РегуляторУсилениеПЧ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AstraРегулятор_MouseDown);
-            this.РегуляторУсилениеПЧ.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AstraРегуляторУсилениеПЧ_MouseMove);
-            this.РегуляторУсилениеПЧ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AstraРегулятор_MouseUp);
+            this.РегуляторУсилениеПЧ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Регулятор_MouseDown);
+            this.РегуляторУсилениеПЧ.MouseMove += new System.Windows.Forms.MouseEventHandler(this.РегуляторУсилениеПЧ_MouseMove);
+            this.РегуляторУсилениеПЧ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Регулятор_MouseUp);
             // 
             // РегуляторУсиление
             // 
@@ -101,9 +101,9 @@
             this.РегуляторУсиление.Size = new System.Drawing.Size(106, 108);
             this.РегуляторУсиление.TabIndex = 30;
             this.РегуляторУсиление.UseVisualStyleBackColor = false;
-            this.РегуляторУсиление.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AstraРегулятор_MouseDown);
-            this.РегуляторУсиление.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AstraРегуляторУсиление_MouseMove);
-            this.РегуляторУсиление.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AstraРегулятор_MouseUp);
+            this.РегуляторУсиление.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Регулятор_MouseDown);
+            this.РегуляторУсиление.MouseMove += new System.Windows.Forms.MouseEventHandler(this.РегуляторУсиление_MouseMove);
+            this.РегуляторУсиление.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Регулятор_MouseUp);
             // 
             // РегуляторЧастота
             // 
@@ -119,9 +119,9 @@
             this.РегуляторЧастота.Size = new System.Drawing.Size(106, 108);
             this.РегуляторЧастота.TabIndex = 30;
             this.РегуляторЧастота.UseVisualStyleBackColor = false;
-            this.РегуляторЧастота.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AstraРегулятор_MouseDown);
-            this.РегуляторЧастота.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AstraРегуляторЧастота_MouseMove);
-            this.РегуляторЧастота.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AstraРегулятор_MouseUp);
+            this.РегуляторЧастота.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Регулятор_MouseDown);
+            this.РегуляторЧастота.MouseMove += new System.Windows.Forms.MouseEventHandler(this.РегуляторЧастота_MouseMove);
+            this.РегуляторЧастота.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Регулятор_MouseUp);
             // 
             // КнопкаЧастота
             // 
@@ -136,8 +136,8 @@
             this.КнопкаЧастота.Size = new System.Drawing.Size(35, 38);
             this.КнопкаЧастота.TabIndex = 30;
             this.КнопкаЧастота.UseVisualStyleBackColor = false;
-            this.КнопкаЧастота.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AstraКнопкаЧастота_MouseDown);
-            this.КнопкаЧастота.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AstraКнопкаЧастота_MouseUp);
+            this.КнопкаЧастота.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаЧастота_MouseDown);
+            this.КнопкаЧастота.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаЧастота_MouseUp);
             // 
             // ТумблерШпУп
             // 
@@ -153,7 +153,7 @@
             this.ТумблерШпУп.Size = new System.Drawing.Size(50, 35);
             this.ТумблерШпУп.TabIndex = 56;
             this.ТумблерШпУп.UseVisualStyleBackColor = false;
-            this.ТумблерШпУп.Click += new System.EventHandler(this.AstraТумблерШпУп_Click);
+            this.ТумблерШпУп.Click += new System.EventHandler(this.ТумблерШпУп_Click);
             // 
             // ПереключательВыходаРеле
             // 
@@ -169,7 +169,7 @@
             this.ПереключательВыходаРеле.Size = new System.Drawing.Size(88, 78);
             this.ПереключательВыходаРеле.TabIndex = 55;
             this.ПереключательВыходаРеле.UseVisualStyleBackColor = false;
-            this.ПереключательВыходаРеле.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AstraПереключательВыходаРеле_MouseUp);
+            this.ПереключательВыходаРеле.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательВыходаРеле_MouseUp);
             // 
             // ПереключательДиапазоны
             // 
@@ -185,7 +185,7 @@
             this.ПереключательДиапазоны.Size = new System.Drawing.Size(88, 78);
             this.ПереключательДиапазоны.TabIndex = 54;
             this.ПереключательДиапазоны.UseVisualStyleBackColor = false;
-            this.ПереключательДиапазоны.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AstraПереключательДиапазоны_MouseUp);
+            this.ПереключательДиапазоны.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательДиапазоны_MouseUp);
             // 
             // ПереключательКонтроль
             // 
@@ -201,7 +201,7 @@
             this.ПереключательКонтроль.Size = new System.Drawing.Size(88, 78);
             this.ПереключательКонтроль.TabIndex = 53;
             this.ПереключательКонтроль.UseVisualStyleBackColor = false;
-            this.ПереключательКонтроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AstraПереключательКонтроль_MouseUp);
+            this.ПереключательКонтроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательКонтроль_MouseUp);
             // 
             // ПереключательВнешнегоПитания
             // 
@@ -217,7 +217,7 @@
             this.ПереключательВнешнегоПитания.Size = new System.Drawing.Size(88, 78);
             this.ПереключательВнешнегоПитания.TabIndex = 52;
             this.ПереключательВнешнегоПитания.UseVisualStyleBackColor = false;
-            this.ПереключательВнешнегоПитания.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AstraПереключательВнешнегоПитания_MouseUp);
+            this.ПереключательВнешнегоПитания.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательВнешнегоПитания_MouseUp);
             // 
             // ПереключательТлгТлф
             // 
@@ -233,7 +233,7 @@
             this.ПереключательТлгТлф.Size = new System.Drawing.Size(88, 78);
             this.ПереключательТлгТлф.TabIndex = 51;
             this.ПереключательТлгТлф.UseVisualStyleBackColor = false;
-            this.ПереключательТлгТлф.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AstraПереключательТлгТлф_MouseUp);
+            this.ПереключательТлгТлф.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательТлгТлф_MouseUp);
             // 
             // Кнопка860_1500
             // 
@@ -251,7 +251,7 @@
             this.Кнопка860_1500.Size = new System.Drawing.Size(58, 58);
             this.Кнопка860_1500.TabIndex = 32;
             this.Кнопка860_1500.UseVisualStyleBackColor = false;
-            this.Кнопка860_1500.Click += new System.EventHandler(this.AstraКнопка860_1500_Click);
+            this.Кнопка860_1500.Click += new System.EventHandler(this.Кнопка860_1500_Click);
             // 
             // Кнопка480_860
             // 
@@ -269,7 +269,7 @@
             this.Кнопка480_860.Size = new System.Drawing.Size(58, 58);
             this.Кнопка480_860.TabIndex = 31;
             this.Кнопка480_860.UseVisualStyleBackColor = false;
-            this.Кнопка480_860.Click += new System.EventHandler(this.AstraКнопка480_860_Click);
+            this.Кнопка480_860.Click += new System.EventHandler(this.Кнопка480_860_Click);
             // 
             // Кнопка270_480
             // 
@@ -287,7 +287,7 @@
             this.Кнопка270_480.Size = new System.Drawing.Size(58, 58);
             this.Кнопка270_480.TabIndex = 30;
             this.Кнопка270_480.UseVisualStyleBackColor = false;
-            this.Кнопка270_480.Click += new System.EventHandler(this.AstraКнопка270_480_Click);
+            this.Кнопка270_480.Click += new System.EventHandler(this.Кнопка270_480_Click);
             // 
             // Кнопка150_270
             // 
@@ -305,7 +305,7 @@
             this.Кнопка150_270.Size = new System.Drawing.Size(58, 58);
             this.Кнопка150_270.TabIndex = 29;
             this.Кнопка150_270.UseVisualStyleBackColor = false;
-            this.Кнопка150_270.Click += new System.EventHandler(this.AstraКнопка150_270_Click);
+            this.Кнопка150_270.Click += new System.EventHandler(this.Кнопка150_270_Click);
             // 
             // AstraForm
             // 
