@@ -25,20 +25,24 @@ namespace R440O.R440OForms.N16
             InitializeComponent();
 
             N16Parameters.ParameterChanged += RefreshFormElements;
+            N16Parameters.IndicatorChanged += RefreshIndicators;
             RefreshFormElements();
         }
 
-        public void RefreshFormElements()
+        public void RefreshIndicators()
         {
-            var angle = N16Parameters.ИндикаторМощностьНагрузки * 1.2F - 55;
+            var angle = N16Parameters.ИндикаторМощностьНагрузки * 1.05F - 52;
             ИндикаторМощностьНагрузки.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
-
 
             angle = N16Parameters.ИндикаторМощностьВыхода * 1.05F - 52;
             ИндикаторМощностьВыхода.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
+        }
 
+        public void RefreshFormElements()
+        {
+            RefreshIndicators();
             КнопкаВкл.BackgroundImage = !N16Parameters.КнопкаВкл
                 ? ControlElementImages.buttonSquareBlackLarge
                 : null;
@@ -73,47 +77,6 @@ namespace R440O.R440OForms.N16
             ЛампочкаЭквивалент.BackgroundImage = N16Parameters.ЛампочкаЭквивалент
                 ? ControlElementImages.lampType6OnRed
                 : null;
-
-            switch (N16Parameters.ТумблерУровень1)
-            {
-                case -1:
-                    ТумблерУровень1.BackgroundImage = ControlElementImages.tumblerType6Down;
-                    break;
-                case 0:
-                    ТумблерУровень1.BackgroundImage = null;
-                    break;
-                case 1:
-                    ТумблерУровень1.BackgroundImage = ControlElementImages.tumblerType6Up;
-                    break;
-            }
-
-            switch (N16Parameters.ТумблерУровень2)
-            {
-                case -1:
-                    ТумблерУровень2.BackgroundImage = ControlElementImages.tumblerType6Down;
-                    break;
-                case 0:
-                    ТумблерУровень2.BackgroundImage = null;
-                    break;
-                case 1:
-                    ТумблерУровень2.BackgroundImage = ControlElementImages.tumblerType6Up;
-                    break;
-            }
-
-            switch (N16Parameters.ТумблерФаза)
-            {
-                case -1:
-                    ТумблерФаза.BackgroundImage = ControlElementImages.tumblerType6Down;
-                    break;
-                case 0:
-                    ТумблерФаза.BackgroundImage = null;
-                    break;
-                case 1:
-                    ТумблерФаза.BackgroundImage = ControlElementImages.tumblerType6Up;
-                    break;
-            }
-
-
         }
 
         #region Тумблеры
@@ -128,10 +91,12 @@ namespace R440O.R440OForms.N16
             if (e.Button == MouseButtons.Left)
             {
                 N16Parameters.ТумблерУровень1 = 1;
+                ТумблерУровень1.BackgroundImage = ControlElementImages.tumblerType6Down;
             }
             if (e.Button == MouseButtons.Right)
             {
                 N16Parameters.ТумблерУровень1 = -1;
+                ТумблерУровень1.BackgroundImage = ControlElementImages.tumblerType6Up;
             }
         }
 
@@ -140,10 +105,12 @@ namespace R440O.R440OForms.N16
             if (e.Button == MouseButtons.Left)
             {
                 N16Parameters.ТумблерФаза = 1;
+                ТумблерФаза.BackgroundImage = ControlElementImages.tumblerType6Down;
             }
             if (e.Button == MouseButtons.Right)
             {
                 N16Parameters.ТумблерФаза = -1;
+                ТумблерФаза.BackgroundImage = ControlElementImages.tumblerType6Up;
             }
         }
 
@@ -158,10 +125,12 @@ namespace R440O.R440OForms.N16
             if (e.Button == MouseButtons.Left)
             {
                 N16Parameters.ТумблерУровень2 = 1;
+                ТумблерУровень2.BackgroundImage = ControlElementImages.tumblerType6Down;
             }
             if (e.Button == MouseButtons.Right)
             {
                 N16Parameters.ТумблерУровень2 = -1;
+                ТумблерУровень2.BackgroundImage = ControlElementImages.tumblerType6Up;
             }
         }
 
