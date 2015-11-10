@@ -35,7 +35,7 @@ namespace R440O.R440OForms.C300M_2
         /// <summary>
         /// Универсальный метод обработки нажатий на кнопки вида работы
         /// </summary>
-        private void КнопкаВидРаботы_Click(object sender, System.EventArgs e)
+        private void КнопкаВидРаботы_Click(object sender, EventArgs e)
         {
             var button = sender as Button;
             C300M_2Parameters.КнопкиВидРаботы[(int)Char.GetNumericValue(button.Name[15])] = true;
@@ -47,7 +47,7 @@ namespace R440O.R440OForms.C300M_2
             this.КнопкаВидРаботыСброс.BackgroundImage = null;
             this.КнопкаВидРаботыСброс.Text = "";
 
-            C300M_2Parameters.КнопкаВидРаботыСброс = true;
+            C300M_2Parameters.КнопкиВидРаботы[10] = true;
 
         }
 
@@ -55,7 +55,8 @@ namespace R440O.R440OForms.C300M_2
         {
             this.КнопкаВидРаботыСброс.BackgroundImage = ControlElementImages.buttonSquareWhite;
             this.КнопкаВидРаботыСброс.Text = "СБРОС";
-            C300M_2Parameters.КнопкаВидРаботыСброс = false;
+
+            C300M_2Parameters.КнопкиВидРаботы[10] = false;
         }
         #endregion
 
@@ -71,14 +72,16 @@ namespace R440O.R440OForms.C300M_2
         {
             КнопкаКонтрольРежимаМинус27.BackgroundImage = null;
             КнопкаКонтрольРежимаМинус27.Text = "";
-            C300M_2Parameters.КнопкаКонтрольРежимаМинус27 = true;
+
+            C300M_2Parameters.КнопкиКонтрольРежима[10] = true;
         }
 
         private void КнопкаКонтрольРежимаМинус27_MouseUp(object sender, MouseEventArgs e)
         {
             КнопкаКонтрольРежимаМинус27.BackgroundImage = ControlElementImages.buttonSquareWhite;
             КнопкаКонтрольРежимаМинус27.Text = "-27";
-            C300M_2Parameters.КнопкаКонтрольРежимаМинус27 = false;
+
+            C300M_2Parameters.КнопкиКонтрольРежима[10] = false;
         }
         #endregion
 
@@ -86,9 +89,10 @@ namespace R440O.R440OForms.C300M_2
         private void КнопкаИндикацияВолны_MouseDown(object sender, MouseEventArgs e)
         {
             C300M_2Parameters.КнопкаИндикацияВолны = true;
+            this.КнопкаИндикацияВолны.BackgroundImage = null;
+
             if (C300M_2Parameters.КнопкаИндикацияВолны)
             {
-                this.КнопкаИндикацияВолны.BackgroundImage = null;
                 ИндикаторВолна1000.Text = (C300M_2Parameters.ПереключательВолна1000 <= 4)
                 ? System.Convert.ToString(C300M_2Parameters.ПереключательВолна1000)
                 : "4";
@@ -105,12 +109,13 @@ namespace R440O.R440OForms.C300M_2
 
         private void КнопкаИндикацияВолны_MouseUp(object sender, MouseEventArgs e)
         {
+            C300M_2Parameters.КнопкаИндикацияВолны = false;
             this.КнопкаИндикацияВолны.BackgroundImage = ControlElementImages.buttonSquareWhite;
+
             ИндикаторВолна1000.Visible = false;
             ИндикаторВолна100.Visible = false;
             ИндикаторВолна10.Visible = false;
             ИндикаторВолна1.Visible = false;
-            C300M_2Parameters.КнопкаИндикацияВолны = false;
         }
         #endregion
 
@@ -179,6 +184,10 @@ namespace R440O.R440OForms.C300M_2
 
         public void RefreshFormElements()
         {
+            var angle1 = C300M_2Parameters.ИндикаторСигнал * 1.15F;
+            ИндикаторСигнала.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle1);
+
             // Установка переключателей в положение последней их установки
             foreach (Control item in Panel.Controls)
             {
@@ -314,28 +323,26 @@ namespace R440O.R440OForms.C300M_2
         {
             КнопкаПитаниеВкл.BackgroundImage = null;
             КнопкаПитаниеВкл.Text = "";
-            C300M_2Parameters.КнопкаПитаниеВкл = true;
+            C300M_2Parameters.КнопкиПитание = true;
         }
 
         private void КнопкаПитаниеВкл_MouseUp(object sender, MouseEventArgs e)
         {
             КнопкаПитаниеВкл.BackgroundImage = ControlElementImages.buttonSquareWhite;
             КнопкаПитаниеВкл.Text = "ВКЛ";
-            C300M_2Parameters.КнопкаПитаниеВкл = false;
         }
 
         private void КнопкаПитаниеВыкл_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаПитаниеВыкл.BackgroundImage = null;
             КнопкаПитаниеВыкл.Text = "";
-            C300M_2Parameters.КнопкаПитаниеВыкл = true;
+            C300M_2Parameters.КнопкиПитание = false;
         }
 
         private void КнопкаПитаниеВыкл_MouseUp(object sender, MouseEventArgs e)
         {
             КнопкаПитаниеВыкл.BackgroundImage = ControlElementImages.buttonSquareWhite;
             КнопкаПитаниеВыкл.Text = "ОТКЛ";
-            C300M_2Parameters.КнопкаПитаниеВыкл = false;
         }
         #endregion
 
@@ -346,13 +353,20 @@ namespace R440O.R440OForms.C300M_2
             КнопкаПоиск.Text = "";
             C300M_2Parameters.КнопкаПоиск = true;
         }
-        #endregion
 
         private void КнопкаПоиск_MouseUp(object sender, MouseEventArgs e)
         {
             КнопкаПоиск.BackgroundImage = ControlElementImages.buttonSquareWhite;
             КнопкаПоиск.Text = "ВКЛ";
             C300M_2Parameters.КнопкаПоиск = false;
+        }
+
+        #endregion
+
+        private void C300M_2Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            C300M_2Parameters.ParameterChanged -= RefreshFormElements;
+            C300M_2Parameters.IndicatorChanged -= RefreshIndicator;
         }
     }
 }

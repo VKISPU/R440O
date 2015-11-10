@@ -943,6 +943,7 @@
             this.Name = "C300M_2Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ц300M-2";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.C300M_2Form_FormClosed);
             this.Panel.ResumeLayout(false);
             this.Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
