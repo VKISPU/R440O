@@ -1,4 +1,5 @@
 ﻿using R440O.BaseClasses;
+using R440O.R440OForms.NKN_2;
 
 namespace R440O.R440OForms.A205M_2
 {
@@ -6,7 +7,7 @@ namespace R440O.R440OForms.A205M_2
     using ThirdParty;
 
     /// <summary>
-    /// Форма блока А205М-1
+    /// Форма блока А205М-2
     /// </summary>
     public partial class A205M_2Form : Form, IRefreshableForm
     {
@@ -72,17 +73,17 @@ namespace R440O.R440OForms.A205M_2
 
         #endregion
 
-        private void A205M_2ПереключательКЭД_Click(object sender, System.EventArgs e)
+        private void ПереключательКЭД_Click(object sender, System.EventArgs e)
         {
             A205M_2Parameters.ТумблерКЭД = !A205M_2Parameters.ТумблерКЭД;
         }
 
         #region Отображение на дисплее текущей выбранной волны
 
-        private void A205M_2КнопкаОтсчет_MouseDown(object sender, MouseEventArgs e)
+        private void КнопкаОтсчет_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаОтсчет.BackgroundImage = null;
-            if (NKN_2.NKN_2Parameters.ЛампочкаФаза1)
+            if (NKN_2Parameters.ЛампочкаФаза1)
                 Дисплей.Text = A205M_2Parameters.ПереключательВолнаX10000 + "  " +
                                A205M_2Parameters.ПереключательВолнаX1000 + "  " +
                                A205M_2Parameters.ПереключательВолнаX100 + "  " +
@@ -91,7 +92,7 @@ namespace R440O.R440OForms.A205M_2
 
         }
 
-        private void A205M_2КнопкаОтсчет_MouseUp(object sender, MouseEventArgs e)
+        private void КнопкаОтсчет_MouseUp(object sender, MouseEventArgs e)
         {
             КнопкаОтсчет.BackgroundImage = ControlElementImages.buttonRoundType6;
             Дисплей.Text = string.Empty;
@@ -101,7 +102,7 @@ namespace R440O.R440OForms.A205M_2
 
         #region Установка переключателей волны
 
-        private void A205M_2ПереключательВолнаX10000_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательВолнаX10000_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -114,7 +115,7 @@ namespace R440O.R440OForms.A205M_2
             }
         }
 
-        private void A205M_2ПереключательВолнаX1000_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательВолнаX1000_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -127,7 +128,7 @@ namespace R440O.R440OForms.A205M_2
             }
         }
 
-        private void A205M_2ПереключательВолнаX100_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательВолнаX100_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -140,7 +141,7 @@ namespace R440O.R440OForms.A205M_2
             }
         }
 
-        private void A205M_2ПереключательВолнаX10_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательВолнаX10_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -153,7 +154,7 @@ namespace R440O.R440OForms.A205M_2
             }
         }
 
-        private void A205M_2ПереключательВолнаX1_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательВолнаX1_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -170,7 +171,7 @@ namespace R440O.R440OForms.A205M_2
 
         #region Переключатели контроля, вида работы, входы чт
 
-        private void A205M_2ПереключательКонтроль_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательКонтроль_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -183,7 +184,7 @@ namespace R440O.R440OForms.A205M_2
             }
         }
 
-        private void A205M_2ПереключательВидРаботы_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательВидРаботы_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -196,7 +197,7 @@ namespace R440O.R440OForms.A205M_2
             }
         }
 
-        private void A205M_2ПереключательВходЧТ_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательВходЧТ_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {

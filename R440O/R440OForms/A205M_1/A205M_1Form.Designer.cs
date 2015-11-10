@@ -99,7 +99,7 @@
             this.ПереключательВолнаX1000.Size = new System.Drawing.Size(100, 100);
             this.ПереключательВолнаX1000.TabIndex = 2;
             this.ПереключательВолнаX1000.UseVisualStyleBackColor = false;
-            this.ПереключательВолнаX1000.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_1ПереключательВолнаX1000_MouseUp);
+            this.ПереключательВолнаX1000.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательВолнаX1000_MouseUp);
             // 
             // ЛампочкаПерегрев
             // 
@@ -136,7 +136,7 @@
             this.ПереключательКонтроль.Size = new System.Drawing.Size(100, 100);
             this.ПереключательКонтроль.TabIndex = 4;
             this.ПереключательКонтроль.UseVisualStyleBackColor = false;
-            this.ПереключательКонтроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_1ПереключательКонтроль_MouseUp);
+            this.ПереключательКонтроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательКонтроль_MouseUp);
             // 
             // ПереключательВходЧТ
             // 
@@ -152,7 +152,7 @@
             this.ПереключательВходЧТ.Size = new System.Drawing.Size(100, 100);
             this.ПереключательВходЧТ.TabIndex = 4;
             this.ПереключательВходЧТ.UseVisualStyleBackColor = false;
-            this.ПереключательВходЧТ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_1ПереключательВходЧТ_MouseUp);
+            this.ПереключательВходЧТ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательВходЧТ_MouseUp);
             // 
             // ПереключательВидРаботы
             // 
@@ -168,7 +168,7 @@
             this.ПереключательВидРаботы.Size = new System.Drawing.Size(100, 100);
             this.ПереключательВидРаботы.TabIndex = 4;
             this.ПереключательВидРаботы.UseVisualStyleBackColor = false;
-            this.ПереключательВидРаботы.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_1ПереключательВидРаботы_MouseUp);
+            this.ПереключательВидРаботы.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательВидРаботы_MouseUp);
             // 
             // Дисплей
             // 
@@ -199,7 +199,7 @@
             this.ПереключательВолнаX1.Size = new System.Drawing.Size(100, 100);
             this.ПереключательВолнаX1.TabIndex = 2;
             this.ПереключательВолнаX1.UseVisualStyleBackColor = false;
-            this.ПереключательВолнаX1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_1ПереключательВолнаX1_MouseUp);
+            this.ПереключательВолнаX1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательВолнаX1_MouseUp);
             // 
             // ПереключательВолнаX10
             // 
@@ -215,7 +215,7 @@
             this.ПереключательВолнаX10.Size = new System.Drawing.Size(100, 100);
             this.ПереключательВолнаX10.TabIndex = 2;
             this.ПереключательВолнаX10.UseVisualStyleBackColor = false;
-            this.ПереключательВолнаX10.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_1ПереключательВолнаX10_MouseUp);
+            this.ПереключательВолнаX10.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательВолнаX10_MouseUp);
             // 
             // ПереключательВолнаX100
             // 
@@ -231,7 +231,7 @@
             this.ПереключательВолнаX100.Size = new System.Drawing.Size(100, 100);
             this.ПереключательВолнаX100.TabIndex = 2;
             this.ПереключательВолнаX100.UseVisualStyleBackColor = false;
-            this.ПереключательВолнаX100.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_1ПереключательВолнаX100_MouseUp);
+            this.ПереключательВолнаX100.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательВолнаX100_MouseUp);
             // 
             // ПереключательВолнаX10000
             // 
@@ -247,7 +247,7 @@
             this.ПереключательВолнаX10000.Size = new System.Drawing.Size(100, 100);
             this.ПереключательВолнаX10000.TabIndex = 2;
             this.ПереключательВолнаX10000.UseVisualStyleBackColor = false;
-            this.ПереключательВолнаX10000.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_1ПереключательВолнаX10000_MouseUp);
+            this.ПереключательВолнаX10000.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательВолнаX10000_MouseUp);
             // 
             // КнопкаОтсчет
             // 
@@ -262,8 +262,8 @@
             this.КнопкаОтсчет.Size = new System.Drawing.Size(53, 55);
             this.КнопкаОтсчет.TabIndex = 1;
             this.КнопкаОтсчет.UseVisualStyleBackColor = false;
-            this.КнопкаОтсчет.MouseDown += new System.Windows.Forms.MouseEventHandler(this.A205M_1КнопкаОтсчет_MouseDown);
-            this.КнопкаОтсчет.MouseUp += new System.Windows.Forms.MouseEventHandler(this.A205M_1КнопкаОтсчет_MouseUp);
+            this.КнопкаОтсчет.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаОтсчет_MouseDown);
+            this.КнопкаОтсчет.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаОтсчет_MouseUp);
             // 
             // ТумблерКЭД
             // 
@@ -278,7 +278,7 @@
             this.ТумблерКЭД.Size = new System.Drawing.Size(63, 68);
             this.ТумблерКЭД.TabIndex = 0;
             this.ТумблерКЭД.UseVisualStyleBackColor = false;
-            this.ТумблерКЭД.Click += new System.EventHandler(this.A205M_1ПереключательКЭД_Click);
+            this.ТумблерКЭД.Click += new System.EventHandler(this.ПереключательКЭД_Click);
             // 
             // ИндикаторКонтроль
             // 

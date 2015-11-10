@@ -21,7 +21,7 @@
         {
             get
             {
-                if (ЛампочкаНормРаб)
+                if (Включен)
                 {
                     var signal = new Signal();
                     if (N15InsideParameters.ВыходПередающегоТракта != null)
@@ -250,18 +250,18 @@
                         case 7:
                             return 30;
                         case 1:
-                            return NKN_1Parameters.ЛампочкаФаза1 ? 20 : 0;
+                            return NKN_1Parameters.ПолноеВключение ? 20 : 0;
                         case 2:
-                            return NKN_1Parameters.ЛампочкаФаза1 ? 26 : 0;
+                            return NKN_1Parameters.ПолноеВключение ? 26 : 0;
                         case 3:
-                            return ЛампочкаНормРаб ? 20 : 0;
+                            return Включен ? 20 : 0;
                         case 5:
                         case 6:
                         case 8:
                         case 9:
-                            return NKN_1Parameters.ЛампочкаФаза1 ? 24 : 0;
+                            return NKN_1Parameters.ПолноеВключение ? 24 : 0;
                         case 10:
-                            return ЛампочкаНормРаб ? 24 : 0;
+                            return Включен ? 24 : 0;
                     }
                 }
                 return 0;
@@ -286,7 +286,6 @@
                 if (value > 0 && value < 5)
                 {
                     _переключательВидРаботы = value;
-                    C300M_1Parameters.Search();
                     OnParameterChanged();
                 }
             }
