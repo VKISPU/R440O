@@ -138,21 +138,22 @@ namespace R440O.R440OForms.A403_1
         /// <summary>
         /// Универсальный метод обработки нажатий на кнопки параметров
         /// </summary>
-        private void КнопкаПараметры_Click(object sender, System.EventArgs e)
+        private void КнопкаПараметры_Click(object sender, EventArgs e)
         {
             var button = sender as Button;
             int buttonNumber = int.Parse(button.Name[15].ToString());
-            A403_1Parameters.КнопкиПараметры[buttonNumber] = !A403_1Parameters.КнопкиПараметры[buttonNumber];
+            A403_1Parameters.КнопкиПараметры[buttonNumber] = true;
             A403_1Parameters.Значение = "";
         }
         private void КнопкаПараметрыСброс_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаПараметрыСброс.BackgroundImage = null;
+            A403_1Parameters.КнопкиПараметры[9] = true;
         }
 
         private void КнопкаПараметрыСброс_MouseUp(object sender, MouseEventArgs e)
         {
-            A403_1Parameters.КнопкиПараметры[9] = false;
+            
             КнопкаПараметрыСброс.BackgroundImage = ControlElementImages.buttonSquareLightBlue;
         }
         #endregion

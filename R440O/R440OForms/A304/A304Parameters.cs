@@ -3,15 +3,13 @@
 namespace R440O.R440OForms.A304
 {
     using InternalBlocks;
-    using C300PM_3;
-    using N502B;
     using N15;
 
     public static class A304Parameters
     {
         public static bool Включен
         {
-            get { return N15Parameters.Включен; }
+            get { return N15Parameters.НеполноеВключение; }
         }
 
         #region Лампочки
@@ -23,8 +21,8 @@ namespace R440O.R440OForms.A304
             get
             {
                 return Включен &&
-                    ((!ТумблерУправление1 && Кнопка1К) ||
-                     (ТумблерУправление1 && N15Parameters.ЛампочкаМШУ && N15Parameters.ТумблерА30412));
+                    ((!ТумблерУправление1 && Кнопка1К && N15Parameters.Включен) ||
+                     (ТумблерУправление1 && MSHUParameters.Включен && N15Parameters.ТумблерА30412));
             }
         }
 
@@ -36,8 +34,8 @@ namespace R440O.R440OForms.A304
             get
             {
                 return Включен &&
-                    ((!ТумблерУправление2 && Кнопка2К) ||
-                     (ТумблерУправление2 && N15Parameters.ЛампочкаМШУ && !N15Parameters.ТумблерА30412));
+                    ((!ТумблерУправление2 && Кнопка2К && N15Parameters.Включен) ||
+                     (ТумблерУправление2 && MSHUParameters.Включен && !N15Parameters.ТумблерА30412));
             }
         }
         #endregion
@@ -165,9 +163,7 @@ namespace R440O.R440OForms.A304
 
             set
             {
-                if (!ТумблерУправление1 && Включен) _кнопка1К = value;
-                //OnParameterChanged();
-                //C300PM_3Parameters.ResetParameters();
+                if (!ТумблерУправление1 && Включен && N15Parameters.Включен) _кнопка1К = value;
                 ResetParameters();
 
                 N15Parameters.ResetParametersAlternative();
@@ -185,9 +181,7 @@ namespace R440O.R440OForms.A304
 
             set
             {
-                if (!ТумблерУправление2 && Включен) _кнопка2К = value;
-                //OnParameterChanged();
-                //C300PM_3Parameters.ResetParameters();
+                if (!ТумблерУправление2 && Включен && N15Parameters.Включен) _кнопка2К = value;
                 ResetParameters();
 
                 N15Parameters.ResetParametersAlternative();
@@ -242,7 +236,6 @@ namespace R440O.R440OForms.A304
 
         public static void ResetParameters()
         {
-            C300PM_3Parameters.ResetParameters();
             OnParameterChanged();
 
             //Для сброса лампочек

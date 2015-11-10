@@ -388,12 +388,12 @@ namespace R440O.R440OForms.A403_1
                     for (int i = 0; i < 9; i++)
                         КнопкиПараметры[i] = false;
                 }
-                else if (value) //если value == false, не давать пользователю отжать кнопку
+                else
                 {
                     for (int i = 0; i < 9; i++)
                         КнопкиПараметры[i] = false;
 
-                    КнопкиПараметры[buttonNumber] = true;
+                    КнопкиПараметры[buttonNumber] = value;
                     A403_1Parameters.IsWritten = false;
                 }
 
