@@ -1,5 +1,4 @@
-﻿using System.Drawing.Imaging;
-using R440O.R440OForms.N15;
+﻿using R440O.R440OForms.N15;
 using R440O.R440OForms.N16;
 using R440O.R440OForms.N502B;
 
@@ -11,7 +10,10 @@ namespace R440O.R440OForms.N13_1
 
         public static bool Включен
         {
-            get { return N15Parameters.Н13_1 && N502BParameters.ТумблерН13_1 && (N16Parameters.ЩелевойМостН13 == 1 && N16Parameters.ЩелевойМостН13 == 3); }
+            get
+            {
+                return N15Parameters.Н13_1 && N502BParameters.ТумблерН13_1 && (N16Parameters.ЩелевойМостН13 == 1 || N16Parameters.ЩелевойМостН13 == 3);
+            }
         }
 
         public static bool Неисправен

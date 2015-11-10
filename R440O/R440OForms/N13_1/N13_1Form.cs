@@ -4,7 +4,6 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-using R440O.BaseClasses;
 using R440O.ThirdParty;
 
 namespace R440O.R440OForms.N13_1
@@ -14,7 +13,7 @@ namespace R440O.R440OForms.N13_1
     /// <summary>
     /// Форма блока Н-13-1
     /// </summary>
-    public partial class N13_1Form : Form, IRefreshableForm
+    public partial class N13_1Form : Form
     {
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="N13_1Form"/>
