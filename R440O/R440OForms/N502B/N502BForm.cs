@@ -158,18 +158,10 @@
 
         private void ПереключательСеть_Click(object sender, System.EventArgs e)
         {
-            if (N502BParameters.ПереключательСеть)
-            {
-                ПереключательСеть.BackgroundImage = ControlElementImages.tumblerN502BPowerDown;
-                N502BParameters.ПереключательСеть = false;
-            }
-            else
-            {
-                ПереключательСеть.BackgroundImage = ControlElementImages.tumblerN502BPowerUp;
-                N502BParameters.ПереключательСеть = true;
-            }
+            N502BParameters.ПереключательСеть = !N502BParameters.ПереключательСеть;
+
             if (N502BParameters.ЛампочкаСеть && N502BParameters.ПереключательСеть) N502BParameters.StationTimer.Start();
-            else N502BParameters.StationTimer.Stop();
+                else N502BParameters.StationTimer.Stop();
         }
 
         private void ПереключательНапряжение_MouseUp(object sender, MouseEventArgs e)

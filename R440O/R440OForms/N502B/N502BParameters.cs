@@ -1,31 +1,26 @@
-﻿namespace R440O.R440OForms.N502B
+﻿using R440O.R440OForms.N16;
+
+namespace R440O.R440OForms.N502B
 {
     using System;
     using System.Linq;
     using System.Windows.Forms;
     using Properties;
-    using NKN_1;
-    using NKN_2;
     using PowerCabel;
     using VoltageStabilizer;
-    using C300M_1;
-    using C300M_2;
-    using C300M_3;
-    using C300M_4;
-    using A304;
-    using A306;
     using N13_1;
     using N13_2;
-    using BMB;
     using N15;
-    using N16;
 
     public static class N502BParameters
     {
         static N502BParameters()
         {
-            СлучайнаяФазировка();
             StationTimer = new Timer();
+
+            var generator = new Random();
+            var zeroToOne = generator.NextDouble();
+            Фазировка = zeroToOne > 0.5F ? 4 : 2;
         }
 
         #region Время работы станции
@@ -48,7 +43,7 @@
                 Interval = 60 * 1000
             };
             StationTimer.Tick += StationTimer_Tick;
-            if (ЛампочкаСеть && ПереключательСеть) StationTimer.Start();
+            if (PowerCabelParameters.КабельСеть && ПереключательСеть) StationTimer.Start();
             else StationTimer.Stop();
         }
 
@@ -70,11 +65,7 @@
 
         public static bool ЛампочкаСфазировано
         {
-            get
-            {
-                return ПереключательФазировка == Фазировка && ЛампочкаСеть &&
-                                  ПереключательСеть && VoltageStabilizerParameters.КабельПодключенПравильно && Нагрузка;
-            }
+            get { return Нагрузка; }
         }
 
         //public static bool ЛампочкаРбпПроверка;
@@ -101,20 +92,7 @@
             set
             {
                 _тумблерЭлектрооборудование = value;
-                NKN_1Parameters.ResetParameters();
-                NKN_2Parameters.ResetParameters();
                 N15Parameters.ResetParameters();
-                C300M_1Parameters.ResetParameters();
-                C300M_2Parameters.ResetParameters();
-                C300M_3Parameters.ResetParameters();
-                C300M_4Parameters.ResetParameters();
-                C300M_1Parameters.RefreshIndicators();
-                C300M_2Parameters.RefreshIndicators();
-                C300M_3Parameters.RefreshIndicators();
-                C300M_4Parameters.RefreshIndicators();
-                A304Parameters.ResetParameters();
-                A306Parameters.ResetParameters();
-                N16Parameters.ResetParameters();
                 OnParameterChanged();
             }
         }
@@ -125,17 +103,7 @@
             set
             {
                 _тумблерВыпрямитель27В = value;
-                NKN_1Parameters.ResetParameters();
-                NKN_2Parameters.ResetParameters();
                 N15Parameters.ResetParameters();
-                BMBParameters.ResetParameters();
-                C300M_1Parameters.ResetParameters();
-                C300M_2Parameters.ResetParameters();
-                C300M_3Parameters.ResetParameters();
-                C300M_4Parameters.ResetParameters();
-                A304Parameters.ResetParameters();
-                A306Parameters.ResetParameters();
-                N16Parameters.ResetParameters();
                 OnParameterChanged();
             }
         }
@@ -145,14 +113,7 @@
             set
             {
                 _тумблерН15 = value;
-                NKN_1Parameters.ResetParameters();
-                NKN_2Parameters.ResetParameters();
                 N15Parameters.ResetParameters();
-                C300M_1Parameters.ResetParameters();
-                C300M_2Parameters.ResetParameters();
-                C300M_3Parameters.ResetParameters();
-                C300M_4Parameters.ResetParameters();
-                A304Parameters.ResetParameters();
                 OnParameterChanged();
             }
         }
@@ -173,8 +134,9 @@
             set
             {
                 _тумблерН13_1 = value;
-                N13_1Parameters.ResetParameters();
                 N15Parameters.Н13_1 = false;
+                N15Parameters.ResetParametersAlternative();
+                N16Parameters.ResetParameters();
                 OnParameterChanged();
             }
         }
@@ -185,8 +147,9 @@
             set
             {
                 _тумблерН13_2 = value;
-                N13_2Parameters.ResetParameters();
                 N15Parameters.Н13_2 = false;
+                N15Parameters.ResetParametersAlternative();
+                N16Parameters.ResetParameters();
                 OnParameterChanged();
             }
         }
@@ -312,47 +275,42 @@
         }
         #endregion
 
-        #region Нагрузка
+        #region Нагрузка и Фазировка
         private static bool _нагрузка = false;
 
         /// <summary>
-        /// Переменная определяющая наличие нагрузки.
+        /// Переменная определяющая наличие нагрузки. Сбрасывает все зависимые блоки в том случае, если значение нагрузки изменило
+        /// сь
         /// </summary>
         public static bool Нагрузка
         {
             get { return _нагрузка; }
             set
             {
-                if (value != _нагрузка) N15Parameters.ResetParameters();
+                bool flag = value != _нагрузка;
                 _нагрузка = value;
+                if (flag) N15Parameters.ResetParameters();
             }
         }
-        #endregion
 
-        #region Фазировка
         /// <summary>
         /// Текущее требуемое для фазировки положение.
         /// </summary>
         public static int Фазировка;
 
-        /// <summary>
-        /// Задание случайной фазировки.
-        /// </summary>
-        private static void СлучайнаяФазировка()
-        {
-            var generator = new Random();
-            var zeroToOne = generator.NextDouble();
-            Фазировка = zeroToOne > 0.5F ? 4 : 2;
-        }
-
         private static bool _кнопкаВклНагрузки;
+
+        /// <summary>
+        /// Кнопка подачи нагрузки. Если всё выставлено верно, то при нажатии будет нагрузка.
+        /// </summary>
         public static bool КнопкаВклНагрузки
         {
             get { return _кнопкаВклНагрузки; }
             set
             {
                 _кнопкаВклНагрузки = value;
-                if (value) Нагрузка = true;
+                if (value && !Нагрузка && ПереключательСеть && VoltageStabilizerParameters.КабельПодключенПравильно &&
+                    ЛампочкаСеть && ПереключательФазировка == Фазировка) Нагрузка = true;
                 OnParameterChanged();
             }
         }
@@ -476,19 +434,6 @@
         public static void ResetParameters()
         {
             OnParameterChanged();
-            VoltageStabilizerParameters.ResetParameters();
-            NKN_1Parameters.ResetParameters();
-            NKN_2Parameters.ResetParameters();
-            N15Parameters.ResetParameters();
-            C300M_1Parameters.ResetParameters();
-            C300M_2Parameters.ResetParameters();
-            C300M_3Parameters.ResetParameters();
-            C300M_4Parameters.ResetParameters();
-            C300M_1Parameters.RefreshIndicators();
-            C300M_2Parameters.RefreshIndicators();
-            C300M_3Parameters.RefreshIndicators();
-            C300M_4Parameters.RefreshIndicators();
-            A306Parameters.ResetParameters();
         }
 
         #region Вспомогательные переменные, для обращения к блоку
