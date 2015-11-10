@@ -1,6 +1,5 @@
 ﻿using System;
 using R440O.R440OForms.N15;
-using R440O.R440OForms.N502B;
 
 namespace R440O.R440OForms.C300M_2
 {
@@ -437,8 +436,8 @@ namespace R440O.R440OForms.C300M_2
         [STAThread]
         public static void Search()
         {
-            timer.Tick -= timer_Tick;
             timer.Stop();
+            timer.Tick -= timer_Tick;
             if (Включен &&
                 (КнопкиКонтрольРежима.PressedButton == 3) || (КнопкаПоиск && ЛампочкаСигнал))
             {
@@ -537,10 +536,12 @@ namespace R440O.R440OForms.C300M_2
                 for (int i = 0; i < 10; i++)
                     КнопкиКонтрольРежима[i] = false;
 
-               КнопкиКонтрольРежима[buttonNumber] = value;
+                КнопкиКонтрольРежима[buttonNumber] = value;
 
-               C300M_2Parameters.ResetParameters();
-               C300M_2Parameters.Search();
+                //По логике должен быть вызов OnParameterChanged и TimerSet
+                //В ResetParameters аналогичный вызов методов
+                //TimerSet будет вызвано и Search
+                C300M_2Parameters.ResetParameters();
             }
         }
 
@@ -564,7 +565,8 @@ namespace R440O.R440OForms.C300M_2
 
                 КнопкиВидРаботы[buttonNumber] = true;
 
-                C300M_2Parameters.TimerSet();
+                //По логике должен быть вызов OnParameterChanged и Search
+                //В ResetParameters аналогичный вызов методов
                 C300M_2Parameters.ResetParameters();
             }
         }

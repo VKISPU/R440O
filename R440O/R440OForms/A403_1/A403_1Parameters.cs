@@ -8,33 +8,7 @@ namespace R440O.R440OForms.A403_1
     {
         public static bool Включен
         {
-            get
-            {
-                return Включен = ТумблерСеть && N15Parameters.ТумблерА403 && N15Parameters.Включен;
-            }
-            set
-            {
-                if (!_включен && value) //включение
-                {
-                    timer.Enabled = true;
-                    timer.Tick += timer_Tick;
-                    timer.Interval = 1000;
-                    timer.Start();
-                }
-                else if (_включен && !value) //отключение
-                {
-                    ДисплейЗначения.ОчиститьЗначения();
-
-                    timer.Enabled = false;
-                    timer.Tick -= timer_Tick;
-                    timer.Stop();
-                    Time = 0;
-
-                    _значение = "";
-                }
-
-                _включен = value;
-            }
+            get { return ТумблерСеть && N15Parameters.ТумблерА403 && N15Parameters.Включен; }
         }
 
         /// <summary>
@@ -103,6 +77,27 @@ namespace R440O.R440OForms.A403_1
             Time++;
         }
 
+        private static void SetTimer()
+        {
+            timer.Stop();
+            timer.Tick -= timer_Tick;
+            if (Включен) //включение
+            {
+                timer.Enabled = true;
+                timer.Tick += timer_Tick;
+                timer.Interval = 1000;
+                timer.Start();
+                timer_Tick(null, null);
+            }
+            else //отключение
+            {
+                ДисплейЗначения.ОчиститьЗначения();
+                _значение = "";
+                timer.Enabled = false;
+                Time = 0;
+            }
+        }
+
         #endregion
 
         #region Лампочки
@@ -133,6 +128,7 @@ namespace R440O.R440OForms.A403_1
             set
             {
                 _тумблерСеть = value;
+                SetTimer();
                 OnParameterChanged();
                 N15Parameters.ResetParametersAlternative();
             }
@@ -346,6 +342,7 @@ namespace R440O.R440OForms.A403_1
         public static void ResetParameters()
         {
             OnParameterChanged();
+            SetTimer();
         }
 
         #region DisplayReset
@@ -463,6 +460,7 @@ namespace R440O.R440OForms.A403_1
                 ДисплейЗначения[0, i] = "";
                 ДисплейЗначения[1, i] = "";
             }
+            ДисплейЗначения[0, 8] = "+000000";
         }
     }
 
