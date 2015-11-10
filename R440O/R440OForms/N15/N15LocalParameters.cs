@@ -1,7 +1,4 @@
-﻿using System;
-using R440O.R440OForms.N16;
-
-namespace R440O.R440OForms.N15
+﻿namespace R440O.R440OForms.N15
 {
     public static class N15LocalParameters
     {
@@ -21,7 +18,6 @@ namespace R440O.R440OForms.N15
         private static bool _локТумблерА1;
         private static bool _локТумблерК1_1;
         private static bool _локТумблерК1_2;
-        private static bool _локТумблерА30412;
         private static bool _локТумблерБ1_1;
         private static bool _локТумблерБ1_2;
         private static bool _локТумблерБ2_1;
