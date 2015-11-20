@@ -5,6 +5,7 @@
 //-----------------------------------------------------------------------
 
 using System;
+using System.Linq;
 using R440O.BaseClasses;
 
 namespace R440O.R440OForms.A403_1
@@ -35,15 +36,20 @@ namespace R440O.R440OForms.A403_1
         public void RefreshDisplay()
         {
             //для разного отображения пустой строки при выключенном и включенном питании
-            Дисплей.Text = A403_1Parameters.Включен ? FormatString(A403_1Parameters.Значение) : "";
+            Дисплей.Text = A403_1Parameters.Включен ? FormatString(A403_1Parameters.Дисплей) : "";
 
             //получим значение если зажата кнопка параметров
-            if (A403_1Parameters.КнопкиПараметры.PressedButton != -1 && A403_1Parameters.Значение == "" &&
-                A403_1Parameters.Включен)
-            {
-                Дисплей.Text = FormatString(A403_1Parameters.ДисплейЗначения[(A403_1Parameters.ТумблерГруппа) ? 0 : 1,
-                    A403_1Parameters.КнопкиПараметры.PressedButton]);
-            }
+            if (A403_1Parameters.КнопкиПараметры.PressedButton == -1 || A403_1Parameters.Дисплей != "" ||
+                !A403_1Parameters.Включен) return;
+
+            if (A403_1Parameters.ТумблерКомплект)
+                Дисплей.Text =
+                    FormatString(A403_1Parameters.ДисплейЗначения1К[(A403_1Parameters.ТумблерГруппа) ? 0 : 1,
+                        A403_1Parameters.КнопкиПараметры.PressedButton]);
+            else
+                Дисплей.Text =
+                    FormatString(A403_1Parameters.ДисплейЗначения2К[(A403_1Parameters.ТумблерГруппа) ? 0 : 1,
+                        A403_1Parameters.КнопкиПараметры.PressedButton]);
         }
 
         /// <summary>
@@ -94,12 +100,14 @@ namespace R440O.R440OForms.A403_1
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
             //отрисовка кнопок параметров
-            foreach (Control item in Panel.Controls)
+            foreach (
+                Control item in
+                    Panel.Controls.Cast<Control>()
+                        .Where(item => item.Name.Contains("КнопкаПараметры") && !item.Name.Contains("Сброс")))
             {
-                if (item.Name.Contains("КнопкаПараметры") && !item.Name.Contains("Сброс"))
-                    item.BackgroundImage = A403_1Parameters.КнопкиПараметры[int.Parse(item.Name[15].ToString())]
-                        ? null
-                        : ControlElementImages.buttonSquareWhite;
+                item.BackgroundImage = A403_1Parameters.КнопкиПараметры[int.Parse(item.Name[15].ToString())]
+                    ? null
+                    : ControlElementImages.buttonSquareWhite;
             }
         }
 
@@ -138,7 +146,7 @@ namespace R440O.R440OForms.A403_1
         /// <summary>
         /// Универсальный метод обработки нажатий на кнопки параметров
         /// </summary>
-        private void КнопкаПараметры_Click(object sender, EventArgs e)
+        private void КнопкаПараметры_Click(object sender, System.EventArgs e)
         {
             var button = sender as Button;
             int buttonNumber = int.Parse(button.Name[15].ToString());
@@ -153,8 +161,8 @@ namespace R440O.R440OForms.A403_1
 
         private void КнопкаПараметрыСброс_MouseUp(object sender, MouseEventArgs e)
         {
-            
             КнопкаПараметрыСброс.BackgroundImage = ControlElementImages.buttonSquareLightBlue;
+            A403_1Parameters.КнопкиПараметры[9] = false;
         }
         #endregion
 

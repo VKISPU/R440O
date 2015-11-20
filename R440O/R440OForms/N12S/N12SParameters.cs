@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using R440O.R440OForms.A403_1;
 using R440O.R440OForms.N15;
 
 namespace R440O.Parameters
@@ -184,6 +185,7 @@ namespace R440O.Parameters
             {
                 if (value >= 0 && value <= 90 && !ЛампочкаУпорБ) _потенциометрBetaИ = value;
                 OnParameterChanged();
+                A403_1Parameters.ResetDisplay();
             }
         }
         #endregion
@@ -235,6 +237,7 @@ namespace R440O.Parameters
             {
                 if (value >= -270 && value <= 270 && !ЛампочкаУпорА) _потенциометрAlphaИ = value;
                 OnParameterChanged();
+                A403_1Parameters.ResetDisplay();
             }
         }
         #endregion
