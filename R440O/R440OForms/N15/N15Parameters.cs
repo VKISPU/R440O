@@ -415,7 +415,6 @@ namespace R440O.R440OForms.N15
             set
             {
                 _тумблерА403 = value;
-                A403_1Parameters.ResetParameters();
             }
         }
 
