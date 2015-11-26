@@ -110,7 +110,7 @@
             this.Крышка.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Крышка.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Крышка.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Крышка.Location = new System.Drawing.Point(126, 81);
+            this.Крышка.Location = new System.Drawing.Point(126, 95);
             this.Крышка.Name = "Крышка";
             this.Крышка.Size = new System.Drawing.Size(356, 559);
             this.Крышка.TabIndex = 10;

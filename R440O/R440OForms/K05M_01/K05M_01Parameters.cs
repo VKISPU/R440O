@@ -1,4 +1,5 @@
 ﻿using R440O.R440OForms.K03M_01;
+using R440O.R440OForms.K05M_01Inside;
 
 namespace R440O.R440OForms.K05M_01
 {
@@ -24,7 +25,7 @@ namespace R440O.R440OForms.K05M_01
 
         #region  Перекючатели
 
-        private static int _ПереключательПередачаКонтроль;
+        private static int _ПереключательПередачаКонтроль = 1;
         private static int _ПереключательОслабление;
         private static int _ПереключательРодРаботы;
         private static int _ПереключательКанал1;
@@ -114,5 +115,25 @@ namespace R440O.R440OForms.K05M_01
             }
         }
         #endregion
+
+        private static int _cтрелкаУровень = 0;
+
+        public static int СтрелкаУровень
+        {
+            get { return _cтрелкаУровень; }
+            set
+            {
+                if (value >= -9 && value <= 9 && _cтрелкаУровень != value)
+                {
+                    _cтрелкаУровень = value;
+                    ResetParameters();
+                }
+            }
+        }
+
+        public static bool СтрелкаУровеньВЗакрашенномСекторе
+        {
+            get { return СтрелкаУровень >= -1 && СтрелкаУровень <= 2; }
+        }
     }
 }

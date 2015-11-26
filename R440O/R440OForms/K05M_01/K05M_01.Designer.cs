@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.K05M_01Panel = new System.Windows.Forms.Panel();
+            this.РегуляторУровень = new System.Windows.Forms.Button();
+            this.СтрелкаУровень = new System.Windows.Forms.PictureBox();
             this.ПереключательКанал2 = new System.Windows.Forms.Button();
             this.ПереключательКанал1 = new System.Windows.Forms.Button();
             this.ПереключательРодРаботы = new System.Windows.Forms.Button();
@@ -36,22 +38,54 @@
             this.ПереключательПередачаКонтроль = new System.Windows.Forms.Button();
             this.ButtonInside = new System.Windows.Forms.Button();
             this.K05M_01Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.СтрелкаУровень)).BeginInit();
             this.SuspendLayout();
             // 
             // K05M_01Panel
             // 
             this.K05M_01Panel.BackgroundImage = global::R440O.BackgroundImages.K05M_01;
             this.K05M_01Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.K05M_01Panel.Controls.Add(this.РегуляторУровень);
+            this.K05M_01Panel.Controls.Add(this.СтрелкаУровень);
             this.K05M_01Panel.Controls.Add(this.ПереключательКанал2);
             this.K05M_01Panel.Controls.Add(this.ПереключательКанал1);
             this.K05M_01Panel.Controls.Add(this.ПереключательРодРаботы);
             this.K05M_01Panel.Controls.Add(this.ПереключательОслабление);
             this.K05M_01Panel.Controls.Add(this.ПереключательПередачаКонтроль);
             this.K05M_01Panel.Controls.Add(this.ButtonInside);
-            this.K05M_01Panel.Location = new System.Drawing.Point(0, 0);
+            this.K05M_01Panel.Location = new System.Drawing.Point(-3, 0);
             this.K05M_01Panel.Name = "K05M_01Panel";
             this.K05M_01Panel.Size = new System.Drawing.Size(496, 707);
             this.K05M_01Panel.TabIndex = 0;
+            // 
+            // РегуляторУровень
+            // 
+            this.РегуляторУровень.BackColor = System.Drawing.Color.Transparent;
+            this.РегуляторУровень.BackgroundImage = global::R440O.ControlElementImages.revolverRoundSmall;
+            this.РегуляторУровень.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.РегуляторУровень.FlatAppearance.BorderSize = 0;
+            this.РегуляторУровень.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.РегуляторУровень.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.РегуляторУровень.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.РегуляторУровень.Location = new System.Drawing.Point(277, 114);
+            this.РегуляторУровень.Name = "РегуляторУровень";
+            this.РегуляторУровень.Size = new System.Drawing.Size(71, 64);
+            this.РегуляторУровень.TabIndex = 47;
+            this.РегуляторУровень.UseVisualStyleBackColor = false;
+            this.РегуляторУровень.MouseDown += new System.Windows.Forms.MouseEventHandler(this.РегуляторУровень_MouseDown_1);
+            this.РегуляторУровень.MouseMove += new System.Windows.Forms.MouseEventHandler(this.РегуляторУровень_MouseMove_1);
+            this.РегуляторУровень.MouseUp += new System.Windows.Forms.MouseEventHandler(this.РегуляторУровень_MouseUp_1);
+            // 
+            // СтрелкаУровень
+            // 
+            this.СтрелкаУровень.BackColor = System.Drawing.Color.Transparent;
+            this.СтрелкаУровень.BackgroundImage = global::R440O.ControlElementImages.arrow2;
+            this.СтрелкаУровень.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.СтрелкаУровень.Location = new System.Drawing.Point(200, 119);
+            this.СтрелкаУровень.Name = "СтрелкаУровень";
+            this.СтрелкаУровень.Size = new System.Drawing.Size(74, 69);
+            this.СтрелкаУровень.TabIndex = 45;
+            this.СтрелкаУровень.TabStop = false;
             // 
             // ПереключательКанал2
             // 
@@ -159,6 +193,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "K05M-1";
             this.K05M_01Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.СтрелкаУровень)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -172,5 +207,7 @@
         private System.Windows.Forms.Button ПереключательКанал1;
         private System.Windows.Forms.Button ПереключательРодРаботы;
         private System.Windows.Forms.Button ПереключательОслабление;
+        private System.Windows.Forms.PictureBox СтрелкаУровень;
+        private System.Windows.Forms.Button РегуляторУровень;
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace R440O.R440OForms.A205M_1
+﻿using R440O.R440OForms.K05M_01;
+
+namespace R440O.R440OForms.A205M_1
 {
     using BaseClasses;
     using N18_M;
@@ -12,7 +14,11 @@
     {
         public static bool Включен
         {
-            get { return NKN_1Parameters.ЛампочкаФаза1 && (N18_MParameters.ПереключательВходК121 == 1); }
+            get
+            {
+                return NKN_1Parameters.ЛампочкаФаза1 && N18_MParameters.ПереключательВходК121 == 1 &&
+                       K05M_01Parameters.СтрелкаУровеньВЗакрашенномСекторе;
+            }
         }
 
         #region Выходной Сигнал

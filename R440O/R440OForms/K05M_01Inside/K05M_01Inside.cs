@@ -73,8 +73,8 @@ namespace R440O.R440OForms.K05M_01Inside
                             ? ControlElementImages.tumblerType7Right
                             : ControlElementImages.tumblerType7Left;
             ТумблерВ7.BackgroundImage = K05M_01InsideParameters.ТумблерВ7
-                            ? ControlElementImages.tumblerType7Up
-                            : ControlElementImages.tumblerType7Down;
+                            ? ControlElementImages.tumblerType7Down
+                            : ControlElementImages.tumblerType7Up;
         }
 
         private void Переключатель_MouseDown(object sender, MouseEventArgs e)

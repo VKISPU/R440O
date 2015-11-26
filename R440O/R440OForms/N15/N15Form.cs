@@ -8,6 +8,8 @@
 using System.Reflection;
 using System.Runtime.InteropServices;
 using R440O.InternalBlocks;
+using R440O.Parameters;
+using R440O.R440OForms.K03M_01;
 using R440O.R440OForms.N15Inside;
 using R440O.R440OForms.N16;
 using R440O.ThirdParty;
@@ -199,6 +201,16 @@ namespace R440O.R440OForms.N15
 
             N15Parameters.Ќ13_1 = (N15LocalParameters.лок нопкаЌ13_1 || N15LocalParameters.лок нопкаЌ13_12);
             N15Parameters.Ќ13_2 = (N15LocalParameters.лок нопкаЌ13_2 || N15LocalParameters.лок нопкаЌ13_12);
+
+
+            if (N15Parameters.“умблер 1_2)
+            {
+                PU_K1_1Parameters.ѕопытатьс€¬ключитьЅлок”даленно();
+            }
+            else
+            {
+                PU_K1_1Parameters.ѕопытатьс€¬ыключитьЅлок”даленно();
+            }
         }
 
         private void ResetCurrentParameters()
@@ -216,6 +228,8 @@ namespace R440O.R440OForms.N15
 
             N15Parameters.Ќ13_1 = false;
             N15Parameters.Ќ13_2 = false;
+
+            PU_K1_1Parameters.ѕопытатьс€¬ыключитьЅлок”даленно();
         }
 
         #endregion
@@ -245,7 +259,6 @@ namespace R440O.R440OForms.N15
         private void  нопка—танци€¬ыкл_MouseUp(object sender, MouseEventArgs e)
         {
             this. нопка—танци€¬ыкл.BackgroundImage = ControlElementImages.buttonN15Off;
-
         }
 
         private void N15ButtonInside1_Click(object sender, EventArgs e)
