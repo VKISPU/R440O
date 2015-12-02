@@ -187,6 +187,7 @@ namespace R440O.Parameters
             set
             {
                 Питание = true;
+                Refresh();
             }
         }
 

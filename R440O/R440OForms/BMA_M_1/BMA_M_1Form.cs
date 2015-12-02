@@ -186,31 +186,11 @@ namespace R440O.R440OForms.BMA_M_1
         #region Кнопки
         private void BMA_M_1КнопкаШлейфТЧ_Click(object sender, System.EventArgs e)
         {
-            if (BMA_M_1Parameters.КнопкаШлейфТЧ)
-            {
-                this.BMA_M_1КнопкаШлейфТЧ.BackgroundImage = ControlElementImages.buttonSquareYellow;
-                this.BMA_M_1КнопкаШлейфТЧ.Text = "ТЧ";
-            }
-            else
-            {
-                this.BMA_M_1КнопкаШлейфТЧ.BackgroundImage = null;
-                this.BMA_M_1КнопкаШлейфТЧ.Text = string.Empty;
-            }
             BMA_M_1Parameters.КнопкаШлейфТЧ = !BMA_M_1Parameters.КнопкаШлейфТЧ;
         }
 
         private void BMA_M_1КнопкаШлейфДК_Click(object sender, System.EventArgs e)
         {
-            if (BMA_M_1Parameters.КнопкаШлейфДК)
-            {
-                this.BMA_M_1КнопкаШлейфДК.BackgroundImage = ControlElementImages.buttonSquareYellow;
-                this.BMA_M_1КнопкаШлейфДК.Text = "ДК";
-            }
-            else
-            {
-                this.BMA_M_1КнопкаШлейфДК.BackgroundImage = null;
-                this.BMA_M_1КнопкаШлейфДК.Text = string.Empty;
-            }
             BMA_M_1Parameters.КнопкаШлейфДК = !BMA_M_1Parameters.КнопкаШлейфДК;
         }
 
@@ -237,7 +217,7 @@ namespace R440O.R440OForms.BMA_M_1
         private void BMA_M_1КнопкаПитаниеВЫКЛ_MouseUp(object sender, MouseEventArgs e)
         {
             this.BMA_M_1КнопкаПитаниеВЫКЛ.Text = "ВЫКЛ";
-            this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
+            this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOn;
             BMA_M_1Parameters.КнопкаПитаниеВЫКЛ = true;
         }
 
@@ -252,7 +232,6 @@ namespace R440O.R440OForms.BMA_M_1
             this.BMA_M_1КнопкаПитаниеВКЛ.Text = "ВКЛ";
             BMA_M_1Parameters.КнопкаПитаниеВКЛ = true;
             this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOn;
-            BMA_M_1Parameters.КнопкаПитаниеВКЛ = true;
 
         }
         #endregion
@@ -323,7 +302,8 @@ namespace R440O.R440OForms.BMA_M_1
                 ? ControlElementImages.buttonSquareBlueOn
                 : ControlElementImages.buttonSquareBlueOff;
 
-            this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
+            this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = BMA_M_1Parameters.Питание ?
+                ControlElementImages.buttonSquareBlueOff : ControlElementImages.buttonSquareBlueOn;
             #endregion
 
             foreach (Control item in BMA_M_1Panel.Controls)

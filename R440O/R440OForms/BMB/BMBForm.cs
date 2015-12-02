@@ -228,12 +228,14 @@
         private void КнопкаПередачаКоманды_MouseDown(object sender, MouseEventArgs e)
         {
             BMBParameters.КнопкаПередачаКоманды = Кнопка.Нажата;
+            this.КнопкаПередачаКоманды.BackgroundImage = TransformImageHelper.Scale(ControlElementImages.buttonSquareBlueOff, 85);
             BMBParameters.ПередатьКоманду();
         }
 
         private void КнопкаПередачаКоманды_MouseUp(object sender, MouseEventArgs e)
         {
             BMBParameters.КнопкаПередачаКоманды = Кнопка.Отжата;
+            this.КнопкаПередачаКоманды.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
             RefreshFormElements();
         }
         #endregion
