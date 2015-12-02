@@ -322,6 +322,18 @@
 
         #endregion
 
+        #region Гнезда
+
+        // Соедененые входы
+        private static string[] _Соеденение = new string [2];
+
+        public static void Соеденить()
+        {
+
+        }
+
+        #endregion
+
         public delegate void ParameterChangedHandler();
 
         public static event ParameterChangedHandler ParameterChanged;
