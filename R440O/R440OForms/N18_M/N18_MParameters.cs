@@ -1,4 +1,5 @@
-﻿namespace R440O.R440OForms.N18_M
+﻿using System.Collections.Generic;
+namespace R440O.R440OForms.N18_M
 {
     using A205M_1;
     using A205M_2;
@@ -325,11 +326,32 @@
         #region Гнезда
 
         // Соедененые входы
-        private static string[] _Соеденение = new string [2];
+        public static int[] Соеденения = new int[76];
 
-        public static void Соеденить()
+        public static int номер_первого_гнезда = -1;
+
+        public static void Соеденить(int номер_гнезда )
         {
-
+            if (номер_первого_гнезда == -1)
+            {
+                if (Соеденения[номер_гнезда] == 0)
+                {
+                     номер_первого_гнезда = номер_гнезда;
+                }
+                else
+                {
+                    Соеденения[Соеденения[номер_гнезда]] = 0;
+                    Соеденения[номер_гнезда] = 0;
+                }
+                   
+            }
+            else 
+            {                
+                Соеденения[номер_первого_гнезда] = номер_гнезда;
+                Соеденения[номер_гнезда] = номер_первого_гнезда;
+                номер_первого_гнезда = -1;
+            }
+            OnParameterChanged();
         }
 
         #endregion

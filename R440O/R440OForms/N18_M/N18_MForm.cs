@@ -1,4 +1,6 @@
-﻿namespace R440O.R440OForms.N18_M
+﻿using System.Drawing;
+using System.Collections.Generic;
+namespace R440O.R440OForms.N18_M
 {
     using System.Windows.Forms;
     using BaseClasses;
@@ -291,11 +293,75 @@
             angle = N18_MParameters.ПереключательВходБ22 * 50 - 75;
             ПереключательВходБ22.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
+            //Invalidate();
+            Panel.Invalidate();
         }
 
         private void N18_MForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             N18_MParameters.ParameterChanged -= RefreshFormElements;
+        }
+
+        private void DrawLine(Point onePoint, Point twoPoint, PaintEventArgs e)
+        {
+            var myPen = new Pen(Color.Red, 5);
+            e.Graphics.DrawLine(myPen, onePoint, twoPoint);
+            myPen.Dispose();
+        }
+
+        private void РисованиеСоеденений(PaintEventArgs e)
+        {
+            bool[] Дублирующие = new bool[76];
+            int номер_гнезда1, номер_гнезда2;
+            Point point1 = new Point(0, 0);
+            Point point2 = new Point(0, 0);
+            for (int i = 1; i < 76; i++)
+            {
+                номер_гнезда1 = i;
+                номер_гнезда2 = N18_MParameters.Соеденения[i];
+                if (!Дублирующие[i] && номер_гнезда2 != 0)
+                {
+                    foreach (Control item in Panel.Controls)
+                    {
+                        if (item.Name == "Гнездо" + номер_гнезда1)
+                        {
+                            point1 = new Point(item.Location.X + item.Size.Width / 2,
+                                 item.Location.Y  + item.Size.Height / 2);
+                            item.BackColor = Color.Red;
+                        }
+                        if (item.Name == "Гнездо" + номер_гнезда2)
+                        {
+                            point2 = new Point(item.Location.X + item.Size.Width / 2,
+                                 item.Location.Y + item.Size.Height / 2);
+                            item.BackColor = Color.Red;
+                        }
+                    }
+                    DrawLine(point1, point2, e);
+                    Дублирующие[номер_гнезда1] = true;
+                    Дублирующие[номер_гнезда2] = true;
+              
+                }
+            }
+        }
+
+        private void Гнездо_Click(object sender, System.EventArgs e)
+        {
+            var СвязанноеГнездо = sender as Button;
+            var text =  СвязанноеГнездо.Name;
+            int НомерГнезда = text.Length == 7 ?
+                (int)char.GetNumericValue(text[6]) :
+                10 * (int)char.GetNumericValue(text[6]) + (int)char.GetNumericValue(text[7]);
+            N18_MParameters.Соеденить(НомерГнезда);
+        }
+
+        private void N18_MForm_Paint(object sender, PaintEventArgs e)
+        {
+           // РисованиеСоеденений(e);
+        }
+
+        private void Panel_Paint(object sender, PaintEventArgs e)
+        {
+            РисованиеСоеденений(e);
         }
     }
 }
