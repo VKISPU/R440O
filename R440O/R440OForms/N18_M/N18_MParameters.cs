@@ -354,6 +354,23 @@ namespace R440O.R440OForms.N18_M
             OnParameterChanged();
         }
 
+        private static  string[] Назваия_гнезд = new string[76] ;
+     
+        
+
+        public static bool Проверить_комутацию(string гнездо1, string гнездо2)
+        {
+            
+            Назваия_гнезд[45] = "Контроль" + "ПРД" + "Возб" + "ТЛФ";
+            Назваия_гнезд[8] = "Коммутация ПРМ режимов" + "1кан" + "БМА1" ;
+
+            for (int i=0; i<76; i++)
+            {
+                if (Назваия_гнезд[i] == гнездо1 && Назваия_гнезд[Соеденения[i]] == гнездо2)
+                    return true;
+            }
+            return false;
+        }
         #endregion
 
         public delegate void ParameterChangedHandler();

@@ -486,6 +486,7 @@
             // Гнездо1
             // 
             this.Гнездо1.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо1.FlatAppearance.BorderSize = 0;
             this.Гнездо1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо1.Location = new System.Drawing.Point(43, 105);
             this.Гнездо1.Margin = new System.Windows.Forms.Padding(0);
@@ -499,6 +500,7 @@
             // Гнездо2
             // 
             this.Гнездо2.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо2.FlatAppearance.BorderSize = 0;
             this.Гнездо2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо2.Location = new System.Drawing.Point(54, 105);
             this.Гнездо2.Margin = new System.Windows.Forms.Padding(0);
@@ -512,6 +514,7 @@
             // Гнездо3
             // 
             this.Гнездо3.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо3.FlatAppearance.BorderSize = 0;
             this.Гнездо3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо3.Location = new System.Drawing.Point(66, 105);
             this.Гнездо3.Margin = new System.Windows.Forms.Padding(0);
@@ -525,6 +528,7 @@
             // Гнездо4
             // 
             this.Гнездо4.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо4.FlatAppearance.BorderSize = 0;
             this.Гнездо4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо4.Location = new System.Drawing.Point(78, 105);
             this.Гнездо4.Margin = new System.Windows.Forms.Padding(0);
@@ -538,6 +542,7 @@
             // Гнездо5
             // 
             this.Гнездо5.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо5.FlatAppearance.BorderSize = 0;
             this.Гнездо5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо5.Location = new System.Drawing.Point(90, 105);
             this.Гнездо5.Margin = new System.Windows.Forms.Padding(0);
@@ -551,6 +556,7 @@
             // Гнездо6
             // 
             this.Гнездо6.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо6.FlatAppearance.BorderSize = 0;
             this.Гнездо6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо6.Location = new System.Drawing.Point(102, 105);
             this.Гнездо6.Margin = new System.Windows.Forms.Padding(0);
@@ -564,13 +570,14 @@
             // Гнездо7
             // 
             this.Гнездо7.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо7.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.Гнездо7.FlatAppearance.BorderSize = 0;
             this.Гнездо7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо7.Location = new System.Drawing.Point(114, 105);
             this.Гнездо7.Margin = new System.Windows.Forms.Padding(0);
             this.Гнездо7.Name = "Гнездо7";
             this.Гнездо7.Size = new System.Drawing.Size(10, 28);
             this.Гнездо7.TabIndex = 60;
-            this.Гнездо7.Text = "7";
             this.Гнездо7.UseVisualStyleBackColor = false;
             this.Гнездо7.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -593,6 +600,7 @@
             // Гнездо9
             // 
             this.Гнездо9.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо9.FlatAppearance.BorderSize = 0;
             this.Гнездо9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо9.Location = new System.Drawing.Point(147, 105);
             this.Гнездо9.Margin = new System.Windows.Forms.Padding(0);
@@ -606,6 +614,7 @@
             // Гнездо10
             // 
             this.Гнездо10.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо10.FlatAppearance.BorderSize = 0;
             this.Гнездо10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо10.Location = new System.Drawing.Point(159, 105);
             this.Гнездо10.Margin = new System.Windows.Forms.Padding(0);
@@ -619,6 +628,7 @@
             // Гнездо11
             // 
             this.Гнездо11.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо11.FlatAppearance.BorderSize = 0;
             this.Гнездо11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо11.Location = new System.Drawing.Point(171, 105);
             this.Гнездо11.Margin = new System.Windows.Forms.Padding(0);
@@ -632,6 +642,7 @@
             // Гнездо12
             // 
             this.Гнездо12.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо12.FlatAppearance.BorderSize = 0;
             this.Гнездо12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо12.Location = new System.Drawing.Point(184, 105);
             this.Гнездо12.Margin = new System.Windows.Forms.Padding(0);
@@ -645,6 +656,7 @@
             // Гнездо13
             // 
             this.Гнездо13.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо13.FlatAppearance.BorderSize = 0;
             this.Гнездо13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо13.Location = new System.Drawing.Point(203, 105);
             this.Гнездо13.Margin = new System.Windows.Forms.Padding(0);
@@ -658,6 +670,7 @@
             // Гнездо14
             // 
             this.Гнездо14.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо14.FlatAppearance.BorderSize = 0;
             this.Гнездо14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо14.Location = new System.Drawing.Point(215, 105);
             this.Гнездо14.Margin = new System.Windows.Forms.Padding(0);
@@ -671,6 +684,7 @@
             // Гнездо15
             // 
             this.Гнездо15.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо15.FlatAppearance.BorderSize = 0;
             this.Гнездо15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо15.Location = new System.Drawing.Point(235, 105);
             this.Гнездо15.Margin = new System.Windows.Forms.Padding(0);
@@ -684,6 +698,7 @@
             // Гнездо16
             // 
             this.Гнездо16.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо16.FlatAppearance.BorderSize = 0;
             this.Гнездо16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо16.Location = new System.Drawing.Point(247, 105);
             this.Гнездо16.Margin = new System.Windows.Forms.Padding(0);
@@ -697,6 +712,7 @@
             // Гнездо17
             // 
             this.Гнездо17.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо17.FlatAppearance.BorderSize = 0;
             this.Гнездо17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо17.Location = new System.Drawing.Point(259, 105);
             this.Гнездо17.Margin = new System.Windows.Forms.Padding(0);
@@ -710,6 +726,7 @@
             // Гнездо18
             // 
             this.Гнездо18.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо18.FlatAppearance.BorderSize = 0;
             this.Гнездо18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо18.Location = new System.Drawing.Point(271, 105);
             this.Гнездо18.Margin = new System.Windows.Forms.Padding(0);
@@ -723,6 +740,7 @@
             // Гнездо19
             // 
             this.Гнездо19.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо19.FlatAppearance.BorderSize = 0;
             this.Гнездо19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо19.Location = new System.Drawing.Point(283, 105);
             this.Гнездо19.Margin = new System.Windows.Forms.Padding(0);
@@ -736,6 +754,7 @@
             // Гнездо20
             // 
             this.Гнездо20.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо20.FlatAppearance.BorderSize = 0;
             this.Гнездо20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо20.Location = new System.Drawing.Point(321, 105);
             this.Гнездо20.Margin = new System.Windows.Forms.Padding(0);
@@ -750,6 +769,7 @@
             // 
             this.Гнездо21.BackColor = System.Drawing.Color.Transparent;
             this.Гнездо21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Гнездо21.FlatAppearance.BorderSize = 0;
             this.Гнездо21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо21.Location = new System.Drawing.Point(333, 105);
             this.Гнездо21.Margin = new System.Windows.Forms.Padding(0);
@@ -763,6 +783,7 @@
             // Гнездо22
             // 
             this.Гнездо22.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо22.FlatAppearance.BorderSize = 0;
             this.Гнездо22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо22.Location = new System.Drawing.Point(358, 106);
             this.Гнездо22.Margin = new System.Windows.Forms.Padding(0);
@@ -776,6 +797,7 @@
             // Гнездо23
             // 
             this.Гнездо23.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо23.FlatAppearance.BorderSize = 0;
             this.Гнездо23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо23.Location = new System.Drawing.Point(372, 106);
             this.Гнездо23.Margin = new System.Windows.Forms.Padding(0);
@@ -789,6 +811,7 @@
             // Гнездо24
             // 
             this.Гнездо24.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо24.FlatAppearance.BorderSize = 0;
             this.Гнездо24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо24.Location = new System.Drawing.Point(386, 106);
             this.Гнездо24.Margin = new System.Windows.Forms.Padding(0);
@@ -802,6 +825,7 @@
             // Гнездо25
             // 
             this.Гнездо25.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо25.FlatAppearance.BorderSize = 0;
             this.Гнездо25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо25.Location = new System.Drawing.Point(401, 106);
             this.Гнездо25.Margin = new System.Windows.Forms.Padding(0);
@@ -815,6 +839,7 @@
             // Гнездо26
             // 
             this.Гнездо26.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо26.FlatAppearance.BorderSize = 0;
             this.Гнездо26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо26.Location = new System.Drawing.Point(422, 105);
             this.Гнездо26.Margin = new System.Windows.Forms.Padding(0);
@@ -828,6 +853,7 @@
             // Гнездо27
             // 
             this.Гнездо27.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо27.FlatAppearance.BorderSize = 0;
             this.Гнездо27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо27.Location = new System.Drawing.Point(434, 105);
             this.Гнездо27.Margin = new System.Windows.Forms.Padding(0);
@@ -841,6 +867,7 @@
             // Гнездо28
             // 
             this.Гнездо28.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо28.FlatAppearance.BorderSize = 0;
             this.Гнездо28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо28.Location = new System.Drawing.Point(43, 148);
             this.Гнездо28.Margin = new System.Windows.Forms.Padding(0);
@@ -854,6 +881,7 @@
             // Гнездо29
             // 
             this.Гнездо29.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо29.FlatAppearance.BorderSize = 0;
             this.Гнездо29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо29.Location = new System.Drawing.Point(55, 148);
             this.Гнездо29.Margin = new System.Windows.Forms.Padding(0);
@@ -867,6 +895,7 @@
             // Гнездо30
             // 
             this.Гнездо30.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо30.FlatAppearance.BorderSize = 0;
             this.Гнездо30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо30.Location = new System.Drawing.Point(67, 148);
             this.Гнездо30.Margin = new System.Windows.Forms.Padding(0);
@@ -880,6 +909,7 @@
             // Гнездо31
             // 
             this.Гнездо31.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо31.FlatAppearance.BorderSize = 0;
             this.Гнездо31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо31.Location = new System.Drawing.Point(79, 148);
             this.Гнездо31.Margin = new System.Windows.Forms.Padding(0);
@@ -893,6 +923,7 @@
             // Гнездо32
             // 
             this.Гнездо32.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо32.FlatAppearance.BorderSize = 0;
             this.Гнездо32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо32.Location = new System.Drawing.Point(91, 148);
             this.Гнездо32.Margin = new System.Windows.Forms.Padding(0);
@@ -906,6 +937,7 @@
             // Гнездо33
             // 
             this.Гнездо33.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо33.FlatAppearance.BorderSize = 0;
             this.Гнездо33.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо33.Location = new System.Drawing.Point(103, 148);
             this.Гнездо33.Margin = new System.Windows.Forms.Padding(0);
@@ -919,6 +951,7 @@
             // Гнездо34
             // 
             this.Гнездо34.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо34.FlatAppearance.BorderSize = 0;
             this.Гнездо34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо34.Location = new System.Drawing.Point(115, 148);
             this.Гнездо34.Margin = new System.Windows.Forms.Padding(0);
@@ -932,6 +965,7 @@
             // Гнездо35
             // 
             this.Гнездо35.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо35.FlatAppearance.BorderSize = 0;
             this.Гнездо35.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо35.Location = new System.Drawing.Point(135, 148);
             this.Гнездо35.Margin = new System.Windows.Forms.Padding(0);
@@ -945,6 +979,7 @@
             // Гнездо36
             // 
             this.Гнездо36.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо36.FlatAppearance.BorderSize = 0;
             this.Гнездо36.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо36.Location = new System.Drawing.Point(147, 148);
             this.Гнездо36.Margin = new System.Windows.Forms.Padding(0);
@@ -958,6 +993,7 @@
             // Гнездо37
             // 
             this.Гнездо37.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо37.FlatAppearance.BorderSize = 0;
             this.Гнездо37.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо37.Location = new System.Drawing.Point(159, 148);
             this.Гнездо37.Margin = new System.Windows.Forms.Padding(0);
@@ -971,6 +1007,7 @@
             // Гнездо38
             // 
             this.Гнездо38.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо38.FlatAppearance.BorderSize = 0;
             this.Гнездо38.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо38.Location = new System.Drawing.Point(171, 148);
             this.Гнездо38.Margin = new System.Windows.Forms.Padding(0);
@@ -984,6 +1021,7 @@
             // Гнездо39
             // 
             this.Гнездо39.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо39.FlatAppearance.BorderSize = 0;
             this.Гнездо39.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо39.Location = new System.Drawing.Point(184, 148);
             this.Гнездо39.Margin = new System.Windows.Forms.Padding(0);
@@ -997,6 +1035,7 @@
             // Гнездо40
             // 
             this.Гнездо40.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо40.FlatAppearance.BorderSize = 0;
             this.Гнездо40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо40.Location = new System.Drawing.Point(235, 148);
             this.Гнездо40.Margin = new System.Windows.Forms.Padding(0);
@@ -1010,6 +1049,7 @@
             // Гнездо41
             // 
             this.Гнездо41.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо41.FlatAppearance.BorderSize = 0;
             this.Гнездо41.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо41.Location = new System.Drawing.Point(247, 148);
             this.Гнездо41.Margin = new System.Windows.Forms.Padding(0);
@@ -1023,6 +1063,7 @@
             // Гнездо42
             // 
             this.Гнездо42.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо42.FlatAppearance.BorderSize = 0;
             this.Гнездо42.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо42.Location = new System.Drawing.Point(259, 148);
             this.Гнездо42.Margin = new System.Windows.Forms.Padding(0);
@@ -1036,6 +1077,7 @@
             // Гнездо43
             // 
             this.Гнездо43.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо43.FlatAppearance.BorderSize = 0;
             this.Гнездо43.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо43.Location = new System.Drawing.Point(271, 148);
             this.Гнездо43.Margin = new System.Windows.Forms.Padding(0);
@@ -1049,6 +1091,7 @@
             // Гнездо44
             // 
             this.Гнездо44.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо44.FlatAppearance.BorderSize = 0;
             this.Гнездо44.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо44.Location = new System.Drawing.Point(283, 148);
             this.Гнездо44.Margin = new System.Windows.Forms.Padding(0);
@@ -1062,6 +1105,7 @@
             // Гнездо45
             // 
             this.Гнездо45.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо45.FlatAppearance.BorderSize = 0;
             this.Гнездо45.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо45.Location = new System.Drawing.Point(321, 148);
             this.Гнездо45.Margin = new System.Windows.Forms.Padding(0);
@@ -1075,6 +1119,7 @@
             // Гнездо46
             // 
             this.Гнездо46.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо46.FlatAppearance.BorderSize = 0;
             this.Гнездо46.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо46.Location = new System.Drawing.Point(345, 148);
             this.Гнездо46.Margin = new System.Windows.Forms.Padding(0);
@@ -1088,6 +1133,7 @@
             // Гнездо47
             // 
             this.Гнездо47.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо47.FlatAppearance.BorderSize = 0;
             this.Гнездо47.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо47.Location = new System.Drawing.Point(372, 148);
             this.Гнездо47.Margin = new System.Windows.Forms.Padding(0);
@@ -1101,6 +1147,7 @@
             // Гнездо48
             // 
             this.Гнездо48.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо48.FlatAppearance.BorderSize = 0;
             this.Гнездо48.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо48.Location = new System.Drawing.Point(401, 148);
             this.Гнездо48.Margin = new System.Windows.Forms.Padding(0);
@@ -1114,6 +1161,7 @@
             // Гнездо49
             // 
             this.Гнездо49.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо49.FlatAppearance.BorderSize = 0;
             this.Гнездо49.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо49.Location = new System.Drawing.Point(422, 148);
             this.Гнездо49.Margin = new System.Windows.Forms.Padding(0);
@@ -1127,6 +1175,7 @@
             // Гнездо50
             // 
             this.Гнездо50.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо50.FlatAppearance.BorderSize = 0;
             this.Гнездо50.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо50.Location = new System.Drawing.Point(434, 148);
             this.Гнездо50.Margin = new System.Windows.Forms.Padding(0);
@@ -1251,6 +1300,7 @@
             // Гнездо76
             // 
             this.Гнездо76.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо76.FlatAppearance.BorderSize = 0;
             this.Гнездо76.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо76.Location = new System.Drawing.Point(391, 191);
             this.Гнездо76.Margin = new System.Windows.Forms.Padding(0);
@@ -1264,6 +1314,7 @@
             // Гнездо75
             // 
             this.Гнездо75.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо75.FlatAppearance.BorderSize = 0;
             this.Гнездо75.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо75.Location = new System.Drawing.Point(379, 191);
             this.Гнездо75.Margin = new System.Windows.Forms.Padding(0);
@@ -1277,6 +1328,7 @@
             // Гнездо74
             // 
             this.Гнездо74.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо74.FlatAppearance.BorderSize = 0;
             this.Гнездо74.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо74.Location = new System.Drawing.Point(366, 191);
             this.Гнездо74.Margin = new System.Windows.Forms.Padding(0);
@@ -1290,6 +1342,7 @@
             // Гнездо73
             // 
             this.Гнездо73.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо73.FlatAppearance.BorderSize = 0;
             this.Гнездо73.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо73.Location = new System.Drawing.Point(354, 191);
             this.Гнездо73.Margin = new System.Windows.Forms.Padding(0);
@@ -1303,6 +1356,7 @@
             // Гнездо72
             // 
             this.Гнездо72.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо72.FlatAppearance.BorderSize = 0;
             this.Гнездо72.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо72.Location = new System.Drawing.Point(343, 191);
             this.Гнездо72.Margin = new System.Windows.Forms.Padding(0);
@@ -1316,6 +1370,7 @@
             // Гнездо71
             // 
             this.Гнездо71.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо71.FlatAppearance.BorderSize = 0;
             this.Гнездо71.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо71.Location = new System.Drawing.Point(331, 191);
             this.Гнездо71.Margin = new System.Windows.Forms.Padding(0);
@@ -1329,6 +1384,7 @@
             // Гнездо70
             // 
             this.Гнездо70.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо70.FlatAppearance.BorderSize = 0;
             this.Гнездо70.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо70.Location = new System.Drawing.Point(319, 191);
             this.Гнездо70.Margin = new System.Windows.Forms.Padding(0);
@@ -1342,6 +1398,7 @@
             // Гнездо69
             // 
             this.Гнездо69.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо69.FlatAppearance.BorderSize = 0;
             this.Гнездо69.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо69.Location = new System.Drawing.Point(306, 191);
             this.Гнездо69.Margin = new System.Windows.Forms.Padding(0);
@@ -1355,6 +1412,7 @@
             // Гнездо68
             // 
             this.Гнездо68.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо68.FlatAppearance.BorderSize = 0;
             this.Гнездо68.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо68.Location = new System.Drawing.Point(294, 191);
             this.Гнездо68.Margin = new System.Windows.Forms.Padding(0);
@@ -1368,6 +1426,7 @@
             // Гнездо67
             // 
             this.Гнездо67.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо67.FlatAppearance.BorderSize = 0;
             this.Гнездо67.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо67.Location = new System.Drawing.Point(281, 191);
             this.Гнездо67.Margin = new System.Windows.Forms.Padding(0);
@@ -1381,6 +1440,7 @@
             // Гнездо66
             // 
             this.Гнездо66.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо66.FlatAppearance.BorderSize = 0;
             this.Гнездо66.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо66.Location = new System.Drawing.Point(269, 191);
             this.Гнездо66.Margin = new System.Windows.Forms.Padding(0);
@@ -1394,6 +1454,7 @@
             // Гнездо65
             // 
             this.Гнездо65.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо65.FlatAppearance.BorderSize = 0;
             this.Гнездо65.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо65.Location = new System.Drawing.Point(258, 191);
             this.Гнездо65.Margin = new System.Windows.Forms.Padding(0);
@@ -1407,6 +1468,7 @@
             // Гнездо64
             // 
             this.Гнездо64.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо64.FlatAppearance.BorderSize = 0;
             this.Гнездо64.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо64.Location = new System.Drawing.Point(246, 191);
             this.Гнездо64.Margin = new System.Windows.Forms.Padding(0);
@@ -1420,6 +1482,7 @@
             // Гнездо63
             // 
             this.Гнездо63.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо63.FlatAppearance.BorderSize = 0;
             this.Гнездо63.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо63.Location = new System.Drawing.Point(234, 191);
             this.Гнездо63.Margin = new System.Windows.Forms.Padding(0);
@@ -1433,6 +1496,7 @@
             // Гнездо62
             // 
             this.Гнездо62.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо62.FlatAppearance.BorderSize = 0;
             this.Гнездо62.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо62.Location = new System.Drawing.Point(185, 191);
             this.Гнездо62.Margin = new System.Windows.Forms.Padding(0);
@@ -1446,6 +1510,7 @@
             // Гнездо61
             // 
             this.Гнездо61.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо61.FlatAppearance.BorderSize = 0;
             this.Гнездо61.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо61.Location = new System.Drawing.Point(172, 191);
             this.Гнездо61.Margin = new System.Windows.Forms.Padding(0);
@@ -1459,6 +1524,7 @@
             // Гнездо60
             // 
             this.Гнездо60.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо60.FlatAppearance.BorderSize = 0;
             this.Гнездо60.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо60.Location = new System.Drawing.Point(159, 191);
             this.Гнездо60.Margin = new System.Windows.Forms.Padding(0);
@@ -1472,6 +1538,7 @@
             // Гнездо59
             // 
             this.Гнездо59.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо59.FlatAppearance.BorderSize = 0;
             this.Гнездо59.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо59.Location = new System.Drawing.Point(147, 191);
             this.Гнездо59.Margin = new System.Windows.Forms.Padding(0);
@@ -1485,6 +1552,7 @@
             // Гнездо58
             // 
             this.Гнездо58.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо58.FlatAppearance.BorderSize = 0;
             this.Гнездо58.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо58.Location = new System.Drawing.Point(135, 191);
             this.Гнездо58.Margin = new System.Windows.Forms.Padding(0);
@@ -1498,6 +1566,7 @@
             // Гнездо57
             // 
             this.Гнездо57.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо57.FlatAppearance.BorderSize = 0;
             this.Гнездо57.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо57.Location = new System.Drawing.Point(115, 191);
             this.Гнездо57.Margin = new System.Windows.Forms.Padding(0);
@@ -1511,6 +1580,7 @@
             // Гнездо56
             // 
             this.Гнездо56.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо56.FlatAppearance.BorderSize = 0;
             this.Гнездо56.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо56.Location = new System.Drawing.Point(103, 191);
             this.Гнездо56.Margin = new System.Windows.Forms.Padding(0);
@@ -1524,6 +1594,7 @@
             // Гнездо55
             // 
             this.Гнездо55.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо55.FlatAppearance.BorderSize = 0;
             this.Гнездо55.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо55.Location = new System.Drawing.Point(91, 191);
             this.Гнездо55.Margin = new System.Windows.Forms.Padding(0);
@@ -1537,6 +1608,7 @@
             // Гнездо54
             // 
             this.Гнездо54.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо54.FlatAppearance.BorderSize = 0;
             this.Гнездо54.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо54.Location = new System.Drawing.Point(79, 191);
             this.Гнездо54.Margin = new System.Windows.Forms.Padding(0);
@@ -1550,6 +1622,7 @@
             // Гнездо53
             // 
             this.Гнездо53.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо53.FlatAppearance.BorderSize = 0;
             this.Гнездо53.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо53.Location = new System.Drawing.Point(67, 191);
             this.Гнездо53.Margin = new System.Windows.Forms.Padding(0);
@@ -1563,6 +1636,7 @@
             // Гнездо52
             // 
             this.Гнездо52.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо52.FlatAppearance.BorderSize = 0;
             this.Гнездо52.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо52.Location = new System.Drawing.Point(55, 191);
             this.Гнездо52.Margin = new System.Windows.Forms.Padding(0);
@@ -1576,6 +1650,7 @@
             // Гнездо51
             // 
             this.Гнездо51.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо51.FlatAppearance.BorderSize = 0;
             this.Гнездо51.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо51.Location = new System.Drawing.Point(43, 191);
             this.Гнездо51.Margin = new System.Windows.Forms.Padding(0);
@@ -1597,7 +1672,6 @@
             this.Name = "N18_MForm";
             this.Text = "Н18-М";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.N18_MForm_FormClosed);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.N18_MForm_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСПСТест)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСПСИнформ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПилотК1_1)).EndInit();
