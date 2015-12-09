@@ -296,7 +296,9 @@ namespace R440O.R440OForms.N18_M
             ПереключательВходБ22.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-          Panel.Invalidate();
+        //  Panel.Invalidate();
+            Panel.Paint += Panel_Paint;
+            Panel.Refresh();
         }
 
         private void N18_MForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -318,6 +320,10 @@ namespace R440O.R440OForms.N18_M
             Point point1 = new Point(0, 0);
             Point point2 = new Point(0, 0);
             List<Control> соединенные_гнезда = new  List<Control>();
+            foreach (Control item in Panel.Controls)
+                if (item.Name.Contains("Гнездо") && item.BackgroundImage != null)
+                    item.BackgroundImage = null;
+
             for (int i = 1; i < 76; i++)
             {
                 номер_гнезда1 = i;
@@ -344,9 +350,6 @@ namespace R440O.R440OForms.N18_M
                     Дублирующие[номер_гнезда2] = true;
                 }
             }
-            foreach (Control item in Panel.Controls)
-                if (item.Name.Contains("Гнездо") && item.BackgroundImage != null)
-                    item.BackgroundImage = null;
             foreach (var item in соединенные_гнезда)
                 item.BackgroundImage = ControlElementImages.N18_M_Gnezdo;
         }
@@ -365,7 +368,8 @@ namespace R440O.R440OForms.N18_M
 
         private void Panel_Paint(object sender, PaintEventArgs e)
         {
-            РисованиеСоеденений(e);
+            Panel.Paint -= Panel_Paint;
+            РисованиеСоеденений(e);            
         }
     }
 }

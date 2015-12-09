@@ -1295,7 +1295,6 @@
             this.Panel.Name = "Panel";
             this.Panel.Size = new System.Drawing.Size(484, 710);
             this.Panel.TabIndex = 0;
-            this.Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel_Paint);
             // 
             // Гнездо76
             // 
