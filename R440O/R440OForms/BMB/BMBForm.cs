@@ -21,6 +21,7 @@
         {
             InitializeComponent();
             BMBParameters.RefreshForm += RefreshFormElements;
+            N18_M.N18_MParameters.ParameterChanged += RefreshFormElements;
             RefreshFormElements();
         }
 
