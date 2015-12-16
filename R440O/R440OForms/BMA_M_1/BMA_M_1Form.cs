@@ -217,21 +217,21 @@ namespace R440O.R440OForms.BMA_M_1
         private void BMA_M_1КнопкаПитаниеВЫКЛ_MouseUp(object sender, MouseEventArgs e)
         {
             this.BMA_M_1КнопкаПитаниеВЫКЛ.Text = "ВЫКЛ";
-            this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOn;
+            //this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOn;
             BMA_M_1Parameters.КнопкаПитаниеВЫКЛ = true;
         }
 
         private void BMA_M_1КнопкаПитаниеВКЛ_MouseDown(object sender, MouseEventArgs e)
         {
             this.BMA_M_1КнопкаПитаниеВКЛ.Text = string.Empty;
-            this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = null;
+            this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = null;//TransformImageHelper.Scale(ControlElementImages.buttonSquareBlueOff, 93);
         }
 
         private void BMA_M_1КнопкаПитаниеВКЛ_MouseUp(object sender, MouseEventArgs e)
         {
             this.BMA_M_1КнопкаПитаниеВКЛ.Text = "ВКЛ";
             BMA_M_1Parameters.КнопкаПитаниеВКЛ = true;
-            this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOn;
+            //this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOn;
 
         }
         #endregion
@@ -277,7 +277,7 @@ namespace R440O.R440OForms.BMA_M_1
             #endregion
 
             #region Кнопки
-            if (BMA_M_1Parameters.КнопкаШлейфТЧ)
+            if (BMA_M_1Parameters.КнопкаШлейфТЧ || BMA_M_1Parameters.ЛампочкаКонтрольКомпл)
             {
                 this.BMA_M_1КнопкаШлейфТЧ.BackgroundImage = null;
                 this.BMA_M_1КнопкаШлейфТЧ.Text = string.Empty;
@@ -288,7 +288,7 @@ namespace R440O.R440OForms.BMA_M_1
                 this.BMA_M_1КнопкаШлейфТЧ.Text = "ТЧ";
             }
 
-            if (BMA_M_1Parameters.КнопкаШлейфДК)
+            if (BMA_M_1Parameters.КнопкаШлейфДК || BMA_M_1Parameters.ЛампочкаКонтрольКомпл)
             {
                 this.BMA_M_1КнопкаШлейфДК.BackgroundImage = null;
                 this.BMA_M_1КнопкаШлейфДК.Text = string.Empty;
@@ -298,14 +298,21 @@ namespace R440O.R440OForms.BMA_M_1
                 this.BMA_M_1КнопкаШлейфДК.BackgroundImage = ControlElementImages.buttonSquareYellow;
                 this.BMA_M_1КнопкаШлейфДК.Text = "ДК";
             }
-            this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = BMA_M_1Parameters.КнопкаПитаниеВКЛ
+            this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = BMA_M_1Parameters.Питание 
                 ? ControlElementImages.buttonSquareBlueOn
                 : ControlElementImages.buttonSquareBlueOff;
 
-            this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = BMA_M_1Parameters.Питание ?
-                ControlElementImages.buttonSquareBlueOff : ControlElementImages.buttonSquareBlueOn;
+            if (BMA_M_1Parameters.Питание)
+                this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOn;
+            else
+                this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
+
+            this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = !BMA_M_1Parameters.Питание && BMA_M_1Parameters.ПитаниеН502 ?
+                ControlElementImages.buttonSquareBlueOn : ControlElementImages.buttonSquareBlueOff;
             #endregion
 
+            #region Какая-то магия  с лампочками
+            /*
             foreach (Control item in BMA_M_1Panel.Controls)
             {
                 if (item.Name.Contains("Лампочка"))
@@ -379,6 +386,32 @@ namespace R440O.R440OForms.BMA_M_1
             {
                 ЛампочкаТЧБ.BackgroundImage = null;
             }
+         */
+            #endregion
+
+            #region Лампочки
+            PropertyInfo[] fieldList = typeof(BMA_M_1Parameters).GetProperties();
+            foreach (Control item in BMA_M_1Panel.Controls)
+            {
+                if (item.Name.Contains("Лампочка"))
+                {
+                    if (item.Name.Contains("ЛампочкаИсправно"))
+                    {
+                        ЛампочкаИсправно.BackColor = BMA_M_1Parameters.ЛампочкаИсправно ? Color.FromArgb(100, 50, 250, 50) : Color.Transparent;
+                        continue;
+                    }
+                    foreach (PropertyInfo property in fieldList)
+                    {
+                        if (item.Name == property.Name)
+                        {
+                            item.BackgroundImage = Convert.ToBoolean(property.GetValue(null))
+                            ? ControlElementImages.lampType7OnRed
+                            : null;
+                        }
+                    }
+                }
+            }
+            #endregion
 
         }
     }
