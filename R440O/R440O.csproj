@@ -89,6 +89,13 @@
     <Compile Include="R440OForms\N13_1\N13_1Parameters.cs" />
     <Compile Include="R440OForms\N13_2\N13_2Parameters.cs" />
     <Compile Include="R440OForms\N502B\N502BParameters.cs" />
+    <Compile Include="R440OForms\TLF_TCH\TLF_TCHForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\TLF_TCH\TLF_TCHForm.Designer.cs">
+      <DependentUpon>TLF_TCHForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\TLF_TCH\TLF_TCHParametrs.cs" />
     <Compile Include="ThirdParty\EasyTimer.cs" />
     <Compile Include="ОбщиеТипыДанных\Модуляция.cs" />
     <Compile Include="СостоянияЭлементов\ДАБ5.cs" />
@@ -749,6 +756,9 @@
     <EmbeddedResource Include="R440OForms\P220_27G_2\P220_27G_2Form.resx">
       <DependentUpon>P220_27G_2Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\TLF_TCH\TLF_TCHForm.resx">
+      <DependentUpon>TLF_TCHForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\PU_K1_1\PU_K1_1Form.resx">
       <DependentUpon>PU_K1_1Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -1151,6 +1161,7 @@
     <Content Include="Resources\revolverRoundSmall.png" />
     <None Include="Resources\toggleType8.png" />
     <None Include="Resources\toggleС1_67.png" />
+    <Content Include="Resources\ShellCabel.png" />
     <Content Include="Resources\tumblerType6Left.png" />
     <Content Include="Resources\tumblerType6Right.png" />
     <None Include="Resources\lampType12OnRed.png" />

@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
-using NLog;
+//using NLog;
 using R440O.R440OForms.K02M_01;
 using R440O.R440OForms.K02M_01Inside;
 using R440O.R440OForms.K03M_01Inside;
@@ -14,7 +14,7 @@ namespace R440O.R440OForms.K03M_01
 {
     static class K03M_01Parameters
     {
-        private static Logger logger = LogManager.GetCurrentClassLogger();
+        //private static Logger logger = LogManager.GetCurrentClassLogger();
 
         // Внимание, в OnParameterChanged добавлен вызов метода.
         #region событие

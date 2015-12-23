@@ -306,6 +306,7 @@ namespace R440O.R440OForms.N18_M
             N18_MParameters.ParameterChanged -= RefreshFormElements;
         }
 
+        #region Отрисовка соединенй
         private void DrawLine(Point onePoint, Point twoPoint, PaintEventArgs e)
         {
             var myPen = new Pen(Color.White, 5);
@@ -354,6 +355,12 @@ namespace R440O.R440OForms.N18_M
                 item.BackgroundImage = ControlElementImages.N18_M_Gnezdo;
         }
 
+        private void Panel_Paint(object sender, PaintEventArgs e)
+        {
+            Panel.Paint -= Panel_Paint;
+            РисованиеСоеденений(e);
+        }
+        #endregion
         private void Гнездо_Click(object sender, System.EventArgs e)
         {
             var СвязанноеГнездо = sender as Button;
@@ -366,10 +373,5 @@ namespace R440O.R440OForms.N18_M
 
   
 
-        private void Panel_Paint(object sender, PaintEventArgs e)
-        {
-            Panel.Paint -= Panel_Paint;
-            РисованиеСоеденений(e);            
-        }
     }
 }

@@ -29,16 +29,33 @@
         private void InitializeComponent()
         {
             this.PowerShieldPanel = new System.Windows.Forms.Panel();
+            this.КнопкаТЛФ_ТЧ = new System.Windows.Forms.Button();
+            this.PowerShieldPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // PowerShieldPanel
             // 
             this.PowerShieldPanel.BackgroundImage = global::R440O.BackgroundImages.PowerShield;
             this.PowerShieldPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.PowerShieldPanel.Controls.Add(this.КнопкаТЛФ_ТЧ);
             this.PowerShieldPanel.Location = new System.Drawing.Point(0, 0);
             this.PowerShieldPanel.Name = "PowerShieldPanel";
             this.PowerShieldPanel.Size = new System.Drawing.Size(970, 749);
             this.PowerShieldPanel.TabIndex = 4;
+            // 
+            // КнопкаТЛФ_ТЧ
+            // 
+            this.КнопкаТЛФ_ТЧ.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаТЛФ_ТЧ.FlatAppearance.BorderSize = 0;
+            this.КнопкаТЛФ_ТЧ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.КнопкаТЛФ_ТЧ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.КнопкаТЛФ_ТЧ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаТЛФ_ТЧ.Location = new System.Drawing.Point(136, 156);
+            this.КнопкаТЛФ_ТЧ.Name = "КнопкаТЛФ_ТЧ";
+            this.КнопкаТЛФ_ТЧ.Size = new System.Drawing.Size(231, 173);
+            this.КнопкаТЛФ_ТЧ.TabIndex = 9;
+            this.КнопкаТЛФ_ТЧ.UseVisualStyleBackColor = false;
+            this.КнопкаТЛФ_ТЧ.Click += new System.EventHandler(this.КнопкаТЛФ_ТЧ_Click);
             // 
             // PowerShieldForm
             // 
@@ -51,6 +68,7 @@
             this.Name = "PowerShieldForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "КАБЕЛЬНЫЙ ВВОД";
+            this.PowerShieldPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -58,5 +76,6 @@
         #endregion
 
         private System.Windows.Forms.Panel PowerShieldPanel;
+        private System.Windows.Forms.Button КнопкаТЛФ_ТЧ;
     }
 }
