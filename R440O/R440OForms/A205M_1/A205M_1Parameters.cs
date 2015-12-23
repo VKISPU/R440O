@@ -1,4 +1,7 @@
-﻿using R440O.R440OForms.K05M_01;
+﻿using R440O.Parameters;
+using R440O.R440OForms.K03M_01;
+using R440O.R440OForms.K04M_01;
+using R440O.R440OForms.K05M_01;
 
 namespace R440O.R440OForms.A205M_1
 {
@@ -95,6 +98,13 @@ namespace R440O.R440OForms.A205M_1
                                   ПереключательВолнаX100 * 100 +
                                   ПереключательВолнаX10 * 10 +
                                   ПереключательВолнаX1;
+
+                    signal.Frequency = 5710000 + 10*signal.Wave;
+
+                    if (K03M_01Parameters.БлокВключен)
+                    {
+                        signal.Frequency += K04M_01Parameters.ЧастотаПрд - 70000;
+                    }
                     return signal;
                 }
                 return null;

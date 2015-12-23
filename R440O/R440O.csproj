@@ -88,6 +88,20 @@
     <Compile Include="R440OForms\Kontur_P3\Параметры\Общие.cs" />
     <Compile Include="R440OForms\N13_1\N13_1Parameters.cs" />
     <Compile Include="R440OForms\N13_2\N13_2Parameters.cs" />
+    <Compile Include="R440OForms\N18_M_Bottom\N18_M_BottomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\N18_M_Bottom\N18_M_BottomForm.Designer.cs">
+      <DependentUpon>N18_M_BottomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\N18_M_Bottom\N18_M_BottomParameters.cs" />
+    <Compile Include="R440OForms\N18_M_Top\N18_M_TopForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\N18_M_Top\N18_M_TopForm.Designer.cs">
+      <DependentUpon>N18_M_TopForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\N18_M_Top\N18_M_TopParameters.cs" />
     <Compile Include="R440OForms\N502B\N502BParameters.cs" />
     <Compile Include="ThirdParty\EasyTimer.cs" />
     <Compile Include="ОбщиеТипыДанных\Модуляция.cs" />
@@ -698,6 +712,12 @@
     <EmbeddedResource Include="R440OForms\N15Inside\N15Inside.resx">
       <DependentUpon>N15Inside.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\N18_M_Bottom\N18_M_BottomForm.resx">
+      <DependentUpon>N18_M_BottomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\N18_M_Top\N18_M_TopForm.resx">
+      <DependentUpon>N18_M_TopForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\NKN_2\NKN_2Form.resx">
       <DependentUpon>NKN_2Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -1146,8 +1166,14 @@
     <None Include="Resources\lampType10OnGreen.png" />
     <None Include="Resources\C300M.png" />
     <Content Include="Resources\buttonSquareYellowOn.png" />
+    <None Include="Resources\down_pannel.png" />
+    <None Include="Resources\kabel_profile%28K11%29.png" />
+    <None Include="Resources\kabel_profile%28K12%29.png" />
+    <None Include="Resources\kabel_input%28K11%291th.png" />
+    <None Include="Resources\kabel_input%28K12%291th.png" />
     <Content Include="Resources\lampType13OnGreen.png" />
     <Content Include="Resources\N18_M_Gnezdo.png" />
+    <None Include="Resources\panel.png" />
     <Content Include="Resources\revolverRoundSmall.png" />
     <None Include="Resources\toggleType8.png" />
     <None Include="Resources\toggleС1_67.png" />
@@ -1161,6 +1187,7 @@
     <None Include="Resources\BMA_M.png" />
     <Content Include="Resources\buttonRoundType6.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
