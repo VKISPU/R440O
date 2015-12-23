@@ -24,7 +24,7 @@ namespace R440O.R440OForms.PowerShield
         private void КнопкаТЛФ_ТЧ_Click(object sender, System.EventArgs e)
         {
             this.Hide();
-            Form thisForm = new TLF_TCHForm();
+            Form thisForm = new TLF_TCH.TLF_TCHForm();
             thisForm.Show(this);
         }
     }

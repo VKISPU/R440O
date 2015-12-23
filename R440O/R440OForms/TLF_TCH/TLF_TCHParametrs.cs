@@ -13,12 +13,25 @@ namespace R440O.R440OForms.TLF_TCH
         public static void Соеденить(int номер)
         {
             int n = НомераСоединений.FindIndex(x => x == номер);
-            if (n != НомераСоединений.Count)
+            if (n == -1)
                 НомераСоединений.Add(номер);
             else
-                НомераСоединений.Remove(n);
-           
+                НомераСоединений.Remove(номер);
+            OnParameterChanged();
+        }
 
+        public delegate void ParameterChangedHandler();
+
+        public static event ParameterChangedHandler ParameterChanged;
+
+        /// <summary>
+        /// Вызов события, что значения параметров данной формы изменились.
+        /// </summary>
+        private static void OnParameterChanged()
+        {
+            var handler = ParameterChanged;
+            if (handler != null) handler();
         }
     }
+    
 }

@@ -683,6 +683,16 @@ namespace R440O {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ShellCabelConnect {
+            get {
+                object obj = ResourceManager.GetObject("ShellCabelConnect", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap toggleType1 {
             get {
                 object obj = ResourceManager.GetObject("toggleType1", resourceCulture);

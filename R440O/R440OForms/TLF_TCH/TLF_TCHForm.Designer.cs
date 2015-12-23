@@ -1,4 +1,4 @@
-﻿namespace R440O.R440OForms.PowerShield
+﻿namespace R440O.R440OForms.TLF_TCH
 {
     partial class TLF_TCHForm
     {
@@ -218,7 +218,7 @@
             this.Гнездо1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо1.Location = new System.Drawing.Point(280, 165);
             this.Гнездо1.Margin = new System.Windows.Forms.Padding(0);
-            this.Гнездо1.Name = "button1";
+            this.Гнездо1.Name = "Гнездо1";
             this.Гнездо1.Size = new System.Drawing.Size(17, 15);
             this.Гнездо1.TabIndex = 69;
             this.Гнездо1.UseVisualStyleBackColor = false;
@@ -231,7 +231,7 @@
             this.Гнездо2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо2.Location = new System.Drawing.Point(241, 165);
             this.Гнездо2.Margin = new System.Windows.Forms.Padding(0);
-            this.Гнездо2.Name = "button2";
+            this.Гнездо2.Name = "Гнездо2";
             this.Гнездо2.Size = new System.Drawing.Size(17, 15);
             this.Гнездо2.TabIndex = 69;
             this.Гнездо2.UseVisualStyleBackColor = false;
@@ -244,7 +244,7 @@
             this.Гнездо3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо3.Location = new System.Drawing.Point(241, 210);
             this.Гнездо3.Margin = new System.Windows.Forms.Padding(0);
-            this.Гнездо3.Name = "button3";
+            this.Гнездо3.Name = "Гнездо3";
             this.Гнездо3.Size = new System.Drawing.Size(17, 15);
             this.Гнездо3.TabIndex = 69;
             this.Гнездо3.UseVisualStyleBackColor = false;
@@ -257,7 +257,7 @@
             this.Гнездо4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо4.Location = new System.Drawing.Point(200, 210);
             this.Гнездо4.Margin = new System.Windows.Forms.Padding(0);
-            this.Гнездо4.Name = "button4";
+            this.Гнездо4.Name = "Гнездо4";
             this.Гнездо4.Size = new System.Drawing.Size(17, 15);
             this.Гнездо4.TabIndex = 69;
             this.Гнездо4.UseVisualStyleBackColor = false;
@@ -270,7 +270,7 @@
             this.Гнездо5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо5.Location = new System.Drawing.Point(204, 255);
             this.Гнездо5.Margin = new System.Windows.Forms.Padding(0);
-            this.Гнездо5.Name = "button5";
+            this.Гнездо5.Name = "Гнездо5";
             this.Гнездо5.Size = new System.Drawing.Size(17, 15);
             this.Гнездо5.TabIndex = 69;
             this.Гнездо5.UseVisualStyleBackColor = false;
@@ -283,7 +283,7 @@
             this.Гнездо6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо6.Location = new System.Drawing.Point(162, 255);
             this.Гнездо6.Margin = new System.Windows.Forms.Padding(0);
-            this.Гнездо6.Name = "button6";
+            this.Гнездо6.Name = "Гнездо6";
             this.Гнездо6.Size = new System.Drawing.Size(17, 15);
             this.Гнездо6.TabIndex = 69;
             this.Гнездо6.UseVisualStyleBackColor = false;
@@ -296,7 +296,7 @@
             this.Гнездо7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо7.Location = new System.Drawing.Point(280, 210);
             this.Гнездо7.Margin = new System.Windows.Forms.Padding(0);
-            this.Гнездо7.Name = "button7";
+            this.Гнездо7.Name = "Гнездо7";
             this.Гнездо7.Size = new System.Drawing.Size(17, 15);
             this.Гнездо7.TabIndex = 69;
             this.Гнездо7.UseVisualStyleBackColor = false;
@@ -309,7 +309,7 @@
             this.Гнездо8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо8.Location = new System.Drawing.Point(200, 165);
             this.Гнездо8.Margin = new System.Windows.Forms.Padding(0);
-            this.Гнездо8.Name = "button8";
+            this.Гнездо8.Name = "Гнездо8";
             this.Гнездо8.Size = new System.Drawing.Size(17, 15);
             this.Гнездо8.TabIndex = 69;
             this.Гнездо8.UseVisualStyleBackColor = false;
@@ -322,7 +322,7 @@
             this.Гнездо9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо9.Location = new System.Drawing.Point(241, 255);
             this.Гнездо9.Margin = new System.Windows.Forms.Padding(0);
-            this.Гнездо9.Name = "button9";
+            this.Гнездо9.Name = "Гнездо9";
             this.Гнездо9.Size = new System.Drawing.Size(17, 15);
             this.Гнездо9.TabIndex = 69;
             this.Гнездо9.UseVisualStyleBackColor = false;
@@ -335,7 +335,7 @@
             this.Гнездо10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Гнездо10.Location = new System.Drawing.Point(162, 213);
             this.Гнездо10.Margin = new System.Windows.Forms.Padding(0);
-            this.Гнездо10.Name = "button10";
+            this.Гнездо10.Name = "Гнездо10";
             this.Гнездо10.Size = new System.Drawing.Size(17, 15);
             this.Гнездо10.TabIndex = 69;
             this.Гнездо10.UseVisualStyleBackColor = false;
