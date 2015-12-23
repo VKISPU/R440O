@@ -15,6 +15,7 @@
             this.InitializeTogglePosition();
             this.InitializeTumblers();
             this.InitializeLamp();
+            this.InitializeIndicatorPosition();
         }
 
         /// <summary>
@@ -39,6 +40,16 @@
             angle = PU_K1_1Parameters.ПереключательНапряжение * 28 - 180;
             ПереключательНапряжение.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
+        }
+
+        /// <summary>
+        /// Задание Положения индикатора напряжения
+        /// </summary>
+        private void InitializeIndicatorPosition()
+        {
+            var angle = PU_K1_1Parameters.Напряжение*6-60;
+            СтрелкаКонтроляНапряжения.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
         }
 
         private void InitializeTumblers()

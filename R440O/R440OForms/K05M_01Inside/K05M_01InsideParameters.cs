@@ -48,6 +48,7 @@ namespace R440O.R440OForms.K05M_01Inside
             {
                 _ТумблерВ7 = value;
                 ResetParameters();
+                K03M_01Parameters.ПересчитатьНайденоИлиНеНайдено();
             }
         }
 

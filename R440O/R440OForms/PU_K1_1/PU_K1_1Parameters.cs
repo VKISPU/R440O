@@ -1,4 +1,10 @@
-﻿namespace R440O.Parameters
+﻿using System.Security.Cryptography.X509Certificates;
+using R440O.R440OForms.K03M_01;
+using R440O.R440OForms.N15;
+using R440O.R440OForms.N502B;
+using R440O.ThirdParty;
+
+namespace R440O.Parameters
 {
     static class PU_K1_1Parameters
     {
@@ -21,12 +27,10 @@
         #endregion
 
         #region Лампочка
-        ////Лампочки
-        private static bool _ЛампочкаCеть;
 
         public static bool ЛампочкаCеть
         {
-            get { return _ЛампочкаCеть; }
+            get { return K03M_01Parameters.БлокВключен; }
         }
 
         #endregion
@@ -37,6 +41,14 @@
         /// Возможные состояния: 0. Дист - дистанционное управление, 1. Откл - отключено, 2. Мест - местное управление.
         /// </summary>
         private static int _ТумблерПитание = 1;
+
+        /// <summary>
+        /// Флаг нужен чтобы после удалённого включения блока, когда тумблер на пук
+        /// переводится в положения выкл., а потом обратно на удалённое включение,
+        /// чтоб блок включался сразу же.
+        /// </summary>
+        private static bool _включенУдаленно = false;
+
         public static int ТумблерПитание
         {
             get { return _ТумблерПитание; }
@@ -46,7 +58,18 @@
                 if (value >= 0 && value <= 2)
                 {
                     _ТумблерПитание = value;
-                   // _ЛампочкаCеть = _ТумблерПитание == 0;
+                    if (value == 0 && _включенУдаленно)
+                    {
+                        ВключитьБлок();
+                    }
+                    if (value == 2 && N15Parameters.Лампочка27В && N502BParameters.ТумблерН15)
+                    {
+                        ВключитьБлок();
+                    }
+                    if (value == 1)
+                    {
+                        ВыключитьБлок();
+                    }
                      ResetParameters();
                 }
             }
@@ -105,6 +128,10 @@
                 if (value > 0 && value < 13)
                 {
                     _ПереключательНапряжение = value;
+                    if (K03M_01Parameters.БлокВключен)
+                    {
+                        АктивизироватьСтрелкуНапряжения();
+                    }
                     ResetParameters();
                 }
             }
@@ -140,5 +167,72 @@
             };
          */
         #endregion
+
+        private static int _напряжение = 0;
+
+        public static int Напряжение
+        {
+            get { return _напряжение; }
+            set
+            {
+                if (value >= 0 && value <= 20)
+                {
+                    _напряжение = value;
+                }
+            }
+        }
+
+        public static bool ПопытатьсяВключитьБлокУдаленно()
+        {
+            _включенУдаленно = true;
+            if (ТумблерПитание == 0)
+            {
+                ВключитьБлок();
+                return true;
+            }
+            return false;
+        }
+
+        public static bool ПопытатьсяВыключитьБлокУдаленно()
+        {
+            _включенУдаленно = false;
+            if (ТумблерПитание == 0)
+            {
+                ВыключитьБлок();
+                return true;
+            }
+            return false;
+        }
+
+        public static void АктивизироватьСтрелкуНапряжения()
+        {
+            Напряжение = 7;
+            EasyTimer.SetTimeout((() =>
+            {
+                Напряжение = 10;
+                ResetParameters();
+            }), 300);
+        }
+
+
+
+        public static void ВключитьБлок()
+        {
+            K03M_01Parameters.БлокВключен = true;
+            K03M_01Parameters.НачатьПоискСНачала();
+            АктивизироватьСтрелкуНапряжения();
+
+            ResetParameters();
+            K03M_01Parameters.ResetParameters();
+        }
+
+        public static void ВыключитьБлок()
+        {
+            K03M_01Parameters.ОтменитьПоиск();
+            K03M_01Parameters.БлокВключен = false;
+            Напряжение = 0;
+            ResetParameters();
+            K03M_01Parameters.ResetParameters();
+        }
     }
 }

@@ -11,7 +11,8 @@ namespace R440O.R440OForms.K02M_01
             get
             {
                 return (K03M_01Parameters.СтатусПоиска == 2 &&
-                      K03M_01Parameters.ВременнаяПозицияПоиска <= -100);
+                      K03M_01Parameters.ВременнаяПозицияПоиска <= -100 &&
+                      K03M_01Parameters.ВременнаяПозицияПоиска > -200);
             }
         }
 
@@ -29,7 +30,8 @@ namespace R440O.R440OForms.K02M_01
             get
             {
                 return (K03M_01Parameters.СтатусПоиска == 2 &&
-                    K03M_01Parameters.ВременнаяПозицияПоиска >= 100);
+                    K03M_01Parameters.ВременнаяПозицияПоиска >= 100 &&
+                    K03M_01Parameters.ВременнаяПозицияПоиска < 200);
             }
         }
 

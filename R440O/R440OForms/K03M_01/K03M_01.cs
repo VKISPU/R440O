@@ -4,6 +4,7 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+using System.Diagnostics;
 using System.Linq;
 using R440O.Parameters;
 using R440O.ThirdParty;
@@ -33,7 +34,6 @@ namespace R440O.R440OForms.K03M_01
             K03M_01Parameters.ParameterChanged += RefreshFormElements;
             this.InitializeComponent();
             RefreshFormElements();
-            K03M_01Parameters.НачатьПоискСНачала();
         }
 
         #region Инициализация
