@@ -13,6 +13,7 @@ namespace R440O.R440OForms.BMA_M_1
     using System;
     using System.Drawing;
 
+
     /// <summary>
     /// Форма блока БМА-М-1
     /// </summary>
@@ -26,6 +27,7 @@ namespace R440O.R440OForms.BMA_M_1
             this.InitializeComponent();
             BMA_M_1Parameters.RefreshForm += RefreshForm;
             RefreshForm();
+         
         }
 
         #region Переключатели
@@ -235,6 +237,7 @@ namespace R440O.R440OForms.BMA_M_1
 
         }
         #endregion
+
 
         public void RefreshForm()
         {

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using R440O.R440OForms.BMA_M_1;
 namespace R440O.R440OForms.TLF_TCH
 {
     public partial class TLF_TCHForm : Form
@@ -18,7 +18,7 @@ namespace R440O.R440OForms.TLF_TCH
             TLF_TCHParametrs.ParameterChanged += RefreshElements;
         }
 
-        private void RefreshElements()
+        public void RefreshElements()
         {
             ОтрисовкаШтырей();
             ОтрисовкаГнезд();
