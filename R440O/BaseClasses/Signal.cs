@@ -48,6 +48,11 @@
         public List<SignalElement> Elements;
 
         /// <summary>
+        /// Частота.
+        /// </summary>
+        public int Frequency = -1;
+
+        /// <summary>
         /// Элементы информационного сигнала, содержащиеся в потоке, выбранном по заданным аппаратурой условиям. Уровень Б3.
         /// </summary>
         public List<SignalElement> SelectedFlowElements

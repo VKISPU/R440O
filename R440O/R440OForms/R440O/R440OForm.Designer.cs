@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.R440OPanel = new System.Windows.Forms.Panel();
-            this.R440OButtonOrderScheme = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.R440OButtonN18_M_Bottom = new System.Windows.Forms.Button();
+            this.R440OButtonN18_M_Top = new System.Windows.Forms.Button();
             this.R440OButtonWattmeter = new System.Windows.Forms.Button();
             this.R440OButtonK06M_02 = new System.Windows.Forms.Button();
             this.R440OButtonK06M_01 = new System.Windows.Forms.Button();
@@ -88,92 +89,45 @@
             this.R440OButtonA1 = new System.Windows.Forms.Button();
             this.R440OButtonA205M_2 = new System.Windows.Forms.Button();
             this.R440OButtonA205M_1 = new System.Windows.Forms.Button();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.R440OPanel = new System.Windows.Forms.Panel();
+            this.R440OButtonOrderScheme = new System.Windows.Forms.Button();
             this.R440OPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // R440OPanel
+            // toolTip1
             // 
-            this.R440OPanel.BackgroundImage = global::R440O.BackgroundImages.R440O;
-            this.R440OPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.R440OPanel.Controls.Add(this.R440OButtonOrderScheme);
-            this.R440OPanel.Controls.Add(this.R440OButtonWattmeter);
-            this.R440OPanel.Controls.Add(this.R440OButtonK06M_02);
-            this.R440OPanel.Controls.Add(this.R440OButtonK06M_01);
-            this.R440OPanel.Controls.Add(this.R440OButtonK05M_01);
-            this.R440OPanel.Controls.Add(this.R440OButtonK05M_02);
-            this.R440OPanel.Controls.Add(this.R440OButtonK04M_02);
-            this.R440OPanel.Controls.Add(this.R440OButtonK04M_01);
-            this.R440OPanel.Controls.Add(this.R440OButtonK03M_02);
-            this.R440OPanel.Controls.Add(this.R440OButtonK03M_01);
-            this.R440OPanel.Controls.Add(this.R440OButtonK02M_02);
-            this.R440OPanel.Controls.Add(this.R440OButtonK02M_01);
-            this.R440OPanel.Controls.Add(this.R440OButtonK01M_02);
-            this.R440OPanel.Controls.Add(this.R440OButtonK01M_01);
-            this.R440OPanel.Controls.Add(this.R440OButtonB3_2);
-            this.R440OPanel.Controls.Add(this.R440OButtonB3_1);
-            this.R440OPanel.Controls.Add(this.R440OButtonB2_2);
-            this.R440OPanel.Controls.Add(this.R440OButtonB2_1);
-            this.R440OPanel.Controls.Add(this.R440OButtonB1_2);
-            this.R440OPanel.Controls.Add(this.R440OButtonPowerShield);
-            this.R440OPanel.Controls.Add(this.R440OButtonNKN_2);
-            this.R440OPanel.Controls.Add(this.R440OButtonNKN_1);
-            this.R440OPanel.Controls.Add(this.R440OButtonN18_M);
-            this.R440OPanel.Controls.Add(this.R440OButtonN16);
-            this.R440OPanel.Controls.Add(this.R440OButtonN13_2);
-            this.R440OPanel.Controls.Add(this.R440OButtonN13_1);
-            this.R440OPanel.Controls.Add(this.R440OButtonA403_3);
-            this.R440OPanel.Controls.Add(this.R440OButtonA403_1);
-            this.R440OPanel.Controls.Add(this.R440OButtonC1_67);
-            this.R440OPanel.Controls.Add(this.R440OButtonC300PM_3);
-            this.R440OPanel.Controls.Add(this.R440OButtonC300PM_2);
-            this.R440OPanel.Controls.Add(this.R440OButtonPU_K1_1);
-            this.R440OPanel.Controls.Add(this.R440OButtonPU_K1_2);
-            this.R440OPanel.Controls.Add(this.R440OButtonRubin_N);
-            this.R440OPanel.Controls.Add(this.R440OButtonVoltageStabilizer);
-            this.R440OPanel.Controls.Add(this.R440OButtonP220_27G_3);
-            this.R440OPanel.Controls.Add(this.R440OButtonP220_27G_2);
-            this.R440OPanel.Controls.Add(this.R440OButtonBMB);
-            this.R440OPanel.Controls.Add(this.R440OButtonBMA_M_2);
-            this.R440OPanel.Controls.Add(this.R440OButtonBMA_M_1);
-            this.R440OPanel.Controls.Add(this.R440OButtonAstra);
-            this.R440OPanel.Controls.Add(this.R440OButtonC300PM_1);
-            this.R440OPanel.Controls.Add(this.R440OButtonC300M_4);
-            this.R440OPanel.Controls.Add(this.R440OButtonC300M_3);
-            this.R440OPanel.Controls.Add(this.R440OButtonC300M_2);
-            this.R440OPanel.Controls.Add(this.R440OButtonC300M_1);
-            this.R440OPanel.Controls.Add(this.R440OButtonKontur_P3);
-            this.R440OPanel.Controls.Add(this.R440OButtonA306);
-            this.R440OPanel.Controls.Add(this.R440OButtonDAB_5);
-            this.R440OPanel.Controls.Add(this.R440OButtonPowerCabel);
-            this.R440OPanel.Controls.Add(this.R440OButtonN12S);
-            this.R440OPanel.Controls.Add(this.R440OButtonN15);
-            this.R440OPanel.Controls.Add(this.R440OButtonN502B);
-            this.R440OPanel.Controls.Add(this.R440OButtonB1_1);
-            this.R440OPanel.Controls.Add(this.R440OButtonA304);
-            this.R440OPanel.Controls.Add(this.R440OButtonA1);
-            this.R440OPanel.Controls.Add(this.R440OButtonA205M_2);
-            this.R440OPanel.Controls.Add(this.R440OButtonA205M_1);
-            this.R440OPanel.Location = new System.Drawing.Point(0, 0);
-            this.R440OPanel.Name = "R440OPanel";
-            this.R440OPanel.Size = new System.Drawing.Size(1101, 391);
-            this.R440OPanel.TabIndex = 0;
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.OwnerDraw = true;
             // 
-            // R440OButtonOrderScheme
+            // R440OButtonN18_M_Bottom
             // 
-            this.R440OButtonOrderScheme.BackColor = System.Drawing.Color.Transparent;
-            this.R440OButtonOrderScheme.BackgroundImage = global::R440O.ControlElementImages.orderSchemeIcon;
-            this.R440OButtonOrderScheme.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.R440OButtonOrderScheme.FlatAppearance.BorderSize = 0;
-            this.R440OButtonOrderScheme.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.R440OButtonOrderScheme.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.R440OButtonOrderScheme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.R440OButtonOrderScheme.Location = new System.Drawing.Point(990, 16);
-            this.R440OButtonOrderScheme.Name = "R440OButtonOrderScheme";
-            this.R440OButtonOrderScheme.Size = new System.Drawing.Size(80, 66);
-            this.R440OButtonOrderScheme.TabIndex = 58;
-            this.R440OButtonOrderScheme.UseVisualStyleBackColor = false;
-            this.R440OButtonOrderScheme.Click += new System.EventHandler(this.R440OButtonCommon_Click);
+            this.R440OButtonN18_M_Bottom.BackColor = System.Drawing.Color.Transparent;
+            this.R440OButtonN18_M_Bottom.FlatAppearance.BorderSize = 0;
+            this.R440OButtonN18_M_Bottom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.R440OButtonN18_M_Bottom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.R440OButtonN18_M_Bottom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.R440OButtonN18_M_Bottom.Location = new System.Drawing.Point(300, 151);
+            this.R440OButtonN18_M_Bottom.Name = "R440OButtonN18_M_Bottom";
+            this.R440OButtonN18_M_Bottom.Size = new System.Drawing.Size(61, 29);
+            this.R440OButtonN18_M_Bottom.TabIndex = 60;
+            this.toolTip1.SetToolTip(this.R440OButtonN18_M_Bottom, "Б3-2");
+            this.R440OButtonN18_M_Bottom.UseVisualStyleBackColor = false;
+            this.R440OButtonN18_M_Bottom.Click += new System.EventHandler(this.R440OButtonCommon_Click);
+            // 
+            // R440OButtonN18_M_Top
+            // 
+            this.R440OButtonN18_M_Top.BackColor = System.Drawing.Color.Transparent;
+            this.R440OButtonN18_M_Top.FlatAppearance.BorderSize = 0;
+            this.R440OButtonN18_M_Top.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.R440OButtonN18_M_Top.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.R440OButtonN18_M_Top.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.R440OButtonN18_M_Top.Location = new System.Drawing.Point(261, 23);
+            this.R440OButtonN18_M_Top.Name = "R440OButtonN18_M_Top";
+            this.R440OButtonN18_M_Top.Size = new System.Drawing.Size(64, 24);
+            this.R440OButtonN18_M_Top.TabIndex = 59;
+            this.toolTip1.SetToolTip(this.R440OButtonN18_M_Top, "Б3-2");
+            this.R440OButtonN18_M_Top.UseVisualStyleBackColor = false;
+            this.R440OButtonN18_M_Top.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
             // R440OButtonWattmeter
             // 
@@ -1030,10 +984,90 @@
             this.R440OButtonA205M_1.UseVisualStyleBackColor = false;
             this.R440OButtonA205M_1.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
-            // toolTip1
+            // R440OPanel
             // 
-            this.toolTip1.IsBalloon = true;
-            this.toolTip1.OwnerDraw = true;
+            this.R440OPanel.BackgroundImage = global::R440O.BackgroundImages.R440O;
+            this.R440OPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.R440OPanel.Controls.Add(this.R440OButtonN18_M_Bottom);
+            this.R440OPanel.Controls.Add(this.R440OButtonN18_M_Top);
+            this.R440OPanel.Controls.Add(this.R440OButtonOrderScheme);
+            this.R440OPanel.Controls.Add(this.R440OButtonWattmeter);
+            this.R440OPanel.Controls.Add(this.R440OButtonK06M_02);
+            this.R440OPanel.Controls.Add(this.R440OButtonK06M_01);
+            this.R440OPanel.Controls.Add(this.R440OButtonK05M_01);
+            this.R440OPanel.Controls.Add(this.R440OButtonK05M_02);
+            this.R440OPanel.Controls.Add(this.R440OButtonK04M_02);
+            this.R440OPanel.Controls.Add(this.R440OButtonK04M_01);
+            this.R440OPanel.Controls.Add(this.R440OButtonK03M_02);
+            this.R440OPanel.Controls.Add(this.R440OButtonK03M_01);
+            this.R440OPanel.Controls.Add(this.R440OButtonK02M_02);
+            this.R440OPanel.Controls.Add(this.R440OButtonK02M_01);
+            this.R440OPanel.Controls.Add(this.R440OButtonK01M_02);
+            this.R440OPanel.Controls.Add(this.R440OButtonK01M_01);
+            this.R440OPanel.Controls.Add(this.R440OButtonB3_2);
+            this.R440OPanel.Controls.Add(this.R440OButtonB3_1);
+            this.R440OPanel.Controls.Add(this.R440OButtonB2_2);
+            this.R440OPanel.Controls.Add(this.R440OButtonB2_1);
+            this.R440OPanel.Controls.Add(this.R440OButtonB1_2);
+            this.R440OPanel.Controls.Add(this.R440OButtonPowerShield);
+            this.R440OPanel.Controls.Add(this.R440OButtonNKN_2);
+            this.R440OPanel.Controls.Add(this.R440OButtonNKN_1);
+            this.R440OPanel.Controls.Add(this.R440OButtonN18_M);
+            this.R440OPanel.Controls.Add(this.R440OButtonN16);
+            this.R440OPanel.Controls.Add(this.R440OButtonN13_2);
+            this.R440OPanel.Controls.Add(this.R440OButtonN13_1);
+            this.R440OPanel.Controls.Add(this.R440OButtonA403_3);
+            this.R440OPanel.Controls.Add(this.R440OButtonA403_1);
+            this.R440OPanel.Controls.Add(this.R440OButtonC1_67);
+            this.R440OPanel.Controls.Add(this.R440OButtonC300PM_3);
+            this.R440OPanel.Controls.Add(this.R440OButtonC300PM_2);
+            this.R440OPanel.Controls.Add(this.R440OButtonPU_K1_1);
+            this.R440OPanel.Controls.Add(this.R440OButtonPU_K1_2);
+            this.R440OPanel.Controls.Add(this.R440OButtonRubin_N);
+            this.R440OPanel.Controls.Add(this.R440OButtonVoltageStabilizer);
+            this.R440OPanel.Controls.Add(this.R440OButtonP220_27G_3);
+            this.R440OPanel.Controls.Add(this.R440OButtonP220_27G_2);
+            this.R440OPanel.Controls.Add(this.R440OButtonBMB);
+            this.R440OPanel.Controls.Add(this.R440OButtonBMA_M_2);
+            this.R440OPanel.Controls.Add(this.R440OButtonBMA_M_1);
+            this.R440OPanel.Controls.Add(this.R440OButtonAstra);
+            this.R440OPanel.Controls.Add(this.R440OButtonC300PM_1);
+            this.R440OPanel.Controls.Add(this.R440OButtonC300M_4);
+            this.R440OPanel.Controls.Add(this.R440OButtonC300M_3);
+            this.R440OPanel.Controls.Add(this.R440OButtonC300M_2);
+            this.R440OPanel.Controls.Add(this.R440OButtonC300M_1);
+            this.R440OPanel.Controls.Add(this.R440OButtonKontur_P3);
+            this.R440OPanel.Controls.Add(this.R440OButtonA306);
+            this.R440OPanel.Controls.Add(this.R440OButtonDAB_5);
+            this.R440OPanel.Controls.Add(this.R440OButtonPowerCabel);
+            this.R440OPanel.Controls.Add(this.R440OButtonN12S);
+            this.R440OPanel.Controls.Add(this.R440OButtonN15);
+            this.R440OPanel.Controls.Add(this.R440OButtonN502B);
+            this.R440OPanel.Controls.Add(this.R440OButtonB1_1);
+            this.R440OPanel.Controls.Add(this.R440OButtonA304);
+            this.R440OPanel.Controls.Add(this.R440OButtonA1);
+            this.R440OPanel.Controls.Add(this.R440OButtonA205M_2);
+            this.R440OPanel.Controls.Add(this.R440OButtonA205M_1);
+            this.R440OPanel.Location = new System.Drawing.Point(0, 0);
+            this.R440OPanel.Name = "R440OPanel";
+            this.R440OPanel.Size = new System.Drawing.Size(1101, 391);
+            this.R440OPanel.TabIndex = 0;
+            // 
+            // R440OButtonOrderScheme
+            // 
+            this.R440OButtonOrderScheme.BackColor = System.Drawing.Color.Transparent;
+            this.R440OButtonOrderScheme.BackgroundImage = global::R440O.ControlElementImages.orderSchemeIcon;
+            this.R440OButtonOrderScheme.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.R440OButtonOrderScheme.FlatAppearance.BorderSize = 0;
+            this.R440OButtonOrderScheme.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.R440OButtonOrderScheme.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.R440OButtonOrderScheme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.R440OButtonOrderScheme.Location = new System.Drawing.Point(990, 16);
+            this.R440OButtonOrderScheme.Name = "R440OButtonOrderScheme";
+            this.R440OButtonOrderScheme.Size = new System.Drawing.Size(80, 66);
+            this.R440OButtonOrderScheme.TabIndex = 58;
+            this.R440OButtonOrderScheme.UseVisualStyleBackColor = false;
+            this.R440OButtonOrderScheme.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
             // R440OForm
             // 
@@ -1111,6 +1145,8 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button R440OButtonNKN_2;
         private System.Windows.Forms.Button R440OButtonBMA_M_1;
+        private System.Windows.Forms.Button R440OButtonN18_M_Top;
+        private System.Windows.Forms.Button R440OButtonN18_M_Bottom;
     }
 }
 
