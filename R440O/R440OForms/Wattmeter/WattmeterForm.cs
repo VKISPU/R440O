@@ -4,17 +4,18 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+using R440O.BaseClasses;
+
 namespace R440O.R440OForms.Wattmeter
 {
     using System.Windows.Forms;
-    using Parameters;
     using ThirdParty;
     using System.Reflection;
 
     /// <summary>
     /// Форма блока ватметр
     /// </summary>
-    public partial class WattmeterForm : Form
+    public partial class WattmeterForm : Form, IRefreshableForm
     {
         private static bool isManipulation = false;
 
@@ -23,128 +24,87 @@ namespace R440O.R440OForms.Wattmeter
         /// </summary>
         public WattmeterForm()
         {
-            this.InitializeComponent();
-            InitializeTogglesPosition();
+            InitializeComponent();
+            WattmeterParameters.ParameterChanged += RefreshFormElements;
+            RefreshFormElements();
         }
 
         /// <summary>
         /// Установка переключателей в положение последней их установки
         /// </summary>
-        private void InitializeTogglesPosition()
+        public void RefreshFormElements()
         {
-            foreach (Control item in WattmeterPanel.Controls)
+            var angle = WattmeterParameters.ПереключательРежимРаботы * 30 - 105;
+            ПереключательРежимРаботы.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
+
+            ТумблерСеть.BackgroundImage = WattmeterParameters.ТумблерСеть
+                ? ControlElementImages.tumblerType4Up
+                : ControlElementImages.tumblerType4Down;
+
+            foreach (Control item in Panel.Controls)
             {
-                if (item.Name.Contains("РежимРаботы"))
+                if (item.Name.Contains("Регулятор"))
                 {
                     PropertyInfo[] fieldList = typeof(WattmeterParameters).GetProperties();
                     foreach (PropertyInfo property in fieldList)
                     {
                         if (item.Name == property.Name)
                         {
-                            var angle = System.Convert.ToInt32(property.GetValue(null)) * 30 - 105;
-                            item.BackgroundImage = TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
+                            item.BackgroundImage = TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRoundBlack, System.Convert.ToInt32(property.GetValue(null)));
                             break;
                         }
                     }
                 }
-                else
-                    if (item.Name.Contains("Переключатель"))
-                    {
-                        PropertyInfo[] fieldList = typeof(WattmeterParameters).GetProperties();
-                        foreach (PropertyInfo property in fieldList)
-                        {
-                            if (item.Name == property.Name)
-                            {
-                                item.BackgroundImage = TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRoundBlack, System.Convert.ToInt32(property.GetValue(null)));
-                                break;
-                            }
-                        }
-                    }
             }
         }
 
-        private void ВаттметрПереключательРежимРаботы_MouseUp(object sender, MouseEventArgs e)
+        private void Регулятор_MouseUp(object sender, MouseEventArgs e)
+        {
+            isManipulation = false;
+        }
+
+        private void Регулятор_MouseDown(object sender, MouseEventArgs e)
+        {
+            isManipulation = true;
+        }
+
+        private void Регулятор_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (!isManipulation) return;
+            var button = sender as Button;
+            var angle = TransformImageHelper.CalculateAngle(button.Width, button.Height, e);
+            var property = typeof(WattmeterParameters).GetProperty(button.Name);
+            property.SetValue(null, angle);
+
+            button.BackgroundImage =
+                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRoundBlack, (int)property.GetValue(null));
+        }
+
+        private void ПереключательРежимРаботы_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                WattmeterParameters.ВаттметрПереключательРежимРаботы += 1;
+                WattmeterParameters.ПереключательРежимРаботы += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                WattmeterParameters.ВаттметрПереключательРежимРаботы -= 1;
+                WattmeterParameters.ПереключательРежимРаботы -= 1;
             }
-
-            var angle = WattmeterParameters.ВаттметрПереключательРежимРаботы * 30 - 105;
-            ВаттметрПереключательРежимРаботы.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
         }
 
-        #region ВаттметрПереключательГрубо
-        private void ВаттметрПереключательГрубо_MouseDown(object sender, MouseEventArgs e)
+        private void ТумблерСеть_Click(object sender, System.EventArgs e)
         {
-            isManipulation = true;
+            WattmeterParameters.ТумблерСеть = !WattmeterParameters.ТумблерСеть;
         }
 
-        private void ВаттметрПереключательГрубо_MouseUp(object sender, MouseEventArgs e)
+        private void WattmeterForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            isManipulation = false;
+            WattmeterParameters.ParameterChanged -= RefreshFormElements;
         }
 
-        private void ВаттметрПереключательГрубо_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (!isManipulation) return;
-            var button = sender as Button;
-            var angle = TransformImageHelper.CalculateAngle(button.Width, button.Height, e);
-            WattmeterParameters.ВаттметрПереключательГрубо = angle;
-            ВаттметрПереключательГрубо.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRoundBlack, WattmeterParameters.ВаттметрПереключательГрубо);
-        }
-        #endregion
 
-        #region ВаттметрПереключательТочно
-        private void ВаттметрПереключательТочно_MouseUp(object sender, MouseEventArgs e)
-        {
-            isManipulation = false;
-        }
-
-        private void ВаттметрПереключательТочно_MouseDown(object sender, MouseEventArgs e)
-        {
-            isManipulation = true;
-        }
-
-        private void ВаттметрПереключательТочно_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (!isManipulation) return;
-            var button = sender as Button;
-            var angle = TransformImageHelper.CalculateAngle(button.Width, button.Height, e);
-            WattmeterParameters.ВаттметрПереключательТочно = angle;
-            ВаттметрПереключательТочно.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRoundBlack, WattmeterParameters.ВаттметрПереключательТочно);
-        }
-        #endregion
-
-        #region ВаттметрПереключательКоррекция
-        private void ВаттметрПереключательКоррекция_MouseDown(object sender, MouseEventArgs e)
-        {
-            isManipulation = true;
-        }
-
-        private void ВаттметрПереключательКоррекция_MouseUp(object sender, MouseEventArgs e)
-        {
-            isManipulation = false;
-        }
-
-        private void ВаттметрПереключательКоррекция_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (!isManipulation) return;
-            var button = sender as Button;
-            var angle = TransformImageHelper.CalculateAngle(button.Width, button.Height, e);
-            WattmeterParameters.ВаттметрПереключательКоррекция = angle;
-            ВаттметрПереключательКоррекция.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.revolverRoundBlack, WattmeterParameters.ВаттметрПереключательКоррекция);
-        }
-        #endregion
 
     }
 }
