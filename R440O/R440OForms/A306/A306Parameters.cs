@@ -10,31 +10,51 @@ namespace R440O.R440OForms.A306
         {
             get
             {
-                return (MSHUParameters.Включен && ТумблерДистанцМестн && N15Parameters.Включен)
-                       || (MSHUParameters.Включен && !ТумблерДистанцМестн && ТумблерПитание && N15Parameters.Включен);
+                return N15Parameters.Включен && MSHUParameters.Включен && (ТумблерДистанцМестн
+                                                                           || !ТумблерДистанцМестн && ТумблерПитание);
             }
         }
 
         #region Выход блока
 
+        public static bool ВыходнойСигнал11
+        {
+            get { return Включен && IsRightSet(0); }
+        }
+
+        public static bool ВыходнойСигнал12
+        {
+            get { return Включен && IsRightSet(1); }
+        }
+
+        public static bool ВыходнойСигнал13
+        {
+            get { return Включен && IsRightSet(2); }
+        }
+
+        public static bool ВыходнойСигнал14
+        {
+            get { return Включен && IsRightSet(3); }
+        }
+
         public static Signal ВыходнойСигнал1
         {
-            get { return IsRightSet(0) ? MSHUParameters.ВыходнойСигнал : null; }
+            get { return ВыходнойСигнал11 ? MSHUParameters.ВыходнойСигнал : null; }
         }
 
         public static Signal ВыходнойСигнал2
         {
-            get { return IsRightSet(1) ? MSHUParameters.ВыходнойСигнал : null; }
+            get { return ВыходнойСигнал12 ? MSHUParameters.ВыходнойСигнал : null; }
         }
 
         public static Signal ВыходнойСигнал3
         {
-            get { return IsRightSet(2) ? MSHUParameters.ВыходнойСигнал : null; }
+            get { return ВыходнойСигнал13 ? MSHUParameters.ВыходнойСигнал : null; }
         }
 
         public static Signal ВыходнойСигнал4
         {
-            get { return IsRightSet(3) ? MSHUParameters.ВыходнойСигнал : null; }
+            get { return ВыходнойСигнал14 ? MSHUParameters.ВыходнойСигнал : null; }
         }
         /// <summary>
         /// Проверка правильно ли подключён кабель к приемнику.
