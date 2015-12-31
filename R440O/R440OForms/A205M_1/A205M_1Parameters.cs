@@ -1,7 +1,5 @@
-﻿using R440O.Parameters;
-using R440O.R440OForms.K03M_01;
+﻿using R440O.R440OForms.K03M_01;
 using R440O.R440OForms.K04M_01;
-using R440O.R440OForms.K05M_01;
 
 namespace R440O.R440OForms.A205M_1
 {
@@ -9,8 +7,6 @@ namespace R440O.R440OForms.A205M_1
     using N18_M;
     using N502B;
     using NKN_1;
-    using C300M_1;
-    using N15Inside;
     using ОбщиеТипыДанных;
 
     public static class A205M_1Parameters
@@ -19,8 +15,8 @@ namespace R440O.R440OForms.A205M_1
         {
             get
             {
-                return NKN_1Parameters.ЛампочкаФаза1 && N18_MParameters.ПереключательВходК121 == 1 &&
-                       K05M_01Parameters.СтрелкаУровеньВЗакрашенномСекторе;
+                return NKN_1Parameters.ПолноеВключение && (N18_MParameters.ПереключательВходК121 == 1); 
+                // && K05M_01Parameters.СтрелкаУровеньВЗакрашенномСекторе;
             }
         }
 
@@ -30,40 +26,43 @@ namespace R440O.R440OForms.A205M_1
         {
             get
             {
-                if (Включен)
+                var wave = ПереключательВолнаX10000 * 10000 +
+                                 ПереключательВолнаX1000 * 1000 +
+                                 ПереключательВолнаX100 * 100 +
+                                 ПереключательВолнаX10 * 10 +
+                                 ПереключательВолнаX1;
+
+                if (Включен && wave >= 1500 && wave <= 51500)
                 {
                     var signal = new Signal();
-                    if (N15InsideParameters.ВыходПередающегоТракта != null)
-                    {
-                        signal = N15InsideParameters.ВыходПередающегоТракта;
-                        switch (ПереключательВидРаботы)
-                        {
-                            case 1:
-                                {
-                                    if (signal.Modulation != Модуляция.ЧТ) signal = null;
-                                }
-                                break;
-                            case 2:
-                                {
-                                    if (signal.Modulation != Модуляция.ЧТ) signal = null;
-                                }
-                                break;
-                            case 3:
-                                {
-                                    if (signal.Modulation != Модуляция.ОФТ ||
-                                        !Signal.IsEquivalentSpeed(signal.GroupSpeed, 5.2)) signal = null;
-                                }
-                                break;
-                            case 4:
-                                {
-                                    if (signal.Modulation != Модуляция.ОФТ ||
-                                        !Signal.IsEquivalentSpeed(signal.GroupSpeed, 48)) signal = null;
-                                }
-                                break;
-                        }
-                    }
-                    else
-                    {
+                    //    switch (ПереключательВидРаботы)
+                    //    {
+                    //        case 1:
+                    //            {
+                    //                if (signal.Modulation != Модуляция.ЧТ) signal = null;
+                    //            }
+                    //            break;
+                    //        case 2:
+                    //            {
+                    //                if (signal.Modulation != Модуляция.ЧТ) signal = null;
+                    //            }
+                    //            break;
+                    //        case 3:
+                    //            {
+                    //                if (signal.Modulation != Модуляция.ОФТ ||
+                    //                    !Signal.IsEquivalentSpeed(signal.GroupSpeed, 5.2)) signal = null;
+                    //            }
+                    //            break;
+                    //        case 4:
+                    //            {
+                    //                if (signal.Modulation != Модуляция.ОФТ ||
+                    //                    !Signal.IsEquivalentSpeed(signal.GroupSpeed, 48)) signal = null;
+                    //            }
+                    //            break;
+                    //    }
+                    //}
+                    //else
+                    //{
                         switch (ПереключательВидРаботы)
                         {
                             case 1:
@@ -81,7 +80,7 @@ namespace R440O.R440OForms.A205M_1
                             case 3:
                                 {
                                     signal.Modulation = Модуляция.ОФТ;
-                                    signal.GroupSpeed = 5.2;
+                                    signal.GroupSpeed = 4.8;
                                 }
                                 break;
                             case 4:
@@ -91,14 +90,8 @@ namespace R440O.R440OForms.A205M_1
                                 }
                                 break;
                         }
-                    }
-                    if (signal == null) return null;
-                    signal.Wave = ПереключательВолнаX10000 * 10000 +
-                                  ПереключательВолнаX1000 * 1000 +
-                                  ПереключательВолнаX100 * 100 +
-                                  ПереключательВолнаX10 * 10 +
-                                  ПереключательВолнаX1;
-
+                    //}
+                    signal.Wave = wave;
                     signal.Frequency = 5710000 + 10*signal.Wave;
 
                     if (K03M_01Parameters.БлокВключен)

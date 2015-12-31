@@ -17,6 +17,11 @@
         }
 
         /// <summary>
+        /// Частота сигнала
+        /// </summary>
+        public int Frequency = -1;
+
+        /// <summary> 
         /// Номинальная частота волны, КГц.
         /// </summary>
         public int Wave = -1;
@@ -46,11 +51,6 @@
         /// Список всех элементов информационного сигнала.
         /// </summary>
         public List<SignalElement> Elements;
-
-        /// <summary>
-        /// Частота.
-        /// </summary>
-        public int Frequency = -1;
 
         /// <summary>
         /// Элементы информационного сигнала, содержащиеся в потоке, выбранном по заданным аппаратурой условиям. Уровень Б3.
