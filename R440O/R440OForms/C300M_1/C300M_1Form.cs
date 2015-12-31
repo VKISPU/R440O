@@ -96,7 +96,7 @@ namespace R440O.R440OForms.C300M_1
                 ИндикаторВолна1.Visible = true;
                 C300M_1Parameters.КнопкаИндикацияВолны = true;
             }
-            
+
         }
 
         private void КнопкаИндикацияВолны_MouseUp(object sender, MouseEventArgs e)

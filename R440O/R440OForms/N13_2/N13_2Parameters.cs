@@ -1,6 +1,4 @@
-﻿using System;
-using R440O.R440OForms.N15;
-using R440O.R440OForms.N16;
+﻿using R440O.R440OForms.N15;
 using R440O.R440OForms.N502B;
 
 namespace R440O.R440OForms.N13_2
@@ -8,12 +6,10 @@ namespace R440O.R440OForms.N13_2
     class N13_2Parameters
     {
         #region Лампочки
+
         public static bool Включен
         {
-            get
-            {
-                return N15Parameters.Н13_2 && N502BParameters.ТумблерН13_2 && (N16Parameters.ЩелевойМостН13 == 2 || N16Parameters.ЩелевойМостН13 == 3);
-            }
+            get { return N15Parameters.Н13_2 && N502BParameters.ТумблерН13_2; }
         }
 
         public static bool Неисправен

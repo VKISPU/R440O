@@ -77,7 +77,7 @@ namespace R440O.R440OForms.NKN_2
 
         public static void ResetParameters()
         {
-            if ((N15Parameters.НеполноеВключение && !N15Parameters.Включен && НеполноеВключение) || !НеполноеВключение)
+            if ((N15Parameters.НеполноеВключение && !N15Parameters.Включен && НеполноеВключение && ПолноеВключение) || !НеполноеВключение)
                 _питание220Включено = false;
             OnParameterChanged();
         }

@@ -12,7 +12,7 @@ namespace R440O.R440OForms.N13_1
         {
             get
             {
-                return N15Parameters.Н13_1 && N502BParameters.ТумблерН13_1 && (N16Parameters.ЩелевойМостН13 == 1 || N16Parameters.ЩелевойМостН13 == 3);
+                return N15Parameters.Н13_1 && N502BParameters.ТумблерН13_1;
             }
         }
 
