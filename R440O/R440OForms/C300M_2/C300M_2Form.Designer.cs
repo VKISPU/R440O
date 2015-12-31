@@ -77,6 +77,7 @@
             this.КнопкаВидРаботы2 = new System.Windows.Forms.Button();
             this.КнопкаВидРаботы1 = new System.Windows.Forms.Button();
             this.КнопкаВидРаботы0 = new System.Windows.Forms.Button();
+            this.logbox = new System.Windows.Forms.RichTextBox();
             this.Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторСигнала)).BeginInit();
@@ -931,11 +932,20 @@
             this.КнопкаВидРаботы0.UseVisualStyleBackColor = false;
             this.КнопкаВидРаботы0.Click += new System.EventHandler(this.КнопкаВидРаботы_Click);
             // 
+            // logbox
+            // 
+            this.logbox.Location = new System.Drawing.Point(1106, 0);
+            this.logbox.Name = "logbox";
+            this.logbox.Size = new System.Drawing.Size(156, 419);
+            this.logbox.TabIndex = 2;
+            this.logbox.Text = "";
+            // 
             // C300M_2Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1104, 431);
+            this.ClientSize = new System.Drawing.Size(1274, 431);
+            this.Controls.Add(this.logbox);
             this.Controls.Add(this.Panel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1006,5 +1016,6 @@
         private System.Windows.Forms.Button ТумблерУправление;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox ИндикаторСигнала;
+        public System.Windows.Forms.RichTextBox logbox;
     }
 }

@@ -1,13 +1,12 @@
 ﻿using R440O.R440OForms.A306;
+using R440O.R440OForms.C300M_2;
 using R440O.R440OForms.N16;
 
 namespace R440O
 {
-    using System;
     using Parameters;
     using R440OForms.A205M_1;
     using R440OForms.A304;
-    using R440OForms.C300M_1;
     using R440OForms.Kontur_P3.Параметры;
     using R440OForms.N15;
     using R440OForms.N502B;
@@ -92,36 +91,27 @@ namespace R440O
 
             #region Настройка по малому шлейфу
             // Подготовка Н-15
-            N15LocalParameters.локТумблерЦ300М1 = true;
+            N15LocalParameters.локТумблерЦ300М2 = true;
             N15LocalParameters.локТумблерМШУ = true;
             N15LocalParameters.локТумблерА20512 = true;
             N15LocalParameters.локТумблерА205Base = true;
             N15Parameters.ТумблерА503Б = true;
             N15Parameters.РегуляторУровень = 100;
 
-            // Настройка А-205
+
+            // Настройка А205М
             A205M_1Parameters.ПереключательВидРаботы = 3;
-            A205M_1Parameters.ПереключательВолнаX1000 = 6;
-            A205M_1Parameters.ПереключательВолнаX100 = 6;
+            A205M_1Parameters.ПереключательВолнаX1 = 8;
             A205M_1Parameters.ПереключательВолнаX10 = 0;
-            A205M_1Parameters.ПереключательВолнаX1 = 0;
-
+            A205M_1Parameters.ПереключательВолнаX100 = 5;
+            A205M_1Parameters.ПереключательВолнаX1000 = 0;
+            A205M_1Parameters.ПереключательВолнаX10000 = 2;
             // Настройка А-304
-            A304Parameters.ПереключательВыборСтвола = 1;
-
+            A304Parameters.ПереключательВыборСтвола = 4;
             // Настройка А-306
 
             A306Parameters.ТумблерДистанцМестн = true;
-            A306Parameters.Выходы[0] = 0;
-
-            // Настройка Ц300М-1
-
-            C300M_1Parameters.ТумблерУправление = true;
-            C300M_1Parameters.КнопкаВидРаботы = 5;
-            C300M_1Parameters.ПереключательВолна1000 = 0;
-            C300M_1Parameters.ПереключательВолна100 = 1;
-            C300M_1Parameters.ПереключательВолна10 = 0;
-            C300M_1Parameters.ПереключательВолна1 = 0;
+            A306Parameters.Выходы[8] = 1;
             #endregion
 
             #region Настройка аппаратуры служебной связи
@@ -149,9 +139,9 @@ namespace R440O
             // Генераторы
             N15Parameters.Тумблер5Мгц = 0;
             P220_27G_2Parameters.ТумблерСеть = true;
-            P220_27G_2Parameters.ТумблерМуДу = true;
+            P220_27G_2Parameters.ТумблерУправление = true;
             P220_27G_3Parameters.ТумблерСеть = true;
-            P220_27G_3Parameters.ТумблерМуДу = true;
+            P220_27G_3Parameters.ТумблерУправление = true;
 
             N15LocalParameters.локТумблерА1 = true;
 
@@ -171,6 +161,13 @@ namespace R440O
             N15LocalParameters.локТумблерБ1_2 = true;
             N15LocalParameters.локТумблерБ2_2 = true;
             N15LocalParameters.локТумблерБ3_2 = true;
+
+            //С300М_2
+            C300M_2КнопкиВидРаботы.КнопкиВидРаботы[5] = true;
+            C300M_2КнопкиКонтрольРежима.КнопкиКонтрольРежима[3] = true;
+            C300M_2Parameters.ПереключательВолна1 = 8;
+            C300M_2Parameters.ПереключательВолна1000 = 4;
+
             #endregion
 
         }
