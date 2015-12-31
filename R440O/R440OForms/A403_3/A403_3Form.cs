@@ -33,33 +33,6 @@ namespace R440O.R440OForms.A403_3
             ТублерКомплект.BackgroundImage = A403_3Parameters.ТублерКомплект
                 ? ControlElementImages.tumblerType4Left
                 : ControlElementImages.tumblerType4Right;
-
-            //лампочки
-            Лампочка1Комплект_1.BackgroundImage = A403_3Parameters.Лампочка1Комплект_1
-                ? ControlElementImages.lampType5OnRed
-                : null;
-            Лампочка1Комплект_2.BackgroundImage = A403_3Parameters.Лампочка1Комплект_2
-                ? ControlElementImages.lampType5OnRed
-                : null;
-            Лампочка1Комплект_3.BackgroundImage = A403_3Parameters.Лампочка1Комплект_3
-                ? ControlElementImages.lampType5OnRed
-                : null;
-            Лампочка1Комплект_4.BackgroundImage = A403_3Parameters.Лампочка1Комплект_4
-                ? ControlElementImages.lampType5OnRed
-                : null;
-
-            Лампочка2Комплект_1.BackgroundImage = A403_3Parameters.Лампочка2Комплект_1
-                ? ControlElementImages.lampType5OnRed
-                : null;
-            Лампочка2Комплект_2.BackgroundImage = A403_3Parameters.Лампочка2Комплект_2
-                ? ControlElementImages.lampType5OnRed
-                : null;
-            Лампочка2Комплект_3.BackgroundImage = A403_3Parameters.Лампочка2Комплект_3
-                ? ControlElementImages.lampType5OnRed
-                : null;
-            Лампочка2Комплект_4.BackgroundImage = A403_3Parameters.Лампочка2Комплект_4
-                ? ControlElementImages.lampType5OnRed
-                : null;
         }
 
         private void ТублерКомплект_Click(object sender, System.EventArgs e)

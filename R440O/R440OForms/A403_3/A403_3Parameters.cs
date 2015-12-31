@@ -1,5 +1,4 @@
 ﻿using R440O.R440OForms.A403_1;
-using R440O.R440OForms.N15;
 
 namespace R440O.R440OForms.A403_3
 {
@@ -9,18 +8,8 @@ namespace R440O.R440OForms.A403_3
 
         public static bool Включен
         {
-            get { return N15Parameters.НеполноеВключение; }
+            get { return A403_1Parameters.Включен; }
         }
-
-        ////Лампочки
-        public static bool Лампочка1Комплект_1 { get { return false; } }
-        public static bool Лампочка1Комплект_2 { get { return false; } }
-        public static bool Лампочка1Комплект_3 { get { return false; } }
-        public static bool Лампочка1Комплект_4 { get { return false; } }
-        public static bool Лампочка2Комплект_1 { get { return false; } }
-        public static bool Лампочка2Комплект_2 { get { return false; } }
-        public static bool Лампочка2Комплект_3 { get { return false; } }
-        public static bool Лампочка2Комплект_4 { get { return false; } }
 
         ////Тумблеры
         /// <summary>
