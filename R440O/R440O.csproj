@@ -88,6 +88,20 @@
     <Compile Include="R440OForms\Kontur_P3\Параметры\Общие.cs" />
     <Compile Include="R440OForms\N13_1\N13_1Parameters.cs" />
     <Compile Include="R440OForms\N13_2\N13_2Parameters.cs" />
+    <Compile Include="R440OForms\N18_M_Bottom\N18_M_BottomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\N18_M_Bottom\N18_M_BottomForm.Designer.cs">
+      <DependentUpon>N18_M_BottomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\N18_M_Bottom\N18_M_BottomParameters.cs" />
+    <Compile Include="R440OForms\N18_M_Top\N18_M_TopForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R440OForms\N18_M_Top\N18_M_TopForm.Designer.cs">
+      <DependentUpon>N18_M_TopForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R440OForms\N18_M_Top\N18_M_TopParameters.cs" />
     <Compile Include="R440OForms\N502B\N502BParameters.cs" />
     <Compile Include="R440OForms\TLF_TCH\TLF_TCHForm.cs">
       <SubType>Form</SubType>
@@ -96,6 +110,7 @@
       <DependentUpon>TLF_TCHForm.cs</DependentUpon>
     </Compile>
     <Compile Include="R440OForms\TLF_TCH\TLF_TCHParametrs.cs" />
+    <Compile Include="R440OForms\Wattmeter\WattmeterParameters.cs" />
     <Compile Include="ThirdParty\EasyTimer.cs" />
     <Compile Include="ОбщиеТипыДанных\Модуляция.cs" />
     <Compile Include="СостоянияЭлементов\ДАБ5.cs" />
@@ -155,7 +170,6 @@
     <Compile Include="R440OForms\PowerCabel\PowerCabelParameters.cs" />
     <Compile Include="Parameters\Rubin_NParameters.cs" />
     <Compile Include="R440OForms\VoltageStabilizer\VoltageStabilizerParameters.cs" />
-    <Compile Include="Parameters\WattmeterParameters.cs" />
     <Compile Include="R440OForms\A1\A1Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -567,8 +581,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ControlElementImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>ControlElementImages.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>ControlElementImages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -705,6 +719,12 @@
     <EmbeddedResource Include="R440OForms\N15Inside\N15Inside.resx">
       <DependentUpon>N15Inside.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\N18_M_Bottom\N18_M_BottomForm.resx">
+      <DependentUpon>N18_M_BottomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\N18_M_Top\N18_M_TopForm.resx">
+      <DependentUpon>N18_M_TopForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\NKN_2\NKN_2Form.resx">
       <DependentUpon>NKN_2Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -756,9 +776,6 @@
     <EmbeddedResource Include="R440OForms\P220_27G_2\P220_27G_2Form.resx">
       <DependentUpon>P220_27G_2Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="R440OForms\TLF_TCH\TLF_TCHForm.resx">
-      <DependentUpon>TLF_TCHForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\PU_K1_1\PU_K1_1Form.resx">
       <DependentUpon>PU_K1_1Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -773,6 +790,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\K01M_01\K01M_01.resx">
       <DependentUpon>K01M_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R440OForms\TLF_TCH\TLF_TCHForm.resx">
+      <DependentUpon>TLF_TCHForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\VoltageStabilizer\VoltageStabilizerForm.resx">
       <DependentUpon>VoltageStabilizerForm.cs</DependentUpon>
@@ -1127,7 +1147,6 @@
     <None Include="Resources\buttonRoundType8.png" />
     <None Include="Resources\Arrow.png" />
     <None Include="Resources\A306Output.png" />
-    <None Include="Resources\A306Cabel.png" />
     <None Include="Resources\A306CabelNO.png" />
     <None Include="Resources\A306Input.png" />
     <None Include="Resources\A306.png" />
@@ -1156,13 +1175,17 @@
     <None Include="Resources\lampType10OnGreen.png" />
     <None Include="Resources\C300M.png" />
     <Content Include="Resources\buttonSquareYellowOn.png" />
+    <None Include="Resources\down_pannel.png" />
+    <None Include="Resources\kabel_profile%28K11%29.png" />
+    <None Include="Resources\kabel_profile%28K12%29.png" />
+    <None Include="Resources\kabel_input%28K11%291th.png" />
+    <None Include="Resources\kabel_input%28K12%291th.png" />
     <Content Include="Resources\lampType13OnGreen.png" />
     <Content Include="Resources\N18_M_Gnezdo.png" />
+    <None Include="Resources\panel.png" />
     <Content Include="Resources\revolverRoundSmall.png" />
     <None Include="Resources\toggleType8.png" />
     <None Include="Resources\toggleС1_67.png" />
-    <Content Include="Resources\ShellCabel.png" />
-    <None Include="Resources\ShellCabelConnect.png" />
     <Content Include="Resources\tumblerType6Left.png" />
     <Content Include="Resources\tumblerType6Right.png" />
     <None Include="Resources\lampType12OnRed.png" />
@@ -1173,6 +1196,7 @@
     <None Include="Resources\BMA_M.png" />
     <Content Include="Resources\buttonRoundType6.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
