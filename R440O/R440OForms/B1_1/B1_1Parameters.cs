@@ -1,4 +1,7 @@
-﻿namespace R440O.R440OForms.B1_1
+﻿using R440O.R440OForms.P220_27G_2;
+using R440O.R440OForms.P220_27G_3;
+
+namespace R440O.R440OForms.B1_1
 {
     using System.Collections.Generic;
     using N15Inside;
@@ -15,7 +18,7 @@
         {
             get
             {
-                return (N15Parameters.ЛампочкаП220272 || N15Parameters.ЛампочкаП220273) &&
+                return (P220_27G_2Parameters.Включен || P220_27G_3Parameters.Включен) &&
                        (ТумблерМуДу || !ТумблерМуДу && N15Parameters.ТумблерБ1_1);
             }
         }
@@ -32,7 +35,7 @@
                     N18_MParameters.ПереключательПРМ1 == 4)
                     return N15InsideParameters.ВыходПриемногоТракта;
 
-                if (Включен && B2_1Parameters.ВыходнойСигнал1 != null && B2_1Parameters.ВыходнойСигнал1.SelectedGroupElements.Count != 0) 
+                if (Включен && B2_1Parameters.ВыходнойСигнал1 != null && B2_1Parameters.ВыходнойСигнал1.SelectedGroupElements.Count != 0)
                     return B2_1Parameters.ВыходнойСигнал1;
                 return null;
             }
@@ -107,7 +110,7 @@
             get { return Включен && ВходнойСигнал != null; ; }
         }
 
-        public static bool ЛампочкаПРСС { get; set; } 
+        public static bool ЛампочкаПРСС { get; set; }
         #endregion
 
         #region Каналы
@@ -166,7 +169,7 @@
         {
             get
             {
-                if (ЛампочкаТКБтк3_2 && 
+                if (ЛампочкаТКБтк3_2 &&
                     !Signal.IsEquivalentSpeed(ВходнойСигнал.SpeedOfChanel(3),
                     НеобходимыйСигнал.SpeedOfChanel(3)))
                     return true;
@@ -183,7 +186,7 @@
                 return false;
             }
         }
-        public static bool ЛампочкаТКБАвар { get; set; } 
+        public static bool ЛампочкаТКБАвар { get; set; }
         #endregion
 
         #region Эластичная память
@@ -219,7 +222,7 @@
                     (ВходнойСигнал.SpeedOfChanel(3), НеобходимыйСигнал.SpeedOfChanel(3))
                     || ВходнойСигнал.SpeedOfChanel(3) == 0);
             }
-        } 
+        }
         #endregion
 
         public static bool ЛампочкаТЛГпр1 { get; set; }
@@ -238,7 +241,7 @@
             set
             {
                 if (value) _колодкаТлГпр12 = false;
-                _колодкаТлГпр11 = value; 
+                _колодкаТлГпр11 = value;
                 OnParameterChanged();
             }
         }
@@ -333,7 +336,7 @@
                 OnParameterChanged();
             }
         }
-        
+
         #endregion
 
         public delegate void ParameterChangedHandler();

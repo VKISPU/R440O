@@ -89,7 +89,7 @@ namespace R440O.R440OForms.B1_1
                         item.BackgroundImage = (bool)prop.GetValue(null)
                             ? ControlElementImages.lampType3OnRed
                             : null;
-                    else if (item.Name.Contains("ЛампочкаТЛГпр")) 
+                    else if (item.Name.Contains("ЛампочкаТЛГпр"))
                         item.BackgroundImage = (bool)prop.GetValue(null)
                             ? ControlElementImages.lampType4OnRed
                             : null;
@@ -112,7 +112,7 @@ namespace R440O.R440OForms.B1_1
             this.КнопкаСкоростьАБ_1ТЛФ_К.BackgroundImage = B1_1Parameters.КнопкаСкоростьАб1ТлфК
                 ? null
                 : ControlElementImages.buttonRectType1;
-            
+
             КолодкаТЛГпр1_1.BackgroundImage = B1_1Parameters.КолодкаТлГпр11 ? ControlElementImages.jumperType1 : null;
             КолодкаТЛГпр1_2.BackgroundImage = B1_1Parameters.КолодкаТлГпр12 ? ControlElementImages.jumperType1 : null;
             КолодкаТЛГпр2_1.BackgroundImage = B1_1Parameters.КолодкаТлГпр21 ? ControlElementImages.jumperType1 : null;

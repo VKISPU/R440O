@@ -1,4 +1,7 @@
-﻿namespace R440O.R440OForms.A1
+﻿using R440O.R440OForms.P220_27G_2;
+using R440O.R440OForms.P220_27G_3;
+
+namespace R440O.R440OForms.A1
 {
     using System.Collections.Generic;
     using BaseClasses;
@@ -11,7 +14,7 @@
         {
             get
             {
-                return (N15Parameters.ЛампочкаП220272 || N15Parameters.ЛампочкаП220273) &&
+                return (P220_27G_2Parameters.Включен || P220_27G_3Parameters.Включен) &&
                        (ТумблерМуДу || !ТумблерМуДу && N15Parameters.ТумблерА1);
             }
         }
@@ -43,17 +46,17 @@
                     };
 
                 return new Signal
-                    {
-                        GroupSpeed = 2.4,
-                        Elements = new List<SignalElement>()
+                {
+                    GroupSpeed = 2.4,
+                    Elements = new List<SignalElement>()
                             {
                                 new SignalElement(new [] { -1, 0, 1.2, 0, 0.1, 0.1, 0.05, 0.025 })
                             },
-                        Level = 50
-                    };
+                    Level = 50
+                };
             }
         }
-        
+
         #endregion
 
         #region Элементы блока
@@ -95,7 +98,7 @@
             {
                 return Включен && НаличиеТЛФ1;
             }
-        } 
+        }
         #endregion
 
         #region ТЛФ2
@@ -207,7 +210,7 @@
 
         public delegate void ParameterChangedHandler();
         public static event ParameterChangedHandler ParameterChanged;
-        
+
 
         private static void OnParameterChanged()
         {

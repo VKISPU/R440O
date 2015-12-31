@@ -1,4 +1,7 @@
-﻿namespace R440O.R440OForms.B1_2
+﻿using R440O.R440OForms.P220_27G_2;
+using R440O.R440OForms.P220_27G_3;
+
+namespace R440O.R440OForms.B1_2
 {
     using System.Collections.Generic;
     using N15Inside;
@@ -15,7 +18,7 @@
         {
             get
             {
-                return (N15Parameters.ЛампочкаП220272 || N15Parameters.ЛампочкаП220273) &&
+                return (P220_27G_2Parameters.Включен || P220_27G_3Parameters.Включен) &&
                        (ТумблерМуДу || !ТумблерМуДу && N15Parameters.ТумблерБ1_2);
             }
         }
