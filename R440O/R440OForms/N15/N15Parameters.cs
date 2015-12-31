@@ -1,8 +1,10 @@
-﻿using R440O.R440OForms.A306;
+﻿using R440O.InternalBlocks;
+using R440O.R440OForms.A306;
 using R440O.R440OForms.A403_1;
 using R440O.R440OForms.N13_1;
 using R440O.R440OForms.N13_2;
 using R440O.R440OForms.N16;
+
 namespace R440O.R440OForms.N15
 {
     using Parameters;
@@ -55,7 +57,6 @@ namespace R440O.R440OForms.N15
             set
             {
                 if (value > -120 && value < 120) _регуляторУровень = value;
-                C300M_1Parameters.ResetParameters();
             }
         }
 
@@ -123,7 +124,7 @@ namespace R440O.R440OForms.N15
                     ResetParameters();
                 }
                 else
-                OnParameterChanged();
+                    OnParameterChanged();
             }
         }
 
@@ -290,7 +291,6 @@ namespace R440O.R440OForms.N15
             set
             {
                 _тумблерЦ300М2 = value;
-                //C300M_2Parameters.ResetParameters();
             }
         }
 
@@ -320,7 +320,6 @@ namespace R440O.R440OForms.N15
             set
             {
                 _тумблерН12С = value;
-                N12SParameters.ResetParameters();
             }
         }
 
@@ -330,7 +329,6 @@ namespace R440O.R440OForms.N15
             set
             {
                 _тумблерМшу = value;
-                A306Parameters.ResetParameters();
             }
         }
 
@@ -414,6 +412,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _тумблерА403 = value;
+                //A403_1Parameters.ResetParameters();
             }
         }
 
@@ -649,7 +648,7 @@ namespace R440O.R440OForms.N15
             }
         }
 
-        public static bool ЛампочкаЦ300МВкл2 { get { return Лампочка27В && ЛампочкаН15БП && ТумблерЦ300М2; } }
+        public static bool ЛампочкаЦ300МВкл2 { get { return C300M_2Parameters.Включен; } }
         public static bool ЛампочкаЦ300МВкл3 { get { return Лампочка27В && ЛампочкаН15БП && ТумблерЦ300М3; } }
         public static bool ЛампочкаЦ300МВкл4 { get { return Лампочка27В && ЛампочкаН15БП && ТумблерЦ300М4; } }
         public static bool ЛампочкаЦ300МСигнал1 { get; set; }
@@ -707,7 +706,7 @@ namespace R440O.R440OForms.N15
 
         public static bool ЛампочкаМШУ
         {
-            get { return Включен && ТумблерМШУ; }
+            get { return Включен && MSHUParameters.Включен; }
         }
 
         public static bool ЛампочкаБМА_1
@@ -757,7 +756,7 @@ namespace R440O.R440OForms.N15
 
         public static bool ЛампочкаП220273
         {
-            get { return Лампочка27В; }
+            get { return НеполноеВключение; }
         }
 
         public static bool ЛампочкаА306
@@ -844,7 +843,7 @@ namespace R440O.R440OForms.N15
 
         public static bool ЛампочкаА503Б
         {
-            get { return Лампочка27В && ТумблерА503Б; }
+            get { return A503BParameters.Включен; }
         }
 
         public static bool ЛампочкаАнт { get { return N16Parameters.ЛампочкаАнтенна; } }
@@ -859,7 +858,7 @@ namespace R440O.R440OForms.N15
         /// </summary>
         public static void ResetParameters()
         {
-            
+
             N16Parameters.ResetParameters();
             #region БМА
 
@@ -902,8 +901,16 @@ namespace R440O.R440OForms.N15
             A205M_1Parameters.ResetParameters();
             A205M_2Parameters.ResetParameters();
 
-            C300M_2Parameters.ResetParameters();
+            ResetC300M();
             OnParameterChanged();
+        }
+
+        public static void ResetC300M()
+        {
+            C300M_1Parameters.ResetParameters();
+            C300M_2Parameters.ResetParameters();
+            C300M_3Parameters.ResetParameters();
+            C300M_4Parameters.ResetParameters();
         }
 
         /// <summary>

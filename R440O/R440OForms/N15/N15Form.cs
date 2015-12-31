@@ -4,12 +4,8 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-
-using System.Reflection;
-using System.Runtime.InteropServices;
 using R440O.InternalBlocks;
 using R440O.Parameters;
-using R440O.R440OForms.K03M_01;
 using R440O.R440OForms.N15Inside;
 using R440O.R440OForms.N16;
 using R440O.ThirdParty;
@@ -85,13 +81,13 @@ namespace R440O.R440OForms.N15
             foreach (Control item in Panel.Controls)
             {
                 if (!item.Name.Contains("“умблер")) continue;
-                var propertyList = typeof (N15LocalParameters).GetProperties();
+                var propertyList = typeof(N15LocalParameters).GetProperties();
                 foreach (var property in propertyList.Where(property => ("лок" + item.Name) == property.Name
                                                                         && !property.Name.Contains("5ћгц") &&
                                                                         !property.Name.Contains("јнтЁкв") &&
                                                                         !property.Name.Contains("ј20512")))
                 {
-                    item.BackgroundImage = (bool) property.GetValue(null)
+                    item.BackgroundImage = (bool)property.GetValue(null)
                         ? ControlElementImages.tumblerType3Up
                         : ControlElementImages.tumblerType3Down;
                 }
@@ -102,7 +98,7 @@ namespace R440O.R440OForms.N15
                 : ControlElementImages.tumblerType4Down;
 
 
-             //“умблеры левой и правой части дл€ которых не требуетс€ нажатие на кнопку ¬ Ћ
+            //“умблеры левой и правой части дл€ которых не требуетс€ нажатие на кнопку ¬ Ћ
             “умблерј30412.BackgroundImage = N15Parameters.“умблерј30412
                 ? ControlElementImages.tumblerType3Up
                 : ControlElementImages.tumblerType3Down;
@@ -202,7 +198,6 @@ namespace R440O.R440OForms.N15
             N15Parameters.Ќ13_1 = (N15LocalParameters.лок нопкаЌ13_1 || N15LocalParameters.лок нопкаЌ13_12);
             N15Parameters.Ќ13_2 = (N15LocalParameters.лок нопкаЌ13_2 || N15LocalParameters.лок нопкаЌ13_12);
 
-
             if (N15Parameters.“умблер 1_2)
             {
                 PU_K1_1Parameters.ѕопытатьс€¬ключитьЅлок”даленно();
@@ -259,6 +254,7 @@ namespace R440O.R440OForms.N15
         private void  нопка—танци€¬ыкл_MouseUp(object sender, MouseEventArgs e)
         {
             this. нопка—танци€¬ыкл.BackgroundImage = ControlElementImages.buttonN15Off;
+
         }
 
         private void N15ButtonInside1_Click(object sender, EventArgs e)

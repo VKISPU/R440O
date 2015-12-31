@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.RUBIN_NPanel = new System.Windows.Forms.Panel();
+            this.Rubin_NPanel = new System.Windows.Forms.Panel();
             this.Rubin_NТумблерБлок4963 = new System.Windows.Forms.Button();
             this.Rubin_NТумблерБлок4923 = new System.Windows.Forms.Button();
             this.Rubin_NТумблерБлок5063 = new System.Windows.Forms.Button();
@@ -814,7 +814,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel RUBIN_NPanel;
+        private System.Windows.Forms.Panel Rubin_NPanel;
         private System.Windows.Forms.Button Rubin_NПереключательГрупСкор;
         private System.Windows.Forms.Button Rubin_NПереключательКонтроль;
         private System.Windows.Forms.Button Rubin_NПереключательN5063_48кБод;
