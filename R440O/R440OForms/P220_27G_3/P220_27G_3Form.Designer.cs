@@ -34,7 +34,7 @@
             this.ЛампочкаСеть = new System.Windows.Forms.PictureBox();
             this.ЛампочкаПерегр = new System.Windows.Forms.PictureBox();
             this.ЛампочкаНеиспр = new System.Windows.Forms.PictureBox();
-            this.ТумблерМуДу = new System.Windows.Forms.Button();
+            this.ТумблерУправление = new System.Windows.Forms.Button();
             this.ТумблерСеть = new System.Windows.Forms.Button();
             this.Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Лампочка27В)).BeginInit();
@@ -51,7 +51,7 @@
             this.Panel.Controls.Add(this.ЛампочкаСеть);
             this.Panel.Controls.Add(this.ЛампочкаПерегр);
             this.Panel.Controls.Add(this.ЛампочкаНеиспр);
-            this.Panel.Controls.Add(this.ТумблерМуДу);
+            this.Panel.Controls.Add(this.ТумблерУправление);
             this.Panel.Controls.Add(this.ТумблерСеть);
             this.Panel.Location = new System.Drawing.Point(0, 0);
             this.Panel.Name = "Panel";
@@ -65,17 +65,17 @@
             this.Лампочка27В.Location = new System.Drawing.Point(230, 50);
             this.Лампочка27В.Name = "Лампочка27В";
             this.Лампочка27В.Size = new System.Drawing.Size(16, 17);
-            this.Лампочка27В.TabIndex = 79;
+            this.Лампочка27В.TabIndex = 81;
             this.Лампочка27В.TabStop = false;
             // 
             // ЛампочкаСеть
             // 
             this.ЛампочкаСеть.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаСеть.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ЛампочкаСеть.Location = new System.Drawing.Point(193, 47);
+            this.ЛампочкаСеть.Location = new System.Drawing.Point(192, 47);
             this.ЛампочкаСеть.Name = "ЛампочкаСеть";
-            this.ЛампочкаСеть.Size = new System.Drawing.Size(30, 30);
-            this.ЛампочкаСеть.TabIndex = 78;
+            this.ЛампочкаСеть.Size = new System.Drawing.Size(31, 31);
+            this.ЛампочкаСеть.TabIndex = 80;
             this.ЛампочкаСеть.TabStop = false;
             // 
             // ЛампочкаПерегр
@@ -85,7 +85,7 @@
             this.ЛампочкаПерегр.Location = new System.Drawing.Point(948, 95);
             this.ЛампочкаПерегр.Name = "ЛампочкаПерегр";
             this.ЛампочкаПерегр.Size = new System.Drawing.Size(16, 16);
-            this.ЛампочкаПерегр.TabIndex = 77;
+            this.ЛампочкаПерегр.TabIndex = 75;
             this.ЛампочкаПерегр.TabStop = false;
             // 
             // ЛампочкаНеиспр
@@ -95,24 +95,24 @@
             this.ЛампочкаНеиспр.Location = new System.Drawing.Point(948, 64);
             this.ЛампочкаНеиспр.Name = "ЛампочкаНеиспр";
             this.ЛампочкаНеиспр.Size = new System.Drawing.Size(16, 16);
-            this.ЛампочкаНеиспр.TabIndex = 76;
+            this.ЛампочкаНеиспр.TabIndex = 74;
             this.ЛампочкаНеиспр.TabStop = false;
             // 
-            // ТумблерМуДу
+            // ТумблерУправление
             // 
-            this.ТумблерМуДу.BackColor = System.Drawing.Color.Transparent;
-            this.ТумблерМуДу.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
-            this.ТумблерМуДу.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ТумблерМуДу.FlatAppearance.BorderSize = 0;
-            this.ТумблерМуДу.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.ТумблерМуДу.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.ТумблерМуДу.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ТумблерМуДу.Location = new System.Drawing.Point(233, 116);
-            this.ТумблерМуДу.Name = "ТумблерМуДу";
-            this.ТумблерМуДу.Size = new System.Drawing.Size(38, 58);
-            this.ТумблерМуДу.TabIndex = 26;
-            this.ТумблерМуДу.UseVisualStyleBackColor = false;
-            this.ТумблерМуДу.Click += new System.EventHandler(this.P220_27G_3ТумблерМуДу_Click);
+            this.ТумблерУправление.BackColor = System.Drawing.Color.Transparent;
+            this.ТумблерУправление.BackgroundImage = global::R440O.ControlElementImages.tumblerType4Down;
+            this.ТумблерУправление.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ТумблерУправление.FlatAppearance.BorderSize = 0;
+            this.ТумблерУправление.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерУправление.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ТумблерУправление.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ТумблерУправление.Location = new System.Drawing.Point(233, 116);
+            this.ТумблерУправление.Name = "ТумблерУправление";
+            this.ТумблерУправление.Size = new System.Drawing.Size(38, 58);
+            this.ТумблерУправление.TabIndex = 25;
+            this.ТумблерУправление.UseVisualStyleBackColor = false;
+            this.ТумблерУправление.Click += new System.EventHandler(this.ТумблерУправление_Click);
             // 
             // ТумблерСеть
             // 
@@ -126,9 +126,9 @@
             this.ТумблерСеть.Location = new System.Drawing.Point(178, 115);
             this.ТумблерСеть.Name = "ТумблерСеть";
             this.ТумблерСеть.Size = new System.Drawing.Size(61, 71);
-            this.ТумблерСеть.TabIndex = 23;
+            this.ТумблерСеть.TabIndex = 24;
             this.ТумблерСеть.UseVisualStyleBackColor = false;
-            this.ТумблерСеть.Click += new System.EventHandler(this.P220_27G_3ТумблерСеть_Click);
+            this.ТумблерСеть.Click += new System.EventHandler(this.ТумблерСеть_Click);
             // 
             // P220_27G_3Form
             // 
@@ -141,6 +141,7 @@
             this.Name = "P220_27G_3Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "П220/27Г-3";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.P220_27G_3Form_FormClosed);
             this.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Лампочка27В)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСеть)).EndInit();
@@ -154,7 +155,7 @@
 
         private System.Windows.Forms.Panel Panel;
         private System.Windows.Forms.Button ТумблерСеть;
-        private System.Windows.Forms.Button ТумблерМуДу;
+        private System.Windows.Forms.Button ТумблерУправление;
         private System.Windows.Forms.PictureBox ЛампочкаПерегр;
         private System.Windows.Forms.PictureBox ЛампочкаНеиспр;
         private System.Windows.Forms.PictureBox Лампочка27В;

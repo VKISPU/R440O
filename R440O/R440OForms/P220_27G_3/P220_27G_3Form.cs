@@ -4,7 +4,7 @@
     using BaseClasses;
 
     /// <summary>
-    /// Форма блока П220-27Г-3
+    /// Форма блока П220-27Г-2
     /// </summary>
     public partial class P220_27G_3Form : Form, IRefreshableForm
     {
@@ -13,19 +13,19 @@
         /// </summary>
         public P220_27G_3Form()
         {
-            this.InitializeComponent();
+            InitializeComponent();
             P220_27G_3Parameters.ParameterChanged += RefreshFormElements;
             RefreshFormElements();
         }
 
-        private void P220_27G_3ТумблерСеть_Click(object sender, System.EventArgs e)
+        private void ТумблерСеть_Click(object sender, System.EventArgs e)
         {
             P220_27G_3Parameters.ТумблерСеть = !P220_27G_3Parameters.ТумблерСеть;
         }
 
-        private void P220_27G_3ТумблерМуДу_Click(object sender, System.EventArgs e)
+        private void ТумблерУправление_Click(object sender, System.EventArgs e)
         {
-            P220_27G_3Parameters.ТумблерМуДу = !P220_27G_3Parameters.ТумблерМуДу;
+            P220_27G_3Parameters.ТумблерУправление = !P220_27G_3Parameters.ТумблерУправление;
         }
 
         public void RefreshFormElements()
@@ -33,13 +33,25 @@
             ЛампочкаСеть.BackgroundImage = P220_27G_3Parameters.ЛампочкаСеть
                 ? ControlElementImages.lampType9OnGreen
                 : null;
-            this.ТумблерМуДу.BackgroundImage = P220_27G_3Parameters.ТумблерМуДу
+
+            Лампочка27В.BackgroundImage = P220_27G_3Parameters.Лампочка27В
+                ? ControlElementImages.lampType3OnRed
+                : null;
+
+            ТумблерУправление.BackgroundImage = P220_27G_3Parameters.ТумблерУправление
                 ? ControlElementImages.tumblerType4Down
                 : ControlElementImages.tumblerType4Up;
 
-            this.ТумблерСеть.BackgroundImage = P220_27G_3Parameters.ТумблерСеть
+            ТумблерСеть.BackgroundImage = P220_27G_3Parameters.ТумблерСеть
                 ? ControlElementImages.tumblerType6Up
                 : ControlElementImages.tumblerType6Down;
         }
+
+        private void P220_27G_3Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            P220_27G_3Parameters.ParameterChanged -= RefreshFormElements;
+        }
+
+
     }
 }

@@ -4,7 +4,7 @@
     using BaseClasses;
 
     /// <summary>
-    /// Форма блока П220-27Г-3
+    /// Форма блока П220-27Г-2
     /// </summary>
     public partial class P220_27G_2Form : Form, IRefreshableForm
     {
@@ -13,19 +13,19 @@
         /// </summary>
         public P220_27G_2Form()
         {
-            this.InitializeComponent();
+            InitializeComponent();
             P220_27G_2Parameters.ParameterChanged += RefreshFormElements;
             RefreshFormElements();
         }
 
-        private void P220_27G_2ТумблерСеть_Click(object sender, System.EventArgs e)
+        private void ТумблерСеть_Click(object sender, System.EventArgs e)
         {
             P220_27G_2Parameters.ТумблерСеть = !P220_27G_2Parameters.ТумблерСеть;
         }
 
-        private void P220_27G_2ТумблерМуДу_Click(object sender, System.EventArgs e)
+        private void ТумблерУправление_Click(object sender, System.EventArgs e)
         {
-            P220_27G_2Parameters.ТумблерМуДу = !P220_27G_2Parameters.ТумблерМуДу;
+            P220_27G_2Parameters.ТумблерУправление = !P220_27G_2Parameters.ТумблерУправление;
         }
 
         public void RefreshFormElements()
@@ -34,13 +34,24 @@
                 ? ControlElementImages.lampType9OnGreen
                 : null;
 
-            this.ТумблерМуДу.BackgroundImage = P220_27G_2Parameters.ТумблерМуДу
+            Лампочка27В.BackgroundImage = P220_27G_2Parameters.Лампочка27В
+                ? ControlElementImages.lampType3OnRed
+                : null;
+
+            ТумблерУправление.BackgroundImage = P220_27G_2Parameters.ТумблерУправление
                 ? ControlElementImages.tumblerType4Down
                 : ControlElementImages.tumblerType4Up;
 
-            this.ТумблерСеть.BackgroundImage = P220_27G_2Parameters.ТумблерСеть
+            ТумблерСеть.BackgroundImage = P220_27G_2Parameters.ТумблерСеть
                 ? ControlElementImages.tumblerType6Up
                 : ControlElementImages.tumblerType6Down;
         }
+
+        private void P220_27G_2Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            P220_27G_2Parameters.ParameterChanged -= RefreshFormElements;
+        }
+
+
     }
 }

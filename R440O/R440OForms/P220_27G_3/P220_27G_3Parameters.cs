@@ -2,34 +2,48 @@
 {
     using N15;
 
-    public class P220_27G_3Parameters
+    public static class P220_27G_3Parameters
     {
+        public static bool Включен
+        {
+            get { return N15Parameters.Включен && ТумблерСеть; }
+        }
         ////Лампочки
         public static bool ЛампочкаНеиспр { get; set; }
         public static bool ЛампочкаПерегр { get; set; }
 
-
         /// <summary>
-        /// Горит, если включён Н15 и на нём тумблер 5Мгц.
+        /// Лампочка сеть горит в случае включения блока Н15 и ТумблераСеть
         /// </summary>
         public static bool ЛампочкаСеть
         {
-            get { return N15Parameters.Включен && ТумблерСеть && ((ТумблерМуДу && N15Parameters.Тумблер5Мгц == -1) || !ТумблерМуДу); }
+            get { return Включен; }
         }
 
-        public static bool Лампочка27В { get; set; }
+        /// <summary>
+        /// Лампочка 27В горит в случае местного включения блоков, или включения хотя бы одного блока дискрета.
+        /// </summary>
+        public static bool Лампочка27В
+        {
+            get
+            {
+                return Включен && (!ТумблерУправление ||
+                                   (N15Parameters.ТумблерА1 || N15Parameters.ТумблерБ1_1 || N15Parameters.ТумблерБ1_2 ||
+                                    N15Parameters.ТумблерБ2_1 || N15Parameters.ТумблерБ2_2 || N15Parameters.ТумблерБ3_1 ||
+                                    N15Parameters.ТумблерБ3_2));
+            }
+        }
 
         /// <summary>
         /// Определяет тип управления, выбранный на блоке. true - ДУ, false - МУ
         /// </summary>
-        public static bool ТумблерМуДу
+        public static bool ТумблерУправление
         {
-            get { return _тумблерМуДу; }
+            get { return _тумблерУправление; }
             set
             {
-                _тумблерМуДу = value;
+                _тумблерУправление = value;
                 OnParameterChanged();
-                N15Parameters.ResetParameters();
             }
         }
 
@@ -43,11 +57,11 @@
             {
                 _тумблерСеть = value;
                 OnParameterChanged();
-                N15Parameters.ResetParameters();
+                N15Parameters.ResetDiscret();
             }
         }
 
-        private static bool _тумблерМуДу;
+        private static bool _тумблерУправление;
         private static bool _тумблерСеть;
 
         public delegate void ParameterChangedHandler();
