@@ -1,7 +1,7 @@
 ﻿using System;
 using R440O.BaseClasses;
 using R440O.InternalBlocks;
-using R440O.R440OForms.A205M_1;
+using R440O.R440OForms.A304;
 using R440O.R440OForms.A306;
 using R440O.R440OForms.N15;
 using R440O.ОбщиеТипыДанных;
@@ -10,7 +10,6 @@ namespace R440O.R440OForms.C300M_2
 {
     public static class C300M_2Parameters
     {
-
 
         #region Private
 
@@ -43,132 +42,23 @@ namespace R440O.R440OForms.C300M_2
 
         #endregion
 
+        #region Параметры Включен/НеполноеВключение
+
         public static bool НеполноеВключение
         {
             get { return N15Parameters.Включен; }
         }
+
         public static bool Включен
         {
-            get { return НеполноеВключение && ((ТумблерУправление && N15Parameters.ТумблерЦ300М2) || (!ТумблерУправление && КнопкиПитание)); }
-        }
-
-        /// <summary>
-        /// Переменная, в которой хранится пойманный сигнал
-        /// </summary>
-        public static Signal ХранимыйСигнал;
-
-        /// <summary>
-        /// Условие для проверки станции на себя
-        /// </summary>
-        public static bool ПроверкаСтанцииНаСебя
-        {
             get
             {
-                if (MSHUParameters.ВыходнойСигнал != null)
-                {
-
-                    if (!КнопкаПоиск && ВДиапазонеСмещения && СоответствиеСкорости &&
-                        ((_значениеПоиска > 0 && _значениеПоиска < 2 && !ТумблерПределы) || (_значениеПоиска > -40 && _значениеПоиска < 20 && ТумблерПределы))
-                        && A306Parameters.ВыходнойСигнал12 &&
-                        ((MSHUParameters.ВыходнойСигнал.Modulation == Модуляция.ОФТ && !ТумблерВведение &&
-                          !ТумблерВидМодуляции) ||
-                         ((MSHUParameters.ВыходнойСигнал.Modulation == Модуляция.ЧТ && ТумблерВведение &&
-                           ТумблерВидМодуляции)))
-                        )
-                    {
-                        return true;
-                    }
-                }
-                return false;
+                return НеполноеВключение &&
+                       ((ТумблерУправление && N15Parameters.ТумблерЦ300М2) || (!ТумблерУправление && КнопкиПитание));
             }
         }
 
-
-        private static int _точкаПоиска;
-        public static int ТочкаПоиска
-        {
-            get { return 0; }
-            set { _точкаПоиска = value; }
-        }
-
-        public static bool ВДиапазонеСмещения
-        {
-            get
-            {
-                ТочкаПоиска = MSHUParameters.ВыходнойСигнал.Frequency - ВыставленнаяВолна * 10;
-                return (ТумблерПределы && Math.Abs(ТочкаПоиска) < 60) ||
-                       (!ТумблерПределы && Math.Abs(ТочкаПоиска) < 300);
-            }
-        }
-
-        /// <summary>
-        /// Вспомогательный метод для получения числового значения выставленной волны.
-        /// </summary>
-        public static int ВыставленнаяВолна
-        {
-            get
-            {
-                return Включен ?
-                    ((ПереключательВолна1000 > 4) ? 4 : ПереключательВолна1000) * 1000 + ПереключательВолна100 * 100 +
-                       ПереключательВолна10 * 10 + ПереключательВолна1
-                       : 0;
-            }
-        }
-
-
-        /// <summary>
-        /// Вспомогательный метод для проверки скорости сигнала и нажатия кнопки Вид Работы
-        /// </summary>
-        public static bool СоответствиеСкорости
-        {
-            get
-            {
-
-                if (MSHUParameters.ВыходнойСигнал != null)
-                {
-                    double tekSpeed;
-                    switch (КнопкиВидРаботы.PressedButton)
-                    {
-                        case 0:
-                            tekSpeed = 0.025;
-                            break;
-                        case 1:
-                            tekSpeed = 0.05;
-                            break;
-                        case 2:
-                            tekSpeed = 0.1;
-                            break;
-                        case 3:
-                            tekSpeed = 1.2;
-                            break;
-                        case 4:
-                            tekSpeed = 2.4;
-                            break;
-                        case 5:
-                            tekSpeed = 4.8;
-                            break;
-                        case 6:
-                            tekSpeed = 48;
-                            break;
-                        case 7:
-                            tekSpeed = 96;
-                            break;
-                        case 8:
-                            tekSpeed = 240;
-                            break;
-                        case 9:
-                            tekSpeed = 480;
-                            break;
-                        default:
-                            tekSpeed = 0;
-                            break;
-                    }
-                    if (MSHUParameters.ВыходнойСигнал.GroupSpeed == tekSpeed) return true;
-                }
-                return false;
-            }
-        }
-
+        #endregion
 
         #region Кнопки ВИД РАБОТЫ
 
@@ -187,25 +77,34 @@ namespace R440O.R440OForms.C300M_2
         /// </summary>
         public static C300M_2КнопкиВидРаботы КнопкиВидРаботы = new C300M_2КнопкиВидРаботы();
 
-        /// <summary>
-        /// Кнопка Сброс, отжимает все кнопки Вида Работы
-        /// </summary>
-        public static bool КнопкаВидРаботыСброс
+        public class C300M_2КнопкиВидРаботы
         {
-            get { return _кнопкаВидРаботыСброс; }
-            set
-            {
-                _кнопкаВидРаботыСброс = value;
-                КнопкиВидРаботы[0] = false;
+            public static bool[] КнопкиВидРаботы = { false, false, false, false, false, false, false, false, false, false, false };
 
-                //RefreshIndicators();
+            public bool this[int buttonNumber]
+            {
+                get { return КнопкиВидРаботы[buttonNumber]; }
+                set
+                {
+                    for (int i = 0; i < 10; i++)
+                        КнопкиВидРаботы[i] = false;
+
+                    КнопкиВидРаботы[buttonNumber] = true;
+
+                    //По логике должен быть вызов OnParameterChanged и Search
+                    //В ResetParameters аналогичный вызов методов
+                    ResetParameters();
+                }
+            }
+
+            public int PressedButton
+            {
+                get { return Array.IndexOf(КнопкиВидРаботы, true); }
             }
         }
-
         #endregion
 
         #region Кнопки КОНТРОЛЬ РЕЖИМА
-
         /// <summary>
         /// Названия кнопок:
         /// 0 - Уровень сигнала,
@@ -220,28 +119,38 @@ namespace R440O.R440OForms.C300M_2
         /// 9 - -12.6.
         /// </summary>
         public static C300M_2КнопкиКонтрольРежима КнопкиКонтрольРежима = new C300M_2КнопкиКонтрольРежима();
-        /// <summary>
-        /// Кнопка -27, отжимает все кнопки Контроля Режима
-        /// </summary>
-        public static bool КнопкаКонтрольРежимаМинус27
+        public class C300M_2КнопкиКонтрольРежима
         {
-            get { return _кнопкаКонтрольРежимаМинус27; }
-            set
-            {
-                _кнопкаКонтрольРежимаМинус27 = value;
-                КнопкиКонтрольРежима[0] = false;
+            public static bool[] КнопкиКонтрольРежима = { false, false, false, false, false, false, false, false, false, false, false };
 
-                //RefreshIndicators();
+            public bool this[int buttonNumber]
+            {
+                get { return КнопкиКонтрольРежима[buttonNumber]; }
+                set
+                {
+                    for (int i = 0; i < 10; i++)
+                        КнопкиКонтрольРежима[i] = false;
+
+                    КнопкиКонтрольРежима[buttonNumber] = value;
+
+                    //По логике должен быть вызов OnParameterChanged и TimerSet
+                    //В ResetParameters аналогичный вызов методов
+                    //TimerSet будет вызвано и Search
+                    ResetParameters();
+                }
+            }
+
+            public int PressedButton
+            {
+                get { return Array.IndexOf(КнопкиКонтрольРежима, true); }
             }
         }
-
         #endregion
 
-        #region Кнопки ПИТАНИЕ
+        #region Кнопки ПИТАНИЕ и ПОИСК
         /// <summary>
         /// Кнопки Питание
         /// Данный параметр отвечает за логику кнопок Вкл/Выкл на блоке
-        /// true
         /// </summary>
         public static bool КнопкиПитание
         {
@@ -258,16 +167,12 @@ namespace R440O.R440OForms.C300M_2
 
                     //Значение не должно менятся при нажатии на кнопки, когда тумблер поставлен дистанционно
                     //при дистанционном отключении параметр должен быть сброшен в ResetParameters()
-                    if (!ТумблерУправление) _кнопкиПитание = value;
-                    else _кнопкиПитание = false;
+                    _кнопкиПитание = !ТумблерУправление && value;
                 }
                 УправлениеПоиском();
                 OnParameterChanged();
             }
         }
-        #endregion
-
-        #region Кнопки Поиск и Индикация волны
 
         public static bool КнопкаПоиск
         {
@@ -276,32 +181,35 @@ namespace R440O.R440OForms.C300M_2
             {
                 _кнопкаПоиск = value;
 
+                //Если блок включен, поиск не идет, и блокировка не включена, то поиск необходимо запустить снова.
                 if (Включен && !ПоискИдет && !ТумблерБлокировка && КнопкаПоиск)
                 {
                     if (ХранимыйСигнал != null)
                     {
                         ХранимыйСигнал = null;
-                        ЗначениеПоиска += 10;
+                        ЗначениеПоиска += 5;
                     }
-                    ПоискИдет = true;
+                    ЗапуститьТаймер();
                 }
                 OnParameterChanged();
             }
         }
-
-        public static bool КнопкаИндикацияВолны
-        {
-            get { return _кнопкаИндикацияВолны; }
-            set
-            {
-                if (Включен && value)
-                    _кнопкаИндикацияВолны = value;
-            }
-        }
-
         #endregion
 
-        #region Переключатели ВОЛНА
+        #region Индикация волны
+        /// <summary>
+        /// Вспомогательный метод для получения числового значения выставленной волны.
+        /// </summary>
+        public static int ВыставленнаяВолна
+        {
+            get
+            {
+                return Включен ?
+                    ((ПереключательВолна1000 > 4) ? 4 : ПереключательВолна1000) * 1000 + ПереключательВолна100 * 100 +
+                       ПереключательВолна10 * 10 + ПереключательВолна1
+                       : 0;
+            }
+        }
 
         /// <summary>
         /// 0 - 4
@@ -371,6 +279,15 @@ namespace R440O.R440OForms.C300M_2
             }
         }
 
+        public static bool КнопкаИндикацияВолны
+        {
+            get { return _кнопкаИндикацияВолны; }
+            set
+            {
+                if (Включен && value)
+                    _кнопкаИндикацияВолны = value;
+            }
+        }
 
         #endregion
 
@@ -384,9 +301,10 @@ namespace R440O.R440OForms.C300M_2
             set
             {
                 _тумблерУправление = value;
+
                 //Если блок включен дистанционно и мы переключаем тумблер на местное управление,
                 //то питание должно остаться, для этого нужно присвоить КнопкамПитание значение true;
-                КнопкиПитание = (!value);
+                КнопкиПитание = (!value && N15Parameters.ТумблерЦ300М2);
             }
         }
 
@@ -406,7 +324,7 @@ namespace R440O.R440OForms.C300M_2
 
         /// <summary>
         /// Возможные состояния: true - Вкл, false - Откл
-        /// Если стоит блокировка, то запустить поиск кнопкной поиск нельзя, если был сигнал, то он останется пойманным
+        /// Если стоит блокировка, то запустить поиск кнопкой поиск нельзя, если был сигнал, то он останется пойманным
         /// Если же шёл поиск, то он останавливается и возобновляется только при отключении тумблера
         /// </summary>
         public static bool ТумблерБлокировка
@@ -415,13 +333,15 @@ namespace R440O.R440OForms.C300M_2
             set
             {
                 _тумблерБлокировка = value;
-                ПоискИдет = !value;
+                if(value && Включен) ОстановитьТаймер();
+                else ЗапуститьТаймер();
                 OnParameterChanged();
             }
         }
 
         /// <summary>
         /// Возможные состояния: true - Автоматическое, false - Ручное
+        /// Поиск автоматически возобновляется если сигнал был сброшен.
         /// </summary>
         public static bool ТумблерВидВключения
         {
@@ -481,8 +401,7 @@ namespace R440O.R440OForms.C300M_2
             set
             {
                 _тумблерВидМодуляции = value;
-                if (ХранимыйСигнал != null) ХранимыйСигнал = null;
-                if (ПоискИдет) ПоискИдет = false;
+                ПопытатьсяСброситьСигнал();
                 OnParameterChanged();
             }
         }
@@ -496,6 +415,7 @@ namespace R440O.R440OForms.C300M_2
             set
             {
                 _тумблерПределы = value;
+                ПопытатьсяСброситьСигнал();
                 OnParameterChanged();
             }
         }
@@ -506,7 +426,7 @@ namespace R440O.R440OForms.C300M_2
 
         public static bool ЛампочкаСигнал
         {
-            get { return Включен && !ПоискИдет && ХранимыйСигнал != null; }
+            get { return Включен && !ПоискИдет && ХранимыйСигнал != null || ВременноПоймать; }
         }
 
         public static bool ЛампочкаПитание
@@ -535,9 +455,10 @@ namespace R440O.R440OForms.C300M_2
                         switch (КнопкиКонтрольРежима.PressedButton)
                         {
                             case 0:
-                                return _индикаторСигнал = (ЛампочкаСигнал)
-                                    ? 50
-                                    : 0;
+                                if (!ЛампочкаСигнал)
+                                    return 0;
+                                return _индикаторСигнал = (float)((N15Parameters.РегуляторУровень - ХранимыйСигнал.Level)/2);
+
                             case 1:
                                 if (ТумблерРегулировкаУровня)
                                     return _индикаторСигнал = (КнопкиВидРаботы.PressedButton == -1 || КнопкиВидРаботы.PressedButton == 10)
@@ -571,16 +492,72 @@ namespace R440O.R440OForms.C300M_2
                 return _индикаторСигнал = 0;
             }
         }
-
-
-
         #endregion
 
         #region ПОИСК
+
         //-----------------------------------------------------------------------------------------------------------------//
         // Поиск на блоке работает в скрытом режиме, и запускается при включении.
         //-----------------------------------------------------------------------------------------------------------------//
-        private static float _значениеПоиска = 0F;
+
+        public static bool _поискИдет;
+
+        /// <summary>
+        /// Переменная флаг, необходимая для запуска и отключения поиска.
+        /// </summary>
+        public static bool ПоискИдет
+        {
+            get { return _поискИдет; }
+            set { _поискИдет = (value && !ТумблерБлокировка); }
+        }
+
+        private static void ОстановитьТаймер()
+        {
+            timer.Stop();
+            timer.Tick -= timer_Tick;
+
+            ПоискИдет = false;
+            timer.Enabled = false;
+        }
+
+        private static void ЗапуститьТаймер()
+        {
+            timer.Stop();
+            timer.Tick -= timer_Tick;
+
+            ПоискИдет = true;
+            timer.Enabled = true;
+            timer.Tick += timer_Tick;
+            timer.Start();
+        }
+
+        /// <summary>
+        /// Метод для управления таймером поиска
+        /// Включается при включении и выключении блока
+        /// Также при внешних изменениях
+        /// </summary>
+        [MTAThread]
+        public static void УправлениеПоиском()
+        {
+            timer.Stop();
+            timer.Tick -= timer_Tick;
+            if (ХранимыйСигнал == null || !ПроверкаСтанцииНаСебя)
+            if (Включен)
+            {
+                    ПоискИдет = true;
+                    timer.Enabled = true;
+                    timer.Tick += timer_Tick;
+                    timer.Start();
+            }
+            else
+            {
+                ПоискИдет = false;
+                timer.Enabled = false;
+                ВременноПоймать = false;
+            }
+        }
+
+        private static float _значениеПоиска;
 
         /// <summary>
         /// Значение для внутреннего поиска, при нажатии на кнопку контроля режима Поиск, данное значение дублируется на индикатор.
@@ -591,42 +568,28 @@ namespace R440O.R440OForms.C300M_2
             set
             {
                 _значениеПоиска = value;
-                if (ПоискИдет && КнопкиКонтрольРежима[3]) OnIndicatorChanged();
+                if (КнопкиКонтрольРежима[3]) OnIndicatorChanged();
             }
         }
 
-        public static bool _поискИдет;
+        public static bool _временноПоймать = false;
+
         /// <summary>
-        /// Переменная флаг, необходимая для запуска и отключения поиска.
+        /// Переменная для временной поимки сигнала, при несоответствии модуляции.
         /// </summary>
-        public static bool ПоискИдет
+        public static bool ВременноПоймать
         {
-            get { return _поискИдет; }
-            set { _поискИдет = (value && !ТумблерБлокировка); }
+            get { return _временноПоймать; }
+            set { _временноПоймать = value; }
         }
 
-
-        /// <summary>
-        /// Метод для управления запуском поиска
-        /// </summary>
-        [STAThread]
-        public static void УправлениеПоиском()
+        public static void ПопытатьсяСброситьСигнал()
         {
-            timer.Stop();
-            timer.Tick -= timer_Tick;
-            if (Включен)
+            ОстановитьТаймер();
+            if (ТумблерВидВключения && ХранимыйСигнал != null)
             {
-                ПоискИдет = true;
-                timer.Enabled = true;
-                timer.Tick += timer_Tick;
-                timer.Start();
-            }
-            else
-            {
-                ПоискИдет = false;
-                timer.Enabled = false;
-                if (ХранимыйСигнал == null) ЗначениеПоиска = -50;
-                else ЗначениеПоиска = 10;
+                ХранимыйСигнал = null;
+                ЗапуститьТаймер();
             }
         }
 
@@ -634,8 +597,6 @@ namespace R440O.R440OForms.C300M_2
         /// Метод обработки тика таймера, осуществляет изменение значения поиска и проверку на поиск сигнала.
         /// Поиск идёт всегда когда включен блок
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private static void timer_Tick(object sender, EventArgs e)
         {
             TimerSpeedChange();
@@ -666,16 +627,31 @@ namespace R440O.R440OForms.C300M_2
                 //***Условие на поиск сигнала***//
                 if (ПроверкаСтанцииНаСебя)
                 {
-                    ПоискИдет = false;
-                    ХранимыйСигнал = MSHUParameters.ВыходнойСигнал;
+                    if (СоответствиеМодуляции)
+                    {
+                        ОстановитьТаймер();
+                        ХранимыйСигнал = MSHUParameters.ВыходнойСигнал;
+                    }
+                    else
+                    {
+                        ВременноПоймать = true;
+                    }
                 }
-            }
-            else
-            {
-                if (ХранимыйСигнал == null) ЗначениеПоиска = -50;
+                else
+                {
+                    ХранимыйСигнал = null;
+                    if (ВременноПоймать) ВременноПоймать = false;
+                }
             }
             OnParameterChanged();
         }
+
+        #region Второстепенные методы для ПОИСКА
+
+        /// <summary>
+        /// Переменная, в которой хранится пойманный сигнал
+        /// </summary>
+        public static Signal ХранимыйСигнал;
 
 
         /// <summary>
@@ -687,12 +663,127 @@ namespace R440O.R440OForms.C300M_2
             {
                 timer.Interval = (КнопкиВидРаботы.PressedButton == 10 || (КнопкиВидРаботы.PressedButton == -1))
                     ? 10
-                    : 100 - КнопкиВидРаботы.PressedButton * 10;
+                    : 100 - КнопкиВидРаботы.PressedButton*10;
             }
+        }
+
+        /// <summary>
+        /// Вспомогательный метод, для проверки соответствия модуляции сигнала и выставленных тумблеров модуляции
+        /// </summary>
+        public static bool СоответствиеМодуляции
+        {
+            get
+            {
+                return ((MSHUParameters.ВыходнойСигнал.Modulation == Модуляция.ОФТ && !ТумблерВведение &&
+                         !ТумблерВидМодуляции) ||
+                        ((MSHUParameters.ВыходнойСигнал.Modulation == Модуляция.ЧТ && ТумблерВведение &&
+                          ТумблерВидМодуляции)));
+            }
+        }
+
+        /// <summary>
+        /// Вспомогательный метод для сравнения скорости сигнала и выставленной кнопки Вид работы
+        /// </summary>
+        public static bool СоответствиеСкорости
+        {
+            get
+            {
+
+                if (MSHUParameters.ВыходнойСигнал != null)
+                {
+                    double tekSpeed;
+                    switch (КнопкиВидРаботы.PressedButton)
+                    {
+                        case 0:
+                            tekSpeed = 0.025;
+                            break;
+                        case 1:
+                            tekSpeed = 0.05;
+                            break;
+                        case 2:
+                            tekSpeed = 0.1;
+                            break;
+                        case 3:
+                            tekSpeed = 1.2;
+                            break;
+                        case 4:
+                            tekSpeed = 2.4;
+                            break;
+                        case 5:
+                            tekSpeed = 4.8;
+                            break;
+                        case 6:
+                            tekSpeed = 48;
+                            break;
+                        case 7:
+                            tekSpeed = 96;
+                            break;
+                        case 8:
+                            tekSpeed = 240;
+                            break;
+                        case 9:
+                            tekSpeed = 480;
+                            break;
+                        default:
+                            tekSpeed = 0;
+                            break;
+                    }
+                    if (MSHUParameters.ВыходнойСигнал.GroupSpeed == tekSpeed) return true;
+                }
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Условие для проверки станции на себя
+        /// </summary>
+        public static bool ПроверкаСтанцииНаСебя
+        {
+            get
+            {
+                if (MSHUParameters.ВыходнойСигнал == null) return false;
+
+                var signal = MSHUParameters.ВыходнойСигнал;
+                int ТочкаПоиска = 0;
+                //Сначала проверка на попадание частоты передачи в диапазон
+                if (Math.Abs(ЧастотаПоиска - signal.Frequency) <= 300 && !ТумблерПределы ||
+                    Math.Abs(ЧастотаПоиска - signal.Frequency) <= 60 && ТумблерПределы)
+                {
+                    //Определяем точку в которой будет пойман сигнал
+                    if (!ТумблерПределы)
+                    {
+                        ТочкаПоиска = (ЧастотаПоиска - signal.Frequency) / 10;
+                    }
+                    else
+                    {
+                        ТочкаПоиска = -27 + (ЧастотаПоиска - signal.Frequency) / 10;
+                    }
+                }
+                if (!КнопкаПоиск && СоответствиеСкорости && Math.Abs(ЗначениеПоиска - ТочкаПоиска) < 2
+                    && A306Parameters.ВыходнойСигнал12 && N15Parameters.РегуляторУровень > signal.Level)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Диапазон частот для поиска приемника вычисляется следующим образом
+        /// (Выставленная волна + (Номер ствола - 1)*5000 + 340000 (Начало диапазона))*10;
+        /// </summary>
+        public static int ЧастотаПоиска
+        {
+            get { return (ВыставленнаяВолна + (A304Parameters.ПереключательВыборСтвола - 1) * 5000 + 340000) * 10; }
         }
         #endregion
 
+        #endregion
+
+        #region ParameterChanged
+
         public delegate void ParameterChangedHandler();
+
         public static event ParameterChangedHandler ParameterChanged;
 
         private static void OnParameterChanged()
@@ -703,7 +794,6 @@ namespace R440O.R440OForms.C300M_2
 
         public static void ResetParameters()
         {
-            ПоискИдет = Включен;
             //Для сброса питания
             if (!Включен)
             {
@@ -716,6 +806,7 @@ namespace R440O.R440OForms.C300M_2
         }
 
         public delegate void IndicatorChangedHandler();
+
         public static event IndicatorChangedHandler IndicatorChanged;
 
         private static void OnIndicatorChanged()
@@ -730,83 +821,9 @@ namespace R440O.R440OForms.C300M_2
         }
     }
 
-    public class C300M_2КнопкиКонтрольРежима
-    {
-        /// <summary>
-        /// Названия кнопок:
-        /// 0 - Уровень сигнала,
-        /// 1 - Уровень шума,
-        /// 2 - '0' АПЧ,
-        /// 3 - Поиск,
-        /// 4 - ГЕТ-2,
-        /// 5 - +5,
-        /// 6 - +6.3,
-        /// 7 - +27,
-        /// 8 - -5,
-        /// 9 - -12.6.
-        /// </summary>
-        public static bool[] КнопкиКонтрольРежима = { false, false, false, false, false, false, false, false, false, false, false };
-
-        public bool this[int buttonNumber]
-        {
-            get { return КнопкиКонтрольРежима[buttonNumber]; }
-            set
-            {
-                for (int i = 0; i < 10; i++)
-                    КнопкиКонтрольРежима[i] = false;
-
-                КнопкиКонтрольРежима[buttonNumber] = value;
-
-                //По логике должен быть вызов OnParameterChanged и TimerSet
-                //В ResetParameters аналогичный вызов методов
-                //TimerSet будет вызвано и Search
-                C300M_2Parameters.ResetParameters();
-            }
-        }
-
-        public int PressedButton
-        {
-            get { return Array.IndexOf(КнопкиКонтрольРежима, true); }
-        }
-    }
+    #endregion
 
 
-    public class C300M_2КнопкиВидРаботы
-    {
-        /// <summary>
-        /// Названия кнопок:
-        /// 0 - 0.025,
-        /// 1 - 0.05,
-        /// 2 - 0.1,
-        /// 3 - 1.2,
-        /// 4 - 2.4,
-        /// 5 - 4.8,
-        /// 6 - 48,
-        /// 7 - 96/144,
-        /// 8 - 240,
-        /// 9 - 480.
-        /// </summary>
-        public static bool[] КнопкиВидРаботы = { false, false, false, false, false, false, false, false, false, false, false };
 
-        public bool this[int buttonNumber]
-        {
-            get { return КнопкиВидРаботы[buttonNumber]; }
-            set
-            {
-                for (int i = 0; i < 10; i++)
-                    КнопкиВидРаботы[i] = false;
-
-                КнопкиВидРаботы[buttonNumber] = true;
-
-                //По логике должен быть вызов OnParameterChanged и Search
-                //В ResetParameters аналогичный вызов методов
-                C300M_2Parameters.ResetParameters();
-            }
-        }
-
-        public int PressedButton
-        {
-            get { return Array.IndexOf(КнопкиВидРаботы, true); }
-        }
-    }
+   
 }
