@@ -8,8 +8,6 @@ namespace R440O.R440OForms.N502B
     using Properties;
     using PowerCabel;
     using VoltageStabilizer;
-    using N13_1;
-    using N13_2;
     using N15;
 
     public static class N502BParameters
@@ -58,11 +56,17 @@ namespace R440O.R440OForms.N502B
 
         #region Лампочки
 
+        /// <summary>
+        /// Лампочка сеть - горит при подключенном кабеле Сеть
+        /// </summary>
         public static bool ЛампочкаСеть
         {
             get { return PowerCabelParameters.КабельСеть; }
         }
 
+        /// <summary>
+        /// Лампочка сфазировано - горит при наличии нагрузки
+        /// </summary>
         public static bool ЛампочкаСфазировано
         {
             get { return Нагрузка; }
@@ -86,6 +90,7 @@ namespace R440O.R440OForms.N502B
         #endregion
 
         #region public
+
         public static bool ТумблерЭлектрооборудование
         {
             get { return _тумблерЭлектрооборудование; }
@@ -190,6 +195,10 @@ namespace R440O.R440OForms.N502B
         private static int _переключательКонтрольНапряжения = 2;
         private static int _переключательТокНагрузкиИЗаряда = 1;
 
+        /// <summary>
+        /// Переключатель включения блока.
+        /// При неправильно подключенном кабеле на блоке Стабилизатора, выводится сообщение об ошибке
+        /// </summary>
         public static bool ПереключательСеть
         {
             get { return _переключательСеть; }
@@ -206,12 +215,11 @@ namespace R440O.R440OForms.N502B
                 else
                 {
                     _переключательСеть = value;
+                    //Нагрузка слетает при переключении
                     Нагрузка = false;
                 }
                 VoltageStabilizerParameters.ResetParameters();
                 OnParameterChanged();
-
-
             }
         }
 
@@ -229,7 +237,6 @@ namespace R440O.R440OForms.N502B
                 OnParameterChanged();
             }
         }
-
 
         public static int ПереключательФазировка
         {

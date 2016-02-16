@@ -96,22 +96,21 @@ namespace R440O
             N15LocalParameters.локТумблерА20512 = true;
             N15LocalParameters.локТумблерА205Base = true;
             N15Parameters.ТумблерА503Б = true;
-            N15Parameters.РегуляторУровень = 100;
 
 
             // Настройка А205М
             A205M_1Parameters.ПереключательВидРаботы = 3;
             A205M_1Parameters.ПереключательВолнаX1 = 8;
             A205M_1Parameters.ПереключательВолнаX10 = 0;
-            A205M_1Parameters.ПереключательВолнаX100 = 5;
-            A205M_1Parameters.ПереключательВолнаX1000 = 0;
+            A205M_1Parameters.ПереключательВолнаX100 = 0;
+            A205M_1Parameters.ПереключательВолнаX1000 = 2;
             A205M_1Parameters.ПереключательВолнаX10000 = 2;
             // Настройка А-304
-            A304Parameters.ПереключательВыборСтвола = 4;
+            A304Parameters.ПереключательВыборСтвола = 5;
             // Настройка А-306
 
             A306Parameters.ТумблерДистанцМестн = true;
-            A306Parameters.Выходы[8] = 1;
+            A306Parameters.Выходы[1] = 1;
             #endregion
 
             #region Настройка аппаратуры служебной связи
@@ -163,10 +162,13 @@ namespace R440O
             N15LocalParameters.локТумблерБ3_2 = true;
 
             //С300М_2
-            C300M_2КнопкиВидРаботы.КнопкиВидРаботы[5] = true;
-            C300M_2КнопкиКонтрольРежима.КнопкиКонтрольРежима[3] = true;
+            C300M_2Parameters.КнопкиВидРаботы[5] = true;
+            C300M_2Parameters.КнопкиКонтрольРежима[3] = true;
             C300M_2Parameters.ПереключательВолна1 = 8;
-            C300M_2Parameters.ПереключательВолна1000 = 4;
+            C300M_2Parameters.ПереключательВолна10 = 0;
+            C300M_2Parameters.ПереключательВолна100 = 5;
+            C300M_2Parameters.ПереключательВолна1000 = 0;
+            C300M_2Parameters.ТумблерУправление = true;
 
             #endregion
 

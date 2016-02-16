@@ -88,20 +88,20 @@
     <Compile Include="R440OForms\Kontur_P3\Параметры\Общие.cs" />
     <Compile Include="R440OForms\N13_1\N13_1Parameters.cs" />
     <Compile Include="R440OForms\N13_2\N13_2Parameters.cs" />
-    <Compile Include="R440OForms\N18_M_Bottom\N18_M_BottomForm.cs">
+    <Compile Include="R440OForms\N18_M_H28\N18_M_H28Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="R440OForms\N18_M_Bottom\N18_M_BottomForm.Designer.cs">
-      <DependentUpon>N18_M_BottomForm.cs</DependentUpon>
+    <Compile Include="R440OForms\N18_M_H28\N18_M_H28Form.Designer.cs">
+      <DependentUpon>N18_M_H28Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="R440OForms\N18_M_Bottom\N18_M_BottomParameters.cs" />
-    <Compile Include="R440OForms\N18_M_Top\N18_M_TopForm.cs">
+    <Compile Include="R440OForms\N18_M_H28\N18_M_H28Parameters.cs" />
+    <Compile Include="R440OForms\N18_M_AngleSwitch\N18_M_AngleSwitchForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="R440OForms\N18_M_Top\N18_M_TopForm.Designer.cs">
-      <DependentUpon>N18_M_TopForm.cs</DependentUpon>
+    <Compile Include="R440OForms\N18_M_AngleSwitch\N18_M_AngleSwitchForm.Designer.cs">
+      <DependentUpon>N18_M_AngleSwitchForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="R440OForms\N18_M_Top\N18_M_TopParameters.cs" />
+    <Compile Include="R440OForms\N18_M_AngleSwitch\N18_M_AngleSwitchParameters.cs" />
     <Compile Include="R440OForms\N502B\N502BParameters.cs" />
     <Compile Include="R440OForms\TLF_TCH\TLF_TCHForm.cs">
       <SubType>Form</SubType>
@@ -719,11 +719,11 @@
     <EmbeddedResource Include="R440OForms\N15Inside\N15Inside.resx">
       <DependentUpon>N15Inside.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="R440OForms\N18_M_Bottom\N18_M_BottomForm.resx">
-      <DependentUpon>N18_M_BottomForm.cs</DependentUpon>
+    <EmbeddedResource Include="R440OForms\N18_M_H28\N18_M_H28Form.resx">
+      <DependentUpon>N18_M_H28Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="R440OForms\N18_M_Top\N18_M_TopForm.resx">
-      <DependentUpon>N18_M_TopForm.cs</DependentUpon>
+    <EmbeddedResource Include="R440OForms\N18_M_AngleSwitch\N18_M_AngleSwitchForm.resx">
+      <DependentUpon>N18_M_AngleSwitchForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\NKN_2\NKN_2Form.resx">
       <DependentUpon>NKN_2Form.cs</DependentUpon>
