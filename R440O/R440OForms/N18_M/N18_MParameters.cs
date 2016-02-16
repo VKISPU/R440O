@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-namespace R440O.R440OForms.N18_M
+﻿namespace R440O.R440OForms.N18_M
 {
     using A205M_1;
     using A205M_2;

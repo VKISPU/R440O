@@ -1,6 +1,6 @@
-﻿namespace R440O.R440OForms.N18_M_Bottom
+﻿namespace R440O.R440OForms.N18_M_H28
 {
-    partial class N18_M_BottomForm
+    partial class N18_M_H28Form
     {
         /// <summary>
         /// Required designer variable.
@@ -85,7 +85,7 @@
             this.АктивныйКабель.Visible = false;
             this.АктивныйКабель.Click += new System.EventHandler(this.АктивныйКабель_Click);
             // 
-            // N18_M_BottomForm
+            // N18_M_H28Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -96,8 +96,8 @@
             this.Controls.Add(this.КабельК12);
             this.Controls.Add(this.КабельК11);
             this.DoubleBuffered = true;
-            this.Name = "N18_M_BottomForm";
-            this.Text = "N18_M_BottomForm";
+            this.Name = "N18_M_H28Form";
+            this.Text = "Ш28";
             this.ResumeLayout(false);
 
         }
