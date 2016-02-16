@@ -47,7 +47,6 @@ namespace R440O.InternalBlocks
                         var signal = A205M_1Parameters.ВыходнойСигнал;
                         signal.Wave -= WaveShift;
                         signal.Frequency -= FrequencyShift;
-                        signal.Level = (50 * (N15Parameters.РегуляторУровень + 120) / 240);
                         return signal;
                     }
 
@@ -56,7 +55,6 @@ namespace R440O.InternalBlocks
                         var signal = A205M_2Parameters.ВыходнойСигнал;
                         signal.Wave -= WaveShift;
                         signal.Frequency -= FrequencyShift;
-                        signal.Level = (50 * (N15Parameters.РегуляторУровень + 120) / 240);
                         return signal;
                     }
                 }

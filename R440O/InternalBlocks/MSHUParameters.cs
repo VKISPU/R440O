@@ -22,7 +22,7 @@
             {
                 var inputSignal = A503BParameters.ВыходнойСигнал ?? OrderSchemeParameters.СигналКорреспондента;
 
-                if (Включен && (inputSignal.Wave/5000) == A304Parameters.ПереключательВыборСтвола)
+                if (Включен && ((inputSignal.Wave/5000) + 1) == A304Parameters.ПереключательВыборСтвола && (A304Parameters.Комплект1Включен || A304Parameters.Комплект2Включен))
                 {
                     var outputSignal = inputSignal;
                     outputSignal.Wave = outputSignal.Wave%5000;
