@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.Panel = new System.Windows.Forms.Panel();
+            this.Values = new System.Windows.Forms.Button();
+            this.richTextBoxValues = new System.Windows.Forms.RichTextBox();
             this.Дисплей = new System.Windows.Forms.Button();
             this.ЛампочкаКомплект2 = new System.Windows.Forms.PictureBox();
             this.ЛампочкаКомплект1 = new System.Windows.Forms.PictureBox();
@@ -76,6 +78,8 @@
             // 
             this.Panel.BackgroundImage = global::R440O.BackgroundImages.A403_1;
             this.Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Panel.Controls.Add(this.Values);
+            this.Panel.Controls.Add(this.richTextBoxValues);
             this.Panel.Controls.Add(this.Дисплей);
             this.Panel.Controls.Add(this.ЛампочкаКомплект2);
             this.Panel.Controls.Add(this.ЛампочкаКомплект1);
@@ -115,6 +119,26 @@
             this.Panel.Name = "Panel";
             this.Panel.Size = new System.Drawing.Size(684, 578);
             this.Panel.TabIndex = 0;
+            // 
+            // Values
+            // 
+            this.Values.Location = new System.Drawing.Point(0, 0);
+            this.Values.Name = "Values";
+            this.Values.Size = new System.Drawing.Size(132, 23);
+            this.Values.TabIndex = 66;
+            this.Values.Text = "значения";
+            this.Values.UseVisualStyleBackColor = true;
+            this.Values.Click += new System.EventHandler(this.Values_Click);
+            // 
+            // richTextBoxValues
+            // 
+            this.richTextBoxValues.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.richTextBoxValues.Location = new System.Drawing.Point(0, 22);
+            this.richTextBoxValues.Name = "richTextBoxValues";
+            this.richTextBoxValues.Size = new System.Drawing.Size(129, 195);
+            this.richTextBoxValues.TabIndex = 65;
+            this.richTextBoxValues.Text = "";
+            this.richTextBoxValues.Visible = false;
             // 
             // Дисплей
             // 
@@ -773,5 +797,7 @@
         private System.Windows.Forms.PictureBox ЛампочкаНеисправностьРИ;
         private System.Windows.Forms.PictureBox ЛампочкаНеисправностьФС;
         private System.Windows.Forms.Button Дисплей;
+        private System.Windows.Forms.RichTextBox richTextBoxValues;
+        private System.Windows.Forms.Button Values;
     }
 }

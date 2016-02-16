@@ -5,15 +5,10 @@ using R440O.R440OForms.N15;
 
 namespace R440O.Parameters
 {
-    class N12SParameters
+    public static class N12SParameters
     {
-        public static bool Включен
-        {
-            get
-            {
-                return ТумблерСеть && N15Parameters.ТумблерН12С && N15Parameters.Включен; 
-            }
-        }
+        public static bool Включен => ТумблерСеть && N15Parameters.ТумблерН12С && N15Parameters.Включен;
+        public static bool FromA403 = false;
 
         private static int _тумблерА;
         private static int _тумблерБ;
@@ -183,6 +178,11 @@ namespace R440O.Parameters
             }
             set
             {
+                if (FromA403 && value >= 0 && value <= 90)
+                {
+                    _потенциометрBetaИ = value;
+                    ИндикаторBeta = ПотенциометрBetaИ;
+                }
                 if (value >= 0 && value <= 90 && !ЛампочкаУпорБ) _потенциометрBetaИ = value;
                 OnParameterChanged();
                 A403_1Parameters.ResetDisplay();
@@ -235,6 +235,11 @@ namespace R440O.Parameters
             }
             set
             {
+                if (FromA403 && value >= 0 && value <= 90)
+                {
+                    _потенциометрAlphaИ = value;
+                    ИндикаторAlpha = ПотенциометрAlphaИ;
+                }
                 if (value >= -270 && value <= 270 && !ЛампочкаУпорА) _потенциометрAlphaИ = value;
                 OnParameterChanged();
                 A403_1Parameters.ResetDisplay();

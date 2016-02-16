@@ -7,6 +7,7 @@
 using System;
 using System.Linq;
 using R440O.BaseClasses;
+using R440O.Properties;
 
 namespace R440O.R440OForms.A403_1
 {
@@ -19,7 +20,6 @@ namespace R440O.R440OForms.A403_1
     /// </summary>
     public partial class A403_1Form : Form, IRefreshableForm
     {
-
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="A403_1Form"/>.
         /// </summary>
@@ -29,6 +29,7 @@ namespace R440O.R440OForms.A403_1
             A403_1Parameters.ParameterChanged += RefreshFormElements;
             A403_1Parameters.DisplayChanged += RefreshDisplay;
             RefreshFormElements();
+            FillValues();
         }
 
         #region Обновление Формы
@@ -114,6 +115,7 @@ namespace R440O.R440OForms.A403_1
         #endregion
 
         #region Тумблеры
+
         private void ТумблерСеть_Click(object sender, System.EventArgs e)
         {
             A403_1Parameters.ТумблерСеть = !A403_1Parameters.ТумблерСеть;
@@ -138,11 +140,13 @@ namespace R440O.R440OForms.A403_1
         {
             A403_1Parameters.ТумблерАвтКоррекция = !A403_1Parameters.ТумблерАвтКоррекция;
         }
+
         #endregion
 
         #region Кнопки
 
         #region Кнопки выбора параметров
+
         /// <summary>
         /// Универсальный метод обработки нажатий на кнопки параметров
         /// </summary>
@@ -153,6 +157,7 @@ namespace R440O.R440OForms.A403_1
             A403_1Parameters.КнопкиПараметры[buttonNumber] = true;
             A403_1Parameters.Значение = "";
         }
+
         private void КнопкаПараметрыСброс_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаПараметрыСброс.BackgroundImage = null;
@@ -164,9 +169,11 @@ namespace R440O.R440OForms.A403_1
             КнопкаПараметрыСброс.BackgroundImage = ControlElementImages.buttonSquareLightBlue;
             A403_1Parameters.КнопкиПараметры[9] = false;
         }
+
         #endregion
 
         #region Кнопки набора значений
+
         /// <summary>
         /// Универсальный метод обработки нажатий на кнопки набора значений
         /// </summary>
@@ -188,8 +195,8 @@ namespace R440O.R440OForms.A403_1
             button.BackgroundImage = ControlElementImages.buttonSquareWhite;
             //Восстановление текста над кнопкой после отжатия (КнопкаМинус, как отдельный случай)
             button.Text = (number == 'М')
-                        ? "-"
-                        : Convert.ToString(number);
+                ? "-"
+                : Convert.ToString(number);
 
             //Записываем значение
             if (A403_1Parameters.Значение.Length == 0)
@@ -203,6 +210,7 @@ namespace R440O.R440OForms.A403_1
                 else
                     A403_1Parameters.Значение += Convert.ToString(number);
         }
+
         #endregion
 
         private void КнопкаУстВремени_MouseDown(object sender, MouseEventArgs e)
@@ -216,9 +224,11 @@ namespace R440O.R440OForms.A403_1
             A403_1Parameters.КнопкаУстВремени = false;
             КнопкаУстВремени.BackgroundImage = ControlElementImages.buttonSquareLightBlue;
         }
+
         #endregion
 
         #region Переключатели
+
         private void ПереключательРежимРаботы_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -236,6 +246,7 @@ namespace R440O.R440OForms.A403_1
             if (e.Button == MouseButtons.Right)
                 A403_1Parameters.ПереключательПроверка -= 1;
         }
+
         #endregion
 
         #region Табло
@@ -271,6 +282,20 @@ namespace R440O.R440OForms.A403_1
                             inputStr[4] + " " + inputStr[5] + " " + inputStr[6]);
             }
             return "";
+        }
+
+        #endregion
+
+        #region Список значений
+
+        private void Values_Click(object sender, EventArgs e)
+        {
+            richTextBoxValues.Visible = !richTextBoxValues.Visible;
+        }
+
+        private void FillValues()
+        {
+            richTextBoxValues.Text = Resources.A403_1Form_FillValues_;
         }
 
         #endregion
