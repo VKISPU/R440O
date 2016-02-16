@@ -4,6 +4,7 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+using R440O.BaseClasses;
 using R440O.Parameters;
 using R440O.ThirdParty;
 
@@ -14,386 +15,343 @@ namespace R440O.R440OForms.Rubin_N
     /// <summary>
     /// Форма блока пульт управления Рубин-Н
     /// </summary>
-    public partial class Rubin_NForm : Form
+    public partial class Rubin_NForm : Form, IRefreshableForm
     {
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="Rubin_NForm"/>
         /// </summary>
         public Rubin_NForm()
         {
-            this.InitializeComponent();
-            InitializeTogglesPosition();
-            InitializeTumblersPosition();
-            InitializeButtonsPosition();
+            InitializeComponent();
+            Rubin_NParameters.ParameterChanged += RefreshFormElements;
+            RefreshFormElements();
         }
 
         #region Инициализация
 
+        public void RefreshFormElements()
+        {
+            InitializeButtonsPosition();
+            InitializeTogglesPosition();
+            InitializeTumblersPosition();
+        }
+
         private void InitializeButtonsPosition()
         {
-            if (Rubin_NParameters.Rubin_NКнопкаВкл)
+            if (Rubin_NParameters.КнопкаВкл)
             {
-                this.Rubin_NКнопкаВкл.BackgroundImage = null;
-                this.Rubin_NКнопкаВкл.Text = string.Empty;
+                КнопкаВкл.BackgroundImage = null;
+                КнопкаВкл.Text = string.Empty;
             }
             else
             {
-                this.Rubin_NКнопкаВкл.BackgroundImage = ControlElementImages.buttonSquareYellow;
-                this.Rubin_NКнопкаВкл.Text = "ВКЛ";
+                КнопкаВкл.BackgroundImage = ControlElementImages.buttonSquareYellow;
+                КнопкаВкл.Text = "ВКЛ";
             }
 
-            if (Rubin_NParameters.Rubin_NКнопкаОткл)
+            if (Rubin_NParameters.КнопкаОткл)
             {
-                this.Rubin_NКнопкаОткл.BackgroundImage = null;
-                this.Rubin_NКнопкаОткл.Text = string.Empty;
+                КнопкаОткл.BackgroundImage = null;
+                КнопкаОткл.Text = string.Empty;
             }
             else
             {
-                this.Rubin_NКнопкаОткл.BackgroundImage = ControlElementImages.buttonSquareYellow;
-                this.Rubin_NКнопкаОткл.Text = "ОТКЛ";
+                КнопкаОткл.BackgroundImage = ControlElementImages.buttonSquareYellow;
+                КнопкаОткл.Text = "ОТКЛ";
             }
         }
 
         private void InitializeTogglesPosition()
         {
-            var angle = Rubin_NParameters.Rubin_NПереключательГрупСкор * 33 - 80;
-            Rubin_NПереключательГрупСкор.BackgroundImage =
+            var angle = Rubin_NParameters.ПереключательГрупСкор * 33 - 80;
+            ПереключательГрупСкор.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = Rubin_NParameters.Rubin_NПереключательКонтроль * 35 - 85;
-            Rubin_NПереключательКонтроль.BackgroundImage =
+            angle = Rubin_NParameters.ПереключательКонтроль * 35 - 85;
+            ПереключательКонтроль.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = Rubin_NParameters.Rubin_NПереключательN5063_2кБод * 35 - 85;
-            Rubin_NПереключательN5063_2кБод.BackgroundImage =
+            angle = Rubin_NParameters.ПереключательN5063_2кБод * 35 - 85;
+            ПереключательN5063_2кБод.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = Rubin_NParameters.Rubin_NПереключательN5063_6812кБод * 17 - 170;
-            Rubin_NПереключательN5063_6812кБод.BackgroundImage =
+            angle = Rubin_NParameters.ПереключательN5063_6812кБод * 17 - 170;
+            ПереключательN5063_6812кБод.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = Rubin_NParameters.Rubin_NПереключательN5063_48кБод * 35 - 185;
-            Rubin_NПереключательN5063_48кБод.BackgroundImage =
+            angle = Rubin_NParameters.ПереключательN5063_48кБод * 35 - 185;
+            ПереключательN5063_48кБод.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = Rubin_NParameters.Rubin_NПереключательN4963_2кБод * 35 - 85;
-            Rubin_NПереключательN4963_2кБод.BackgroundImage =
+            angle = Rubin_NParameters.ПереключательN4963_2кБод * 35 - 85;
+            ПереключательN4963_2кБод.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = Rubin_NParameters.Rubin_NПереключательN4963_6812кБод * 17 - 170;
-            Rubin_NПереключательN4963_6812кБод.BackgroundImage =
+            angle = Rubin_NParameters.ПереключательN4963_6812кБод * 17 - 170;
+            ПереключательN4963_6812кБод.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = Rubin_NParameters.Rubin_NПереключательN4963_48кБод * 35 - 185;
-            Rubin_NПереключательN4963_48кБод.BackgroundImage =
+            angle = Rubin_NParameters.ПереключательN4963_48кБод * 35 - 185;
+            ПереключательN4963_48кБод.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = Rubin_NParameters.Rubin_NПереключательN4923_2кБод * 35 - 85;
-            Rubin_NПереключательN4923_2кБод.BackgroundImage =
+            angle = Rubin_NParameters.ПереключательN4923_2кБод * 35 - 85;
+            ПереключательN4923_2кБод.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = Rubin_NParameters.Rubin_NПереключательN4923_6812кБод * 17 - 170;
-            Rubin_NПереключательN4923_6812кБод.BackgroundImage =
+            angle = Rubin_NParameters.ПереключательN4923_6812кБод * 17 - 170;
+            ПереключательN4923_6812кБод.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-            angle = Rubin_NParameters.Rubin_NПереключательN4923_48кБод * 35 - 185;
-            Rubin_NПереключательN4923_48кБод.BackgroundImage =
+            angle = Rubin_NParameters.ПереключательN4923_48кБод * 35 - 185;
+            ПереключательN4923_48кБод.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
 
         private void InitializeTumblersPosition()
         {
-            this.Rubin_NТумблерПолярность.BackgroundImage = Rubin_NParameters.ТумблерПолярность
+            ТумблерПолярность.BackgroundImage = Rubin_NParameters.ТумблерПолярность
               ? ControlElementImages.tumblerType4Left
               : ControlElementImages.tumblerType4Right;
 
-            this.Rubin_NТумблерБлок5063.BackgroundImage = Rubin_NParameters.ТумблерРнБас1
+            ТумблерБлок5063.BackgroundImage = Rubin_NParameters.ТумблерРнБас1
               ? ControlElementImages.tumblerType4Left
               : ControlElementImages.tumblerType4Right;
 
-            this.Rubin_NТумблерБлок4923.BackgroundImage = Rubin_NParameters.ТумблерРнБас2
+            ТумблерБлок4923.BackgroundImage = Rubin_NParameters.ТумблерРнБас2
               ? ControlElementImages.tumblerType4Left
               : ControlElementImages.tumblerType4Right;
 
-            this.Rubin_NТумблерБлок4963.BackgroundImage = Rubin_NParameters.ТумблерРнБас3
+            ТумблерБлок4963.BackgroundImage = Rubin_NParameters.ТумблерРнБас3
               ? ControlElementImages.tumblerType4Left
               : ControlElementImages.tumblerType4Right;
         }
         #endregion
 
         #region Переключатели
-        private void Rubin_NПереключательГрупСкор_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательГрупСкор_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                Rubin_NParameters.Rubin_NПереключательГрупСкор += 1;
+                Rubin_NParameters.ПереключательГрупСкор += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                Rubin_NParameters.Rubin_NПереключательГрупСкор -= 1;
+                Rubin_NParameters.ПереключательГрупСкор -= 1;
             }
-
-            var angle = Rubin_NParameters.Rubin_NПереключательГрупСкор * 33 - 80;
-            Rubin_NПереключательГрупСкор.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
 
-        private void Rubin_NПереключательКонтроль_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательКонтроль_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                Rubin_NParameters.Rubin_NПереключательКонтроль += 1;
+                Rubin_NParameters.ПереключательКонтроль += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                Rubin_NParameters.Rubin_NПереключательКонтроль -= 1;
+                Rubin_NParameters.ПереключательКонтроль -= 1;
             }
-
-            var angle = Rubin_NParameters.Rubin_NПереключательКонтроль * 35 - 85;
-            Rubin_NПереключательКонтроль.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
 
-        private void Rubin_NПереключательN5063_2кБод_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательN5063_2кБод_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                Rubin_NParameters.Rubin_NПереключательN5063_2кБод += 1;
+                Rubin_NParameters.ПереключательN5063_2кБод += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                Rubin_NParameters.Rubin_NПереключательN5063_2кБод -= 1;
+                Rubin_NParameters.ПереключательN5063_2кБод -= 1;
             }
-
-            var angle = Rubin_NParameters.Rubin_NПереключательN5063_2кБод * 35 - 85;
-            Rubin_NПереключательN5063_2кБод.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
 
-        private void Rubin_NПереключательN5063_6812кБод_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательN5063_6812кБод_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                Rubin_NParameters.Rubin_NПереключательN5063_6812кБод += 1;
+                Rubin_NParameters.ПереключательN5063_6812кБод += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                Rubin_NParameters.Rubin_NПереключательN5063_6812кБод -= 1;
+                Rubin_NParameters.ПереключательN5063_6812кБод -= 1;
             }
-
-            var angle = Rubin_NParameters.Rubin_NПереключательN5063_6812кБод * 17 - 170;
-            if (Rubin_NParameters.Rubin_NПереключательN5063_6812кБод > 9) angle += 25;
-            Rubin_NПереключательN5063_6812кБод.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
 
-        private void Rubin_NПереключательN5063_48кБод_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательN5063_48кБод_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                Rubin_NParameters.Rubin_NПереключательN5063_48кБод += 1;
+                Rubin_NParameters.ПереключательN5063_48кБод += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                Rubin_NParameters.Rubin_NПереключательN5063_48кБод -= 1;
+                Rubin_NParameters.ПереключательN5063_48кБод -= 1;
             }
-
-            var angle = Rubin_NParameters.Rubin_NПереключательN5063_48кБод * 35 - 185;
-            Rubin_NПереключательN5063_48кБод.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
 
-        private void Rubin_NПереключательN4923_2кБод_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательN4923_2кБод_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                Rubin_NParameters.Rubin_NПереключательN4923_2кБод += 1;
+                Rubin_NParameters.ПереключательN4923_2кБод += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                Rubin_NParameters.Rubin_NПереключательN4923_2кБод -= 1;
+                Rubin_NParameters.ПереключательN4923_2кБод -= 1;
             }
-
-            var angle = Rubin_NParameters.Rubin_NПереключательN4923_2кБод * 35 - 85;
-            Rubin_NПереключательN4923_2кБод.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
 
-        private void Rubin_NПереключательN4923_6812кБод_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательN4923_6812кБод_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                Rubin_NParameters.Rubin_NПереключательN4923_6812кБод += 1;
+                Rubin_NParameters.ПереключательN4923_6812кБод += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                Rubin_NParameters.Rubin_NПереключательN4923_6812кБод -= 1;
+                Rubin_NParameters.ПереключательN4923_6812кБод -= 1;
             }
-
-            var angle = Rubin_NParameters.Rubin_NПереключательN4923_6812кБод * 17 - 170;
-            if (Rubin_NParameters.Rubin_NПереключательN4923_6812кБод > 9) angle += 25;
-            Rubin_NПереключательN4923_6812кБод.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
 
-
-        private void Rubin_NПереключательN4923_48кБод_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательN4923_48кБод_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                Rubin_NParameters.Rubin_NПереключательN4923_48кБод += 1;
+                Rubin_NParameters.ПереключательN4923_48кБод += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                Rubin_NParameters.Rubin_NПереключательN4923_48кБод -= 1;
+                Rubin_NParameters.ПереключательN4923_48кБод -= 1;
             }
-
-            var angle = Rubin_NParameters.Rubin_NПереключательN4923_48кБод * 35 - 185;
-            Rubin_NПереключательN4923_48кБод.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
 
-        private void Rubin_NПереключательN4963_2кБод_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательN4963_2кБод_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                Rubin_NParameters.Rubin_NПереключательN4963_2кБод += 1;
+                Rubin_NParameters.ПереключательN4963_2кБод += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                Rubin_NParameters.Rubin_NПереключательN4963_2кБод -= 1;
+                Rubin_NParameters.ПереключательN4963_2кБод -= 1;
             }
-
-            var angle = Rubin_NParameters.Rubin_NПереключательN4963_2кБод * 35 - 85;
-            Rubin_NПереключательN4963_2кБод.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
 
-        private void Rubin_NПереключательN4963_6812кБод_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательN4963_6812кБод_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                Rubin_NParameters.Rubin_NПереключательN4963_6812кБод += 1;
+                Rubin_NParameters.ПереключательN4963_6812кБод += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                Rubin_NParameters.Rubin_NПереключательN4963_6812кБод -= 1;
+                Rubin_NParameters.ПереключательN4963_6812кБод -= 1;
             }
-
-            var angle = Rubin_NParameters.Rubin_NПереключательN4963_6812кБод * 17 - 170;
-            if (Rubin_NParameters.Rubin_NПереключательN4963_6812кБод > 9) angle += 25;
-            Rubin_NПереключательN4963_6812кБод.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
 
-
-        private void Rubin_NПереключательN4963_48кБод_MouseUp(object sender, MouseEventArgs e)
+        private void ПереключательN4963_48кБод_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                Rubin_NParameters.Rubin_NПереключательN4963_48кБод += 1;
+                Rubin_NParameters.ПереключательN4963_48кБод += 1;
             }
 
             if (e.Button == MouseButtons.Right)
             {
-                Rubin_NParameters.Rubin_NПереключательN4963_48кБод -= 1;
+                Rubin_NParameters.ПереключательN4963_48кБод -= 1;
             }
-
-            var angle = Rubin_NParameters.Rubin_NПереключательN4963_48кБод * 35 - 185;
-            Rubin_NПереключательN4963_48кБод.BackgroundImage =
-                TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
         }
         #endregion
 
         #region Кнопки
         private void Rubin_NКнопкаОсн_MouseDown(object sender, MouseEventArgs e)
         {
-            Rubin_NКнопкаОсн.BackgroundImage = null;
+            КнопкаОсн.BackgroundImage = null;
         }
 
         private void Rubin_NКнопкаОсн_MouseUp(object sender, MouseEventArgs e)
         {
-            Rubin_NКнопкаОсн.BackgroundImage = ControlElementImages.buttonRoundType7;
+            КнопкаОсн.BackgroundImage = ControlElementImages.buttonRoundType7;
         }
 
         private void Rubin_NКнопкаРезервированиеВкл_MouseDown(object sender, MouseEventArgs e)
         {
-            Rubin_NКнопкаРезервированиеВкл.BackgroundImage = null;
+            КнопкаРезервированиеВкл.BackgroundImage = null;
         }
 
         private void Rubin_NКнопкаРезервированиеВкл_MouseUp(object sender, MouseEventArgs e)
         {
-            Rubin_NКнопкаРезервированиеВкл.BackgroundImage = ControlElementImages.buttonRoundType7;
+            КнопкаРезервированиеВкл.BackgroundImage = ControlElementImages.buttonRoundType7;
         }
 
         private void Rubin_NКнопкаРезервированиеОткл_MouseDown(object sender, MouseEventArgs e)
         {
-            Rubin_NКнопкаРезервированиеОткл.BackgroundImage = null;
+            КнопкаРезервированиеОткл.BackgroundImage = null;
         }
 
         private void Rubin_NКнопкаРезервированиеОткл_MouseUp(object sender, MouseEventArgs e)
         {
-            Rubin_NКнопкаРезервированиеОткл.BackgroundImage = ControlElementImages.buttonRoundType7;
+            КнопкаРезервированиеОткл.BackgroundImage = ControlElementImages.buttonRoundType7;
         }
 
         private void Rubin_NКнопкаТранзит_MouseDown(object sender, MouseEventArgs e)
         {
-            Rubin_NКнопкаТранзит.BackgroundImage = null;
+            КнопкаТранзит.BackgroundImage = null;
         }
 
         private void Rubin_NКнопкаТранзит_MouseUp(object sender, MouseEventArgs e)
         {
-            Rubin_NКнопкаТранзит.BackgroundImage = ControlElementImages.buttonRoundType7;
+            КнопкаТранзит.BackgroundImage = ControlElementImages.buttonRoundType7;
         }
 
         private void Rubin_NКнопкаРабота_MouseDown(object sender, MouseEventArgs e)
         {
-            Rubin_NКнопкаРабота.BackgroundImage = null;
+            КнопкаРабота.BackgroundImage = null;
         }
 
         private void Rubin_NКнопкаРабота_MouseUp(object sender, MouseEventArgs e)
         {
-            Rubin_NКнопкаРабота.BackgroundImage = ControlElementImages.buttonRoundType7;
+            КнопкаРабота.BackgroundImage = ControlElementImages.buttonRoundType7;
         }
 
         private void Rubin_NКнопкаВкл_Click(object sender, System.EventArgs e)
         {
-            if (Rubin_NParameters.Rubin_NКнопкаВкл)
+            if (Rubin_NParameters.КнопкаВкл)
             {
-                this.Rubin_NКнопкаВкл.BackgroundImage = ControlElementImages.buttonSquareYellow;
-                this.Rubin_NКнопкаВкл.Text = "ВКЛ";
+                КнопкаВкл.BackgroundImage = ControlElementImages.buttonSquareYellow;
+                КнопкаВкл.Text = "ВКЛ";
             }
             else
             {
-                this.Rubin_NКнопкаВкл.BackgroundImage = null;
-                this.Rubin_NКнопкаВкл.Text = string.Empty;
+                КнопкаВкл.BackgroundImage = null;
+                КнопкаВкл.Text = string.Empty;
             }
-            Rubin_NParameters.Rubin_NКнопкаВкл = !Rubin_NParameters.Rubin_NКнопкаВкл;
+            Rubin_NParameters.КнопкаВкл = !Rubin_NParameters.КнопкаВкл;
         }
 
         private void Rubin_NКнопкаОткл_Click(object sender, System.EventArgs e)
         {
-            if (Rubin_NParameters.Rubin_NКнопкаОткл)
+            if (Rubin_NParameters.КнопкаОткл)
             {
-                this.Rubin_NКнопкаОткл.BackgroundImage = ControlElementImages.buttonSquareYellow;
-                this.Rubin_NКнопкаОткл.Text = "ОТКЛ";
+                КнопкаОткл.BackgroundImage = ControlElementImages.buttonSquareYellow;
+                КнопкаОткл.Text = "ОТКЛ";
             }
             else
             {
-                this.Rubin_NКнопкаОткл.BackgroundImage = null;
-                this.Rubin_NКнопкаОткл.Text = string.Empty;
+                КнопкаОткл.BackgroundImage = null;
+                КнопкаОткл.Text = string.Empty;
             }
-            Rubin_NParameters.Rubin_NКнопкаОткл = !Rubin_NParameters.Rubin_NКнопкаОткл;
+            Rubin_NParameters.КнопкаОткл = !Rubin_NParameters.КнопкаОткл;
         }
 
         #endregion

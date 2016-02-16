@@ -168,7 +168,7 @@
     <Compile Include="R440OForms\P220_27G_2\P220_27G_2Parameters.cs" />
     <Compile Include="R440OForms\P220_27G_3\P220_27G_3Parameters.cs" />
     <Compile Include="R440OForms\PowerCabel\PowerCabelParameters.cs" />
-    <Compile Include="Parameters\Rubin_NParameters.cs" />
+    <Compile Include="R440OForms\Rubin_N\Rubin_NParameters.cs" />
     <Compile Include="R440OForms\VoltageStabilizer\VoltageStabilizerParameters.cs" />
     <Compile Include="R440OForms\A1\A1Form.cs">
       <SubType>Form</SubType>
