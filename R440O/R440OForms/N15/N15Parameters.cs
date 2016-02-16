@@ -1,4 +1,6 @@
-﻿using R440O.InternalBlocks;
+﻿using System;
+using System.Linq;
+using R440O.InternalBlocks;
 using R440O.R440OForms.A306;
 using R440O.R440OForms.A403_1;
 using R440O.R440OForms.N13_1;
@@ -11,7 +13,7 @@ namespace R440O.R440OForms.N15
     using A1;
     using A205M_1;
     using A205M_2;
-    using N18_M;
+
     using N502B;
     using NKN_1;
     using NKN_2;
@@ -47,7 +49,7 @@ namespace R440O.R440OForms.N15
             }
         }
 
-        private static double _регуляторУровень = -120;
+        private static double _регуляторУровень = 100;
         /// <summary>
         /// Угол от -120 до 120
         /// </summary>
@@ -56,7 +58,8 @@ namespace R440O.R440OForms.N15
             get { return _регуляторУровень; }
             set
             {
-                if (value > -120 && value < 120) _регуляторУровень = value;
+                if (value > -120 && value < 120 && Math.Abs(value - _регуляторУровень) <= 100) _регуляторУровень = value;
+                ResetC300M();
             }
         }
 
@@ -422,6 +425,7 @@ namespace R440O.R440OForms.N15
             set
             {
                 _тумблерК11 = value;
+                PU_K1_1Parameters.ResetParameters();
             }
         }
 
@@ -652,7 +656,7 @@ namespace R440O.R440OForms.N15
         public static bool ЛампочкаЦ300МВкл3 { get { return Лампочка27В && ЛампочкаН15БП && ТумблерЦ300М3; } }
         public static bool ЛампочкаЦ300МВкл4 { get { return Лампочка27В && ЛампочкаН15БП && ТумблерЦ300М4; } }
         public static bool ЛампочкаЦ300МСигнал1 { get; set; }
-        public static bool ЛампочкаЦ300МСигнал2 { get; set; }
+        public static bool ЛампочкаЦ300МСигнал2 { get { return C300M_2Parameters.ЛампочкаСигнал; } }
         public static bool ЛампочкаЦ300МСигнал3 { get; set; }
         public static bool ЛампочкаЦ300МСигнал4 { get; set; }
         public static bool ЛампочкаЦ300МНеиспр1 { get; set; }
@@ -661,27 +665,19 @@ namespace R440O.R440OForms.N15
         public static bool ЛампочкаЦ300МНеиспр4 { get; set; }
         public static bool ЛампочкаППВВкл1 { get { return NKN_1Parameters.ПолноеВключение || (NKN_1Parameters.НеполноеВключение && NKN_1Parameters.Питание220Включено); } }
         public static bool ЛампочкаППВВкл2 { get { return NKN_2Parameters.ПолноеВключение || (NKN_2Parameters.НеполноеВключение && NKN_2Parameters.Питание220Включено); } }
-        public static bool ЛампочкаППВРабота1 { get { return A205M_1Parameters.Включен; } }
-        public static bool ЛампочкаППВРабота2 { get { return A205M_2Parameters.Включен; } }
+        public static bool ЛампочкаППВРабота1 { get { return A205M_1Parameters.Работа; } }
+        public static bool ЛампочкаППВРабота2 { get { return A205M_2Parameters.Работа; } }
 
         public static bool ЛампочкаА205Неиспр1
         {
-            get
-            {
-                return
-                (N18_MParameters.ПереключательВходК121 != 1) &&
-                ((NKN_1Parameters.ЛампочкаМУ && NKN_1Parameters.Питание220Включено && N502BParameters.ТумблерН15)
-                || (NKN_1Parameters.ЛампочкаМУ && ТумблерА205Base && ТумблерА20512));
-            }
+            get { return A205M_1Parameters.Включен && !A205M_1Parameters.Работа; }
         }
 
         public static bool ЛампочкаА205Неиспр2
         {
             get
             {
-                return (N18_MParameters.ПереключательВходК121 != 1) &&
-                       ((NKN_2Parameters.ЛампочкаМУ && NKN_2Parameters.Питание220Включено && N502BParameters.ТумблерН15)
-                        || (NKN_2Parameters.ЛампочкаМУ && ТумблерА205Base && !ТумблерА20512));
+                return A205M_2Parameters.Включен && !A205M_2Parameters.Работа;
             }
         }
 
@@ -951,6 +947,59 @@ namespace R440O.R440OForms.N15
             var handler = IndicatorChanged;
             if (handler != null) handler();
         }
+        #endregion
+
+        #region
+
+        /// <summary>
+        /// Уставнавливает настоящие настройки станции в соответствии с включенными тумблерами
+        /// </summary>
+        public static void SetCurrentParameters()
+        {
+            var parametersList = typeof (N15Parameters).GetProperties();
+            var localParametersList = typeof (N15LocalParameters).GetProperties();
+
+            foreach (var localProperty in localParametersList)
+            {
+                foreach (
+                    var property in
+                        parametersList.Where(
+                            property =>
+                                localProperty.Name.Contains(property.Name) && localProperty.Name != "локТумблер5Мгц"
+                                && localProperty.Name != "локКнопкаН13_1" && localProperty.Name != "локКнопкаН13_2" &&
+                                localProperty.Name != "локКнопкаН13_12" && localProperty.Name != "локТумблерАнтЭкв"))
+                {
+                    property.SetValue("1", localProperty.GetValue("1"));
+                }
+            }
+
+            Н13_1 = (N15LocalParameters.локКнопкаН13_1 || N15LocalParameters.локКнопкаН13_12);
+            Н13_2 = (N15LocalParameters.локКнопкаН13_2 || N15LocalParameters.локКнопкаН13_12);
+        }
+
+        /// <summary>
+        /// Сбрасывает настоящие настройки станции
+        /// </summary>
+        public static void ResetCurrentParameters()
+        {
+            var parametersList = typeof (N15Parameters).GetProperties();
+
+            foreach (var property in parametersList.Where(property => property.Name.Contains("Тумблер")
+                                                                      && !property.Name.Contains("А503Б") &&
+                                                                      !property.Name.Contains("Фаза")
+                                                                      && !property.Name.Contains("Уров") &&
+                                                                      !property.Name.Contains("5Мгц")
+                                                                      && !property.Name.Contains("АнтЭкв") &&
+                                                                      !property.Name.Contains("ТлфТлг")
+                                                                      && !property.Name.Contains("А30412")))
+            {
+                property.SetValue("1", false);
+            }
+
+            Н13_1 = false;
+            Н13_2 = false;
+        }
+
         #endregion
     }
 }

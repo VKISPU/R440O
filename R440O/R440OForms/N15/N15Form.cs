@@ -154,7 +154,6 @@ namespace R440O.R440OForms.N15
         #endregion
 
         #region ќбновление элементов управлени€
-
         /// <summary>
         /// ѕерерисовка одиночных тумблеров, которые включаютс€ через кнопку —“јЌ÷»я.¬ Ћ.
         /// </summary>
@@ -177,56 +176,6 @@ namespace R440O.R440OForms.N15
                 ? ControlElementImages.tumblerType4Up
                 : ControlElementImages.tumblerType4Down;
         }
-
-        /// <summary>
-        /// ”ставнавливает насто€щие настройки станции в соответствии с включенными тумблерами
-        /// </summary>
-        private void SetCurrentParameters()
-        {
-            var parametersList = typeof(N15Parameters).GetProperties();
-            var localParametersList = typeof(N15LocalParameters).GetProperties();
-
-            foreach (var localProperty in localParametersList)
-            {
-                foreach (var property in parametersList.Where(property => localProperty.Name.Contains(property.Name) && localProperty.Name != "лок“умблер5ћгц"
-                    && localProperty.Name != "лок нопкаЌ13_1" && localProperty.Name != "лок нопкаЌ13_2" && localProperty.Name != "лок нопкаЌ13_12" && localProperty.Name != "лок“умблерјнтЁкв"))
-                {
-                    property.SetValue(this, localProperty.GetValue(this));
-                }
-            }
-
-            N15Parameters.Ќ13_1 = (N15LocalParameters.лок нопкаЌ13_1 || N15LocalParameters.лок нопкаЌ13_12);
-            N15Parameters.Ќ13_2 = (N15LocalParameters.лок нопкаЌ13_2 || N15LocalParameters.лок нопкаЌ13_12);
-
-            if (N15Parameters.“умблер 1_2)
-            {
-                PU_K1_1Parameters.ѕопытатьс€¬ключитьЅлок”даленно();
-            }
-            else
-            {
-                PU_K1_1Parameters.ѕопытатьс€¬ыключитьЅлок”даленно();
-            }
-        }
-
-        private void ResetCurrentParameters()
-        {
-            var parametersList = typeof(N15Parameters).GetProperties();
-
-            foreach (var property in parametersList.Where(property => property.Name.Contains("“умблер")
-                && !property.Name.Contains("ј503Ѕ") && !property.Name.Contains("‘аза")
-                && !property.Name.Contains("”ров") && !property.Name.Contains("5ћгц")
-                && !property.Name.Contains("јнтЁкв") && !property.Name.Contains("“лф“лг")
-                && !property.Name.Contains("ј30412")))
-            {
-                property.SetValue(this, false);
-            }
-
-            N15Parameters.Ќ13_1 = false;
-            N15Parameters.Ќ13_2 = false;
-
-            PU_K1_1Parameters.ѕопытатьс€¬ыключитьЅлок”даленно();
-        }
-
         #endregion
 
         #region ¬ключение и выключение блоков станции, открытие блока
@@ -234,20 +183,19 @@ namespace R440O.R440OForms.N15
         private void  нопка—танци€¬кл_MouseDown(object sender, MouseEventArgs e)
         {
             this. нопка—танци€¬кл.BackgroundImage = null;
-            SetCurrentParameters();
+            N15Parameters.SetCurrentParameters();
             N15Parameters.ResetParameters();
         }
 
         private void  нопка—танци€¬кл_MouseUp(object sender, MouseEventArgs e)
         {
             this. нопка—танци€¬кл.BackgroundImage = ControlElementImages.buttonN15On;
-            var d = MSHUParameters.¬ыходной—игнал;
         }
 
         private void  нопка—танци€¬ыкл_MouseDown(object sender, MouseEventArgs e)
         {
             this. нопка—танци€¬ыкл.BackgroundImage = null;
-            ResetCurrentParameters();
+            N15Parameters.ResetCurrentParameters();
             N15Parameters.ResetParameters();
         }
 
@@ -410,7 +358,7 @@ namespace R440O.R440OForms.N15
         }
         #endregion
 
-        #region ¬ращатели
+        #region –егул€торы
 
         private static bool isManipulation;
 
@@ -558,8 +506,5 @@ namespace R440O.R440OForms.N15
         {
             N15Parameters.ParameterChanged -= RefreshFormElements;
         }
-
-
-
     }
 }
