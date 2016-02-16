@@ -218,7 +218,7 @@ namespace R440O.R440OForms.DAB_5
 
         private void RefreshForm()
         {     
-            foreach (Control controlElement in DAB_5Panel.Controls)
+            foreach (Control controlElement in Panel.Controls)
             {
                 if (controlElement.Name.Contains("Лампочка"))
                 {

@@ -1,10 +1,10 @@
 ﻿namespace R440O.Parameters
 {
-    using R440O.R440OForms.N15;
-    using R440O.ThirdParty;
-    using R440O.СостоянияЭлементов.ДАБ5;
+    using R440OForms.N15;
+    using ThirdParty;
+    using СостоянияЭлементов.ДАБ5;
     using System;
-    using System.Reflection;
+
     /// <summary>
     /// Состояния элементов блока ДАБ-5
     /// </summary>
@@ -17,7 +17,7 @@
             set
             {
                 _ТумблерПитание = value;
-                N15Parameters.ResetParameters();
+                N15Parameters.ResetParametersAlternative();
                 if (ЛампочкаПитание)
                     TurnOn();
                 else
