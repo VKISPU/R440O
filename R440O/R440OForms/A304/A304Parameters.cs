@@ -12,6 +12,24 @@ namespace R440O.R440OForms.A304
             get { return N15Parameters.НеполноеВключение; }
         }
 
+        public static bool Комплект1Включен
+        {
+            get
+            {
+                return (ТумблерУправление1 && N15Parameters.ТумблерА30412) ||
+                       (!ТумблерУправление1 && Кнопка1К);
+            }
+        }
+
+        public static bool Комплект2Включен
+        {
+            get
+            {
+                return (ТумблерУправление2 && !N15Parameters.ТумблерА30412) ||
+                       (!ТумблерУправление2 && Кнопка2К);
+            }
+        }
+
         #region Лампочки
         /// <summary>
         /// Параметр для лампочки. Возможные состояния: true, false
@@ -102,7 +120,7 @@ namespace R440O.R440OForms.A304
 
         #region Переключатели
         /// <summary>
-        /// Положение переключателя выбора ствола. 0 = 1, 1 = 2 и т.д.
+        /// Положение переключателя выбора ствола.
         /// </summary>
         public static int ПереключательВыборСтвола
         {
@@ -113,7 +131,7 @@ namespace R440O.R440OForms.A304
 
             set
             {
-                if (value >= 0 && value < 10)
+                if (value >= 1 && value <= 10)
                 {
                     _переключательВыборСтвола = value;
                     OnParameterChanged();
