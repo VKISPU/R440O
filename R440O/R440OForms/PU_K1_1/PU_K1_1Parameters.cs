@@ -1,89 +1,69 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿using R440O.R440OForms.A205M_1;
+using R440O.R440OForms.A205M_2;
 using R440O.R440OForms.K03M_01;
+using R440O.R440OForms.K05M_01;
 using R440O.R440OForms.N15;
-using R440O.R440OForms.N502B;
+using R440O.R440OForms.N18_M_H28;
 using R440O.ThirdParty;
 
 namespace R440O.Parameters
 {
     static class PU_K1_1Parameters
     {
-        #region событие
 
-        public delegate void ParameterChangedHandler();
-        public static event ParameterChangedHandler ParameterChanged;
-
-        private static void OnParameterChanged()
+        public static bool Включен
         {
-            var handler = ParameterChanged;
-            if (handler != null) handler();
+            get { return N15Parameters.Включен && (ТумблерПитание == 0 && N15Parameters.ТумблерК1_1) || ТумблерПитание == 2; }
         }
 
-        public static void ResetParameters()
+        public static bool ПереключателиВыставленыВерно
         {
-            OnParameterChanged();
+            get
+            {
+                return КулонК1Подключен && K05M_01Parameters.СтрелкаУровеньВЗакрашенномСекторе && 
+                       (K05M_01Parameters.ПереключательПередачаКонтроль == 0 ||
+                        (K05M_01Parameters.ПереключательПередачаКонтроль == 2 && K05M_01Parameters.ПереключательОслабление == 0));
+            }
         }
-
-        #endregion
-
+        public static bool КулонК1Подключен
+        {
+            get { return Включен && N18_M_H28Parameters.АктивныйКабель == 1; }
+        }
         #region Лампочка
 
         public static bool ЛампочкаCеть
         {
-            get { return K03M_01Parameters.БлокВключен; }
+            get { return Включен; }
         }
 
         #endregion
         
         #region Тумблеры
+        private static int _тумблерПитание = 1;
         ////Тумблеры 
         /// <summary>
         /// Возможные состояния: 0. Дист - дистанционное управление, 1. Откл - отключено, 2. Мест - местное управление.
         /// </summary>
-        private static int _ТумблерПитание = 1;
-
-        /// <summary>
-        /// Флаг нужен чтобы после удалённого включения блока, когда тумблер на пук
-        /// переводится в положения выкл., а потом обратно на удалённое включение,
-        /// чтоб блок включался сразу же.
-        /// </summary>
-        private static bool _включенУдаленно = false;
-
         public static int ТумблерПитание
         {
-            get { return _ТумблерПитание; }
+            get { return _тумблерПитание; }
 
             set
             {
-                if (value >= 0 && value <= 2)
-                {
-                    _ТумблерПитание = value;
-                    if (value == 0 && _включенУдаленно)
-                    {
-                        ВключитьБлок();
-                    }
-                    if (value == 2 && N15Parameters.Лампочка27В && N502BParameters.ТумблерН15)
-                    {
-                        ВключитьБлок();
-                    }
-                    if (value == 1)
-                    {
-                        ВыключитьБлок();
-                    }
-                     ResetParameters();
-                }
+                _тумблерПитание = value; 
+                ResetParameters();
             }
         }
 
-        private static bool _ТумблерВентВкл = false;
+        private static bool _тумблерВентВкл = false;
 
         public static bool ТумблерВентВкл
         {
-            get { return _ТумблерВентВкл; }
+            get { return _тумблерВентВкл; }
             set
             {
-                _ТумблерВентВкл = value;
-                ResetParameters();
+                _тумблерВентВкл = value;
+                OnParameterChanged();
             }
         }
         #endregion
@@ -92,21 +72,21 @@ namespace R440O.Parameters
         /// <summary>
         /// Положение переключателя контроля
         /// </summary>
-        private static int _ПереключательКаналы = 1;
+        private static int _переключательКаналы = 1;
 
         public static int ПереключательКаналы
         {
             get
             {
-                return _ПереключательКаналы;
+                return _переключательКаналы;
             }
 
             set
             {
                 if (value > 0 && value < 5)
                 {
-                    _ПереключательКаналы = value;
-                    ResetParameters();
+                    _переключательКаналы = value;
+                    OnParameterChanged();
                 }
             }
         }
@@ -128,44 +108,14 @@ namespace R440O.Parameters
                 if (value > 0 && value < 13)
                 {
                     _ПереключательНапряжение = value;
-                    if (K03M_01Parameters.БлокВключен)
+                    if (Включен)
                     {
                         АктивизироватьСтрелкуНапряжения();
                     }
-                    ResetParameters();
+                    OnParameterChanged();
                 }
             }
         }
-
-        // Какой-то трэш
-        /*
-        /// <summary>
-        /// Названия положений переключателя контроля. Второй столбец - комплект включён. Третий - комплект выключен.
-        /// </summary>
-        public static string[,] _ЗначенияПереключательНапряжение = { 
-            { "-27", "0" },
-            { "-12,6", "0" },
-            { "-5", "0" },
-            { "+5", "0" },
-            { "+6", "0" },
-            { "+12,6 I", "0" },
-            { "+12,6 III", "0" },
-            { "+23 I", "0" },
-            { "+23 II", "0" },
-            { "+60 I", "0" },
-            { "+60 II", "0" },
-            { "+120", "0" }
-        };
-        /// <summary>
-        /// Названия положений переключателя контроля. Второй столбец - комплект включён. Третий - комплект выключен.
-        /// </summary>
-           public static string[,] _ЗначенияПереключательКаналы = { 
-                { "ПРМ 1", "0" },
-                { "ПРМ 2", "0" },
-                { "ПРД 1", "0" },
-                { "ПРД 2", "0" }
-            };
-         */
         #endregion
 
         private static int _напряжение = 0;
@@ -181,58 +131,47 @@ namespace R440O.Parameters
                 }
             }
         }
-
-        public static bool ПопытатьсяВключитьБлокУдаленно()
-        {
-            _включенУдаленно = true;
-            if (ТумблерПитание == 0)
-            {
-                ВключитьБлок();
-                return true;
-            }
-            return false;
-        }
-
-        public static bool ПопытатьсяВыключитьБлокУдаленно()
-        {
-            _включенУдаленно = false;
-            if (ТумблерПитание == 0)
-            {
-                ВыключитьБлок();
-                return true;
-            }
-            return false;
-        }
-
         public static void АктивизироватьСтрелкуНапряжения()
         {
             Напряжение = 7;
             EasyTimer.SetTimeout((() =>
             {
                 Напряжение = 10;
-                ResetParameters();
+                OnParameterChanged();
             }), 300);
         }
 
+        #region событие
 
+        public delegate void ParameterChangedHandler();
+        public static event ParameterChangedHandler ParameterChanged;
 
-        public static void ВключитьБлок()
+        private static void OnParameterChanged()
         {
-            K03M_01Parameters.БлокВключен = true;
-            K03M_01Parameters.НачатьПоискСНачала();
-            АктивизироватьСтрелкуНапряжения();
-
-            ResetParameters();
-            K03M_01Parameters.ResetParameters();
+            var handler = ParameterChanged;
+            if (handler != null) handler();
         }
 
-        public static void ВыключитьБлок()
+        public static void ResetParameters()
         {
-            K03M_01Parameters.ОтменитьПоиск();
-            K03M_01Parameters.БлокВключен = false;
-            Напряжение = 0;
-            ResetParameters();
+            OnParameterChanged();
+            if (Включен)
+            {
+                K03M_01Parameters.НачатьПоискСНачала();
+                АктивизироватьСтрелкуНапряжения();
+
+            }
+            else
+            {
+                K03M_01Parameters.ОтменитьПоиск();
+                Напряжение = 0;
+
+            }
             K03M_01Parameters.ResetParameters();
+            A205M_1Parameters.ResetParameters();
+            A205M_2Parameters.ResetParameters();
         }
+
+        #endregion
     }
 }

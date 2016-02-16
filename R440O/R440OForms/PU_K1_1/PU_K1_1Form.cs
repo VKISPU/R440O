@@ -9,23 +9,22 @@
     /// </summary>
     public partial class PU_K1_1Form : Form
     {
-        public void RefreshFormElements()
-        {
-            this.InitializeTogglePosition();
-            this.InitializeTogglePosition();
-            this.InitializeTumblers();
-            this.InitializeLamp();
-            this.InitializeIndicatorPosition();
-        }
-
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="PU_K1_1Form"/>
         /// </summary>
         public PU_K1_1Form()
         {
+            InitializeComponent();
             PU_K1_1Parameters.ParameterChanged += RefreshFormElements;
-            this.InitializeComponent();
-            this.RefreshFormElements();
+            RefreshFormElements();
+        }
+
+        public void RefreshFormElements()
+        {
+            InitializeTogglePosition();
+            InitializeTumblers();
+            InitializeLamp();
+            InitializeIndicatorPosition();
         }
 
         /// <summary>
@@ -42,6 +41,7 @@
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
         }
 
+
         /// <summary>
         /// Задание Положения индикатора напряжения
         /// </summary>
@@ -57,22 +57,24 @@
             switch (PU_K1_1Parameters.ТумблерПитание)
             {
                 case 0:
-                    {
-                        ТумблерПитание.BackgroundImage = ControlElementImages.tumblerType6Up;
-                    }
+                {
+                    ТумблерПитание.BackgroundImage = ControlElementImages.tumblerType6Up;
+                }
                     break;
                 case 1:
-                    {
-                        ТумблерПитание.BackgroundImage = null;
-                    }
+                {
+                    ТумблерПитание.BackgroundImage = null;
+                }
                     break;
                 case 2:
-                    {
-                        ТумблерПитание.BackgroundImage = ControlElementImages.tumblerType6Down;
-                    }
+                {
+                    ТумблерПитание.BackgroundImage = ControlElementImages.tumblerType6Down;
+                }
                     break;
             }
-            this.ТумблерВентВкл.BackgroundImage = PU_K1_1Parameters.ТумблерВентВкл ? ControlElementImages.tumblerType4Up : ControlElementImages.tumblerType4Down;
+            this.ТумблерВентВкл.BackgroundImage = PU_K1_1Parameters.ТумблерВентВкл
+                ? ControlElementImages.tumblerType4Up
+                : ControlElementImages.tumblerType4Down;
         }
 
         private void InitializeLamp()
@@ -84,8 +86,31 @@
 
         private void ТумблерПитание_MouseUp(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left) PU_K1_1Parameters.ТумблерПитание--;
-            else PU_K1_1Parameters.ТумблерПитание++;
+            switch (e.Button)
+            {
+                case MouseButtons.Left:
+                    switch (PU_K1_1Parameters.ТумблерПитание)
+                    {
+                        case 0:
+                            PU_K1_1Parameters.ТумблерПитание = 1;
+                            break;
+                        case 1:
+                            PU_K1_1Parameters.ТумблерПитание = 2;
+                            break;
+                    }
+                    break;
+                case MouseButtons.Right:
+                    switch (PU_K1_1Parameters.ТумблерПитание)
+                    {
+                        case 2:
+                            PU_K1_1Parameters.ТумблерПитание = 1;
+                            break;
+                        case 1:
+                            PU_K1_1Parameters.ТумблерПитание = 0;
+                            break;
+                    }
+                    break;
+            }
         }
 
         private void ПереключательКаналы_MouseUp(object sender, MouseEventArgs e)
@@ -117,5 +142,7 @@
         {
             PU_K1_1Parameters.ТумблерВентВкл = !PU_K1_1Parameters.ТумблерВентВкл;
         }
+
+
     }
 }
