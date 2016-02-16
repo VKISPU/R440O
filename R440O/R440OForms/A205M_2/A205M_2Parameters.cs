@@ -1,4 +1,5 @@
-﻿using R440O.R440OForms.K03M_01;
+﻿using R440O.Parameters;
+using R440O.R440OForms.K03M_01;
 using R440O.R440OForms.K04M_01;
 
 namespace R440O.R440OForms.A205M_2
@@ -13,7 +14,28 @@ namespace R440O.R440OForms.A205M_2
     {
         public static bool Включен
         {
-            get { return NKN_2Parameters.ПолноеВключение && (N18_MParameters.ПереключательВходК121 == 1); }
+            get
+            {
+                return NKN_2Parameters.ПолноеВключение;
+                // && K05M_01Parameters.СтрелкаУровеньВЗакрашенномСекторе;
+            }
+        }
+
+        public static bool Работа
+        {
+            get
+            {
+                return Включен && ((N18_MParameters.ПереключательВходК121 == 1) ||
+                       ((N18_MParameters.ПереключательВходК121 != 1) && PU_K1_1Parameters.ПереключателиВыставленыВерно /*PU_K1_2Parameters.ПереключателиВыставленыВерно*/));
+            }
+        }
+
+
+
+        public static bool КулонК2Подключен
+        {
+            //get { return PU_K1_2Parameters.Включен && N18_M_H28Parameters.АктивныйКабель == 2; }
+            get { return false; }
         }
 
         #region Выходной Сигнал
@@ -28,9 +50,10 @@ namespace R440O.R440OForms.A205M_2
                                  ПереключательВолнаX10 * 10 +
                                  ПереключательВолнаX1;
 
-                if (Включен && wave >= 1500 && wave <= 51500)
+                if (Включен && wave >= 1500 && wave <= 51499)
                 {
                     var signal = new Signal();
+                    signal.Level = 20;
                     //    switch (ПереключательВидРаботы)
                     //    {
                     //        case 1:
@@ -90,7 +113,7 @@ namespace R440O.R440OForms.A205M_2
                     signal.Wave = wave;
                     signal.Frequency = 5710000 + 10 * signal.Wave;
 
-                    if (K03M_01Parameters.БлокВключен)
+                    if (Работа && (N18_MParameters.ПереключательВходК121 != 1) && PU_K1_1Parameters.Включен)
                     {
                         signal.Frequency += K04M_01Parameters.ЧастотаПрд - 70000;
                     }
@@ -122,7 +145,7 @@ namespace R440O.R440OForms.A205M_2
 
         public static bool ЛампочкаНормРаб
         {
-            get { return Включен; }
+            get { return Работа; }
         }
 
         public static bool ЛампочкаПерегрев { get; set; }
