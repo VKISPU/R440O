@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
+using R440O.Parameters;
 //using NLog;
 using R440O.R440OForms.K02M_01;
-using R440O.R440OForms.K02M_01Inside;
 using R440O.R440OForms.K03M_01Inside;
 using R440O.R440OForms.K04M_01;
 using R440O.R440OForms.K05M_01;
@@ -262,7 +261,7 @@ namespace R440O.R440OForms.K03M_01
         // То есть -1 это на самом деле -0, а -2 это -1
         // 0 это и есть 0, то есть +0.
 
-        public static bool БлокВключен { get; set; }
+        public static bool БлокВключен { get { return PU_K1_1Parameters.Включен; } }
 
         private static int _временнаяПозицияПоиска;
 
@@ -334,6 +333,7 @@ namespace R440O.R440OForms.K03M_01
 
 
         private static readonly Timer _таймерДляПоиска = new Timer();
+
         private static int _текущееЗначениеПоиска;
         private static int _максимальноеЗначениеПоиска;
         private static int _минимальноеЗначениеПоиска;

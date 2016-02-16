@@ -1,13 +1,12 @@
-﻿using R440O.R440OForms.K03M_01;
+﻿using System;
+using R440O.R440OForms.K03M_01;
 
 namespace R440O.R440OForms.K03M_01Inside
 {
     static class K03M_01InsideParameters
     {
         #region Переключатели
-
         public static KulonIndexerClass Переключатели = new KulonIndexerClass();
-
         #endregion
 
         #region ТумблерИП и ВклВыкл

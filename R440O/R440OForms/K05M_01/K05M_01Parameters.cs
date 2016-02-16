@@ -1,4 +1,5 @@
-﻿using R440O.R440OForms.K03M_01;
+﻿using R440O.R440OForms.A205M_1;
+using R440O.R440OForms.K03M_01;
 using R440O.R440OForms.K05M_01Inside;
 
 namespace R440O.R440OForms.K05M_01
@@ -18,6 +19,7 @@ namespace R440O.R440OForms.K05M_01
 
         public static void ResetParameters()
         {
+            A205M_1Parameters.ResetParameters();
             OnParameterChanged();
         }
 
@@ -133,7 +135,7 @@ namespace R440O.R440OForms.K05M_01
 
         public static bool СтрелкаУровеньВЗакрашенномСекторе
         {
-            get { return СтрелкаУровень >= -1 && СтрелкаУровень <= 2; }
+            get { return СтрелкаУровень >= 0 && СтрелкаУровень <= 9; }
         }
     }
 }
