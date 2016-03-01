@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ТумблерДАБ5 = new System.Windows.Forms.Button();
             this.ТумблерКАУ_ПРМ = new System.Windows.Forms.Button();
             this.ТумблерПРД_СС = new System.Windows.Forms.Button();
@@ -130,6 +131,7 @@
             this.Гнездо53 = new System.Windows.Forms.Button();
             this.Гнездо52 = new System.Windows.Forms.Button();
             this.Гнездо51 = new System.Windows.Forms.Button();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСПСТест)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСПСИнформ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПилотК1_1)).BeginInit();
@@ -493,7 +495,8 @@
             this.Гнездо1.Name = "Гнездо1";
             this.Гнездо1.Size = new System.Drawing.Size(10, 28);
             this.Гнездо1.TabIndex = 54;
-            this.Гнездо1.Text = "1";
+            this.Гнездо1.Text = "Б1-1";
+            this.toolTip.SetToolTip(this.Гнездо1, "Б1-1");
             this.Гнездо1.UseVisualStyleBackColor = false;
             this.Гнездо1.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -507,7 +510,8 @@
             this.Гнездо2.Name = "Гнездо2";
             this.Гнездо2.Size = new System.Drawing.Size(10, 28);
             this.Гнездо2.TabIndex = 55;
-            this.Гнездо2.Text = "2";
+            this.Гнездо2.Text = "ЩВ1";
+            this.toolTip.SetToolTip(this.Гнездо2, "ЩВ1");
             this.Гнездо2.UseVisualStyleBackColor = false;
             this.Гнездо2.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -521,7 +525,8 @@
             this.Гнездо3.Name = "Гнездо3";
             this.Гнездо3.Size = new System.Drawing.Size(10, 28);
             this.Гнездо3.TabIndex = 56;
-            this.Гнездо3.Text = "3";
+            this.Гнездо3.Text = "Б1-2";
+            this.toolTip.SetToolTip(this.Гнездо3, "Б1-2");
             this.Гнездо3.UseVisualStyleBackColor = false;
             this.Гнездо3.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -535,7 +540,7 @@
             this.Гнездо4.Name = "Гнездо4";
             this.Гнездо4.Size = new System.Drawing.Size(10, 28);
             this.Гнездо4.TabIndex = 57;
-            this.Гнездо4.Text = "6";
+            this.Гнездо4.Text = "ЩВ-2";
             this.Гнездо4.UseVisualStyleBackColor = false;
             this.Гнездо4.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -549,7 +554,7 @@
             this.Гнездо5.Name = "Гнездо5";
             this.Гнездо5.Size = new System.Drawing.Size(10, 28);
             this.Гнездо5.TabIndex = 58;
-            this.Гнездо5.Text = "5";
+            this.Гнездо5.Text = "Б1-1";
             this.Гнездо5.UseVisualStyleBackColor = false;
             this.Гнездо5.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -563,7 +568,8 @@
             this.Гнездо6.Name = "Гнездо6";
             this.Гнездо6.Size = new System.Drawing.Size(10, 28);
             this.Гнездо6.TabIndex = 59;
-            this.Гнездо6.Text = "4";
+            this.Гнездо6.Text = "ЩВ2";
+            this.toolTip.SetToolTip(this.Гнездо6, "ЩВ2");
             this.Гнездо6.UseVisualStyleBackColor = false;
             this.Гнездо6.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -578,6 +584,8 @@
             this.Гнездо7.Name = "Гнездо7";
             this.Гнездо7.Size = new System.Drawing.Size(10, 28);
             this.Гнездо7.TabIndex = 60;
+            this.Гнездо7.Text = "Б1-1";
+            this.toolTip.SetToolTip(this.Гнездо7, "Б1-1");
             this.Гнездо7.UseVisualStyleBackColor = false;
             this.Гнездо7.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -594,6 +602,7 @@
             this.Гнездо8.Name = "Гнездо8";
             this.Гнездо8.Size = new System.Drawing.Size(10, 28);
             this.Гнездо8.TabIndex = 61;
+            this.Гнездо8.Text = "ЩВ-1";
             this.Гнездо8.UseVisualStyleBackColor = false;
             this.Гнездо8.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -607,7 +616,7 @@
             this.Гнездо9.Name = "Гнездо9";
             this.Гнездо9.Size = new System.Drawing.Size(10, 28);
             this.Гнездо9.TabIndex = 62;
-            this.Гнездо9.Text = "11";
+            this.Гнездо9.Text = "БМА1";
             this.Гнездо9.UseVisualStyleBackColor = false;
             this.Гнездо9.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -621,7 +630,7 @@
             this.Гнездо10.Name = "Гнездо10";
             this.Гнездо10.Size = new System.Drawing.Size(10, 28);
             this.Гнездо10.TabIndex = 63;
-            this.Гнездо10.Text = "10";
+            this.Гнездо10.Text = "ЩВ-1";
             this.Гнездо10.UseVisualStyleBackColor = false;
             this.Гнездо10.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -635,7 +644,7 @@
             this.Гнездо11.Name = "Гнездо11";
             this.Гнездо11.Size = new System.Drawing.Size(10, 28);
             this.Гнездо11.TabIndex = 64;
-            this.Гнездо11.Text = "9";
+            this.Гнездо11.Text = "К1-2";
             this.Гнездо11.UseVisualStyleBackColor = false;
             this.Гнездо11.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -649,7 +658,7 @@
             this.Гнездо12.Name = "Гнездо12";
             this.Гнездо12.Size = new System.Drawing.Size(10, 28);
             this.Гнездо12.TabIndex = 65;
-            this.Гнездо12.Text = "8";
+            this.Гнездо12.Text = "БМА1";
             this.Гнездо12.UseVisualStyleBackColor = false;
             this.Гнездо12.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -663,7 +672,7 @@
             this.Гнездо13.Name = "Гнездо13";
             this.Гнездо13.Size = new System.Drawing.Size(10, 28);
             this.Гнездо13.TabIndex = 66;
-            this.Гнездо13.Text = "14";
+            this.Гнездо13.Text = "ЩВ-1";
             this.Гнездо13.UseVisualStyleBackColor = false;
             this.Гнездо13.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -677,7 +686,7 @@
             this.Гнездо14.Name = "Гнездо14";
             this.Гнездо14.Size = new System.Drawing.Size(10, 28);
             this.Гнездо14.TabIndex = 67;
-            this.Гнездо14.Text = "13";
+            this.Гнездо14.Text = "К1-2";
             this.Гнездо14.UseVisualStyleBackColor = false;
             this.Гнездо14.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -761,7 +770,7 @@
             this.Гнездо20.Name = "Гнездо20";
             this.Гнездо20.Size = new System.Drawing.Size(10, 28);
             this.Гнездо20.TabIndex = 73;
-            this.Гнездо20.Text = "21";
+            this.Гнездо20.Text = "ТЛФ1";
             this.Гнездо20.UseVisualStyleBackColor = false;
             this.Гнездо20.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -776,7 +785,7 @@
             this.Гнездо21.Name = "Гнездо21";
             this.Гнездо21.Size = new System.Drawing.Size(10, 28);
             this.Гнездо21.TabIndex = 74;
-            this.Гнездо21.Text = "20";
+            this.Гнездо21.Text = "ТЛФ2";
             this.Гнездо21.UseVisualStyleBackColor = false;
             this.Гнездо21.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -790,7 +799,7 @@
             this.Гнездо22.Name = "Гнездо22";
             this.Гнездо22.Size = new System.Drawing.Size(10, 28);
             this.Гнездо22.TabIndex = 75;
-            this.Гнездо22.Text = "25";
+            this.Гнездо22.Text = "ТЛГ1";
             this.Гнездо22.UseVisualStyleBackColor = false;
             this.Гнездо22.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -804,7 +813,7 @@
             this.Гнездо23.Name = "Гнездо23";
             this.Гнездо23.Size = new System.Drawing.Size(10, 28);
             this.Гнездо23.TabIndex = 76;
-            this.Гнездо23.Text = "24";
+            this.Гнездо23.Text = "ТЛГ2";
             this.Гнездо23.UseVisualStyleBackColor = false;
             this.Гнездо23.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -818,7 +827,7 @@
             this.Гнездо24.Name = "Гнездо24";
             this.Гнездо24.Size = new System.Drawing.Size(10, 28);
             this.Гнездо24.TabIndex = 77;
-            this.Гнездо24.Text = "23";
+            this.Гнездо24.Text = "ТЛГ3";
             this.Гнездо24.UseVisualStyleBackColor = false;
             this.Гнездо24.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -832,7 +841,7 @@
             this.Гнездо25.Name = "Гнездо25";
             this.Гнездо25.Size = new System.Drawing.Size(10, 28);
             this.Гнездо25.TabIndex = 78;
-            this.Гнездо25.Text = "22";
+            this.Гнездо25.Text = "ТЛГ4";
             this.Гнездо25.UseVisualStyleBackColor = false;
             this.Гнездо25.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -1112,7 +1121,7 @@
             this.Гнездо45.Name = "Гнездо45";
             this.Гнездо45.Size = new System.Drawing.Size(10, 28);
             this.Гнездо45.TabIndex = 98;
-            this.Гнездо45.Text = "45";
+            this.Гнездо45.Text = "ТЛФ";
             this.Гнездо45.UseVisualStyleBackColor = false;
             this.Гнездо45.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -1126,7 +1135,7 @@
             this.Гнездо46.Name = "Гнездо46";
             this.Гнездо46.Size = new System.Drawing.Size(10, 28);
             this.Гнездо46.TabIndex = 98;
-            this.Гнездо46.Text = "45";
+            this.Гнездо46.Text = "ТЛГ";
             this.Гнездо46.UseVisualStyleBackColor = false;
             this.Гнездо46.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -1790,6 +1799,7 @@
         private System.Windows.Forms.Button Гнездо65;
         private System.Windows.Forms.Button Гнездо64;
         private System.Windows.Forms.Button Гнездо63;
+        private System.Windows.Forms.ToolTip toolTip;
 
     }
 }

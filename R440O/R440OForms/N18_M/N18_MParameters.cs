@@ -1,4 +1,5 @@
-﻿namespace R440O.R440OForms.N18_M
+﻿using System.Drawing;
+namespace R440O.R440OForms.N18_M
 {
     using A205M_1;
     using A205M_2;
@@ -324,8 +325,12 @@
 
         #region Гнезда
 
+        static private System.Random rand = new System.Random();
+
         // Соедененые входы
-        public static int[] Соеденения = new int[76];
+        public static int[] Соеденения = new int[77];
+
+        public static Color[] Цвет_соеденения = new Color[77];
 
         public static int номер_первого_гнезда = -1;
 
@@ -348,6 +353,9 @@
             {                
                 Соеденения[номер_первого_гнезда] = номер_гнезда;
                 Соеденения[номер_гнезда] = номер_первого_гнезда;
+
+                Цвет_соеденения[номер_первого_гнезда] = Color.FromArgb(255, rand.Next(127), 128 + rand.Next(127), rand.Next(127));
+                Цвет_соеденения[номер_гнезда]  = Цвет_соеденения[номер_первого_гнезда];
                 номер_первого_гнезда = -1;
             }
             OnParameterChanged();
