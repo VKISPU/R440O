@@ -3,7 +3,7 @@
 //      R440O station.
 // </copyright>
 //-----------------------------------------------------------------------
-
+using R440O.trash;
 namespace R440O.R440OForms.BMA_M_2
 {
     using System.Windows.Forms;

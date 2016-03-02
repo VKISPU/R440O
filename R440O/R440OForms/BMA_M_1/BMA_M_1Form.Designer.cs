@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BMA_M_1Panel = new System.Windows.Forms.Panel();
+            this.Panel = new System.Windows.Forms.Panel();
             this.ЛампочкаНеисправно = new System.Windows.Forms.PictureBox();
             this.ЛампочкаИсправно = new System.Windows.Forms.PictureBox();
             this.ЛампочкаДист = new System.Windows.Forms.PictureBox();
@@ -61,21 +61,21 @@
             this.ЛампочкаДК = new System.Windows.Forms.PictureBox();
             this.ЛампочкаФЗ = new System.Windows.Forms.PictureBox();
             this.ЛампочкаТЧБ = new System.Windows.Forms.PictureBox();
-            this.BMA_M_1КнопкаПитаниеВЫКЛ = new System.Windows.Forms.Button();
-            this.BMA_M_1КнопкаПитаниеВКЛ = new System.Windows.Forms.Button();
-            this.BMA_M_1КнопкаПроверка = new System.Windows.Forms.Button();
-            this.BMA_M_1КнопкаШлейфДК = new System.Windows.Forms.Button();
-            this.BMA_M_1КнопкаШлейфТЧ = new System.Windows.Forms.Button();
-            this.BMA_M_1ПереключательКоррКанала = new System.Windows.Forms.Button();
-            this.BMA_M_1ПереключательЗапретЗапроса = new System.Windows.Forms.Button();
-            this.BMA_M_1ПереключательРежимы = new System.Windows.Forms.Button();
-            this.BMA_M_1ПереключательУровниСигналаПрдПрм = new System.Windows.Forms.Button();
-            this.BMA_M_1ПереключательЧастотаВызова = new System.Windows.Forms.Button();
-            this.BMA_M_1ПереключательКоррАЧХ = new System.Windows.Forms.Button();
-            this.BMA_M_1ПереключательРежимРаботы = new System.Windows.Forms.Button();
-            this.BMA_M_1ПереключательРекурента = new System.Windows.Forms.Button();
-            this.BMA_M_1ПереключательКонтроль = new System.Windows.Forms.Button();
-            this.BMA_M_1Panel.SuspendLayout();
+            this.КнопкаПитаниеВЫКЛ = new System.Windows.Forms.Button();
+            this.КнопкаПитаниеВКЛ = new System.Windows.Forms.Button();
+            this.КнопкаПроверка = new System.Windows.Forms.Button();
+            this.КнопкаШлейфДК = new System.Windows.Forms.Button();
+            this.КнопкаШлейфТЧ = new System.Windows.Forms.Button();
+            this.ПереключательКоррКанала = new System.Windows.Forms.Button();
+            this.ПереключательЗапретЗапроса = new System.Windows.Forms.Button();
+            this.ПереключательРежимы = new System.Windows.Forms.Button();
+            this.ПереключательУровниСигналаПрдПрм = new System.Windows.Forms.Button();
+            this.ПереключательЧастотаВызова = new System.Windows.Forms.Button();
+            this.ПереключательКоррАЧХ = new System.Windows.Forms.Button();
+            this.ПереключательРежимРаботы = new System.Windows.Forms.Button();
+            this.ПереключательРекурента = new System.Windows.Forms.Button();
+            this.ПереключательКонтроль = new System.Windows.Forms.Button();
+            this.Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаНеисправно)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаИсправно)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаДист)).BeginInit();
@@ -110,60 +110,60 @@
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаТЧБ)).BeginInit();
             this.SuspendLayout();
             // 
-            // BMA_M_1Panel
+            // Panel
             // 
-            this.BMA_M_1Panel.BackgroundImage = global::R440O.BackgroundImages.BMA_M;
-            this.BMA_M_1Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаНеисправно);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаИсправно);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаДист);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаРРР);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаКонтрольНорм);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаКонтрольНенорм);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаКонтрольКомпл);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаКонтрольТЧ);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаКонтрольДК);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаКонтрольТест);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаРекуррента1023);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаРекуррента511);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаРекуррента31);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаРекуррента15);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаАвтомКоманда2);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаАвтомКоманда1);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаПитание_15Вplus);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаПитание_15В);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаПитание_12В);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаПитание_5В);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаПитание_10В);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаПрмФР);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаПрмДК2);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаПрмДК1);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаПрмТЧ);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаПрдДК);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаПрдТЧ);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаСинхрДК);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаСинхрТЧ);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаДК);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаФЗ);
-            this.BMA_M_1Panel.Controls.Add(this.ЛампочкаТЧБ);
-            this.BMA_M_1Panel.Controls.Add(this.BMA_M_1КнопкаПитаниеВЫКЛ);
-            this.BMA_M_1Panel.Controls.Add(this.BMA_M_1КнопкаПитаниеВКЛ);
-            this.BMA_M_1Panel.Controls.Add(this.BMA_M_1КнопкаПроверка);
-            this.BMA_M_1Panel.Controls.Add(this.BMA_M_1КнопкаШлейфДК);
-            this.BMA_M_1Panel.Controls.Add(this.BMA_M_1КнопкаШлейфТЧ);
-            this.BMA_M_1Panel.Controls.Add(this.BMA_M_1ПереключательКоррКанала);
-            this.BMA_M_1Panel.Controls.Add(this.BMA_M_1ПереключательЗапретЗапроса);
-            this.BMA_M_1Panel.Controls.Add(this.BMA_M_1ПереключательРежимы);
-            this.BMA_M_1Panel.Controls.Add(this.BMA_M_1ПереключательУровниСигналаПрдПрм);
-            this.BMA_M_1Panel.Controls.Add(this.BMA_M_1ПереключательЧастотаВызова);
-            this.BMA_M_1Panel.Controls.Add(this.BMA_M_1ПереключательКоррАЧХ);
-            this.BMA_M_1Panel.Controls.Add(this.BMA_M_1ПереключательРежимРаботы);
-            this.BMA_M_1Panel.Controls.Add(this.BMA_M_1ПереключательРекурента);
-            this.BMA_M_1Panel.Controls.Add(this.BMA_M_1ПереключательКонтроль);
-            this.BMA_M_1Panel.Location = new System.Drawing.Point(0, 0);
-            this.BMA_M_1Panel.Name = "BMA_M_1Panel";
-            this.BMA_M_1Panel.Size = new System.Drawing.Size(954, 626);
-            this.BMA_M_1Panel.TabIndex = 1;
+            this.Panel.BackgroundImage = global::R440O.BackgroundImages.BMA_M;
+            this.Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Panel.Controls.Add(this.ЛампочкаНеисправно);
+            this.Panel.Controls.Add(this.ЛампочкаИсправно);
+            this.Panel.Controls.Add(this.ЛампочкаДист);
+            this.Panel.Controls.Add(this.ЛампочкаРРР);
+            this.Panel.Controls.Add(this.ЛампочкаКонтрольНорм);
+            this.Panel.Controls.Add(this.ЛампочкаКонтрольНенорм);
+            this.Panel.Controls.Add(this.ЛампочкаКонтрольКомпл);
+            this.Panel.Controls.Add(this.ЛампочкаКонтрольТЧ);
+            this.Panel.Controls.Add(this.ЛампочкаКонтрольДК);
+            this.Panel.Controls.Add(this.ЛампочкаКонтрольТест);
+            this.Panel.Controls.Add(this.ЛампочкаРекуррента1023);
+            this.Panel.Controls.Add(this.ЛампочкаРекуррента511);
+            this.Panel.Controls.Add(this.ЛампочкаРекуррента31);
+            this.Panel.Controls.Add(this.ЛампочкаРекуррента15);
+            this.Panel.Controls.Add(this.ЛампочкаАвтомКоманда2);
+            this.Panel.Controls.Add(this.ЛампочкаАвтомКоманда1);
+            this.Panel.Controls.Add(this.ЛампочкаПитание_15Вplus);
+            this.Panel.Controls.Add(this.ЛампочкаПитание_15В);
+            this.Panel.Controls.Add(this.ЛампочкаПитание_12В);
+            this.Panel.Controls.Add(this.ЛампочкаПитание_5В);
+            this.Panel.Controls.Add(this.ЛампочкаПитание_10В);
+            this.Panel.Controls.Add(this.ЛампочкаПрмФР);
+            this.Panel.Controls.Add(this.ЛампочкаПрмДК2);
+            this.Panel.Controls.Add(this.ЛампочкаПрмДК1);
+            this.Panel.Controls.Add(this.ЛампочкаПрмТЧ);
+            this.Panel.Controls.Add(this.ЛампочкаПрдДК);
+            this.Panel.Controls.Add(this.ЛампочкаПрдТЧ);
+            this.Panel.Controls.Add(this.ЛампочкаСинхрДК);
+            this.Panel.Controls.Add(this.ЛампочкаСинхрТЧ);
+            this.Panel.Controls.Add(this.ЛампочкаДК);
+            this.Panel.Controls.Add(this.ЛампочкаФЗ);
+            this.Panel.Controls.Add(this.ЛампочкаТЧБ);
+            this.Panel.Controls.Add(this.КнопкаПитаниеВЫКЛ);
+            this.Panel.Controls.Add(this.КнопкаПитаниеВКЛ);
+            this.Panel.Controls.Add(this.КнопкаПроверка);
+            this.Panel.Controls.Add(this.КнопкаШлейфДК);
+            this.Panel.Controls.Add(this.КнопкаШлейфТЧ);
+            this.Panel.Controls.Add(this.ПереключательКоррКанала);
+            this.Panel.Controls.Add(this.ПереключательЗапретЗапроса);
+            this.Panel.Controls.Add(this.ПереключательРежимы);
+            this.Panel.Controls.Add(this.ПереключательУровниСигналаПрдПрм);
+            this.Panel.Controls.Add(this.ПереключательЧастотаВызова);
+            this.Panel.Controls.Add(this.ПереключательКоррАЧХ);
+            this.Panel.Controls.Add(this.ПереключательРежимРаботы);
+            this.Panel.Controls.Add(this.ПереключательРекурента);
+            this.Panel.Controls.Add(this.ПереключательКонтроль);
+            this.Panel.Location = new System.Drawing.Point(0, 0);
+            this.Panel.Name = "Panel";
+            this.Panel.Size = new System.Drawing.Size(954, 626);
+            this.Panel.TabIndex = 1;
             // 
             // ЛампочкаНеисправно
             // 
@@ -485,257 +485,257 @@
             this.ЛампочкаТЧБ.TabIndex = 62;
             this.ЛампочкаТЧБ.TabStop = false;
             // 
-            // BMA_M_1КнопкаПитаниеВЫКЛ
+            // КнопкаПитаниеВЫКЛ
             // 
-            this.BMA_M_1КнопкаПитаниеВЫКЛ.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlueOff;
-            this.BMA_M_1КнопкаПитаниеВЫКЛ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMA_M_1КнопкаПитаниеВЫКЛ.FlatAppearance.BorderSize = 0;
-            this.BMA_M_1КнопкаПитаниеВЫКЛ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1КнопкаПитаниеВЫКЛ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1КнопкаПитаниеВЫКЛ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMA_M_1КнопкаПитаниеВЫКЛ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.BMA_M_1КнопкаПитаниеВЫКЛ.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BMA_M_1КнопкаПитаниеВЫКЛ.Location = new System.Drawing.Point(508, 508);
-            this.BMA_M_1КнопкаПитаниеВЫКЛ.Name = "BMA_M_1КнопкаПитаниеВЫКЛ";
-            this.BMA_M_1КнопкаПитаниеВЫКЛ.Size = new System.Drawing.Size(67, 69);
-            this.BMA_M_1КнопкаПитаниеВЫКЛ.TabIndex = 55;
-            this.BMA_M_1КнопкаПитаниеВЫКЛ.Text = "ВЫКЛ";
-            this.BMA_M_1КнопкаПитаниеВЫКЛ.UseVisualStyleBackColor = false;
-            this.BMA_M_1КнопкаПитаниеВЫКЛ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BMA_M_1КнопкаПитаниеВЫКЛ_MouseDown);
-            this.BMA_M_1КнопкаПитаниеВЫКЛ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMA_M_1КнопкаПитаниеВЫКЛ_MouseUp);
+            this.КнопкаПитаниеВЫКЛ.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаПитаниеВЫКЛ.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlueOff;
+            this.КнопкаПитаниеВЫКЛ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.КнопкаПитаниеВЫКЛ.FlatAppearance.BorderSize = 0;
+            this.КнопкаПитаниеВЫКЛ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаПитаниеВЫКЛ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаПитаниеВЫКЛ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаПитаниеВЫКЛ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.КнопкаПитаниеВЫКЛ.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.КнопкаПитаниеВЫКЛ.Location = new System.Drawing.Point(508, 508);
+            this.КнопкаПитаниеВЫКЛ.Name = "КнопкаПитаниеВЫКЛ";
+            this.КнопкаПитаниеВЫКЛ.Size = new System.Drawing.Size(67, 69);
+            this.КнопкаПитаниеВЫКЛ.TabIndex = 55;
+            this.КнопкаПитаниеВЫКЛ.Text = "ВЫКЛ";
+            this.КнопкаПитаниеВЫКЛ.UseVisualStyleBackColor = false;
+            this.КнопкаПитаниеВЫКЛ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаПитаниеВЫКЛ_MouseDown);
+            this.КнопкаПитаниеВЫКЛ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаПитаниеВЫКЛ_MouseUp);
             // 
-            // BMA_M_1КнопкаПитаниеВКЛ
+            // КнопкаПитаниеВКЛ
             // 
-            this.BMA_M_1КнопкаПитаниеВКЛ.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlueOff;
-            this.BMA_M_1КнопкаПитаниеВКЛ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMA_M_1КнопкаПитаниеВКЛ.FlatAppearance.BorderSize = 0;
-            this.BMA_M_1КнопкаПитаниеВКЛ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1КнопкаПитаниеВКЛ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1КнопкаПитаниеВКЛ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMA_M_1КнопкаПитаниеВКЛ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.BMA_M_1КнопкаПитаниеВКЛ.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BMA_M_1КнопкаПитаниеВКЛ.Location = new System.Drawing.Point(590, 508);
-            this.BMA_M_1КнопкаПитаниеВКЛ.Name = "BMA_M_1КнопкаПитаниеВКЛ";
-            this.BMA_M_1КнопкаПитаниеВКЛ.Size = new System.Drawing.Size(67, 69);
-            this.BMA_M_1КнопкаПитаниеВКЛ.TabIndex = 54;
-            this.BMA_M_1КнопкаПитаниеВКЛ.Text = "ВКЛ";
-            this.BMA_M_1КнопкаПитаниеВКЛ.UseVisualStyleBackColor = false;
-            this.BMA_M_1КнопкаПитаниеВКЛ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BMA_M_1КнопкаПитаниеВКЛ_MouseDown);
-            this.BMA_M_1КнопкаПитаниеВКЛ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMA_M_1КнопкаПитаниеВКЛ_MouseUp);
+            this.КнопкаПитаниеВКЛ.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаПитаниеВКЛ.BackgroundImage = global::R440O.ControlElementImages.buttonSquareBlueOff;
+            this.КнопкаПитаниеВКЛ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.КнопкаПитаниеВКЛ.FlatAppearance.BorderSize = 0;
+            this.КнопкаПитаниеВКЛ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаПитаниеВКЛ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаПитаниеВКЛ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаПитаниеВКЛ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.КнопкаПитаниеВКЛ.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.КнопкаПитаниеВКЛ.Location = new System.Drawing.Point(590, 508);
+            this.КнопкаПитаниеВКЛ.Name = "КнопкаПитаниеВКЛ";
+            this.КнопкаПитаниеВКЛ.Size = new System.Drawing.Size(67, 69);
+            this.КнопкаПитаниеВКЛ.TabIndex = 54;
+            this.КнопкаПитаниеВКЛ.Text = "ВКЛ";
+            this.КнопкаПитаниеВКЛ.UseVisualStyleBackColor = false;
+            this.КнопкаПитаниеВКЛ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаПитаниеВКЛ_MouseDown);
+            this.КнопкаПитаниеВКЛ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаПитаниеВКЛ_MouseUp);
             // 
-            // BMA_M_1КнопкаПроверка
+            // КнопкаПроверка
             // 
-            this.BMA_M_1КнопкаПроверка.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1КнопкаПроверка.BackgroundImage = global::R440O.ControlElementImages.buttonSquareYellow;
-            this.BMA_M_1КнопкаПроверка.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMA_M_1КнопкаПроверка.FlatAppearance.BorderSize = 0;
-            this.BMA_M_1КнопкаПроверка.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1КнопкаПроверка.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1КнопкаПроверка.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMA_M_1КнопкаПроверка.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.BMA_M_1КнопкаПроверка.Location = new System.Drawing.Point(340, 516);
-            this.BMA_M_1КнопкаПроверка.Name = "BMA_M_1КнопкаПроверка";
-            this.BMA_M_1КнопкаПроверка.Size = new System.Drawing.Size(59, 59);
-            this.BMA_M_1КнопкаПроверка.TabIndex = 53;
-            this.BMA_M_1КнопкаПроверка.Text = "1";
-            this.BMA_M_1КнопкаПроверка.UseVisualStyleBackColor = false;
-            this.BMA_M_1КнопкаПроверка.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BMA_M_1КнопкаПроверка_MouseDown);
-            this.BMA_M_1КнопкаПроверка.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMA_M_1КнопкаПроверка_MouseUp);
+            this.КнопкаПроверка.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаПроверка.BackgroundImage = global::R440O.ControlElementImages.buttonSquareYellow;
+            this.КнопкаПроверка.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.КнопкаПроверка.FlatAppearance.BorderSize = 0;
+            this.КнопкаПроверка.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаПроверка.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаПроверка.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаПроверка.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.КнопкаПроверка.Location = new System.Drawing.Point(340, 516);
+            this.КнопкаПроверка.Name = "КнопкаПроверка";
+            this.КнопкаПроверка.Size = new System.Drawing.Size(59, 59);
+            this.КнопкаПроверка.TabIndex = 53;
+            this.КнопкаПроверка.Text = "1";
+            this.КнопкаПроверка.UseVisualStyleBackColor = false;
+            this.КнопкаПроверка.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаПроверка_MouseDown);
+            this.КнопкаПроверка.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаПроверка_MouseUp);
             // 
-            // BMA_M_1КнопкаШлейфДК
+            // КнопкаШлейфДК
             // 
-            this.BMA_M_1КнопкаШлейфДК.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1КнопкаШлейфДК.BackgroundImage = global::R440O.ControlElementImages.buttonSquareYellow;
-            this.BMA_M_1КнопкаШлейфДК.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMA_M_1КнопкаШлейфДК.FlatAppearance.BorderSize = 0;
-            this.BMA_M_1КнопкаШлейфДК.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1КнопкаШлейфДК.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1КнопкаШлейфДК.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMA_M_1КнопкаШлейфДК.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.BMA_M_1КнопкаШлейфДК.Location = new System.Drawing.Point(754, 512);
-            this.BMA_M_1КнопкаШлейфДК.Name = "BMA_M_1КнопкаШлейфДК";
-            this.BMA_M_1КнопкаШлейфДК.Size = new System.Drawing.Size(59, 59);
-            this.BMA_M_1КнопкаШлейфДК.TabIndex = 52;
-            this.BMA_M_1КнопкаШлейфДК.Text = "ДК";
-            this.BMA_M_1КнопкаШлейфДК.UseVisualStyleBackColor = false;
-            this.BMA_M_1КнопкаШлейфДК.Click += new System.EventHandler(this.BMA_M_1КнопкаШлейфДК_Click);
+            this.КнопкаШлейфДК.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаШлейфДК.BackgroundImage = global::R440O.ControlElementImages.buttonSquareYellow;
+            this.КнопкаШлейфДК.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.КнопкаШлейфДК.FlatAppearance.BorderSize = 0;
+            this.КнопкаШлейфДК.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаШлейфДК.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаШлейфДК.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаШлейфДК.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.КнопкаШлейфДК.Location = new System.Drawing.Point(754, 512);
+            this.КнопкаШлейфДК.Name = "КнопкаШлейфДК";
+            this.КнопкаШлейфДК.Size = new System.Drawing.Size(59, 59);
+            this.КнопкаШлейфДК.TabIndex = 52;
+            this.КнопкаШлейфДК.Text = "ДК";
+            this.КнопкаШлейфДК.UseVisualStyleBackColor = false;
+            this.КнопкаШлейфДК.Click += new System.EventHandler(this.КнопкаШлейфДК_Click);
             // 
-            // BMA_M_1КнопкаШлейфТЧ
+            // КнопкаШлейфТЧ
             // 
-            this.BMA_M_1КнопкаШлейфТЧ.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1КнопкаШлейфТЧ.BackgroundImage = global::R440O.ControlElementImages.buttonSquareYellow;
-            this.BMA_M_1КнопкаШлейфТЧ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMA_M_1КнопкаШлейфТЧ.FlatAppearance.BorderSize = 0;
-            this.BMA_M_1КнопкаШлейфТЧ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1КнопкаШлейфТЧ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1КнопкаШлейфТЧ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMA_M_1КнопкаШлейфТЧ.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.BMA_M_1КнопкаШлейфТЧ.Location = new System.Drawing.Point(678, 512);
-            this.BMA_M_1КнопкаШлейфТЧ.Name = "BMA_M_1КнопкаШлейфТЧ";
-            this.BMA_M_1КнопкаШлейфТЧ.Size = new System.Drawing.Size(59, 59);
-            this.BMA_M_1КнопкаШлейфТЧ.TabIndex = 51;
-            this.BMA_M_1КнопкаШлейфТЧ.Text = "ТЧ";
-            this.BMA_M_1КнопкаШлейфТЧ.UseVisualStyleBackColor = false;
-            this.BMA_M_1КнопкаШлейфТЧ.Click += new System.EventHandler(this.BMA_M_1КнопкаШлейфТЧ_Click);
+            this.КнопкаШлейфТЧ.BackColor = System.Drawing.Color.Transparent;
+            this.КнопкаШлейфТЧ.BackgroundImage = global::R440O.ControlElementImages.buttonSquareYellow;
+            this.КнопкаШлейфТЧ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.КнопкаШлейфТЧ.FlatAppearance.BorderSize = 0;
+            this.КнопкаШлейфТЧ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаШлейфТЧ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.КнопкаШлейфТЧ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.КнопкаШлейфТЧ.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.КнопкаШлейфТЧ.Location = new System.Drawing.Point(678, 512);
+            this.КнопкаШлейфТЧ.Name = "КнопкаШлейфТЧ";
+            this.КнопкаШлейфТЧ.Size = new System.Drawing.Size(59, 59);
+            this.КнопкаШлейфТЧ.TabIndex = 51;
+            this.КнопкаШлейфТЧ.Text = "ТЧ";
+            this.КнопкаШлейфТЧ.UseVisualStyleBackColor = false;
+            this.КнопкаШлейфТЧ.Click += new System.EventHandler(this.КнопкаШлейфТЧ_Click);
             // 
-            // BMA_M_1ПереключательКоррКанала
+            // ПереключательКоррКанала
             // 
-            this.BMA_M_1ПереключательКоррКанала.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательКоррКанала.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
-            this.BMA_M_1ПереключательКоррКанала.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMA_M_1ПереключательКоррКанала.FlatAppearance.BorderSize = 0;
-            this.BMA_M_1ПереключательКоррКанала.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательКоррКанала.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательКоррКанала.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMA_M_1ПереключательКоррКанала.Location = new System.Drawing.Point(744, 421);
-            this.BMA_M_1ПереключательКоррКанала.Name = "BMA_M_1ПереключательКоррКанала";
-            this.BMA_M_1ПереключательКоррКанала.Size = new System.Drawing.Size(65, 65);
-            this.BMA_M_1ПереключательКоррКанала.TabIndex = 50;
-            this.BMA_M_1ПереключательКоррКанала.UseVisualStyleBackColor = false;
-            this.BMA_M_1ПереключательКоррКанала.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMA_M_1ПереключательКоррКанала_MouseUp);
+            this.ПереключательКоррКанала.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательКоррКанала.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.ПереключательКоррКанала.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательКоррКанала.FlatAppearance.BorderSize = 0;
+            this.ПереключательКоррКанала.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательКоррКанала.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательКоррКанала.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательКоррКанала.Location = new System.Drawing.Point(744, 421);
+            this.ПереключательКоррКанала.Name = "ПереключательКоррКанала";
+            this.ПереключательКоррКанала.Size = new System.Drawing.Size(65, 65);
+            this.ПереключательКоррКанала.TabIndex = 50;
+            this.ПереключательКоррКанала.UseVisualStyleBackColor = false;
+            this.ПереключательКоррКанала.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательКоррКанала_MouseUp);
             // 
-            // BMA_M_1ПереключательЗапретЗапроса
+            // ПереключательЗапретЗапроса
             // 
-            this.BMA_M_1ПереключательЗапретЗапроса.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательЗапретЗапроса.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
-            this.BMA_M_1ПереключательЗапретЗапроса.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMA_M_1ПереключательЗапретЗапроса.FlatAppearance.BorderSize = 0;
-            this.BMA_M_1ПереключательЗапретЗапроса.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательЗапретЗапроса.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательЗапретЗапроса.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMA_M_1ПереключательЗапретЗапроса.Location = new System.Drawing.Point(581, 421);
-            this.BMA_M_1ПереключательЗапретЗапроса.Name = "BMA_M_1ПереключательЗапретЗапроса";
-            this.BMA_M_1ПереключательЗапретЗапроса.Size = new System.Drawing.Size(65, 65);
-            this.BMA_M_1ПереключательЗапретЗапроса.TabIndex = 49;
-            this.BMA_M_1ПереключательЗапретЗапроса.UseVisualStyleBackColor = false;
-            this.BMA_M_1ПереключательЗапретЗапроса.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMA_M_1ПереключательЗапретЗапроса_MouseUp);
+            this.ПереключательЗапретЗапроса.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательЗапретЗапроса.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.ПереключательЗапретЗапроса.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательЗапретЗапроса.FlatAppearance.BorderSize = 0;
+            this.ПереключательЗапретЗапроса.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательЗапретЗапроса.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательЗапретЗапроса.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательЗапретЗапроса.Location = new System.Drawing.Point(581, 421);
+            this.ПереключательЗапретЗапроса.Name = "ПереключательЗапретЗапроса";
+            this.ПереключательЗапретЗапроса.Size = new System.Drawing.Size(65, 65);
+            this.ПереключательЗапретЗапроса.TabIndex = 49;
+            this.ПереключательЗапретЗапроса.UseVisualStyleBackColor = false;
+            this.ПереключательЗапретЗапроса.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательЗапретЗапроса_MouseUp);
             // 
-            // BMA_M_1ПереключательРежимы
+            // ПереключательРежимы
             // 
-            this.BMA_M_1ПереключательРежимы.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательРежимы.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
-            this.BMA_M_1ПереключательРежимы.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMA_M_1ПереключательРежимы.FlatAppearance.BorderSize = 0;
-            this.BMA_M_1ПереключательРежимы.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательРежимы.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательРежимы.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMA_M_1ПереключательРежимы.Location = new System.Drawing.Point(744, 307);
-            this.BMA_M_1ПереключательРежимы.Name = "BMA_M_1ПереключательРежимы";
-            this.BMA_M_1ПереключательРежимы.Size = new System.Drawing.Size(65, 65);
-            this.BMA_M_1ПереключательРежимы.TabIndex = 48;
-            this.BMA_M_1ПереключательРежимы.UseVisualStyleBackColor = false;
-            this.BMA_M_1ПереключательРежимы.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMA_M_1ПереключательРежимы_MouseUp);
+            this.ПереключательРежимы.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательРежимы.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.ПереключательРежимы.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательРежимы.FlatAppearance.BorderSize = 0;
+            this.ПереключательРежимы.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательРежимы.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательРежимы.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательРежимы.Location = new System.Drawing.Point(744, 307);
+            this.ПереключательРежимы.Name = "ПереключательРежимы";
+            this.ПереключательРежимы.Size = new System.Drawing.Size(65, 65);
+            this.ПереключательРежимы.TabIndex = 48;
+            this.ПереключательРежимы.UseVisualStyleBackColor = false;
+            this.ПереключательРежимы.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательРежимы_MouseUp);
             // 
-            // BMA_M_1ПереключательУровниСигналаПрдПрм
+            // ПереключательУровниСигналаПрдПрм
             // 
-            this.BMA_M_1ПереключательУровниСигналаПрдПрм.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательУровниСигналаПрдПрм.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
-            this.BMA_M_1ПереключательУровниСигналаПрдПрм.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMA_M_1ПереключательУровниСигналаПрдПрм.FlatAppearance.BorderSize = 0;
-            this.BMA_M_1ПереключательУровниСигналаПрдПрм.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательУровниСигналаПрдПрм.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательУровниСигналаПрдПрм.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMA_M_1ПереключательУровниСигналаПрдПрм.Location = new System.Drawing.Point(581, 307);
-            this.BMA_M_1ПереключательУровниСигналаПрдПрм.Name = "BMA_M_1ПереключательУровниСигналаПрдПрм";
-            this.BMA_M_1ПереключательУровниСигналаПрдПрм.Size = new System.Drawing.Size(65, 65);
-            this.BMA_M_1ПереключательУровниСигналаПрдПрм.TabIndex = 47;
-            this.BMA_M_1ПереключательУровниСигналаПрдПрм.UseVisualStyleBackColor = false;
-            this.BMA_M_1ПереключательУровниСигналаПрдПрм.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMA_M_1ПереключательУровниСигналаПрдПрм_MouseUp);
+            this.ПереключательУровниСигналаПрдПрм.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательУровниСигналаПрдПрм.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.ПереключательУровниСигналаПрдПрм.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательУровниСигналаПрдПрм.FlatAppearance.BorderSize = 0;
+            this.ПереключательУровниСигналаПрдПрм.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательУровниСигналаПрдПрм.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательУровниСигналаПрдПрм.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательУровниСигналаПрдПрм.Location = new System.Drawing.Point(581, 307);
+            this.ПереключательУровниСигналаПрдПрм.Name = "ПереключательУровниСигналаПрдПрм";
+            this.ПереключательУровниСигналаПрдПрм.Size = new System.Drawing.Size(65, 65);
+            this.ПереключательУровниСигналаПрдПрм.TabIndex = 47;
+            this.ПереключательУровниСигналаПрдПрм.UseVisualStyleBackColor = false;
+            this.ПереключательУровниСигналаПрдПрм.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательУровниСигналаПрдПрм_MouseUp);
             // 
-            // BMA_M_1ПереключательЧастотаВызова
+            // ПереключательЧастотаВызова
             // 
-            this.BMA_M_1ПереключательЧастотаВызова.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательЧастотаВызова.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
-            this.BMA_M_1ПереключательЧастотаВызова.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMA_M_1ПереключательЧастотаВызова.FlatAppearance.BorderSize = 0;
-            this.BMA_M_1ПереключательЧастотаВызова.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательЧастотаВызова.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательЧастотаВызова.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMA_M_1ПереключательЧастотаВызова.Location = new System.Drawing.Point(744, 195);
-            this.BMA_M_1ПереключательЧастотаВызова.Name = "BMA_M_1ПереключательЧастотаВызова";
-            this.BMA_M_1ПереключательЧастотаВызова.Size = new System.Drawing.Size(65, 65);
-            this.BMA_M_1ПереключательЧастотаВызова.TabIndex = 46;
-            this.BMA_M_1ПереключательЧастотаВызова.UseVisualStyleBackColor = false;
-            this.BMA_M_1ПереключательЧастотаВызова.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMA_M_1ПереключательЧастотаВызова_MouseUp);
+            this.ПереключательЧастотаВызова.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательЧастотаВызова.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.ПереключательЧастотаВызова.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательЧастотаВызова.FlatAppearance.BorderSize = 0;
+            this.ПереключательЧастотаВызова.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательЧастотаВызова.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательЧастотаВызова.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательЧастотаВызова.Location = new System.Drawing.Point(744, 195);
+            this.ПереключательЧастотаВызова.Name = "ПереключательЧастотаВызова";
+            this.ПереключательЧастотаВызова.Size = new System.Drawing.Size(65, 65);
+            this.ПереключательЧастотаВызова.TabIndex = 46;
+            this.ПереключательЧастотаВызова.UseVisualStyleBackColor = false;
+            this.ПереключательЧастотаВызова.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательЧастотаВызова_MouseUp);
             // 
-            // BMA_M_1ПереключательКоррАЧХ
+            // ПереключательКоррАЧХ
             // 
-            this.BMA_M_1ПереключательКоррАЧХ.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательКоррАЧХ.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
-            this.BMA_M_1ПереключательКоррАЧХ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMA_M_1ПереключательКоррАЧХ.FlatAppearance.BorderSize = 0;
-            this.BMA_M_1ПереключательКоррАЧХ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательКоррАЧХ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательКоррАЧХ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMA_M_1ПереключательКоррАЧХ.Location = new System.Drawing.Point(581, 195);
-            this.BMA_M_1ПереключательКоррАЧХ.Name = "BMA_M_1ПереключательКоррАЧХ";
-            this.BMA_M_1ПереключательКоррАЧХ.Size = new System.Drawing.Size(65, 65);
-            this.BMA_M_1ПереключательКоррАЧХ.TabIndex = 45;
-            this.BMA_M_1ПереключательКоррАЧХ.UseVisualStyleBackColor = false;
-            this.BMA_M_1ПереключательКоррАЧХ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMA_M_1ПереключательКоррАЧХ_MouseUp);
+            this.ПереключательКоррАЧХ.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательКоррАЧХ.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.ПереключательКоррАЧХ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательКоррАЧХ.FlatAppearance.BorderSize = 0;
+            this.ПереключательКоррАЧХ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательКоррАЧХ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательКоррАЧХ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательКоррАЧХ.Location = new System.Drawing.Point(581, 195);
+            this.ПереключательКоррАЧХ.Name = "ПереключательКоррАЧХ";
+            this.ПереключательКоррАЧХ.Size = new System.Drawing.Size(65, 65);
+            this.ПереключательКоррАЧХ.TabIndex = 45;
+            this.ПереключательКоррАЧХ.UseVisualStyleBackColor = false;
+            this.ПереключательКоррАЧХ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательКоррАЧХ_MouseUp);
             // 
-            // BMA_M_1ПереключательРежимРаботы
+            // ПереключательРежимРаботы
             // 
-            this.BMA_M_1ПереключательРежимРаботы.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательРежимРаботы.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
-            this.BMA_M_1ПереключательРежимРаботы.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMA_M_1ПереключательРежимРаботы.FlatAppearance.BorderSize = 0;
-            this.BMA_M_1ПереключательРежимРаботы.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательРежимРаботы.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательРежимРаботы.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMA_M_1ПереключательРежимРаботы.Location = new System.Drawing.Point(744, 71);
-            this.BMA_M_1ПереключательРежимРаботы.Name = "BMA_M_1ПереключательРежимРаботы";
-            this.BMA_M_1ПереключательРежимРаботы.Size = new System.Drawing.Size(65, 65);
-            this.BMA_M_1ПереключательРежимРаботы.TabIndex = 44;
-            this.BMA_M_1ПереключательРежимРаботы.UseVisualStyleBackColor = false;
-            this.BMA_M_1ПереключательРежимРаботы.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMA_M_1ПереключательРежимРаботы_MouseUp);
+            this.ПереключательРежимРаботы.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательРежимРаботы.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.ПереключательРежимРаботы.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательРежимРаботы.FlatAppearance.BorderSize = 0;
+            this.ПереключательРежимРаботы.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательРежимРаботы.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательРежимРаботы.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательРежимРаботы.Location = new System.Drawing.Point(744, 71);
+            this.ПереключательРежимРаботы.Name = "ПереключательРежимРаботы";
+            this.ПереключательРежимРаботы.Size = new System.Drawing.Size(65, 65);
+            this.ПереключательРежимРаботы.TabIndex = 44;
+            this.ПереключательРежимРаботы.UseVisualStyleBackColor = false;
+            this.ПереключательРежимРаботы.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательРежимРаботы_MouseUp);
             // 
-            // BMA_M_1ПереключательРекурента
+            // ПереключательРекурента
             // 
-            this.BMA_M_1ПереключательРекурента.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательРекурента.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
-            this.BMA_M_1ПереключательРекурента.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMA_M_1ПереключательРекурента.FlatAppearance.BorderSize = 0;
-            this.BMA_M_1ПереключательРекурента.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательРекурента.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательРекурента.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMA_M_1ПереключательРекурента.Location = new System.Drawing.Point(337, 366);
-            this.BMA_M_1ПереключательРекурента.Name = "BMA_M_1ПереключательРекурента";
-            this.BMA_M_1ПереключательРекурента.Size = new System.Drawing.Size(65, 65);
-            this.BMA_M_1ПереключательРекурента.TabIndex = 43;
-            this.BMA_M_1ПереключательРекурента.UseVisualStyleBackColor = false;
-            this.BMA_M_1ПереключательРекурента.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMA_M_1ПереключательРекурента_MouseUp);
+            this.ПереключательРекурента.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательРекурента.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.ПереключательРекурента.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательРекурента.FlatAppearance.BorderSize = 0;
+            this.ПереключательРекурента.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательРекурента.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательРекурента.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательРекурента.Location = new System.Drawing.Point(337, 366);
+            this.ПереключательРекурента.Name = "ПереключательРекурента";
+            this.ПереключательРекурента.Size = new System.Drawing.Size(65, 65);
+            this.ПереключательРекурента.TabIndex = 43;
+            this.ПереключательРекурента.UseVisualStyleBackColor = false;
+            this.ПереключательРекурента.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательРекурента_MouseUp);
             // 
-            // BMA_M_1ПереключательКонтроль
+            // ПереключательКонтроль
             // 
-            this.BMA_M_1ПереключательКонтроль.BackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательКонтроль.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
-            this.BMA_M_1ПереключательКонтроль.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BMA_M_1ПереключательКонтроль.FlatAppearance.BorderSize = 0;
-            this.BMA_M_1ПереключательКонтроль.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательКонтроль.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BMA_M_1ПереключательКонтроль.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BMA_M_1ПереключательКонтроль.Location = new System.Drawing.Point(315, 181);
-            this.BMA_M_1ПереключательКонтроль.Name = "BMA_M_1ПереключательКонтроль";
-            this.BMA_M_1ПереключательКонтроль.Size = new System.Drawing.Size(111, 104);
-            this.BMA_M_1ПереключательКонтроль.TabIndex = 42;
-            this.BMA_M_1ПереключательКонтроль.UseVisualStyleBackColor = false;
-            this.BMA_M_1ПереключательКонтроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BMA_M_1ПереключательКонтроль_MouseUp);
+            this.ПереключательКонтроль.BackColor = System.Drawing.Color.Transparent;
+            this.ПереключательКонтроль.BackgroundImage = global::R440O.ControlElementImages.toggleType2;
+            this.ПереключательКонтроль.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ПереключательКонтроль.FlatAppearance.BorderSize = 0;
+            this.ПереключательКонтроль.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательКонтроль.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ПереключательКонтроль.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ПереключательКонтроль.Location = new System.Drawing.Point(315, 181);
+            this.ПереключательКонтроль.Name = "ПереключательКонтроль";
+            this.ПереключательКонтроль.Size = new System.Drawing.Size(111, 104);
+            this.ПереключательКонтроль.TabIndex = 42;
+            this.ПереключательКонтроль.UseVisualStyleBackColor = false;
+            this.ПереключательКонтроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательКонтроль_MouseUp);
             // 
-            // BMA_M_1Form
+            // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(954, 625);
-            this.Controls.Add(this.BMA_M_1Panel);
+            this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "BMA_M_1Form";
+            this.Name = "Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "БМА-M/1";
-            this.BMA_M_1Panel.ResumeLayout(false);
+            this.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаНеисправно)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаИсправно)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаДист)).EndInit();
@@ -774,21 +774,21 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel BMA_M_1Panel;
-        private System.Windows.Forms.Button BMA_M_1ПереключательКонтроль;
-        private System.Windows.Forms.Button BMA_M_1ПереключательРекурента;
-        private System.Windows.Forms.Button BMA_M_1ПереключательРежимРаботы;
-        private System.Windows.Forms.Button BMA_M_1ПереключательЗапретЗапроса;
-        private System.Windows.Forms.Button BMA_M_1ПереключательРежимы;
-        private System.Windows.Forms.Button BMA_M_1ПереключательУровниСигналаПрдПрм;
-        private System.Windows.Forms.Button BMA_M_1ПереключательЧастотаВызова;
-        private System.Windows.Forms.Button BMA_M_1ПереключательКоррАЧХ;
-        private System.Windows.Forms.Button BMA_M_1ПереключательКоррКанала;
-        private System.Windows.Forms.Button BMA_M_1КнопкаШлейфТЧ;
-        private System.Windows.Forms.Button BMA_M_1КнопкаПроверка;
-        private System.Windows.Forms.Button BMA_M_1КнопкаШлейфДК;
-        private System.Windows.Forms.Button BMA_M_1КнопкаПитаниеВКЛ;
-        private System.Windows.Forms.Button BMA_M_1КнопкаПитаниеВЫКЛ;
+        private System.Windows.Forms.Panel Panel;
+        private System.Windows.Forms.Button ПереключательКонтроль;
+        private System.Windows.Forms.Button ПереключательРекурента;
+        private System.Windows.Forms.Button ПереключательРежимРаботы;
+        private System.Windows.Forms.Button ПереключательЗапретЗапроса;
+        private System.Windows.Forms.Button ПереключательРежимы;
+        private System.Windows.Forms.Button ПереключательУровниСигналаПрдПрм;
+        private System.Windows.Forms.Button ПереключательЧастотаВызова;
+        private System.Windows.Forms.Button ПереключательКоррАЧХ;
+        private System.Windows.Forms.Button ПереключательКоррКанала;
+        private System.Windows.Forms.Button КнопкаШлейфТЧ;
+        private System.Windows.Forms.Button КнопкаПроверка;
+        private System.Windows.Forms.Button КнопкаШлейфДК;
+        private System.Windows.Forms.Button КнопкаПитаниеВКЛ;
+        private System.Windows.Forms.Button КнопкаПитаниеВЫКЛ;
         private System.Windows.Forms.PictureBox ЛампочкаКонтрольНорм;
         private System.Windows.Forms.PictureBox ЛампочкаКонтрольНенорм;
         private System.Windows.Forms.PictureBox ЛампочкаКонтрольКомпл;

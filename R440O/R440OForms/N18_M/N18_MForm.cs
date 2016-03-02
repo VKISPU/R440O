@@ -307,23 +307,79 @@ namespace R440O.R440OForms.N18_M
         }
 
         #region Отрисовка соединенй
-        private void DrawLine(Point onePoint, Point twoPoint, PaintEventArgs e)
+        private void DrawLine(Point onePoint, Point twoPoint, PaintEventArgs e, Color color)
         {
-            var myPen = new Pen(Color.White, 5);
-            e.Graphics.DrawLine(myPen, onePoint, twoPoint);
+            var myPen = new Pen(color, 5);
+            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            Point p1, p2, p_control1, p_control2;
+            int d =(onePoint.Y < twoPoint.Y ? twoPoint.Y - onePoint.Y : onePoint.Y - twoPoint.Y) / 2;
+            int Y1, Y2;
+            if (d < 30)
+            {
+                if (d != 0)
+                {
+                    Y1 = onePoint.Y < twoPoint.Y ? onePoint.Y + d : onePoint.Y - d;
+                    Y2 = onePoint.Y < twoPoint.Y ? twoPoint.Y - d : twoPoint.Y + d;
+                }
+                else
+                {
+                    Y1 = onePoint.Y + 22;
+                    Y2 = twoPoint.Y + 22;
+                }
+                p1 = new Point(onePoint.X, Y1);
+                p2 = new Point(twoPoint.X, Y2);
+
+                e.Graphics.DrawLine(myPen, onePoint, p1);
+                e.Graphics.DrawLine(myPen, twoPoint, p2);
+                e.Graphics.DrawLine(myPen, p1, p2);
+            }
+            else
+            {
+                if (onePoint.X < 300 || twoPoint.X < 300)
+                {
+                    p_control1 = new Point(220, 182);
+                    p_control2 = new Point(220, 140);
+                }
+                else
+                {
+                    p_control1 = new Point(305, 182);
+                    p_control2 = new Point(305, 142);
+                }
+
+                Y1 = onePoint.Y < twoPoint.Y ? onePoint.Y + 22 : onePoint.Y - 22;
+                Y2 = onePoint.Y < twoPoint.Y ? twoPoint.Y - 22 : twoPoint.Y + 22;
+
+                p1 = new Point(onePoint.X, Y1);
+                p2 = new Point(twoPoint.X, Y2);
+
+                e.Graphics.DrawLine(myPen, onePoint, p1);
+                if (onePoint.Y > twoPoint.Y)
+                {
+                    e.Graphics.DrawLine(myPen, p1, p_control1);
+                    e.Graphics.DrawLine(myPen, p_control2, p2);
+                }
+                else
+                {
+                    e.Graphics.DrawLine(myPen, p2, p_control1);
+                    e.Graphics.DrawLine(myPen, p_control2, p1);
+                }
+                
+                e.Graphics.DrawLine(myPen, p_control1, p_control2);                
+                e.Graphics.DrawLine(myPen, twoPoint, p2);          
+            }
             myPen.Dispose();
         }
 
         private void РисованиеСоеденений(PaintEventArgs e)
         {
-            bool[] Дублирующие = new bool[76];
+            bool[] Дублирующие = new bool[77];
             int номер_гнезда1, номер_гнезда2;
             Point point1 = new Point(0, 0);
             Point point2 = new Point(0, 0);
             List<Control> соединенные_гнезда = new  List<Control>();
             foreach (Control item in Panel.Controls)
                 if (item.Name.Contains("Гнездо") && item.BackgroundImage != null)
-                    item.BackgroundImage = null;
+                    item.BackgroundImage = null;           
 
             for (int i = 1; i < 76; i++)
             {
@@ -346,7 +402,7 @@ namespace R440O.R440OForms.N18_M
                             соединенные_гнезда.Add(item);
                         }
                     }
-                    DrawLine(point1, point2, e);
+                    DrawLine(point1, point2, e, N18_MParameters.Цвет_соеденения[номер_гнезда1]);
                     Дублирующие[номер_гнезда1] = true;
                     Дублирующие[номер_гнезда2] = true;
                 }
@@ -361,6 +417,7 @@ namespace R440O.R440OForms.N18_M
             РисованиеСоеденений(e);
         }
         #endregion
+
         private void Гнездо_Click(object sender, System.EventArgs e)
         {
             var СвязанноеГнездо = sender as Button;
@@ -369,9 +426,7 @@ namespace R440O.R440OForms.N18_M
                 (int)char.GetNumericValue(text[6]) :
                 10 * (int)char.GetNumericValue(text[6]) + (int)char.GetNumericValue(text[7]);
             N18_MParameters.Соеденить(НомерГнезда);
-        }
-
-  
+        }  
 
     }
 }
