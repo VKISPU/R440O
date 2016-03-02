@@ -541,6 +541,7 @@
             this.Гнездо4.Size = new System.Drawing.Size(10, 28);
             this.Гнездо4.TabIndex = 57;
             this.Гнездо4.Text = "ЩВ-2";
+            this.toolTip.SetToolTip(this.Гнездо4, "ЩВ3");
             this.Гнездо4.UseVisualStyleBackColor = false;
             this.Гнездо4.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -555,6 +556,7 @@
             this.Гнездо5.Size = new System.Drawing.Size(10, 28);
             this.Гнездо5.TabIndex = 58;
             this.Гнездо5.Text = "Б1-1";
+            this.toolTip.SetToolTip(this.Гнездо5, "Б1-2");
             this.Гнездо5.UseVisualStyleBackColor = false;
             this.Гнездо5.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -1668,6 +1670,12 @@
             this.Гнездо51.Text = "57";
             this.Гнездо51.UseVisualStyleBackColor = false;
             this.Гнездо51.Click += new System.EventHandler(this.Гнездо_Click);
+            // 
+            // toolTip
+            // 
+            this.toolTip.AutomaticDelay = 100;
+            this.toolTip.IsBalloon = true;
+            this.toolTip.ShowAlways = true;
             // 
             // N18_MForm
             // 

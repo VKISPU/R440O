@@ -469,13 +469,15 @@ namespace R440O.Parameters
                         _ЛампочкаКонтрольНенорм = false;
                         Refresh();
                     }, 8000);
-                    return true;
+                   return true;
                 }
                 else
                 {
                     return false;
                 }
+                //return _ЛампочкаКонтрольНенорм;
             }
+
         }
 
         public static bool _ЛампочкаКонтрольНорм = false;
