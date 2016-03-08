@@ -117,7 +117,6 @@ namespace R440O
             //// Проверка БМАБ и БМБ
             //БМА
             N15LocalParameters.локТумблерБМА_1 = true;
-            BMA_M_1Parameters.КнопкаПитаниеВКЛ = true;
 
 
             //// Поключение АФСС

@@ -861,7 +861,7 @@ namespace R440O.R440OForms.N15
             BMBParameters.ResetParameters();
             BMA_M_1Parameters.DisposeAllTimers();
             BMA_M_1Parameters.ResetLampsValue();
-            BMA_M_1Parameters.Refresh();
+            BMA_M_1Parameters.ResetParameters();
             BMA_M_2Parameters.DisposeAllTimers();
             BMA_M_2Parameters.ResetLampsValue();
             BMA_M_2Parameters.Refresh();

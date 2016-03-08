@@ -10,7 +10,7 @@ namespace R440O.R440OForms.TLF_TCH
     {
         public static List<int> НомераСоединений = new List<int>();
 
-        static public bool БМА1ПередачаКаналТЧ
+        public static bool БМА1ПередачаКаналТЧ
         {
             get
             {
@@ -19,7 +19,7 @@ namespace R440O.R440OForms.TLF_TCH
             }
         }
 
-        static public bool БМА1ПриемКаналТЧ
+        public static bool БМА1ПриемКаналТЧ
         {
             get
             {
@@ -50,7 +50,7 @@ namespace R440O.R440OForms.TLF_TCH
         {
             var handler = ParameterChanged;
             if (handler != null) handler();
-            BMA_M_1Parameters.Refresh();
+            BMA_M_1Parameters.ResetParameters();
         }
     }
     

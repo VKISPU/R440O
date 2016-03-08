@@ -1,21 +1,24 @@
 ﻿using R440O.R440OForms.BMB;
 using R440O.R440OForms.N502B;
 using R440O.R440OForms.TLF_TCH;
+using R440O.R440OForms.N15;
+using R440O.ThirdParty;
+using System;
 
 namespace R440O.Parameters
 {
-    using System;
-
-    using СостоянияЭлементов.БМА_М;
-    using R440OForms.N15;
-    using ThirdParty;
-
     class BMA_M_1Parameters
     {
+        /// <summary>
+        /// В принципе это не "включен", а состояние при котором он может быть включен нажатием кнопок, т.е. питание подается
+        /// а "Питание" это как раз "включен"
+        /// </summary>
+        public static bool Включен => N502BParameters.ЭлектрообуродованиеВключено && N502BParameters.ВыпрямительВключен;
 
-        #region Питнаие
+        #region Питание
 
         private static bool _питание;
+
         public static bool Питание
         {
             get { return _питание && ПитаниеН502; }
@@ -28,418 +31,558 @@ namespace R440O.Parameters
                     BMBParameters.ОбнулитьНабор();
                     BMBParameters.МерцаниеЛампочиНаправления(1);
                 }
-                N15Parameters.ResetParametersAlternative();       
-                Refresh();
+                N15Parameters.ResetParametersAlternative();
+                OnParameterChanged();
             }
         }
-        
+
         public static bool ПитаниеН502
         {
-            get
-            {
-               return N502BParameters.ТумблерВыпрямитель27В
-                      && N502BParameters.ТумблерЭлектрооборудование
-                      && N502BParameters.ЛампочкаСфазировано;
-            }
+            get { return N502BParameters.ЭлектрообуродованиеВключено && N502BParameters.ВыпрямительВключен; }
         }
+
         #endregion
 
         #region Переключатели
+
         #region ПереключательКонтроль
-        private static EПереключательКонтроль _ПереключательКонтроль = EПереключательКонтроль.РАБОТА_1;
-        public static EПереключательКонтроль ПереключательКонтроль
+
+        private static int _переключательКонтроль = 1;
+
+        /// <summary>
+        /// 1 - работа_1, 2 - тест, 3 - дк, 4 - тч, 5 - компл, 6 - работа_2
+        /// </summary>
+        public static int ПереключательКонтроль
         {
-            get { return _ПереключательКонтроль; }
+            get { return _переключательКонтроль; }
             set
             {
-                if (value >= EПереключательКонтроль.РАБОТА_1
-                    && value <= EПереключательКонтроль.РАБОТА_2)
+                if (value >= 1 && value <= 6)
                 {
-                    _ПереключательКонтроль = value;
-                    _ЛампочкаКонтрольНенорм = true;
-                    _ЛампочкаКонтрольНорм = false;
+                    _переключательКонтроль = value;
+                    ЛампочкаКонтрольНенорм = true;
+                    ЛампочкаКонтрольНорм = false;
                     if (timer_ЛампочкаКонтрольНенорм != null)
                         timer_ЛампочкаКонтрольНенорм.Dispose();
-                    Refresh();
+                    OnParameterChanged();
                 }
-
             }
         }
+
         #endregion
 
         #region ПереключательРекуррента
-        private static EПереключательРекуррента _ПереключательРекуррента = EПереключательРекуррента._15;
-        public static EПереключательРекуррента ПереключательРекуррента
+
+        private static int _переключательРекуррента = 1;
+
+        /// <summary>
+        /// 1 - 15, 2 - 31, 3 - 511, 4 - 1023
+        /// </summary>
+        public static int ПереключательРекуррента
         {
-            get { return _ПереключательРекуррента; }
+            get { return _переключательРекуррента; }
             set
             {
-                if (value >= EПереключательРекуррента._15
-                    && value <= EПереключательРекуррента._1023)
-                    _ПереключательРекуррента = value;
-                Refresh();
+                if (value >= 1
+                    && value <= 4)
+                    _переключательРекуррента = value;
+                OnParameterChanged();
             }
         }
+
         #endregion
 
         #region ПереключательРежимРаботы
-        private static EПереключательРежимРаботы _ПереключательРежимРаботы = EПереключательРежимРаботы.МУ_АВТ;
-        public static EПереключательРежимРаботы ПереключательРежимРаботы
+
+        /// <summary>
+        /// 1 - му авт, 2 - му ручн, 3 - до ручн, 4 - до авт
+        /// </summary>
+        private static int _переключательРежимРаботы = 1;
+
+        public static int ПереключательРежимРаботы
         {
-            get { return _ПереключательРежимРаботы; }
+            get { return _переключательРежимРаботы; }
             set
             {
-                if (value >= EПереключательРежимРаботы.МУ_АВТ
-                    && value <= EПереключательРежимРаботы.ДО_АВТ)
-                    _ПереключательРежимРаботы = value;
-                Refresh();
+                if (value >= 1 && value <= 4)
+                    _переключательРежимРаботы = value;
+                OnParameterChanged();
             }
         }
+
         #endregion
 
         #region ПереключательКоррАЧХ
-        private static EПереключательКоррАЧХ _ПереключательКоррАЧХ = EПереключательКоррАЧХ._1;
-        public static EПереключательКоррАЧХ ПереключательКоррАЧХ
+
+        private static int _переключательКоррАчх = 1;
+
+        /// <summary>
+        /// 1 - 6
+        /// </summary>
+        public static int ПереключательКоррАЧХ
         {
-            get { return _ПереключательКоррАЧХ; }
+            get { return _переключательКоррАчх; }
             set
             {
-                if (value >= EПереключательКоррАЧХ._1
-                    && value <= EПереключательКоррАЧХ._6)
-                    _ПереключательКоррАЧХ = value;
-                Refresh();
+                if (value >= 1 && value <= 6)
+                    _переключательКоррАчх = value;
+                OnParameterChanged();
             }
         }
+
         #endregion
 
         #region ПереключательЧастотаВызова
-        private static EПереключательЧастотаВызова _ПереключательЧастотаВызова = EПереключательЧастотаВызова._2d1;
-        public static EПереключательЧастотаВызова ПереключательЧастотаВызова
+
+        private static int _переключательЧастотаВызова = 1;
+
+        /// <summary>
+        /// 1 - 2d1, 2 - 1d8, 3 - 2d6, 4 - 3d2
+        /// </summary>
+        public static int ПереключательЧастотаВызова
         {
-            get { return _ПереключательЧастотаВызова; }
+            get { return _переключательЧастотаВызова; }
             set
             {
-                if (value >= EПереключательЧастотаВызова._2d1
-                    && value <= EПереключательЧастотаВызова._3d2)
-                    _ПереключательЧастотаВызова = value;
-                Refresh();
+                if (value >= 1 && value <= 4)
+                    _переключательЧастотаВызова = value;
+                OnParameterChanged();
             }
         }
+
         #endregion
 
         #region ПереключательУровниСигналаПрдПрм
-        private static EПереключательУровниСигналаПрдПрм _ПереключательУровниСигналаПрдПрм = EПереключательУровниСигналаПрдПрм._m13_m13;
-        public static EПереключательУровниСигналаПрдПрм ПереключательУровниСигналаПрдПрм
+
+        private static int _переключательУровниСигналаПрдПрм = 1;
+
+        /// <summary>
+        /// 1 - m13 m13, 2 - m23 m5d7, 3 - m10d5 m28, 4 - 28 m10d5
+        /// </summary>
+        public static int ПереключательУровниСигналаПрдПрм
         {
-            get { return _ПереключательУровниСигналаПрдПрм; }
+            get { return _переключательУровниСигналаПрдПрм; }
             set
             {
-                if (value >= EПереключательУровниСигналаПрдПрм._m13_m13
-                    && value <= EПереключательУровниСигналаПрдПрм._28_m10d5)
-                    _ПереключательУровниСигналаПрдПрм = value;
-                Refresh();
+                if (value >= 1 && value <= 4)
+                    _переключательУровниСигналаПрдПрм = value;
+                OnParameterChanged();
             }
         }
+
         #endregion
 
         #region ПереключательРежимы
-        private static EПереключательРежимы _ПереключательРежимы = EПереключательРежимы.ДОФТ;
-        public static EПереключательРежимы ПереключательРежимы
+
+        private static int _переключательРежимы = 1;
+
+        /// <summary>
+        /// 1 - дофт, 2 - офт, 3 - 2х1200б 4 - чт
+        /// </summary>
+        public static int ПереключательРежимы
         {
-            get { return _ПереключательРежимы; }
+            get { return _переключательРежимы; }
             set
             {
-                if (value >= EПереключательРежимы.ДОФТ
-                    && value <= EПереключательРежимы.ЧТ)
-                    _ПереключательРежимы = value;
-                Refresh();
+                if (value >= 1 && value <= 4)
+                    _переключательРежимы = value;
+                OnParameterChanged();
             }
         }
+
         #endregion
 
         #region ПереключательЗапретЗапроса
-        private static EПереключательЗапретЗапроса _ПереключательЗапретЗапроса = EПереключательЗапретЗапроса.ВЫКЛ;
-        public static EПереключательЗапретЗапроса ПереключательЗапретЗапроса
+
+        private static int _переключательЗапретЗапроса = 1;
+
+        /// <summary>
+        /// 1 - выкл, 2 - вкл
+        /// </summary>
+        public static int ПереключательЗапретЗапроса
         {
-            get { return _ПереключательЗапретЗапроса; }
+            get { return _переключательЗапретЗапроса; }
             set
             {
-                if (value >= EПереключательЗапретЗапроса.ВЫКЛ
-                    && value <= EПереключательЗапретЗапроса.ВКЛ)
-                    _ПереключательЗапретЗапроса = value;
-                Refresh();
+                if (value >= 1 && value <= 2)
+                    _переключательЗапретЗапроса = value;
+                OnParameterChanged();
             }
         }
+
         #endregion
 
         #region ПереключательКоррКанала
-        private static EПереключательКоррКанала _ПереключательКоррКанала = EПереключательКоррКанала.ВЫКЛ;
-        public static EПереключательКоррКанала ПереключательКоррКанала
+
+        private static int _ПереключательКоррКанала = 1;
+
+        /// <summary>
+        /// 1 - выкл, 2 - вкл
+        /// </summary>
+        public static int ПереключательКоррКанала
         {
             get { return _ПереключательКоррКанала; }
             set
             {
-                if (value >= EПереключательКоррКанала.ВЫКЛ
-                    && value <= EПереключательКоррКанала.ВКЛ)
+                if (value >= 1 && value <= 2)
                     _ПереключательКоррКанала = value;
-                Refresh();
+                OnParameterChanged();
             }
         }
+
         #endregion
 
         #endregion
 
         #region Кнопки
-        private static bool _кнопкаШлейфТЧ;
-        private static bool _кнопкаШлейфДК;
 
-        public static bool КнопкаШлейфДК
+        private static int _кнопкаШлейфТЧ;
+        private static int _кнопкаШлейфДК;
+        private static int _кнопкаПитаниеВыкл;
+        private static int _кнопкаПитаниеВкл;
+        private static bool _кнопкаПроверка;
+
+        public static bool КнопкаПроверка
+        {
+            get { return _кнопкаПроверка; }
+            set
+            {
+                _кнопкаПроверка = value;
+                OnParameterChanged();
+            }
+        }
+
+        /// <summary>
+        /// 0 - отжата не горит, 1 - нажата не горит, 2 - отжата горит, 3 - нажата горит
+        /// </summary>
+        public static int КнопкаПитаниеВыкл
+        {
+            get { return _кнопкаПитаниеВыкл; }
+            set
+            {
+                if (value < 0 || value > 3) return;
+                if (value - _кнопкаПитаниеВыкл > 0)
+                {
+                    _кнопкаПитаниеВыкл = Включен ? 3 : 1;
+                }
+                else
+                {
+                    if (Включен)
+                    {
+                        _кнопкаПитаниеВыкл = 2;
+                        _кнопкаПитаниеВкл = 0;
+                    }
+                    else
+                        _кнопкаПитаниеВыкл = 0;
+                }
+                if(КнопкаПитаниеВыкл != 3) Питание = false;
+                OnParameterChanged();
+            }
+        }
+
+        /// <summary>
+        /// 0 - отжата не горит, 1 - нажата не горит, 2 - отжата горит, 3 - нажата горит
+        /// </summary>
+        public static int КнопкаПитаниеВкл
+        {
+            get { return _кнопкаПитаниеВкл; }
+            set
+            {
+                if (value < 0 || value > 3) return;
+                if (value - _кнопкаПитаниеВкл > 0)
+                {
+                    _кнопкаПитаниеВкл = Включен ? 3 : 1;
+                }
+                else
+                {
+                    if (Включен)
+                    {
+                        _кнопкаПитаниеВкл = 2;
+                        _кнопкаПитаниеВыкл = 0;
+                    }
+                    else
+                        _кнопкаПитаниеВкл = 0;
+                }
+                if (КнопкаПитаниеВкл == 3) Питание = true;
+                OnParameterChanged();
+            }
+        }
+
+        /// <summary>
+        /// 0 - отжата не горит, 1 - нажата не горит, 2 - отжата горит, 3 - нажата горит
+        /// </summary>
+        public static int КнопкаШлейфДК
         {
             get { return _кнопкаШлейфДК; }
             set
             {
-                _кнопкаШлейфДК = value;
-                Refresh();
+                if (_кнопкаШлейфДК == 0 || _кнопкаШлейфДК == 2)
+                {
+                    _кнопкаШлейфДК = Включен ? 3 : 1;
+                }
+                else
+                {
+                    //_кнопкаШлейфДК = Включен ? 2 : 0;
+                    _кнопкаШлейфДК = 0;
+                }
+                OnParameterChanged();
                 BMBParameters.ResetParameters();
             }
         }
 
-        public static bool КнопкаШлейфТЧ
+        /// <summary>
+        /// 0 - отжата не горит, 1 - нажата не горит, 2 - отжата горит, 3 - нажата горит
+        /// </summary>
+        public static int КнопкаШлейфТЧ
         {
             get { return _кнопкаШлейфТЧ; }
             set
             {
-                _кнопкаШлейфТЧ = value;
+                if (_кнопкаШлейфТЧ == 0 || _кнопкаШлейфТЧ == 2)
+                {
+                    _кнопкаШлейфТЧ = Включен ? 3 : 1;
+                }
+                else
+                {
+                    // _кнопкаШлейфТЧ = Включен ? 2 : 0;
+                    _кнопкаШлейфТЧ = 0;
+                }
                 BMBParameters.ResetParameters();
-                Refresh();
+                OnParameterChanged();
             }
         }
+
         #endregion
 
         #region Лампочки
-        
+
         public static bool ЛампочкаДК
         {
             get
             {
                 switch (ПереключательКонтроль)
                 {
-                    case (EПереключательКонтроль.РАБОТА_1):
-                    case (EПереключательКонтроль.РАБОТА_2):
-                        {
-
-                            return Питание && !(BMBParameters.ЛампочкаДк && BMBParameters.ПереключательРаботаКонтроль == 1
-                            || КнопкаШлейфДК);
-                        }
-                    case (EПереключательКонтроль.ТЧ):
-                        {
-                            return false;
-                        }
-                    case (EПереключательКонтроль.ДК):
-                        {
-                            return false;
-                        }
+                    case 1:
+                    case 2:
+                    {
+                        return Питание && !(BMBParameters.ЛампочкаДк && BMBParameters.ПереключательРаботаКонтроль == 1
+                                            || КнопкаШлейфДК == 3);
+                    }
+                    case 4:
+                    {
+                        return false;
+                    }
+                    case 3:
+                    {
+                        return false;
+                    }
                 }
-                return false;     
+                return false;
             }
         }
+
         public static bool ЛампочкаСинхрТЧ
         {
             get
             {
                 switch (ПереключательКонтроль)
                 {
-                    case (EПереключательКонтроль.РАБОТА_1):
-                    case (EПереключательКонтроль.РАБОТА_2):
-                        {
-
-                            return Питание && (КнопкаШлейфТЧ);
-                        }
-                    case (EПереключательКонтроль.ТЧ):
-                        {
-                            return Питание && (КнопкаШлейфДК || (!TLF_TCHParametrs.БМА1ПередачаКаналТЧ));
-                        }
+                    case 1:
+                    case 6:
+                    {
+                        return Питание && (КнопкаШлейфТЧ == 3);
+                    }
+                    case 4:
+                    {
+                        return Питание && (КнопкаШлейфДК == 3 || (!TLF_TCHParametrs.БМА1ПередачаКаналТЧ));
+                    }
                 }
                 return false;
             }
         }
+
         public static bool ЛампочкаСинхрДК = false;
+
         public static bool ЛампочкаТЧБ
         {
             get
             {
                 switch (ПереключательКонтроль)
                 {
-                    case (EПереключательКонтроль.РАБОТА_1):
-                    case (EПереключательКонтроль.РАБОТА_2):
-                        {
-
-                            return Питание && (BMBParameters.ЛампочкаТч && 
-                            КнопкаШлейфТЧ && BMBParameters.ПереключательРаботаКонтроль == 1);
-                        }
-                    case (EПереключательКонтроль.ТЧ):
-                        {
-                            return false;
-                        }
-                    case (EПереключательКонтроль.ДК):
-                        {
-                            return false;
-                        }
+                    case 1:
+                    case 6:
+                    {
+                        return Питание && (BMBParameters.ЛампочкаТч &&
+                                           КнопкаШлейфТЧ == 3 && BMBParameters.ПереключательРаботаКонтроль == 1);
+                    }
+                    case 4:
+                    {
+                        return false;
+                    }
+                    case 3:
+                    {
+                        return false;
+                    }
                 }
                 return false;
             }
         }
+
         public static bool ЛампочкаФЗ
         {
-              get
+            get
             {
                 switch (ПереключательКонтроль)
                 {
-                    case (EПереключательКонтроль.РАБОТА_1):
-                    case (EПереключательКонтроль.РАБОТА_2):
-                        {
-                            return Питание && (КнопкаШлейфТЧ);
-                        }
-                    case (EПереключательКонтроль.ТЧ):
-                        {
-                            return false;
-                        }
-                    case (EПереключательКонтроль.ДК):
-                        {
-                            return false;
-                        }
+                    case 1:
+                    case 6:
+                    {
+                        return Питание && (КнопкаШлейфТЧ == 3);
+                    }
+                    case 4:
+                    {
+                        return false;
+                    }
+                    case 3:
+                    {
+                        return false;
+                    }
                 }
                 return false;
             }
-            
         }
+
         public static bool ЛампочкаПрдТЧ
         {
             get
             {
                 switch (ПереключательКонтроль)
                 {
-                    case (EПереключательКонтроль.РАБОТА_1):
-                    case (EПереключательКонтроль.РАБОТА_2):
-                        {
-                            return Питание
-                                && !(КнопкаШлейфТЧ
-                                && BMBParameters.ПереключательРаботаКонтроль == 1
-                                && BMBParameters.КнопкаПередачаВызоваТч == СостоянияЭлементов.БМБ.Кнопка.Горит
-                                && BMBParameters.КнопкаСлСвязь == СостоянияЭлементов.БМБ.Кнопка.Горит);
-                        }
-                    case (EПереключательКонтроль.ТЧ):
-                        {
-                            return false;
-                        }
-                    case (EПереключательКонтроль.ДК):
-                        {
-                            return false;
-                        }
+                    case 1:
+                    case 6:
+                    {
+                        return Питание
+                               && !(КнопкаШлейфТЧ == 3
+                                    && BMBParameters.ПереключательРаботаКонтроль == 1
+                                    && BMBParameters.КнопкаПередачаВызоваТч == СостоянияЭлементов.БМБ.Кнопка.Горит
+                                    && BMBParameters.КнопкаСлСвязь == СостоянияЭлементов.БМБ.Кнопка.Горит);
+                    }
+                    case 4:
+                    {
+                        return false;
+                    }
+                    case 3:
+                    {
+                        return false;
+                    }
                 }
                 return false;
             }
         }
+
         public static bool ЛампочкаПрмТЧ
         {
             get
             {
                 switch (ПереключательКонтроль)
                 {
-                    case (EПереключательКонтроль.РАБОТА_1):
-                    case (EПереключательКонтроль.РАБОТА_2):
-                        {
-                            return Питание && !КнопкаШлейфТЧ;
-                        }
-                    case (EПереключательКонтроль.ТЧ):
-                        {
-                            return false;
-                        }
-                    case (EПереключательКонтроль.ДК):
-                        {
-                            return false;
-                        }
+                    case 1:
+                    case 2:
+                    {
+                        return Питание && КнопкаШлейфТЧ != 3;
+                    }
+                    case 4:
+                    {
+                        return false;
+                    }
+                    case 3:
+                    {
+                        return false;
+                    }
                 }
                 return false;
                 //        && !TLF_TCHParametrs.БМА1ПриемКаналТЧ;
-
             }
         }
+
         public static bool ЛампочкаПрдДК
         {
             get
             {
                 switch (ПереключательКонтроль)
                 {
-                    case (EПереключательКонтроль.РАБОТА_1):
-                    case (EПереключательКонтроль.РАБОТА_2):
-                        {
-                            return Питание//N15Parameters.ЛампочкаБМА_1                            
-                            && !(КнопкаШлейфДК
-                            && BMBParameters.ПереключательРаботаКонтроль == 1
-                            && BMBParameters.КнопкаПередачаВызоваДк == СостоянияЭлементов.БМБ.Кнопка.Горит
-                            && BMBParameters.КнопкаСлСвязь == СостоянияЭлементов.БМБ.Кнопка.Горит);
-                        }
-                    case (EПереключательКонтроль.ТЧ):
-                        {
-                            return false;
-                        }
-                    case (EПереключательКонтроль.ДК):
-                        {
-                            return false;
-                        }
+                    case 1:
+                    case 6:
+                    {
+                        return Питание //N15Parameters.ЛампочкаБМА_1                            
+                               && !(КнопкаШлейфДК == 3
+                                    && BMBParameters.ПереключательРаботаКонтроль == 1
+                                    && BMBParameters.КнопкаПередачаВызоваДк == СостоянияЭлементов.БМБ.Кнопка.Горит
+                                    && BMBParameters.КнопкаСлСвязь == СостоянияЭлементов.БМБ.Кнопка.Горит);
+                    }
+                    case 4:
+                    {
+                        return false;
+                    }
+                    case 3:
+                    {
+                        return false;
+                    }
                 }
                 return false;
             }
         }
+
         public static bool ЛампочкаПрмФР
         {
             get
-            {             
+            {
                 switch (ПереключательКонтроль)
                 {
-                    case (EПереключательКонтроль.РАБОТА_1):
-                    case (EПереключательКонтроль.РАБОТА_2):
-                        {
-                            return Питание//N15Parameters.ЛампочкаБМА_1                            
-                            && КнопкаШлейфТЧ;
-                        }
-                    case (EПереключательКонтроль.ТЧ):
-                        {
-                            return false;
-                        }
-                    case (EПереключательКонтроль.ДК):
-                        {
-                            return false;
-                        }
+                    case 1:
+                    case 2:
+                    {
+                        return Питание //N15Parameters.ЛампочкаБМА_1                            
+                               && КнопкаШлейфТЧ == 3;
+                    }
+                    case 4:
+                    {
+                        return false;
+                    }
+                    case 3:
+                    {
+                        return false;
+                    }
                 }
                 return false;
             }
         }
+
         public static bool ЛампочкаПрмДК1
         {
             get
             {
                 switch (ПереключательКонтроль)
                 {
-                    case (EПереключательКонтроль.РАБОТА_1):
-                    case (EПереключательКонтроль.РАБОТА_2):
-                        {
-                            return Питание && !(BMBParameters.ЛампочкаДк && BMBParameters.ПереключательРаботаКонтроль == 1
-                            || КнопкаШлейфДК);
-                        }
-                    case (EПереключательКонтроль.ТЧ):
-                        {
-                            return false;
-                        }
-                    case (EПереключательКонтроль.ДК):
-                        {
-                            return false;
-                        }
+                    case 1:
+                    case 2:
+                    {
+                        return Питание && !(BMBParameters.ЛампочкаДк && BMBParameters.ПереключательРаботаКонтроль == 1
+                                            || КнопкаШлейфДК == 3);
+                    }
+                    case 4:
+                    {
+                        return false;
+                    }
+                    case 3:
+                    {
+                        return false;
+                    }
                 }
                 return false;
             }
         }
+
         public static bool ЛампочкаПрмДК2 = false;
         public static bool ЛампочкаПитание_5В = false;
         public static bool ЛампочкаПитание_10В = false;
@@ -449,27 +592,28 @@ namespace R440O.Parameters
 
 
         private static IDisposable timer_ЛампочкаКонтрольНенорм = null;
-        public static bool _ЛампочкаКонтрольНенорм = true;
+
+        private static bool _лампочкаКонтрольНенорм = true;
+
         public static bool ЛампочкаКонтрольНенорм
         {
             get
             {
-                if (Питание//N15Parameters.ЛампочкаБМА_1
-                    && (ПереключательКонтроль > EПереключательКонтроль.РАБОТА_1
-                  && ПереключательКонтроль < EПереключательКонтроль.РАБОТА_2)
-                    && _ЛампочкаКонтрольНенорм)
+                if (Питание //N15Parameters.ЛампочкаБМА_1
+                    && (ПереключательКонтроль > 1 && ПереключательКонтроль < 6)
+                    && _лампочкаКонтрольНенорм)
                 {
                     timer_ЛампочкаКонтрольНенорм = EasyTimer.SetTimeout(() =>
                     {
-                        _ЛампочкаКонтрольНорм = true;
-                        Refresh();
+                        _лампочкаКонтрольНорм = true;
+                        OnParameterChanged();
                     }, 4000);
                     timer_ЛампочкаКонтрольНенорм = EasyTimer.SetTimeout(() =>
                     {
-                        _ЛампочкаКонтрольНенорм = false;
-                        Refresh();
+                        _лампочкаКонтрольНенорм = false;
+                        OnParameterChanged();
                     }, 8000);
-                   return true;
+                    return true;
                 }
                 else
                 {
@@ -477,18 +621,18 @@ namespace R440O.Parameters
                 }
                 //return _ЛампочкаКонтрольНенорм;
             }
-
+            set { _лампочкаКонтрольНенорм = value; }
         }
 
-        public static bool _ЛампочкаКонтрольНорм = false;
+        private static bool _лампочкаКонтрольНорм = false;
+
         public static bool ЛампочкаКонтрольНорм
         {
             get
             {
                 if (Питание
-                    && (ПереключательКонтроль > EПереключательКонтроль.РАБОТА_1
-                  && ПереключательКонтроль < EПереключательКонтроль.РАБОТА_2)
-                    && _ЛампочкаКонтрольНорм)
+                    && (ПереключательКонтроль > 1 && ПереключательКонтроль < 6)
+                    && _лампочкаКонтрольНорм)
                 {
                     return true;
                 }
@@ -497,99 +641,89 @@ namespace R440O.Parameters
                     return false;
                 }
             }
+            set { _лампочкаКонтрольНорм = value; }
         }
 
         public static bool ЛампочкаКонтрольТест
         {
-            get
-            {
-                return Питание &&
-                    ПереключательКонтроль == EПереключательКонтроль.ТЕСТ;
-            }
+            get { return Питание && ПереключательКонтроль == 2; }
         }
+
         public static bool ЛампочкаКонтрольДК
         {
-            get
-            {
-                return Питание &&
-                    ПереключательКонтроль == EПереключательКонтроль.ДК;
-            }
+            get { return Питание && ПереключательКонтроль == 3; }
         }
+
         public static bool ЛампочкаКонтрольТЧ
         {
-            get
-            {
-                return Питание &&
-                    ПереключательКонтроль == EПереключательКонтроль.ТЧ;
-            }
+            get { return Питание && ПереключательКонтроль == 4; }
         }
+
         public static bool ЛампочкаКонтрольКомпл
         {
-            get
-            {
-                return Питание &&
-                    ПереключательКонтроль == EПереключательКонтроль.КОМПЛ;
-            }
+            get { return Питание && ПереключательКонтроль == 5; }
         }
 
         public static bool ЛампочкаРекуррента15
         {
-            get
-            {
-                return Питание &&
-                    ПереключательРекуррента == EПереключательРекуррента._15;
-            }
+            get { return Питание && ПереключательРекуррента == 1; }
         }
+
         public static bool ЛампочкаРекуррента31
         {
             get
             {
                 return Питание &&
-                    ПереключательРекуррента == EПереключательРекуррента._31;
+                       ПереключательРекуррента == 2;
             }
         }
+
         public static bool ЛампочкаРекуррента511
         {
             get
             {
                 return Питание &&
-                    ПереключательРекуррента == EПереключательРекуррента._511;
+                       ПереключательРекуррента == 3;
             }
         }
+
         public static bool ЛампочкаРекуррента1023
         {
             get
             {
                 return Питание &&
-                    ПереключательРекуррента == EПереключательРекуррента._1023;
+                       ПереключательРекуррента == 4;
             }
         }
 
         public static bool ЛампочкаАвтомКоманда1 = false;
         public static bool ЛампочкаАвтомКоманда2 = false;
+
         public static bool ЛампочкаИсправно
         {
-            get
-            {
-                return Питание;
-            }
+            get { return Питание; }
         }
+
         public static bool ЛампочкаНеисправно = false;
         public static bool ЛампочкаРРР = false;
         public static bool ЛампочкаДист = false;
 
-
         #endregion
 
-        public delegate void VoidVoidSignature();
-        public static event VoidVoidSignature RefreshForm;
+        public delegate void ParameterChangedHandler();
 
-        public static void Refresh()
+        public static event ParameterChangedHandler ParameterChanged;
+
+        private static void OnParameterChanged()
         {
-            if (RefreshForm != null)
-                RefreshForm();
+            var handler = ParameterChanged;
+            if (handler != null) handler();
         }
 
+        public static void ResetParameters()
+        {
+            OnParameterChanged();
+        }
 
         public static void DisposeAllTimers()
         {
@@ -599,8 +733,8 @@ namespace R440O.Parameters
 
         public static void ResetLampsValue()
         {
-            _ЛампочкаКонтрольНенорм = N15Parameters.ЛампочкаБМА_1;
-            _ЛампочкаКонтрольНорм = !_ЛампочкаКонтрольНенорм;
+            ЛампочкаКонтрольНенорм = N15Parameters.ЛампочкаБМА_1;
+            ЛампочкаКонтрольНорм = !ЛампочкаКонтрольНенорм;
         }
     }
 }

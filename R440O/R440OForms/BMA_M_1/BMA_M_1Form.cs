@@ -3,7 +3,9 @@
 //      R440O station.
 // </copyright>
 //-----------------------------------------------------------------------
-using R440O.trash;
+
+using R440O.BaseClasses;
+
 namespace R440O.R440OForms.BMA_M_1
 {
     using System.Windows.Forms;
@@ -17,16 +19,16 @@ namespace R440O.R440OForms.BMA_M_1
     /// <summary>
     /// Форма блока БМА-М-1
     /// </summary>
-    public partial class BMA_M_1Form : Form
+    public partial class BMA_M_1Form : Form, IRefreshableForm
     {
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="BMA_M_1Form"/>.
         /// </summary>
         public BMA_M_1Form()
         {
-            this.InitializeComponent();
-            BMA_M_1Parameters.RefreshForm += RefreshForm;
-            RefreshForm();
+            InitializeComponent();
+            BMA_M_1Parameters.ParameterChanged += RefreshFormElements;
+            RefreshFormElements();
          
         }
 
@@ -150,50 +152,55 @@ namespace R440O.R440OForms.BMA_M_1
         #endregion
 
         #region Кнопки
+
         private void КнопкаШлейфТЧ_Click(object sender, System.EventArgs e)
         {
-            BMA_M_1Parameters.КнопкаШлейфТЧ = !BMA_M_1Parameters.КнопкаШлейфТЧ;
+            BMA_M_1Parameters.КнопкаШлейфТЧ++;
         }
 
         private void КнопкаШлейфДК_Click(object sender, System.EventArgs e)
         {
-            BMA_M_1Parameters.КнопкаШлейфДК = !BMA_M_1Parameters.КнопкаШлейфДК;
+            BMA_M_1Parameters.КнопкаШлейфДК++;
         }
 
         private void КнопкаПроверка_MouseUp(object sender, MouseEventArgs e)
         {
-            this.КнопкаПроверка.BackgroundImage = ControlElementImages.buttonSquareYellow;
-            this.КнопкаПроверка.Text = "1";
+            КнопкаПроверка.BackgroundImage = ControlElementImages.buttonSquareYellow;
+            КнопкаПроверка.Text = "1";
         }
 
         private void КнопкаПроверка_MouseDown(object sender, MouseEventArgs e)
         {
-            this.КнопкаПроверка.BackgroundImage = null;
+            КнопкаПроверка.BackgroundImage = null;
+            КнопкаПроверка.Text = string.Empty;
+            BMA_M_1Parameters.КнопкаПроверка = true;
         }
+
 
         private void КнопкаПитаниеВЫКЛ_MouseDown(object sender, MouseEventArgs e)
         {
-            this.КнопкаПитаниеВЫКЛ.BackgroundImage = null;
+            BMA_M_1Parameters.КнопкаПитаниеВыкл++;
         }
 
         private void КнопкаПитаниеВЫКЛ_MouseUp(object sender, MouseEventArgs e)
         {
-            BMA_M_1Parameters.Питание = false;
+            BMA_M_1Parameters.КнопкаПитаниеВыкл--;
         }
 
         private void КнопкаПитаниеВКЛ_MouseDown(object sender, MouseEventArgs e)
-        {            
-            this.КнопкаПитаниеВКЛ.BackgroundImage = null;
+        {
+            BMA_M_1Parameters.КнопкаПитаниеВкл++;
         }
 
         private void КнопкаПитаниеВКЛ_MouseUp(object sender, MouseEventArgs e)
-        {           
-            BMA_M_1Parameters.Питание = true;
+        {
+            BMA_M_1Parameters.КнопкаПитаниеВкл--;
         }
+
         #endregion
 
 
-        public void RefreshForm()
+        public void RefreshFormElements()
         {
             #region Переключатели
             var angle = (int)BMA_M_1Parameters.ПереключательКонтроль * 30 - 100;
@@ -270,37 +277,103 @@ namespace R440O.R440OForms.BMA_M_1
             #endregion
 
             #region Кнопки
-            if (BMA_M_1Parameters.КнопкаШлейфТЧ || BMA_M_1Parameters.ЛампочкаКонтрольКомпл)
+
+            switch (BMA_M_1Parameters.КнопкаШлейфТЧ)
             {
-                this.КнопкаШлейфТЧ.BackgroundImage = null;
-                this.КнопкаШлейфТЧ.Text = string.Empty;
-            }
-            else
-            {
-                this.КнопкаШлейфТЧ.BackgroundImage = ControlElementImages.buttonSquareYellow;
-                this.КнопкаШлейфТЧ.Text = "ТЧ";
+                case 0:
+                    КнопкаШлейфТЧ.BackgroundImage = ControlElementImages.buttonSquareYellow;
+                    КнопкаШлейфТЧ.Text = "ТЧ";
+                    КнопкаШлейфТЧ.Font = new Font(FontFamily.GenericSansSerif, 10);
+                    break;
+                case 1:
+                    КнопкаШлейфТЧ.BackgroundImage = ControlElementImages.buttonSquareYellowSmallOff;
+                    КнопкаШлейфТЧ.Text = "ТЧ";
+                    КнопкаШлейфТЧ.Font = new Font(FontFamily.GenericSansSerif, 8);
+                    break;
+                case 2:
+                    КнопкаШлейфТЧ.BackgroundImage = ControlElementImages.buttonSquareYellowOn;
+                    КнопкаШлейфТЧ.Text = "ТЧ";
+                    КнопкаШлейфТЧ.Font = new Font(FontFamily.GenericSansSerif, 10);
+                    break;
+                case 3:
+                    КнопкаШлейфТЧ.BackgroundImage = null;
+                    КнопкаШлейфТЧ.Text = string.Empty;
+                    break;
             }
 
-            if (BMA_M_1Parameters.КнопкаШлейфДК || BMA_M_1Parameters.ЛампочкаКонтрольКомпл)
+            switch (BMA_M_1Parameters.КнопкаШлейфДК)
             {
-                this.КнопкаШлейфДК.BackgroundImage = null;
-                this.КнопкаШлейфДК.Text = string.Empty;
-            }
-            else
-            {
-                this.КнопкаШлейфДК.BackgroundImage = ControlElementImages.buttonSquareYellow;
-                this.КнопкаШлейфДК.Text = "ДК";
+                case 0:
+                    КнопкаШлейфДК.BackgroundImage = ControlElementImages.buttonSquareYellow;
+                    КнопкаШлейфДК.Text = "ДК";
+                    КнопкаШлейфДК.Font = new Font(FontFamily.GenericSansSerif, 10);
+                    break;
+                case 1:
+                    КнопкаШлейфДК.BackgroundImage = ControlElementImages.buttonSquareYellowSmallOff;
+                    КнопкаШлейфДК.Text = "ДК";
+                    КнопкаШлейфДК.Font = new Font(FontFamily.GenericSansSerif, 8);
+                    break;
+                case 2:
+                    КнопкаШлейфДК.BackgroundImage = ControlElementImages.buttonSquareYellowOn;
+                    КнопкаШлейфДК.Text = "ДК";
+                    КнопкаШлейфДК.Font = new Font(FontFamily.GenericSansSerif, 10);
+                    break;
+                case 3:
+                    КнопкаШлейфДК.BackgroundImage = null;
+                    КнопкаШлейфДК.Text = string.Empty;
+                    break;
             }
 
-            this.КнопкаПитаниеВКЛ.BackgroundImage = BMA_M_1Parameters.Питание 
-                ? ControlElementImages.buttonSquareBlueOn
-                : ControlElementImages.buttonSquareBlueOff;
+            switch (BMA_M_1Parameters.КнопкаПитаниеВкл)
+            {
+                case 0:
+                    КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
+                    КнопкаПитаниеВКЛ.Text = "ВКЛ";
+                    КнопкаПитаниеВКЛ.Font = new Font(FontFamily.GenericSansSerif, 10);
+                    break;
+                case 1:
+                    КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOffSmall;
+                    КнопкаПитаниеВКЛ.Text = "ВКЛ";
+                    КнопкаПитаниеВКЛ.Font = new Font(FontFamily.GenericSansSerif, 8);
+                    break;
+                case 2:
+                    КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOn;
+                    КнопкаПитаниеВКЛ.Text = "ВКЛ";
+                    КнопкаПитаниеВКЛ.Font = new Font(FontFamily.GenericSansSerif, 10);
+                    break;
+                case 3:
+                    КнопкаПитаниеВКЛ.BackgroundImage = null;
+                    КнопкаПитаниеВКЛ.Text = string.Empty;
+                    break;
+            }
 
-            this.КнопкаПитаниеВЫКЛ.BackgroundImage = !BMA_M_1Parameters.Питание && BMA_M_1Parameters.ПитаниеН502 ?
-                ControlElementImages.buttonSquareBlueOn : ControlElementImages.buttonSquareBlueOff;
+            switch (BMA_M_1Parameters.КнопкаПитаниеВыкл)
+            {
+                case 0:
+                    КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOff;
+                    КнопкаПитаниеВЫКЛ.Text = "ВЫКЛ";
+                    КнопкаПитаниеВЫКЛ.Font = new Font(FontFamily.GenericSansSerif, 10);
+                    break;
+                case 1:
+                    КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOffSmall;
+                    КнопкаПитаниеВЫКЛ.Text = "ВЫКЛ";
+                    КнопкаПитаниеВЫКЛ.Font = new Font(FontFamily.GenericSansSerif, 8);
+                    break;
+                case 2:
+                    КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOn;
+                    КнопкаПитаниеВЫКЛ.Text = "ВЫКЛ";
+                    КнопкаПитаниеВЫКЛ.Font = new Font(FontFamily.GenericSansSerif, 10);
+                    break;
+                case 3:
+                    КнопкаПитаниеВЫКЛ.BackgroundImage = null;
+                    КнопкаПитаниеВЫКЛ.Text = string.Empty;
+                    break;
+            }
+
             #endregion           
 
             #region Лампочки
+
             PropertyInfo[] fieldList = typeof(BMA_M_1Parameters).GetProperties();
             foreach (Control item in Panel.Controls)
             {
@@ -322,6 +395,7 @@ namespace R440O.R440OForms.BMA_M_1
                     }
                 }
             }
+
             #endregion
 
         }

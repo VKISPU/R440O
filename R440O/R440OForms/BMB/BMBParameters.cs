@@ -24,7 +24,7 @@ namespace R440O.R440OForms.BMB
                     ОбнулитьНабор();
                     ПереданнаяКоманда = string.Empty;
                 }
-                BMA_M_1Parameters.Refresh();
+                BMA_M_1Parameters.ResetParameters();
                 BMA_M_2Parameters.Refresh();
                 ResetParameters();
             }
@@ -102,7 +102,7 @@ namespace R440O.R440OForms.BMB
                     передачаЦифр = false;
                 }
                 _кнопкаПередачаВызоваТч = value;
-                BMA_M_1Parameters.Refresh();
+                BMA_M_1Parameters.ResetParameters();
                 BMA_M_2Parameters.Refresh();
                 if (RefreshForm != null) RefreshForm();
             }
@@ -132,7 +132,7 @@ namespace R440O.R440OForms.BMB
                     передачаЦифр = false;
                 }
                 _кнопкаПередачаВызоваДк = value;
-                BMA_M_1Parameters.Refresh();
+                BMA_M_1Parameters.ResetParameters();
                 BMA_M_2Parameters.Refresh();
                 if (RefreshForm != null) RefreshForm();
             }
@@ -157,7 +157,7 @@ namespace R440O.R440OForms.BMB
             {
                 ОбнулитьНабор();
                 _кнопкаСлСвязь = value;
-                BMA_M_1Parameters.Refresh();
+                BMA_M_1Parameters.ResetParameters();
                 BMA_M_2Parameters.Refresh();
                 if (RefreshForm != null) RefreshForm();
             }
@@ -181,7 +181,7 @@ namespace R440O.R440OForms.BMB
                 ОбнулитьНабор();
                 ПереданнаяКоманда = string.Empty;
                 _кнопкаПитание = value;
-                BMA_M_1Parameters.Refresh();
+                BMA_M_1Parameters.ResetParameters();
                 BMA_M_2Parameters.Refresh();
                 if (RefreshForm != null) RefreshForm();
             }
@@ -239,7 +239,7 @@ namespace R440O.R440OForms.BMB
             {
                 return ( БМАПодключенВерно() &&
                             (
-                           (BMA_M_1Parameters.КнопкаШлейфДК ||
+                           (BMA_M_1Parameters.КнопкаШлейфДК == 3||
                            N18_MParameters.Проверить_комутацию("КОНТРОЛЬ ПРД ВОЗБ ТЛФ",
                            "1кан Коммутация ПРМ режимов ТЛФ БМА1") &&
                            N18_MParameters.ПереключательПРД == 3 &&
@@ -264,7 +264,7 @@ namespace R440O.R440OForms.BMB
                 return _мерцаниеЛампочкиТч ||  КнопкаПитание == Кнопка.Горит && КнопкаПередачаВызоваТч == Кнопка.Горит
                        && (ПереключательРаботаКонтроль == 2 ||
                            (КнопкаСлСвязь == Кнопка.Горит && БМАПодключенВерно() &&
-                            (BMA_M_1Parameters.КнопкаШлейфТЧ && ПереключательНаправление == 1
+                            (BMA_M_1Parameters.КнопкаШлейфТЧ == 3 && ПереключательНаправление == 1
                             || BMA_M_2Parameters.КнопкаШлейфТЧ && ПереключательНаправление == 2)));
             }
         }

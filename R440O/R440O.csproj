@@ -1158,6 +1158,7 @@
     <Content Include="Resources\buttonSquareBlackLarge.png" />
     <None Include="Resources\buttonSquareBlack_small.png" />
     <None Include="Resources\buttonSquareLightBlue.png" />
+    <None Include="Resources\buttonSquareBlueOffSmall.png" />
     <Content Include="Resources\buttonSquareRed.png" />
     <Content Include="Resources\buttonSquareRedLarge.png" />
     <None Include="Resources\buttonSquareRed_small.png" />
@@ -1180,6 +1181,7 @@
     <None Include="Resources\kabel_profile%28K12%29.png" />
     <None Include="Resources\kabel_input%28K11%291th.png" />
     <None Include="Resources\kabel_input%28K12%291th.png" />
+    <None Include="Resources\buttonSquareYellowSmallOff.png" />
     <Content Include="Resources\lampType13OnGreen.png" />
     <Content Include="Resources\N18_M_Gnezdo.png" />
     <None Include="Resources\panel.png" />
