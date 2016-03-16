@@ -13,7 +13,10 @@ namespace R440O.Parameters
         /// В принципе это не "включен", а состояние при котором он может быть включен нажатием кнопок, т.е. питание подается
         /// а "Питание" это как раз "включен"
         /// </summary>
-        public static bool Включен => N502BParameters.ЭлектрообуродованиеВключено && N502BParameters.ВыпрямительВключен;
+        public static bool Включен 
+        {
+            get { return N502BParameters.ЭлектрообуродованиеВключено && N502BParameters.ВыпрямительВключен; }
+        }
 
         #region Питание
 
@@ -47,6 +50,20 @@ namespace R440O.Parameters
 
         #region ПереключательКонтроль
 
+        private static void ПрокеркаКомплекта()
+        {
+            _лампочкаКонтрольНорм = true;
+            _лампочкаКонтрольНенорм = true;
+            if (timer_ЛампочкаКонтрольНенорм != null)
+                timer_ЛампочкаКонтрольНенорм.Dispose();
+            timer_ЛампочкаКонтрольНенорм = EasyTimer.SetTimeout(() =>
+            {
+                _лампочкаКонтрольНенорм = false;
+                OnParameterChanged();
+            }, 4000);
+        }
+
+        private static IDisposable timer_ЛампочкаКонтрольНенорм = null;
         private static int _переключательКонтроль = 1;
 
         /// <summary>
@@ -59,11 +76,12 @@ namespace R440O.Parameters
             {
                 if (value >= 1 && value <= 6)
                 {
-                    _переключательКонтроль = value;
-                    ЛампочкаКонтрольНенорм = true;
-                    ЛампочкаКонтрольНорм = false;
-                    if (timer_ЛампочкаКонтрольНенорм != null)
-                        timer_ЛампочкаКонтрольНенорм.Dispose();
+                    _переключательКонтроль = value;                    
+                    if (value != 1 && value != 6)
+                        ПрокеркаКомплекта();
+                    //ЛампочкаКонтрольНенорм = true;
+                    //ЛампочкаКонтрольНорм = false;
+                   
                     OnParameterChanged();
                 }
             }
@@ -242,12 +260,36 @@ namespace R440O.Parameters
         private static int _кнопкаПитаниеВкл;
         private static bool _кнопкаПроверка;
 
+        private static IDisposable timer_лампочкаАвтомКоманда1ON = null;
+        private static IDisposable timer_лампочкаАвтомКоманда1OFF = null;
+        private static void Проверка_Автокоманда1()
+        {
+            _лампочкаАвтомКоманда1 = false;
+            if (timer_лампочкаАвтомКоманда1ON != null)
+                timer_лампочкаАвтомКоманда1ON.Dispose();
+
+            if (timer_лампочкаАвтомКоманда1OFF != null)
+                timer_лампочкаАвтомКоманда1OFF.Dispose();
+
+            timer_лампочкаАвтомКоманда1ON =  EasyTimer.SetTimeout(() =>
+                {
+                    _лампочкаАвтомКоманда1 = true;  
+                    OnParameterChanged();
+                }, 2000);
+           timer_лампочкаАвтомКоманда1OFF =
+                       EasyTimer.SetTimeout(() =>
+                       {
+                           _лампочкаАвтомКоманда1 = false;
+                           OnParameterChanged();
+                       }, 5000);
+        }
         public static bool КнопкаПроверка
         {
             get { return _кнопкаПроверка; }
             set
             {
                 _кнопкаПроверка = value;
+                Проверка_Автокоманда1();
                 OnParameterChanged();
             }
         }
@@ -313,7 +355,12 @@ namespace R440O.Parameters
         /// </summary>
         public static int КнопкаШлейфДК
         {
-            get { return _кнопкаШлейфДК; }
+            get {
+                // Подсветка при проверке комплекта
+                if (ПереключательКонтроль == 5 && Питание)
+                    return _кнопкаШлейфДК == 3 ? 3 : 2;
+                return _кнопкаШлейфДК; 
+            }
             set
             {
                 if (_кнопкаШлейфДК == 0 || _кнопкаШлейфДК == 2)
@@ -335,7 +382,13 @@ namespace R440O.Parameters
         /// </summary>
         public static int КнопкаШлейфТЧ
         {
-            get { return _кнопкаШлейфТЧ; }
+            get 
+            {
+                // Подсветка при проверке комплекта
+                if (ПереключательКонтроль == 5 && Питание)
+                    return _кнопкаШлейфТЧ == 3 ? 3 : 2;
+                return _кнопкаШлейфТЧ;
+            }
             set
             {
                 if (_кнопкаШлейфТЧ == 0 || _кнопкаШлейфТЧ == 2)
@@ -363,7 +416,7 @@ namespace R440O.Parameters
                 switch (ПереключательКонтроль)
                 {
                     case 1:
-                    case 2:
+                    case 6:
                     {
                         return Питание && !(BMBParameters.ЛампочкаДк && BMBParameters.ПереключательРаботаКонтроль == 1
                                             || КнопкаШлейфДК == 3);
@@ -461,11 +514,12 @@ namespace R440O.Parameters
                     case 1:
                     case 6:
                     {
-                        return Питание
+                        return Питание && КнопкаШлейфТЧ != 3;
+                        /*return Питание
                                && !(КнопкаШлейфТЧ == 3
                                     && BMBParameters.ПереключательРаботаКонтроль == 1
                                     && BMBParameters.КнопкаПередачаВызоваТч == СостоянияЭлементов.БМБ.Кнопка.Горит
-                                    && BMBParameters.КнопкаСлСвязь == СостоянияЭлементов.БМБ.Кнопка.Горит);
+                                    && BMBParameters.КнопкаСлСвязь == СостоянияЭлементов.БМБ.Кнопка.Горит);*/
                     }
                     case 4:
                     {
@@ -487,7 +541,7 @@ namespace R440O.Parameters
                 switch (ПереключательКонтроль)
                 {
                     case 1:
-                    case 2:
+                    case 6:
                     {
                         return Питание && КнопкаШлейфТЧ != 3;
                     }
@@ -540,7 +594,7 @@ namespace R440O.Parameters
                 switch (ПереключательКонтроль)
                 {
                     case 1:
-                    case 2:
+                    case 6:
                     {
                         return Питание //N15Parameters.ЛампочкаБМА_1                            
                                && КнопкаШлейфТЧ == 3;
@@ -565,7 +619,7 @@ namespace R440O.Parameters
                 switch (ПереключательКонтроль)
                 {
                     case 1:
-                    case 2:
+                    case 6:
                     {
                         return Питание && !(BMBParameters.ЛампочкаДк && BMBParameters.ПереключательРаботаКонтроль == 1
                                             || КнопкаШлейфДК == 3);
@@ -590,42 +644,19 @@ namespace R440O.Parameters
         public static bool ЛампочкаПитание_15В = false;
         public static bool ЛампочкаПитание_15Вplus = false;
 
-
-        private static IDisposable timer_ЛампочкаКонтрольНенорм = null;
-
         private static bool _лампочкаКонтрольНенорм = true;
-
         public static bool ЛампочкаКонтрольНенорм
         {
             get
             {
-                if (Питание //N15Parameters.ЛампочкаБМА_1
+                return Питание //N15Parameters.ЛампочкаБМА_1
                     && (ПереключательКонтроль > 1 && ПереключательКонтроль < 6)
-                    && _лампочкаКонтрольНенорм)
-                {
-                    timer_ЛампочкаКонтрольНенорм = EasyTimer.SetTimeout(() =>
-                    {
-                        _лампочкаКонтрольНорм = true;
-                        OnParameterChanged();
-                    }, 4000);
-                    timer_ЛампочкаКонтрольНенорм = EasyTimer.SetTimeout(() =>
-                    {
-                        _лампочкаКонтрольНенорм = false;
-                        OnParameterChanged();
-                    }, 8000);
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-                //return _ЛампочкаКонтрольНенорм;
+                    && _лампочкаКонтрольНенорм;
             }
             set { _лампочкаКонтрольНенорм = value; }
         }
 
         private static bool _лампочкаКонтрольНорм = false;
-
         public static bool ЛампочкаКонтрольНорм
         {
             get
@@ -695,10 +726,54 @@ namespace R440O.Parameters
                        ПереключательРекуррента == 4;
             }
         }
-
-        public static bool ЛампочкаАвтомКоманда1 = false;
-        public static bool ЛампочкаАвтомКоманда2 = false;
-
+        public static bool _лампочкаАвтомКоманда1;
+        public static bool ЛампочкаАвтомКоманда1
+        {
+            get
+            {
+                switch (ПереключательКонтроль)
+                {
+                    case 1:
+                    case 6:
+                        {
+                            return _лампочкаАвтомКоманда1;
+                        }
+                    case 4:
+                        {
+                            return false;
+                        }
+                    case 3:
+                        {
+                            return false;
+                        }
+                }
+                return false;
+            }
+        }
+        public static bool ЛампочкаАвтомКоманда2
+        {
+            get
+            {
+                switch (ПереключательКонтроль)
+                {
+                    case 1:
+                    case 6:
+                        {
+                            return Питание && КнопкаШлейфТЧ != 3 && ПереключательЧастотаВызова == 1
+                               && ПереключательРежимы == 2;
+                        }
+                    case 4:
+                        {
+                            return false;
+                        }
+                    case 3:
+                        {
+                            return false;
+                        }
+                }
+                return false;
+            }
+        }
         public static bool ЛампочкаИсправно
         {
             get { return Питание; }
