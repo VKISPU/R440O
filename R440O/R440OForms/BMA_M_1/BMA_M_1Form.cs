@@ -164,16 +164,13 @@ namespace R440O.R440OForms.BMA_M_1
         }
 
         private void КнопкаПроверка_MouseUp(object sender, MouseEventArgs e)
-        {
-            КнопкаПроверка.BackgroundImage = ControlElementImages.buttonSquareYellow;
-            КнопкаПроверка.Text = "1";
+        {          
+            BMA_M_1Parameters.КнопкаПроверка--;
         }
 
         private void КнопкаПроверка_MouseDown(object sender, MouseEventArgs e)
         {
-            КнопкаПроверка.BackgroundImage = null;
-            КнопкаПроверка.Text = string.Empty;
-            BMA_M_1Parameters.КнопкаПроверка = true;
+            BMA_M_1Parameters.КнопкаПроверка++;
         }
 
 
@@ -367,6 +364,18 @@ namespace R440O.R440OForms.BMA_M_1
                 case 3:
                     КнопкаПитаниеВЫКЛ.BackgroundImage = null;
                     КнопкаПитаниеВЫКЛ.Text = string.Empty;
+                    break;
+            }
+
+            switch (BMA_M_1Parameters.КнопкаПроверка)
+            {
+                case 0:
+                    КнопкаПроверка.BackgroundImage = ControlElementImages.buttonSquareYellow;
+                    КнопкаПроверка.Text = "1";
+                    break;
+                case 1:
+                    КнопкаПроверка.BackgroundImage = null;
+                    КнопкаПроверка.Text = string.Empty;                    
                     break;
             }
 

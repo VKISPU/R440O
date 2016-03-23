@@ -497,7 +497,7 @@
             this.Гнездо1.TabIndex = 54;
             this.Гнездо1.Text = "Б1-1";
             this.toolTip.SetToolTip(this.Гнездо1, "Б1-1");
-            this.Гнездо1.UseVisualStyleBackColor = false;
+            this.Гнездо1.UseVisualStyleBackColor = true;
             this.Гнездо1.Click += new System.EventHandler(this.Гнездо_Click);
             // 
             // Гнездо2
@@ -541,7 +541,7 @@
             this.Гнездо4.Size = new System.Drawing.Size(10, 28);
             this.Гнездо4.TabIndex = 57;
             this.Гнездо4.Text = "ЩВ-2";
-            this.toolTip.SetToolTip(this.Гнездо4, "ЩВ3");
+            this.toolTip.SetToolTip(this.Гнездо4, "ЩВ2");
             this.Гнездо4.UseVisualStyleBackColor = false;
             this.Гнездо4.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -556,7 +556,7 @@
             this.Гнездо5.Size = new System.Drawing.Size(10, 28);
             this.Гнездо5.TabIndex = 58;
             this.Гнездо5.Text = "Б1-1";
-            this.toolTip.SetToolTip(this.Гнездо5, "Б1-2");
+            this.toolTip.SetToolTip(this.Гнездо5, "Б1-1");
             this.Гнездо5.UseVisualStyleBackColor = false;
             this.Гнездо5.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -571,7 +571,7 @@
             this.Гнездо6.Size = new System.Drawing.Size(10, 28);
             this.Гнездо6.TabIndex = 59;
             this.Гнездо6.Text = "ЩВ2";
-            this.toolTip.SetToolTip(this.Гнездо6, "ЩВ2");
+            this.toolTip.SetToolTip(this.Гнездо6, "ЩВ3");
             this.Гнездо6.UseVisualStyleBackColor = false;
             this.Гнездо6.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -587,7 +587,7 @@
             this.Гнездо7.Size = new System.Drawing.Size(10, 28);
             this.Гнездо7.TabIndex = 60;
             this.Гнездо7.Text = "Б1-1";
-            this.toolTip.SetToolTip(this.Гнездо7, "Б1-1");
+            this.toolTip.SetToolTip(this.Гнездо7, "Б1-2");
             this.Гнездо7.UseVisualStyleBackColor = false;
             this.Гнездо7.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -605,6 +605,7 @@
             this.Гнездо8.Size = new System.Drawing.Size(10, 28);
             this.Гнездо8.TabIndex = 61;
             this.Гнездо8.Text = "ЩВ-1";
+            this.toolTip.SetToolTip(this.Гнездо8, "БМА 1");
             this.Гнездо8.UseVisualStyleBackColor = false;
             this.Гнездо8.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -619,6 +620,7 @@
             this.Гнездо9.Size = new System.Drawing.Size(10, 28);
             this.Гнездо9.TabIndex = 62;
             this.Гнездо9.Text = "БМА1";
+            this.toolTip.SetToolTip(this.Гнездо9, "ЩВ1");
             this.Гнездо9.UseVisualStyleBackColor = false;
             this.Гнездо9.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -633,6 +635,7 @@
             this.Гнездо10.Size = new System.Drawing.Size(10, 28);
             this.Гнездо10.TabIndex = 63;
             this.Гнездо10.Text = "ЩВ-1";
+            this.toolTip.SetToolTip(this.Гнездо10, "БМА 2");
             this.Гнездо10.UseVisualStyleBackColor = false;
             this.Гнездо10.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -647,6 +650,7 @@
             this.Гнездо11.Size = new System.Drawing.Size(10, 28);
             this.Гнездо11.TabIndex = 64;
             this.Гнездо11.Text = "К1-2";
+            this.toolTip.SetToolTip(this.Гнездо11, "К1-2");
             this.Гнездо11.UseVisualStyleBackColor = false;
             this.Гнездо11.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -661,6 +665,7 @@
             this.Гнездо12.Size = new System.Drawing.Size(10, 28);
             this.Гнездо12.TabIndex = 65;
             this.Гнездо12.Text = "БМА1";
+            this.toolTip.SetToolTip(this.Гнездо12, "БМА 1");
             this.Гнездо12.UseVisualStyleBackColor = false;
             this.Гнездо12.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -675,6 +680,7 @@
             this.Гнездо13.Size = new System.Drawing.Size(10, 28);
             this.Гнездо13.TabIndex = 66;
             this.Гнездо13.Text = "ЩВ-1";
+            this.toolTip.SetToolTip(this.Гнездо13, "ЩВ1");
             this.Гнездо13.UseVisualStyleBackColor = false;
             this.Гнездо13.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -689,6 +695,7 @@
             this.Гнездо14.Size = new System.Drawing.Size(10, 28);
             this.Гнездо14.TabIndex = 67;
             this.Гнездо14.Text = "К1-2";
+            this.toolTip.SetToolTip(this.Гнездо14, "К1-2");
             this.Гнездо14.UseVisualStyleBackColor = false;
             this.Гнездо14.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -703,6 +710,7 @@
             this.Гнездо15.Size = new System.Drawing.Size(10, 28);
             this.Гнездо15.TabIndex = 68;
             this.Гнездо15.Text = "19";
+            this.toolTip.SetToolTip(this.Гнездо15, "Б1-1");
             this.Гнездо15.UseVisualStyleBackColor = false;
             this.Гнездо15.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -717,6 +725,7 @@
             this.Гнездо16.Size = new System.Drawing.Size(10, 28);
             this.Гнездо16.TabIndex = 69;
             this.Гнездо16.Text = "18";
+            this.toolTip.SetToolTip(this.Гнездо16, "ЩВ1");
             this.Гнездо16.UseVisualStyleBackColor = false;
             this.Гнездо16.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -731,6 +740,7 @@
             this.Гнездо17.Size = new System.Drawing.Size(10, 28);
             this.Гнездо17.TabIndex = 70;
             this.Гнездо17.Text = "17";
+            this.toolTip.SetToolTip(this.Гнездо17, "Б1-2");
             this.Гнездо17.UseVisualStyleBackColor = false;
             this.Гнездо17.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -745,6 +755,7 @@
             this.Гнездо18.Size = new System.Drawing.Size(10, 28);
             this.Гнездо18.TabIndex = 71;
             this.Гнездо18.Text = "16";
+            this.toolTip.SetToolTip(this.Гнездо18, "ЩВ2");
             this.Гнездо18.UseVisualStyleBackColor = false;
             this.Гнездо18.Click += new System.EventHandler(this.Гнездо_Click);
             // 
@@ -759,6 +770,7 @@
             this.Гнездо19.Size = new System.Drawing.Size(10, 28);
             this.Гнездо19.TabIndex = 72;
             this.Гнездо19.Text = "15";
+            this.toolTip.SetToolTip(this.Гнездо19, "Б1-1");
             this.Гнездо19.UseVisualStyleBackColor = false;
             this.Гнездо19.Click += new System.EventHandler(this.Гнездо_Click);
             // 

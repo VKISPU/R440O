@@ -13,7 +13,8 @@ namespace R440O.Parameters
         /// В принципе это не "включен", а состояние при котором он может быть включен нажатием кнопок, т.е. питание подается
         /// а "Питание" это как раз "включен"
         /// </summary>
-        public static bool Включен 
+  
+        public static bool ПитаниеН502
         {
             get { return N502BParameters.ЭлектрообуродованиеВключено && N502BParameters.ВыпрямительВключен; }
         }
@@ -39,10 +40,7 @@ namespace R440O.Parameters
             }
         }
 
-        public static bool ПитаниеН502
-        {
-            get { return N502BParameters.ЭлектрообуродованиеВключено && N502BParameters.ВыпрямительВключен; }
-        }
+
 
         #endregion
 
@@ -258,7 +256,7 @@ namespace R440O.Parameters
         private static int _кнопкаШлейфДК;
         private static int _кнопкаПитаниеВыкл;
         private static int _кнопкаПитаниеВкл;
-        private static bool _кнопкаПроверка;
+        private static int _кнопкаПроверка;
 
         private static IDisposable timer_лампочкаАвтомКоманда1ON = null;
         private static IDisposable timer_лампочкаАвтомКоманда1OFF = null;
@@ -283,13 +281,15 @@ namespace R440O.Parameters
                            OnParameterChanged();
                        }, 5000);
         }
-        public static bool КнопкаПроверка
+        // 0 - отжата, 1 - нажата
+        public static int КнопкаПроверка
         {
             get { return _кнопкаПроверка; }
             set
             {
                 _кнопкаПроверка = value;
-                Проверка_Автокоманда1();
+                if (_кнопкаПроверка == 1 && Питание)
+                    Проверка_Автокоманда1();
                 OnParameterChanged();
             }
         }
@@ -305,11 +305,11 @@ namespace R440O.Parameters
                 if (value < 0 || value > 3) return;
                 if (value - _кнопкаПитаниеВыкл > 0)
                 {
-                    _кнопкаПитаниеВыкл = Включен ? 3 : 1;
+                    _кнопкаПитаниеВыкл = ПитаниеН502 ? 3 : 1;
                 }
                 else
                 {
-                    if (Включен)
+                    if (ПитаниеН502)
                     {
                         _кнопкаПитаниеВыкл = 2;
                         _кнопкаПитаниеВкл = 0;
@@ -333,11 +333,11 @@ namespace R440O.Parameters
                 if (value < 0 || value > 3) return;
                 if (value - _кнопкаПитаниеВкл > 0)
                 {
-                    _кнопкаПитаниеВкл = Включен ? 3 : 1;
+                    _кнопкаПитаниеВкл = ПитаниеН502 ? 3 : 1;
                 }
                 else
                 {
-                    if (Включен)
+                    if (ПитаниеН502)
                     {
                         _кнопкаПитаниеВкл = 2;
                         _кнопкаПитаниеВыкл = 0;
@@ -365,7 +365,7 @@ namespace R440O.Parameters
             {
                 if (_кнопкаШлейфДК == 0 || _кнопкаШлейфДК == 2)
                 {
-                    _кнопкаШлейфДК = Включен ? 3 : 1;
+                    _кнопкаШлейфДК = ПитаниеН502 ? 3 : 1;
                 }
                 else
                 {
@@ -393,7 +393,7 @@ namespace R440O.Parameters
             {
                 if (_кнопкаШлейфТЧ == 0 || _кнопкаШлейфТЧ == 2)
                 {
-                    _кнопкаШлейфТЧ = Включен ? 3 : 1;
+                    _кнопкаШлейфТЧ = ПитаниеН502 ? 3 : 1;
                 }
                 else
                 {
