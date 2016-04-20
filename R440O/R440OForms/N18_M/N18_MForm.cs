@@ -384,7 +384,7 @@ namespace R440O.R440OForms.N18_M
             for (int i = 1; i < 76; i++)
             {
                 номер_гнезда1 = i;
-                номер_гнезда2 = N18_MParameters.Соеденения[i];
+                номер_гнезда2 = N18_MParameters.Соединения[i];
                 if (!Дублирующие[i] && номер_гнезда2 != 0)
                 {
                     foreach (Control item in Panel.Controls)
