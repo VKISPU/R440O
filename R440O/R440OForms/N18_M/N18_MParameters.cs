@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using R440O.BaseClasses;
 
 using System.Collections.Generic;
 namespace R440O.R440OForms.N18_M
@@ -558,6 +559,11 @@ namespace R440O.R440OForms.N18_M
             N15Parameters.ResetDiscret();
             var handler = ParameterChanged;
             if (handler != null) handler();
+        }
+
+        public static void ResetParameters()
+        {
+            OnParameterChanged();
         }
     }
 

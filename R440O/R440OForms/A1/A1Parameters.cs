@@ -1,5 +1,6 @@
 ﻿using R440O.R440OForms.P220_27G_2;
 using R440O.R440OForms.P220_27G_3;
+using R440O.R440OForms.N18_M;
 
 namespace R440O.R440OForms.A1
 {
@@ -186,6 +187,7 @@ namespace R440O.R440OForms.A1
             {
                 _кнопкаСкоростьГР = value;
                 N15Parameters.ResetDiscret();
+                N18_MParameters.ResetParameters();
                 OnParameterChanged();
             }
         }
@@ -197,6 +199,7 @@ namespace R440O.R440OForms.A1
             {
                 _кнопкаСкоростьАб_1ТЛФК = value;
                 N15Parameters.ResetDiscret();
+                N18_MParameters.ResetParameters();
                 OnParameterChanged();
             }
         }

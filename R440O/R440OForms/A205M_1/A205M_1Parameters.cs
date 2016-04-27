@@ -53,73 +53,42 @@ namespace R440O.R440OForms.A205M_1
                 if (Включен && wave >= 1500 && wave <= 51499)
                 {
                     Signal signal;
-                    if (N15InsideParameters.ВыходПередающегоТракта == null)
+                    Signal innerSignal;
+
+                    innerSignal = new Signal();
+                    innerSignal.Level = 20;
+
+                    signal = N15InsideParameters.ВыходПередающегоТракта ?? innerSignal;
+                    switch (ПереключательВидРаботы)
                     {
-                        signal = new Signal();
-                        signal.Level = 20;
-                        //    switch (ПереключательВидРаботы)
-                        //    {
-                        //        case 1:
-                        //            {
-                        //                if (signal.Modulation != Модуляция.ЧТ) signal = null;
-                        //            }
-                        //            break;
-                        //        case 2:
-                        //            {
-                        //                if (signal.Modulation != Модуляция.ЧТ) signal = null;
-                        //            }
-                        //            break;
-                        //        case 3:
-                        //            {
-                        //                if (signal.Modulation != Модуляция.ОФТ ||
-                        //                    !Signal.IsEquivalentSpeed(signal.GroupSpeed, 5.2)) signal = null;
-                        //            }
-                        //            break;
-                        //        case 4:
-                        //            {
-                        //                if (signal.Modulation != Модуляция.ОФТ ||
-                        //                    !Signal.IsEquivalentSpeed(signal.GroupSpeed, 48)) signal = null;
-                        //            }
-                        //            break;
-                        //    }
-                        //}
-                        //else
-                        //{
-                        switch (ПереключательВидРаботы)
-                        {
-                            case 1:
-                                {
-                                    signal.Modulation = Модуляция.ЧТ;
-                                    signal.GroupSpeed = 200;
-                                }
-                                break;
-                            case 2:
-                                {
-                                    signal.Modulation = Модуляция.ЧТ;
-                                    signal.GroupSpeed = 20;
-                                }
-                                break;
-                            case 3:
-                                {
-                                    signal.Modulation = Модуляция.ОФТ;
-                                    signal.GroupSpeed = 4.8;
-                                }
-                                break;
-                            case 4:
-                                {
-                                    signal.Modulation = Модуляция.ОФТ;
-                                    signal.GroupSpeed = 48;
-                                }
-                                break;
-                        }
-                        //}
+                        case 1:
+                            {
+                                signal.Modulation = Модуляция.ЧТ;
+                                signal.GroupSpeed = 200;
+                            }
+                            break;
+                        case 2:
+                            {
+                                signal.Modulation = Модуляция.ЧТ;
+                                signal.GroupSpeed = 20;
+                            }
+                            break;
+                        case 3:
+                            {
+                                signal.Modulation = Модуляция.ОФТ;
+                                signal.GroupSpeed = 4.8;
+                            }
+                            break;
+                        case 4:
+                            {
+                                signal.Modulation = Модуляция.ОФТ;
+                                signal.GroupSpeed = 48;
+                            }
+                            break;
                     }
-                    else
-                    {
-                        signal = N15InsideParameters.ВыходПередающегоТракта;
-                    }
+                    
                     signal.Wave = wave;
-                    signal.Frequency = 5710000 + 10*signal.Wave;
+                    signal.Frequency = 5710000 + 10 * signal.Wave;
 
                     if (Работа && (N18_MParameters.ПереключательВходК121 != 1) && PU_K1_1Parameters.Включен)
                     {
