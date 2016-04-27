@@ -192,8 +192,8 @@ namespace R440O.R440OForms.N18_M
 
         public void RefreshFormElements()
         {
-           
-           // Panel.Refresh();
+
+            // Panel.Refresh();
             ЛампочкаКЗТЛГ1.BackgroundImage = N18_MParameters.ЛампочкаК3ТЛГ1
                 ? ControlElementImages.lampType6OnRed
                 : null;
@@ -296,7 +296,7 @@ namespace R440O.R440OForms.N18_M
             ПереключательВходБ22.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
 
-        //  Panel.Invalidate();
+            //  Panel.Invalidate();
             Panel.Paint += Panel_Paint;
             Panel.Refresh();
         }
@@ -312,7 +312,7 @@ namespace R440O.R440OForms.N18_M
             var myPen = new Pen(color, 5);
             e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             Point p1, p2, p_control1, p_control2;
-            int d =(onePoint.Y < twoPoint.Y ? twoPoint.Y - onePoint.Y : onePoint.Y - twoPoint.Y) / 2;
+            int d = (onePoint.Y < twoPoint.Y ? twoPoint.Y - onePoint.Y : onePoint.Y - twoPoint.Y) / 2;
             int Y1, Y2;
             if (d < 30)
             {
@@ -363,9 +363,9 @@ namespace R440O.R440OForms.N18_M
                     e.Graphics.DrawLine(myPen, p2, p_control1);
                     e.Graphics.DrawLine(myPen, p_control2, p1);
                 }
-                
-                e.Graphics.DrawLine(myPen, p_control1, p_control2);                
-                e.Graphics.DrawLine(myPen, twoPoint, p2);          
+
+                e.Graphics.DrawLine(myPen, p_control1, p_control2);
+                e.Graphics.DrawLine(myPen, twoPoint, p2);
             }
             myPen.Dispose();
         }
@@ -376,15 +376,16 @@ namespace R440O.R440OForms.N18_M
             int номер_гнезда1, номер_гнезда2;
             Point point1 = new Point(0, 0);
             Point point2 = new Point(0, 0);
-            List<Control> соединенные_гнезда = new  List<Control>();
+            List<Control> соединенные_гнезда = new List<Control>();
             foreach (Control item in Panel.Controls)
                 if (item.Name.Contains("Гнездо") && item.BackgroundImage != null)
-                    item.BackgroundImage = null;           
+                    item.BackgroundImage = null;
 
             for (int i = 1; i < 76; i++)
             {
                 номер_гнезда1 = i;
                 номер_гнезда2 = N18_MParameters.Соединения[i];
+
                 if (!Дублирующие[i] && номер_гнезда2 != 0)
                 {
                     foreach (Control item in Panel.Controls)
@@ -407,6 +408,13 @@ namespace R440O.R440OForms.N18_M
                     Дублирующие[номер_гнезда2] = true;
                 }
             }
+
+            var первый_выбраный_контрол = Panel.Controls.Find("Гнездо" + N18_MParameters.номер_первого_гнезда, false);
+            if (первый_выбраный_контрол.Length != 0)
+            {
+                первый_выбраный_контрол[0].BackgroundImage = ControlElementImages.N18_M_Gnezdo;
+            }
+
             foreach (var item in соединенные_гнезда)
                 item.BackgroundImage = ControlElementImages.N18_M_Gnezdo;
         }
@@ -421,12 +429,12 @@ namespace R440O.R440OForms.N18_M
         private void Гнездо_Click(object sender, System.EventArgs e)
         {
             var СвязанноеГнездо = sender as Button;
-            var text =  СвязанноеГнездо.Name;
+            var text = СвязанноеГнездо.Name;
             int НомерГнезда = text.Length == 7 ?
                 (int)char.GetNumericValue(text[6]) :
                 10 * (int)char.GetNumericValue(text[6]) + (int)char.GetNumericValue(text[7]);
             N18_MParameters.Соеденить(НомерГнезда);
-        }  
+        }
 
     }
 }
