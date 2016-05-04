@@ -1,5 +1,6 @@
 ﻿using R440O.R440OForms.A306;
 using R440O.R440OForms.C300M_2;
+using R440O.R440OForms.C300M_1;
 using R440O.R440OForms.N16;
 
 namespace R440O
@@ -169,6 +170,20 @@ namespace R440O
             C300M_2Parameters.ПереключательВолна1000 = 0;
             C300M_2Parameters.ТумблерУправление = true;
 
+            #endregion
+
+            #region Малый шлейф - фикс
+            //A304
+            A306Parameters.Выходы[1] = 0;
+            
+            //С300М_1
+            //C300M_1Parameters.КнопкиВидРаботы[5] = true;
+            //C300M_1Parameters.КнопкиКонтрольРежима[3] = true;
+            C300M_1Parameters.ПереключательВолна1 = 8;
+            C300M_1Parameters.ПереключательВолна10 = 0;
+            C300M_1Parameters.ПереключательВолна100 = 5;
+            C300M_1Parameters.ПереключательВолна1000 = 0;
+           // C300M_1Parameters.ТумблерУправление = true;
             #endregion
 
         }

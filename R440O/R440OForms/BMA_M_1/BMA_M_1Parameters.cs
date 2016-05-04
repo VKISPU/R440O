@@ -802,7 +802,7 @@ namespace R440O.Parameters
                 if (N18_MParameters.Проверить_комутацию(ГнездаН18.КоммутацияПрм_Канал1_Б11, ГнездаН18.КоммутацияПрм_Канал1_БМА1)
                      && (N18_MParameters.ПереключательПрдБма12 == 1 || N18_MParameters.ПереключательПрдБма12 == 4))
                 {
-                    Signal сигнал = B1_1Parameters.ВходнойСигнал;
+                    Signal сигнал = B1_1Parameters.ВыходнойСигнал;
                     if (сигнал != null && сигнал.SpeedOfChanel(1) != 0)
                         return сигнал;
                     return null;
@@ -812,7 +812,7 @@ namespace R440O.Parameters
                 if (N18_MParameters.Проверить_комутацию(ГнездаН18.КоммутацияПрм_Канал2_Б11, ГнездаН18.КоммутацияПрм_Канал1_БМА1)
                       && (N18_MParameters.ПереключательПрдБма12 == 2 || N18_MParameters.ПереключательПрдБма12 == 5))
                 {
-                    Signal сигнал = B1_1Parameters.ВходнойСигнал;
+                    Signal сигнал = B1_1Parameters.ВыходнойСигнал;
                     if (сигнал != null && сигнал.SpeedOfChanel(2) != 0)
                         return сигнал;
                     return null;
@@ -822,7 +822,7 @@ namespace R440O.Parameters
                 if (N18_MParameters.Проверить_комутацию(ГнездаН18.КоммутацияПрм_Канал3_Б11, ГнездаН18.КоммутацияПрм_Канал1_БМА1)
                       && (N18_MParameters.ПереключательПрдБма12 == 3 || N18_MParameters.ПереключательПрдБма12 == 6))
                 {
-                    Signal сигнал = B1_1Parameters.ВходнойСигнал;
+                    Signal сигнал = B1_1Parameters.ВыходнойСигнал;
                     if (сигнал != null && сигнал.SpeedOfChanel(3) != 0)
                         return сигнал;
                     return null;

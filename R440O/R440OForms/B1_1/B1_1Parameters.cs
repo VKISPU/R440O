@@ -41,13 +41,33 @@ namespace R440O.R440OForms.B1_1
             }
         }
 
+        /// <summary>
+        /// Соответствует ли входящий сигнал нажатым кнопкам.
+        /// </summary>
+        public static bool ВходящийСигналПравильный
+        {
+            get
+            {
+                if (ВходнойСигнал != null)
+                {
+                    return ВходнойСигнал.SpeedOfChanel(1) == НеобходимыйСигнал.SpeedOfChanel(1) &&
+                        ВходнойСигнал.SpeedOfChanel(2) == НеобходимыйСигнал.SpeedOfChanel(2) &&
+                        ВходнойСигнал.SpeedOfChanel(3) == НеобходимыйСигнал.SpeedOfChanel(3);
+                }
+
+                return false;
+            }
+        }
+
         public static Signal ВыходнойСигнал
         {
             get
             {
-                return ВходнойСигнал;
+                return ВходящийСигналПравильный ? ВходнойСигнал : null;
             }
         }
+
+
         /// <summary>
         /// Сигнал с одним элементом, скорости каналов которого соответствуют текущим выбранным настройкам.
         /// </summary>
@@ -320,6 +340,7 @@ namespace R440O.R440OForms.B1_1
             set
             {
                 _тумблерМуДу = value;
+                N18_MParameters.ResetParameters();
                 OnParameterChanged();
             }
         }
@@ -329,7 +350,8 @@ namespace R440O.R440OForms.B1_1
             get { return _кнопкаСкоростьГР; }
             set
             {
-                _кнопкаСкоростьГР = value;
+                _кнопкаСкоростьГР = value;               
+                N18_MParameters.ResetParameters();
                 OnParameterChanged();
             }
         }
@@ -340,6 +362,7 @@ namespace R440O.R440OForms.B1_1
             set
             {
                 _кнопкаСкоростьАб1Тлфк = value;
+                N18_MParameters.ResetParameters();
                 OnParameterChanged();
             }
         }
