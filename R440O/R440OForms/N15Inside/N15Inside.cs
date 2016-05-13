@@ -122,7 +122,7 @@
                 ? ControlElementImages.tumblerType4Left
                 : ControlElementImages.tumblerType4Right;
 
-            this.ТумблерПУЛ48ПРД_2.BackgroundImage = N15InsideParameters.ТумблерПУЛ48ПРД_1 == Модуляция.ОФТ
+            this.ТумблерПУЛ48ПРД_2.BackgroundImage = N15InsideParameters.ТумблерПУЛ48ПРД_2 == Модуляция.ОФТ
                 ? ControlElementImages.tumblerType4Left
                 : ControlElementImages.tumblerType4Right;
 

@@ -205,6 +205,7 @@ namespace R440O.Parameters
             {
                 if (value >= 1 && value <= 4)
                     _переключательРежимы = value;
+                BMBParameters.ResetParameters();
                 OnParameterChanged();
             }
         }
@@ -789,11 +790,12 @@ namespace R440O.Parameters
         #endregion
 
         #region Сигнал
-
+        private static int _номер_канала = -1;
         public static Signal ВходнойСигнал
         {
             get
             {
+                _номер_канала = -1;
                 // На Н18 не повернуты нужные тумблеры.
                 if (!(N18_MParameters.ПереключательПРМ1 == 4 && N18_MParameters.ПереключательПРМ2 == 4))
                     return null;
@@ -804,7 +806,10 @@ namespace R440O.Parameters
                 {
                     Signal сигнал = B1_1Parameters.ВыходнойСигнал;
                     if (сигнал != null && сигнал.SpeedOfChanel(1) != 0)
+                    {
+                        _номер_канала = 1;
                         return сигнал;
+                    }
                     return null;
                 }
 
@@ -814,7 +819,10 @@ namespace R440O.Parameters
                 {
                     Signal сигнал = B1_1Parameters.ВыходнойСигнал;
                     if (сигнал != null && сигнал.SpeedOfChanel(2) != 0)
+                    {
+                        _номер_канала = 2;
                         return сигнал;
+                    }
                     return null;
                 }
 
@@ -824,17 +832,71 @@ namespace R440O.Parameters
                 {
                     Signal сигнал = B1_1Parameters.ВыходнойСигнал;
                     if (сигнал != null && сигнал.SpeedOfChanel(3) != 0)
+                    {
+                        _номер_канала = 3;
                         return сигнал;
+                    }
                     return null;
                 }
 
                 return null;
             }
         }
-
+        private static bool _синхронизироваля = true;
+        private static IDisposable _interval = null;
         public static Signal ВыходнойСигнал
         {
-            get { return ВходнойСигнал; }
+            get 
+            {
+                
+                Signal сигнал = ВходнойСигнал;
+
+                if (сигнал == null || _номер_канала == -1)
+                    return null;                
+                switch (ПереключательРежимы)
+                {
+                    case 1:
+                        {
+                            if (сигнал.SpeedOfChanel(_номер_канала) == 2.4)
+                                _синхронизироваля = true;
+                            else
+                                _синхронизироваля = false;
+                            break;
+                        }
+                    case 2:
+                        {
+                            if (сигнал.SpeedOfChanel(_номер_канала) == 2.4)
+                            {
+                                if (_interval != null)
+                                    _interval.Dispose();
+                                  _interval =
+                                    ThirdParty.EasyTimer.SetTimeout(() => { _синхронизироваля = !_синхронизироваля; BMBParameters.ResetParameters(); }, 2000);
+                            }
+                            else
+                                _синхронизироваля = true;
+                            break;
+                        }
+                    case 3:
+                        {
+                            _синхронизироваля = false;
+                            break;
+                        }
+                    case 4:
+                        {
+                            _синхронизироваля = false;
+                            break;
+                        }
+                }
+                if (_синхронизироваля)
+                {
+                    return сигнал;
+                }
+                else
+                {
+                    return null;
+                }
+                
+            }
         }
 
         #endregion
