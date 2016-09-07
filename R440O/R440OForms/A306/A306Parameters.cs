@@ -1,4 +1,6 @@
-﻿using R440O.BaseClasses;
+﻿using System.Collections;
+using System.Windows.Forms.VisualStyles;
+using R440O.BaseClasses;
 using R440O.InternalBlocks;
 using R440O.R440OForms.N15;
 
@@ -15,66 +17,67 @@ namespace R440O.R440OForms.A306
             }
         }
 
-        #region Выход блока
-
-        public static bool ВыходнойСигнал11
-        {
-            get { return Включен && IsRightSet(0); }
-        }
-
-        public static bool ВыходнойСигнал12
-        {
-            get { return Включен && IsRightSet(1); }
-        }
-
-        public static bool ВыходнойСигнал13
-        {
-            get { return Включен && IsRightSet(2); }
-        }
-
-        public static bool ВыходнойСигнал14
-        {
-            get { return Включен && IsRightSet(3); }
-        }
-
-        public static Signal ВыходнойСигнал1
-        {
-            get { return ВыходнойСигнал11 ? MSHUParameters.ВыходнойСигнал : null; }
-        }
-
-        public static Signal ВыходнойСигнал2
-        {
-            get { return ВыходнойСигнал12 ? MSHUParameters.ВыходнойСигнал : null; }
-        }
-
-        public static Signal ВыходнойСигнал3
-        {
-            get { return ВыходнойСигнал13 ? MSHUParameters.ВыходнойСигнал : null; }
-        }
-
-        public static Signal ВыходнойСигнал4
-        {
-            get { return ВыходнойСигнал14 ? MSHUParameters.ВыходнойСигнал : null; }
-        }
         /// <summary>
-        /// Проверка правильно ли подключён кабель к приемнику.
+        /// Номер выхода на который поступает сигнал с МШУ, исключая выход КВ
+        /// Частота входного сигнала 320...370 МГц. Каждый выход имеет шаг разницы в 5 МГЦ
+        /// </summary>
+        public static int НомерВыхода
+        {
+            get
+            {
+                return (Включен && MSHUParameters.ВыходнойСигнал != null)
+                    ? (MSHUParameters.ВыходнойСигнал.Frequency - 320000)/5000
+                    : -1;
+            }
+        }
+
+                /// <summary>
+        /// Проверка подключения приемника к выходу на который подается сигнал
         /// </summary>
         /// <param name="output"></param>
         /// <returns></returns>
         private static bool IsRightSet(int output)
         {
-            if (MSHUParameters.ВыходнойСигнал != null)
-            {
-                var rightOutput = MSHUParameters.ВыходнойСигнал.Wave / 500;
-                if (Выходы[rightOutput] == output) return true;
-                if ((Выходы[11] == output || Выходы[12] == output || Выходы[13] == output || Выходы[14] == output) &&
-                    Выходы[rightOutput] == 4) return true;
-                if ((Выходы[15] == output || Выходы[16] == output || Выходы[17] == output || Выходы[18] == output) &&
-                    Выходы[rightOutput] == 5) return true;
-            }
+            //Если НомерВыхода неопределен, значит сигнал с МШУ не подается
+            if (НомерВыхода == -1) return false;
+
+            //Проверка, установлен ли на выход с сигналом или на выход КВ приемник с номером output. 
+            if (Выходы[НомерВыхода] == output || Выходы[10] == output) return true;
+
+            //Проверка подключения через выходы НО-1
+            if ((Выходы[11] == output || Выходы[12] == output || Выходы[13] == output || Выходы[14] == output) &&
+                    (Выходы[НомерВыхода] == 4))
+                    return true;
+            //Проверка подключения через выходы НО-2
+            if ((Выходы[15] == output || Выходы[16] == output || Выходы[17] == output || Выходы[18] == output) &&
+                    (Выходы[НомерВыхода] == 5))
+                    return true;
+
             return false;
         }
-        #endregion
+
+
+        public static Signal ВыходнойСигнал1
+        {
+            get { return IsRightSet(0) ? MSHUParameters.ВыходнойСигнал : null; }
+        }
+
+        public static Signal ВыходнойСигнал2
+        {
+            get { return IsRightSet(1) ? MSHUParameters.ВыходнойСигнал : null; }
+        }
+
+        public static Signal ВыходнойСигнал3
+        {
+            get { return IsRightSet(2) ? MSHUParameters.ВыходнойСигнал : null; }
+        }
+
+        public static Signal ВыходнойСигнал4
+        {
+            get { return IsRightSet(3) ? MSHUParameters.ВыходнойСигнал : null; }
+        }
+
+
 
         #region Лампочки
         public static bool ЛампочкаСетьВкл

@@ -20,13 +20,13 @@ namespace R440O.R440OForms.N18_M_H28
             АктивныйКабель.Visible = true;
             switch (N18_M_H28Parameters.АктивныйКабель)
             {
-                case 1: АктивныйКабель.BackgroundImage = ControlElementImages.kabelInputK11;  break;
-                case 2: АктивныйКабель.BackgroundImage = ControlElementImages.kabelInputK12;  break;
+                case 1: АктивныйКабель.BackgroundImage = ControlElementImages.kabelInputK11; break;
+                case 2: АктивныйКабель.BackgroundImage = ControlElementImages.kabelInputK12; break;
                 default: АктивныйКабель.Visible = false;
                     break;
             }
         }
-        
+
         private void КабельК11_Click(object sender, EventArgs e)
         {
             N18_M_H28Parameters.АктивныйКабель = 1;

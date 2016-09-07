@@ -1,5 +1,4 @@
 ﻿using R440O.BaseClasses;
-using R440O.ThirdParty;
 
 namespace R440O.R440OForms.A306
 {
@@ -314,26 +313,6 @@ namespace R440O.R440OForms.A306
         private void A306Form_FormClosed(object sender, FormClosedEventArgs e)
         {
             A306Parameters.ParameterChanged -= RefreshFormElements;
-        }
-
-
-        private void Timer_Tick(object sender, EventArgs e)
-        {
-            _timer.Stop();
-            RefreshFormElements();
-        }
-
-        private Timer _timer;
-
-        private void A306Form_Move(object sender, EventArgs e)
-        {
-            _timer = new Timer
-            {
-                Enabled = true,
-                Interval = 100
-            };
-            _timer.Start();
-            _timer.Tick += Timer_Tick;
         }
     }
 }

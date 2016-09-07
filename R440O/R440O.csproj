@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -26,6 +27,7 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>3968759f</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -103,6 +105,7 @@
     </Compile>
     <Compile Include="R440OForms\N18_M_AngleSwitch\N18_M_AngleSwitchParameters.cs" />
     <Compile Include="R440OForms\N502B\N502BParameters.cs" />
+    <Compile Include="R440OForms\Rubin_N\Rubin_NParameters.cs" />
     <Compile Include="R440OForms\TLF_TCH\TLF_TCHForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,7 +171,7 @@
     <Compile Include="R440OForms\P220_27G_2\P220_27G_2Parameters.cs" />
     <Compile Include="R440OForms\P220_27G_3\P220_27G_3Parameters.cs" />
     <Compile Include="R440OForms\PowerCabel\PowerCabelParameters.cs" />
-    <Compile Include="R440OForms\Rubin_N\Rubin_NParameters.cs" />
+    <Compile Include="Parameters\Rubin_NParameters.cs" />
     <Compile Include="R440OForms\VoltageStabilizer\VoltageStabilizerParameters.cs" />
     <Compile Include="R440OForms\A1\A1Form.cs">
       <SubType>Form</SubType>
@@ -1158,7 +1161,6 @@
     <Content Include="Resources\buttonSquareBlackLarge.png" />
     <None Include="Resources\buttonSquareBlack_small.png" />
     <None Include="Resources\buttonSquareLightBlue.png" />
-    <None Include="Resources\buttonSquareBlueOffSmall.png" />
     <Content Include="Resources\buttonSquareRed.png" />
     <Content Include="Resources\buttonSquareRedLarge.png" />
     <None Include="Resources\buttonSquareRed_small.png" />
@@ -1181,7 +1183,6 @@
     <None Include="Resources\kabel_profile%28K12%29.png" />
     <None Include="Resources\kabel_input%28K11%291th.png" />
     <None Include="Resources\kabel_input%28K12%291th.png" />
-    <None Include="Resources\buttonSquareYellowSmallOff.png" />
     <Content Include="Resources\lampType13OnGreen.png" />
     <Content Include="Resources\N18_M_Gnezdo.png" />
     <None Include="Resources\panel.png" />
@@ -1198,8 +1199,16 @@
     <None Include="Resources\BMA_M.png" />
     <Content Include="Resources\buttonRoundType6.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

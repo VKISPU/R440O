@@ -10,7 +10,6 @@
     class N15InsideParameters
     {
         #region Работа блока
-
         public static bool Включен
         {
             get
@@ -27,16 +26,24 @@
         {
             get
             {
-                if (Включен &&
-                    N15Parameters.ТумблерТлфТлгПрд && A1Parameters.ВыходнойСигнал != null && N18_MParameters.ПереключательПРД == 2 &&
-                    Signal.IsEquivalentSpeed(СкоростьПередачи, A1Parameters.ВыходнойСигнал.GroupSpeed))
+                //if (Включен &&
+                //    N15Parameters.ТумблерТлфТлгПрд && A1Parameters.ВыходнойСигнал != null && N18_MParameters.ПереключательПРД == 2 &&
+                //    Signal.IsEquivalentSpeed(СкоростьПередачи, A1Parameters.ВыходнойСигнал.GroupSpeed))
+                //{
+                //    var transition = A1Parameters.ВыходнойСигнал;
+                //    transition.Modulation = ТумблерПУЛ48ПРД_1;
+                //    transition.GroupSpeed = СкоростьПередачи;
+                //    return transition;
+                //}
+                if (!Включен) return null;
+
+                var signal = new Signal
                 {
-                    var transition = A1Parameters.ВыходнойСигнал;
-                    transition.Modulation = ТумблерПУЛ48ПРД_1;
-                    transition.GroupSpeed = СкоростьПередачи;
-                    return transition;
-                }
-                return null;
+                    GroupSpeed = СкоростьПередачи,
+                    Modulation = МодуляцияПередачи
+                };
+
+                return signal;
             }
         }
 
@@ -65,6 +72,14 @@
         private static Модуляция _тумблерПУЛ48ПРД_1 = Модуляция.ОФТ;
         private static Модуляция _тумблерПУЛ48ПРД_2 = Модуляция.ОФТ;
 
+        public static Модуляция МодуляцияПриема
+        {
+            get
+            {
+                return ТумблерПУЛ480ПРМ_1 != ТумблерПУЛ480ПРМ_2 ? Модуляция.Отсутствует : ТумблерПУЛ480ПРМ_1;
+            }
+        }
+
         public static Модуляция ТумблерПУЛ480ПРМ_1
         {
             get { return _тумблерПУЛ480ПРМ_1; }
@@ -83,6 +98,14 @@
             {
                 _тумблерПУЛ480ПРМ_2 = value;
                 OnParameterChanged();
+            }
+        }
+
+        public static Модуляция МодуляцияПередачи
+        {
+            get
+            {
+                return ТумблерПУЛ48ПРД_1 != ТумблерПУЛ48ПРД_2 ? Модуляция.Отсутствует : ТумблерПУЛ48ПРД_1;
             }
         }
 
@@ -193,6 +216,7 @@
                 {
                     _переключательПУЛ480ПРМ_2 = value;
                     OnParameterChanged();
+                    N15Parameters.ResetDiscret();
                 }
             }
         }
@@ -201,6 +225,7 @@
         {
             get
             {
+                if (_переключательПУЛ48ПРД_1 != _переключательПУЛ48ПРД_2) return 0;
                 switch (_переключательПУЛ48ПРД_1)
                 {
                     case 1:
@@ -212,7 +237,7 @@
                     case 4:
                         return 5.2;
                     case 5:
-                        return 48;
+                        return 48; 
                 }
                 return 0;
             }
@@ -261,6 +286,7 @@
                 {
                     _переключательПУЛ48ПРД_2 = value;
                     OnParameterChanged();
+                    N15Parameters.ResetDiscret();
                 }
             }
         }

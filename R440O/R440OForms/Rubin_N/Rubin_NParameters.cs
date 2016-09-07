@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace R440O.Parameters
+namespace R440O.R440OForms.Rubin_N
 {
     class Rubin_NParameters
     {

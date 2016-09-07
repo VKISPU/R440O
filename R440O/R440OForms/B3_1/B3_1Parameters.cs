@@ -96,8 +96,11 @@
         /// </summary>
         public static bool ЛампочкаПУЛГ_2
         {
-            get { return Включен && N15InsideParameters.Включен && N18_MParameters.ПереключательПРМ1 == 1
-                && КолодкаКРПР != 5; }
+            get
+            {
+                return Включен && N15InsideParameters.Включен && N18_MParameters.ПереключательПРМ1 == 1
+                    && КолодкаКРПР != 5;
+            }
         }
 
         /// <summary>

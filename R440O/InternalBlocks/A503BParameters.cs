@@ -40,25 +40,25 @@ namespace R440O.InternalBlocks
         {
             get
             {
-                if (Включен)
-                {
-                    if (NKN_1Parameters.ДистанционноеВключение && A205M_1Parameters.ВыходнойСигнал != null)
-                    {
-                        var signal = A205M_1Parameters.ВыходнойСигнал;
-                        signal.Wave -= WaveShift;
-                        signal.Frequency -= FrequencyShift;
-                        return signal;
-                    }
+                if (!Включен) return null;
 
-                    if (NKN_2Parameters.ДистанционноеВключение && A205M_2Parameters.ВыходнойСигнал != null)
-                    {
-                        var signal = A205M_2Parameters.ВыходнойСигнал;
-                        signal.Wave -= WaveShift;
-                        signal.Frequency -= FrequencyShift;
-                        return signal;
-                    }
+                Signal inputSignal = null;
+                if (NKN_1Parameters.ДистанционноеВключение && A205M_1Parameters.ВыходнойСигнал != null)
+                {
+                    inputSignal = A205M_1Parameters.ВыходнойСигнал;
                 }
-                return null;
+
+                if (NKN_2Parameters.ДистанционноеВключение && A205M_2Parameters.ВыходнойСигнал != null)
+                {
+                    inputSignal = A205M_2Parameters.ВыходнойСигнал;
+                }
+
+                if (inputSignal == null) return null;
+
+                var outputSignal = inputSignal;
+                outputSignal.Wave -= WaveShift;
+                outputSignal.Frequency -= FrequencyShift;
+                return outputSignal;
             }
         }
     }

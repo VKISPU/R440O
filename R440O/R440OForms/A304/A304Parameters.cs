@@ -1,4 +1,5 @@
 ﻿using System.Security.Policy;
+using R440O.BaseClasses;
 
 namespace R440O.R440OForms.A304
 {
@@ -29,6 +30,17 @@ namespace R440O.R440OForms.A304
                        (!ТумблерУправление2 && Кнопка2К);
             }
         }
+
+        public static int? ВыходнаяЧастота
+        {
+            get
+            {
+                if (Комплект1Включен || Комплект2Включен)
+                    return ПереключательВыборСтвола*6250 + 378750;
+                return null;
+            }
+        }
+
 
         #region Лампочки
         /// <summary>

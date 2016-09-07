@@ -43,7 +43,7 @@
                 ? ControlElementImages.lampType10OnGreen
                 : null;
 
-            var angle = A304Parameters.ПереключательВыборСтвола * 26 - 120;
+            var angle = A304Parameters.ПереключательВыборСтвола * 26 - 146;
             ПереключательВыборСтвола.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType3, angle);
 

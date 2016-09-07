@@ -53,5 +53,5 @@ namespace R440O.R440OForms.TLF_TCH
             BMA_M_1Parameters.ResetParameters();
         }
     }
-    
+
 }

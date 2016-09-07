@@ -162,7 +162,7 @@
             ИндикаторНаборКоманды.Text = BMBParameters.НаборКоманды;
             ИндикаторПриемКоманды.Text = BMBParameters.ПриемКоманды;
 
-        } 
+        }
         #endregion
 
         #region Кнопки

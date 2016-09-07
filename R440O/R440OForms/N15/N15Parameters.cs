@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Linq;
+using System.Reflection;
+using R440O.BaseClasses;
 using R440O.InternalBlocks;
 using R440O.R440OForms.A306;
 using R440O.R440OForms.A403_1;
@@ -707,12 +709,13 @@ namespace R440O.R440OForms.N15
 
         public static bool ЛампочкаБМА_1
         {
-            get { return Включен && ЛампочкаН15БП && ТумблерБМА_1; }
+            //Добавить для 1 и 2 БМА параметры включения и завязать здесь
+            get { return Включен && ТумблерБМА_1; }
         }
 
         public static bool ЛампочкаБМА_2
         {
-            get { return Включен && ЛампочкаН15БП && ТумблерБМА_2; }
+            get { return Включен && ТумблерБМА_2; }
         }
 
         public static bool Лампочка27В
@@ -802,7 +805,7 @@ namespace R440O.R440OForms.N15
 
         public static bool ЛампочкаДАБ_5
         {
-            get { return Лампочка27В && ЛампочкаН15БП && ТумблерДАБ_5 && DAB_5Parameters.ТумблерПитание == СостоянияЭлементов.ДАБ5.EТумблерПитание.ВКЛ; }
+            get { return Лампочка27В && ЛампочкаН15БП && ТумблерДАБ_5 && DAB_5Parameters.ТумблерПитание; }
         }
 
         public static bool ЛампочкаР_Н
@@ -858,6 +861,7 @@ namespace R440O.R440OForms.N15
             N16Parameters.ResetParameters();
             #region БМА
 
+
             BMBParameters.ResetParameters();
             BMA_M_1Parameters.DisposeAllTimers();
             BMA_M_1Parameters.ResetLampsValue();
@@ -885,7 +889,8 @@ namespace R440O.R440OForms.N15
             #endregion
 
             #region ДАБ_5
-            DAB_5Parameters.Refresh();
+            DAB_5Parameters.SetDefaultParameters();
+            DAB_5Parameters.ResetParameters();
             #endregion
 
             N12SParameters.ResetParameters();

@@ -11,6 +11,7 @@ namespace R440O.Parameters
     static class PU_K1_1Parameters
     {
 
+
         public static bool Включен
         {
             get { return N15Parameters.Включен && (ТумблерПитание == 0 && N15Parameters.ТумблерК1_1) || ТумблерПитание == 2; }

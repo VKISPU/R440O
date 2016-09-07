@@ -238,6 +238,9 @@ namespace R440O.R440OForms.N502B
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public static int ПереключательФазировка
         {
             get { return _переключательФазировка; }

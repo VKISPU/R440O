@@ -29,7 +29,7 @@ namespace R440O.R440OForms.BMA_M_1
             InitializeComponent();
             BMA_M_1Parameters.ParameterChanged += RefreshFormElements;
             RefreshFormElements();
-         
+
         }
 
         #region Переключатели
@@ -43,7 +43,7 @@ namespace R440O.R440OForms.BMA_M_1
             if (e.Button == MouseButtons.Right)
             {
                 BMA_M_1Parameters.ПереключательКонтроль -= 1;
-            }          
+            }
         }
 
         private void ПереключательРекурента_MouseUp(object sender, MouseEventArgs e)
@@ -95,7 +95,7 @@ namespace R440O.R440OForms.BMA_M_1
             if (e.Button == MouseButtons.Right)
             {
                 BMA_M_1Parameters.ПереключательЧастотаВызова -= 1;
-            }            
+            }
         }
 
         private void ПереключательУровниСигналаПрдПрм_MouseUp(object sender, MouseEventArgs e)
@@ -134,7 +134,7 @@ namespace R440O.R440OForms.BMA_M_1
             if (e.Button == MouseButtons.Right)
             {
                 BMA_M_1Parameters.ПереключательЗапретЗапроса -= 1;
-            }            
+            }
         }
 
         private void ПереключательКоррКанала_MouseUp(object sender, MouseEventArgs e)
@@ -147,7 +147,7 @@ namespace R440O.R440OForms.BMA_M_1
             if (e.Button == MouseButtons.Right)
             {
                 BMA_M_1Parameters.ПереключательКоррКанала -= 1;
-            }            
+            }
         }
         #endregion
 
@@ -164,7 +164,7 @@ namespace R440O.R440OForms.BMA_M_1
         }
 
         private void КнопкаПроверка_MouseUp(object sender, MouseEventArgs e)
-        {          
+        {
             BMA_M_1Parameters.КнопкаПроверка--;
         }
 
@@ -247,7 +247,7 @@ namespace R440O.R440OForms.BMA_M_1
             angle = (int)BMA_M_1Parameters.ПереключательКоррКанала * 30 - 45;
             ПереключательКоррКанала.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
-            
+
             angle = (int)BMA_M_1Parameters.ПереключательЗапретЗапроса * 30 - 45;
             ПереключательЗапретЗапроса.BackgroundImage =
                 TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
@@ -375,11 +375,11 @@ namespace R440O.R440OForms.BMA_M_1
                     break;
                 case 1:
                     КнопкаПроверка.BackgroundImage = null;
-                    КнопкаПроверка.Text = string.Empty;                    
+                    КнопкаПроверка.Text = string.Empty;
                     break;
             }
 
-            #endregion           
+            #endregion
 
             #region Лампочки
 

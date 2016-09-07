@@ -76,7 +76,7 @@ namespace R440O.R440OForms.TLF_TCH
                 (int)char.GetNumericValue(text[5]) :
                 10 * (int)char.GetNumericValue(text[5]) + (int)char.GetNumericValue(text[6]);
             TLF_TCHParametrs.Соеденить(НомерШтыря);
-           
+
         }
 
         private void Гнездо_Click(object sender, EventArgs e)

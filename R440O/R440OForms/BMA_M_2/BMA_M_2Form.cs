@@ -17,7 +17,7 @@ namespace R440O.R440OForms.BMA_M_2
     /// </summary>
     public partial class BMA_M_2Form : Form
     {
-         /// <summary>
+        /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="BMA_M_2Form"/>.
         /// </summary>
         public BMA_M_2Form()
@@ -340,11 +340,11 @@ namespace R440O.R440OForms.BMA_M_2
                             {
                                 ЛампочкаКонтрольКомпл.BackgroundImage = ControlElementImages.lampType7OnRed;
                                 if (!BMA_M_2Parameters.КнопкаШлейфДК)
-                                {                                    
+                                {
                                     BMA_M_2КнопкаШлейфДК.BackgroundImage = ControlElementImages.buttonSquareYellowOn;
-                                    
+
                                 }
-                                if(!BMA_M_2Parameters.КнопкаШлейфТЧ)
+                                if (!BMA_M_2Parameters.КнопкаШлейфТЧ)
                                 {
                                     BMA_M_2КнопкаШлейфТЧ.BackgroundImage = ControlElementImages.buttonSquareYellowOn;
                                 }

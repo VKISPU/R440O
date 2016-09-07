@@ -1096,6 +1096,8 @@
             this.КнопкаОбходВыкл.Size = new System.Drawing.Size(23, 23);
             this.КнопкаОбходВыкл.TabIndex = 33;
             this.КнопкаОбходВыкл.UseVisualStyleBackColor = false;
+            this.КнопкаОбходВыкл.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаОбходВыкл_MouseDown);
+            this.КнопкаОбходВыкл.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаОбходВыкл_MouseUp);
             // 
             // КнопкаОбходВкл
             // 
@@ -1110,6 +1112,8 @@
             this.КнопкаОбходВкл.Size = new System.Drawing.Size(23, 23);
             this.КнопкаОбходВкл.TabIndex = 33;
             this.КнопкаОбходВкл.UseVisualStyleBackColor = false;
+            this.КнопкаОбходВкл.MouseDown += new System.Windows.Forms.MouseEventHandler(this.КнопкаОбходВкл_MouseDown);
+            this.КнопкаОбходВкл.MouseUp += new System.Windows.Forms.MouseEventHandler(this.КнопкаОбходВкл_MouseUp);
             // 
             // ЛампочкаВыборПрмПрд2
             // 

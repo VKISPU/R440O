@@ -124,7 +124,7 @@
             get
             {
                 return Включен &&
-                       (ЛампочкаПрРПрС_Авар || 
+                       (ЛампочкаПрРПрС_Авар ||
                        (ЛампочкаПрРПрС_1 || ВыходнойСигнал1.SelectedGroupElements.Count == 0));
             }
         }
@@ -159,7 +159,7 @@
         private static int _кнопкаБК1;
         private static int _кнопкаБК2;
         private static bool _тумблерМуДу;
-        
+
         public static int КнопкаБК1
         {
             get { return _кнопкаБК1; }
@@ -209,7 +209,7 @@
             set
             {
                 if (value) _колодкаТлГпр2 = false;
-                _колодкаТлГпр1 = value; 
+                _колодкаТлГпр1 = value;
                 OnParameterChanged();
             }
         }

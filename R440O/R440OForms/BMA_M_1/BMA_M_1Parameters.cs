@@ -16,7 +16,7 @@ namespace R440O.Parameters
         /// В принципе это не "включен", а состояние при котором он может быть включен нажатием кнопок, т.е. питание подается
         /// а "Питание" это как раз "включен"
         /// </summary>
-  
+
         public static bool ПитаниеН502
         {
             get { return N502BParameters.ЭлектрообуродованиеВключено && N502BParameters.ВыпрямительВключен; }
@@ -77,12 +77,12 @@ namespace R440O.Parameters
             {
                 if (value >= 1 && value <= 6)
                 {
-                    _переключательКонтроль = value;                    
+                    _переключательКонтроль = value;
                     if (value != 1 && value != 6)
                         ПрокеркаКомплекта();
                     //ЛампочкаКонтрольНенорм = true;
                     //ЛампочкаКонтрольНорм = false;
-                   
+
                     OnParameterChanged();
                 }
             }
@@ -273,17 +273,17 @@ namespace R440O.Parameters
             if (timer_лампочкаАвтомКоманда1OFF != null)
                 timer_лампочкаАвтомКоманда1OFF.Dispose();
 
-            timer_лампочкаАвтомКоманда1ON =  EasyTimer.SetTimeout(() =>
-                {
-                    _лампочкаАвтомКоманда1 = true;  
-                    OnParameterChanged();
-                }, 2000);
-           timer_лампочкаАвтомКоманда1OFF =
-                       EasyTimer.SetTimeout(() =>
-                       {
-                           _лампочкаАвтомКоманда1 = false;
-                           OnParameterChanged();
-                       }, 5000);
+            timer_лампочкаАвтомКоманда1ON = EasyTimer.SetTimeout(() =>
+            {
+                _лампочкаАвтомКоманда1 = true;
+                OnParameterChanged();
+            }, 2000);
+            timer_лампочкаАвтомКоманда1OFF =
+                        EasyTimer.SetTimeout(() =>
+                        {
+                            _лампочкаАвтомКоманда1 = false;
+                            OnParameterChanged();
+                        }, 5000);
         }
         // 0 - отжата, 1 - нажата
         public static int КнопкаПроверка
@@ -321,7 +321,7 @@ namespace R440O.Parameters
                     else
                         _кнопкаПитаниеВыкл = 0;
                 }
-                if(КнопкаПитаниеВыкл != 3) Питание = false;
+                if (КнопкаПитаниеВыкл != 3) Питание = false;
                 OnParameterChanged();
             }
         }
@@ -359,11 +359,12 @@ namespace R440O.Parameters
         /// </summary>
         public static int КнопкаШлейфДК
         {
-            get {
+            get
+            {
                 // Подсветка при проверке комплекта
                 if (ПереключательКонтроль == 5 && Питание)
                     return _кнопкаШлейфДК == 3 ? 3 : 2;
-                return _кнопкаШлейфДК; 
+                return _кнопкаШлейфДК;
             }
             set
             {
@@ -386,7 +387,7 @@ namespace R440O.Parameters
         /// </summary>
         public static int КнопкаШлейфТЧ
         {
-            get 
+            get
             {
                 // Подсветка при проверке комплекта
                 if (ПереключательКонтроль == 5 && Питание)
@@ -421,18 +422,18 @@ namespace R440O.Parameters
                 {
                     case 1:
                     case 6:
-                    {
-                        return Питание && !(BMBParameters.ЛампочкаДк && BMBParameters.ПереключательРаботаКонтроль == 1
-                                            || КнопкаШлейфДК == 3);
-                    }
+                        {
+                            return Питание && !(BMBParameters.ЛампочкаДк && BMBParameters.ПереключательРаботаКонтроль == 1
+                                                || КнопкаШлейфДК == 3);
+                        }
                     case 4:
-                    {
-                        return false;
-                    }
+                        {
+                            return false;
+                        }
                     case 3:
-                    {
-                        return false;
-                    }
+                        {
+                            return false;
+                        }
                 }
                 return false;
             }
@@ -446,13 +447,13 @@ namespace R440O.Parameters
                 {
                     case 1:
                     case 6:
-                    {
-                        return Питание && (КнопкаШлейфТЧ == 3);
-                    }
+                        {
+                            return Питание && (КнопкаШлейфТЧ == 3);
+                        }
                     case 4:
-                    {
-                        return Питание && (КнопкаШлейфДК == 3 || (!TLF_TCHParametrs.БМА1ПередачаКаналТЧ));
-                    }
+                        {
+                            return Питание && (КнопкаШлейфДК == 3 || (!TLF_TCHParametrs.БМА1ПередачаКаналТЧ));
+                        }
                 }
                 return false;
             }
@@ -468,18 +469,18 @@ namespace R440O.Parameters
                 {
                     case 1:
                     case 6:
-                    {
-                        return Питание && (BMBParameters.ЛампочкаТч &&
-                                           КнопкаШлейфТЧ == 3 && BMBParameters.ПереключательРаботаКонтроль == 1);
-                    }
+                        {
+                            return Питание && (BMBParameters.ЛампочкаТч &&
+                                               КнопкаШлейфТЧ == 3 && BMBParameters.ПереключательРаботаКонтроль == 1);
+                        }
                     case 4:
-                    {
-                        return false;
-                    }
+                        {
+                            return false;
+                        }
                     case 3:
-                    {
-                        return false;
-                    }
+                        {
+                            return false;
+                        }
                 }
                 return false;
             }
@@ -493,17 +494,17 @@ namespace R440O.Parameters
                 {
                     case 1:
                     case 6:
-                    {
-                        return Питание && (КнопкаШлейфТЧ == 3);
-                    }
+                        {
+                            return Питание && (КнопкаШлейфТЧ == 3);
+                        }
                     case 4:
-                    {
-                        return false;
-                    }
+                        {
+                            return false;
+                        }
                     case 3:
-                    {
-                        return false;
-                    }
+                        {
+                            return false;
+                        }
                 }
                 return false;
             }
@@ -517,22 +518,22 @@ namespace R440O.Parameters
                 {
                     case 1:
                     case 6:
-                    {
-                        return Питание && КнопкаШлейфТЧ != 3;
-                        /*return Питание
-                               && !(КнопкаШлейфТЧ == 3
-                                    && BMBParameters.ПереключательРаботаКонтроль == 1
-                                    && BMBParameters.КнопкаПередачаВызоваТч == СостоянияЭлементов.БМБ.Кнопка.Горит
-                                    && BMBParameters.КнопкаСлСвязь == СостоянияЭлементов.БМБ.Кнопка.Горит);*/
-                    }
+                        {
+                            return Питание && КнопкаШлейфТЧ != 3;
+                            /*return Питание
+                                   && !(КнопкаШлейфТЧ == 3
+                                        && BMBParameters.ПереключательРаботаКонтроль == 1
+                                        && BMBParameters.КнопкаПередачаВызоваТч == СостоянияЭлементов.БМБ.Кнопка.Горит
+                                        && BMBParameters.КнопкаСлСвязь == СостоянияЭлементов.БМБ.Кнопка.Горит);*/
+                        }
                     case 4:
-                    {
-                        return false;
-                    }
+                        {
+                            return false;
+                        }
                     case 3:
-                    {
-                        return false;
-                    }
+                        {
+                            return false;
+                        }
                 }
                 return false;
             }
@@ -546,17 +547,17 @@ namespace R440O.Parameters
                 {
                     case 1:
                     case 6:
-                    {
-                        return Питание && КнопкаШлейфТЧ != 3;
-                    }
+                        {
+                            return Питание && КнопкаШлейфТЧ != 3;
+                        }
                     case 4:
-                    {
-                        return false;
-                    }
+                        {
+                            return false;
+                        }
                     case 3:
-                    {
-                        return false;
-                    }
+                        {
+                            return false;
+                        }
                 }
                 return false;
                 //        && !TLF_TCHParametrs.БМА1ПриемКаналТЧ;
@@ -571,21 +572,21 @@ namespace R440O.Parameters
                 {
                     case 1:
                     case 6:
-                    {
-                        return Питание //N15Parameters.ЛампочкаБМА_1                            
-                               && !(КнопкаШлейфДК == 3
-                                    && BMBParameters.ПереключательРаботаКонтроль == 1
-                                    && BMBParameters.КнопкаПередачаВызоваДк == СостоянияЭлементов.БМБ.Кнопка.Горит
-                                    && BMBParameters.КнопкаСлСвязь == СостоянияЭлементов.БМБ.Кнопка.Горит);
-                    }
+                        {
+                            return Питание //N15Parameters.ЛампочкаБМА_1                            
+                                   && !(КнопкаШлейфДК == 3
+                                        && BMBParameters.ПереключательРаботаКонтроль == 1
+                                        && BMBParameters.КнопкаПередачаВызоваДк == СостоянияЭлементов.БМБ.Кнопка.Горит
+                                        && BMBParameters.КнопкаСлСвязь == СостоянияЭлементов.БМБ.Кнопка.Горит);
+                        }
                     case 4:
-                    {
-                        return false;
-                    }
+                        {
+                            return false;
+                        }
                     case 3:
-                    {
-                        return false;
-                    }
+                        {
+                            return false;
+                        }
                 }
                 return false;
             }
@@ -599,18 +600,18 @@ namespace R440O.Parameters
                 {
                     case 1:
                     case 6:
-                    {
-                        return Питание //N15Parameters.ЛампочкаБМА_1                            
-                               && КнопкаШлейфТЧ == 3;
-                    }
+                        {
+                            return Питание //N15Parameters.ЛампочкаБМА_1                            
+                                   && КнопкаШлейфТЧ == 3;
+                        }
                     case 4:
-                    {
-                        return false;
-                    }
+                        {
+                            return false;
+                        }
                     case 3:
-                    {
-                        return false;
-                    }
+                        {
+                            return false;
+                        }
                 }
                 return false;
             }
@@ -624,18 +625,18 @@ namespace R440O.Parameters
                 {
                     case 1:
                     case 6:
-                    {
-                        return Питание && !(BMBParameters.ЛампочкаДк && BMBParameters.ПереключательРаботаКонтроль == 1
-                                            || КнопкаШлейфДК == 3);
-                    }
+                        {
+                            return Питание && !(BMBParameters.ЛампочкаДк && BMBParameters.ПереключательРаботаКонтроль == 1
+                                                || КнопкаШлейфДК == 3);
+                        }
                     case 4:
-                    {
-                        return false;
-                    }
+                        {
+                            return false;
+                        }
                     case 3:
-                    {
-                        return false;
-                    }
+                        {
+                            return false;
+                        }
                 }
                 return false;
             }
@@ -846,13 +847,13 @@ namespace R440O.Parameters
         private static IDisposable _interval = null;
         public static Signal ВыходнойСигнал
         {
-            get 
+            get
             {
-                
+
                 Signal сигнал = ВходнойСигнал;
 
                 if (сигнал == null || _номер_канала == -1)
-                    return null;                
+                    return null;
                 switch (ПереключательРежимы)
                 {
                     case 1:
@@ -869,8 +870,8 @@ namespace R440O.Parameters
                             {
                                 if (_interval != null)
                                     _interval.Dispose();
-                                  _interval =
-                                    ThirdParty.EasyTimer.SetTimeout(() => { _синхронизироваля = !_синхронизироваля; BMBParameters.ResetParameters(); }, 2000);
+                                _interval =
+                                  ThirdParty.EasyTimer.SetTimeout(() => { _синхронизироваля = !_синхронизироваля; BMBParameters.ResetParameters(); }, 2000);
                             }
                             else
                                 _синхронизироваля = true;
@@ -895,7 +896,7 @@ namespace R440O.Parameters
                 {
                     return null;
                 }
-                
+
             }
         }
 

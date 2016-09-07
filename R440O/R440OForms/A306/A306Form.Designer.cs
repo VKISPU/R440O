@@ -739,7 +739,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "А306";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.A306Form_FormClosed);
-            this.Move += new System.EventHandler(this.A306Form_Move);
             this.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаНО2Вкл)).EndInit();

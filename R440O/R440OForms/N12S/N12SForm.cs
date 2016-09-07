@@ -152,7 +152,7 @@ namespace R440O.R440OForms.N12S
                 : null;
 
             ЛампочкаГотовность.BackgroundImage = (N12SParameters.ЛампочкаГотовность)
-                ? ControlElementImages.lampType10OnGreen : null;
+                ? ControlElementImages.lampType13OnGreen : null;
         }
 
         private void N12SForm_FormClosed(object sender, FormClosedEventArgs e)

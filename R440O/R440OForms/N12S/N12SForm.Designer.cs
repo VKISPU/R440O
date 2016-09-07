@@ -336,7 +336,7 @@
             // ЛампочкаГотовность
             // 
             this.ЛампочкаГотовность.BackColor = System.Drawing.Color.Transparent;
-            this.ЛампочкаГотовность.BackgroundImage = global::R440O.ControlElementImages.lampType10OnGreen;
+            this.ЛампочкаГотовность.BackgroundImage = global::R440O.ControlElementImages.lampType13OnGreen;
             this.ЛампочкаГотовность.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ЛампочкаГотовность.InitialImage = null;
             this.ЛампочкаГотовность.Location = new System.Drawing.Point(399, 350);

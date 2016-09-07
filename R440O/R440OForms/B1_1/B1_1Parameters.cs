@@ -350,7 +350,7 @@ namespace R440O.R440OForms.B1_1
             get { return _кнопкаСкоростьГР; }
             set
             {
-                _кнопкаСкоростьГР = value;               
+                _кнопкаСкоростьГР = value;
                 N18_MParameters.ResetParameters();
                 OnParameterChanged();
             }
