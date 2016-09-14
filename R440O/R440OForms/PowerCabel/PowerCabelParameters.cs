@@ -10,9 +10,13 @@ namespace R440O.R440OForms.PowerCabel
     {
         static PowerCabelParameters()
         {
+            Напряжение = 380;
+
+            /*
             var generator = new Random();
             var zeroToOne = generator.NextDouble();
             Напряжение = zeroToOne > 0.5F ? 380 : 220;
+            */
         }
 
         private static bool _тумблерОсвещение;
