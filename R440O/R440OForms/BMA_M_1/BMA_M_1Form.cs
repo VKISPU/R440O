@@ -283,7 +283,7 @@ namespace R440O.R440OForms.BMA_M_1
                     КнопкаШлейфТЧ.Font = new Font(FontFamily.GenericSansSerif, 10);
                     break;
                 case 1:
-                    КнопкаШлейфТЧ.BackgroundImage = ControlElementImages.buttonSquareYellowSmallOff;
+                    КнопкаШлейфТЧ.BackgroundImage = ControlElementImages.buttonSquareYellow1;
                     КнопкаШлейфТЧ.Text = "ТЧ";
                     КнопкаШлейфТЧ.Font = new Font(FontFamily.GenericSansSerif, 8);
                     break;
@@ -306,7 +306,7 @@ namespace R440O.R440OForms.BMA_M_1
                     КнопкаШлейфДК.Font = new Font(FontFamily.GenericSansSerif, 10);
                     break;
                 case 1:
-                    КнопкаШлейфДК.BackgroundImage = ControlElementImages.buttonSquareYellowSmallOff;
+                    КнопкаШлейфДК.BackgroundImage = ControlElementImages.buttonSquareYellow1;
                     КнопкаШлейфДК.Text = "ДК";
                     КнопкаШлейфДК.Font = new Font(FontFamily.GenericSansSerif, 8);
                     break;
@@ -329,7 +329,7 @@ namespace R440O.R440OForms.BMA_M_1
                     КнопкаПитаниеВКЛ.Font = new Font(FontFamily.GenericSansSerif, 10);
                     break;
                 case 1:
-                    КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOffSmall;
+                    КнопкаПитаниеВКЛ.BackgroundImage = ControlElementImages.buttonSquareBlue;
                     КнопкаПитаниеВКЛ.Text = "ВКЛ";
                     КнопкаПитаниеВКЛ.Font = new Font(FontFamily.GenericSansSerif, 8);
                     break;
@@ -352,7 +352,7 @@ namespace R440O.R440OForms.BMA_M_1
                     КнопкаПитаниеВЫКЛ.Font = new Font(FontFamily.GenericSansSerif, 10);
                     break;
                 case 1:
-                    КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlueOffSmall;
+                    КнопкаПитаниеВЫКЛ.BackgroundImage = ControlElementImages.buttonSquareBlue;
                     КнопкаПитаниеВЫКЛ.Text = "ВЫКЛ";
                     КнопкаПитаниеВЫКЛ.Font = new Font(FontFamily.GenericSansSerif, 8);
                     break;
