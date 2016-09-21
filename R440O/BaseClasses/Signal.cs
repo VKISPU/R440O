@@ -110,6 +110,8 @@
         /// <param name="chanelNumber">Номер канала.</param>
         public double SpeedOfChanel(int chanelNumber)
         {
+            if (Elements == null)
+                return -1;
             var element = Elements.FirstOrDefault(elem => elem.Flow == SelectedFlow &&
                                                           elem.Group == SelectedGroup);
             return element.Chanels[chanelNumber].Speed;
@@ -121,6 +123,8 @@
         /// <param name="chanelNumber">Номер канала.</param>
         public bool InformationOfChanel(int chanelNumber)
         {
+            if (Elements == null)
+                return false;
             var element = Elements.FirstOrDefault(elem => elem.Flow == SelectedFlow &&
                                                           elem.Group == SelectedGroup);
             return element.Chanels[chanelNumber].Information;

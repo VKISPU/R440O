@@ -590,7 +590,7 @@ namespace R440O.R440OForms.C300M_1
                 var signal = A306Parameters.ВыходнойСигнал1;
                 if (signal != null
                     && signal.Level > 10
-                    && signal.Wave == Волна
+                    && signal.Wave % 5000 == Волна
                     && (Math.Abs(signal.GroupSpeed - ТекущаяСкоростьРаботы) <= 0.5))
                 {
                     if (signal.Modulation != ТумблерВведениеМодуляция

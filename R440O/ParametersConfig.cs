@@ -100,7 +100,7 @@ namespace R440O
             //
             // Кареев Влад.     
             #endregion
-
+            
             #region Подключение питания
             //Подключаем кабели
             PowerCabelParameters.КабельСеть = true;
@@ -211,6 +211,7 @@ namespace R440O
             C300M_2Parameters.ТумблерУправление = true;
 
             #endregion
+            
         }
     }
 }

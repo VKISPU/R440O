@@ -26,23 +26,22 @@
         {
             get
             {
-                //if (Включен &&
-                //    N15Parameters.ТумблерТлфТлгПрд && A1Parameters.ВыходнойСигнал != null && N18_MParameters.ПереключательПРД == 2 &&
-                //    Signal.IsEquivalentSpeed(СкоростьПередачи, A1Parameters.ВыходнойСигнал.GroupSpeed))
-                //{
-                //    var transition = A1Parameters.ВыходнойСигнал;
-                //    transition.Modulation = ТумблерПУЛ48ПРД_1;
-                //    transition.GroupSpeed = СкоростьПередачи;
-                //    return transition;
-                //}
                 if (!Включен) return null;
 
-                var signal = new Signal
-                {
-                    GroupSpeed = СкоростьПередачи,
-                    Modulation = МодуляцияПередачи
-                };
+                Signal signal;
 
+                if (N15Parameters.ТумблерТлфТлгПрд && A1Parameters.ВыходнойСигнал != null && N18_MParameters.ПереключательПРД == 2 &&
+                    Signal.IsEquivalentSpeed(СкоростьПередачи, A1Parameters.ВыходнойСигнал.GroupSpeed))
+                {
+                    signal = A1Parameters.ВыходнойСигнал;
+                    signal.Modulation = МодуляцияПередачи;
+                    signal.GroupSpeed = СкоростьПередачи;                 
+                }
+                else
+                {
+                    signal = new Signal { GroupSpeed = СкоростьПередачи, Modulation = МодуляцияПередачи };
+                }
+               
                 return signal;
             }
         }

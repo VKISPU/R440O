@@ -858,10 +858,7 @@ namespace R440O.Parameters
                 {
                     case 1:
                         {
-                            if (сигнал.SpeedOfChanel(_номер_канала) == 2.4)
-                                _синхронизироваля = true;
-                            else
-                                _синхронизироваля = false;
+                           _синхронизироваля = сигнал.SpeedOfChanel(_номер_канала) == 2.4;                          
                             break;
                         }
                     case 2:
@@ -874,7 +871,7 @@ namespace R440O.Parameters
                                   ThirdParty.EasyTimer.SetTimeout(() => { _синхронизироваля = !_синхронизироваля; BMBParameters.ResetParameters(); }, 2000);
                             }
                             else
-                                _синхронизироваля = true;
+                                _синхронизироваля = сигнал.SpeedOfChanel(_номер_канала) == 1.2;
                             break;
                         }
                     case 3:
