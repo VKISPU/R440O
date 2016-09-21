@@ -5,6 +5,12 @@ using System.Text;
 
 namespace R440O
 {
+
+    /// <summary>
+    /// Методы расширения для  PropertyInfo.
+    /// Класс нужен для работы станции под .NET 4.0 framework.
+    /// </summary>
+
     public static class PropertyInfoExtensions
     {
         public static object GetValue(this System.Reflection.PropertyInfo prop, object obj)
