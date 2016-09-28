@@ -764,7 +764,7 @@ namespace R440O.R440OForms.C300M_2
         #endregion
 
         #endregion
-
+        
         #region ParameterChanged
 
         public delegate void ParameterChangedHandler();

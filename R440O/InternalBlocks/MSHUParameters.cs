@@ -4,7 +4,8 @@
     using R440OForms.A304;
     using R440OForms.N15;
     using R440OForms.OrderScheme;
-    
+    using R440OForms.A306;
+
     public static class MSHUParameters
     {
         public static bool Включен
@@ -39,6 +40,11 @@
                 //С проверкой попадания в диапазон 320...370 МГц
                 return (outputSignal.Frequency >= 320000 && outputSignal.Frequency <= 370000 ) ? outputSignal : null;
             }
+        }
+
+        public static void ResetParameters()
+        {
+            A306Parameters.ResetParameters();
         }
 
     }

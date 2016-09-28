@@ -3,6 +3,10 @@ using System.Windows.Forms.VisualStyles;
 using R440O.BaseClasses;
 using R440O.InternalBlocks;
 using R440O.R440OForms.N15;
+using R440O.R440OForms.C300M_1;
+using R440O.R440OForms.C300M_2;
+using R440O.R440OForms.C300M_3;
+using R440O.R440OForms.C300M_4;
 
 namespace R440O.R440OForms.A306
 {
@@ -107,7 +111,7 @@ namespace R440O.R440OForms.A306
             set
             {
                 _тумблерДистанцМестн = value;
-                OnParameterChanged();
+                ResetParameters();
             }
         }
         private static bool _тумблерДистанцМестн;
@@ -121,7 +125,7 @@ namespace R440O.R440OForms.A306
             set
             {
                 _тумблерПитание = value;
-                OnParameterChanged();
+                ResetParameters();
             }
         }
         private static bool _тумблерПитание;
@@ -165,8 +169,17 @@ namespace R440O.R440OForms.A306
         }
 
         public static void ResetParameters()
-        {
+        {            
             OnParameterChanged();
+            ResetC300M();
+        }
+
+        private static void ResetC300M()
+        {
+           C300M_1Parameters.ResetParameters();
+           C300M_2Parameters.ResetParameters();
+           C300M_3Parameters.ResetParameters();
+           C300M_4Parameters.ResetParameters();
         }
     }
 

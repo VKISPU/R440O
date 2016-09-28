@@ -10,6 +10,7 @@ namespace R440O.InternalBlocks
     using R440OForms.NKN_1;
     using R440OForms.NKN_2;
     using R440OForms.N15;
+    using R440O.InternalBlocks;
 
     public static class A503BParameters
     {
@@ -60,6 +61,11 @@ namespace R440O.InternalBlocks
                 outputSignal.Frequency -= FrequencyShift;
                 return outputSignal;
             }
+        }
+
+        public static void ResetParameters()
+        {
+            MSHUParameters.ResetParameters();
         }
     }
 }

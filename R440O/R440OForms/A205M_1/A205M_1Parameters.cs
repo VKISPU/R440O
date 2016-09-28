@@ -1,6 +1,7 @@
 ﻿using R440O.Parameters;
 using R440O.R440OForms.K04M_01;
 using R440O.R440OForms.N15Inside;
+using R440O.InternalBlocks;
 
 namespace R440O.R440OForms.A205M_1
 {
@@ -173,7 +174,7 @@ namespace R440O.R440OForms.A205M_1
             set
             {
                 _тумблерКЭД = value;
-                OnParameterChanged();
+                ResetParameters();
             }
         }
 
@@ -189,7 +190,7 @@ namespace R440O.R440OForms.A205M_1
                 if (value > -1 && value < 6)
                 {
                     _переключательВолнаX10000 = value;
-                    OnParameterChanged();
+                    ResetParameters();
                 }
             }
         }
@@ -202,7 +203,7 @@ namespace R440O.R440OForms.A205M_1
                 if (value > -1 && value < 10)
                 {
                     _переключательВолнаХ1000 = value;
-                    OnParameterChanged();
+                    ResetParameters();
                 }
             }
         }
@@ -215,7 +216,7 @@ namespace R440O.R440OForms.A205M_1
                 if (value > -1 && value < 10)
                 {
                     _переключательВолнаХ100 = value;
-                    OnParameterChanged();
+                    ResetParameters();
                 }
             }
         }
@@ -228,7 +229,7 @@ namespace R440O.R440OForms.A205M_1
                 if (value > -1 && value < 10)
                 {
                     _переключательВолнаХ10 = value;
-                    OnParameterChanged();
+                    ResetParameters();
                 }
             }
         }
@@ -241,7 +242,7 @@ namespace R440O.R440OForms.A205M_1
                 if (value > -1 && value < 10)
                 {
                     _переключательВолнаХ1 = value;
-                    OnParameterChanged();
+                    ResetParameters();
                 }
             }
         }
@@ -258,7 +259,7 @@ namespace R440O.R440OForms.A205M_1
                 if (value > 0 && value < 11)
                 {
                     _переключательКонтроль = value;
-                    OnParameterChanged();
+                    ResetParameters();
                 }
             }
         }
@@ -326,7 +327,7 @@ namespace R440O.R440OForms.A205M_1
                 if (value > 0 && value < 5)
                 {
                     _переключательВидРаботы = value;
-                    OnParameterChanged();
+                    ResetParameters();
                 }
             }
         }
@@ -343,7 +344,7 @@ namespace R440O.R440OForms.A205M_1
                 if (value > 0 && value < 4)
                 {
                     _переключательВходЧТ = value;
-                    OnParameterChanged();
+                    ResetParameters();
                 }
             }
         }
@@ -357,12 +358,13 @@ namespace R440O.R440OForms.A205M_1
         private static void OnParameterChanged()
         {
             var handler = ParameterChanged;
-            if (handler != null) handler();
+            if (handler != null) handler();            
         }
 
         public static void ResetParameters()
         {
             OnParameterChanged();
+            A503BParameters.ResetParameters();
         }
     }
 }

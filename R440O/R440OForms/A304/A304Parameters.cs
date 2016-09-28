@@ -124,7 +124,7 @@ namespace R440O.R440OForms.A304
             set
             {
                 _тумблерКомплект = value;
-                OnParameterChanged();
+                ResetParameters();
             }
         }
         private static bool _тумблерКомплект = true;
@@ -146,7 +146,7 @@ namespace R440O.R440OForms.A304
                 if (value >= 1 && value <= 10)
                 {
                     _переключательВыборСтвола = value;
-                    OnParameterChanged();
+                    ResetParameters();
                 }
             }
         }
@@ -175,7 +175,7 @@ namespace R440O.R440OForms.A304
                 if (value >= 0 && value < 9)
                 {
                     _переключательКонтроль = value;
-                    OnParameterChanged();
+                    ResetParameters();
                 }
             }
         }
@@ -274,6 +274,7 @@ namespace R440O.R440OForms.A304
                 _кнопка1К = false;
                 _кнопка2К = false;
             }
+            MSHUParameters.ResetParameters();
         }
 
         public delegate void ParameterChangedHandler();
