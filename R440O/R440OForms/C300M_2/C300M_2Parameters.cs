@@ -786,7 +786,7 @@ namespace R440O.R440OForms.C300M_2
                 _значениеПоиска = -50;
             }
             УправлениеПоиском();
-
+            C300PM_1.C300PM_1Parameters.ResetParameters();
             OnParameterChanged();
         }
 

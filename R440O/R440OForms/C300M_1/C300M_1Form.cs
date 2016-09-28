@@ -33,7 +33,7 @@ namespace R440O.R440OForms.C300M_1
         private void КнопкаВидРаботы_Click(object sender, System.EventArgs e)
         {
             var button = sender as Button;
-            C300M_1Parameters.КнопкаВидРаботы = (int)Char.GetNumericValue(button.Name[15]);
+            C300M_1Parameters.КнопкиВидРаботы[(int)Char.GetNumericValue(button.Name[15])] = true;
 
         }
 
@@ -42,7 +42,7 @@ namespace R440O.R440OForms.C300M_1
             this.КнопкаВидРаботыСброс.BackgroundImage = null;
             this.КнопкаВидРаботыСброс.Text = "";
 
-            C300M_1Parameters.КнопкаВидРаботыСброс = true;
+            C300M_1Parameters.КнопкиВидРаботы[10] = true;
 
         }
 
@@ -50,7 +50,7 @@ namespace R440O.R440OForms.C300M_1
         {
             this.КнопкаВидРаботыСброс.BackgroundImage = ControlElementImages.buttonSquareWhite;
             this.КнопкаВидРаботыСброс.Text = "СБРОС";
-            C300M_1Parameters.КнопкаВидРаботыСброс = false;
+            C300M_1Parameters.КнопкиВидРаботы[10] = false;
         }
         #endregion
 
@@ -58,21 +58,21 @@ namespace R440O.R440OForms.C300M_1
         private void КнопкаКонтрольРежима_Click(object sender, System.EventArgs e)
         {
             var button = sender as Button;
-            C300M_1Parameters.КнопкаКонтрольРежима = (int)Char.GetNumericValue(button.Name[20]);
+            C300M_1Parameters.КнопкиКонтрольРежима[(int)Char.GetNumericValue(button.Name[20])] = true;
         }
 
         private void КнопкаКонтрольРежимаМинус27_MouseDown(object sender, MouseEventArgs e)
         {
             КнопкаКонтрольРежимаМинус27.BackgroundImage = null;
             КнопкаКонтрольРежимаМинус27.Text = "";
-            C300M_1Parameters.КнопкаКонтрольРежимаМинус27 = true;
+            C300M_1Parameters.КнопкиКонтрольРежима[10] = true;
         }
 
         private void КнопкаКонтрольРежимаМинус27_MouseUp(object sender, MouseEventArgs e)
         {
             КнопкаКонтрольРежимаМинус27.BackgroundImage = ControlElementImages.buttonSquareWhite;
             КнопкаКонтрольРежимаМинус27.Text = "-27";
-            C300M_1Parameters.КнопкаКонтрольРежимаМинус27 = false;
+            C300M_1Parameters.КнопкиКонтрольРежима[10] = false;
         }
         #endregion
 
@@ -322,7 +322,7 @@ namespace R440O.R440OForms.C300M_1
         {
             КнопкаПитаниеВкл.BackgroundImage = null;
             КнопкаПитаниеВкл.Text = "";
-            C300M_1Parameters.Питание = true;
+            C300M_1Parameters.КнопкиПитание = true;
         }
 
         private void КнопкаПитаниеВкл_MouseUp(object sender, MouseEventArgs e)
@@ -335,7 +335,7 @@ namespace R440O.R440OForms.C300M_1
         {
             КнопкаПитаниеВыкл.BackgroundImage = null;
             КнопкаПитаниеВыкл.Text = "";
-            C300M_1Parameters.Питание = true;
+            C300M_1Parameters.КнопкиПитание = false;
         }
 
         private void КнопкаПитаниеВыкл_MouseUp(object sender, MouseEventArgs e)
