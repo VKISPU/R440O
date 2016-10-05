@@ -58,35 +58,7 @@ namespace R440O.R440OForms.A205M_1
                     var signal = N15InsideParameters.ВыходПередающегоТракта;
                     signal.Level = 20;
                     signal.Wave = wave;
-                    signal.Frequency = 5710000 + 10*wave;
-                    //    switch (ПереключательВидРаботы)
-                    //    {
-                    //        case 1:
-                    //            {
-                    //                if (signal.Modulation != Модуляция.ЧТ) signal = null;
-                    //            }
-                    //            break;
-                    //        case 2:
-                    //            {
-                    //                if (signal.Modulation != Модуляция.ЧТ) signal = null;
-                    //            }
-                    //            break;
-                    //        case 3:
-                    //            {
-                    //                if (signal.Modulation != Модуляция.ОФТ ||
-                    //                    !Signal.IsEquivalentSpeed(signal.GroupSpeed, 5.2)) signal = null;
-                    //            }
-                    //            break;
-                    //        case 4:
-                    //            {
-                    //                if (signal.Modulation != Модуляция.ОФТ ||
-                    //                    !Signal.IsEquivalentSpeed(signal.GroupSpeed, 48)) signal = null;
-                    //            }
-                    //            break;
-                    //    }
-                    //}
-                    //else
-                    //{
+                    signal.Frequency = 5710000 + 10*wave;                  
 
                     if (Работа && (N18_MParameters.ПереключательВходК121 != 1) && PU_K1_1Parameters.Включен)
                     {

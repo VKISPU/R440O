@@ -6,6 +6,7 @@ using R440O.ThirdParty;
 using R440O.BaseClasses;
 using R440O.R440OForms.N18_M;
 using R440O.R440OForms.B1_1;
+using R440O.R440OForms.C300M_1;
 using System;
 
 namespace R440O.Parameters
@@ -806,6 +807,8 @@ namespace R440O.Parameters
                      B1_1Parameters.ВыходнойСигнал != null)
                 {
                     var сигнал = B1_1Parameters.ВыходнойСигнал.ChanelbyNumber(1);
+                    if (сигнал == null)
+                        return null;
                     return сигнал.Information ? сигнал : null;
                 }
                 return null;
@@ -821,6 +824,8 @@ namespace R440O.Parameters
                     && B1_1Parameters.ВыходнойСигнал != null)
                 {
                     var сигнал = B1_1Parameters.ВыходнойСигнал.ChanelbyNumber(2);
+                    if (сигнал == null)
+                        return null;
                     return сигнал.Information ? сигнал : null;
                 }
                 return null;
@@ -836,6 +841,29 @@ namespace R440O.Parameters
                     && B1_1Parameters.ВыходнойСигнал != null)
                 {
                     var сигнал = B1_1Parameters.ВыходнойСигнал.ChanelbyNumber(3);
+                    if (сигнал == null)
+                        return null;
+                    return сигнал.Information ? сигнал : null;
+                }
+                return null;
+            }
+        }
+
+        #endregion
+
+        #region Сигнал с Ц300
+
+        public static Chanel СигналЦ3001
+        {
+            get
+            {
+                // Получение сингала по каналу 1 с Б1 через Н18
+                if (N18_MParameters.Проверить_комутацию(ГнездаН18.Контроль_Прм_Тлф1, ГнездаН18.КоммутацияПрм_Канал1_БМА1) &&
+                    C300M_1Parameters.ПойманныйСигнал != null)
+                {
+                    var сигнал = C300M_1Parameters.ПойманныйСигнал.ChanelbyNumber(1);
+                    if (сигнал == null)
+                        return null;
                     return сигнал.Information ? сигнал : null;
                 }
                 return null;
@@ -852,7 +880,7 @@ namespace R440O.Parameters
                 {
                     return BMBParameters.ВыходнойСигнал;
                 }
-                var сигнал = СигналКанал1 ?? СигналКанал2 ?? СигналКанал3;
+                var сигнал = СигналКанал1 ?? СигналКанал2 ?? СигналКанал3 ?? СигналЦ3001;
                 if (сигнал == null)
                     return null;
                 switch (ПереключательРежимы)

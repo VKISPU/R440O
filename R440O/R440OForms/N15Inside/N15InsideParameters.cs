@@ -1,4 +1,5 @@
-﻿namespace R440O.R440OForms.N15Inside
+﻿using System.Collections.Generic;
+namespace R440O.R440OForms.N15Inside
 {
     using A1;
     using C300M_1;
@@ -6,6 +7,7 @@
     using N18_M;
     using BaseClasses;
     using ОбщиеТипыДанных;
+    using Parameters;
 
     class N15InsideParameters
     {
@@ -28,21 +30,31 @@
             {
                 if (!Включен) return null;
 
-                Signal signal;
-
-                if (N15Parameters.ТумблерТлфТлгПрд && A1Parameters.ВыходнойСигнал != null &&
+                if (N15Parameters.ТумблерТлфТлгПрд)
+                {    
+                    if (N18_MParameters.ПереключательПРД == 2 && A1Parameters.ВыходнойСигнал != null &&
                     Signal.IsEquivalentSpeed(СкоростьПередачи, A1Parameters.ВыходнойСигнал.GroupSpeed))
-                {
-                    signal = A1Parameters.ВыходнойСигнал;
-                    signal.Modulation = МодуляцияПередачи;
-                    signal.GroupSpeed = СкоростьПередачи;                 
+                    {
+                        var signal = A1Parameters.ВыходнойСигнал;
+                        signal.Modulation = МодуляцияПередачи;
+                        signal.GroupSpeed = СкоростьПередачи;
+                        return signal;
+                    }
+                    if (N18_MParameters.ПереключательПРД == 3 &&
+                        N18_MParameters.ПереключательПрдБма12 == 7 && BMA_M_1Parameters.СигналСБМБ != null)
+                    {
+                        var signal = new Signal { GroupSpeed = СкоростьПередачи, Modulation = МодуляцияПередачи };
+                        signal.Elements = new List<SignalElement>()
+                        {
+                            new SignalElement(new[] { -1, 1.2 } )
+                        };
+                        signal.Elements[0].SetInformationInChanelByNumber(1, BMA_M_1Parameters.СигналСБМБ);
+                        return signal;
+                    }
+                    return new Signal { GroupSpeed = СкоростьПередачи, Modulation = МодуляцияПередачи };
+                    
                 }
-                else
-                {
-                    signal = new Signal { GroupSpeed = СкоростьПередачи, Modulation = МодуляцияПередачи };
-                }
-               
-                return signal;
+                return new Signal { GroupSpeed = СкоростьПередачи, Modulation = МодуляцияПередачи };
             }
         }
 
