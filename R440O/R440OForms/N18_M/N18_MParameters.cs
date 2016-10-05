@@ -557,6 +557,7 @@ namespace R440O.R440OForms.N18_M
         private static void OnParameterChanged()
         {
             N15Parameters.ResetDiscret();
+            Parameters.BMA_M_1Parameters.ResetParameters();
             var handler = ParameterChanged;
             if (handler != null) handler();
         }
