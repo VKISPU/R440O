@@ -58,5 +58,11 @@
         /// Каналы с определённой скоростью передачи информации.
         /// </summary>
         public List<Chanel> Chanels { get; private set; }
+
+        public void SetInformationInChanelByNumber(int numberOfChanel, Chanel signal)
+        {
+            var speed = Chanels[numberOfChanel].Speed;
+            Chanels[numberOfChanel] = new Chanel(speed, signal.InformationString);
+        }
     }
 }

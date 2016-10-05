@@ -805,7 +805,8 @@ namespace R440O.Parameters
                 if (N18_MParameters.Проверить_комутацию(ГнездаН18.КоммутацияПрм_Канал1_Б11, ГнездаН18.КоммутацияПрм_Канал1_БМА1) &&
                      B1_1Parameters.ВыходнойСигнал != null)
                 {
-                    return B1_1Parameters.ВыходнойСигнал.ChanelbyNumber(1);
+                    var сигнал = B1_1Parameters.ВыходнойСигнал.ChanelbyNumber(1);
+                    return сигнал.Information ? сигнал : null;
                 }
                 return null;
             }
@@ -819,7 +820,8 @@ namespace R440O.Parameters
                 if (N18_MParameters.Проверить_комутацию(ГнездаН18.КоммутацияПрм_Канал2_Б11, ГнездаН18.КоммутацияПрм_Канал1_БМА1)
                     && B1_1Parameters.ВыходнойСигнал != null)
                 {
-                    return B1_1Parameters.ВыходнойСигнал.ChanelbyNumber(2);
+                    var сигнал = B1_1Parameters.ВыходнойСигнал.ChanelbyNumber(2);
+                    return сигнал.Information ? сигнал : null;
                 }
                 return null;
             }
@@ -833,7 +835,8 @@ namespace R440O.Parameters
                 if (N18_MParameters.Проверить_комутацию(ГнездаН18.КоммутацияПрм_Канал3_Б11, ГнездаН18.КоммутацияПрм_Канал1_БМА1)
                     && B1_1Parameters.ВыходнойСигнал != null)
                 {
-                    return B1_1Parameters.ВыходнойСигнал.ChanelbyNumber(3);
+                    var сигнал = B1_1Parameters.ВыходнойСигнал.ChanelbyNumber(3);
+                    return сигнал.Information ? сигнал : null;
                 }
                 return null;
             }
@@ -841,7 +844,7 @@ namespace R440O.Parameters
 
         #endregion
 
-        public static Chanel ВыходнойСигал
+        public static Chanel СигалНаБМБ
         {
             get
             {
@@ -884,6 +887,14 @@ namespace R440O.Parameters
                         }
                 }
                 return _синхронизироваля ? сигнал : null;
+            }
+        }
+
+        public static Chanel СигналСБМБ
+        {
+            get
+            {
+                return BMBParameters.ВыходнойСигнал;
             }
         }
 

@@ -11,6 +11,7 @@ namespace R440O.R440OForms.A1
     public static class A1Parameters
     {
         #region Работа блока
+
         public static bool Включен
         {
             get
@@ -20,14 +21,37 @@ namespace R440O.R440OForms.A1
             }
         }
 
+        private static void ПолучитьИнформациюБаслет(Signal сигнал)
+        {
+            if (N18_MParameters.ПереключательПРД == 2 && Parameters.BMA_M_1Parameters.СигналСБМБ != null)
+            {
+                if (N18_MParameters.ПереключательПрдБма12 == 3 || N18_MParameters.ПереключательПрдБма12 == 4)
+                {
+                    сигнал.Elements[0].SetInformationInChanelByNumber(1,
+                        Parameters.BMA_M_1Parameters.СигналСБМБ); 
+                }
+                else if (N18_MParameters.ПереключательПрдБма12 == 1 || N18_MParameters.ПереключательПрдБма12 == 5)
+                {
+                    сигнал.Elements[0].SetInformationInChanelByNumber(2,
+                        Parameters.BMA_M_1Parameters.СигналСБМБ);
+                }
+                else if (N18_MParameters.ПереключательПрдБма12 == 2 || N18_MParameters.ПереключательПрдБма12 == 6)
+                {
+                    сигнал.Elements[0].SetInformationInChanelByNumber(3,
+                        Parameters.BMA_M_1Parameters.СигналСБМБ);
+                }
+            }
+        }
+
         public static Signal ВыходнойСигнал
         {
             get
             {
                 if (!Включен) return null;
+                Signal сигнал = null;
                 if (!КнопкаСкоростьГр)
                     if (КнопкаСкоростьАб_1ТЛФК)
-                        return new Signal
+                        сигнал = new Signal
                         {
                             GroupSpeed = 4.8,
                             Elements = new List<SignalElement>()
@@ -36,7 +60,7 @@ namespace R440O.R440OForms.A1
                             },
                             Level = 50
                         };
-                    else return new Signal
+                    else сигнал = new Signal
                     {
                         GroupSpeed = 4.8,
                         Elements = new List<SignalElement>()
@@ -45,8 +69,8 @@ namespace R440O.R440OForms.A1
                             },
                         Level = 50
                     };
-
-                return new Signal
+                else
+                сигнал = new Signal
                 {
                     GroupSpeed = 2.4,
                     Elements = new List<SignalElement>()
@@ -55,6 +79,8 @@ namespace R440O.R440OForms.A1
                             },
                     Level = 50
                 };
+                ПолучитьИнформациюБаслет(сигнал);
+                return сигнал;
             }
         }
 

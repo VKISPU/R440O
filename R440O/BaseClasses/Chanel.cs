@@ -17,6 +17,13 @@
             Information = information;
         }
 
+        public Chanel(double speed, string infString)
+        {
+            Speed = speed;
+            Information = true;
+            InformationString = infString;
+        }
+
         /// <summary>
         /// Скорость передачи информации в канале.
         /// </summary>
@@ -28,6 +35,6 @@
         /// </summary>
         public bool Information { get; private set; }
 
-        public string InformationString { get; set; }
+        public string InformationString { get; private set; }
     }
 }

@@ -30,7 +30,7 @@
 
                 Signal signal;
 
-                if (N15Parameters.ТумблерТлфТлгПрд && A1Parameters.ВыходнойСигнал != null && N18_MParameters.ПереключательПРД == 2 &&
+                if (N15Parameters.ТумблерТлфТлгПрд && A1Parameters.ВыходнойСигнал != null &&
                     Signal.IsEquivalentSpeed(СкоростьПередачи, A1Parameters.ВыходнойСигнал.GroupSpeed))
                 {
                     signal = A1Parameters.ВыходнойСигнал;
@@ -55,10 +55,10 @@
             get
             {
                 if (Включен &&
-                    N15Parameters.ТумблерТлфТлгПрм && C300M_1Parameters.ХранимыйСигнал != null &&
-                    Signal.IsEquivalentSpeed(C300M_1Parameters.ХранимыйСигнал.GroupSpeed, СкоростьПриема) &&
-                    C300M_1Parameters.ХранимыйСигнал.Modulation == ТумблерПУЛ480ПРМ_1)
-                    return C300M_1Parameters.ХранимыйСигнал;
+                    N15Parameters.ТумблерТлфТлгПрм && C300M_1Parameters.ПойманныйСигнал != null &&
+                    Signal.IsEquivalentSpeed(C300M_1Parameters.ПойманныйСигнал.GroupSpeed, СкоростьПриема) &&
+                    C300M_1Parameters.ПойманныйСигнал.Modulation == ТумблерПУЛ480ПРМ_1)
+                    return C300M_1Parameters.ПойманныйСигнал;
                 return null;
             }
         }

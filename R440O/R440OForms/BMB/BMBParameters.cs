@@ -449,7 +449,7 @@ namespace R440O.R440OForms.BMB
                 if (ВходнойСигнал != null && (!ЛампочкаДк) && Команда[1] != -1)
                     ПереданнаяКоманда = НаборКоманды;
             }
-
+            BMA_M_1Parameters.ResetParameters();
             if (RefreshForm != null) RefreshForm();
         }
 
@@ -518,7 +518,7 @@ namespace R440O.R440OForms.BMB
             get
             {
                 if (БМА1ПодключенВерно)
-                    return BMA_M_1Parameters.ВыходнойСигал;
+                    return BMA_M_1Parameters.СигалНаБМБ;
                 return null;
             }
         }
@@ -529,8 +529,7 @@ namespace R440O.R440OForms.BMB
             {
                 if (ПереключательРаботаКонтроль == 1)
                 {
-                    var сигнал = new Chanel(1.2);
-                    сигнал.InformationString = ПереданнаяКоманда;
+                    var сигнал = new Chanel(1.2, ПереданнаяКоманда);
                     return сигнал;
                 }
                 return null;
