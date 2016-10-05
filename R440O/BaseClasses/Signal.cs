@@ -139,5 +139,19 @@
         {
             return Math.Abs(inputSpeed - outputSpeed) <= 0.5;
         }
+
+        /// <summary>
+        /// Возвращает инф. канал в соотвествии с номером группы, номером потока, номером канала
+        /// </summary>
+        /// <param name="chanelNumber"></param>
+        /// <returns></returns>
+        public Chanel ChanelbyNumber(int chanelNumber)
+        {
+            if (Elements == null)
+                return null;
+            var element = Elements.FirstOrDefault(elem => elem.Flow == SelectedFlow &&
+                                                          elem.Group == SelectedGroup);
+            return element.Chanels[chanelNumber];
+        }
     }
 }

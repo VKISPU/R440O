@@ -27,5 +27,7 @@
         /// true - информация присутствует, false - отсутствует.
         /// </summary>
         public bool Information { get; private set; }
+
+        public string InformationString { get; set; }
     }
 }

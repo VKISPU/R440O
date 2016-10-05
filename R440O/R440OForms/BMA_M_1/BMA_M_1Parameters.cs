@@ -791,79 +791,77 @@ namespace R440O.Parameters
         #endregion
 
         #region Сигнал
-        private static int _номер_канала = -1;
-        public static Signal ВходнойСигнал
+
+        private static bool _синхронизироваля = true;
+        private static IDisposable _interval = null;
+
+        #region Сигнал С Б1 через Н18
+
+        public static Chanel СигналКанал1
         {
             get
             {
-                _номер_канала = -1;
-                // На Н18 не повернуты нужные тумблеры.
-                if (!(N18_MParameters.ПереключательПРМ1 == 4 && N18_MParameters.ПереключательПРМ2 == 4))
-                    return null;
-
                 // Получение сингала по каналу 1 с Б1 через Н18
-                if (N18_MParameters.Проверить_комутацию(ГнездаН18.КоммутацияПрм_Канал1_Б11, ГнездаН18.КоммутацияПрм_Канал1_БМА1)
-                     && (N18_MParameters.ПереключательПрдБма12 == 1 || N18_MParameters.ПереключательПрдБма12 == 4))
+                if (N18_MParameters.Проверить_комутацию(ГнездаН18.КоммутацияПрм_Канал1_Б11, ГнездаН18.КоммутацияПрм_Канал1_БМА1) &&
+                     B1_1Parameters.ВыходнойСигнал != null)
                 {
-                    Signal сигнал = B1_1Parameters.ВыходнойСигнал;
-                    if (сигнал != null && сигнал.SpeedOfChanel(1) != 0)
-                    {
-                        _номер_канала = 1;
-                        return сигнал;
-                    }
-                    return null;
+                    return B1_1Parameters.ВыходнойСигнал.ChanelbyNumber(1);
                 }
-
-                // Получение сингала по каналу 2 с Б1 через Н18
-                if (N18_MParameters.Проверить_комутацию(ГнездаН18.КоммутацияПрм_Канал2_Б11, ГнездаН18.КоммутацияПрм_Канал1_БМА1)
-                      && (N18_MParameters.ПереключательПрдБма12 == 2 || N18_MParameters.ПереключательПрдБма12 == 5))
-                {
-                    Signal сигнал = B1_1Parameters.ВыходнойСигнал;
-                    if (сигнал != null && сигнал.SpeedOfChanel(2) != 0)
-                    {
-                        _номер_канала = 2;
-                        return сигнал;
-                    }
-                    return null;
-                }
-
-                // Получение сингала по каналу 3 с Б1 через Н18
-                if (N18_MParameters.Проверить_комутацию(ГнездаН18.КоммутацияПрм_Канал3_Б11, ГнездаН18.КоммутацияПрм_Канал1_БМА1)
-                      && (N18_MParameters.ПереключательПрдБма12 == 3 || N18_MParameters.ПереключательПрдБма12 == 6))
-                {
-                    Signal сигнал = B1_1Parameters.ВыходнойСигнал;
-                    if (сигнал != null && сигнал.SpeedOfChanel(3) != 0)
-                    {
-                        _номер_канала = 3;
-                        return сигнал;
-                    }
-                    return null;
-                }
-
                 return null;
             }
         }
-        private static bool _синхронизироваля = true;
-        private static IDisposable _interval = null;
-        public static Signal ВыходнойСигнал
+
+        public static Chanel СигналКанал2
         {
             get
             {
+                // Получение сингала по каналу 2 с Б1 через Н18
+                if (N18_MParameters.Проверить_комутацию(ГнездаН18.КоммутацияПрм_Канал2_Б11, ГнездаН18.КоммутацияПрм_Канал1_БМА1)
+                    && B1_1Parameters.ВыходнойСигнал != null)
+                {
+                    return B1_1Parameters.ВыходнойСигнал.ChanelbyNumber(2);
+                }
+                return null;
+            }
+        }
 
-                Signal сигнал = ВходнойСигнал;
+        public static Chanel СигналКанал3
+        {
+            get
+            {
+                // Получение сингала по каналу 3 с Б1 через Н18
+                if (N18_MParameters.Проверить_комутацию(ГнездаН18.КоммутацияПрм_Канал3_Б11, ГнездаН18.КоммутацияПрм_Канал1_БМА1)
+                    && B1_1Parameters.ВыходнойСигнал != null)
+                {
+                    return B1_1Parameters.ВыходнойСигнал.ChanelbyNumber(3);
+                }
+                return null;
+            }
+        }
 
-                if (сигнал == null || _номер_канала == -1)
+        #endregion
+
+        public static Chanel ВыходнойСигал
+        {
+            get
+            {
+                if (КнопкаШлейфДК == 3)
+                {
+                    return BMBParameters.ВыходнойСигнал;
+                }
+                var сигнал = СигналКанал1 ?? СигналКанал2 ?? СигналКанал3;
+                if (сигнал == null)
                     return null;
                 switch (ПереключательРежимы)
                 {
                     case 1:
                         {
-                           _синхронизироваля = сигнал.SpeedOfChanel(_номер_канала) == 2.4;                          
+                            _синхронизироваля = сигнал.Speed == 2.4;
                             break;
                         }
                     case 2:
                         {
-                            if (сигнал.SpeedOfChanel(_номер_канала) == 2.4)
+                            if (сигнал.Speed == 2.4)
                             {
                                 if (_interval != null)
                                     _interval.Dispose();
@@ -871,7 +869,7 @@ namespace R440O.Parameters
                                   ThirdParty.EasyTimer.SetTimeout(() => { _синхронизироваля = !_синхронизироваля; BMBParameters.ResetParameters(); }, 2000);
                             }
                             else
-                                _синхронизироваля = сигнал.SpeedOfChanel(_номер_канала) == 1.2;
+                                _синхронизироваля = сигнал.Speed == 1.2;
                             break;
                         }
                     case 3:
@@ -885,15 +883,7 @@ namespace R440O.Parameters
                             break;
                         }
                 }
-                if (_синхронизироваля)
-                {
-                    return сигнал;
-                }
-                else
-                {
-                    return null;
-                }
-
+                return _синхронизироваля ? сигнал : null;
             }
         }
 

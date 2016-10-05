@@ -902,6 +902,8 @@ namespace R440O.R440OForms.N15
             A205M_1Parameters.ResetParameters();
             A205M_2Parameters.ResetParameters();
 
+            A503BParameters.ResetParameters();
+
             ResetC300M();
             OnParameterChanged();
         }
