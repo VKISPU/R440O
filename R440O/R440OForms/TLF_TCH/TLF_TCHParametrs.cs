@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using R440O.Parameters;
+using R440O.R440OForms.BMA_M_1;
+
 namespace R440O.R440OForms.TLF_TCH
 {
     class TLF_TCHParametrs

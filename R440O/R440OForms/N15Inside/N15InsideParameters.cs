@@ -7,7 +7,7 @@ namespace R440O.R440OForms.N15Inside
     using N18_M;
     using BaseClasses;
     using ОбщиеТипыДанных;
-    using Parameters;
+    using BMA_M_1;
 
     class N15InsideParameters
     {

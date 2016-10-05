@@ -1,6 +1,7 @@
 ﻿using R440O.R440OForms.P220_27G_2;
 using R440O.R440OForms.P220_27G_3;
 using R440O.R440OForms.N18_M;
+using R440O.R440OForms.BMA_M_1;
 
 namespace R440O.R440OForms.A1
 {
@@ -23,22 +24,22 @@ namespace R440O.R440OForms.A1
 
         private static void ПолучитьИнформациюБаслет(Signal сигнал)
         {
-            if (N18_MParameters.ПереключательПРД == 2 && Parameters.BMA_M_1Parameters.СигналСБМБ != null)
+            if (N18_MParameters.ПереключательПРД == 2 && BMA_M_1Parameters.СигналСБМБ != null)
             {
                 if (N18_MParameters.ПереключательПрдБма12 == 3 || N18_MParameters.ПереключательПрдБма12 == 4)
                 {
                     сигнал.Elements[0].SetInformationInChanelByNumber(1,
-                        Parameters.BMA_M_1Parameters.СигналСБМБ); 
+                        BMA_M_1Parameters.СигналСБМБ); 
                 }
                 else if (N18_MParameters.ПереключательПрдБма12 == 1 || N18_MParameters.ПереключательПрдБма12 == 5)
                 {
                     сигнал.Elements[0].SetInformationInChanelByNumber(2,
-                        Parameters.BMA_M_1Parameters.СигналСБМБ);
+                        BMA_M_1Parameters.СигналСБМБ);
                 }
                 else if (N18_MParameters.ПереключательПрдБма12 == 2 || N18_MParameters.ПереключательПрдБма12 == 6)
                 {
                     сигнал.Elements[0].SetInformationInChanelByNumber(3,
-                        Parameters.BMA_M_1Parameters.СигналСБМБ);
+                        BMA_M_1Parameters.СигналСБМБ);
                 }
             }
         }

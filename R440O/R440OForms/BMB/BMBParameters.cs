@@ -1,11 +1,13 @@
 ﻿using R440O.ThirdParty;
 using R440O.BaseClasses;
 using R440O.R440OForms.N18_M;
+
 namespace R440O.R440OForms.BMB
 {
-    using Parameters;
     using N15;
     using N502B;
+    using BMA_M_1;
+    using Parameters;
     using СостоянияЭлементов.БМБ;
 
     public static class BMBParameters
