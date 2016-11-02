@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using R440O.R440OForms.A205M_1;
+
 namespace R440O.R440OForms.N15Inside
 {
     using A1;
@@ -310,6 +312,7 @@ namespace R440O.R440OForms.N15Inside
         {
             var handler = ParameterChanged;
             if (handler != null) handler();
+            A205M_1Parameters.ResetParameters();
         }
     }
 }

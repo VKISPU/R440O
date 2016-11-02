@@ -81,5 +81,14 @@ namespace R440O.Properties {
                 return ResourceManager.GetString("A403_1Form_FillValues_", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream bmb {
+            get {
+                return ResourceManager.GetStream("bmb", resourceCulture);
+            }
+        }
     }
 }

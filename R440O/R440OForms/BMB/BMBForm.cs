@@ -57,7 +57,7 @@
 
         #region Инициализация
 
-        private SoundPlayer _player = new SoundPlayer(Directory.GetCurrentDirectory() + "\\Resources\\bmb.wav");
+        private SoundPlayer _player = new SoundPlayer(Properties.Resources.bmb);
 
         public void RefreshFormElements()
         {
@@ -68,7 +68,7 @@
             // Звук для БМБ
             if (BMBParameters.ЛампочкаПриемВызова && BMBParameters.КнопкаЗвСигнал == Кнопка.Горит)
             {
-                _player = new SoundPlayer(Directory.GetCurrentDirectory() + "\\Resources\\bmb.wav");
+                _player = new SoundPlayer(Properties.Resources.bmb);
                 _player.PlayLooping();
             }
             else
