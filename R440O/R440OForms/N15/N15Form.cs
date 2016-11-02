@@ -202,7 +202,6 @@ namespace R440O.R440OForms.N15
         private void КнопкаСтанцияВыкл_MouseUp(object sender, MouseEventArgs e)
         {
             this.КнопкаСтанцияВыкл.BackgroundImage = ControlElementImages.buttonN15Off;
-
         }
 
         private void N15ButtonInside1_Click(object sender, EventArgs e)
