@@ -57,7 +57,7 @@ namespace R440O.R440OForms.C300M_2
             "Поиск не идет\n";
             log += (C300M_2Parameters.timer.Enabled) ? "Таймер запущен\n" :
             "Таймер не запущен\n";
-            log += (C300M_2Parameters.ХранимыйСигнал == null) ? "Сигнала нет\n\n" : "Сигнала есть\n\n";
+            log += (C300M_2Parameters.ПойманныйСигнал == null) ? "Сигнала нет\n\n" : "Сигнала есть\n\n";
             logbox.Text += log;
         }
         #region Кнопки ВИД РАБОТЫ

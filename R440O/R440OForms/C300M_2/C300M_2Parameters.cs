@@ -4,6 +4,7 @@ using R440O.InternalBlocks;
 using R440O.R440OForms.A304;
 using R440O.R440OForms.A306;
 using R440O.R440OForms.N15;
+using R440O.R440OForms.C300PM_2;
 using R440O.ОбщиеТипыДанных;
 
 namespace R440O.R440OForms.C300M_2
@@ -13,6 +14,7 @@ namespace R440O.R440OForms.C300M_2
 
         #region Private
 
+        private static bool _сигналПойман = false;
         private static bool _кнопкаВидРаботыСброс;
         private static bool _кнопкаКонтрольРежимаМинус27;
         private static bool _кнопкиПитание;
@@ -183,9 +185,9 @@ namespace R440O.R440OForms.C300M_2
                 //Если блок включен, поиск не идет, и блокировка не включена, то поиск необходимо запустить снова.
                 if (Включен && !ПоискИдет && !ТумблерБлокировка && КнопкаПоиск)
                 {
-                    if (ХранимыйСигнал != null)
+                    if (СигналПойман)
                     {
-                        ХранимыйСигнал = null;
+                        СигналПойман = false;
                         ЗначениеПоиска += 5;
                     }
                     ЗапуститьТаймер();
@@ -332,7 +334,7 @@ namespace R440O.R440OForms.C300M_2
             set
             {
                 _тумблерБлокировка = value;
-                if(value && Включен) ОстановитьТаймер();
+                if (value && Включен) ОстановитьТаймер();
                 else ЗапуститьТаймер();
                 OnParameterChanged();
             }
@@ -425,7 +427,7 @@ namespace R440O.R440OForms.C300M_2
 
         public static bool ЛампочкаСигнал
         {
-            get { return Включен && !ПоискИдет && ХранимыйСигнал != null || ВременноПоймать; }
+            get { return Включен && !ПоискИдет && СигналПойман || ВременноПоймать; }
         }
 
         public static bool ЛампочкаПитание
@@ -456,7 +458,7 @@ namespace R440O.R440OForms.C300M_2
                             case 0:
                                 if (!ЛампочкаСигнал)
                                     return 0;
-                                return _индикаторСигнал = (float)((N15Parameters.РегуляторУровень - ХранимыйСигнал.Level)/2);
+                                return _индикаторСигнал = (float)((N15Parameters.РегуляторУровень - ПойманныйСигнал.Level) / 2);
 
                             case 1:
                                 if (ТумблерРегулировкаУровня)
@@ -540,20 +542,20 @@ namespace R440O.R440OForms.C300M_2
         {
             timer.Stop();
             timer.Tick -= timer_Tick;
-            if (ХранимыйСигнал == null || !УсловиеПоимкиСигнала)
-            if (Включен)
-            {
+            if (!СигналПойман || !УсловиеПоимкиСигнала)
+                if (Включен)
+                {
                     ПоискИдет = true;
                     timer.Enabled = true;
                     timer.Tick += timer_Tick;
                     timer.Start();
-            }
-            else
-            {
-                ПоискИдет = false;
-                timer.Enabled = false;
-                ВременноПоймать = false;
-            }
+                }
+                else
+                {
+                    ПоискИдет = false;
+                    timer.Enabled = false;
+                    ВременноПоймать = false;
+                }
         }
 
         private static float _значениеПоиска;
@@ -585,9 +587,9 @@ namespace R440O.R440OForms.C300M_2
         public static void ПопытатьсяСброситьСигнал()
         {
             ОстановитьТаймер();
-            if (ТумблерВидВключения && ХранимыйСигнал != null)
+            if (ТумблерВидВключения && СигналПойман)
             {
-                ХранимыйСигнал = null;
+                СигналПойман = false;
                 ЗапуститьТаймер();
             }
         }
@@ -629,7 +631,7 @@ namespace R440O.R440OForms.C300M_2
                     if (СоответствиеМодуляции)
                     {
                         ОстановитьТаймер();
-                        ХранимыйСигнал = ВходящийСигнал;
+                        СигналПойман = true;
                     }
                     else
                     {
@@ -638,7 +640,7 @@ namespace R440O.R440OForms.C300M_2
                 }
                 else
                 {
-                    ХранимыйСигнал = null;
+                    СигналПойман = false;
                     if (ВременноПоймать) ВременноПоймать = false;
                 }
             }
@@ -658,10 +660,27 @@ namespace R440O.R440OForms.C300M_2
             }
         }
 
-        /// <summary>
-        /// Переменная, в которой хранится пойманный сигнал
-        /// </summary>
-        public static Signal ХранимыйСигнал { get; set; }
+        private static bool СигналПойман
+        {
+            get { return _сигналПойман; }
+            set
+            {
+                var oldValue = _сигналПойман;
+                _сигналПойман = value;
+                if (oldValue ^ _сигналПойман)
+                {
+                    N15Parameters.ResetParametersAlternative();
+                }
+            }
+        }
+
+        public static Signal ПойманныйСигнал
+        {
+            get
+            {
+                return СигналПойман ? ВходящийСигнал : null;
+            }
+        }
 
         /// <summary>
         /// Изменение скорости работы таймера
@@ -672,7 +691,7 @@ namespace R440O.R440OForms.C300M_2
             {
                 timer.Interval = (КнопкиВидРаботы.PressedButton == 10 || (КнопкиВидРаботы.PressedButton == -1))
                     ? 10
-                    : 100 - КнопкиВидРаботы.PressedButton*10;
+                    : 100 - КнопкиВидРаботы.PressedButton * 10;
             }
         }
 
@@ -706,7 +725,7 @@ namespace R440O.R440OForms.C300M_2
                     0.025, 0.05, 0.1, 1.2, 2.4, 4.8, 48, 96, 240, 480, -5
                 };
 
-                var  tekSpeed = (КнопкиВидРаботы.PressedButton == -1) ? 0 : speed[КнопкиВидРаботы.PressedButton];
+                var tekSpeed = (КнопкиВидРаботы.PressedButton == -1) ? 0 : speed[КнопкиВидРаботы.PressedButton];
 
                 return Math.Abs(ВходящийСигнал.GroupSpeed - tekSpeed) < 0.005;
             }
@@ -731,7 +750,7 @@ namespace R440O.R440OForms.C300M_2
                 if (СоответствиеЧастоты && СоответствиеСкорости)
                 {
                     return (!ТумблерПределы) ?
-                        (ЧастотаПоиска - ВходящийСигнал.Frequency-70000)/10 : -27 + (ЧастотаПоиска - ВходящийСигнал.Frequency-70000)/10;
+                        (ЧастотаПоиска - ВходящийСигнал.Frequency - 70000) / 10 : -27 + (ЧастотаПоиска - ВходящийСигнал.Frequency - 70000) / 10;
                 }
                 return -10000;
             }
@@ -764,7 +783,7 @@ namespace R440O.R440OForms.C300M_2
         #endregion
 
         #endregion
-        
+
         #region ParameterChanged
 
         public delegate void ParameterChangedHandler();
@@ -786,7 +805,7 @@ namespace R440O.R440OForms.C300M_2
                 _значениеПоиска = -50;
             }
             УправлениеПоиском();
-            C300PM_1.C300PM_1Parameters.ResetParameters();
+            C300PM_2Parameters.ResetParameters();
             OnParameterChanged();
         }
 
@@ -806,9 +825,5 @@ namespace R440O.R440OForms.C300M_2
         }
     }
 
-    #endregion
-
-
-
-   
+        #endregion
 }

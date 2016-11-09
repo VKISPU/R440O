@@ -4,6 +4,7 @@ using R440O.InternalBlocks;
 using R440O.R440OForms.A304;
 using R440O.R440OForms.A306;
 using R440O.R440OForms.N15;
+using R440O.R440OForms.C300PM_1;
 using R440O.ОбщиеТипыДанных;
 
 namespace R440O.R440OForms.C300M_1
@@ -804,7 +805,7 @@ namespace R440O.R440OForms.C300M_1
                 _значениеПоиска = -50;
             }
             УправлениеПоиском();
-            C300PM_1.C300PM_1Parameters.ResetParameters();
+            C300PM_1Parameters.ResetParameters();
             OnParameterChanged();
         }
 
