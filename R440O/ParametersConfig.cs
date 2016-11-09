@@ -132,6 +132,7 @@ namespace R440O
                 //A304
                 A304Parameters.ТумблерУправление1 = true;
                 A304Parameters.ТумблерУправление2 = true;
+                A304Parameters.ТумблерКомплект = false;
                 #endregion
 
                 #region Настройка по малому шлейфу

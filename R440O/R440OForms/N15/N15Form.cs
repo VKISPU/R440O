@@ -121,7 +121,6 @@ namespace R440O.R440OForms.N15
 
         }
 
-        private string List;
         /// <summary>
         /// Установка лампочек в положение последней их установки
         /// </summary>

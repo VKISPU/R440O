@@ -646,22 +646,14 @@ namespace R440O.R440OForms.N15
 
         #region Лампочки верхняя часть
 
-        public static bool ЛампочкаЦ300МВкл1
-        {
-            get
-            {
-                return Лампочка27В && ЛампочкаН15БП && ТумблерЦ300М1
-                       && C300M_1Parameters.ЛампочкаПитание;
-            }
-        }
-
+        public static bool ЛампочкаЦ300МВкл1 { get { return C300M_1Parameters.Включен; } }
         public static bool ЛампочкаЦ300МВкл2 { get { return C300M_2Parameters.Включен; } }
         public static bool ЛампочкаЦ300МВкл3 { get { return Лампочка27В && ЛампочкаН15БП && ТумблерЦ300М3; } }
         public static bool ЛампочкаЦ300МВкл4 { get { return Лампочка27В && ЛампочкаН15БП && ТумблерЦ300М4; } }
-        public static bool ЛампочкаЦ300МСигнал1 { get; set; }
+        public static bool ЛампочкаЦ300МСигнал1 { get { return C300M_1Parameters.ЛампочкаСигнал; } }
         public static bool ЛампочкаЦ300МСигнал2 { get { return C300M_2Parameters.ЛампочкаСигнал; } }
-        public static bool ЛампочкаЦ300МСигнал3 { get; set; }
-        public static bool ЛампочкаЦ300МСигнал4 { get; set; }
+        public static bool ЛампочкаЦ300МСигнал3 { get { return C300M_3Parameters.ЛампочкаСигнал; } }
+        public static bool ЛампочкаЦ300МСигнал4 { get { return C300M_4Parameters.ЛампочкаСигнал; } }
         public static bool ЛампочкаЦ300МНеиспр1 { get; set; }
         public static bool ЛампочкаЦ300МНеиспр2 { get; set; }
         public static bool ЛампочкаЦ300МНеиспр3 { get; set; }

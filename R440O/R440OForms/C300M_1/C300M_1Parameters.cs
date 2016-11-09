@@ -13,6 +13,7 @@ namespace R440O.R440OForms.C300M_1
 
         #region Private
 
+        private static bool _сигналПойман = false;
         private static bool _кнопкаВидРаботыСброс;
         private static bool _кнопкаКонтрольРежимаМинус27;
         private static bool _кнопкиПитание;
@@ -658,7 +659,19 @@ namespace R440O.R440OForms.C300M_1
             }
         }
 
-        private static bool СигналПойман { get; set; }
+        private static bool СигналПойман 
+        { 
+            get { return _сигналПойман; } 
+            set 
+            {
+                var oldValue = _сигналПойман;
+                _сигналПойман = value;
+                if (oldValue ^ _сигналПойман)
+                {
+                    N15Parameters.ResetParametersAlternative();
+                }
+            }
+        }
 
         public static Signal ПойманныйСигнал 
         { 
