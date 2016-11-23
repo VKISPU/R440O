@@ -5,6 +5,7 @@ using R440O.R440OForms.A304;
 using R440O.R440OForms.A306;
 using R440O.R440OForms.N15;
 using R440O.R440OForms.C300PM_2;
+using R440O.R440OForms.K01M_01;
 using R440O.ОбщиеТипыДанных;
 
 namespace R440O.R440OForms.C300M_2
@@ -806,6 +807,7 @@ namespace R440O.R440OForms.C300M_2
             }
             УправлениеПоиском();
             C300PM_2Parameters.ResetParameters();
+            K01M_01Parameters.ResetParameters();
             OnParameterChanged();
         }
 

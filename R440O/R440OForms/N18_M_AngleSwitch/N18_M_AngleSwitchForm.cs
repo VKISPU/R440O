@@ -49,13 +49,8 @@ namespace R440O.R440OForms.N18_M_AngleSwitch
                 {
                     newValue = ((int)parameter.GetValue(this) != 2) ? 2 : 0;
                 }
-                foreach (PropertyInfo property in parametersList.Where(property => (int)property.GetValue(this) == newValue))
-                {
-                    property.SetValue(this, 0);
-                }
                 parameter.SetValue(this, newValue);
             }
-            RefreshFormElements();
         }
     }
 }

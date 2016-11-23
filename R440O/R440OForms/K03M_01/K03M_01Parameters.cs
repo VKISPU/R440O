@@ -32,6 +32,14 @@ namespace R440O.R440OForms.K03M_01
             if (handler != null) handler();
         }
 
+        public static void ОбновитьСигнал()
+        {
+            НачатьПоискСНачала();
+            ResetParameters();
+            K02M_01Parameters.ResetParameters();
+
+        }
+
         public static void ResetParameters()
         {
             OnParameterChanged();
@@ -310,6 +318,8 @@ namespace R440O.R440OForms.K03M_01
             {
                 if (value == 0 || value == 1)
                     НайденныйСигнал = null;
+                else
+                    НайденныйСигнал = K01M_01Parameters.Сигнал;
                 _статусПоиска = value;
             }
         }

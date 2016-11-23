@@ -119,7 +119,7 @@ namespace R440O.R440OForms.K05M_01
                 if (value >= 0 && value <= 2)
                 {
                     _ПереключательКанал2 = value;
-                    ResetParameters();;
+                    ResetParameters();
                 }
             }
         }

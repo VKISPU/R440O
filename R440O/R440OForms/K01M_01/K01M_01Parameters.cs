@@ -1,5 +1,6 @@
 ﻿using R440O.BaseClasses;
 using R440O.R440OForms.K05M_01;
+using R440O.R440OForms.K03M_01;
 using R440O.R440OForms.PU_K1_1;
 using R440O.R440OForms.N18_M_AngleSwitch;
 using R440O.R440OForms.C300M_1;
@@ -20,12 +21,12 @@ namespace R440O.R440OForms.K01M_01
                         сигнал = K05M_01Parameters.Сигнал;
                     else
                     {
-                        
-                        if (N18_M_AngleSwitchParameters.ГнездоПРМ1 == 1)
+
+                        if (N18_M_AngleSwitchParameters.ГнездоПРМ1 == 1 && C300M_1Parameters.ВходящийСигнал != null)
                         {
                             сигнал = C300M_1Parameters.ВходящийСигнал.KulonSignal;
                         }
-                        else if (N18_M_AngleSwitchParameters.ГнездоПРМ2 == 1)
+                        else if (N18_M_AngleSwitchParameters.ГнездоПРМ2 == 1 && C300M_2Parameters.ВходящийСигнал != null)
                         {
                             сигнал = C300M_2Parameters.ВходящийСигнал.KulonSignal;
                         }
@@ -34,6 +35,12 @@ namespace R440O.R440OForms.K01M_01
                 }
                 return null;
             }
+        }
+
+        public static void ResetParameters()
+        {
+            if (K05M_01Parameters.ПереключательПередачаКонтроль != 1)
+                K03M_01Parameters.ОбновитьСигнал();
         }
     }
 }
