@@ -301,8 +301,13 @@ namespace R440O.R440OForms.K03M_01
 
         public static KulonSignal НайденныйСигнал
         {
-            get;
-            private set;
+            get
+            {
+
+                if (СтатусПоиска == 0 || СтатусПоиска == 1)
+                    return null;
+                return K01M_01Parameters.Сигнал;
+            }
         }
 
         /// <summary>
@@ -316,10 +321,6 @@ namespace R440O.R440OForms.K03M_01
             get { return _статусПоиска; }
             private set
             {
-                if (value == 0 || value == 1)
-                    НайденныйСигнал = null;
-                else
-                    НайденныйСигнал = K01M_01Parameters.Сигнал;
                 _статусПоиска = value;
             }
         }

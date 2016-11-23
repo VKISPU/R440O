@@ -7,6 +7,7 @@ using R440O.BaseClasses;
 using R440O.R440OForms.N18_M;
 using R440O.R440OForms.B1_1;
 using R440O.R440OForms.C300M_1;
+using R440O.R440OForms.K02M_01;
 using System;
 
 namespace R440O.R440OForms.BMA_M_1
@@ -851,6 +852,28 @@ namespace R440O.R440OForms.BMA_M_1
 
         #endregion
 
+        #region Сигнал с Кулона через Н18
+
+        public static Chanel СигналКулона
+        {
+            get
+            {
+                // Получение сингала по каналу 1 с Б1 через Н18
+                if (N18_MParameters.Проверить_комутацию(ГнездаН18.КоммутацияПрм_Канал1_К12, ГнездаН18.КоммутацияПрм_Канал1_БМА1) &&
+                     K02M_01Parameters.Сигнал != null)
+                {
+                    var сигнал = K02M_01Parameters.Сигнал.FirstChanel;
+                    if (сигнал == null)
+                        return null;
+                    return сигнал.Information ? сигнал : null;
+
+                }
+                return null;
+            }
+        }
+
+        #endregion
+
         #region Сигнал с Ц300
 
         public static Chanel СигналЦ3001
@@ -880,7 +903,7 @@ namespace R440O.R440OForms.BMA_M_1
                 {
                     return BMBParameters.ВыходнойСигнал;
                 }
-                var сигнал = СигналКанал1 ?? СигналКанал2 ?? СигналКанал3 ?? СигналЦ3001;
+                var сигнал = СигналКанал1 ?? СигналКанал2 ?? СигналКанал3 ?? СигналКулона ?? СигналЦ3001;
                 if (сигнал == null)
                     return null;
                 switch (ПереключательРежимы)
