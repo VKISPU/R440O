@@ -6,12 +6,10 @@ using R440O.R440OForms.N15;
 using R440O.R440OForms.N18_M_H28;
 using R440O.ThirdParty;
 
-namespace R440O.Parameters
+namespace R440O.R440OForms.PU_K1_1
 {
-    static class PU_K1_1Parameters
+    public static class PU_K1_1Parameters
     {
-
-
         public static bool Включен
         {
             get { return N15Parameters.Включен && (ТумблерПитание == 0 && N15Parameters.ТумблерК1_1) || ТумблерПитание == 2; }

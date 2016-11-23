@@ -660,10 +660,10 @@ namespace R440O.R440OForms.C300M_2
             }
         }
 
-        private static bool СигналПойман
+        public static bool СигналПойман
         {
             get { return _сигналПойман; }
-            set
+            private set
             {
                 var oldValue = _сигналПойман;
                 _сигналПойман = value;

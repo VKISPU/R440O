@@ -70,6 +70,7 @@
       <DependentUpon>BackgroundImages.resx</DependentUpon>
     </Compile>
     <Compile Include="BaseClasses\Chanel.cs" />
+    <Compile Include="BaseClasses\KulonSignal.cs" />
     <Compile Include="BaseClasses\SignalElement.cs" />
     <Compile Include="ControlElementImages.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -78,6 +79,7 @@
     </Compile>
     <Compile Include="PropertyInfoExtensions.cs" />
     <Compile Include="R440OForms\Astra\AstraParameters.cs" />
+    <Compile Include="R440OForms\K01M_01\K01M_01Parameters.cs" />
     <Compile Include="R440OForms\K02M_01Inside\K02M_01InsideParameters.cs" />
     <Compile Include="R440OForms\K02M_01\K02M_01Parameters.cs" />
     <Compile Include="R440OForms\K02M_02Inside\K02M_02InsideParameters.cs" />

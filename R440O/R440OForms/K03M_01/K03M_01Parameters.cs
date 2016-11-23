@@ -8,6 +8,9 @@ using R440O.R440OForms.K03M_01Inside;
 using R440O.R440OForms.K04M_01;
 using R440O.R440OForms.K05M_01;
 using R440O.R440OForms.K05M_01Inside;
+using R440O.R440OForms.K01M_01;
+using R440O.R440OForms.PU_K1_1;
+using R440O.BaseClasses;
 
 namespace R440O.R440OForms.K03M_01
 {
@@ -304,8 +307,19 @@ namespace R440O.R440OForms.K03M_01
             get { return (_текущееЗначениеПоиска < 0) ? _текущееЗначениеПоиска + 1 : _текущееЗначениеПоиска; }
         }
 
+        private static bool СоотвествиеЧастотыСигнала(KulonSignal сигнал)
+        {
+            return K01M_01Parameters.Сигнал.Frequency + ЗначениеПоиска == K04M_01Parameters.ЧастотаПрм;
+        }
+
+        private static bool СоотвествиеСигнала(KulonSignal сигнал)
+        {
+            return сигнал != null && СоотвествиеЧастотыСигнала(сигнал);
+        }
+
         public static void ПересчитатьНайденоИлиНеНайдено()
         {
+            /*
             // Если частота совпадает при ПереключательПередачаКонтроль на к05 = прм
             // Или если частота совпадает по другому при ПереключательПередачаКонтроль на к05 !=прм
             // И ещё в придачу если все ключи совпадают
@@ -317,6 +331,8 @@ namespace R440O.R440OForms.K03M_01
                 K05M_01InsideParameters.Переключатель.GetArray()
                     .SequenceEqual(K03M_01InsideParameters.Переключатели.GetArray()) &&
                 K05M_01InsideParameters.ТумблерВ7)
+             */
+            if (СоотвествиеСигнала(K01M_01Parameters.Сигнал))
             {
                 // Найдено. Поиск останавливается.
                 Найдено();

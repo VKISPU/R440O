@@ -1,6 +1,9 @@
 ﻿using R440O.R440OForms.A205M_1;
 using R440O.R440OForms.K03M_01;
 using R440O.R440OForms.K05M_01Inside;
+using R440O.R440OForms.K04M_01;
+using R440O.R440OForms.PU_K1_1;
+using R440O.BaseClasses;
 
 namespace R440O.R440OForms.K05M_01
 {
@@ -34,7 +37,9 @@ namespace R440O.R440OForms.K05M_01
         private static int _ПереключательКанал2;
 
 
-
+        /// <summary>
+        /// 0 - передача работа, 1 - контроль прм, 2 - контроль частота, 3 - контроль борта
+        /// </summary>
         public static int ПереключательПередачаКонтроль
         {
             get
@@ -136,6 +141,15 @@ namespace R440O.R440OForms.K05M_01
         public static bool СтрелкаУровеньВЗакрашенномСекторе
         {
             get { return СтрелкаУровень >= 0 && СтрелкаУровень <= 9; }
+        }
+
+        public static KulonSignal Сигнал
+        {
+            get
+            {                
+                return PU_K1_1Parameters.Включен ?
+                    new KulonSignal(K04M_01Parameters.ЧастотаПрд) : null;
+            }
         }
     }
 }
