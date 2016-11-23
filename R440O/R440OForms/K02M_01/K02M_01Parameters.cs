@@ -1,5 +1,7 @@
 ﻿using System;
 using R440O.R440OForms.K03M_01;
+using R440O.R440OForms.BMB;
+using R440O.R440OForms.N18_M;
 using R440O.BaseClasses;
 
 namespace R440O.R440OForms.K02M_01
@@ -140,6 +142,10 @@ namespace R440O.R440OForms.K02M_01
 
         public static void ResetParameters()
         {
+            if (N18_MParameters.ПереключательВходК121 == 1 || N18_MParameters.ПереключательВходК121 == 2)
+            {
+                BMBParameters.ResetParameters();
+            }
             OnParameterChanged();
         }
 
