@@ -20,7 +20,17 @@ namespace R440O.BaseClasses
         /// <summary>
         /// Скорость передачи информации в канале.
         /// </summary>
-        public double Speed { get; private set; }
+        public double Speed { get; private set; }        
+
+        /// <summary>
+        /// Канал 1
+        /// </summary>
+        public Chanel FirstChanel { get; set; }
+
+        /// <summary>
+        /// Канал 2
+        /// </summary>
+        public Chanel SecondChanel { get; set; }
 
         public KulonSignal(int frequency)
         {

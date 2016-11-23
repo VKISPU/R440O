@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using R440O.R440OForms.A205M_1;
+using R440O.R440OForms.PU_K1_1;
 
 namespace R440O.R440OForms.N15Inside
 {
@@ -32,7 +33,7 @@ namespace R440O.R440OForms.N15Inside
             {
                 if (!Включен) return null;
 
-                if (N15Parameters.ТумблерТлфТлгПрд)
+                if (N15Parameters.ТумблерТлфТлгПрд && !PU_K1_1Parameters.КулонК1Подключен)
                 {    
                     if (N18_MParameters.ПереключательПРД == 2 && A1Parameters.ВыходнойСигнал != null &&
                     Signal.IsEquivalentSpeed(СкоростьПередачи, A1Parameters.ВыходнойСигнал.GroupSpeed))

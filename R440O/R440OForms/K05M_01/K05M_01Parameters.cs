@@ -3,6 +3,8 @@ using R440O.R440OForms.K03M_01;
 using R440O.R440OForms.K05M_01Inside;
 using R440O.R440OForms.K04M_01;
 using R440O.R440OForms.PU_K1_1;
+using R440O.R440OForms.N18_M;
+using R440O.R440OForms.BMA_M_1;
 using R440O.BaseClasses;
 
 namespace R440O.R440OForms.K05M_01
@@ -146,9 +148,23 @@ namespace R440O.R440OForms.K05M_01
         public static KulonSignal Сигнал
         {
             get
-            {                
-                return PU_K1_1Parameters.Включен ?
-                    new KulonSignal(K04M_01Parameters.ЧастотаПрд) : null;
+            {
+                if (!PU_K1_1Parameters.Включен)
+                    return null;
+                var сигнал = new KulonSignal(K04M_01Parameters.ЧастотаПрд);
+
+                if (N18_MParameters.ПереключательПрдБма12 == 9)
+                {
+                    if (N18_MParameters.ПереключательВходК121 == 2)
+                    {
+                        сигнал.FirstChanel = BMA_M_1Parameters.СигналСБМБ;
+                    }
+                    else if (N18_MParameters.ПереключательВходК121 == 2)
+                    {
+                        //TODO когда будет готов второй БМА
+                    }
+                }
+                return сигнал;
             }
         }
     }

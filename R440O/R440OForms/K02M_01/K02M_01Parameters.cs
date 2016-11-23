@@ -1,11 +1,21 @@
 ﻿using System;
 using R440O.R440OForms.K03M_01;
+using R440O.BaseClasses;
 
 namespace R440O.R440OForms.K02M_01
 {
     public static class K02M_01Parameters
     {
         #region Лампочки
+
+        public static KulonSignal Сигнал
+        {
+            get 
+            {
+                return K03M_01Parameters.НайденныйСигнал;
+            }
+        }
+
         public static bool ЛампочкаКаналыОбнаруженияЛ
         {
             get

@@ -2,6 +2,7 @@
 using R440O.R440OForms.K04M_01;
 using R440O.R440OForms.N15Inside;
 using R440O.R440OForms.PU_K1_1;
+using R440O.R440OForms.K05M_01;
 using R440O.InternalBlocks;
 
 namespace R440O.R440OForms.A205M_1
@@ -59,13 +60,13 @@ namespace R440O.R440OForms.A205M_1
                     var signal = N15InsideParameters.ВыходПередающегоТракта;
                     signal.Level = 20;
                     signal.Wave = wave;
-                    signal.Frequency = 5710000 + 10*wave;                  
-
-                    if (Работа && (N18_MParameters.ПереключательВходК121 != 1) && PU_K1_1Parameters.Включен)
-                    {
-                        signal.Frequency += K04M_01Parameters.ЧастотаПрд - 70000;
+                    signal.Frequency = 5710000 + 10 * wave; 
+                    //if (Работа && (N18_MParameters.ПереключательВходК121 != 1) && PU_K1_1Parameters.Включен)
+                    if (PU_K1_1Parameters.КулонК1Подключен)
+                    {                        
+                        signal.KulonSignal = K05M_01Parameters.Сигнал;
+                        signal.Frequency += K05M_01Parameters.Сигнал.Frequency - K04M_01Parameters.НачальнаяЧастотаПРД;
                     }
-
                     switch (ПереключательВидРаботы)
                     {
                         case 1:
@@ -75,8 +76,8 @@ namespace R440O.R440OForms.A205M_1
                             {
                                 return signal;
                             }
-                        }
                             break;
+                        }                            
                         case 2:
                         {
                             if (signal.Modulation == Модуляция.ЧТ && signal.GroupSpeed >= 0.025 &&
@@ -84,8 +85,8 @@ namespace R440O.R440OForms.A205M_1
                             {
                                 return signal;
                             }
-                        }
                             break;
+                        }                            
                         case 3:
                         {
                             if (signal.Modulation == Модуляция.ОФТ && signal.GroupSpeed >= 1.2 &&
@@ -93,16 +94,16 @@ namespace R440O.R440OForms.A205M_1
                             {
                                 return signal;
                             }
-                        }
                             break;
+                        }                            
                         default:
                         {
                             if (signal.Modulation == Модуляция.ОФТ && signal.GroupSpeed >= 48)
                             {
                                 return signal;
                             }
-                        }
                             break;
+                        }                            
                     }
                 }
                 return null;

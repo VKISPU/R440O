@@ -153,5 +153,14 @@
                                                           elem.Group == SelectedGroup);
             return element.Chanels[chanelNumber];
         }
+
+        /// <summary>
+        /// Сигнал с кулона
+        /// </summary>
+        public KulonSignal KulonSignal
+        {
+            get;
+            set;
+        }
     }
 }

@@ -28,6 +28,7 @@ namespace R440O.R440OForms.PU_K1_1
         {
             get { return Включен && N18_M_H28Parameters.АктивныйКабель == 1; }
         }
+
         #region Лампочка
 
         public static bool ЛампочкаCеть
