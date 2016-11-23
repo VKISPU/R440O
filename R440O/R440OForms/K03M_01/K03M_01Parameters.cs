@@ -37,7 +37,6 @@ namespace R440O.R440OForms.K03M_01
             НачатьПоискСНачала();
             ResetParameters();
             K02M_01Parameters.ResetParameters();
-
         }
 
         public static void ResetParameters()

@@ -8,6 +8,7 @@ namespace R440O.R440OForms.N18_M
     using A205M_2;
     using N15;
     using BMA_M_1;
+    using BMB;
 
     public static class N18_MParameters
     {
@@ -558,7 +559,8 @@ namespace R440O.R440OForms.N18_M
         private static void OnParameterChanged()
         {
             N15Parameters.ResetDiscret();
-            BMA_M_1Parameters.ResetParameters();
+            //BMA_M_1Parameters.ResetParameters();
+            BMBParameters.ResetParameters();
             var handler = ParameterChanged;
             if (handler != null) handler();
         }
