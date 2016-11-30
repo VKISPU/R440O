@@ -7,7 +7,6 @@ using R440O.R440OForms.K02M_01;
 using R440O.R440OForms.K03M_01Inside;
 using R440O.R440OForms.K04M_01;
 using R440O.R440OForms.K05M_01;
-using R440O.R440OForms.K05M_01Inside;
 using R440O.R440OForms.K01M_01;
 using R440O.R440OForms.PU_K1_1;
 using R440O.BaseClasses;
@@ -334,9 +333,28 @@ namespace R440O.R440OForms.K03M_01
             return K01M_01Parameters.Сигнал.Frequency + ЗначениеПоиска == K04M_01Parameters.ЧастотаПрм;
         }
 
+        private static bool СоотвествиеСинхропоследовательностей(KulonSignal сигнал)
+        {
+            return сигнал.SynchroSequence1.SequenceEqual(K03M_01InsideParameters.Переключатели.Синхропоследовательность1)
+                && сигнал.SynchroSequence2.SequenceEqual(K03M_01InsideParameters.Переключатели.Синхропоследовательность2);
+        }
+
+        private static bool СоотвествиеКодБеркера(KulonSignal сигнал)
+        {
+            //Пока сомнительно
+            /*
+            if (сигнал.BarkerCode == null)
+                return false;
+            return сигнал.BarkerCode.SequenceEqual(K03M_01InsideParameters.Переключатели.КодБаркера);
+            */
+            return true;
+        }
+
         private static bool СоотвествиеСигнала(KulonSignal сигнал)
         {
-            return сигнал != null && СоотвествиеЧастотыСигнала(сигнал);
+            return сигнал != null && СоотвествиеЧастотыСигнала(сигнал)
+                 && СоотвествиеСинхропоследовательностей(сигнал)
+                 && СоотвествиеКодБеркера(сигнал);
         }
 
         public static void ПересчитатьНайденоИлиНеНайдено()

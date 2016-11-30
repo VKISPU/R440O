@@ -140,6 +140,29 @@ namespace R440O.R440OForms.K05M_01
             }
         }
 
+        private static double Уровень
+        {
+            get
+            {
+                return ((_cтрелкаУровень + 9) * (double)12.0) / 18;
+            }
+        }
+
+        private static int Ослабление
+        {
+            get
+            {
+                switch (ПереключательОслабление)
+                {
+                    case 0: return 0;
+                    case 1: return 20;
+                    case 2: return 27;
+                    // Хотя это и не возможно
+                    default: return 0;
+                }
+            }
+        }
+
         public static bool СтрелкаУровеньВЗакрашенномСекторе
         {
             get { return СтрелкаУровень >= 0 && СтрелкаУровень <= 9; }
@@ -152,6 +175,11 @@ namespace R440O.R440OForms.K05M_01
                 if (!PU_K1_1Parameters.Включен)
                     return null;
                 var сигнал = new KulonSignal(K04M_01Parameters.ЧастотаПрд);
+                сигнал.SynchroSequence1 = K05M_01InsideParameters.Переключатель.Синхропоследовательность1;
+                сигнал.SynchroSequence2 = K05M_01InsideParameters.Переключатель.Синхропоследовательность2;
+                if (K05M_01InsideParameters.ТумблерВ4)
+                    сигнал.BarkerCode = K05M_01InsideParameters.Переключатель.КодБаркера;
+                сигнал.Level = Уровень - ПереключательОслабление - Ослабление;
 
                 if (N18_MParameters.ПереключательПрдБма12 == 9)
                 {

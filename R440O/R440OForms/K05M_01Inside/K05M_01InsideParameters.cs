@@ -1,4 +1,6 @@
 ﻿using R440O.R440OForms.K03M_01;
+using System.Collections;
+using System.Linq;
 
 namespace R440O.R440OForms.K05M_01Inside
 {
@@ -31,6 +33,9 @@ namespace R440O.R440OForms.K05M_01Inside
         private static bool _ТумблерВ4;
         private static bool _ТумблерВ7;
 
+        /// <summary>
+        /// Вкл/выкл кода Баркера
+        /// </summary>
         public static bool ТумблерВ4
         {
             get { return _ТумблерВ4; }
@@ -41,6 +46,9 @@ namespace R440O.R440OForms.K05M_01Inside
             }
         }
 
+        /// <summary>
+        /// Переключение сигналавы выход блока
+        /// </summary>
         public static bool ТумблерВ7
         {
             get { return _ТумблерВ7; }
@@ -55,7 +63,7 @@ namespace R440O.R440OForms.K05M_01Inside
         #endregion
 
     }
-    class KulonIndexerClass
+    public class KulonIndexerClass
     {
         private int[] myArray = new int[31];
         public int this[int index]
@@ -83,6 +91,30 @@ namespace R440O.R440OForms.K05M_01Inside
         public int[] GetArray()
         {
             return myArray;
+        }
+
+        public int[] Синхропоследовательность1
+        {
+            get
+            {
+                return myArray.Take(10).ToArray();
+            }
+        }
+
+        public int[] Синхропоследовательность2
+        {
+            get
+            {
+                return myArray.Skip(10).Take(10).ToArray();
+            }
+        }
+
+        public int[] КодБаркера
+        {
+            get
+            {
+                return myArray.Skip(20).Take(11).ToArray();
+            }
         }
     }
 

@@ -15,7 +15,7 @@ namespace R440O.BaseClasses
         // <summary>
         /// Уровень мощности передачи сигнала.
         /// </summary>
-        public double Level { get; private set; }
+        public double Level { get; set; }
 
         /// <summary>
         /// Скорость передачи информации в канале.
@@ -31,6 +31,21 @@ namespace R440O.BaseClasses
         /// Канал 2
         /// </summary>
         public Chanel SecondChanel { get; set; }
+
+        /// <summary>
+        /// Синхропоследовательность1
+        /// </summary>
+        public int[]  SynchroSequence1 { get; set; }
+
+        /// <summary>
+        /// Синхропоследовательность2
+        /// </summary>
+        public int[] SynchroSequence2 { get; set; }
+
+        /// <summary>
+        /// Код Баркера
+        /// </summary>
+        public int[] BarkerCode { get; set; }
 
         public KulonSignal(int frequency)
         {

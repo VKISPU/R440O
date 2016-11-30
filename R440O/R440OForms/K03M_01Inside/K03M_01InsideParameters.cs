@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Linq;
 using R440O.R440OForms.K03M_01;
 
 namespace R440O.R440OForms.K03M_01Inside
@@ -61,11 +63,7 @@ namespace R440O.R440OForms.K03M_01Inside
         #endregion
     }
 
-    /// <summary>
-    /// Класс нужен чтоб удобнее было работать с кучей тумблеров
-    /// (используется индексатор вместо свойства)
-    /// </summary>
-    class KulonIndexerClass
+    public class KulonIndexerClass
     {
         private int[] myArray = new int[31];
         public int this[int index]
@@ -78,7 +76,8 @@ namespace R440O.R440OForms.K03M_01Inside
             {
                 if ((index >= 1 && index <= 3) || (index >= 5 && index <= 9))
                 {
-                    if (value >= 0 && value <= 7) myArray[index] = value;
+                    if (value >= 0 && value <= 7)
+                        myArray[index] = value;
                 }
                 else
                 {
@@ -86,11 +85,37 @@ namespace R440O.R440OForms.K03M_01Inside
                 }
                 K03M_01InsideParameters.ResetParameters();
                 K03M_01Parameters.ПересчитатьНайденоИлиНеНайдено();
-            }            
+            }
         }
+
         public int[] GetArray()
         {
             return myArray;
         }
+
+        public int[] Синхропоследовательность1
+        {
+            get
+            {
+                return myArray.Take(10).ToArray();
+            }
+        }
+
+        public int[] Синхропоследовательность2
+        {
+            get
+            {
+                return myArray.Skip(10).Take(10).ToArray();
+            }
+        }
+
+        public int[] КодБаркера
+        {
+            get
+            {
+                return myArray.Skip(20).Take(11).ToArray();
+            }
+        }
     }
+
 }
