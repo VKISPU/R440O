@@ -53,9 +53,15 @@ namespace R440O.R440OForms.K05M_01
                     {
                         if(item.Name.Contains("СтрелкаУровень"))
                         {
-                            var angle = (int) property.GetValue(null)*10*6f/9f;
+                            var angle = (int) property.GetValue(null)*10*6f/36f;
                             item.BackgroundImage =
                                 TransformImageHelper.RotateImageByAngle(ControlElementImages.arrow2, angle);
+                        }
+                        else if (item.Name.Contains("РегуляторУровень"))
+                        {
+                            item.BackgroundImage = TransformImageHelper.RotateImageByAngle(
+                                ControlElementImages.revolverRoundSmall,
+                                (float)K05M_01Parameters.РегуляторУровень * 10);
                         }
                         else
                         {
@@ -82,20 +88,6 @@ namespace R440O.R440OForms.K05M_01
             {
                 property.SetValue(null, (int)property.GetValue(null) - 1);
             }
-
-          /*  if (item.Name.Contains("ПереключательРодРаботы") ||
-                        item.Name.Contains("ПереключательОслабление"))
-            {
-                var angle = (int)property.GetValue(null) * 30 - 30;
-                item.BackgroundImage =
-                    TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
-            }
-            else
-            {
-                var angle = (int)property.GetValue(null) * 30 - 45;
-                item.BackgroundImage =
-                    TransformImageHelper.RotateImageByAngle(ControlElementImages.toggleType2, angle);
-            }*/
         }
 
         private static bool isManipulation = false;
@@ -116,10 +108,7 @@ namespace R440O.R440OForms.K05M_01
             if (!isManipulation) return;
             var button = sender as Button;
             var angle = TransformImageHelper.CalculateAngle(button.Width, button.Height, e);
-            K05M_01Parameters.СтрелкаУровень = angle/10;
-            button.BackgroundImage = TransformImageHelper.RotateImageByAngle(
-                    ControlElementImages.revolverRoundSmall,
-                    (float)K05M_01Parameters.СтрелкаУровень*10);
+            K05M_01Parameters.РегуляторУровень = angle / 10;
         }
 
        

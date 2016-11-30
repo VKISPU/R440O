@@ -1,4 +1,5 @@
-﻿using R440O.R440OForms.A205M_1;
+﻿using System;
+using R440O.R440OForms.A205M_1;
 using R440O.R440OForms.K03M_01;
 using R440O.R440OForms.K05M_01Inside;
 using R440O.R440OForms.K04M_01;
@@ -127,29 +128,6 @@ namespace R440O.R440OForms.K05M_01
         }
         #endregion
 
-        private static int _cтрелкаУровень = 0;
-
-        public static int СтрелкаУровень
-        {
-            get { return _cтрелкаУровень; }
-            set
-            {
-                if (value >= -9 && value <= 9 && _cтрелкаУровень != value)
-                {
-                    _cтрелкаУровень = value;
-                    ResetParameters();
-                }
-            }
-        }
-
-        private static double Уровень
-        {
-            get
-            {
-                return ((_cтрелкаУровень + 9) * (double)12.0) / 18;
-            }
-        }
-
         private static int Ослабление
         {
             get
@@ -161,6 +139,28 @@ namespace R440O.R440OForms.K05M_01
                     case 2: return 27;
                     // Хотя это и не возможно
                     default: return 0;
+                }
+            }
+        }
+
+        public static int СтрелкаУровень
+        {
+            get 
+            {
+                return Math.Max((РегуляторУровень * 4) - Ослабление, -36); 
+            }
+        }
+
+        private static int _регуляторУровень = 0;
+        public static int РегуляторУровень
+        {
+            get { return _регуляторУровень; }
+            set
+            {
+                if (value >= -9 && value <= 9 && _регуляторУровень != value)
+                {
+                    _регуляторУровень = value;
+                    ResetParameters();
                 }
             }
         }
@@ -181,7 +181,7 @@ namespace R440O.R440OForms.K05M_01
                 сигнал.SynchroSequence2 = K05M_01InsideParameters.Переключатель.Синхропоследовательность2;
                 if (K05M_01InsideParameters.ТумблерВ4)
                     сигнал.BarkerCode = K05M_01InsideParameters.ТумблерВ4;
-                сигнал.Level = Уровень - Ослабление;
+                сигнал.Level = СтрелкаУровень;
 
                 if (N18_MParameters.ПереключательПрдБма12 == 9)
                 {
