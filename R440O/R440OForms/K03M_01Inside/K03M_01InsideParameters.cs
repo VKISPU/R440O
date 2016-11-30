@@ -24,7 +24,7 @@ namespace R440O.R440OForms.K03M_01Inside
             set
             {
                 _тумблерИП = value;
-                OnParameterChanged();
+                ResetParameters();
             }
 
         }
@@ -37,7 +37,7 @@ namespace R440O.R440OForms.K03M_01Inside
             set
             {
                 _тумблерВклОткл = value;
-                OnParameterChanged();
+                ResetParameters();
             }
 
         }
@@ -57,6 +57,7 @@ namespace R440O.R440OForms.K03M_01Inside
 
         public static void ResetParameters()
         {
+            K03M_01Parameters.ПересчитатьНайденоИлиНеНайдено();
             OnParameterChanged();
         }
 
