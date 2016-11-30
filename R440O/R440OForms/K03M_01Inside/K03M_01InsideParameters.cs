@@ -97,7 +97,7 @@ namespace R440O.R440OForms.K03M_01Inside
         {
             get
             {
-                return myArray.Take(10).ToArray();
+                return myArray.Take(9).ToArray();
             }
         }
 
@@ -105,15 +105,7 @@ namespace R440O.R440OForms.K03M_01Inside
         {
             get
             {
-                return myArray.Skip(10).Take(10).ToArray();
-            }
-        }
-
-        public int[] КодБаркера
-        {
-            get
-            {
-                return myArray.Skip(20).Take(11).ToArray();
+                return myArray.Skip(9).Take(20).ToArray();
             }
         }
     }

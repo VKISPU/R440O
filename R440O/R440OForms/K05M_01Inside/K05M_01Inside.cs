@@ -92,10 +92,6 @@ namespace R440O.R440OForms.K05M_01Inside
             {
                 K05M_01InsideParameters.Переключатель[index] -= 1;
             }
-
-       /*     var angle = K05M_01InsideParameters.Переключатель[index] * 30 - 10;
-            item.BackgroundImage = TransformImageHelper.RotateImageByAngle(
-                ControlElementImages.toggleType2, angle);*/
         }
 
         private void Тумблер_MouseDown(object sender, MouseEventArgs e)
@@ -109,28 +105,16 @@ namespace R440O.R440OForms.K05M_01Inside
                     K05M_01InsideParameters.Переключатель[index] = 1;
                 else K05M_01InsideParameters.Переключатель[index] = 0;
             }
-      /*      if (item.Name.Contains("Тумблер"))
-            {
-                item.BackgroundImage = (K05M_01InsideParameters.Переключатель[index] == 0)
-                    ? ControlElementImages.tumblerType3Left
-                    : ControlElementImages.tumblerType3Right;
-            }*/
         }
 
         private void ТумблерВ4_Click(object sender, EventArgs e)
         {
             K05M_01InsideParameters.ТумблерВ4 = !K05M_01InsideParameters.ТумблерВ4;
-         /*   ТумблерВ4.BackgroundImage = K05M_01InsideParameters.ТумблерВ4
-                            ? ControlElementImages.tumblerType7Right
-                            : ControlElementImages.tumblerType7Left;*/
         }
 
         private void ТумблерВ7_Click(object sender, EventArgs e)
         {
             K05M_01InsideParameters.ТумблерВ7 = !K05M_01InsideParameters.ТумблерВ7;
-           /* ТумблерВ7.BackgroundImage = K05M_01InsideParameters.ТумблерВ7
-                            ? ControlElementImages.tumblerType7Up
-                            : ControlElementImages.tumblerType7Down;*/
         }
     }
 }

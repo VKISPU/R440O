@@ -7,6 +7,8 @@ namespace R440O.R440OForms.N18_M_H28
     {
         public static int _активныйКабель = 0;
 
+        public static bool ПодюклченК11 { get { return _активныйКабель == 1;  } }
+
         /// <summary>
         /// Кабель воткнутый в верхнюю панель.
         /// 0 - Отключено, 1 - К11, 2 - K12.
@@ -17,9 +19,7 @@ namespace R440O.R440OForms.N18_M_H28
             set
             {
                 _активныйКабель = value;
-                OnParameterChanged();
-                A205M_1Parameters.ResetParameters();
-                A205M_2Parameters.ResetParameters();
+                ResetParameters();                
             }
         }
 
@@ -36,6 +36,8 @@ namespace R440O.R440OForms.N18_M_H28
 
         public static void ResetParameters()
         {
+            A205M_1Parameters.ResetParameters();
+            A205M_2Parameters.ResetParameters();
             OnParameterChanged();
         }
 

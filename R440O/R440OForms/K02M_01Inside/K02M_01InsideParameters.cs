@@ -1,4 +1,6 @@
-﻿namespace R440O.R440OForms.K02M_01Inside
+﻿using R440O.R440OForms.K03M_01;
+
+namespace R440O.R440OForms.K02M_01Inside
 {
     internal class K02M_01InsideParameters
     {
@@ -14,6 +16,7 @@
         }
         public static void ResetParameters()
         {
+            K03M_01Parameters.ПересчитатьНайденоИлиНеНайдено();
             OnParameterChanged();
         }
 
@@ -22,6 +25,9 @@
         #region Тумблер единственный на блоке
 
         private static bool _тумблерБ5;
+        /// <summary>
+        /// П-И
+        /// </summary>
         public static bool ТумблерБ5
         {
             get

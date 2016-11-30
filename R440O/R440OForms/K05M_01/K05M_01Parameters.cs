@@ -5,6 +5,7 @@ using R440O.R440OForms.K04M_01;
 using R440O.R440OForms.PU_K1_1;
 using R440O.R440OForms.N18_M;
 using R440O.R440OForms.BMA_M_1;
+using R440O.R440OForms.N18_M_H28;
 using R440O.BaseClasses;
 
 namespace R440O.R440OForms.K05M_01
@@ -24,7 +25,8 @@ namespace R440O.R440OForms.K05M_01
 
         public static void ResetParameters()
         {
-            A205M_1Parameters.ResetParameters();
+            if (N18_M_H28Parameters.ПодюклченК11)
+                N18_M_H28Parameters.ResetParameters();
             OnParameterChanged();
         }
 
@@ -178,8 +180,8 @@ namespace R440O.R440OForms.K05M_01
                 сигнал.SynchroSequence1 = K05M_01InsideParameters.Переключатель.Синхропоследовательность1;
                 сигнал.SynchroSequence2 = K05M_01InsideParameters.Переключатель.Синхропоследовательность2;
                 if (K05M_01InsideParameters.ТумблерВ4)
-                    сигнал.BarkerCode = K05M_01InsideParameters.Переключатель.КодБаркера;
-                сигнал.Level = Уровень - ПереключательОслабление - Ослабление;
+                    сигнал.BarkerCode = K05M_01InsideParameters.ТумблерВ4;
+                сигнал.Level = Уровень - Ослабление;
 
                 if (N18_MParameters.ПереключательПрдБма12 == 9)
                 {

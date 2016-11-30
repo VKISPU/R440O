@@ -45,8 +45,8 @@ namespace R440O.BaseClasses
         /// <summary>
         /// Код Баркера
         /// </summary>
-        public int[] BarkerCode { get; set; }
-
+        public bool BarkerCode { get; set; }
+        
         public KulonSignal(int frequency)
         {
             Frequency = frequency;

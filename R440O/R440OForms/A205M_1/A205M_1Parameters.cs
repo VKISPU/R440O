@@ -65,7 +65,9 @@ namespace R440O.R440OForms.A205M_1
                     if (PU_K1_1Parameters.КулонК1Подключен)
                     {                        
                         signal.KulonSignal = K05M_01Parameters.Сигнал;
-                        signal.Frequency += K05M_01Parameters.Сигнал.Frequency - K04M_01Parameters.НачальнаяЧастотаПРД;
+                        // сомтительно
+                        signal.Frequency += K05M_01Parameters.Сигнал.Frequency - K04M_01Parameters.НачальнаяЧастотаПРД;                        
+                        signal.Level = K05M_01Parameters.Сигнал.Level;
                     }
                     switch (ПереключательВидРаботы)
                     {

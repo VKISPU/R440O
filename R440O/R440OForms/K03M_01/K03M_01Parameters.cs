@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using R440O.Parameters;
 //using NLog;
 using R440O.R440OForms.K02M_01;
+using R440O.R440OForms.K02M_01Inside;
 using R440O.R440OForms.K03M_01Inside;
 using R440O.R440OForms.K04M_01;
 using R440O.R440OForms.K05M_01;
@@ -339,40 +340,27 @@ namespace R440O.R440OForms.K03M_01
                 && сигнал.SynchroSequence2.SequenceEqual(K03M_01InsideParameters.Переключатели.Синхропоследовательность2);
         }
 
-        private static bool СоотвествиеКодБеркера(KulonSignal сигнал)
-        {
-            //Пока сомнительно
-            /*
-            if (сигнал.BarkerCode == null)
-                return false;
-            return сигнал.BarkerCode.SequenceEqual(K03M_01InsideParameters.Переключатели.КодБаркера);
-            */
-            return true;
-        }
-
         private static bool СоотвествиеСигнала(KulonSignal сигнал)
         {
             return сигнал != null && СоотвествиеЧастотыСигнала(сигнал)
-                 && СоотвествиеСинхропоследовательностей(сигнал)
-                 && СоотвествиеКодБеркера(сигнал);
+                 && СоотвествиеСинхропоследовательностей(сигнал);
+        }
+
+        /// <summary>
+        /// Внутри К03 и К02 - тумблеры "П-И" должны иметь одинаковое положение
+        /// Прямой/инверсный сигнал
+        /// </summary>
+        private static bool СоотвествиеТумблеровПИ
+        {
+            get
+            {
+                return K03M_01InsideParameters.ТумблерИП == K02M_01InsideParameters.ТумблерБ5;
+            }
         }
 
         public static void ПересчитатьНайденоИлиНеНайдено()
         {
-            /*
-            // Если частота совпадает при ПереключательПередачаКонтроль на к05 = прм
-            // Или если частота совпадает по другому при ПереключательПередачаКонтроль на к05 !=прм
-            // И ещё в придачу если все ключи совпадают
-            // И ещё если ТумблерВ7 на K05M_01Inside включен
-            if (((K04M_01Parameters.ЧастотаПрм + ЗначениеПоиска == K04M_01Parameters.ЧастотаПрд) &&
-                 (K05M_01Parameters.ПереключательПередачаКонтроль == 1) ||
-                 (K04M_01Parameters.ЧастотаПрм + ЗначениеПоиска + K04M_01Parameters.ЧастотаПрд == 140000) &&
-                 (K05M_01Parameters.ПереключательПередачаКонтроль != 1)) &&
-                K05M_01InsideParameters.Переключатель.GetArray()
-                    .SequenceEqual(K03M_01InsideParameters.Переключатели.GetArray()) &&
-                K05M_01InsideParameters.ТумблерВ7)
-             */
-            if (СоотвествиеСигнала(K01M_01Parameters.Сигнал))
+            if (СоотвествиеСигнала(K01M_01Parameters.Сигнал) && СоотвествиеТумблеровПИ)
             {
                 // Найдено. Поиск останавливается.
                 Найдено();
