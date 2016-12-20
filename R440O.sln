@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R440O", "R440O\R440O.csproj", "{E56E78C2-AF9A-4135-A229-B62E6D120B72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestClient", "TestClient\TestClient.csproj", "{A76F581C-6690-4DA7-933A-247D086252EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Retranslator", "Retranslator\Retranslator.csproj", "{A9A00968-16FD-4C36-A01C-6FD8F0F814F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{E56E78C2-AF9A-4135-A229-B62E6D120B72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E56E78C2-AF9A-4135-A229-B62E6D120B72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E56E78C2-AF9A-4135-A229-B62E6D120B72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A76F581C-6690-4DA7-933A-247D086252EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A76F581C-6690-4DA7-933A-247D086252EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A76F581C-6690-4DA7-933A-247D086252EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A76F581C-6690-4DA7-933A-247D086252EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9A00968-16FD-4C36-A01C-6FD8F0F814F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9A00968-16FD-4C36-A01C-6FD8F0F814F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9A00968-16FD-4C36-A01C-6FD8F0F814F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9A00968-16FD-4C36-A01C-6FD8F0F814F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
