@@ -49,7 +49,7 @@ namespace TestClient
                 x = Console.ReadLine();
                 Console.WriteLine(x);
                 //IPHostEntry ipHostInfo = Dns.GetHostEntry("10.0.0.10");
-                IPAddress ipAddress = IPAddress.Parse("10.0.0.10");
+                IPAddress ipAddress = IPAddress.Parse("10.0.0.39");
                 IPEndPoint remoteEP = new IPEndPoint(ipAddress, 2200);
                 string strHostName = Dns.GetHostName();
 

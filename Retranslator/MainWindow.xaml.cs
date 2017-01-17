@@ -48,13 +48,12 @@ namespace Retranslator
             }
             else
             {
-                MessageBox.Show("chlen1");
+                MessageBox.Show("Сервер запущен");
                 ServerHandler handler = new ServerHandler(Server.AsynchronousSocketListener.StartListening);
 
                 IAsyncResult resultObj = handler.BeginInvoke(null, null);
                 BtnStartServerContent = "Остановить";
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BtnStartServerContent"));
-                MessageBox.Show("chlen2");
             }            
         }
 
