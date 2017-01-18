@@ -5,6 +5,7 @@
     using R440OForms.N15;
     using R440OForms.OrderScheme;
     using R440OForms.A306;
+
     using System.Collections.Generic;
 
     public static class MSHUParameters
@@ -23,9 +24,12 @@
         {
             get
             {
-                if (!Включен || A503BParameters.ВыходнойСигнал == null) return null;
+                if (!Включен) return new List<Signal>();             
 
-                var inputSignal = A503BParameters.ВыходнойСигнал;
+                var inputSignal = N15Parameters.ЛампочкаАнт ? A503BParameters.ВыходнойСигнал
+                    : Antenna.ВыходнойСигнал;
+
+                if (inputSignal == null) return new List<Signal>();
 
                 //Входной СВЧ сигнал в диапазоне 3400...3900 МГц усиливается в МШУ и преобразуется в сигнал первой ПЧ - 320...370 МГц, 
                 //Частота выходного сигнала = Частота входного сигнала - 8*(частота с A304)
@@ -42,8 +46,9 @@
                     //С проверкой попадания в диапазон 320...370 МГц
                     if (signal.Frequency >= 320000 && signal.Frequency <= 370000)
                         outputSignals.Add(signal);
-                }                
+                }
                 return outputSignals;
+                
             }
         }
 

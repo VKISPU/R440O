@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 namespace SignalTypes
 {
     /// <summary>
@@ -18,6 +19,7 @@ namespace SignalTypes
             }
         }
 
+        [JsonConstructor]
         public SignalElement(int flow, int group, Chanel[] chanels)
         {
             Flow = flow;

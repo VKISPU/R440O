@@ -1,4 +1,5 @@
-﻿namespace SignalTypes
+﻿using Newtonsoft.Json;
+namespace SignalTypes
 {
     /// <summary>
     /// Единичный информационный канал.
@@ -17,6 +18,7 @@
             Information = information;
         }
 
+        [JsonConstructor]
         public Chanel(double speed, string infString)
         {
             Speed = speed;

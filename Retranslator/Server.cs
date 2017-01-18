@@ -5,6 +5,7 @@ using System.Net;
 using System.Text;
 using Newtonsoft.Json;
 using SignalTypes;
+using System.Threading.Tasks;
 
 namespace Retranslator
 {
@@ -15,10 +16,10 @@ namespace Retranslator
         public Server(string url)
         {
             if (!HttpListener.IsSupported)
-                return;
+                throw new NotImplementedException();
             httpListener.Prefixes.Add(url);
             httpListener.Start();
-            Listening();
+            Task.Run(() => { Listening(); });
         }
 
         private void Listening()
@@ -71,7 +72,7 @@ namespace Retranslator
                     stream.Write(buffer, 0, buffer.Length);
                 }
             }
-            catch
+            catch (Exception ex)
             {
 
             }

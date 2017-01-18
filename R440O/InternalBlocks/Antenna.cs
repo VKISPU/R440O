@@ -6,12 +6,37 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using SignalTypes;
 using System.Threading.Tasks;
+using R440O.R440OForms.N15;
+using R440O.ThirdParty;
+using R440O.R440OForms.A205M_1;
 
-namespace R440O
+namespace R440O.InternalBlocks
 {
-    class HttpHelper
+    static class Antenna
     {
-        static async Task<List<Signal>> SendSignal(Signal signal)
+        private static IDisposable timer;
+
+        public static List<Signal> ВыходнойСигнал { get; set; }
+
+        public static void ResetParameters()
+        {
+            if (timer != null)
+                timer.Dispose();
+            if (N15Parameters.ЛампочкаАнт)
+            {
+                timer = EasyTimer.SetInterval(async () =>
+                {
+                    if (A205M_1Parameters.ВыходнойСигнал != null)
+                    {
+                        ВыходнойСигнал = await ПослатьИПолучитьСигнал(A205M_1Parameters.ВыходнойСигнал);
+                        //MSHUParameters.ResetParameters();
+                    }
+                }, 1000);
+            }
+            MSHUParameters.ResetParameters();
+        }
+
+        static async Task<List<Signal>> ПослатьИПолучитьСигнал(Signal signal)
         {
             string url = "http://localhost:8080/";
             var body = new StringContent(JsonConvert.SerializeObject(signal), Encoding.UTF8, "application/json");

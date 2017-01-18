@@ -83,7 +83,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ControlElementImages.resx</DependentUpon>
     </Compile>
-    <Compile Include="HttpHelper.cs" />
+    <Compile Include="InternalBlocks\Antenna.cs" />
     <Compile Include="PropertyInfoExtensions.cs" />
     <Compile Include="R440OForms\Astra\AstraParameters.cs" />
     <Compile Include="R440OForms\K01M_01\K01M_01Parameters.cs" />

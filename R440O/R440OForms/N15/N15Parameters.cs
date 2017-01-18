@@ -38,6 +38,7 @@ namespace R440O.R440OForms.N15
     using P220_27G_2;
     using P220_27G_3;
     using СостоянияЭлементов.Контур_П;
+    using InternalBlocks;
 
     public static class N15Parameters
     {
@@ -852,6 +853,7 @@ namespace R440O.R440OForms.N15
         /// </summary>
         public static void ResetParameters()
         {
+            Antenna.ResetParameters();
 
             N16Parameters.ResetParameters();
             #region БМА
