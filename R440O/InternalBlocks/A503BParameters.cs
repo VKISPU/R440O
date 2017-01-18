@@ -1,17 +1,14 @@
-﻿
+﻿using SignalTypes;
+using R440O.R440OForms.A205M_1;
+using R440O.R440OForms.A205M_2;
+using R440O.R440OForms.NKN_1;
+using R440O.R440OForms.NKN_2;
+using R440O.R440OForms.N15;
+using System.Collections.Generic;
 using System.CodeDom;
 
 namespace R440O.InternalBlocks
 {
-
-    using SignalTypes;
-    using R440OForms.A205M_1;
-    using R440OForms.A205M_2;
-    using R440OForms.NKN_1;
-    using R440OForms.NKN_2;
-    using R440OForms.N15;
-    using R440O.InternalBlocks;
-
     public static class A503BParameters
     {
         /// <summary>
@@ -37,7 +34,7 @@ namespace R440O.InternalBlocks
         /// В данном блоке происходит преобразование частоты волны, при проверке на себя.
         /// Также добавляется уровень мощности сигнала, в соответствии с регулятором на Н15.
         /// </summary>
-        public static Signal ВыходнойСигнал
+        public static List<Signal> ВыходнойСигнал
         {
             get
             {
@@ -59,7 +56,9 @@ namespace R440O.InternalBlocks
                 var outputSignal = inputSignal;
                 outputSignal.Wave -= WaveShift;
                 outputSignal.Frequency -= FrequencyShift;
-                return outputSignal;
+                var outputSignals = new List<Signal>();
+                outputSignals.Add(outputSignal);
+                return outputSignals;
             }
         }
 

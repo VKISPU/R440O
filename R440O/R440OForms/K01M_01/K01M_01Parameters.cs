@@ -22,13 +22,15 @@ namespace R440O.R440OForms.K01M_01
                     else
                     {
 
-                        if (N18_M_AngleSwitchParameters.ГнездоПРМ1 == 1 && C300M_1Parameters.ВходящийСигнал != null)
+                        if (N18_M_AngleSwitchParameters.ГнездоПРМ1 == 1 && C300M_1Parameters.ВходящийСигнал != null
+                            && C300M_1Parameters.ВходящийСигнал.Count != 0)
                         {
-                            сигнал = C300M_1Parameters.ВходящийСигнал.KulonSignal;
+                            сигнал = C300M_1Parameters.ВходящийСигнал[0].KulonSignal;
                         }
-                        else if (N18_M_AngleSwitchParameters.ГнездоПРМ2 == 1 && C300M_2Parameters.ВходящийСигнал != null)
+                        else if (N18_M_AngleSwitchParameters.ГнездоПРМ2 == 1 && C300M_2Parameters.ВходящийСигнал != null
+                             && C300M_1Parameters.ВходящийСигнал.Count != 0)
                         {
-                            сигнал = C300M_2Parameters.ВходящийСигнал.KulonSignal;
+                            сигнал = C300M_2Parameters.ВходящийСигнал[0].KulonSignal;
                         }
                     }
                     return сигнал;

@@ -5,6 +5,7 @@
     using R440OForms.N15;
     using R440OForms.OrderScheme;
     using R440OForms.A306;
+    using System.Collections.Generic;
 
     public static class MSHUParameters
     {
@@ -18,7 +19,7 @@
         /// Значение выходного сигнала, как после блока А304, т.к. его включение зависит от включения МШУ.
         /// Начало приемного тракта
         /// </summary>
-        public static Signal ВыходнойСигнал
+        public static List<Signal> ВыходнойСигнал
         {
             get
             {
@@ -31,14 +32,18 @@
 
                 if (A304Parameters.ВыходнаяЧастота == null) return null;
 
-                var outputSignal = inputSignal;
-                outputSignal.Frequency = inputSignal.Frequency - 8*(int)A304Parameters.ВыходнаяЧастота;
-                //outputSignal.Wave = outputSignal.Frequency/10 - 571000;
+                var outputSignals = new List<Signal>();
+                foreach (var signal in inputSignal)
+                {
+                    signal.Frequency = signal.Frequency - 8 * (int)A304Parameters.ВыходнаяЧастота;
+                    //outputSignal.Wave = outputSignal.Frequency/10 - 571000;
 
-
-                //На блок А306
-                //С проверкой попадания в диапазон 320...370 МГц
-                return (outputSignal.Frequency >= 320000 && outputSignal.Frequency <= 370000 ) ? outputSignal : null;
+                    //На блок А306
+                    //С проверкой попадания в диапазон 320...370 МГц
+                    if (signal.Frequency >= 320000 && signal.Frequency <= 370000)
+                        outputSignals.Add(signal);
+                }                
+                return outputSignals;
             }
         }
 

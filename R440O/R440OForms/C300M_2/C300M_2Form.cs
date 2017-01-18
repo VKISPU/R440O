@@ -37,7 +37,7 @@ namespace R440O.R440OForms.C300M_2
         }
 
         public void logs(string Name)
-        {
+        {/*
             var log = string.Empty;
             log += "Used " + Name + "\n";
             log += (C300M_2Parameters.ТумблерУправление) ? "Упр. Дистанционное\n" :
@@ -60,6 +60,7 @@ namespace R440O.R440OForms.C300M_2
             "Таймер не запущен\n";
             log += (C300M_2Parameters.ПойманныйСигнал == null) ? "Сигнала нет\n\n" : "Сигнала есть\n\n";
             logbox.Text += log;
+          * */
         }
         #region Кнопки ВИД РАБОТЫ
         /// <summary>

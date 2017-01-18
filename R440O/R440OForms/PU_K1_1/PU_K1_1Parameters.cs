@@ -12,7 +12,11 @@ namespace R440O.R440OForms.PU_K1_1
     {
         public static bool Включен
         {
-            get { return N15Parameters.Включен && (ТумблерПитание == 0 && N15Parameters.ТумблерК1_1) || ТумблерПитание == 2; }
+            get
+            {
+                return (N15Parameters.Включен && (ТумблерПитание == 0 && N15Parameters.ТумблерК1_1) || ТумблерПитание == 2)
+                    && N15Parameters.Лампочка27В;
+            }
         }
 
         public static bool ПереключателиВыставленыВерно

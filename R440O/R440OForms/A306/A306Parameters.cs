@@ -7,6 +7,7 @@ using R440O.R440OForms.C300M_1;
 using R440O.R440OForms.C300M_2;
 using R440O.R440OForms.C300M_3;
 using R440O.R440OForms.C300M_4;
+using System.Collections.Generic;
 
 namespace R440O.R440OForms.A306
 {
@@ -25,14 +26,9 @@ namespace R440O.R440OForms.A306
         /// Номер выхода на который поступает сигнал с МШУ, исключая выход КВ
         /// Частота входного сигнала 320...370 МГц. Каждый выход имеет шаг разницы в 5 МГЦ
         /// </summary>
-        public static int НомерВыхода
+        public static int ПолучитьНомерВыхода(Signal сигнал)
         {
-            get
-            {
-                return (Включен && MSHUParameters.ВыходнойСигнал != null)
-                    ? (MSHUParameters.ВыходнойСигнал.Frequency - 320000)/5000
-                    : -1;
-            }
+            return (Включен) ? (сигнал.Frequency - 320000) / 5000 : -1;
         }
 
                 /// <summary>
@@ -40,8 +36,9 @@ namespace R440O.R440OForms.A306
         /// </summary>
         /// <param name="output"></param>
         /// <returns></returns>
-        private static bool IsRightSet(int output)
+        private static bool IsRightSet(int output, Signal сигнал)
         {
+            var НомерВыхода = ПолучитьНомерВыхода(сигнал);
             //Если НомерВыхода неопределен, значит сигнал с МШУ не подается
             if (НомерВыхода == -1) return false;
 
@@ -60,25 +57,34 @@ namespace R440O.R440OForms.A306
             return false;
         }
 
-
-        public static Signal ВыходнойСигнал1
+        private static List<Signal> GetRightSet(int output)
         {
-            get { return IsRightSet(0) ? MSHUParameters.ВыходнойСигнал : null; }
+             var outputSignals = new List<Signal>();
+                foreach (var сигнал in MSHUParameters.ВыходнойСигнал)
+                    if (IsRightSet(output, сигнал))
+                        outputSignals.Add(сигнал);
+                return outputSignals;
         }
 
-        public static Signal ВыходнойСигнал2
+
+        public static List<Signal> ВыходнойСигнал1
         {
-            get { return IsRightSet(1) ? MSHUParameters.ВыходнойСигнал : null; }
+            get { return GetRightSet(0); }
         }
 
-        public static Signal ВыходнойСигнал3
+        public static List<Signal> ВыходнойСигнал2
         {
-            get { return IsRightSet(2) ? MSHUParameters.ВыходнойСигнал : null; }
+            get { return GetRightSet(1); }
         }
 
-        public static Signal ВыходнойСигнал4
+        public static List<Signal> ВыходнойСигнал3
         {
-            get { return IsRightSet(3) ? MSHUParameters.ВыходнойСигнал : null; }
+            get { return GetRightSet(3); }
+        }
+
+        public static List<Signal> ВыходнойСигнал4
+        {
+            get { return GetRightSet(4); }
         }
 
 
