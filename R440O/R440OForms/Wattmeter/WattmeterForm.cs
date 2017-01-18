@@ -4,13 +4,14 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-using R440O.BaseClasses;
+using SignalTypes;
 
 namespace R440O.R440OForms.Wattmeter
 {
     using System.Windows.Forms;
     using ThirdParty;
     using System.Reflection;
+    using BaseClasses;
 
     /// <summary>
     /// Форма блока ватметр

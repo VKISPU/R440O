@@ -6,7 +6,7 @@ namespace R440O.R440OForms.B1_1
     using System.Collections.Generic;
     using N15Inside;
     using N18_M;
-    using BaseClasses;
+    using SignalTypes;
     using N15;
     using B2_1;
 

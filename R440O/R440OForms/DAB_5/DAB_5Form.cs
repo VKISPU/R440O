@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Reflection;
+using SignalTypes;
 using R440O.BaseClasses;
 
 namespace R440O.R440OForms.DAB_5

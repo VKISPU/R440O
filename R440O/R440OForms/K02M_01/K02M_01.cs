@@ -7,10 +7,11 @@
 using System;
 using System.Linq;
 using System.Windows.Forms;
-using R440O.BaseClasses;
+using SignalTypes;
 using R440O.R440OForms.K02M_01Inside;
 using R440O.R440OForms.K03M_01;
 using R440O.ThirdParty;
+using R440O.BaseClasses;
 
 namespace R440O.R440OForms.K02M_01
 {

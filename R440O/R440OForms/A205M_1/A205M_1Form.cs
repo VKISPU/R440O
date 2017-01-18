@@ -1,10 +1,11 @@
-﻿using R440O.BaseClasses;
+﻿using SignalTypes;
 using R440O.R440OForms.NKN_1;
 
 namespace R440O.R440OForms.A205M_1
 {
     using System.Windows.Forms;
     using ThirdParty;
+    using BaseClasses;
 
     /// <summary>
     /// Форма блока А205М-1

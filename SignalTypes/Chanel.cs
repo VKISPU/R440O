@@ -1,4 +1,4 @@
-﻿namespace R440O.BaseClasses
+﻿namespace SignalTypes
 {
     /// <summary>
     /// Единичный информационный канал.

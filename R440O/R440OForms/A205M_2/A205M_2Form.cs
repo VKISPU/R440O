@@ -1,5 +1,6 @@
-﻿using R440O.BaseClasses;
+﻿using SignalTypes;
 using R440O.R440OForms.NKN_2;
+using R440O.BaseClasses;
 
 namespace R440O.R440OForms.A205M_2
 {

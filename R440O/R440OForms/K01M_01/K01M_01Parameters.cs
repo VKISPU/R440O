@@ -1,4 +1,4 @@
-﻿using R440O.BaseClasses;
+﻿using SignalTypes;
 using R440O.R440OForms.K05M_01;
 using R440O.R440OForms.K03M_01;
 using R440O.R440OForms.PU_K1_1;

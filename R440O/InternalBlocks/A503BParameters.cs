@@ -4,7 +4,7 @@ using System.CodeDom;
 namespace R440O.InternalBlocks
 {
 
-    using BaseClasses;
+    using SignalTypes;
     using R440OForms.A205M_1;
     using R440OForms.A205M_2;
     using R440OForms.NKN_1;

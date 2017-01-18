@@ -1,7 +1,6 @@
-﻿namespace R440O.BaseClasses
+﻿using System.Collections.Generic;
+namespace SignalTypes
 {
-    using System.Collections.Generic;
-
     /// <summary>
     /// Одиночный элемент сигнала, содержит номер потока, группы и список каналов.
     /// </summary>

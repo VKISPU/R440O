@@ -7,7 +7,7 @@
 using System.IO;
 using System.Text;
 using System.Windows.Forms.VisualStyles;
-using R440O.BaseClasses;
+using SignalTypes;
 
 namespace R440O.R440OForms.C300M_2
 {
@@ -15,6 +15,7 @@ namespace R440O.R440OForms.C300M_2
     using ThirdParty;
     using System.Reflection;
     using System;
+    using BaseClasses;
 
     /// <summary>
     /// Форма блока С300М_2

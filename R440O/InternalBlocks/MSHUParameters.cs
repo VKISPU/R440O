@@ -1,6 +1,6 @@
 ﻿namespace R440O.InternalBlocks
 {
-    using BaseClasses;
+    using SignalTypes;
     using R440OForms.A304;
     using R440OForms.N15;
     using R440OForms.OrderScheme;

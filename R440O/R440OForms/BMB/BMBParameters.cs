@@ -1,5 +1,5 @@
 ﻿using R440O.ThirdParty;
-using R440O.BaseClasses;
+using SignalTypes;
 using R440O.R440OForms.N18_M;
 
 namespace R440O.R440OForms.BMB

@@ -6,6 +6,7 @@
 
 using System;
 using System.Linq;
+using SignalTypes;
 using R440O.BaseClasses;
 using R440O.Properties;
 
@@ -14,6 +15,7 @@ namespace R440O.R440OForms.A403_1
     using System.Windows.Forms;
     using Parameters;
     using ThirdParty;
+    using BaseClasses;
 
     /// <summary>
     /// Форма блока А403-1

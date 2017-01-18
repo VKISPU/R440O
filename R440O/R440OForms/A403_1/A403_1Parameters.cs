@@ -20,8 +20,7 @@ namespace R440O.R440OForms.A403_1
         public static string BetaP = "";
         public static string DeltaF = "";
 
-        public static bool Включен => ТумблерСеть && N15Parameters.ТумблерА403 && N15Parameters.Включен;
-
+        public static bool Включен { get { return ТумблерСеть && N15Parameters.ТумблерА403 && N15Parameters.Включен; } } 
         /// <summary>
         /// Показывает, было ли записано значение в ДисплейЗначения
         /// </summary>

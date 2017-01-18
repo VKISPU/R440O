@@ -18,7 +18,7 @@ namespace R440O
     using СостоянияЭлементов.Контур_П;
     using R440OForms.N15Inside;
     using R440OForms.N18_M;
-    using ОбщиеТипыДанных;
+    using SignalTypes;
 
     public static class ParametersConfig
     {

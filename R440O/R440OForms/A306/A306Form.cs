@@ -1,4 +1,5 @@
-﻿using R440O.BaseClasses;
+﻿using SignalTypes;
+using R440O.BaseClasses;
 
 namespace R440O.R440OForms.A306
 {

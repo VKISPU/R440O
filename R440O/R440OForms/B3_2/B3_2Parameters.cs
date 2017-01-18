@@ -1,6 +1,6 @@
 ﻿namespace R440O.R440OForms.B3_2
 {
-    using BaseClasses;
+    using SignalTypes;
     using N15;
     using N15Inside;
     using N18_M;

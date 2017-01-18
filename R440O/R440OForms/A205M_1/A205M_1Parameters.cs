@@ -11,7 +11,7 @@ namespace R440O.R440OForms.A205M_1
     using N18_M;
     using N502B;
     using NKN_1;
-    using ОбщиеТипыДанных;
+    using SignalTypes;
 
     public static class A205M_1Parameters
     {

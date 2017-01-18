@@ -71,9 +71,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BackgroundImages.resx</DependentUpon>
     </Compile>
-    <Compile Include="BaseClasses\Chanel.cs" />
-    <Compile Include="BaseClasses\KulonSignal.cs" />
-    <Compile Include="BaseClasses\SignalElement.cs" />
+    <Compile Include="BaseClasses\IRefreshableForm.cs" />
     <Compile Include="ControlElementImages.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -121,7 +119,6 @@
     <Compile Include="R440OForms\TLF_TCH\TLF_TCHParametrs.cs" />
     <Compile Include="R440OForms\Wattmeter\WattmeterParameters.cs" />
     <Compile Include="ThirdParty\EasyTimer.cs" />
-    <Compile Include="ОбщиеТипыДанных\Модуляция.cs" />
     <Compile Include="СостоянияЭлементов\ДАБ5.cs" />
     <Compile Include="СостоянияЭлементов\Контур_П.cs" />
     <Compile Include="СостоянияЭлементов\БМА_М.cs" />
@@ -579,8 +576,6 @@
     <Compile Include="R440OForms\C300PM_1\C300PM_1Form.Designer.cs">
       <DependentUpon>C300PM_1Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaseClasses\IRefreshableForm.cs" />
-    <Compile Include="BaseClasses\Signal.cs" />
     <Compile Include="ThirdParty\TransformImageHelper.cs" />
     <Compile Include="СостоянияЭлементов\БМБ.cs" />
     <EmbeddedResource Include="BackgroundImages.resx">
@@ -1208,6 +1203,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SignalTypes\SignalTypes.csproj">
+      <Project>{8a58034a-40d7-42c8-bfe9-c933d9493864}</Project>
+      <Name>SignalTypes</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

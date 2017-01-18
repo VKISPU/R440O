@@ -6,7 +6,7 @@ using R440O.R440OForms.N18_M;
 namespace R440O.R440OForms.B2_2
 {
     using N15;
-    using BaseClasses;
+    using SignalTypes;
 
     static class B2_2Parameters
     {

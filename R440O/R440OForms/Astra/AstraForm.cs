@@ -4,13 +4,14 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-using R440O.BaseClasses;
+using SignalTypes;
 
 namespace R440O.R440OForms.Astra
 {
     using System.Windows.Forms;
     using Parameters;
     using ThirdParty;
+    using BaseClasses;
 
     /// <summary>
     /// Форма блока Астра

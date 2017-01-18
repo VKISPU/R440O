@@ -1,5 +1,5 @@
 ﻿using System.Drawing;
-using R440O.BaseClasses;
+using SignalTypes;
 
 using System.Collections.Generic;
 namespace R440O.R440OForms.N18_M

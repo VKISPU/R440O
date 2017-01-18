@@ -1,10 +1,8 @@
-﻿namespace R440O.BaseClasses
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+namespace SignalTypes
 {
-    using System;
-    using System.Linq;
-    using System.Collections.Generic;
-    using ОбщиеТипыДанных;
-
     /// <summary>
     /// Параметры передаваемого сигнала.
     /// </summary>

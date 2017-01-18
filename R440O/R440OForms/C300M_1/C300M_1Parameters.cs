@@ -1,12 +1,11 @@
 ﻿using System;
-using R440O.BaseClasses;
+using SignalTypes;
 using R440O.InternalBlocks;
 using R440O.R440OForms.A304;
 using R440O.R440OForms.A306;
 using R440O.R440OForms.N15;
 using R440O.R440OForms.C300PM_1;
 using R440O.R440OForms.K01M_01;
-using R440O.ОбщиеТипыДанных;
 
 namespace R440O.R440OForms.C300M_1
 {

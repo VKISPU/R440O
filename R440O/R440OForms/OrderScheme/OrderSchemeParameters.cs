@@ -2,8 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
-    using BaseClasses;
-    using ОбщиеТипыДанных;
+    using SignalTypes;
 
     public static class OrderSchemeParameters
     {

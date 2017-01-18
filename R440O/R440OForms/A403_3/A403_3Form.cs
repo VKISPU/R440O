@@ -4,11 +4,12 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-using R440O.BaseClasses;
+using SignalTypes;
 
 namespace R440O.R440OForms.A403_3
 {
     using System.Windows.Forms;
+    using BaseClasses;
 
     /// <summary>
     /// Форма блока A403-3

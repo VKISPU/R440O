@@ -1,4 +1,4 @@
-﻿namespace R440O.ОбщиеТипыДанных
+﻿namespace SignalTypes
 {
     public enum Модуляция
     {

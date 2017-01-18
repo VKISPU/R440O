@@ -4,7 +4,7 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-using R440O.BaseClasses;
+using SignalTypes;
 
 namespace R440O.R440OForms.BMA_M_1
 {
@@ -14,6 +14,7 @@ namespace R440O.R440OForms.BMA_M_1
     using ThirdParty;
     using System;
     using System.Drawing;
+    using BaseClasses;
 
 
     /// <summary>
