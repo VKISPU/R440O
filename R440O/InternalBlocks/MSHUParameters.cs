@@ -24,10 +24,10 @@
         {
             get
             {
-                if (!Включен) return new List<Signal>();             
+                if (!Включен) return new List<Signal>();
 
-                var inputSignal = N15Parameters.ЛампочкаАнт ? A503BParameters.ВыходнойСигнал
-                    : Antenna.ВыходнойСигнал;
+                var inputSignal = N15Parameters.ТумблерАнтЭкв ? Antenna.ВыходнойСигнал
+                    : A503BParameters.ВыходнойСигнал;
 
                 if (inputSignal == null) return new List<Signal>();
 
