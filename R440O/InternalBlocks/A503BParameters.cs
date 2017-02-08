@@ -34,7 +34,7 @@ namespace R440O.InternalBlocks
         /// В данном блоке происходит преобразование частоты волны, при проверке на себя.
         /// Также добавляется уровень мощности сигнала, в соответствии с регулятором на Н15.
         /// </summary>
-        public static List<Signal> ВыходнойСигнал
+        public static BroadcastSignal ВыходнойСигнал
         {
             get
             {
@@ -58,7 +58,7 @@ namespace R440O.InternalBlocks
                 outputSignal.Frequency -= FrequencyShift;
                 var outputSignals = new List<Signal>();
                 outputSignals.Add(outputSignal);
-                return outputSignals;
+                return new BroadcastSignal { Signals = outputSignals };
             }
         }
 

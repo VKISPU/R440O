@@ -16,7 +16,7 @@ namespace R440O.InternalBlocks
     {
         private static IDisposable timer;
 
-        public static List<Signal> ВыходнойСигнал { get; set; }
+        public static BroadcastSignal ВыходнойСигнал { get; set; }
 
         public static void ResetParameters()
         {
@@ -36,7 +36,7 @@ namespace R440O.InternalBlocks
             MSHUParameters.ResetParameters();
         }
 
-        static async Task<List<Signal>> ПослатьИПолучитьСигнал(Signal signal)
+        static async Task<BroadcastSignal> ПослатьИПолучитьСигнал(Signal signal)
         {
             string url = "http://localhost:8080/";
             var body = new StringContent(JsonConvert.SerializeObject(signal), Encoding.UTF8, "application/json");
@@ -49,7 +49,7 @@ namespace R440O.InternalBlocks
                 {
                     try
                     {
-                        var signals = JsonConvert.DeserializeObject<List<Signal>>(result);
+                        var signals = JsonConvert.DeserializeObject<BroadcastSignal>(result);
                         return signals;
                     }
                     catch

@@ -60,31 +60,31 @@ namespace R440O.R440OForms.A306
         private static List<Signal> GetRightSet(int output)
         {
              var outputSignals = new List<Signal>();
-                foreach (var сигнал in MSHUParameters.ВыходнойСигнал)
+                foreach (var сигнал in MSHUParameters.ВыходнойСигнал.Signals)
                     if (IsRightSet(output, сигнал))
                         outputSignals.Add(сигнал);
                 return outputSignals;
         }
 
 
-        public static List<Signal> ВыходнойСигнал1
+        public static BroadcastSignal ВыходнойСигнал1
         {
-            get { return GetRightSet(0); }
+            get { return new BroadcastSignal { Signals = GetRightSet(0) }; }
         }
 
-        public static List<Signal> ВыходнойСигнал2
+        public static BroadcastSignal ВыходнойСигнал2
         {
-            get { return GetRightSet(1); }
+            get { return new BroadcastSignal { Signals = GetRightSet(1) }; }
         }
 
-        public static List<Signal> ВыходнойСигнал3
+        public static BroadcastSignal ВыходнойСигнал3
         {
-            get { return GetRightSet(3); }
+            get { return new BroadcastSignal { Signals = GetRightSet(2) }; }
         }
 
-        public static List<Signal> ВыходнойСигнал4
+        public static BroadcastSignal ВыходнойСигнал4
         {
-            get { return GetRightSet(4); }
+            get { return new BroadcastSignal { Signals = GetRightSet(3) }; }
         }
 
 

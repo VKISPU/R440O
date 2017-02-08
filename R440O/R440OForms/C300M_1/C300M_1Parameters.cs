@@ -627,7 +627,7 @@ namespace R440O.R440OForms.C300M_1
                 }
 
 
-                foreach (var сигнал in ВходящийСигнал)
+                foreach (var сигнал in ВходящийСигнал.Signals)
                 {
                     //***Условие на поиск сигнала***//
                     if (УсловиеПоимкиСигнала(сигнал))
@@ -660,11 +660,11 @@ namespace R440O.R440OForms.C300M_1
         /// <summary>
         /// Переменная для обращения к поступающему сигналу
         /// </summary>
-        public static List<Signal> ВходящийСигнал
+        public static BroadcastSignal ВходящийСигнал
         {
             get
             {
-                return Включен ? A306Parameters.ВыходнойСигнал1 : new List<Signal>();
+                return Включен ? A306Parameters.ВыходнойСигнал1 : new BroadcastSignal();
             }
         }
 
@@ -690,7 +690,7 @@ namespace R440O.R440OForms.C300M_1
             {
                 if (СигналПойман)
                 {
-                    foreach (var сигнал in ВходящийСигнал)
+                    foreach (var сигнал in ВходящийСигнал.Signals)
                     {
                         //***Условие на поиск сигнала***//
                         if (УсловиеПоимкиСигнала(сигнал) && СоответствиеМодуляции(сигнал))

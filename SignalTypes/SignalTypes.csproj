@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BroadcastSignal.cs" />
     <Compile Include="Chanel.cs" />
     <Compile Include="KulonSignal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

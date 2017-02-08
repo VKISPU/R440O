@@ -1,4 +1,6 @@
-﻿using SignalTypes;
+﻿using System.Collections.Generic;
+using System.Linq;
+using SignalTypes;
 using R440O.R440OForms.K05M_01;
 using R440O.R440OForms.K03M_01;
 using R440O.R440OForms.PU_K1_1;
@@ -10,32 +12,36 @@ namespace R440O.R440OForms.K01M_01
 {
     static class K01M_01Parameters
     {
-        public static KulonSignal Сигнал
+        public static List<KulonSignal> Сигнал
         {
             get
             {
                 if (PU_K1_1Parameters.Включен)
                 {
-                    KulonSignal сигнал = null;
+                    List<KulonSignal> сигнал = new List<KulonSignal>();
                     if (K05M_01Parameters.ПереключательПередачаКонтроль != 0)
-                        сигнал = K05M_01Parameters.Сигнал;
+                        сигнал = new List<KulonSignal> { K05M_01Parameters.Сигнал };
                     else
                     {
 
-                        if (N18_M_AngleSwitchParameters.ГнездоПРМ1 == 1 && C300M_1Parameters.ВходящийСигнал != null
-                            && C300M_1Parameters.ВходящийСигнал.Count != 0)
+                        if (N18_M_AngleSwitchParameters.ГнездоПРМ1 == 1 && C300M_1Parameters.ВходящийСигнал != null)
                         {
-                            сигнал = C300M_1Parameters.ВходящийСигнал[0].KulonSignal;
+                            сигнал = C300M_1Parameters.ВходящийСигнал.Signals
+                                .Select(s => s.KulonSignal)
+                                .Where(k => k != null)
+                                .ToList();
                         }
-                        else if (N18_M_AngleSwitchParameters.ГнездоПРМ2 == 1 && C300M_2Parameters.ВходящийСигнал != null
-                             && C300M_2Parameters.ВходящийСигнал.Count != 0)
+                        else if (N18_M_AngleSwitchParameters.ГнездоПРМ2 == 1 && C300M_2Parameters.ВходящийСигнал != null)
                         {
-                            сигнал = C300M_2Parameters.ВходящийСигнал[0].KulonSignal;
+                            сигнал = C300M_2Parameters.ВходящийСигнал.Signals
+                                .Select(s => s.KulonSignal)
+                                .Where(k => k != null)
+                                .ToList();
                         }
                     }
                     return сигнал;
                 }
-                return null;
+                return new List<KulonSignal>();
             }
         }
 
