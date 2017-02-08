@@ -28,7 +28,7 @@ namespace R440O.R440OForms.K01M_01
                             сигнал = C300M_1Parameters.ВходящийСигнал[0].KulonSignal;
                         }
                         else if (N18_M_AngleSwitchParameters.ГнездоПРМ2 == 1 && C300M_2Parameters.ВходящийСигнал != null
-                             && C300M_1Parameters.ВходящийСигнал.Count != 0)
+                             && C300M_2Parameters.ВходящийСигнал.Count != 0)
                         {
                             сигнал = C300M_2Parameters.ВходящийСигнал[0].KulonSignal;
                         }
