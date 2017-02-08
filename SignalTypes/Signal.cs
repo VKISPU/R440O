@@ -160,5 +160,20 @@ namespace SignalTypes
             get;
             set;
         }
+
+        public Signal Clone()
+        {
+            return new Signal
+            {
+                Elements = this.Elements.Select( e => e.Clone()).ToList(),
+                Frequency = this.Frequency,
+                KulonSignal = this.KulonSignal != null ? this.KulonSignal.Clone() : null,
+                GroupSpeed = this.GroupSpeed,
+                Level = this.Level,
+                Modulation = this.Modulation,
+                Wave = this.Wave,
+                Synchronization = this.Synchronization
+            };
+        }
     }
 }

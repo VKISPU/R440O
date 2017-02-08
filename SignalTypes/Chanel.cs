@@ -6,6 +6,8 @@ namespace SignalTypes
     /// </summary>
     public class Chanel
     {
+        public Chanel() { }
+
         public Chanel(double speed)
         {
             Speed = speed;
@@ -38,5 +40,15 @@ namespace SignalTypes
         public bool Information { get; private set; }
 
         public string InformationString { get; private set; }
+
+        public Chanel Clone()
+        {
+            return new Chanel
+            {
+                Speed = this.Speed,
+                Information = this.Information,
+                InformationString = this.InformationString
+            };
+        }
     }
 }

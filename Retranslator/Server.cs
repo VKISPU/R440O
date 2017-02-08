@@ -41,7 +41,7 @@ namespace Retranslator
         private void Error(HttpListenerResponse response)
         {
             response.StatusCode = (int)HttpStatusCode.OK;
-            string responseString = "Helow, World!";
+            string responseString = "Some Error :( !";
             var buffer = System.Text.Encoding.UTF8.GetBytes(responseString);
             response.ContentLength64 = buffer.Length;
             using (Stream stream = response.OutputStream)
@@ -61,10 +61,13 @@ namespace Retranslator
             }
             try
             {
+                int WaveShift = 1500;
+                int FrequencyShift = 2325000;
                 var signal = JsonConvert.DeserializeObject<Signal>(str);
-                List<Signal> signals = new List<Signal>();
-                signals.Add(signal);
-                var responseString = JsonConvert.SerializeObject(signals);
+                signal.Wave -= WaveShift;
+                signal.Frequency -= FrequencyShift;
+                var broadcast = new BroadcastSignal { Signals = new List<Signal> { signal } };
+                var responseString = JsonConvert.SerializeObject(broadcast);
                 var buffer = System.Text.Encoding.UTF8.GetBytes(responseString);
                 response.ContentLength64 = buffer.Length;
                 using (Stream stream = response.OutputStream)

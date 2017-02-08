@@ -16,7 +16,15 @@ namespace R440O.InternalBlocks
     {
         private static IDisposable timer;
 
-        public static BroadcastSignal ВыходнойСигнал { get; set; }
+        public static BroadcastSignal ВыходнойСигнал
+        {
+            get
+            {
+                return ВходнойСигнал != null ? ВходнойСигнал.Clone() : null;
+            }
+        }
+
+        private static BroadcastSignal ВходнойСигнал { get; set; }
 
         public static void ResetParameters()
         {
@@ -28,7 +36,7 @@ namespace R440O.InternalBlocks
                 {
                     if (A205M_1Parameters.ВыходнойСигнал != null)
                     {
-                        ВыходнойСигнал = await ПослатьИПолучитьСигнал(A205M_1Parameters.ВыходнойСигнал);
+                        ВходнойСигнал = await ПослатьИПолучитьСигнал(A205M_1Parameters.ВыходнойСигнал);
                         //MSHUParameters.ResetParameters();
                     }
                 }, 1000);

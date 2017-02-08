@@ -50,5 +50,35 @@ namespace SignalTypes
         {
             Frequency = frequency;
         }
+
+        public KulonSignal()
+        {
+
+        }
+
+        private static int[] clone_array(int[] a)
+        {
+            if (a == null)
+                return null;
+            var b = new int[a.Length];
+            for (int i = 0; i < a.Length; i++)
+                b[i] = a[i];
+            return a;
+        }
+
+        public KulonSignal Clone()
+        {
+            return new KulonSignal
+            {
+                Frequency = this.Frequency,
+                Level = this.Level,
+                Speed = this.Speed,
+                FirstChanel = this.FirstChanel != null ? this.FirstChanel.Clone() : null,
+                SecondChanel = this.SecondChanel != null ? this.SecondChanel.Clone() : null,
+                SynchroSequence1 = clone_array(this.SynchroSequence1),
+                SynchroSequence2 = clone_array(this.SynchroSequence2),
+                BarkerCode = this.BarkerCode
+            };
+        }
     }
 }

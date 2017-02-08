@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Newtonsoft.Json;
 namespace SignalTypes
 {
@@ -7,6 +8,8 @@ namespace SignalTypes
     /// </summary>
     public class SignalElement
     {
+        public SignalElement() { }
+
         public SignalElement(int flow, int group, double[] chanels)
         {
             Flow = flow;
@@ -64,6 +67,16 @@ namespace SignalTypes
         {
             var speed = Chanels[numberOfChanel].Speed;
             Chanels[numberOfChanel] = new Chanel(speed, signal.InformationString);
+        }
+
+        public SignalElement Clone()
+        {
+            return new SignalElement
+            {
+                Flow = this.Flow,
+                Group = this.Group,
+                Chanels = this.Chanels.Select(c => c.Clone()).ToList()
+            };
         }
     }
 }
