@@ -7,7 +7,7 @@
 using System.IO;
 using System.Text;
 using System.Windows.Forms.VisualStyles;
-using SignalTypes;
+using ShareTypes.SignalTypes;
 
 namespace R440O.R440OForms.C300M_2
 {

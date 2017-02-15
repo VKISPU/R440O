@@ -6,7 +6,7 @@
 
 using System;
 using System.Linq;
-using SignalTypes;
+using ShareTypes.SignalTypes;
 using R440O.BaseClasses;
 using R440O.Properties;
 

@@ -7,7 +7,7 @@ using R440O.R440OForms.PU_K1_1;
 using R440O.R440OForms.N18_M;
 using R440O.R440OForms.BMA_M_1;
 using R440O.R440OForms.N18_M_H28;
-using SignalTypes;
+using ShareTypes.SignalTypes;
 
 namespace R440O.R440OForms.K05M_01
 {

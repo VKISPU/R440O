@@ -3,7 +3,7 @@ using R440O.R440OForms.N502B;
 using R440O.R440OForms.TLF_TCH;
 using R440O.R440OForms.N15;
 using R440O.ThirdParty;
-using SignalTypes;
+using ShareTypes.SignalTypes;
 using R440O.R440OForms.N18_M;
 using R440O.R440OForms.B1_1;
 using R440O.R440OForms.C300M_1;

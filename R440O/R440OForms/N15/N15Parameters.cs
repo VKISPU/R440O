@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Reflection;
-using SignalTypes;
+using ShareTypes.SignalTypes;
 using R440O.InternalBlocks;
 using R440O.R440OForms.A306;
 using R440O.R440OForms.A403_1;

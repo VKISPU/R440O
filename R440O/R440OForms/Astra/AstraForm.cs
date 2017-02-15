@@ -4,7 +4,7 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-using SignalTypes;
+using ShareTypes.SignalTypes;
 
 namespace R440O.R440OForms.Astra
 {

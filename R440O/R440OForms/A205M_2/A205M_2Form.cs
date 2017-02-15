@@ -1,4 +1,4 @@
-﻿using SignalTypes;
+﻿using ShareTypes.SignalTypes;
 using R440O.R440OForms.NKN_2;
 using R440O.BaseClasses;
 

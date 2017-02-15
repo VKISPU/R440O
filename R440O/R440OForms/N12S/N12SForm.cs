@@ -5,7 +5,7 @@
 //-----------------------------------------------------------------------
 
 using System;
-using SignalTypes;
+using ShareTypes.SignalTypes;
 using R440O.Parameters;
 using R440O.ThirdParty;
 using R440O.BaseClasses;

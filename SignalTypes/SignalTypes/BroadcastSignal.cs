@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Newtonsoft.Json;
 
-namespace SignalTypes
+namespace ShareTypes.SignalTypes
 {
     public class BroadcastSignal
     {

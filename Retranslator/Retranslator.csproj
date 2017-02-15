@@ -77,9 +77,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SignalTypes\SignalTypes.csproj">
+    <ProjectReference Include="..\SignalTypes\ShareTypes.csproj">
       <Project>{8a58034a-40d7-42c8-bfe9-c933d9493864}</Project>
-      <Name>SignalTypes</Name>
+      <Name>ShareTypes</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,4 @@
-﻿using SignalTypes;
+﻿using ShareTypes.SignalTypes;
 using R440O.BaseClasses;
 
 namespace R440O.R440OForms.C300PM_1

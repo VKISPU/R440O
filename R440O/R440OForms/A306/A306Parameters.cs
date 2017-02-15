@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Windows.Forms.VisualStyles;
-using SignalTypes;
+using ShareTypes.SignalTypes;
 using R440O.InternalBlocks;
 using R440O.R440OForms.N15;
 using R440O.R440OForms.C300M_1;

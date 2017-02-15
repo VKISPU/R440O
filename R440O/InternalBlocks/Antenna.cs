@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Net.Http;
 using Newtonsoft.Json;
-using SignalTypes;
+using ShareTypes.SignalTypes;
 using System.Threading.Tasks;
 using R440O.R440OForms.N15;
 using R440O.ThirdParty;

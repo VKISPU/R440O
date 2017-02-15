@@ -4,7 +4,7 @@
     using N15Inside;
     using N18_M;
     using N15;
-    using SignalTypes;
+    using ShareTypes.SignalTypes;
 
     static class B2_1Parameters
     {

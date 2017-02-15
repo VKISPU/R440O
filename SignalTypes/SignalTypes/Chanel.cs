@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json;
-namespace SignalTypes
+namespace ShareTypes.SignalTypes
 {
     /// <summary>
     /// Единичный информационный канал.

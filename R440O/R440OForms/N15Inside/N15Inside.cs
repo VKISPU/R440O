@@ -3,7 +3,7 @@
     using System.Windows.Forms;
     using BaseClasses;
     using ThirdParty;
-    using SignalTypes;
+    using ShareTypes.SignalTypes;
 
     /// <summary>
     /// Форма внутренней части блока Н15

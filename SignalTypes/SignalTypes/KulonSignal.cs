@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SignalTypes
+namespace ShareTypes.SignalTypes
 {
     public class KulonSignal
     {

@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R440O", "R440O\R440O.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Retranslator", "Retranslator\Retranslator.csproj", "{1466F8EB-3858-488C-89D3-6CA616152D77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalTypes", "SignalTypes\SignalTypes.csproj", "{8A58034A-40D7-42C8-BFE9-C933D9493864}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareTypes", "SignalTypes\ShareTypes.csproj", "{8A58034A-40D7-42C8-BFE9-C933D9493864}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

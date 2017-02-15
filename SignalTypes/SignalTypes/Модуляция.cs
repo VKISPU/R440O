@@ -1,4 +1,4 @@
-﻿namespace SignalTypes
+﻿namespace ShareTypes.SignalTypes
 {
     public enum Модуляция
     {

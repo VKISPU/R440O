@@ -1,4 +1,4 @@
-﻿using SignalTypes;
+﻿using ShareTypes.SignalTypes;
 using R440O.R440OForms.NKN_1;
 
 namespace R440O.R440OForms.A205M_1

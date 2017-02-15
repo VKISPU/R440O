@@ -4,7 +4,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 using Newtonsoft.Json;
-using SignalTypes;
+using ShareTypes.SignalTypes;
 using System.Threading.Tasks;
 
 namespace Retranslator

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
-namespace SignalTypes
+namespace ShareTypes.SignalTypes
 {
     /// <summary>
     /// Одиночный элемент сигнала, содержит номер потока, группы и список каналов.

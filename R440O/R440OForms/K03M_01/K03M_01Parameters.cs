@@ -10,7 +10,7 @@ using R440O.R440OForms.K04M_01;
 using R440O.R440OForms.K05M_01;
 using R440O.R440OForms.K01M_01;
 using R440O.R440OForms.PU_K1_1;
-using SignalTypes;
+using ShareTypes.SignalTypes;
 
 namespace R440O.R440OForms.K03M_01
 {

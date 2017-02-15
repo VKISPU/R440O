@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-namespace SignalTypes
+namespace ShareTypes.SignalTypes
 {
     /// <summary>
     /// Параметры передаваемого сигнала.

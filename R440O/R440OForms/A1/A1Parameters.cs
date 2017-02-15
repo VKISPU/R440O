@@ -6,7 +6,7 @@ using R440O.R440OForms.BMA_M_1;
 namespace R440O.R440OForms.A1
 {
     using System.Collections.Generic;
-    using SignalTypes;
+    using ShareTypes.SignalTypes;
     using N15;
 
     public static class A1Parameters

@@ -9,7 +9,7 @@ namespace R440O.R440OForms.N15Inside
     using N15;
     using N18_M;
     using BaseClasses;
-    using SignalTypes;
+    using ShareTypes.SignalTypes;
     using BMA_M_1;
 
     class N15InsideParameters
