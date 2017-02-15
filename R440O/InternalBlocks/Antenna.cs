@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Net.Http;
-using Newtonsoft.Json;
 using ShareTypes.SignalTypes;
 using System.Threading.Tasks;
 using R440O.R440OForms.N15;
@@ -36,7 +34,7 @@ namespace R440O.InternalBlocks
                 {
                     if (A205M_1Parameters.ВыходнойСигнал != null)
                     {
-                        ВходнойСигнал = await ПослатьИПолучитьСигнал(A205M_1Parameters.ВыходнойСигнал);
+                        ВходнойСигнал = await HttpHelper.ПослатьИПолучитьСигнал(A205M_1Parameters.ВыходнойСигнал);
                         //MSHUParameters.ResetParameters();
                     }
                 }, 1000);
@@ -44,29 +42,6 @@ namespace R440O.InternalBlocks
             MSHUParameters.ResetParameters();
         }
 
-        static async Task<BroadcastSignal> ПослатьИПолучитьСигнал(Signal signal)
-        {
-            string url = "http://localhost:8080/";
-            var body = new StringContent(JsonConvert.SerializeObject(signal), Encoding.UTF8, "application/json");
-            using (HttpClient client = new HttpClient())
-            using (HttpResponseMessage response = await client.PostAsync(url, body))
-            using (HttpContent content = response.Content)
-            {                
-                string result = await content.ReadAsStringAsync();
-                if (result != null)
-                {
-                    try
-                    {
-                        var signals = JsonConvert.DeserializeObject<BroadcastSignal>(result);
-                        return signals;
-                    }
-                    catch
-                    {
-                        return null;
-                    }
-                }
-                return null;
-            }
-        }
+
     }
 }

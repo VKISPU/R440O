@@ -30,7 +30,15 @@ namespace Retranslator
                 HttpListenerRequest request = context.Request;
                 HttpListenerResponse response = context.Response;
                 if (request.HttpMethod == "POST")
-                    Post(request, response);
+                {
+                    if (request.Url.AbsolutePath == "/signal")
+                        SendSignal(request, response);
+                }
+                else if (request.HttpMethod == "GET")
+                {
+                    if (request.Url.AbsolutePath == "/orderscheme")
+                        Post(request, response);
+                }
                 else
                 {
                     Error(response);
@@ -51,7 +59,7 @@ namespace Retranslator
             }
         }
 
-        private void Post(HttpListenerRequest request, HttpListenerResponse response)
+        private void SendSignal(HttpListenerRequest request, HttpListenerResponse response)
         {
             string str;
             using (var reader = new StreamReader(request.InputStream,

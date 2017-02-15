@@ -126,6 +126,7 @@
     <Compile Include="R440OForms\TLF_TCH\TLF_TCHParametrs.cs" />
     <Compile Include="R440OForms\Wattmeter\WattmeterParameters.cs" />
     <Compile Include="ThirdParty\EasyTimer.cs" />
+    <Compile Include="ThirdParty\HttpHelper.cs" />
     <Compile Include="СостоянияЭлементов\ДАБ5.cs" />
     <Compile Include="СостоянияЭлементов\Контур_П.cs" />
     <Compile Include="СостоянияЭлементов\БМА_М.cs" />

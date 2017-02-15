@@ -15,6 +15,7 @@ namespace R440O
     using R440OForms.P220_27G_3;
     using R440OForms.PowerCabel;
     using R440OForms.VoltageStabilizer;
+    using R440OForms.OrderScheme;
     using СостоянияЭлементов.Контур_П;
     using R440OForms.N15Inside;
     using R440OForms.N18_M;
@@ -100,8 +101,7 @@ namespace R440O
             //
             // Кареев Влад.     
             #endregion
-
- 
+             
 
             // Задать начальное состояние разных кнопок и тумблеров чтобы не включать все каждый раз руками.
             if (setDeveloperState)
@@ -219,6 +219,8 @@ namespace R440O
                 #endregion
             }
 
+            // Установка Схемы-Приказа. Пытаемся получить с сервера. Если не получется, генерируем локально
+            OrderSchemeParameters.SetOrderScheme();
         }
     }
 }
