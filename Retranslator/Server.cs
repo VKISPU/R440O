@@ -14,6 +14,8 @@ namespace Retranslator
     {
         HttpListener httpListener = new HttpListener();
 
+        List<string> ipList = new List<string>();
+
         public Server(string url)
         {
             if (!HttpListener.IsSupported)
@@ -89,6 +91,7 @@ namespace Retranslator
             }
             try
             {
+                updateIpList(request.UserHostAddress);
                 int WaveShift = 1500;
                 int FrequencyShift = 2325000;
                 var signal = JsonConvert.DeserializeObject<Signal>(str);
@@ -108,5 +111,21 @@ namespace Retranslator
 
             }
         }
+        private void updateIpList(string UserHostAddress)
+        {
+            //check if exist in ram, if not, when write to ram and file
+            if (!ipList.Contains(UserHostAddress))
+            {
+                ipList.Add(UserHostAddress);
+                File.WriteAllText(@"ip-list.json", JsonConvert.SerializeObject(UserHostAddress));
+                using (StreamWriter file = File.CreateText(@"ip-list.json"))
+                {
+                    JsonSerializer serializer = new JsonSerializer();
+                    serializer.Serialize(file, UserHostAddress);
+                }
+            }
+
+        }
+
     }
 }
