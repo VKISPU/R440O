@@ -6,6 +6,7 @@ using System.Text;
 using Newtonsoft.Json;
 using ShareTypes.SignalTypes;
 using System.Threading.Tasks;
+using ShareTypes.OrderScheme;
 
 namespace Retranslator
 {
@@ -37,7 +38,7 @@ namespace Retranslator
                 else if (request.HttpMethod == "GET")
                 {
                     if (request.Url.AbsolutePath == "/orderscheme")
-                        Post(request, response);
+                        SendOrderScheme(request, response);
                 }
                 else
                 {
@@ -55,6 +56,25 @@ namespace Retranslator
             using (Stream stream = response.OutputStream)
             {
                 stream.Write(buffer, 0, buffer.Length);
+
+            }
+        }
+
+        private void SendOrderScheme(HttpListenerRequest request, HttpListenerResponse response)
+        {
+            try
+            {
+                var orderScheme = OrderSchemeFactory.CreateOrderScheme(false);
+                var responseString = JsonConvert.SerializeObject(orderScheme);
+                var buffer = System.Text.Encoding.UTF8.GetBytes(responseString);
+                response.ContentLength64 = buffer.Length;
+                using (Stream stream = response.OutputStream)
+                {
+                    stream.Write(buffer, 0, buffer.Length);
+                }
+            }
+            catch (Exception e)
+            {
 
             }
         }
