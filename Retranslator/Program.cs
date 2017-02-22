@@ -15,7 +15,7 @@ namespace Retranslator
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Server ser = new Server("http://localhost:8080/");
-            Application.Run(new Form1());
+            Application.Run(new ServerForm());
         }
     }
 }

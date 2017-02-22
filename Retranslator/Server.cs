@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.IO;
 using System.Net;
 using System.Text;
@@ -13,8 +14,8 @@ namespace Retranslator
     public class Server
     {
         HttpListener httpListener = new HttpListener();
-
-        List<string> ipList = new List<string>();
+        List<Station> stationList = new List<Station>();
+        List<OderSchemeShell> shells = new List<OderSchemeShell>();
 
         public Server(string url)
         {
@@ -22,7 +23,9 @@ namespace Retranslator
                 throw new NotImplementedException();
             httpListener.Prefixes.Add(url);
             httpListener.Start();
-            Task.Run(() => { Listening(); });
+            Task.Run(() => { 
+                Listening(); 
+            });
         }
 
         private void Listening()
@@ -66,7 +69,8 @@ namespace Retranslator
         {
             try
             {
-                var orderScheme = OrderSchemeFactory.CreateOrderScheme(false);
+                var station = GetStation(request.UserHostName, request.UserHostAddress);
+                var orderScheme = GetOrderSheme(station);
                 var responseString = JsonConvert.SerializeObject(orderScheme);
                 var buffer = System.Text.Encoding.UTF8.GetBytes(responseString);
                 response.ContentLength64 = buffer.Length;
@@ -91,7 +95,6 @@ namespace Retranslator
             }
             try
             {
-                updateIpList(request.UserHostAddress);
                 int WaveShift = 1500;
                 int FrequencyShift = 2325000;
                 var signal = JsonConvert.DeserializeObject<Signal>(str);
@@ -111,20 +114,29 @@ namespace Retranslator
 
             }
         }
-        private void updateIpList(string UserHostAddress)
-        {
-            //check if exist in ram, if not, when write to ram and file
-            if (!ipList.Contains(UserHostAddress))
-            {
-                ipList.Add(UserHostAddress);
-                File.WriteAllText(@"ip-list.json", JsonConvert.SerializeObject(UserHostAddress));
-                using (StreamWriter file = File.CreateText(@"ip-list.json"))
-                {
-                    JsonSerializer serializer = new JsonSerializer();
-                    serializer.Serialize(file, UserHostAddress);
-                }
-            }
 
+        private Station GetStation(string UserHostName, string UserHostAddress)
+        {
+            var station = stationList.FirstOrDefault(s => s.IpAddress == UserHostAddress);
+            if (station == null)
+            {
+                station = new Station { Name = UserHostName, IpAddress = UserHostAddress };
+                stationList.Add(station);
+            }
+            return station;
+        }
+
+        private OrderSchemeClass GetOrderSheme(Station station)
+        {
+            var shell = shells.FirstOrDefault(s => s.IsFree);
+            if (shell == null)
+            {                 
+                var scheme = OrderSchemeFactory.CreateOrderScheme(false);
+                shell = new OderSchemeShell { orderScheme = scheme };                
+                shells.Add(shell);
+            }
+            shell.AddStation(station);
+            return shell.orderScheme;
         }
 
     }

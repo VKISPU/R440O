@@ -1,6 +1,6 @@
 ﻿namespace Retranslator
 {
-    partial class Form1
+    partial class ServerForm
     {
         /// <summary>
         /// Требуется переменная конструктора.
