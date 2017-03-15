@@ -45,6 +45,7 @@
     <Compile Include="SignalTypes\KulonSignal.cs" />
     <Compile Include="OrderScheme\OrderScheme.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignalTypes\SendSignalDTO.cs" />
     <Compile Include="SignalTypes\Signal.cs" />
     <Compile Include="SignalTypes\SignalElement.cs" />
     <Compile Include="SignalTypes\Модуляция.cs" />

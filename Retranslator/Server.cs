@@ -14,8 +14,10 @@ namespace Retranslator
     public class Server
     {
         HttpListener httpListener = new HttpListener();
-        List<Station> stationList = new List<Station>();
-        List<OderSchemeShell> shells = new List<OderSchemeShell>();
+        List<OrderSchemePair> OrderSchemePairs = new List<OrderSchemePair>();
+        Random Randomizer = new Random();
+
+        public event Action<List<OrderSchemePair>> StationListUpdateEvent;       
 
         public Server(string url)
         {
@@ -69,8 +71,7 @@ namespace Retranslator
         {
             try
             {
-                var station = GetStation(request.UserHostName, request.UserHostAddress);
-                var orderScheme = GetOrderSheme(station);
+                var orderScheme = GetOrderSheme();
                 var responseString = JsonConvert.SerializeObject(orderScheme);
                 var buffer = System.Text.Encoding.UTF8.GetBytes(responseString);
                 response.ContentLength64 = buffer.Length;
@@ -95,12 +96,12 @@ namespace Retranslator
             }
             try
             {
-                int WaveShift = 1500;
-                int FrequencyShift = 2325000;
-                var signal = JsonConvert.DeserializeObject<Signal>(str);
-                signal.Wave -= WaveShift;
-                signal.Frequency -= FrequencyShift;
-                var broadcast = new BroadcastSignal { Signals = new List<Signal> { signal } };
+                var signalDTO = JsonConvert.DeserializeObject<SendSignalDTO>(str);
+                ClearStantionList();
+                UpdateSignal(signalDTO);
+                var broadcast = GetBroadcastSignal();
+                StationListUpdateEvent(this.OrderSchemePairs);
+
                 var responseString = JsonConvert.SerializeObject(broadcast);
                 var buffer = System.Text.Encoding.UTF8.GetBytes(responseString);
                 response.ContentLength64 = buffer.Length;
@@ -115,28 +116,77 @@ namespace Retranslator
             }
         }
 
-        private Station GetStation(string UserHostName, string UserHostAddress)
+
+        private OrderSchemeClass GetOrderSheme()
         {
-            var station = stationList.FirstOrDefault(s => s.IpAddress == UserHostAddress);
-            if (station == null)
+            var stantion = new Stantion();
+            var freePair = this.OrderSchemePairs.FirstOrDefault(s => s.IsFree);
+            if (freePair == null)
             {
-                station = new Station { Name = UserHostName, IpAddress = UserHostAddress };
-                stationList.Add(station);
+                var wave1 = GetRandomWave(0);
+                var wave2 = GetRandomWave(wave1);
+                freePair = new OrderSchemePair(wave1, wave2);
+                this.OrderSchemePairs.Add(freePair);
             }
-            return station;
+            freePair.AddStation(stantion);
+            return freePair.GetOrderSchemeByStation(stantion);
         }
 
-        private OrderSchemeClass GetOrderSheme(Station station)
+        private int GetRandomWave(int fisrtWave)
         {
-            var shell = shells.FirstOrDefault(s => s.IsFree);
-            if (shell == null)
-            {                 
-                var scheme = OrderSchemeFactory.CreateOrderScheme(false);
-                shell = new OderSchemeShell { orderScheme = scheme };                
-                shells.Add(shell);
+            for (int i = 0; i < 10000; i++)
+            {
+                var wave = this.Randomizer.Next(1500, 51499);
+                if (Math.Abs(fisrtWave - wave) < 100 || !this.OrderSchemePairs.Any(pair =>
+                    Math.Abs(pair.RandomWave1 - wave) < 100 || Math.Abs(pair.RandomWave2 - wave) < 100))
+                {
+                    return wave;
+                }
             }
-            shell.AddStation(station);
-            return shell.orderScheme;
+            return -1;
+        }
+
+        private void ClearStantionList()
+        {
+            foreach (var pair in this.OrderSchemePairs)
+            {
+                if (pair.Station1 != null && pair.Station1.IsExpired)
+                {
+                    pair.Station1 = null;
+                }
+                if (pair.Station2 != null && pair.Station2.IsExpired)
+                {
+                    pair.Station2 = null;
+                }
+            }
+            this.OrderSchemePairs = this.OrderSchemePairs.Where(pair => !pair.IsEmpty).ToList();
+        }
+
+        private void UpdateSignal(SendSignalDTO signalDTO)
+        {
+            int WaveShift = 1500;
+            int FrequencyShift = 2325000;
+            
+            var id = signalDTO.Id;
+            var signal = signalDTO.Signal;
+            if (signal != null)
+            {
+                signal.Wave -= WaveShift;
+                signal.Frequency -= FrequencyShift;                           
+            }
+            var stantion = this.OrderSchemePairs.SelectMany(pair => new[] { pair.Station1, pair.Station2 })
+                   .FirstOrDefault(s => s.Id == id);    
+            stantion.UpdateSignal(signal);
+        }
+
+        private BroadcastSignal GetBroadcastSignal()
+        {
+            var signals = this.OrderSchemePairs.SelectMany(pair => new[] { 
+                pair.Station1 == null ? null : pair.Station1.Signal, 
+                 pair.Station2 == null ? null : pair.Station2.Signal })
+                 .Where(s => s != null)
+                 .ToList();
+            return new BroadcastSignal(signals);
         }
 
     }

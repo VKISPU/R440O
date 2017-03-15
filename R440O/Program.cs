@@ -8,6 +8,7 @@ namespace R440O
 {
     using System;
     using System.Windows.Forms;
+    using R440O.InternalBlocks;
 
     /// <summary>
     /// Класс инициализации программы
@@ -21,6 +22,7 @@ namespace R440O
         private static void Main()
         {
             ParametersConfig.SetParameters();
+            Antenna.StartServerPing();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new R440OForms.R440O.R440OForm());

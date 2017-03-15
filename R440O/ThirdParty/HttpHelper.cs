@@ -16,9 +16,9 @@ namespace R440O.ThirdParty
         private static string SignalUrl = "signal";
         private static string OrdeSchemeUrl = "orderscheme";
 
-        public static async Task<BroadcastSignal> ПослатьИПолучитьСигнал(Signal signal)
-        {            
-            var body = new StringContent(JsonConvert.SerializeObject(signal), Encoding.UTF8, "application/json");
+        public static async Task<BroadcastSignal> ПослатьИПолучитьСигнал(SendSignalDTO signalDTO)
+        {
+            var body = new StringContent(JsonConvert.SerializeObject(signalDTO), Encoding.UTF8, "application/json");
             using (HttpClient client = new HttpClient())
             using (HttpResponseMessage response = await client.PostAsync(ServerUrl + SignalUrl, body))
             using (HttpContent content = response.Content)

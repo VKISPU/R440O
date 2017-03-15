@@ -14,8 +14,10 @@ namespace Retranslator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Server ser = new Server("http://localhost:8080/");
-            Application.Run(new ServerForm());
+            Server server = new Server("http://localhost:8080/");
+            var serverForm = new ServerForm();
+            server.StationListUpdateEvent += serverForm.DrawStantionList;
+            Application.Run(serverForm);
         }
     }
 }

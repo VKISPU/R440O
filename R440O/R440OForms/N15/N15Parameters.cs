@@ -852,9 +852,7 @@ namespace R440O.R440OForms.N15
         /// Сброс параметров для блоков без дублирующих лампочек
         /// </summary>
         public static void ResetParameters()
-        {
-            Antenna.ResetParameters();
-
+        {        
             N16Parameters.ResetParameters();
             #region БМА
 

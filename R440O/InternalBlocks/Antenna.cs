@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using R440O.R440OForms.N15;
 using R440O.ThirdParty;
 using R440O.R440OForms.A205M_1;
+using R440O.R440OForms.OrderScheme;
 
 namespace R440O.InternalBlocks
 {
@@ -24,24 +25,23 @@ namespace R440O.InternalBlocks
 
         private static BroadcastSignal ВходнойСигнал { get; set; }
 
-        public static void ResetParameters()
+        public static void StartServerPing()
         {
-            if (timer != null)
-                timer.Dispose();
-            if (N15Parameters.ЛампочкаАнт)
+            timer = EasyTimer.SetInterval(async () =>
             {
-                timer = EasyTimer.SetInterval(async () =>
-                {
-                    if (A205M_1Parameters.ВыходнойСигнал != null)
-                    {
-                        ВходнойСигнал = await HttpHelper.ПослатьИПолучитьСигнал(A205M_1Parameters.ВыходнойСигнал);
-                        //MSHUParameters.ResetParameters();
-                    }
-                }, 1000);
-            }
-            MSHUParameters.ResetParameters();
+                ВходнойСигнал = await HttpHelper.ПослатьИПолучитьСигнал(new SendSignalDTO {
+                    Signal = ShouldSendSignal ? A205M_1Parameters.ВыходнойСигнал  : null,
+                    Id = OrderSchemeParameters.СхемаПриказ.УникальныйИНеповторимыйАйдиСтанции
+                });
+            }, 1000);
         }
 
-
+        private static bool ShouldSendSignal
+        {
+            get
+            {
+                return true;
+            }
+        }     
     }
 }

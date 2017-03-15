@@ -220,7 +220,7 @@ namespace R440O
             }
 
             // Установка Схемы-Приказа. Пытаемся получить с сервера. Если не получется, генерируем локально
-            OrderSchemeParameters.SetOrderScheme();
+            OrderSchemeParameters.SetOrderScheme();            
         }
     }
 }

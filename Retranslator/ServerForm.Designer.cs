@@ -28,12 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.StantionListBox = new System.Windows.Forms.ListBox();
+            this.SuspendLayout();
+            // 
+            // StantionListBox
+            // 
+            this.StantionListBox.FormattingEnabled = true;
+            this.StantionListBox.Location = new System.Drawing.Point(25, 12);
+            this.StantionListBox.Name = "StantionListBox";
+            this.StantionListBox.Size = new System.Drawing.Size(428, 303);
+            this.StantionListBox.TabIndex = 0;
+            // 
+            // ServerForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(475, 330);
+            this.Controls.Add(this.StantionListBox);
+            this.Name = "ServerForm";
+            this.Text = "Ретранслятор";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ListBox StantionListBox;
     }
 }
 
