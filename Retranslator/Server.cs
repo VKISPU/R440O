@@ -54,27 +54,13 @@ namespace Retranslator
             }
         }
 
-        private void Error(HttpListenerResponse response)
+        private void SendObject<T>(HttpListenerResponse response, T obj)
         {
-            response.StatusCode = (int)HttpStatusCode.OK;
-            string responseString = "Some Error :( !";
+            var responseString = JsonConvert.SerializeObject(obj);
             var buffer = System.Text.Encoding.UTF8.GetBytes(responseString);
             response.ContentLength64 = buffer.Length;
-            using (Stream stream = response.OutputStream)
-            {
-                stream.Write(buffer, 0, buffer.Length);
-
-            }
-        }
-
-        private void SendOrderScheme(HttpListenerRequest request, HttpListenerResponse response)
-        {
             try
             {
-                var orderScheme = GetOrderSheme();
-                var responseString = JsonConvert.SerializeObject(orderScheme);
-                var buffer = System.Text.Encoding.UTF8.GetBytes(responseString);
-                response.ContentLength64 = buffer.Length;
                 using (Stream stream = response.OutputStream)
                 {
                     stream.Write(buffer, 0, buffer.Length);
@@ -86,34 +72,48 @@ namespace Retranslator
             }
         }
 
-        private void SendSignal(HttpListenerRequest request, HttpListenerResponse response)
+        private T ReadObject<T>(HttpListenerRequest request)
         {
-            string str;
-            using (var reader = new StreamReader(request.InputStream,
-                                     request.ContentEncoding))
-            {
-                str = reader.ReadToEnd();
-            }
+            string str = string.Empty;
             try
             {
-                var signalDTO = JsonConvert.DeserializeObject<SendSignalDTO>(str);
-                ClearStantionList();
-                UpdateSignal(signalDTO);
-                var broadcast = GetBroadcastSignal();
-                StationListUpdateEvent(this.OrderSchemePairs);
-
-                var responseString = JsonConvert.SerializeObject(broadcast);
-                var buffer = System.Text.Encoding.UTF8.GetBytes(responseString);
-                response.ContentLength64 = buffer.Length;
-                using (Stream stream = response.OutputStream)
+                using (var reader = new StreamReader(request.InputStream,
+                                         request.ContentEncoding))
                 {
-                    stream.Write(buffer, 0, buffer.Length);
+                    str = reader.ReadToEnd();
                 }
             }
             catch (Exception ex)
             {
 
             }
+            return JsonConvert.DeserializeObject<T>(str);
+        }
+
+        private void Error(HttpListenerResponse response)
+        {
+            response.StatusCode = (int)HttpStatusCode.OK;
+            string responseString = "Some Error :( !";
+            SendObject(response, responseString);
+        }
+
+        private void SendOrderScheme(HttpListenerRequest request, HttpListenerResponse response)
+        {
+            var orderScheme = GetOrderSheme();
+            SendObject(response, orderScheme);
+        }
+
+        private void SendSignal(HttpListenerRequest request, HttpListenerResponse response)
+        {                       
+            ClearStantionList();
+            var signalDTO = ReadObject<SendSignalDTO>(request);
+            if (signalDTO != null)
+            {
+                UpdateSignal(signalDTO);
+            }
+            var broadcast = GetBroadcastSignal();
+            StationListUpdateEvent(this.OrderSchemePairs);
+            SendObject(response, broadcast);
         }
 
 
