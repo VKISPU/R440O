@@ -1,6 +1,9 @@
 ﻿using System;
 using R440O.R440OForms.A306;
 using R440O.R440OForms.C300M_1;
+using R440O.R440OForms.C300M_2;
+using R440O.R440OForms.C300M_3;
+using R440O.R440OForms.C300M_4;
 using R440O.R440OForms.N16;
 
 namespace R440O
@@ -138,6 +141,9 @@ namespace R440O
                 #region Настройка по малому шлейфу
                 // Подготовка Н-15
                 N15LocalParameters.локТумблерЦ300М1 = true;
+                N15LocalParameters.локТумблерЦ300М2 = true;
+                N15LocalParameters.локТумблерЦ300М3 = true;
+                N15LocalParameters.локТумблерЦ300М4 = true;
                 N15LocalParameters.локТумблерМШУ = true;
                 N15LocalParameters.локТумблерА20512 = true;
                 N15LocalParameters.локТумблерА205Base = true;
@@ -215,6 +221,34 @@ namespace R440O
                 C300M_1Parameters.ПереключательВолна100 = 5;
                 C300M_1Parameters.ПереключательВолна1000 = 0;
                 C300M_1Parameters.ТумблерУправление = true;
+
+                //С300М_2
+                C300M_2Parameters.КнопкиВидРаботы[5] = true;
+                C300M_2Parameters.КнопкиКонтрольРежима[3] = true;
+                C300M_2Parameters.ПереключательВолна1 = 8;
+                C300M_2Parameters.ПереключательВолна10 = 0;
+                C300M_2Parameters.ПереключательВолна100 = 5;
+                C300M_2Parameters.ПереключательВолна1000 = 0;
+                C300M_2Parameters.ТумблерУправление = true;
+
+
+                //С300М_3
+                C300M_3Parameters.КнопкиВидРаботы[5] = true;
+                C300M_3Parameters.КнопкиКонтрольРежима[3] = true;
+                C300M_3Parameters.ПереключательВолна1 = 8;
+                C300M_3Parameters.ПереключательВолна10 = 0;
+                C300M_3Parameters.ПереключательВолна100 = 5;
+                C300M_3Parameters.ПереключательВолна1000 = 0;
+                C300M_3Parameters.ТумблерУправление = true;
+
+                //С300М_4
+                C300M_4Parameters.КнопкиВидРаботы[5] = true;
+                C300M_4Parameters.КнопкиКонтрольРежима[3] = true;
+                C300M_4Parameters.ПереключательВолна1 = 8;
+                C300M_4Parameters.ПереключательВолна10 = 0;
+                C300M_4Parameters.ПереключательВолна100 = 5;
+                C300M_4Parameters.ПереключательВолна1000 = 0;
+                C300M_4Parameters.ТумблерУправление = true;
 
                 #endregion
             }

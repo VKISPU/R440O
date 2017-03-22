@@ -33,35 +33,8 @@ namespace R440O.R440OForms.C300M_2
             C300M_2Parameters.IndicatorChanged += RefreshIndicator;
             RefreshIndicator();
             RefreshFormElements();
-            logbox.Text = "";
         }
-
-        public void logs(string Name)
-        {/*
-            var log = string.Empty;
-            log += "Used " + Name + "\n";
-            log += (C300M_2Parameters.ТумблерУправление) ? "Упр. Дистанционное\n" :
-            "Упр. Местное\n";
-            log += (C300M_2Parameters.НеполноеВключение) ? "Неполное включение: true\n" :
-            "Неполное включение: false\n";
-            log += (C300M_2Parameters.Включен) ? "Включен: true\n" :
-            "Включен: false\n";
-            log += (C300M_2Parameters.КнопкиПитание) ? "КнопкиПитание: true\n" :
-            "КнопкиПитание: false\n";
-            log += (C300M_2Parameters.УсловиеПоимкиСигнала) ? "Верная проверка\n" :
-            "Неверная проверка\n";
-            log += (C300M_2Parameters.ЛампочкаПоиск) ? "Лампочка поиск горит\n" :
-            "Лампочка поиск не горит\n";
-            log += (C300M_2Parameters.ЛампочкаСигнал) ? "Лампочка сигнал горит\n" :
-            "Лампочка сигнал не горит\n";
-            log += (C300M_2Parameters.ПоискИдет) ? "Поиск идёт\n" :
-            "Поиск не идет\n";
-            log += (C300M_2Parameters.timer.Enabled) ? "Таймер запущен\n" :
-            "Таймер не запущен\n";
-            log += (C300M_2Parameters.ПойманныйСигнал == null) ? "Сигнала нет\n\n" : "Сигнала есть\n\n";
-            logbox.Text += log;
-          * */
-        }
+        
         #region Кнопки ВИД РАБОТЫ
         /// <summary>
         /// Универсальный метод обработки нажатий на кнопки вида работы
@@ -70,8 +43,6 @@ namespace R440O.R440OForms.C300M_2
         {
             var button = sender as Button;
             C300M_2Parameters.КнопкиВидРаботы[(int)Char.GetNumericValue(button.Name[15])] = true;
-
-            logs(button.Name);
         }
 
         private void КнопкаВидРаботыСброс_MouseDown(object sender, MouseEventArgs e)
@@ -87,9 +58,7 @@ namespace R440O.R440OForms.C300M_2
         {
             this.КнопкаВидРаботыСброс.BackgroundImage = ControlElementImages.buttonSquareWhite;
             this.КнопкаВидРаботыСброс.Text = "СБРОС";
-
             C300M_2Parameters.КнопкиВидРаботы[10] = false;
-            logs((sender as Button).Name);
         }
         #endregion
 
@@ -99,7 +68,6 @@ namespace R440O.R440OForms.C300M_2
         {
             var button = sender as Button;
             C300M_2Parameters.КнопкиКонтрольРежима[(int)Char.GetNumericValue(button.Name[20])] = true;
-            logs((sender as Button).Name);
         }
 
         private void КнопкаКонтрольРежимаМинус27_MouseDown(object sender, MouseEventArgs e)
@@ -165,7 +133,6 @@ namespace R440O.R440OForms.C300M_2
             {
                 C300M_2Parameters.ПереключательВолна1000 -= 1;
             }
-            logs((sender as Button).Name);
         }
 
         private void ПереключательВолна100_MouseUp(object sender, MouseEventArgs e)
@@ -310,55 +277,46 @@ namespace R440O.R440OForms.C300M_2
         private void ТумблерВведение_Click(object sender, System.EventArgs e)
         {
             C300M_2Parameters.ТумблерВведение = !C300M_2Parameters.ТумблерВведение;
-            logs((sender as Button).Name);
         }
 
         private void ТумблерБлокировка_Click(object sender, System.EventArgs e)
         {
             C300M_2Parameters.ТумблерБлокировка = !C300M_2Parameters.ТумблерБлокировка;
-            logs((sender as Button).Name);
         }
 
         private void ТумблерВидВключения_Click(object sender, System.EventArgs e)
         {
             C300M_2Parameters.ТумблерВидВключения = !C300M_2Parameters.ТумблерВидВключения;
-            logs((sender as Button).Name);
         }
 
         private void ТумблерАнализСимметрии_Click(object sender, System.EventArgs e)
         {
             C300M_2Parameters.ТумблерАнализСимметрии = !C300M_2Parameters.ТумблерАнализСимметрии;
-            logs((sender as Button).Name);
         }
 
         private void ТумблерАСЧ_Click(object sender, System.EventArgs e)
         {
             C300M_2Parameters.ТумблерАСЧ = !C300M_2Parameters.ТумблерАСЧ;
-            logs((sender as Button).Name);
         }
 
         private void ТумблерРегулировкаУровня_Click(object sender, System.EventArgs e)
         {
             C300M_2Parameters.ТумблерРегулировкаУровня = !C300M_2Parameters.ТумблерРегулировкаУровня;
-            logs((sender as Button).Name);
         }
 
         private void ТумблерВидМодуляции_Click(object sender, System.EventArgs e)
         {
             C300M_2Parameters.ТумблерВидМодуляции = !C300M_2Parameters.ТумблерВидМодуляции;
-            logs((sender as Button).Name);
         }
 
         private void ТумблерПределы_Click(object sender, System.EventArgs e)
         {
             C300M_2Parameters.ТумблерПределы = !C300M_2Parameters.ТумблерПределы;
-            logs((sender as Button).Name);
         }
 
         private void ТумблерУправление_Click(object sender, System.EventArgs e)
         {
             C300M_2Parameters.ТумблерУправление = !C300M_2Parameters.ТумблерУправление;
-            logs((sender as Button).Name);
         }
         #endregion
 
@@ -368,7 +326,6 @@ namespace R440O.R440OForms.C300M_2
             КнопкаПитаниеВкл.BackgroundImage = null;
             КнопкаПитаниеВкл.Text = "";
             C300M_2Parameters.КнопкиПитание = true;
-            logs((sender as Button).Name);
         }
 
         private void КнопкаПитаниеВкл_MouseUp(object sender, MouseEventArgs e)
@@ -382,7 +339,6 @@ namespace R440O.R440OForms.C300M_2
             КнопкаПитаниеВыкл.BackgroundImage = null;
             КнопкаПитаниеВыкл.Text = "";
             C300M_2Parameters.КнопкиПитание = false;
-            logs((sender as Button).Name);
         }
 
         private void КнопкаПитаниеВыкл_MouseUp(object sender, MouseEventArgs e)
@@ -398,7 +354,6 @@ namespace R440O.R440OForms.C300M_2
             КнопкаПоиск.BackgroundImage = null;
             КнопкаПоиск.Text = "";
             C300M_2Parameters.КнопкаПоиск = true;
-            logs((sender as Button).Name);
         }
 
         private void КнопкаПоиск_MouseUp(object sender, MouseEventArgs e)

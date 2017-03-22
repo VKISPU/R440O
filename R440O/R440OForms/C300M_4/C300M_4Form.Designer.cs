@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.C300M_4Panel = new System.Windows.Forms.Panel();
+            this.Panel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ИндикаторСигнала = new System.Windows.Forms.PictureBox();
             this.ТумблерУправление = new System.Windows.Forms.Button();
@@ -77,7 +77,7 @@
             this.КнопкаВидРаботы2 = new System.Windows.Forms.Button();
             this.КнопкаВидРаботы1 = new System.Windows.Forms.Button();
             this.КнопкаВидРаботы0 = new System.Windows.Forms.Button();
-            this.C300M_4Panel.SuspendLayout();
+            this.Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторСигнала)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПоиск)).BeginInit();
@@ -85,62 +85,62 @@
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаСигнал)).BeginInit();
             this.SuspendLayout();
             // 
-            // C300M_4Panel
+            // Panel
             // 
-            this.C300M_4Panel.BackgroundImage = global::R440O.BackgroundImages.C300M;
-            this.C300M_4Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.C300M_4Panel.Controls.Add(this.pictureBox1);
-            this.C300M_4Panel.Controls.Add(this.ИндикаторСигнала);
-            this.C300M_4Panel.Controls.Add(this.ТумблерУправление);
-            this.C300M_4Panel.Controls.Add(this.ЛампочкаПоиск);
-            this.C300M_4Panel.Controls.Add(this.ЛампочкаПитание);
-            this.C300M_4Panel.Controls.Add(this.ЛампочкаСигнал);
-            this.C300M_4Panel.Controls.Add(this.КнопкаПоиск);
-            this.C300M_4Panel.Controls.Add(this.КнопкаПитаниеВыкл);
-            this.C300M_4Panel.Controls.Add(this.КнопкаПитаниеВкл);
-            this.C300M_4Panel.Controls.Add(this.ТумблерПределы);
-            this.C300M_4Panel.Controls.Add(this.ТумблерВидМодуляции);
-            this.C300M_4Panel.Controls.Add(this.ТумблерРегулировкаУровня);
-            this.C300M_4Panel.Controls.Add(this.ТумблерАСЧ);
-            this.C300M_4Panel.Controls.Add(this.ТумблерАнализСимметрии);
-            this.C300M_4Panel.Controls.Add(this.ТумблерВидВключения);
-            this.C300M_4Panel.Controls.Add(this.ТумблерБлокировка);
-            this.C300M_4Panel.Controls.Add(this.ТумблерВведение);
-            this.C300M_4Panel.Controls.Add(this.ИндикаторВолна1);
-            this.C300M_4Panel.Controls.Add(this.ИндикаторВолна10);
-            this.C300M_4Panel.Controls.Add(this.ИндикаторВолна100);
-            this.C300M_4Panel.Controls.Add(this.ИндикаторВолна1000);
-            this.C300M_4Panel.Controls.Add(this.ПереключательВолна1);
-            this.C300M_4Panel.Controls.Add(this.ПереключательВолна10);
-            this.C300M_4Panel.Controls.Add(this.ПереключательВолна100);
-            this.C300M_4Panel.Controls.Add(this.ПереключательВолна1000);
-            this.C300M_4Panel.Controls.Add(this.КнопкаИндикацияВолны);
-            this.C300M_4Panel.Controls.Add(this.КнопкаКонтрольРежимаМинус27);
-            this.C300M_4Panel.Controls.Add(this.КнопкаКонтрольРежима9);
-            this.C300M_4Panel.Controls.Add(this.КнопкаКонтрольРежима8);
-            this.C300M_4Panel.Controls.Add(this.КнопкаКонтрольРежима7);
-            this.C300M_4Panel.Controls.Add(this.КнопкаКонтрольРежима6);
-            this.C300M_4Panel.Controls.Add(this.КнопкаКонтрольРежима5);
-            this.C300M_4Panel.Controls.Add(this.КнопкаКонтрольРежима4);
-            this.C300M_4Panel.Controls.Add(this.КнопкаКонтрольРежима3);
-            this.C300M_4Panel.Controls.Add(this.КнопкаКонтрольРежима2);
-            this.C300M_4Panel.Controls.Add(this.КнопкаКонтрольРежима1);
-            this.C300M_4Panel.Controls.Add(this.КнопкаКонтрольРежима0);
-            this.C300M_4Panel.Controls.Add(this.КнопкаВидРаботыСброс);
-            this.C300M_4Panel.Controls.Add(this.КнопкаВидРаботы9);
-            this.C300M_4Panel.Controls.Add(this.КнопкаВидРаботы8);
-            this.C300M_4Panel.Controls.Add(this.КнопкаВидРаботы7);
-            this.C300M_4Panel.Controls.Add(this.КнопкаВидРаботы6);
-            this.C300M_4Panel.Controls.Add(this.КнопкаВидРаботы5);
-            this.C300M_4Panel.Controls.Add(this.КнопкаВидРаботы4);
-            this.C300M_4Panel.Controls.Add(this.КнопкаВидРаботы3);
-            this.C300M_4Panel.Controls.Add(this.КнопкаВидРаботы2);
-            this.C300M_4Panel.Controls.Add(this.КнопкаВидРаботы1);
-            this.C300M_4Panel.Controls.Add(this.КнопкаВидРаботы0);
-            this.C300M_4Panel.Location = new System.Drawing.Point(0, 0);
-            this.C300M_4Panel.Name = "C300M_4Panel";
-            this.C300M_4Panel.Size = new System.Drawing.Size(1100, 430);
-            this.C300M_4Panel.TabIndex = 1;
+            this.Panel.BackgroundImage = global::R440O.BackgroundImages.C300M;
+            this.Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Panel.Controls.Add(this.pictureBox1);
+            this.Panel.Controls.Add(this.ИндикаторСигнала);
+            this.Panel.Controls.Add(this.ТумблерУправление);
+            this.Panel.Controls.Add(this.ЛампочкаПоиск);
+            this.Panel.Controls.Add(this.ЛампочкаПитание);
+            this.Panel.Controls.Add(this.ЛампочкаСигнал);
+            this.Panel.Controls.Add(this.КнопкаПоиск);
+            this.Panel.Controls.Add(this.КнопкаПитаниеВыкл);
+            this.Panel.Controls.Add(this.КнопкаПитаниеВкл);
+            this.Panel.Controls.Add(this.ТумблерПределы);
+            this.Panel.Controls.Add(this.ТумблерВидМодуляции);
+            this.Panel.Controls.Add(this.ТумблерРегулировкаУровня);
+            this.Panel.Controls.Add(this.ТумблерАСЧ);
+            this.Panel.Controls.Add(this.ТумблерАнализСимметрии);
+            this.Panel.Controls.Add(this.ТумблерВидВключения);
+            this.Panel.Controls.Add(this.ТумблерБлокировка);
+            this.Panel.Controls.Add(this.ТумблерВведение);
+            this.Panel.Controls.Add(this.ИндикаторВолна1);
+            this.Panel.Controls.Add(this.ИндикаторВолна10);
+            this.Panel.Controls.Add(this.ИндикаторВолна100);
+            this.Panel.Controls.Add(this.ИндикаторВолна1000);
+            this.Panel.Controls.Add(this.ПереключательВолна1);
+            this.Panel.Controls.Add(this.ПереключательВолна10);
+            this.Panel.Controls.Add(this.ПереключательВолна100);
+            this.Panel.Controls.Add(this.ПереключательВолна1000);
+            this.Panel.Controls.Add(this.КнопкаИндикацияВолны);
+            this.Panel.Controls.Add(this.КнопкаКонтрольРежимаМинус27);
+            this.Panel.Controls.Add(this.КнопкаКонтрольРежима9);
+            this.Panel.Controls.Add(this.КнопкаКонтрольРежима8);
+            this.Panel.Controls.Add(this.КнопкаКонтрольРежима7);
+            this.Panel.Controls.Add(this.КнопкаКонтрольРежима6);
+            this.Panel.Controls.Add(this.КнопкаКонтрольРежима5);
+            this.Panel.Controls.Add(this.КнопкаКонтрольРежима4);
+            this.Panel.Controls.Add(this.КнопкаКонтрольРежима3);
+            this.Panel.Controls.Add(this.КнопкаКонтрольРежима2);
+            this.Panel.Controls.Add(this.КнопкаКонтрольРежима1);
+            this.Panel.Controls.Add(this.КнопкаКонтрольРежима0);
+            this.Panel.Controls.Add(this.КнопкаВидРаботыСброс);
+            this.Panel.Controls.Add(this.КнопкаВидРаботы9);
+            this.Panel.Controls.Add(this.КнопкаВидРаботы8);
+            this.Panel.Controls.Add(this.КнопкаВидРаботы7);
+            this.Panel.Controls.Add(this.КнопкаВидРаботы6);
+            this.Panel.Controls.Add(this.КнопкаВидРаботы5);
+            this.Panel.Controls.Add(this.КнопкаВидРаботы4);
+            this.Panel.Controls.Add(this.КнопкаВидРаботы3);
+            this.Panel.Controls.Add(this.КнопкаВидРаботы2);
+            this.Panel.Controls.Add(this.КнопкаВидРаботы1);
+            this.Panel.Controls.Add(this.КнопкаВидРаботы0);
+            this.Panel.Location = new System.Drawing.Point(0, 0);
+            this.Panel.Name = "Panel";
+            this.Panel.Size = new System.Drawing.Size(1100, 430);
+            this.Panel.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -936,15 +936,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1104, 431);
-            this.Controls.Add(this.C300M_4Panel);
+            this.Controls.Add(this.Panel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "C300M_4Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ц300M-4";
-            this.C300M_4Panel.ResumeLayout(false);
-            this.C300M_4Panel.PerformLayout();
+            this.Panel.ResumeLayout(false);
+            this.Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторСигнала)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПоиск)).EndInit();
@@ -956,7 +956,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel C300M_4Panel;
+        private System.Windows.Forms.Panel Panel;
         private System.Windows.Forms.Button КнопкаВидРаботы0;
         private System.Windows.Forms.Button КнопкаВидРаботы1;
         private System.Windows.Forms.Button КнопкаВидРаботы2;

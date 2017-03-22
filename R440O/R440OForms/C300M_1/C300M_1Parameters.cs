@@ -43,7 +43,7 @@ namespace R440O.R440OForms.C300M_1
 
         public static bool OnLeft = false;
 
-        public static Timer timer = new Timer();
+        public static Timer ТаймерПоискаСигнала = new Timer();
         public static Timer ТаймерПроверкиПойманногоСигнала = new Timer();
 
         #endregion
@@ -139,9 +139,9 @@ namespace R440O.R440OForms.C300M_1
 
                     КнопкиКонтрольРежима[buttonNumber] = value;
 
-                    //По логике должен быть вызов OnParameterChanged и TimerSet
+                    //По логике должен быть вызов OnParameterChanged и ТаймерПоискаСигналаSet
                     //В ResetParameters аналогичный вызов методов
-                    //TimerSet будет вызвано и Search
+                    //ТаймерПоискаСигналаSet будет вызвано и Search
                     ResetParameters();
                 }
             }
@@ -499,6 +499,40 @@ namespace R440O.R440OForms.C300M_1
         }
         #endregion
 
+
+        #region Входящий/Выходящий сигналы
+        /// <summary>
+        /// Переменная для обращения к поступающему сигналу
+        /// </summary>
+        public static BroadcastSignal ВходящийСигнал
+        {
+            get
+            {
+                return Включен ? A306Parameters.ВыходнойСигнал1 : new BroadcastSignal();
+            }
+        }
+
+        public static Signal ПойманныйСигнал
+        {
+            get
+            {
+                if (СигналПойман)
+                {
+                    foreach (var сигнал in ВходящийСигнал.Signals)
+                    {
+                        //***Условие на поиск сигнала***//
+                        if (УсловиеПоимкиСигнала(сигнал) && СоответствиеМодуляции(сигнал))
+                        {
+                            return сигнал;
+                        }
+                    }
+                }
+                return null;
+            }
+        }
+
+        #endregion
+
         #region ПОИСК
 
         //-----------------------------------------------------------------------------------------------------------------//
@@ -518,22 +552,22 @@ namespace R440O.R440OForms.C300M_1
 
         private static void ОстановитьТаймер()
         {
-            timer.Stop();
-            timer.Tick -= timer_Tick;
+            ТаймерПоискаСигнала.Stop();
+            ТаймерПоискаСигнала.Tick -= ПоискСигнала;
 
             ПоискИдет = false;
-            timer.Enabled = false;
+            ТаймерПоискаСигнала.Enabled = false;
         }
 
         private static void ЗапуститьТаймер()
         {
-            timer.Stop();
-            timer.Tick -= timer_Tick;
+            ТаймерПоискаСигнала.Stop();
+            ТаймерПоискаСигнала.Tick -= ПоискСигнала;
 
             ПоискИдет = true;
-            timer.Enabled = true;
-            timer.Tick += timer_Tick;
-            timer.Start();
+            ТаймерПоискаСигнала.Enabled = true;
+            ТаймерПоискаСигнала.Tick += ПоискСигнала;
+            ТаймерПоискаСигнала.Start();
         }
 
         /// <summary>
@@ -543,22 +577,21 @@ namespace R440O.R440OForms.C300M_1
         /// </summary>
         [MTAThread]
         public static void УправлениеПоиском()
-        {
-            ОстановитьТаймерПроверкиПоймангоСигнала();
-            timer.Stop();
-            timer.Tick -= timer_Tick;
+        {            
+            ТаймерПоискаСигнала.Stop();
+            ТаймерПоискаСигнала.Tick -= ПоискСигнала;
             if (!СигналПойман || ПойманныйСигнал == null)
                 if (Включен)
                 {
                     ПоискИдет = true;
-                    timer.Enabled = true;
-                    timer.Tick += timer_Tick;
-                    timer.Start();
+                    ТаймерПоискаСигнала.Enabled = true;
+                    ТаймерПоискаСигнала.Tick += ПоискСигнала;
+                    ТаймерПоискаСигнала.Start();
                 }
                 else
                 {
                     ПоискИдет = false;
-                    timer.Enabled = false;
+                    ТаймерПоискаСигнала.Enabled = false;
                     ВременноПоймать = false;
                 }
         }
@@ -603,9 +636,9 @@ namespace R440O.R440OForms.C300M_1
         /// Метод обработки тика таймера, осуществляет изменение значения поиска и проверку на поиск сигнала.
         /// Поиск идёт всегда когда включен блок
         /// </summary>
-        private static void timer_Tick(object sender, EventArgs e)
+        private static void ПоискСигнала(object sender, EventArgs e)
         {
-            TimerSpeedChange();
+            ТаймерПоискаСигналаSpeedChange();
             if (ТумблерБлокировка) ПоискИдет = false;
             //Обработка поиска сигнала
             if (ПоискИдет)
@@ -661,16 +694,7 @@ namespace R440O.R440OForms.C300M_1
 
         #region Второстепенные методы для ПОИСКА
 
-        /// <summary>
-        /// Переменная для обращения к поступающему сигналу
-        /// </summary>
-        public static BroadcastSignal ВходящийСигнал
-        {
-            get
-            {
-                return Включен ? A306Parameters.ВыходнойСигнал1 : new BroadcastSignal();
-            }
-        }
+        
 
         public static bool СигналПойман 
         {
@@ -713,37 +737,19 @@ namespace R440O.R440OForms.C300M_1
         {
             if (ПойманныйСигнал == null)
             {
+                СигналПойман = false;
                 ResetParameters();
-            }
-        }
-
-        public static Signal ПойманныйСигнал
-        {
-            get 
-            {
-                if (СигналПойман)
-                {
-                    foreach (var сигнал in ВходящийСигнал.Signals)
-                    {
-                        //***Условие на поиск сигнала***//
-                        if (УсловиеПоимкиСигнала(сигнал) && СоответствиеМодуляции(сигнал))
-                        {
-                            return сигнал;
-                        }
-                    }
-                }
-                return null;
             }
         }
 
         /// <summary>
         /// Изменение скорости работы таймера
         /// </summary>
-        public static void TimerSpeedChange()
+        public static void ТаймерПоискаСигналаSpeedChange()
         {
-            if (timer.Enabled)
+            if (ТаймерПоискаСигнала.Enabled)
             {
-                timer.Interval = (КнопкиВидРаботы.PressedButton == 10 || (КнопкиВидРаботы.PressedButton == -1))
+                ТаймерПоискаСигнала.Interval = (КнопкиВидРаботы.PressedButton == 10 || (КнопкиВидРаботы.PressedButton == -1))
                     ? 10
                     : 100 - КнопкиВидРаботы.PressedButton * 10;
             }
