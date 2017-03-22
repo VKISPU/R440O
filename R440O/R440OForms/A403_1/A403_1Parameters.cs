@@ -7,7 +7,7 @@ using R440O.R440OForms.N15;
 
 namespace R440O.R440OForms.A403_1
 {
-    public struct Location
+    public class Location
     {
         public string Az; //азимут
         public string Ym; //угол места
@@ -31,13 +31,13 @@ namespace R440O.R440OForms.A403_1
         /// <summary>
         /// Словарь известных значений (время - данные)
         /// </summary>
-        public static Dictionary<string, Location> Table { get; set; } = new Dictionary<string, Location>()
+        public static Dictionary<string, Location> Table = new Dictionary<string, Location>
         {
-            {"+131000", new Location() {Az = "+064573", Ym = "+004116", DeltaF = "-058750"}},
-            {"+151000", new Location() {Az = "+035441", Ym = "+027497", DeltaF = "-032500"}},
-            {"+171000", new Location() {Az = "+030212", Ym = "+029342", DeltaF = "-010625"}},
-            {"+191000", new Location() {Az = "+034475", Ym = "+027283", DeltaF = "+008750"}},
-            {"+211000", new Location() {Az = "+047331", Ym = "+022426", DeltaF = "+030625"}}
+            {"+131000", new Location {Az = "+064573", Ym = "+004116", DeltaF = "-058750"} },
+            {"+151000", new Location {Az = "+035441", Ym = "+027497", DeltaF = "-032500"}},
+            {"+171000", new Location {Az = "+030212", Ym = "+029342", DeltaF = "-010625"}},
+            {"+191000", new Location {Az = "+034475", Ym = "+027283", DeltaF = "+008750"}},
+            {"+211000", new Location {Az = "+047331", Ym = "+022426", DeltaF = "+030625"}}
         };
 
         /// <summary>
@@ -202,12 +202,12 @@ namespace R440O.R440OForms.A403_1
         /// <summary>
         /// Возможные состояния: true - работает 1 комплект, false - не работает 1 комплект
         /// </summary>
-        public static bool ЛампочкаКомплект1 => Включен && Комплект;
+        public static bool ЛампочкаКомплект1 { get { return Включен && Комплект; } }
 
         /// <summary>
         /// Возможные состояния: true - работает 2 комплект, false - не работает 2 комплект
         /// </summary>
-        public static bool ЛампочкаКомплект2 => Включен && !Комплект;
+        public static bool ЛампочкаКомплект2 { get { return Включен && !Комплект; } }
 
         #endregion
 
@@ -239,7 +239,7 @@ namespace R440O.R440OForms.A403_1
             }
         }
 
-        private static int GetInt(string s) => s == "" ? 0 : int.Parse(s);
+        private static int GetInt(string s) { return s == "" ? 0 : int.Parse(s); }
 
         public static bool ТумблерАвтКоррекция
         {
@@ -539,7 +539,7 @@ namespace R440O.R440OForms.A403_1
             }
         }
 
-        public int PressedButton => Array.IndexOf(КнопкиПараметры, true);
+        public int PressedButton { get { return Array.IndexOf(КнопкиПараметры, true); } }
     }
 
     public class A403_1ЗначенияПараметров

@@ -7,7 +7,7 @@ namespace R440O.Parameters
 {
     public static class N12SParameters
     {
-        public static bool Включен => ТумблерСеть && N15Parameters.ТумблерН12С && N15Parameters.Включен;
+        public static bool Включен { get { return ТумблерСеть && N15Parameters.ТумблерН12С && N15Parameters.Включен; } }
         public static bool FromA403 = false;
 
         private static int _тумблерА;
