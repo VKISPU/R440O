@@ -27,13 +27,17 @@ namespace R440O.InternalBlocks
 
         public static void StartServerPing()
         {
-            timer = EasyTimer.SetInterval(async () =>
+            if (!string.IsNullOrEmpty(OrderSchemeParameters.СхемаПриказ.УникальныйИдентификаторСтанции))
             {
-                ВходнойСигнал = await HttpHelper.ПослатьИПолучитьСигнал(new SendSignalDTO {
-                    Signal = ShouldSendSignal ? A205M_1Parameters.ВыходнойСигнал  : null,
-                    Id = OrderSchemeParameters.СхемаПриказ.УникальныйИНеповторимыйАйдиСтанции
-                });
-            }, 1000);
+                timer = EasyTimer.SetInterval(async () =>
+                {
+                    ВходнойСигнал = await HttpHelper.ПослатьИПолучитьСигнал(new SendSignalDTO
+                    {
+                        Signal = ShouldSendSignal ? A205M_1Parameters.ВыходнойСигнал : null,
+                        Id = OrderSchemeParameters.СхемаПриказ.УникальныйИдентификаторСтанции
+                    });
+                }, 1000);
+            }
         }
 
         private static bool ShouldSendSignal

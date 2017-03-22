@@ -7,7 +7,7 @@ namespace ShareTypes.OrderScheme
 {
     public class OrderSchemeClass
     {
-        public string УникальныйИНеповторимыйАйдиСтанции { get; set; }
+        public string УникальныйИдентификаторСтанции { get; set; }
 
         public int ПередачаУсловныйНомерВолны1 { get; set; }
         public int ПередачаУсловныйНомерВолны2 { get; set; }
