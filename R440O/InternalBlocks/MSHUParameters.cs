@@ -34,7 +34,7 @@
                 //Входной СВЧ сигнал в диапазоне 3400...3900 МГц усиливается в МШУ и преобразуется в сигнал первой ПЧ - 320...370 МГц, 
                 //Частота выходного сигнала = Частота входного сигнала - 8*(частота с A304)
 
-                if (A304Parameters.ВыходнаяЧастота == null) return null;
+                if (A304Parameters.ВыходнаяЧастота == null) return new BroadcastSignal();
 
                 var outputSignals = new List<Signal>();
                 foreach (var signal in inputSignal.Signals)
