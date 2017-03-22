@@ -340,7 +340,7 @@ namespace R440O.R440OForms.A205M_1
         public static void ResetParameters()
         {
             OnParameterChanged();
-            A503BParameters.ResetParameters();
+            //A503BParameters.ResetParameters();
         }
     }
 }

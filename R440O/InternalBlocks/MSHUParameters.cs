@@ -51,11 +51,5 @@
                 
             }
         }
-
-        public static void ResetParameters()
-        {
-            A306Parameters.ResetParameters();
-        }
-
     }
 }

@@ -176,16 +176,7 @@ namespace R440O.R440OForms.A306
 
         public static void ResetParameters()
         {            
-            OnParameterChanged();
-            ResetC300M();
-        }
-
-        private static void ResetC300M()
-        {
-           C300M_1Parameters.ResetParameters();
-           C300M_2Parameters.ResetParameters();
-           C300M_3Parameters.ResetParameters();
-           C300M_4Parameters.ResetParameters();
+            OnParameterChanged();            
         }
     }
 

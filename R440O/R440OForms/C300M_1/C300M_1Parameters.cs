@@ -6,7 +6,9 @@ using R440O.R440OForms.A306;
 using R440O.R440OForms.N15;
 using R440O.R440OForms.C300PM_1;
 using R440O.R440OForms.K01M_01;
+using R440O.ThirdParty;
 using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace R440O.R440OForms.C300M_1
 {
@@ -37,11 +39,12 @@ namespace R440O.R440OForms.C300M_1
 
         #endregion
 
-        #region Таймер
+        #region Таймеры
 
         public static bool OnLeft = false;
 
-        public static System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+        public static Timer timer = new Timer();
+        public static Timer ТаймерПроверкиПойманногоСигнала = new Timer();
 
         #endregion
 
@@ -541,6 +544,7 @@ namespace R440O.R440OForms.C300M_1
         [MTAThread]
         public static void УправлениеПоиском()
         {
+            ОстановитьТаймерПроверкиПоймангоСигнала();
             timer.Stop();
             timer.Tick -= timer_Tick;
             if (!СигналПойман || ПойманныйСигнал == null)
@@ -673,17 +677,46 @@ namespace R440O.R440OForms.C300M_1
             get { return _сигналПойман; }
             set
             {
-                if (_сигналПойман ^ value)
+                var last_value = _сигналПойман;
+                _сигналПойман = value;
+                if (_сигналПойман ^ last_value)
                 {
-                    _сигналПойман = value;
                     N15Parameters.ResetParametersAlternative();
+                }
+                if (_сигналПойман)
+                {
+                    ЗапутитьТаймерПроверкиПоймангоСигнала();
                 }
                 else
                 {
-                    _сигналПойман = value;
+                    ОстановитьТаймерПроверкиПоймангоСигнала();
                 }
             }
         }
+
+        private static void ЗапутитьТаймерПроверкиПоймангоСигнала()
+        {
+            ОстановитьТаймерПроверкиПоймангоСигнала();            
+            ТаймерПроверкиПойманногоСигнала.Enabled = true;
+            ТаймерПроверкиПойманногоСигнала.Tick += ПроверкаПойманогоСигнала;
+            ТаймерПроверкиПойманногоСигнала.Start();
+        }
+
+        private static void ОстановитьТаймерПроверкиПоймангоСигнала()
+        {
+            ТаймерПроверкиПойманногоСигнала.Stop();
+            ТаймерПроверкиПойманногоСигнала.Tick -= ПроверкаПойманогоСигнала;
+            ТаймерПроверкиПойманногоСигнала.Enabled = false;
+        }
+
+        private static void ПроверкаПойманогоСигнала(object sender, EventArgs e)
+        {
+            if (ПойманныйСигнал == null)
+            {
+                ResetParameters();
+            }
+        }
+
         public static Signal ПойманныйСигнал
         {
             get 

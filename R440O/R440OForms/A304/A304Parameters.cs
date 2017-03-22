@@ -274,7 +274,6 @@ namespace R440O.R440OForms.A304
                 _кнопка1К = false;
                 _кнопка2К = false;
             }
-            MSHUParameters.ResetParameters();
         }
 
         public delegate void ParameterChangedHandler();

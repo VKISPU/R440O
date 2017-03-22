@@ -64,7 +64,7 @@ namespace R440O.R440OForms.NKN_1
                 OnParameterChanged();
                 N15Parameters.ResetParametersAlternative();
                 A205M_1Parameters.ResetParameters();
-                A503BParameters.ResetParameters();
+                //A503BParameters.ResetParameters();
             }
         }
 
@@ -82,7 +82,7 @@ namespace R440O.R440OForms.NKN_1
         {
             if ((N15Parameters.НеполноеВключение && !N15Parameters.Включен && НеполноеВключение && ПолноеВключение) || !НеполноеВключение)
                 _питание220Включено = false;
-            A503BParameters.ResetParameters();
+           // A503BParameters.ResetParameters();
             OnParameterChanged();
         }
     }
