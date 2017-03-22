@@ -7,6 +7,7 @@ namespace R440O.R440OForms.BMB
     using N15;
     using N502B;
     using BMA_M_1;
+    using BMA_M_2;
     using Parameters;
     using СостоянияЭлементов.БМБ;
 
@@ -28,7 +29,7 @@ namespace R440O.R440OForms.BMB
                     ПереданнаяКоманда = string.Empty;
                 }
                 BMA_M_1Parameters.ResetParameters();
-                BMA_M_2Parameters.Refresh();
+                BMA_M_2Parameters.ResetParameters();
                 ResetParameters();
             }
         }
@@ -106,7 +107,7 @@ namespace R440O.R440OForms.BMB
                 }
                 _кнопкаПередачаВызоваТч = value;
                 BMA_M_1Parameters.ResetParameters();
-                BMA_M_2Parameters.Refresh();
+                BMA_M_2Parameters.ResetParameters();
                 if (RefreshForm != null) RefreshForm();
             }
         }
@@ -136,7 +137,7 @@ namespace R440O.R440OForms.BMB
                 }
                 _кнопкаПередачаВызоваДк = value;
                 BMA_M_1Parameters.ResetParameters();
-                BMA_M_2Parameters.Refresh();
+                BMA_M_2Parameters.ResetParameters();
                 if (RefreshForm != null) RefreshForm();
             }
         }
@@ -161,7 +162,7 @@ namespace R440O.R440OForms.BMB
                 ОбнулитьНабор();
                 _кнопкаСлСвязь = value;
                 BMA_M_1Parameters.ResetParameters();
-                BMA_M_2Parameters.Refresh();
+                BMA_M_2Parameters.ResetParameters();
                 if (RefreshForm != null) RefreshForm();
             }
         }
@@ -185,7 +186,7 @@ namespace R440O.R440OForms.BMB
                 ПереданнаяКоманда = string.Empty;
                 _кнопкаПитание = value;
                 BMA_M_1Parameters.ResetParameters();
-                BMA_M_2Parameters.Refresh();
+                BMA_M_2Parameters.ResetParameters();
                 if (RefreshForm != null) RefreshForm();
             }
         }
@@ -249,7 +250,7 @@ namespace R440O.R440OForms.BMB
                        && (ПереключательРаботаКонтроль == 2 ||
                            (КнопкаСлСвязь == Кнопка.Горит && БМАПодключенВерно &&
                             (BMA_M_1Parameters.КнопкаШлейфТЧ == 3 && ПереключательНаправление == 1
-                            || BMA_M_2Parameters.КнопкаШлейфТЧ && ПереключательНаправление == 2)));
+                            || BMA_M_2Parameters.КнопкаШлейфТЧ == 3 && ПереключательНаправление == 2)));
             }
         }
 
@@ -521,6 +522,8 @@ namespace R440O.R440OForms.BMB
             {
                 if (БМА1ПодключенВерно)
                     return BMA_M_1Parameters.СигалНаБМБ;
+                if (БМА2ПодключенВерно)
+                    return BMA_M_2Parameters.СигалНаБМБ;
                 return null;
             }
         }

@@ -9,6 +9,7 @@ using R440O.R440OForms.N13_1;
 using R440O.R440OForms.N13_2;
 using R440O.R440OForms.N16;
 using R440O.R440OForms.BMA_M_1;
+using R440O.R440OForms.BMA_M_2;
 using R440O.R440OForms.PU_K1_1;
 using R440O.BaseClasses;
 
@@ -863,7 +864,7 @@ namespace R440O.R440OForms.N15
             BMA_M_1Parameters.ResetParameters();
             BMA_M_2Parameters.DisposeAllTimers();
             BMA_M_2Parameters.ResetLampsValue();
-            BMA_M_2Parameters.Refresh();
+            BMA_M_2Parameters.ResetParameters();
 
             #endregion
 

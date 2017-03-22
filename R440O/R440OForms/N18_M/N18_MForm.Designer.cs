@@ -570,7 +570,7 @@
             this.Гнездо6.Name = "Гнездо6";
             this.Гнездо6.Size = new System.Drawing.Size(10, 28);
             this.Гнездо6.TabIndex = 59;
-            this.Гнездо6.Text = "ЩВ2";
+            this.Гнездо6.Text = "ЩВ3";
             this.toolTip.SetToolTip(this.Гнездо6, "ЩВ3");
             this.Гнездо6.UseVisualStyleBackColor = false;
             this.Гнездо6.Click += new System.EventHandler(this.Гнездо_Click);
@@ -586,7 +586,7 @@
             this.Гнездо7.Name = "Гнездо7";
             this.Гнездо7.Size = new System.Drawing.Size(10, 28);
             this.Гнездо7.TabIndex = 60;
-            this.Гнездо7.Text = "Б1-1";
+            this.Гнездо7.Text = "Б1-2";
             this.toolTip.SetToolTip(this.Гнездо7, "Б1-2");
             this.Гнездо7.UseVisualStyleBackColor = false;
             this.Гнездо7.Click += new System.EventHandler(this.Гнездо_Click);
@@ -604,7 +604,7 @@
             this.Гнездо8.Name = "Гнездо8";
             this.Гнездо8.Size = new System.Drawing.Size(10, 28);
             this.Гнездо8.TabIndex = 61;
-            this.Гнездо8.Text = "ЩВ-1";
+            this.Гнездо8.Text = "БМА1";
             this.toolTip.SetToolTip(this.Гнездо8, "БМА 1");
             this.Гнездо8.UseVisualStyleBackColor = false;
             this.Гнездо8.Click += new System.EventHandler(this.Гнездо_Click);
@@ -619,7 +619,7 @@
             this.Гнездо9.Name = "Гнездо9";
             this.Гнездо9.Size = new System.Drawing.Size(10, 28);
             this.Гнездо9.TabIndex = 62;
-            this.Гнездо9.Text = "БМА1";
+            this.Гнездо9.Text = "ЩВ1";
             this.toolTip.SetToolTip(this.Гнездо9, "ЩВ1");
             this.Гнездо9.UseVisualStyleBackColor = false;
             this.Гнездо9.Click += new System.EventHandler(this.Гнездо_Click);
@@ -634,7 +634,7 @@
             this.Гнездо10.Name = "Гнездо10";
             this.Гнездо10.Size = new System.Drawing.Size(10, 28);
             this.Гнездо10.TabIndex = 63;
-            this.Гнездо10.Text = "ЩВ-1";
+            this.Гнездо10.Text = "БМА2";
             this.toolTip.SetToolTip(this.Гнездо10, "БМА 2");
             this.Гнездо10.UseVisualStyleBackColor = false;
             this.Гнездо10.Click += new System.EventHandler(this.Гнездо_Click);
