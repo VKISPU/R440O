@@ -9,7 +9,7 @@ namespace Retranslator
 {
     public class Stantion
     {
-        const long ExpireTime = 60;
+        const long ExpireTime = 2;
 
         public string Id;
         public Signal Signal;

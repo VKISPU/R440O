@@ -21,6 +21,7 @@ namespace R440O
         [STAThread]
         private static void Main()
         {
+            Antenna.findRetranslator();
             ParametersConfig.SetParameters();
             Antenna.StartServerPing();
             Application.EnableVisualStyles();

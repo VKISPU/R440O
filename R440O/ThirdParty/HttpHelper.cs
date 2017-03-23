@@ -7,12 +7,15 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using ShareTypes.SignalTypes;
 using ShareTypes.OrderScheme;
+using System.Net.NetworkInformation;
+using R440O.R440OForms.OrderScheme;
+using R440O.R440OForms.A205M_1;
 
 namespace R440O.ThirdParty
 {
     public static class HttpHelper
     {
-        private static string ServerUrl = "http://localhost:8080/";
+        private static string ServerUrl = String.Empty;
         private static string SignalUrl = "signal";
         private static string OrdeSchemeUrl = "orderscheme";
 
@@ -58,6 +61,35 @@ namespace R440O.ThirdParty
                     }
                 }
                 return null;
+            }
+        }
+
+        public static async void FindServer()
+        {
+            foreach (NetworkInterface netInterface in NetworkInterface.GetAllNetworkInterfaces())
+            {
+                IPInterfaceProperties ipProps = netInterface.GetIPProperties();
+                foreach (UnicastIPAddressInformation addr in ipProps.UnicastAddresses)
+                {
+                    ServerUrl = "http://" + addr.Address.ToString() + ":8080/";
+                    try
+                    {
+                        BroadcastSignal ВходнойСигнал = await ПослатьИПолучитьСигнал(new SendSignalDTO());
+                        if (ВходнойСигнал != null)
+                        {
+                            return;
+                        }
+                    }
+                    catch (System.UriFormatException e)
+                    {
+                        //т.к. иногда присутствуют ipv6 адресса
+                    }
+                    catch(System.Net.Http.HttpRequestException e)
+                    {
+                        //т.к. не все подключения активны (например, если установлен virtualbox)
+                    }
+
+                }
             }
         }
 

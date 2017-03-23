@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using ShareTypes.SignalTypes;
 using System.Threading.Tasks;
 using ShareTypes.OrderScheme;
+using System.Net.Sockets;
 
 namespace Retranslator
 {
@@ -19,11 +20,22 @@ namespace Retranslator
 
         public event Action<List<OrderSchemePair>> StationListUpdateEvent;       
 
-        public Server(string url)
+        public Server()
         {
+            System.Net.IPAddress ipAdress;
             if (!HttpListener.IsSupported)
                 throw new NotImplementedException();
-            httpListener.Prefixes.Add(url);
+
+            IPHostEntry host = Dns.GetHostEntry(Dns.GetHostName());
+
+            ipAdress = host
+                .AddressList
+                .FirstOrDefault(ip => ip.AddressFamily == AddressFamily.InterNetwork);
+            //если установлен virtualbox, то первым адрессом может идти его адресс, т.е. вылетит ошибка
+            if (ipAdress==null)
+                throw new Exception("Local IP Address Not Found!");
+
+            httpListener.Prefixes.Add("http://"+ ipAdress.ToString()+ ":8080/");
             httpListener.Start();
             Task.Run(() => { 
                 Listening(); 
@@ -175,8 +187,11 @@ namespace Retranslator
                 signal.Frequency -= FrequencyShift;                           
             }
             var stantion = this.OrderSchemePairs.SelectMany(pair => new[] { pair.Station1, pair.Station2 })
-                   .FirstOrDefault(s => s.Id == id);    
-            stantion.UpdateSignal(signal);
+                   .FirstOrDefault(s => s!=null && s.Id == id);
+            if (stantion != null)
+            {
+                stantion.UpdateSignal(signal);
+            }
         }
 
         private BroadcastSignal GetBroadcastSignal()
