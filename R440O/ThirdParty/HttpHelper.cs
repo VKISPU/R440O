@@ -18,6 +18,20 @@ namespace R440O.ThirdParty
         private static string ServerUrl = String.Empty;
         private static string SignalUrl = "signal";
         private static string OrdeSchemeUrl = "orderscheme";
+        private static string CheckServerUrl = "checkserver";
+        
+        private static int количествоНезавершенныЗапросов = 0;
+        public static bool ПоискИдет { get { return количествоНезавершенныЗапросов != 0; } }
+
+        private static bool _серверНайден = false;
+        public static bool СерверНайден
+        {
+            get { return _серверНайден; }
+            private set 
+            {
+                _серверНайден = value;
+            }
+        }
 
         public static async Task<BroadcastSignal> ПослатьИПолучитьСигнал(SendSignalDTO signalDTO)
         {
@@ -62,35 +76,53 @@ namespace R440O.ThirdParty
                 }
                 return null;
             }
-        }
+        }            
 
-        public static async void FindServer()
+        public static async void ПроверитьАдресс(string serverUrl, Action act)
         {
-            foreach (NetworkInterface netInterface in NetworkInterface.GetAllNetworkInterfaces())
+            if (!СерверНайден)
             {
-                IPInterfaceProperties ipProps = netInterface.GetIPProperties();
-                foreach (UnicastIPAddressInformation addr in ipProps.UnicastAddresses)
+                try
                 {
-                    ServerUrl = "http://" + addr.Address.ToString() + ":8080/";
-                    try
+                    using (HttpClient client = new HttpClient())
+                    using (HttpResponseMessage response = await client.GetAsync(serverUrl + CheckServerUrl))
                     {
-                        BroadcastSignal ВходнойСигнал = await ПослатьИПолучитьСигнал(new SendSignalDTO());
-                        if (ВходнойСигнал != null)
+                        if (response.StatusCode == System.Net.HttpStatusCode.OK)
                         {
-                            return;
+                            ServerUrl = serverUrl;
+                            СерверНайден = true;                            
                         }
                     }
-                    catch (System.UriFormatException e)
-                    {
-                        //т.к. иногда присутствуют ipv6 адресса
-                    }
-                    catch(System.Net.Http.HttpRequestException e)
-                    {
-                        //т.к. не все подключения активны (например, если установлен virtualbox)
-                    }
-
+                }
+                catch (System.UriFormatException e)
+                {
+                    //т.к. иногда присутствуют ipv6 адресса
+                }
+                catch (System.Net.Http.HttpRequestException e)
+                {
+                    //т.к. не все подключения активны (например, если установлен virtualbox)
                 }
             }
+            количествоНезавершенныЗапросов--;
+            if (количествоНезавершенныЗапросов == 0) 
+            {
+                act.Invoke();
+            }
+        }
+
+        public static void НайтиСервер(Action act)
+        {
+            var addressList = NetworkInterface.GetAllNetworkInterfaces()
+                .Select(netInterface => netInterface.GetIPProperties())
+                .SelectMany(ipProps => ipProps.UnicastAddresses)
+                .ToList();
+            количествоНезавершенныЗапросов = addressList.Count;
+            foreach (var addr in addressList)
+            {
+                var _serverUrl = "http://" + addr.Address.ToString() + ":8080/";
+                ПроверитьАдресс(_serverUrl, act);
+            }
+                
         }
 
     }

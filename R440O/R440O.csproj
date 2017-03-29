@@ -125,6 +125,12 @@
     </Compile>
     <Compile Include="R440OForms\TLF_TCH\TLF_TCHParametrs.cs" />
     <Compile Include="R440OForms\Wattmeter\WattmeterParameters.cs" />
+    <Compile Include="StationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StationForm.Designer.cs">
+      <DependentUpon>StationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThirdParty\EasyTimer.cs" />
     <Compile Include="ThirdParty\HttpHelper.cs" />
     <Compile Include="СостоянияЭлементов\ДАБ5.cs" />
@@ -814,6 +820,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="R440OForms\C300PM_1\C300PM_1Form.resx">
       <DependentUpon>C300PM_1Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StationForm.resx">
+      <DependentUpon>StationForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\Resources\bmb.wav" />
     <Content Include="NLog.config">

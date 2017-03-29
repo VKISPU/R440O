@@ -58,6 +58,8 @@ namespace Retranslator
                 {
                     if (request.Url.AbsolutePath == "/orderscheme")
                         SendOrderScheme(request, response);
+                    else if (request.Url.AbsolutePath == "/checkserver")
+                        CheckServer(request, response);
                 }
                 else
                 {
@@ -106,6 +108,13 @@ namespace Retranslator
         {
             response.StatusCode = (int)HttpStatusCode.OK;
             string responseString = "Some Error :( !";
+            SendObject(response, responseString);
+        }
+
+        private void CheckServer(HttpListenerRequest request, HttpListenerResponse response)
+        {
+            response.StatusCode = (int)HttpStatusCode.OK;
+            string responseString = "Это я!";
             SendObject(response, responseString);
         }
 

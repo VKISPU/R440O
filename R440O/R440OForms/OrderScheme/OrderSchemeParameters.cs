@@ -12,21 +12,25 @@
               
         public static void SetOrderScheme(bool isTesting = false)
         {
-            try
+            if (HttpHelper.СерверНайден)
             {
-                Task.Run(async () =>
+                try
                 {
-                    СхемаПриказ = await HttpHelper.ПолучитьСхемуПриказ();
-                }).Wait();
-                if (СхемаПриказ == null)
+                    Task.Run(async () =>
+                    {
+                        СхемаПриказ = await HttpHelper.ПолучитьСхемуПриказ();
+                    }).Wait();
+                    if (СхемаПриказ != null)
+                    {
+                        return;
+                    }
+                }
+                catch (Exception e)
                 {
-                    СхемаПриказ = OrderSchemeFactory.CreateOrderScheme(isTesting);
+
                 }
             }
-            catch (Exception e)
-            {
-                СхемаПриказ = OrderSchemeFactory.CreateOrderScheme(isTesting);
-            }
+            СхемаПриказ = OrderSchemeFactory.CreateOrderScheme(isTesting);
         }
     }
 }
