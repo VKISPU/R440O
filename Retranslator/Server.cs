@@ -6,6 +6,7 @@ using System.Net;
 using System.Text;
 using Newtonsoft.Json;
 using ShareTypes.SignalTypes;
+using ShareTypes;
 using System.Threading.Tasks;
 using ShareTypes.OrderScheme;
 using System.Net.Sockets;
@@ -114,8 +115,8 @@ namespace Retranslator
         private void CheckServer(HttpListenerRequest request, HttpListenerResponse response)
         {
             response.StatusCode = (int)HttpStatusCode.OK;
-            string responseString = "Это я!";
-            SendObject(response, responseString);
+
+            SendObject(response, Constants.ServerCheckString);
         }
 
         private void SendOrderScheme(HttpListenerRequest request, HttpListenerResponse response)

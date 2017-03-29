@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
     <Compile Include="OrderScheme\OrderSchemeFactory.cs" />
     <Compile Include="SignalTypes\BroadcastSignal.cs" />
     <Compile Include="SignalTypes\Chanel.cs" />

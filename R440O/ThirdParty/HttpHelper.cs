@@ -7,7 +7,8 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using ShareTypes.SignalTypes;
 using ShareTypes.OrderScheme;
-using System.Net.NetworkInformation;
+using ShareTypes;
+using System.Text.RegularExpressions;
 using R440O.R440OForms.OrderScheme;
 using R440O.R440OForms.A205M_1;
 
@@ -89,8 +90,24 @@ namespace R440O.ThirdParty
                     {
                         if (response.StatusCode == System.Net.HttpStatusCode.OK)
                         {
-                            ServerUrl = serverUrl;
-                            СерверНайден = true;                            
+                            using (HttpContent content = response.Content)
+                            {
+                                string result = await content.ReadAsStringAsync();
+                                try
+                                {
+                                    var checkString = JsonConvert.DeserializeObject<string>(result);
+                                    if (checkString == Constants.ServerCheckString)
+                                    {
+                                        ServerUrl = serverUrl;
+                                        СерверНайден = true;  
+                                    }
+                                }
+                                catch (JsonException e)
+                                {
+
+                                }
+                            }
+                                                      
                         }
                     }
                 }
@@ -112,17 +129,39 @@ namespace R440O.ThirdParty
 
         public static void НайтиСервер(Action act)
         {
-            var addressList = NetworkInterface.GetAllNetworkInterfaces()
-                .Select(netInterface => netInterface.GetIPProperties())
-                .SelectMany(ipProps => ipProps.UnicastAddresses)
-                .ToList();
+            var addressList = ПолучитьСписокАдресовСети();
             количествоНезавершенныЗапросов = addressList.Count;
             foreach (var addr in addressList)
             {
-                var _serverUrl = "http://" + addr.Address.ToString() + ":8080/";
+                var _serverUrl = "http://" + addr + ":8080/";
                 ПроверитьАдресс(_serverUrl, act);
             }
-                
+
+        }
+
+        public static List<string> ПолучитьСписокАдресовСети()
+        {
+            System.Diagnostics.Process process = new System.Diagnostics.Process();
+            process.StartInfo.FileName = "cmd.exe";
+            process.StartInfo.Arguments = "/c arp -a";
+            process.StartInfo.CreateNoWindow = false;
+            process.StartInfo.UseShellExecute = false;
+            process.StartInfo.RedirectStandardOutput = true;
+            process.Start();
+            List<string> addresses = new List<string>();
+            Regex ipRegex = new Regex(@"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b");
+            while (!process.StandardOutput.EndOfStream)
+            {
+                string line = process.StandardOutput.ReadLine();
+                MatchCollection result = ipRegex.Matches(line);
+                if (result.Count != 0 && result[0] != null)
+                {
+                    addresses.Add(result[0].ToString());
+                }                
+            }
+            process.WaitForExit();
+            process.Close();
+            return addresses;
         }
 
     }
