@@ -24,7 +24,7 @@ namespace Retranslator
                 this.StantionListBox.Items.AddRange(OrderSchemePairs.SelectMany(pair =>
                    new[] { pair.Station1, pair.Station2 })
                    .Where(s => s != null)
-                   .Select(s => s.Id + " " + (s.Signal != null ? s.Signal.Frequency.ToString()  : "empty signal"))
+                   .Select(s => s.FriendlyName)
                    .ToArray());
             });
         }

@@ -15,9 +15,11 @@ namespace Retranslator
 {
     public class Server
     {
-        HttpListener httpListener = new HttpListener();
-        List<OrderSchemePair> OrderSchemePairs = new List<OrderSchemePair>();
-        Random Randomizer = new Random();
+        private HttpListener httpListener = new HttpListener();
+
+        private List<OrderSchemePair> OrderSchemePairs = new List<OrderSchemePair>();
+
+        private Random Randomizer = new Random();
 
         public event Action<List<OrderSchemePair>> StationListUpdateEvent;       
 
@@ -143,6 +145,7 @@ namespace Retranslator
         {
             var stantion = new Stantion();
             var freePair = this.OrderSchemePairs.FirstOrDefault(s => s.IsFree);
+
             if (freePair == null)
             {
                 var wave1 = GetRandomWave(0);
@@ -150,6 +153,7 @@ namespace Retranslator
                 freePair = new OrderSchemePair(wave1, wave2);
                 this.OrderSchemePairs.Add(freePair);
             }
+
             freePair.AddStation(stantion);
             return freePair.GetOrderSchemeByStation(stantion);
         }
