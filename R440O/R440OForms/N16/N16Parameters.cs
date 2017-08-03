@@ -5,6 +5,7 @@ using R440O.R440OForms.N13_2;
 using R440O.R440OForms.N15;
 using R440O.R440OForms.NKN_1;
 using R440O.R440OForms.NKN_2;
+using ShareTypes.SignalTypes;
 
 namespace R440O.R440OForms.N16
 {
@@ -458,6 +459,22 @@ namespace R440O.R440OForms.N16
         {
             var handler = IndicatorChanged;
             if (handler != null) handler();
+        }
+
+        private static Signal ВходнойСигнал
+        {
+            get
+            {
+                return N13_1Parameters.ВыходнойСигнал ?? N13_2Parameters.ВыходнойСигнал;
+            }
+        }
+
+        public static Signal ВыходнойСигнал
+        {
+            get
+            {
+                return ВходнойСигнал;
+            }
         }
     }
 }

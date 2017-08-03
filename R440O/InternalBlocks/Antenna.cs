@@ -6,7 +6,7 @@ using ShareTypes.SignalTypes;
 using System.Threading.Tasks;
 using R440O.R440OForms.N15;
 using R440O.ThirdParty;
-using R440O.R440OForms.A205M_1;
+using R440O.R440OForms.N16;
 using R440O.R440OForms.OrderScheme;
 
 namespace R440O.InternalBlocks
@@ -33,7 +33,7 @@ namespace R440O.InternalBlocks
                 {
                     ВходнойСигнал = await HttpHelper.ПослатьИПолучитьСигнал(new SendSignalDTO
                     {
-                        Signal = ShouldSendSignal ? A205M_1Parameters.ВыходнойСигнал : null,
+                        Signal = ShouldSendSignal ? N16Parameters.ВыходнойСигнал : null,
                         Id = OrderSchemeParameters.СхемаПриказ.УникальныйИдентификаторСтанции
                     });
                 }, 1000);

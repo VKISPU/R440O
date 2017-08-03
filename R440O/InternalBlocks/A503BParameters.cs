@@ -1,6 +1,5 @@
 ﻿using ShareTypes.SignalTypes;
-using R440O.R440OForms.A205M_1;
-using R440O.R440OForms.A205M_2;
+using R440O.R440OForms.N16;
 using R440O.R440OForms.NKN_1;
 using R440O.R440OForms.NKN_2;
 using R440O.R440OForms.N15;
@@ -40,16 +39,7 @@ namespace R440O.InternalBlocks
             {
                 if (!Включен) return null;
 
-                Signal inputSignal = null;
-                if (NKN_1Parameters.ДистанционноеВключение && A205M_1Parameters.ВыходнойСигнал != null)
-                {
-                    inputSignal = A205M_1Parameters.ВыходнойСигнал;
-                }
-
-                if (NKN_2Parameters.ДистанционноеВключение && A205M_2Parameters.ВыходнойСигнал != null)
-                {
-                    inputSignal = A205M_2Parameters.ВыходнойСигнал;
-                }
+                var inputSignal = N16Parameters.ВыходнойСигнал;                
 
                 if (inputSignal == null) return null;
 

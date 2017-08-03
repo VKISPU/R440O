@@ -1,5 +1,10 @@
 ﻿using R440O.R440OForms.N15;
 using R440O.R440OForms.N502B;
+using R440O.R440OForms.NKN_1;
+using R440O.R440OForms.NKN_2;
+using R440O.R440OForms.A205M_1;
+using R440O.R440OForms.A205M_2;
+using ShareTypes.SignalTypes;
 
 namespace R440O.R440OForms.N13_2
 {
@@ -52,6 +57,32 @@ namespace R440O.R440OForms.N13_2
         {
             var handler = ParameterChanged;
             if (handler != null) handler();
+        }
+
+        private static Signal ВходнойСигнал
+        {
+            get
+            {
+                Signal inputSignal = null;
+                if (NKN_1Parameters.ДистанционноеВключение && A205M_1Parameters.ВыходнойСигнал != null)
+                {
+                    inputSignal = A205M_1Parameters.ВыходнойСигнал;
+                }
+
+                if (NKN_2Parameters.ДистанционноеВключение && A205M_2Parameters.ВыходнойСигнал != null)
+                {
+                    inputSignal = A205M_2Parameters.ВыходнойСигнал;
+                }
+                return inputSignal;
+            }
+        }
+
+        public static Signal ВыходнойСигнал
+        {
+            get
+            {
+                return ВходнойСигнал;
+            }
         }
     }
 }
