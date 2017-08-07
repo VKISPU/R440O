@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(R440OForm));
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.R440OButtonN18_M_H28 = new System.Windows.Forms.Button();
             this.R440OButtonN18_M_AngleSwitch = new System.Windows.Forms.Button();
@@ -1073,9 +1074,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1101, 389);
+            this.ClientSize = new System.Drawing.Size(1028, 389);
             this.Controls.Add(this.R440OPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "R440OForm";
             this.Text = "P-440-O";
             this.R440OPanel.ResumeLayout(false);

@@ -9,7 +9,7 @@ namespace Retranslator
 {
     public class Stantion
     {
-        const long ExpireTime = 2;
+        const long ExpireTime = 10;
 
         public string Id;
         public Signal Signal;
@@ -33,6 +33,14 @@ namespace Retranslator
             get
             {
                 return (DateTime.Now - LastUpdate).TotalSeconds > ExpireTime;
+            }
+        }
+
+        public string FriendlyName
+        {
+            get
+            {
+                return this.Id + " " + (this.Signal != null ? this.Signal.Frequency.ToString() : "empty signal");
             }
         }
     }
