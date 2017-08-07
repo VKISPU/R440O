@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BlockConfig\BaseBlockConfig.cs" />
-    <Compile Include="BlockConfig\BaseConstants.cs" />
     <Compile Include="BlockConfig\N502BConfig.cs" />
     <Compile Include="BlockConfig\PowerCabelConfig.cs" />
     <Compile Include="BlockConfig\R440OConfig.cs" />

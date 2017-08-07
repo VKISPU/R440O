@@ -10,9 +10,7 @@ using R440O.R440OForms.R440O;
 namespace R440O.Test.BlockConfig
 {
     class R440OConfig : BaseBlockConfig
-    {
-        private static string R440OForm = "R440OForm";
-
+    {       
         private R440OForm r440o = null;
 
         public override string OpenFormButtonName

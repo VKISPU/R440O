@@ -9,6 +9,8 @@ namespace R440O.Test.BlockConfig
 {
     abstract class BaseBlockConfig
     {
+        protected static string R440OForm = "R440OForm";
+
         public abstract string OpenFormButtonName
         {
             get;
@@ -24,7 +26,7 @@ namespace R440O.Test.BlockConfig
         {
             if (!формаОткрыта)
             {
-                var buttonTester = new ButtonTester(OpenFormButtonName, BaseConstants.R440OForm);
+                var buttonTester = new ButtonTester(OpenFormButtonName, R440OForm);
                 buttonTester.FireEvent("Click");
                 формаОткрыта = true;
             }
