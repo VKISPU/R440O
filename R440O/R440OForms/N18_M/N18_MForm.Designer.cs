@@ -389,9 +389,9 @@
             // 
             this.ЛампочкаСПСТест.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаСПСТест.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ЛампочкаСПСТест.Location = new System.Drawing.Point(165, 32);
+            this.ЛампочкаСПСТест.Location = new System.Drawing.Point(168, 36);
             this.ЛампочкаСПСТест.Name = "ЛампочкаСПСТест";
-            this.ЛампочкаСПСТест.Size = new System.Drawing.Size(15, 16);
+            this.ЛампочкаСПСТест.Size = new System.Drawing.Size(8, 8);
             this.ЛампочкаСПСТест.TabIndex = 44;
             this.ЛампочкаСПСТест.TabStop = false;
             // 
@@ -399,9 +399,9 @@
             // 
             this.ЛампочкаСПСИнформ.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаСПСИнформ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ЛампочкаСПСИнформ.Location = new System.Drawing.Point(205, 32);
+            this.ЛампочкаСПСИнформ.Location = new System.Drawing.Point(208, 36);
             this.ЛампочкаСПСИнформ.Name = "ЛампочкаСПСИнформ";
-            this.ЛампочкаСПСИнформ.Size = new System.Drawing.Size(15, 16);
+            this.ЛампочкаСПСИнформ.Size = new System.Drawing.Size(8, 8);
             this.ЛампочкаСПСИнформ.TabIndex = 45;
             this.ЛампочкаСПСИнформ.TabStop = false;
             // 
@@ -409,9 +409,9 @@
             // 
             this.ЛампочкаПилотК1_1.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаПилотК1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ЛампочкаПилотК1_1.Location = new System.Drawing.Point(242, 32);
+            this.ЛампочкаПилотК1_1.Location = new System.Drawing.Point(245, 36);
             this.ЛампочкаПилотК1_1.Name = "ЛампочкаПилотК1_1";
-            this.ЛампочкаПилотК1_1.Size = new System.Drawing.Size(15, 16);
+            this.ЛампочкаПилотК1_1.Size = new System.Drawing.Size(8, 8);
             this.ЛампочкаПилотК1_1.TabIndex = 46;
             this.ЛампочкаПилотК1_1.TabStop = false;
             // 
@@ -419,9 +419,9 @@
             // 
             this.ЛампочкаПилотК1_2.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаПилотК1_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ЛампочкаПилотК1_2.Location = new System.Drawing.Point(276, 32);
+            this.ЛампочкаПилотК1_2.Location = new System.Drawing.Point(280, 36);
             this.ЛампочкаПилотК1_2.Name = "ЛампочкаПилотК1_2";
-            this.ЛампочкаПилотК1_2.Size = new System.Drawing.Size(15, 16);
+            this.ЛампочкаПилотК1_2.Size = new System.Drawing.Size(8, 8);
             this.ЛампочкаПилотК1_2.TabIndex = 47;
             this.ЛампочкаПилотК1_2.TabStop = false;
             // 
@@ -429,9 +429,9 @@
             // 
             this.ЛампочкаИнформК1_1.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаИнформК1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ЛампочкаИнформК1_1.Location = new System.Drawing.Point(308, 32);
+            this.ЛампочкаИнформК1_1.Location = new System.Drawing.Point(311, 37);
             this.ЛампочкаИнформК1_1.Name = "ЛампочкаИнформК1_1";
-            this.ЛампочкаИнформК1_1.Size = new System.Drawing.Size(15, 16);
+            this.ЛампочкаИнформК1_1.Size = new System.Drawing.Size(8, 8);
             this.ЛампочкаИнформК1_1.TabIndex = 48;
             this.ЛампочкаИнформК1_1.TabStop = false;
             // 
@@ -439,9 +439,9 @@
             // 
             this.ЛампочкаИнформК1_2.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаИнформК1_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ЛампочкаИнформК1_2.Location = new System.Drawing.Point(340, 32);
+            this.ЛампочкаИнформК1_2.Location = new System.Drawing.Point(343, 37);
             this.ЛампочкаИнформК1_2.Name = "ЛампочкаИнформК1_2";
-            this.ЛампочкаИнформК1_2.Size = new System.Drawing.Size(15, 16);
+            this.ЛампочкаИнформК1_2.Size = new System.Drawing.Size(8, 8);
             this.ЛампочкаИнформК1_2.TabIndex = 49;
             this.ЛампочкаИнформК1_2.TabStop = false;
             // 

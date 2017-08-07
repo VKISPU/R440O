@@ -9,6 +9,8 @@ namespace R440O.R440OForms.N18_M
     using N15;
     using BMA_M_1;
     using BMB;
+    using PU_K1_1;
+    using K02M_01;
 
     public static class N18_MParameters
     {
@@ -47,7 +49,7 @@ namespace R440O.R440OForms.N18_M
 
         public static bool ЛампочкаПилотК1_1
         {
-            get { return false; }
+            get { return  PU_K1_1Parameters.КулонК1Подключен && K02M_01Parameters.ЛампочкаПилот; }
         }
 
         public static bool ЛампочкаПилотК1_2
@@ -57,7 +59,7 @@ namespace R440O.R440OForms.N18_M
 
         public static bool ЛампочкаИнформК1_1
         {
-            get { return false; }
+            get { return PU_K1_1Parameters.КулонК1Подключен && K02M_01Parameters.ЛампочкаИнформ; }
         }
 
         public static bool ЛампочкаИнформК1_2

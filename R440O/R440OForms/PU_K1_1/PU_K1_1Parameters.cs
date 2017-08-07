@@ -4,6 +4,7 @@ using R440O.R440OForms.K03M_01;
 using R440O.R440OForms.K05M_01;
 using R440O.R440OForms.N15;
 using R440O.R440OForms.N18_M_H28;
+using R440O.R440OForms.N18_M;
 using R440O.ThirdParty;
 
 namespace R440O.R440OForms.PU_K1_1
@@ -159,6 +160,7 @@ namespace R440O.R440OForms.PU_K1_1
         public static void ResetParameters()
         {
             OnParameterChanged();
+            N18_MParameters.ResetParameters();
             if (Включен)
             {
                 K03M_01Parameters.НачатьПоискСНачала();
