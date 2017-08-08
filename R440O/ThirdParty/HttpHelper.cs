@@ -20,6 +20,8 @@ namespace R440O.ThirdParty
         private static string SignalUrl = "signal";
         private static string OrdeSchemeUrl = "orderscheme";
         private static string CheckServerUrl = "checkserver";
+
+        private static List<string> списокАдресовСети = ПолучитьСписокАдресовСети();
         
         private static int количествоНезавершенныЗапросов = 0;
         public static bool ПоискИдет { get { return количествоНезавершенныЗапросов != 0; } }
@@ -79,7 +81,7 @@ namespace R440O.ThirdParty
             }
         }            
 
-        public static async void ПроверитьАдресс(string serverUrl, Action act)
+        public static async void ПроверитьАдресс(string serverUrl)
         {
             if (!СерверНайден)
             {
@@ -120,23 +122,17 @@ namespace R440O.ThirdParty
                     //т.к. не все подключения активны (например, если установлен virtualbox)
                 }
             }
-            количествоНезавершенныЗапросов--;
-            if (количествоНезавершенныЗапросов == 0) 
-            {
-                act.Invoke();
-            }
+            количествоНезавершенныЗапросов--;            
         }
 
-        public static void НайтиСервер(Action act)
+        public static void ПоискСервера()
         {
-            var addressList = ПолучитьСписокАдресовСети();
-            количествоНезавершенныЗапросов = addressList.Count;
-            foreach (var addr in addressList)
+            количествоНезавершенныЗапросов = списокАдресовСети.Count;
+            foreach (var addr in списокАдресовСети)
             {
                 var _serverUrl = "http://" + addr + ":8080/";
-                ПроверитьАдресс(_serverUrl, act);
+                ПроверитьАдресс(_serverUrl);
             }
-
         }
 
         public static List<string> ПолучитьСписокАдресовСети()

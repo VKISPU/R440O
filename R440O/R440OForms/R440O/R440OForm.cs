@@ -9,6 +9,7 @@ namespace R440O.R440OForms.R440O
     using System;
     using System.Linq;
     using System.Windows.Forms;
+    using InternalBlocks;
 
     /// <summary>
     /// Форма станции Р440-О
@@ -21,6 +22,7 @@ namespace R440O.R440OForms.R440O
         public R440OForm()
         {
             this.InitializeComponent();
+            Antenna.StartServerPing();
         }
 
         /// <summary>

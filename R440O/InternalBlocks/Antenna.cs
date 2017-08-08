@@ -39,10 +39,6 @@ namespace R440O.InternalBlocks
                 }, 1000);
             }
         }
-        public static void FindRetranslator(Action act)
-        {
-            HttpHelper.НайтиСервер(act);
-        }
 
         private static bool ShouldSendSignal
         {
