@@ -14,9 +14,9 @@ namespace Retranslator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Server server = new Server();
+            
             var serverForm = new ServerForm();
-            server.StationListUpdateEvent += serverForm.DrawStantionList;
+
             Application.Run(serverForm);
         }
     }

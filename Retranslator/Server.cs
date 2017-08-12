@@ -15,13 +15,11 @@ namespace Retranslator
 {
     public class Server
     {
+        public List<OrderSchemePair> OrderSchemePairs = new List<OrderSchemePair>();
+
         private HttpListener httpListener = new HttpListener();
 
-        private List<OrderSchemePair> OrderSchemePairs = new List<OrderSchemePair>();
-
-        private Random Randomizer = new Random();
-
-        public event Action<List<OrderSchemePair>> StationListUpdateEvent;       
+        private Random Randomizer = new Random();      
 
         public Server()
         {
@@ -136,7 +134,6 @@ namespace Retranslator
                 UpdateSignal(signalDTO);
             }
             var broadcast = GetBroadcastSignal();
-            StationListUpdateEvent(this.OrderSchemePairs);
             SendObject(response, broadcast);
         }
 
@@ -172,7 +169,7 @@ namespace Retranslator
             return -1;
         }
 
-        private void ClearStantionList()
+        public void ClearStantionList()
         {
             foreach (var pair in this.OrderSchemePairs)
             {
