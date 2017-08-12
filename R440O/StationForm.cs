@@ -15,6 +15,7 @@ namespace R440O
     public partial class StationForm : Form
     {
         private Timer таймерПоискаСервера = new Timer();
+        private R440OForm r440OForm;
 
         public StationForm()
         {
@@ -46,13 +47,19 @@ namespace R440O
             таймерПоискаСервера.Stop();
             ParametersConfig.SetParameters();
             this.Hide();
-            var r440o = new R440OForm();
-            r440o.Show();
+            r440OForm = new R440OForm();
+            r440OForm.FormClosedEvent += OnR440oFormClosed;
+            r440OForm.Show();
         }
 
         private void OfflineWorkButton_Click(object sender, EventArgs e)
         {
             RunR400O();
+        }
+
+        private void OnR440oFormClosed()
+        {
+            this.Close();
         }
     }
 }

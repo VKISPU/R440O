@@ -1080,6 +1080,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "R440OForm";
             this.Text = "P-440-O";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.R440OForm_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.R440OForm_FormClosed);
             this.R440OPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 

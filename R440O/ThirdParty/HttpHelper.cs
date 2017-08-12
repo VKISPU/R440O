@@ -22,7 +22,7 @@ namespace R440O.ThirdParty
         private static string CheckServerUrl = "checkserver";
 
         private static List<string> списокАдресовСети = ПолучитьСписокАдресовСети();
-        
+
         private static int количествоНезавершенныЗапросов = 0;
         public static bool ПоискИдет { get { return количествоНезавершенныЗапросов != 0; } }
 
@@ -30,17 +30,18 @@ namespace R440O.ThirdParty
         public static bool СерверНайден
         {
             get { return _серверНайден; }
-            private set 
+            private set
             {
                 _серверНайден = value;
             }
         }
 
-        public static async Task<BroadcastSignal> ПослатьИПолучитьСигнал(SendSignalDTO signalDTO)
+        private static async Task<T1> Post<T1, T2>(string url, T2 body) where T1 : class
         {
-            var body = new StringContent(JsonConvert.SerializeObject(signalDTO), Encoding.UTF8, "application/json");
+            var bodyStr = new StringContent(JsonConvert.SerializeObject(body), Encoding.UTF8, "application/json");
+
             using (HttpClient client = new HttpClient())
-            using (HttpResponseMessage response = await client.PostAsync(ServerUrl + SignalUrl, body))
+            using (HttpResponseMessage response = await client.PostAsync(ServerUrl + url, bodyStr))
             using (HttpContent content = response.Content)
             {
                 string result = await content.ReadAsStringAsync();
@@ -48,7 +49,7 @@ namespace R440O.ThirdParty
                 {
                     try
                     {
-                        return JsonConvert.DeserializeObject<BroadcastSignal>(result);
+                        return JsonConvert.DeserializeObject<T1>(result);
                     }
                     catch
                     {
@@ -59,10 +60,10 @@ namespace R440O.ThirdParty
             }
         }
 
-        public static async Task<OrderSchemeClass> ПолучитьСхемуПриказ()
+        private static async Task<T1> Get<T1>(string url) where T1 : class
         {
             using (HttpClient client = new HttpClient())
-            using (HttpResponseMessage response = await client.GetAsync(ServerUrl + OrdeSchemeUrl))
+            using (HttpResponseMessage response = await client.GetAsync(ServerUrl + url))
             using (HttpContent content = response.Content)
             {
                 string result = await content.ReadAsStringAsync();
@@ -70,7 +71,7 @@ namespace R440O.ThirdParty
                 {
                     try
                     {
-                        return JsonConvert.DeserializeObject<OrderSchemeClass>(result);
+                        return JsonConvert.DeserializeObject<T1>(result);
                     }
                     catch
                     {
@@ -79,7 +80,17 @@ namespace R440O.ThirdParty
                 }
                 return null;
             }
-        }            
+        }
+
+        public static async Task<BroadcastSignal> ПослатьИПолучитьСигнал(SendSignalDTO signalDTO)
+        {
+            return await Post<BroadcastSignal, SendSignalDTO>(SignalUrl, signalDTO);
+        }
+
+        public static async Task<OrderSchemeClass> ПолучитьСхемуПриказ()
+        {
+            return await Get<OrderSchemeClass>(OrdeSchemeUrl);
+        }
 
         public static async void ПроверитьАдресс(string serverUrl)
         {
@@ -87,30 +98,11 @@ namespace R440O.ThirdParty
             {
                 try
                 {
-                    using (HttpClient client = new HttpClient())
-                    using (HttpResponseMessage response = await client.GetAsync(serverUrl + CheckServerUrl))
+                    var checkString = await Get<string>(serverUrl + CheckServerUrl);
+                    if (checkString == Constants.ServerCheckString)
                     {
-                        if (response.StatusCode == System.Net.HttpStatusCode.OK)
-                        {
-                            using (HttpContent content = response.Content)
-                            {
-                                string result = await content.ReadAsStringAsync();
-                                try
-                                {
-                                    var checkString = JsonConvert.DeserializeObject<string>(result);
-                                    if (checkString == Constants.ServerCheckString)
-                                    {
-                                        ServerUrl = serverUrl;
-                                        СерверНайден = true;  
-                                    }
-                                }
-                                catch (JsonException e)
-                                {
-
-                                }
-                            }
-                                                      
-                        }
+                        ServerUrl = serverUrl;
+                        СерверНайден = true;
                     }
                 }
                 catch (System.UriFormatException e)
@@ -122,7 +114,7 @@ namespace R440O.ThirdParty
                     //т.к. не все подключения активны (например, если установлен virtualbox)
                 }
             }
-            количествоНезавершенныЗапросов--;            
+            количествоНезавершенныЗапросов--;
         }
 
         public static void ПоискСервера()
@@ -153,7 +145,7 @@ namespace R440O.ThirdParty
                 if (result.Count != 0 && result[0] != null)
                 {
                     addresses.Add(result[0].ToString());
-                }                
+                }
             }
             process.WaitForExit();
             process.Close();

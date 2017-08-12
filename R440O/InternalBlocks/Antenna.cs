@@ -15,6 +15,8 @@ namespace R440O.InternalBlocks
     {
         private static IDisposable timer;
 
+        public static event Action ErrorEvent;
+
         public static BroadcastSignal ВыходнойСигнал
         {
             get
@@ -31,11 +33,19 @@ namespace R440O.InternalBlocks
             {
                 timer = EasyTimer.SetInterval(async () =>
                 {
-                    ВходнойСигнал = await HttpHelper.ПослатьИПолучитьСигнал(new SendSignalDTO
+                    try
                     {
-                        Signal = ShouldSendSignal ? N16Parameters.ВыходнойСигнал : null,
-                        Id = OrderSchemeParameters.СхемаПриказ.УникальныйИдентификаторСтанции
-                    });
+                        ВходнойСигнал = await HttpHelper.ПослатьИПолучитьСигнал(new SendSignalDTO
+                        {
+                            Signal = ShouldSendSignal ? N16Parameters.ВыходнойСигнал : null,
+                            Id = OrderSchemeParameters.СхемаПриказ.УникальныйИдентификаторСтанции
+                        });
+                    }
+                    catch
+                    {
+                        StopServerPing();
+                        ErrorEvent();                        
+                    }
                 }, 1000);
             }
         }
@@ -46,6 +56,15 @@ namespace R440O.InternalBlocks
             {
                 return HttpHelper.СерверНайден && !HttpHelper.ПоискИдет;
             }
-        }     
+        }
+
+        public static void StopServerPing()
+        {
+            if (timer != null)
+            {
+                timer.Dispose();
+                timer = null;
+            }
+        }
     }
 }
