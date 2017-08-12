@@ -6,7 +6,7 @@ using System.Timers;
 
 namespace R440O.ThirdParty
 {
-    class EasyTimer
+    public class EasyTimer
     {
         public static IDisposable SetInterval(Action method, int delayMilliseconds)
         {

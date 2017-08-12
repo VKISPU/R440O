@@ -1074,12 +1074,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 389);
+            this.ClientSize = new System.Drawing.Size(1100, 389);
             this.Controls.Add(this.R440OPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "R440OForm";
             this.Text = "P-440-O";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.R440OForm_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.R440OForm_FormClosed);
             this.R440OPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 

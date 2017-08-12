@@ -12,7 +12,7 @@ namespace R440O.R440OForms.N15Inside
     using ShareTypes.SignalTypes;
     using BMA_M_1;
 
-    class N15InsideParameters
+    public class N15InsideParameters
     {
         #region Работа блока
         public static bool Включен
