@@ -5,25 +5,35 @@ using R440O.R440OForms.C300M_2;
 using R440O.R440OForms.C300M_3;
 using R440O.R440OForms.C300M_4;
 using R440O.R440OForms.N16;
+using R440O.Parameters;
+using R440O.R440OForms.A205M_1;
+using R440O.R440OForms.A304;
+using R440O.R440OForms.Kontur_P3.Параметры;
+using R440O.R440OForms.N15;
+using R440O.R440OForms.N502B;
+using R440O.R440OForms.P220_27G_2;
+using R440O.R440OForms.P220_27G_3;
+using R440O.R440OForms.PowerCabel;
+using R440O.R440OForms.VoltageStabilizer;
+using R440O.R440OForms.OrderScheme;
+using R440O.СостоянияЭлементов.Контур_П;
+using R440O.R440OForms.N15Inside;
+using R440O.R440OForms.N18_M;
+using R440O.R440OForms.BMA_M_1;
+using R440O.R440OForms.BMA_M_2;
+using R440O.R440OForms.BMB;
+using R440O.R440OForms.PU_K1_1;
+using R440O.R440OForms.K01M_01;
+using R440O.R440OForms.K02M_01;
+using R440O.R440OForms.K03M_01;
+using R440O.R440OForms.K04M_01;
+using R440O.R440OForms.K05M_01;
+using R440O.R440OForms.K06M_01;
+using R440O.R440OForms.N18_M_AngleSwitch;
+using ShareTypes.SignalTypes;
 
 namespace R440O
-{
-    using Parameters;
-    using R440OForms.A205M_1;
-    using R440OForms.A304;
-    using R440OForms.Kontur_P3.Параметры;
-    using R440OForms.N15;
-    using R440OForms.N502B;
-    using R440OForms.P220_27G_2;
-    using R440OForms.P220_27G_3;
-    using R440OForms.PowerCabel;
-    using R440OForms.VoltageStabilizer;
-    using R440OForms.OrderScheme;
-    using СостоянияЭлементов.Контур_П;
-    using R440OForms.N15Inside;
-    using R440OForms.N18_M;
-    using ShareTypes.SignalTypes;
-
+{ 
     public static class ParametersConfig
     {
         /// <summary>
@@ -249,6 +259,29 @@ namespace R440O
                 C300M_4Parameters.ПереключательВолна100 = 5;
                 C300M_4Parameters.ПереключательВолна1000 = 0;
                 C300M_4Parameters.ТумблерУправление = true;
+
+                #endregion
+
+                #region Браслет
+
+                // Настройка БМА 1
+                BMA_M_1Parameters.ПереключательРежимы = 2;
+                BMA_M_1Parameters.Питание = true;
+                BMA_M_1Parameters.КнопкаПитаниеВкл = 2;
+
+                // Настройка БМБ
+                BMBParameters.КнопкаПитание = СостоянияЭлементов.БМБ.Кнопка.Горит;
+                BMBParameters.КнопкаСлСвязь = СостоянияЭлементов.БМБ.Кнопка.Горит;
+                BMBParameters.ПереключательНаправление = 1;
+                BMBParameters.ПереключательРаботаКонтроль = 1;
+
+                #endregion
+
+                #region Кулон
+
+                PU_K1_1Parameters.ТумблерПитание = 2;
+                K04M_01Parameters.ПереключательПрмМгц = 5;
+                N18_M_AngleSwitchParameters._гнездоПРМ1 = 1;
 
                 #endregion
             }
