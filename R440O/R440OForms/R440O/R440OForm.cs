@@ -82,7 +82,10 @@ namespace R440O.R440OForms.R440O
         private void R440OForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Antenna.StopServerPing();
-            FormClosedEvent();
+            if (FormClosedEvent != null)
+            {
+                FormClosedEvent();
+            }
         }
 
         private void R440OForm_FormClosing(object sender, FormClosingEventArgs e)
