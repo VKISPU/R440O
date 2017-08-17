@@ -271,6 +271,9 @@ namespace R440O.Test.MainTest
             Assert.IsTrue(BMBParameters.ЛампочкаДк);
         }
 
+        /// <summary>
+        /// Проверка по малому шлефу в помехозащитном режиме
+        /// </summary>
         [Test]
         public void KulonTest()
         {
@@ -285,6 +288,24 @@ namespace R440O.Test.MainTest
             // Настраиваем Кулон
             N18_M_H28Parameters.АктивныйКабель = 1;
             K05M_01Parameters.ПереключательПередачаКонтроль = 0;
+
+            BMBParameters.КнопкаПередачаВызоваДк = СостоянияЭлементов.БМБ.Кнопка.Нажата;
+
+            Application.DoEvents();
+
+            Assert.IsTrue(BMBParameters.ЛампочкаДк);
+        }
+
+        [Test]
+        public void BrasletTest()
+        {
+            // Подлючаем Браслет
+            N18_MParameters.Соединения[(int)ГнездаН18.Контроль_Прм_Тлф1]
+                = (int)ГнездаН18.КоммутацияПрм_Канал1_БМА1;
+            N18_MParameters.Соединения[(int)ГнездаН18.КоммутацияПрм_Канал1_БМА1]
+                = (int)ГнездаН18.Контроль_Прм_Тлф1;
+            N18_MParameters.ПереключательПРД = 3;
+            N18_MParameters.ПереключательПрдБма12 = 7;
 
             BMBParameters.КнопкаПередачаВызоваДк = СостоянияЭлементов.БМБ.Кнопка.Нажата;
 
