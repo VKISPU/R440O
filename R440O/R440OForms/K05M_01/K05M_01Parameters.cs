@@ -11,7 +11,7 @@ using ShareTypes.SignalTypes;
 
 namespace R440O.R440OForms.K05M_01
 {
-    static class K05M_01Parameters
+    public static class K05M_01Parameters
     {
         #region событие
 

@@ -15,6 +15,8 @@ using R440O.R440OForms.A1;
 using R440O.R440OForms.B1_1;
 using R440O.R440OForms.A205M_1;
 using R440O.R440OForms.N15Inside;
+using R440O.R440OForms.N18_M_H28;
+using R440O.R440OForms.K05M_01;
 using ShareTypes.SignalTypes;
 
 namespace R440O.Test.MainTest
@@ -267,6 +269,28 @@ namespace R440O.Test.MainTest
             Application.DoEvents();
 
             Assert.IsTrue(BMBParameters.ЛампочкаДк);
-        }      
+        }
+
+        [Test]
+        public void KulonTest()
+        {
+            // Соеденияем Кулог с БМА1
+            N18_MParameters.Соединения[(int)ГнездаН18.КоммутацияПрм_Канал1_К12]
+                = (int)ГнездаН18.КоммутацияПрм_Канал1_БМА1;
+            N18_MParameters.Соединения[(int)ГнездаН18.КоммутацияПрм_Канал1_БМА1]
+                = (int)ГнездаН18.КоммутацияПрм_Канал1_К12;
+            N18_MParameters.ПереключательПрдБма12 = 9;
+            N18_MParameters.ПереключательВходК121 = 2;
+            
+            // Настраиваем Кулон
+            N18_M_H28Parameters.АктивныйКабель = 1;
+            K05M_01Parameters.ПереключательПередачаКонтроль = 0;
+
+            BMBParameters.КнопкаПередачаВызоваДк = СостоянияЭлементов.БМБ.Кнопка.Нажата;
+
+            Application.DoEvents();
+
+            Assert.IsTrue(BMBParameters.ЛампочкаДк);
+        }
     }
 }
