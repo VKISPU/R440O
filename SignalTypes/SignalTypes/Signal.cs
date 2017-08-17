@@ -48,7 +48,7 @@ namespace ShareTypes.SignalTypes
         /// <summary>
         /// Список всех элементов информационного сигнала.
         /// </summary>
-        public List<SignalElement> Elements;
+        public List<SignalElement> Elements = new List<SignalElement>();
 
         /// <summary>
         /// Элементы информационного сигнала, содержащиеся в потоке, выбранном по заданным аппаратурой условиям. Уровень Б3.
