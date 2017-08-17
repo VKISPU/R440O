@@ -1,6 +1,7 @@
 ﻿using R440O.ThirdParty;
 using ShareTypes.SignalTypes;
 using R440O.R440OForms.N18_M;
+using System.Windows.Forms;
 
 namespace R440O.R440OForms.BMB
 {
@@ -10,6 +11,7 @@ namespace R440O.R440OForms.BMB
     using BMA_M_2;
     using Parameters;
     using СостоянияЭлементов.БМБ;
+using System;
 
     public static class BMBParameters
     {
@@ -422,7 +424,10 @@ namespace R440O.R440OForms.BMB
 
                 return _кнопкаПередачаКоманды;
             }
-            set { _кнопкаПередачаКоманды = value; }
+            set 
+            { 
+                _кнопкаПередачаКоманды = value;
+            }
         }
 
         private static bool передачаЦифр;
@@ -434,6 +439,7 @@ namespace R440O.R440OForms.BMB
         private static string ПереданнаяКоманда;
         private static Кнопка _кнопкаПередачаКоманды;
 
+        private static Timer таймерОбновленияФормы = new Timer();
         /// <summary>
         /// Обработка нажатия на клавишу передать команду, с правильным заннулением предыдущих цифр.
         /// </summary>
@@ -453,7 +459,26 @@ namespace R440O.R440OForms.BMB
                     ПереданнаяКоманда = НаборКоманды;
             }
             BMA_M_1Parameters.ResetParameters();
-            if (RefreshForm != null) RefreshForm();
+            обновитьФорму();
+            
+        }
+
+        private static void обновитьФорму()
+        {
+            таймерОбновленияФормы.Enabled = false;
+            таймерОбновленияФормы.Stop();
+            таймерОбновленияФормы.Tick += тикТаймераОбновленияФормы;
+            таймерОбновленияФормы.Enabled = true;
+            таймерОбновленияФормы.Interval = 5000;
+            таймерОбновленияФормы.Start();
+        }
+
+        private static void тикТаймераОбновленияФормы(object sender, EventArgs e)
+        {     
+            ResetParameters();
+            таймерОбновленияФормы.Enabled = false;
+            таймерОбновленияФормы.Stop();
+            таймерОбновленияФормы.Tick -= тикТаймераОбновленияФормы;
         }
 
         #endregion
