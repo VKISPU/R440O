@@ -46,12 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BlockConfig\BaseBlockConfig.cs" />
-    <Compile Include="BlockConfig\N502BConfig.cs" />
-    <Compile Include="BlockConfig\PowerCabelConfig.cs" />
-    <Compile Include="BlockConfig\R440OConfig.cs" />
-    <Compile Include="BlockConfig\VoltageStabilizerConfig.cs" />
-    <Compile Include="MainTest.cs" />
+    <Compile Include="MainTestClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -12,7 +12,7 @@ using System;
 
 namespace R440O.R440OForms.BMA_M_1
 {
-    class BMA_M_1Parameters
+    public class BMA_M_1Parameters
     {
         /// <summary>
         /// В принципе это не "включен", а состояние при котором он может быть включен нажатием кнопок, т.е. питание подается
