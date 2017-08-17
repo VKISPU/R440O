@@ -112,6 +112,8 @@ namespace ShareTypes.SignalTypes
                 return -1;
             var element = Elements.FirstOrDefault(elem => elem.Flow == SelectedFlow &&
                                                           elem.Group == SelectedGroup);
+            if (element == null)
+                return -1;
             return element.Chanels[chanelNumber].Speed;
         }
 
@@ -125,6 +127,8 @@ namespace ShareTypes.SignalTypes
                 return false;
             var element = Elements.FirstOrDefault(elem => elem.Flow == SelectedFlow &&
                                                           elem.Group == SelectedGroup);
+            if (element == null)
+                return false;
             return element.Chanels[chanelNumber].Information;
         }
 
