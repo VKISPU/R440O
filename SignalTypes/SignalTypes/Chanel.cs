@@ -21,6 +21,13 @@ namespace ShareTypes.SignalTypes
         }
 
         [JsonConstructor]
+        public Chanel(double speed, bool information, string informationString)
+        {
+            Speed = speed;
+            Information = true;
+            InformationString = informationString;
+        }
+
         public Chanel(double speed, string infString)
         {
             Speed = speed;
