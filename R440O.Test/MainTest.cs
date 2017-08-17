@@ -15,13 +15,12 @@ using R440O.R440OForms.A1;
 using R440O.R440OForms.B1_1;
 using R440O.R440OForms.A205M_1;
 using R440O.R440OForms.N15Inside;
-using R440O.R440OForms.C300M_1;
 using ShareTypes.SignalTypes;
 
 namespace R440O.Test.MainTest
 {
     [TestFixture]
-    class MainTest
+    class MainTestClass
     {
         [OneTimeSetUp]
         public void SetUpFixture()
@@ -34,6 +33,7 @@ namespace R440O.Test.MainTest
         {
             OpenR440O();
             N15StrartStation();
+            C300M_1Parameters.ЗначениеПоиска = 0;
         }
 
         [TearDown]
@@ -73,8 +73,7 @@ namespace R440O.Test.MainTest
             N15InsideParameters.ПереключательПУЛ48ПРД_2 = 2;
             N15InsideParameters.ПереключательПУЛ480ПРМ_1 = 2;
             N15InsideParameters.ПереключательПУЛ480ПРМ_2 = 2;
-            C300M_1Parameters.КнопкиВидРаботы[4] = true;
-            C300M_1Parameters.КнопкиВидРаботы[5] = false;
+            C300M_1Parameters.КнопкиВидРаботы[4] = true;         
         }
 
         private void ResetStation()
@@ -87,8 +86,8 @@ namespace R440O.Test.MainTest
             N15InsideParameters.ПереключательПУЛ48ПРД_2 = 3;
             N15InsideParameters.ПереключательПУЛ480ПРМ_1 = 3;
             N15InsideParameters.ПереключательПУЛ480ПРМ_2 = 3;
-            C300M_1Parameters.КнопкиВидРаботы[4] = false;
             C300M_1Parameters.КнопкиВидРаботы[5] = true;
+            BMA_M_1Parameters.ПереключательРежимы = 2;
         }
 
         private void N15StrartStation()
@@ -105,9 +104,9 @@ namespace R440O.Test.MainTest
         /// Проверка по малому шлейфу
         /// </summary>
         [Test]
-        public void MainTest1()
+        public void MainTest()
         {
-            C300M_1Parameters.ЗначениеПоиска = 0;
+
             Application.DoEvents();
             Assert.IsTrue(C300M_1Parameters.СигналПойман);
         }
@@ -116,7 +115,7 @@ namespace R440O.Test.MainTest
         /// Проверка по малому шлефу и проверка Дискрета (Режим 1), Браслета по 1вому каналу
         /// </summary>
         [Test]
-        public void MainTest2()
+        public void DiscreteTest1()
         {
             // Соеденияем 1вый канал Б1 с БМА1
             N18_MParameters.Соединения[(int)ГнездаН18.КоммутацияПрм_Канал1_Б11]
@@ -141,7 +140,7 @@ namespace R440O.Test.MainTest
         /// Проверка по малому шлефу и проверка Дискрета (Режим 1), Браслета по 2вому каналу
         /// </summary>
         [Test]
-        public void MainTest3()
+        public void DiscreteTest2()
         {
             // Соеденияем 1вый канал Б1 с БМА1
             N18_MParameters.Соединения[(int)ГнездаН18.КоммутацияПрм_Канал2_Б11]
@@ -166,7 +165,7 @@ namespace R440O.Test.MainTest
         /// Проверка по малому шлефу и проверка Дискрета (Режим 1), Браслета по 3тьему каналу
         /// </summary>
         [Test]
-        public void MainTest4()
+        public void DiscreteTest3()
         {
             // Соеденияем 3вый канал Б1 с БМА1
             N18_MParameters.Соединения[(int)ГнездаН18.КоммутацияПрм_Канал3_Б11]
@@ -191,7 +190,7 @@ namespace R440O.Test.MainTest
         /// Проверка по малому шлефу и проверка Дискрета (Режим 2), Браслета по 1вому каналу
         /// </summary>
         [Test]
-        public void MainTest5()
+        public void DiscreteTest4()
         {
             SetDiscret2();
 
@@ -220,7 +219,7 @@ namespace R440O.Test.MainTest
         /// Проверка по малому шлефу и проверка Дискрета (Режим 2), Браслета по 2вому каналу
         /// </summary>
         [Test]
-        public void MainTest6()
+        public void DiscreteTest5()
         {
             SetDiscret2();
 
@@ -242,67 +241,12 @@ namespace R440O.Test.MainTest
 
             Assert.IsTrue(BMBParameters.ЛампочкаДк);
         }
-
-
-        /// <summary>
-        /// Проверка по малому шлефу и проверка Дискрета (Режим 3), Браслета по 3тьему каналу
-        /// </summary>
-        [Test]
-        public void MainTest7()
-        {
-            SetDiscret2();
-
-            // Соеденияем 3вый канал Б1 с БМА1
-            N18_MParameters.Соединения[(int)ГнездаН18.КоммутацияПрм_Канал3_Б11]
-                = (int)ГнездаН18.КоммутацияПрм_Канал1_БМА1;
-            N18_MParameters.Соединения[(int)ГнездаН18.КоммутацияПрм_Канал1_БМА1]
-                = (int)ГнездаН18.КоммутацияПрм_Канал3_Б11;
-
-            // Сигнал с 3вого канала подается на БМА 1
-            N18_MParameters.ПереключательПрдБма12 = 6;
-
-            // Сигнал с А1 подается на А205
-            N18_MParameters.ПереключательПРД = 2;
-
-            BMBParameters.КнопкаПередачаВызоваДк = СостоянияЭлементов.БМБ.Кнопка.Нажата;
-
-            Application.DoEvents();
-
-            Assert.IsFalse(BMBParameters.ЛампочкаДк);
-        }
-
-        /// <summary>
-        /// Проверка по малому шлефу и проверка Дискрета (Режим 3), Браслета по 1вому каналу
-        /// </summary>
-        [Test]
-        public void MainTest8()
-        {
-            SetDiscret3();
-
-            // Соеденияем 1вый канал Б1 с БМА1
-            N18_MParameters.Соединения[(int)ГнездаН18.КоммутацияПрм_Канал1_Б11]
-                = (int)ГнездаН18.КоммутацияПрм_Канал1_БМА1;
-            N18_MParameters.Соединения[(int)ГнездаН18.КоммутацияПрм_Канал1_БМА1]
-                = (int)ГнездаН18.КоммутацияПрм_Канал1_Б11;
-
-            // Сигнал с 1вого канала подается на БМА 1
-            N18_MParameters.ПереключательПрдБма12 = 4;
-
-            // Сигнал с А1 подается на А205
-            N18_MParameters.ПереключательПРД = 2;
-
-            BMBParameters.КнопкаПередачаВызоваДк = СостоянияЭлементов.БМБ.Кнопка.Нажата;
-
-            Application.DoEvents();
-
-            Assert.IsFalse(BMBParameters.ЛампочкаДк);
-        }
-
+            
         /// <summary>
         /// Проверка по малому шлефу и проверка Дискрета (Режим 2), Браслета по 2вому каналу
         /// </summary>
         [Test]
-        public void MainTest9()
+        public void DiscreteTest6()
         {
             SetDiscret3();
 
@@ -323,34 +267,6 @@ namespace R440O.Test.MainTest
             Application.DoEvents();
 
             Assert.IsTrue(BMBParameters.ЛампочкаДк);
-        }
-
-
-        /// <summary>
-        /// Проверка по малому шлефу и проверка Дискрета (Режим 3), Браслета по 3тьему каналу
-        /// </summary>
-        [Test]
-        public void MainTest10()
-        {
-            SetDiscret3();
-
-            // Соеденияем 3вый канал Б1 с БМА1
-            N18_MParameters.Соединения[(int)ГнездаН18.КоммутацияПрм_Канал3_Б11]
-                = (int)ГнездаН18.КоммутацияПрм_Канал1_БМА1;
-            N18_MParameters.Соединения[(int)ГнездаН18.КоммутацияПрм_Канал1_БМА1]
-                = (int)ГнездаН18.КоммутацияПрм_Канал3_Б11;
-
-            // Сигнал с 3вого канала подается на БМА 1
-            N18_MParameters.ПереключательПрдБма12 = 6;
-
-            // Сигнал с А1 подается на А205
-            N18_MParameters.ПереключательПРД = 2;
-
-            BMBParameters.КнопкаПередачаВызоваДк = СостоянияЭлементов.БМБ.Кнопка.Нажата;
-
-            Application.DoEvents();
-
-            Assert.IsFalse(BMBParameters.ЛампочкаДк);
-        }
+        }      
     }
 }
