@@ -9,7 +9,7 @@ namespace ShareTypes.SignalTypes
         /// <summary>
         /// Частота сигнала
         /// </summary>
-        public int Frequency { get; private set; }
+        public int Frequency { get; set; }
 
         // <summary>
         /// Уровень мощности передачи сигнала.
@@ -19,7 +19,7 @@ namespace ShareTypes.SignalTypes
         /// <summary>
         /// Скорость передачи информации в канале.
         /// </summary>
-        public double Speed { get; private set; }        
+        public double Speed { get; set; }        
 
         /// <summary>
         /// Канал 1
