@@ -11,7 +11,7 @@ namespace R440O.R440OForms.BMB
     using BMA_M_2;
     using Parameters;
     using СостоянияЭлементов.БМБ;
-using System;
+    using System;
 
     public static class BMBParameters
     {
@@ -438,8 +438,7 @@ using System;
 
         private static string ПереданнаяКоманда;
         private static Кнопка _кнопкаПередачаКоманды;
-
-        private static Timer таймерОбновленияФормы = new Timer();
+       
         /// <summary>
         /// Обработка нажатия на клавишу передать команду, с правильным заннулением предыдущих цифр.
         /// </summary>
@@ -459,26 +458,7 @@ using System;
                     ПереданнаяКоманда = НаборКоманды;
             }
             BMA_M_1Parameters.ResetParameters();
-            обновитьФорму();
-            
-        }
-
-        private static void обновитьФорму()
-        {
-            таймерОбновленияФормы.Enabled = false;
-            таймерОбновленияФормы.Stop();
-            таймерОбновленияФормы.Tick += тикТаймераОбновленияФормы;
-            таймерОбновленияФормы.Enabled = true;
-            таймерОбновленияФормы.Interval = 5000;
-            таймерОбновленияФормы.Start();
-        }
-
-        private static void тикТаймераОбновленияФормы(object sender, EventArgs e)
-        {     
-            ResetParameters();
-            таймерОбновленияФормы.Enabled = false;
-            таймерОбновленияФормы.Stop();
-            таймерОбновленияФормы.Tick -= тикТаймераОбновленияФормы;
+            ResetParameters();            
         }
 
         #endregion
@@ -567,7 +547,26 @@ using System;
         }
 
         #endregion
-        
+
+        #region Таймер
+
+        static BMBParameters()
+        {
+            таймерОбновленияФормы.Tick += тикТаймераОбновленияФормы;
+            таймерОбновленияФормы.Enabled = true;
+            таймерОбновленияФормы.Interval = 1000;
+            таймерОбновленияФормы.Start();
+        }
+
+        private static Timer таймерОбновленияФормы = new Timer();
+
+        private static void тикТаймераОбновленияФормы(object sender, EventArgs e)
+        {
+            ResetParameters();
+        }
+
+        #endregion
+
         public static void ResetParameters()
         {
             if (RefreshForm != null) RefreshForm();

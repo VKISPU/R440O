@@ -181,7 +181,7 @@ namespace R440O.R440OForms.K05M_01
                 сигнал.SynchroSequence2 = K05M_01InsideParameters.Переключатель.Синхропоследовательность2;
                 if (K05M_01InsideParameters.ТумблерВ4)
                     сигнал.BarkerCode = K05M_01InsideParameters.ТумблерВ4;
-                сигнал.Level = СтрелкаУровень;
+                //сигнал.Level = СтрелкаУровень;
 
                 if (N18_MParameters.ПереключательПрдБма12 == 9)
                 {
