@@ -779,13 +779,7 @@ namespace R440O.R440OForms.C300M_1
             var tekSpeed = (КнопкиВидРаботы.PressedButton == -1) ? 0 : speed[КнопкиВидРаботы.PressedButton];
 
             return Math.Abs(сигнал.GroupSpeed - tekSpeed) < 0.005;
-        }
-
-
-        public static bool ШирокополосныйСигнал(Signal сигнал)
-        {
-            return сигнал.KulonSignal != null;
-        }
+        }        
 
         public static bool СоответствиеЧастоты(Signal сигнал)
         {
@@ -801,6 +795,11 @@ namespace R440O.R440OForms.C300M_1
                     (ЧастотаПоиска - сигнал.Frequency - 70000) / 10 : -27 + (ЧастотаПоиска - сигнал.Frequency - 70000) / 10;
             }
             return -10000;
+        }
+
+        public static bool ШирокополосныйСигнал(Signal сигнал)
+        {
+            return сигнал.KulonSignal != null;
         }
 
         /// <summary>
