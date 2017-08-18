@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using Newtonsoft.Json;
 namespace ShareTypes.SignalTypes
 {
     public class KulonSignal
@@ -50,10 +50,24 @@ namespace ShareTypes.SignalTypes
         {
             Frequency = frequency;
         }
-
+                
         public KulonSignal()
         {
 
+        }
+
+        [JsonConstructor]
+        public KulonSignal(int Frequency, double Level,  double Speed, Chanel FirstChanel,
+            Chanel SecondChanel, int[] SynchroSequence1, int[] SynchroSequence2, bool BarkerCode)
+        {
+            this.Frequency = Frequency;
+            this.Level = Level;
+            this.Speed = Speed;
+            this.FirstChanel = FirstChanel;
+            this.SecondChanel = SecondChanel;
+            this.SynchroSequence1 = SynchroSequence1;
+            this.SynchroSequence2 = SynchroSequence2;
+            this.BarkerCode = BarkerCode;
         }
 
         private static int[] clone_array(int[] a)
