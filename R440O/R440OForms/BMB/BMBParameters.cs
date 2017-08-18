@@ -457,13 +457,28 @@ namespace R440O.R440OForms.BMB
                 if (ВходнойСигнал != null && (!ЛампочкаДк) && Команда[1] != -1)
                     ПереданнаяКоманда = НаборКоманды;
             }
-            BMA_M_1Parameters.ResetParameters();
-            ResetParameters();            
+            произвестиПередачу();
+        }
+
+        private static IDisposable _таймерПередачиКоманды = null;
+        private static void произвестиПередачу()
+        {
+            if (_таймерПередачиКоманды != null)
+            {
+                _таймерПередачиКоманды.Dispose();
+            }
+            _идетПередачаКоманды = true;
+            _таймерПередачиКоманды = EasyTimer.SetTimeout(() =>
+            {
+                _идетПередачаКоманды = false;
+            }, 3000);
+            BMA_M_1Parameters.ResetParameters();   
         }
 
         #endregion
 
         #region Прием команды
+
         /// <summary>
         /// Вывод информации на тамбло "Прием информации". При передаче по ДК высвечивает 0.
         /// </summary>
@@ -473,10 +488,12 @@ namespace R440O.R440OForms.BMB
             {
                 if (КнопкаПитание == Кнопка.Горит)
                 {
-
-                    return ВходнойСигнал != null && ПереключательПодключениеРезерва == 1 ?
-                        ВходнойСигнал.InformationString :
-                        ПереданнаяКоманда;
+                    if (ВходнойСигнал != null && ПереключательПодключениеРезерва == 1 &&
+                        !string.IsNullOrEmpty(ВходнойСигнал.InformationString))
+                    {
+                        ПереданнаяКоманда = ВходнойСигнал.InformationString;
+                    }
+                    return ПереданнаяКоманда;
                 }
                 else
                     return string.Empty;
@@ -533,13 +550,14 @@ namespace R440O.R440OForms.BMB
             }
         }
 
+        private static bool _идетПередачаКоманды = false;
         public static Chanel ВыходнойСигнал
         {
             get
             {
                 if (ПереключательРаботаКонтроль == 1)
                 {
-                    var сигнал = new Chanel(1.2, ПереданнаяКоманда);
+                    var сигнал = new Chanel(1.2, _идетПередачаКоманды ? ПереданнаяКоманда : "");
                     return сигнал;
                 }
                 return null;
