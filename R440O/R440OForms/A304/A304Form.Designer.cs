@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(A304Form));
             this.A304Panel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ИндикаторНапряжение = new System.Windows.Forms.PictureBox();
@@ -278,6 +279,7 @@
             this.ClientSize = new System.Drawing.Size(902, 622);
             this.Controls.Add(this.A304Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "A304Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

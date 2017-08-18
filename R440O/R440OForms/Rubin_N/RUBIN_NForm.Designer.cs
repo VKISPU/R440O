@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Rubin_NForm));
             this.Rubin_NPanel = new System.Windows.Forms.Panel();
             this.ЛампочкаN1422РезервированиеОткл = new System.Windows.Forms.PictureBox();
             this.ЛампочкаN1422РезервированиеВкл = new System.Windows.Forms.PictureBox();
@@ -778,6 +779,7 @@
             this.ClientSize = new System.Drawing.Size(957, 630);
             this.Controls.Add(this.Rubin_NPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Rubin_NForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

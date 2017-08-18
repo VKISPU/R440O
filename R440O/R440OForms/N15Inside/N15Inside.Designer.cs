@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(N15InsideForm));
             this.Panel = new System.Windows.Forms.Panel();
             this.ПереключательПУЛ48ПРД_2 = new System.Windows.Forms.Button();
             this.ПереключательПУЛ48ПРД_1 = new System.Windows.Forms.Button();
@@ -192,6 +193,7 @@
             this.ClientSize = new System.Drawing.Size(1044, 504);
             this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "N15InsideForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

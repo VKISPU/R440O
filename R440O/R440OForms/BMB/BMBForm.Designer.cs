@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BMBForm));
             this.BMBPanel = new System.Windows.Forms.Panel();
             this.BMBЛампочкаНаправление4 = new System.Windows.Forms.PictureBox();
             this.BMBЛампочкаНаправление3 = new System.Windows.Forms.PictureBox();
@@ -583,6 +584,7 @@
             this.ClientSize = new System.Drawing.Size(954, 455);
             this.Controls.Add(this.BMBPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "BMBForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(K05M_02InsideForm));
             this.K05M_02InsidePanel = new System.Windows.Forms.Panel();
             this.K05M_02InsideПереключатель9 = new System.Windows.Forms.Button();
             this.K05M_02InsideПереключатель8 = new System.Windows.Forms.Button();
@@ -47,6 +48,8 @@
             this.K05M_02InsideТумблер23 = new System.Windows.Forms.Button();
             this.K05M_02InsideТумблер22 = new System.Windows.Forms.Button();
             this.K05M_02InsideТумблер21 = new System.Windows.Forms.Button();
+            this.K05M_02InsideТумблерВ7 = new System.Windows.Forms.Button();
+            this.K05M_02InsideТумблерВ4 = new System.Windows.Forms.Button();
             this.K05M_02InsideТумблер20 = new System.Windows.Forms.Button();
             this.K05M_02InsideТумблер19 = new System.Windows.Forms.Button();
             this.K05M_02InsideТумблер18 = new System.Windows.Forms.Button();
@@ -59,8 +62,6 @@
             this.K05M_02InsideТумблер11 = new System.Windows.Forms.Button();
             this.K05M_02InsideТумблер10 = new System.Windows.Forms.Button();
             this.K05M_02InsideТумблер4 = new System.Windows.Forms.Button();
-            this.K05M_02InsideТумблерВ4 = new System.Windows.Forms.Button();
-            this.K05M_02InsideТумблерВ7 = new System.Windows.Forms.Button();
             this.K05M_02InsidePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -393,6 +394,38 @@
             this.K05M_02InsideТумблер21.UseVisualStyleBackColor = false;
             this.K05M_02InsideТумблер21.MouseDown += new System.Windows.Forms.MouseEventHandler(this.K05M_02InsideТумблер_MouseDown);
             // 
+            // K05M_02InsideТумблерВ7
+            // 
+            this.K05M_02InsideТумблерВ7.BackColor = System.Drawing.Color.Transparent;
+            this.K05M_02InsideТумблерВ7.BackgroundImage = global::R440O.ControlElementImages.tumblerType7Down;
+            this.K05M_02InsideТумблерВ7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.K05M_02InsideТумблерВ7.FlatAppearance.BorderSize = 0;
+            this.K05M_02InsideТумблерВ7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.K05M_02InsideТумблерВ7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.K05M_02InsideТумблерВ7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.K05M_02InsideТумблерВ7.Location = new System.Drawing.Point(355, 611);
+            this.K05M_02InsideТумблерВ7.Name = "K05M_02InsideТумблерВ7";
+            this.K05M_02InsideТумблерВ7.Size = new System.Drawing.Size(55, 48);
+            this.K05M_02InsideТумблерВ7.TabIndex = 39;
+            this.K05M_02InsideТумблерВ7.UseVisualStyleBackColor = false;
+            this.K05M_02InsideТумблерВ7.Click += new System.EventHandler(this.K05M_02InsideТумблерВ7_Click);
+            // 
+            // K05M_02InsideТумблерВ4
+            // 
+            this.K05M_02InsideТумблерВ4.BackColor = System.Drawing.Color.Transparent;
+            this.K05M_02InsideТумблерВ4.BackgroundImage = global::R440O.ControlElementImages.tumblerType7Left;
+            this.K05M_02InsideТумблерВ4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.K05M_02InsideТумблерВ4.FlatAppearance.BorderSize = 0;
+            this.K05M_02InsideТумблерВ4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.K05M_02InsideТумблерВ4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.K05M_02InsideТумблерВ4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.K05M_02InsideТумблерВ4.Location = new System.Drawing.Point(171, 632);
+            this.K05M_02InsideТумблерВ4.Name = "K05M_02InsideТумблерВ4";
+            this.K05M_02InsideТумблерВ4.Size = new System.Drawing.Size(55, 48);
+            this.K05M_02InsideТумблерВ4.TabIndex = 39;
+            this.K05M_02InsideТумблерВ4.UseVisualStyleBackColor = false;
+            this.K05M_02InsideТумблерВ4.Click += new System.EventHandler(this.K05M_02InsideТумблерВ4_Click);
+            // 
             // K05M_02InsideТумблер20
             // 
             this.K05M_02InsideТумблер20.BackColor = System.Drawing.Color.Transparent;
@@ -585,38 +618,6 @@
             this.K05M_02InsideТумблер4.UseVisualStyleBackColor = false;
             this.K05M_02InsideТумблер4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.K05M_02InsideТумблер_MouseDown);
             // 
-            // K05M_02InsideТумблерВ4
-            // 
-            this.K05M_02InsideТумблерВ4.BackColor = System.Drawing.Color.Transparent;
-            this.K05M_02InsideТумблерВ4.BackgroundImage = global::R440O.ControlElementImages.tumblerType7Left;
-            this.K05M_02InsideТумблерВ4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.K05M_02InsideТумблерВ4.FlatAppearance.BorderSize = 0;
-            this.K05M_02InsideТумблерВ4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.K05M_02InsideТумблерВ4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.K05M_02InsideТумблерВ4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.K05M_02InsideТумблерВ4.Location = new System.Drawing.Point(171, 632);
-            this.K05M_02InsideТумблерВ4.Name = "K05M_02InsideТумблерВ4";
-            this.K05M_02InsideТумблерВ4.Size = new System.Drawing.Size(55, 48);
-            this.K05M_02InsideТумблерВ4.TabIndex = 39;
-            this.K05M_02InsideТумблерВ4.UseVisualStyleBackColor = false;
-            this.K05M_02InsideТумблерВ4.Click += new System.EventHandler(this.K05M_02InsideТумблерВ4_Click);
-            // 
-            // K05M_02InsideТумблерВ7
-            // 
-            this.K05M_02InsideТумблерВ7.BackColor = System.Drawing.Color.Transparent;
-            this.K05M_02InsideТумблерВ7.BackgroundImage = global::R440O.ControlElementImages.tumblerType7Down;
-            this.K05M_02InsideТумблерВ7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.K05M_02InsideТумблерВ7.FlatAppearance.BorderSize = 0;
-            this.K05M_02InsideТумблерВ7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.K05M_02InsideТумблерВ7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.K05M_02InsideТумблерВ7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.K05M_02InsideТумблерВ7.Location = new System.Drawing.Point(355, 611);
-            this.K05M_02InsideТумблерВ7.Name = "K05M_02InsideТумблерВ7";
-            this.K05M_02InsideТумблерВ7.Size = new System.Drawing.Size(55, 48);
-            this.K05M_02InsideТумблерВ7.TabIndex = 39;
-            this.K05M_02InsideТумблерВ7.UseVisualStyleBackColor = false;
-            this.K05M_02InsideТумблерВ7.Click += new System.EventHandler(this.K05M_02InsideТумблерВ7_Click);
-            // 
             // K05M_02InsideForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -625,6 +626,7 @@
             this.ClientSize = new System.Drawing.Size(528, 685);
             this.Controls.Add(this.K05M_02InsidePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "K05M_02InsideForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

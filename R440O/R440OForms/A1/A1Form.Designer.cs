@@ -28,39 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(A1Form));
             this.Panel = new System.Windows.Forms.Panel();
+            this.ЛампочкаНеиспр = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаФСПК = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаПитание = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаПУЛ3_2 = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаПУЛ3_1 = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаЭП3 = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаПУЛ2_2 = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаПУЛ2_1 = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаЭП2 = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаПУЛ1_2 = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаПУЛ1_1 = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаЭП1 = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаТКААвария = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаБОЧ = new System.Windows.Forms.PictureBox();
             this.ТумблерМуДу = new System.Windows.Forms.Button();
             this.КнопкаСкоростьГР = new System.Windows.Forms.Button();
             this.КнопкаСкоростьАБ_1ТЛФ_К = new System.Windows.Forms.Button();
-            this.ЛампочкаБОЧ = new System.Windows.Forms.PictureBox();
-            this.ЛампочкаТКААвария = new System.Windows.Forms.PictureBox();
-            this.ЛампочкаЭП1 = new System.Windows.Forms.PictureBox();
-            this.ЛампочкаПУЛ1_1 = new System.Windows.Forms.PictureBox();
-            this.ЛампочкаПУЛ1_2 = new System.Windows.Forms.PictureBox();
-            this.ЛампочкаЭП2 = new System.Windows.Forms.PictureBox();
-            this.ЛампочкаПУЛ2_1 = new System.Windows.Forms.PictureBox();
-            this.ЛампочкаПУЛ2_2 = new System.Windows.Forms.PictureBox();
-            this.ЛампочкаЭП3 = new System.Windows.Forms.PictureBox();
-            this.ЛампочкаПУЛ3_1 = new System.Windows.Forms.PictureBox();
-            this.ЛампочкаПУЛ3_2 = new System.Windows.Forms.PictureBox();
-            this.ЛампочкаПитание = new System.Windows.Forms.PictureBox();
-            this.ЛампочкаФСПК = new System.Windows.Forms.PictureBox();
-            this.ЛампочкаНеиспр = new System.Windows.Forms.PictureBox();
             this.Panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаБОЧ)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаТКААвария)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаЭП1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПУЛ1_1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПУЛ1_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаЭП2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПУЛ2_1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПУЛ2_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаЭП3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПУЛ3_1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПУЛ3_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПитание)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаФСПК)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаНеиспр)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаФСПК)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПитание)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПУЛ3_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПУЛ3_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаЭП3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПУЛ2_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПУЛ2_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаЭП2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПУЛ1_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПУЛ1_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаЭП1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаТКААвария)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаБОЧ)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel
@@ -88,6 +89,146 @@
             this.Panel.Name = "Panel";
             this.Panel.Size = new System.Drawing.Size(1104, 354);
             this.Panel.TabIndex = 0;
+            // 
+            // ЛампочкаНеиспр
+            // 
+            this.ЛампочкаНеиспр.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаНеиспр.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ЛампочкаНеиспр.Location = new System.Drawing.Point(984, 84);
+            this.ЛампочкаНеиспр.Name = "ЛампочкаНеиспр";
+            this.ЛампочкаНеиспр.Size = new System.Drawing.Size(16, 16);
+            this.ЛампочкаНеиспр.TabIndex = 65;
+            this.ЛампочкаНеиспр.TabStop = false;
+            // 
+            // ЛампочкаФСПК
+            // 
+            this.ЛампочкаФСПК.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаФСПК.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ЛампочкаФСПК.Location = new System.Drawing.Point(189, 86);
+            this.ЛампочкаФСПК.Name = "ЛампочкаФСПК";
+            this.ЛампочкаФСПК.Size = new System.Drawing.Size(16, 16);
+            this.ЛампочкаФСПК.TabIndex = 64;
+            this.ЛампочкаФСПК.TabStop = false;
+            // 
+            // ЛампочкаПитание
+            // 
+            this.ЛампочкаПитание.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаПитание.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ЛампочкаПитание.Location = new System.Drawing.Point(728, 89);
+            this.ЛампочкаПитание.Name = "ЛампочкаПитание";
+            this.ЛампочкаПитание.Size = new System.Drawing.Size(16, 16);
+            this.ЛампочкаПитание.TabIndex = 63;
+            this.ЛампочкаПитание.TabStop = false;
+            // 
+            // ЛампочкаПУЛ3_2
+            // 
+            this.ЛампочкаПУЛ3_2.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаПУЛ3_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ЛампочкаПУЛ3_2.Location = new System.Drawing.Point(405, 87);
+            this.ЛампочкаПУЛ3_2.Name = "ЛампочкаПУЛ3_2";
+            this.ЛампочкаПУЛ3_2.Size = new System.Drawing.Size(16, 16);
+            this.ЛампочкаПУЛ3_2.TabIndex = 62;
+            this.ЛампочкаПУЛ3_2.TabStop = false;
+            // 
+            // ЛампочкаПУЛ3_1
+            // 
+            this.ЛампочкаПУЛ3_1.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаПУЛ3_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ЛампочкаПУЛ3_1.Location = new System.Drawing.Point(405, 69);
+            this.ЛампочкаПУЛ3_1.Name = "ЛампочкаПУЛ3_1";
+            this.ЛампочкаПУЛ3_1.Size = new System.Drawing.Size(16, 16);
+            this.ЛампочкаПУЛ3_1.TabIndex = 61;
+            this.ЛампочкаПУЛ3_1.TabStop = false;
+            // 
+            // ЛампочкаЭП3
+            // 
+            this.ЛампочкаЭП3.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаЭП3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ЛампочкаЭП3.Location = new System.Drawing.Point(374, 70);
+            this.ЛампочкаЭП3.Name = "ЛампочкаЭП3";
+            this.ЛампочкаЭП3.Size = new System.Drawing.Size(16, 16);
+            this.ЛампочкаЭП3.TabIndex = 60;
+            this.ЛампочкаЭП3.TabStop = false;
+            // 
+            // ЛампочкаПУЛ2_2
+            // 
+            this.ЛампочкаПУЛ2_2.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаПУЛ2_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ЛампочкаПУЛ2_2.Location = new System.Drawing.Point(343, 87);
+            this.ЛампочкаПУЛ2_2.Name = "ЛампочкаПУЛ2_2";
+            this.ЛампочкаПУЛ2_2.Size = new System.Drawing.Size(16, 16);
+            this.ЛампочкаПУЛ2_2.TabIndex = 59;
+            this.ЛампочкаПУЛ2_2.TabStop = false;
+            // 
+            // ЛампочкаПУЛ2_1
+            // 
+            this.ЛампочкаПУЛ2_1.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаПУЛ2_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ЛампочкаПУЛ2_1.Location = new System.Drawing.Point(344, 69);
+            this.ЛампочкаПУЛ2_1.Name = "ЛампочкаПУЛ2_1";
+            this.ЛампочкаПУЛ2_1.Size = new System.Drawing.Size(16, 16);
+            this.ЛампочкаПУЛ2_1.TabIndex = 58;
+            this.ЛампочкаПУЛ2_1.TabStop = false;
+            // 
+            // ЛампочкаЭП2
+            // 
+            this.ЛампочкаЭП2.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаЭП2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ЛампочкаЭП2.Location = new System.Drawing.Point(311, 69);
+            this.ЛампочкаЭП2.Name = "ЛампочкаЭП2";
+            this.ЛампочкаЭП2.Size = new System.Drawing.Size(16, 16);
+            this.ЛампочкаЭП2.TabIndex = 57;
+            this.ЛампочкаЭП2.TabStop = false;
+            // 
+            // ЛампочкаПУЛ1_2
+            // 
+            this.ЛампочкаПУЛ1_2.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаПУЛ1_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ЛампочкаПУЛ1_2.Location = new System.Drawing.Point(280, 87);
+            this.ЛампочкаПУЛ1_2.Name = "ЛампочкаПУЛ1_2";
+            this.ЛампочкаПУЛ1_2.Size = new System.Drawing.Size(16, 16);
+            this.ЛампочкаПУЛ1_2.TabIndex = 56;
+            this.ЛампочкаПУЛ1_2.TabStop = false;
+            // 
+            // ЛампочкаПУЛ1_1
+            // 
+            this.ЛампочкаПУЛ1_1.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаПУЛ1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ЛампочкаПУЛ1_1.Location = new System.Drawing.Point(280, 69);
+            this.ЛампочкаПУЛ1_1.Name = "ЛампочкаПУЛ1_1";
+            this.ЛампочкаПУЛ1_1.Size = new System.Drawing.Size(16, 16);
+            this.ЛампочкаПУЛ1_1.TabIndex = 55;
+            this.ЛампочкаПУЛ1_1.TabStop = false;
+            // 
+            // ЛампочкаЭП1
+            // 
+            this.ЛампочкаЭП1.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаЭП1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ЛампочкаЭП1.Location = new System.Drawing.Point(249, 69);
+            this.ЛампочкаЭП1.Name = "ЛампочкаЭП1";
+            this.ЛампочкаЭП1.Size = new System.Drawing.Size(16, 16);
+            this.ЛампочкаЭП1.TabIndex = 54;
+            this.ЛампочкаЭП1.TabStop = false;
+            // 
+            // ЛампочкаТКААвария
+            // 
+            this.ЛампочкаТКААвария.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаТКААвария.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ЛампочкаТКААвария.Location = new System.Drawing.Point(219, 153);
+            this.ЛампочкаТКААвария.Name = "ЛампочкаТКААвария";
+            this.ЛампочкаТКААвария.Size = new System.Drawing.Size(16, 16);
+            this.ЛампочкаТКААвария.TabIndex = 53;
+            this.ЛампочкаТКААвария.TabStop = false;
+            // 
+            // ЛампочкаБОЧ
+            // 
+            this.ЛампочкаБОЧ.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаБОЧ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ЛампочкаБОЧ.Location = new System.Drawing.Point(95, 68);
+            this.ЛампочкаБОЧ.Name = "ЛампочкаБОЧ";
+            this.ЛампочкаБОЧ.Size = new System.Drawing.Size(16, 16);
+            this.ЛампочкаБОЧ.TabIndex = 52;
+            this.ЛампочкаБОЧ.TabStop = false;
             // 
             // ТумблерМуДу
             // 
@@ -137,146 +278,6 @@
             this.КнопкаСкоростьАБ_1ТЛФ_К.UseVisualStyleBackColor = false;
             this.КнопкаСкоростьАБ_1ТЛФ_К.Click += new System.EventHandler(this.КнопкаСкоростьАБ_1ТЛФ_К_Click);
             // 
-            // ЛампочкаБОЧ
-            // 
-            this.ЛампочкаБОЧ.BackColor = System.Drawing.Color.Transparent;
-            this.ЛампочкаБОЧ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаБОЧ.Location = new System.Drawing.Point(95, 68);
-            this.ЛампочкаБОЧ.Name = "ЛампочкаБОЧ";
-            this.ЛампочкаБОЧ.Size = new System.Drawing.Size(16, 16);
-            this.ЛампочкаБОЧ.TabIndex = 52;
-            this.ЛампочкаБОЧ.TabStop = false;
-            // 
-            // ЛампочкаТКААвария
-            // 
-            this.ЛампочкаТКААвария.BackColor = System.Drawing.Color.Transparent;
-            this.ЛампочкаТКААвария.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаТКААвария.Location = new System.Drawing.Point(219, 153);
-            this.ЛампочкаТКААвария.Name = "ЛампочкаТКААвария";
-            this.ЛампочкаТКААвария.Size = new System.Drawing.Size(16, 16);
-            this.ЛампочкаТКААвария.TabIndex = 53;
-            this.ЛампочкаТКААвария.TabStop = false;
-            // 
-            // ЛампочкаЭП1
-            // 
-            this.ЛампочкаЭП1.BackColor = System.Drawing.Color.Transparent;
-            this.ЛампочкаЭП1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаЭП1.Location = new System.Drawing.Point(249, 69);
-            this.ЛампочкаЭП1.Name = "ЛампочкаЭП1";
-            this.ЛампочкаЭП1.Size = new System.Drawing.Size(16, 16);
-            this.ЛампочкаЭП1.TabIndex = 54;
-            this.ЛампочкаЭП1.TabStop = false;
-            // 
-            // ЛампочкаПУЛ1_1
-            // 
-            this.ЛампочкаПУЛ1_1.BackColor = System.Drawing.Color.Transparent;
-            this.ЛампочкаПУЛ1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаПУЛ1_1.Location = new System.Drawing.Point(280, 69);
-            this.ЛампочкаПУЛ1_1.Name = "ЛампочкаПУЛ1_1";
-            this.ЛампочкаПУЛ1_1.Size = new System.Drawing.Size(16, 16);
-            this.ЛампочкаПУЛ1_1.TabIndex = 55;
-            this.ЛампочкаПУЛ1_1.TabStop = false;
-            // 
-            // ЛампочкаПУЛ1_2
-            // 
-            this.ЛампочкаПУЛ1_2.BackColor = System.Drawing.Color.Transparent;
-            this.ЛампочкаПУЛ1_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаПУЛ1_2.Location = new System.Drawing.Point(280, 87);
-            this.ЛампочкаПУЛ1_2.Name = "ЛампочкаПУЛ1_2";
-            this.ЛампочкаПУЛ1_2.Size = new System.Drawing.Size(16, 16);
-            this.ЛампочкаПУЛ1_2.TabIndex = 56;
-            this.ЛампочкаПУЛ1_2.TabStop = false;
-            // 
-            // ЛампочкаЭП2
-            // 
-            this.ЛампочкаЭП2.BackColor = System.Drawing.Color.Transparent;
-            this.ЛампочкаЭП2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаЭП2.Location = new System.Drawing.Point(311, 69);
-            this.ЛампочкаЭП2.Name = "ЛампочкаЭП2";
-            this.ЛампочкаЭП2.Size = new System.Drawing.Size(16, 16);
-            this.ЛампочкаЭП2.TabIndex = 57;
-            this.ЛампочкаЭП2.TabStop = false;
-            // 
-            // ЛампочкаПУЛ2_1
-            // 
-            this.ЛампочкаПУЛ2_1.BackColor = System.Drawing.Color.Transparent;
-            this.ЛампочкаПУЛ2_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаПУЛ2_1.Location = new System.Drawing.Point(344, 69);
-            this.ЛампочкаПУЛ2_1.Name = "ЛампочкаПУЛ2_1";
-            this.ЛампочкаПУЛ2_1.Size = new System.Drawing.Size(16, 16);
-            this.ЛампочкаПУЛ2_1.TabIndex = 58;
-            this.ЛампочкаПУЛ2_1.TabStop = false;
-            // 
-            // ЛампочкаПУЛ2_2
-            // 
-            this.ЛампочкаПУЛ2_2.BackColor = System.Drawing.Color.Transparent;
-            this.ЛампочкаПУЛ2_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаПУЛ2_2.Location = new System.Drawing.Point(343, 87);
-            this.ЛампочкаПУЛ2_2.Name = "ЛампочкаПУЛ2_2";
-            this.ЛампочкаПУЛ2_2.Size = new System.Drawing.Size(16, 16);
-            this.ЛампочкаПУЛ2_2.TabIndex = 59;
-            this.ЛампочкаПУЛ2_2.TabStop = false;
-            // 
-            // ЛампочкаЭП3
-            // 
-            this.ЛампочкаЭП3.BackColor = System.Drawing.Color.Transparent;
-            this.ЛампочкаЭП3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаЭП3.Location = new System.Drawing.Point(374, 70);
-            this.ЛампочкаЭП3.Name = "ЛампочкаЭП3";
-            this.ЛампочкаЭП3.Size = new System.Drawing.Size(16, 16);
-            this.ЛампочкаЭП3.TabIndex = 60;
-            this.ЛампочкаЭП3.TabStop = false;
-            // 
-            // ЛампочкаПУЛ3_1
-            // 
-            this.ЛампочкаПУЛ3_1.BackColor = System.Drawing.Color.Transparent;
-            this.ЛампочкаПУЛ3_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаПУЛ3_1.Location = new System.Drawing.Point(405, 69);
-            this.ЛампочкаПУЛ3_1.Name = "ЛампочкаПУЛ3_1";
-            this.ЛампочкаПУЛ3_1.Size = new System.Drawing.Size(16, 16);
-            this.ЛампочкаПУЛ3_1.TabIndex = 61;
-            this.ЛампочкаПУЛ3_1.TabStop = false;
-            // 
-            // ЛампочкаПУЛ3_2
-            // 
-            this.ЛампочкаПУЛ3_2.BackColor = System.Drawing.Color.Transparent;
-            this.ЛампочкаПУЛ3_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаПУЛ3_2.Location = new System.Drawing.Point(405, 87);
-            this.ЛампочкаПУЛ3_2.Name = "ЛампочкаПУЛ3_2";
-            this.ЛампочкаПУЛ3_2.Size = new System.Drawing.Size(16, 16);
-            this.ЛампочкаПУЛ3_2.TabIndex = 62;
-            this.ЛампочкаПУЛ3_2.TabStop = false;
-            // 
-            // ЛампочкаПитание
-            // 
-            this.ЛампочкаПитание.BackColor = System.Drawing.Color.Transparent;
-            this.ЛампочкаПитание.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаПитание.Location = new System.Drawing.Point(728, 89);
-            this.ЛампочкаПитание.Name = "ЛампочкаПитание";
-            this.ЛампочкаПитание.Size = new System.Drawing.Size(16, 16);
-            this.ЛампочкаПитание.TabIndex = 63;
-            this.ЛампочкаПитание.TabStop = false;
-            // 
-            // ЛампочкаФСПК
-            // 
-            this.ЛампочкаФСПК.BackColor = System.Drawing.Color.Transparent;
-            this.ЛампочкаФСПК.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаФСПК.Location = new System.Drawing.Point(189, 86);
-            this.ЛампочкаФСПК.Name = "ЛампочкаФСПК";
-            this.ЛампочкаФСПК.Size = new System.Drawing.Size(16, 16);
-            this.ЛампочкаФСПК.TabIndex = 64;
-            this.ЛампочкаФСПК.TabStop = false;
-            // 
-            // ЛампочкаНеиспр
-            // 
-            this.ЛампочкаНеиспр.BackColor = System.Drawing.Color.Transparent;
-            this.ЛампочкаНеиспр.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаНеиспр.Location = new System.Drawing.Point(984, 84);
-            this.ЛампочкаНеиспр.Name = "ЛампочкаНеиспр";
-            this.ЛампочкаНеиспр.Size = new System.Drawing.Size(16, 16);
-            this.ЛампочкаНеиспр.TabIndex = 65;
-            this.ЛампочкаНеиспр.TabStop = false;
-            // 
             // A1Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,25 +285,26 @@
             this.ClientSize = new System.Drawing.Size(1102, 351);
             this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.Name = "A1Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "A1";
             this.Panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаБОЧ)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаТКААвария)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаЭП1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПУЛ1_1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПУЛ1_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаЭП2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПУЛ2_1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПУЛ2_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаЭП3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПУЛ3_1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПУЛ3_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПитание)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаФСПК)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаНеиспр)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаФСПК)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПитание)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПУЛ3_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПУЛ3_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаЭП3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПУЛ2_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПУЛ2_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаЭП2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПУЛ1_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПУЛ1_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаЭП1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаТКААвария)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаБОЧ)).EndInit();
             this.ResumeLayout(false);
 
         }

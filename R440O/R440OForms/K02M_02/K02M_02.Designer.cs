@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(K02M_02Form));
             this.K02M_02Panel = new System.Windows.Forms.Panel();
             this.K02M_02ЛампочкаИнформ = new System.Windows.Forms.PictureBox();
             this.K02M_02ЛампочкаПилот = new System.Windows.Forms.PictureBox();
@@ -233,6 +234,7 @@
             this.ClientSize = new System.Drawing.Size(494, 708);
             this.Controls.Add(this.K02M_02Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "K02M_02Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

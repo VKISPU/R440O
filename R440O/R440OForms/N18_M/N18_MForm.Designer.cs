@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(N18_MForm));
             this.ТумблерДАБ5 = new System.Windows.Forms.Button();
             this.ТумблерКАУ_ПРМ = new System.Windows.Forms.Button();
             this.ТумблерПРД_СС = new System.Windows.Forms.Button();
@@ -1700,6 +1701,7 @@
             this.ClientSize = new System.Drawing.Size(485, 715);
             this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "N18_MForm";
             this.Text = "Н18-М";

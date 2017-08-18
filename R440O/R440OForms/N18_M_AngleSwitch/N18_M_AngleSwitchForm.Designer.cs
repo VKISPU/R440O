@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(N18_M_AngleSwitchForm));
             this.ГнездоК12 = new System.Windows.Forms.Button();
             this.ГнездоК11 = new System.Windows.Forms.Button();
             this.ГнездоПРМ4 = new System.Windows.Forms.Button();
@@ -146,6 +147,7 @@
             this.Controls.Add(this.ГнездоК11);
             this.Controls.Add(this.ГнездоК12);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "N18_M_AngleSwitchForm";
             this.Text = "УГОЛКОВЫЙ КОММУТАТОР";
             this.ResumeLayout(false);

@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(K04M_01Form));
             this.K04M_01Panel = new System.Windows.Forms.Panel();
+            this.Крышка = new System.Windows.Forms.Button();
             this.ПереключательПрмКгц100 = new System.Windows.Forms.Button();
             this.ПереключательПрмМгц = new System.Windows.Forms.Button();
             this.ПереключательПрдКгц1 = new System.Windows.Forms.Button();
             this.ПереключательПрдКгц10 = new System.Windows.Forms.Button();
             this.ПереключательПрдКгц100 = new System.Windows.Forms.Button();
             this.ПереключательПрдМгц = new System.Windows.Forms.Button();
-            this.Крышка = new System.Windows.Forms.Button();
             this.K04M_01Panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +55,21 @@
             this.K04M_01Panel.Name = "K04M_01Panel";
             this.K04M_01Panel.Size = new System.Drawing.Size(496, 707);
             this.K04M_01Panel.TabIndex = 0;
+            // 
+            // Крышка
+            // 
+            this.Крышка.BackColor = System.Drawing.Color.Transparent;
+            this.Крышка.BackgroundImage = global::R440O.ControlElementImages.kulonCover;
+            this.Крышка.FlatAppearance.BorderSize = 0;
+            this.Крышка.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.Крышка.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Крышка.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Крышка.Location = new System.Drawing.Point(126, 92);
+            this.Крышка.Name = "Крышка";
+            this.Крышка.Size = new System.Drawing.Size(356, 559);
+            this.Крышка.TabIndex = 44;
+            this.Крышка.UseVisualStyleBackColor = false;
+            this.Крышка.Click += new System.EventHandler(this.Крышка_Click);
             // 
             // ПереключательПрмКгц100
             // 
@@ -151,21 +167,6 @@
             this.ПереключательПрдМгц.UseVisualStyleBackColor = false;
             this.ПереключательПрдМгц.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Переключатель_MouseDown);
             // 
-            // Крышка
-            // 
-            this.Крышка.BackColor = System.Drawing.Color.Transparent;
-            this.Крышка.BackgroundImage = global::R440O.ControlElementImages.kulonCover;
-            this.Крышка.FlatAppearance.BorderSize = 0;
-            this.Крышка.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.Крышка.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Крышка.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Крышка.Location = new System.Drawing.Point(126, 92);
-            this.Крышка.Name = "Крышка";
-            this.Крышка.Size = new System.Drawing.Size(356, 559);
-            this.Крышка.TabIndex = 44;
-            this.Крышка.UseVisualStyleBackColor = false;
-            this.Крышка.Click += new System.EventHandler(this.Крышка_Click);
-            // 
             // K04M_01Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,6 +174,7 @@
             this.ClientSize = new System.Drawing.Size(494, 708);
             this.Controls.Add(this.K04M_01Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "K04M_01Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

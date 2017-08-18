@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(B2_1Form));
             this.Panel = new System.Windows.Forms.Panel();
             this.КолодкаТКСпр2_2 = new System.Windows.Forms.Button();
             this.КолодкаТКСпр2_1 = new System.Windows.Forms.Button();
@@ -144,7 +145,7 @@
             this.КолодкаТКСпр2_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаТКСпр2_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаТКСпр2_2.Location = new System.Drawing.Point(306, 144);
-            this.КолодкаТКСпр2_2.Name = "КолодкаТКСпр22";
+            this.КолодкаТКСпр2_2.Name = "КолодкаТКСпр2_2";
             this.КолодкаТКСпр2_2.Size = new System.Drawing.Size(30, 68);
             this.КолодкаТКСпр2_2.TabIndex = 48;
             this.КолодкаТКСпр2_2.UseVisualStyleBackColor = false;
@@ -159,7 +160,7 @@
             this.КолодкаТКСпр2_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаТКСпр2_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаТКСпр2_1.Location = new System.Drawing.Point(306, 114);
-            this.КолодкаТКСпр2_1.Name = "КолодкаТКСпр21";
+            this.КолодкаТКСпр2_1.Name = "КолодкаТКСпр2_1";
             this.КолодкаТКСпр2_1.Size = new System.Drawing.Size(30, 68);
             this.КолодкаТКСпр2_1.TabIndex = 47;
             this.КолодкаТКСпр2_1.UseVisualStyleBackColor = false;
@@ -174,7 +175,7 @@
             this.КолодкаТЛГпр_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаТЛГпр_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаТЛГпр_2.Location = new System.Drawing.Point(275, 144);
-            this.КолодкаТЛГпр_2.Name = "КолодкаТЛГпр2";
+            this.КолодкаТЛГпр_2.Name = "КолодкаТЛГпр_2";
             this.КолодкаТЛГпр_2.Size = new System.Drawing.Size(30, 68);
             this.КолодкаТЛГпр_2.TabIndex = 46;
             this.КолодкаТЛГпр_2.UseVisualStyleBackColor = false;
@@ -189,7 +190,7 @@
             this.КолодкаТЛГпр_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КолодкаТЛГпр_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.КолодкаТЛГпр_1.Location = new System.Drawing.Point(275, 114);
-            this.КолодкаТЛГпр_1.Name = "КолодкаТЛГпр1";
+            this.КолодкаТЛГпр_1.Name = "КолодкаТЛГпр_1";
             this.КолодкаТЛГпр_1.Size = new System.Drawing.Size(30, 68);
             this.КолодкаТЛГпр_1.TabIndex = 45;
             this.КолодкаТЛГпр_1.UseVisualStyleBackColor = false;
@@ -659,15 +660,16 @@
             this.КнопкаБК11.UseVisualStyleBackColor = false;
             this.КнопкаБК11.Click += new System.EventHandler(this.КнопкаБК_Click);
             // 
-            // Form
+            // B2_1Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 351);
             this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Form";
+            this.Name = "B2_1Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Б2-1";
             this.Panel.ResumeLayout(false);

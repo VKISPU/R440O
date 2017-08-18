@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PowerCabelForm));
             this.Panel = new System.Windows.Forms.Panel();
             this.КабельСеть = new System.Windows.Forms.Button();
             this.ТумблерОсвещение = new System.Windows.Forms.Button();
@@ -83,6 +84,7 @@
             this.ClientSize = new System.Drawing.Size(862, 648);
             this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "PowerCabelForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

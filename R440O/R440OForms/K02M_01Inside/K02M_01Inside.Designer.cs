@@ -28,22 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(K02M_01InsideForm));
             this.Panel = new System.Windows.Forms.Panel();
             this.ТумблерБ5 = new System.Windows.Forms.Button();
             this.Panel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // K02M_01InsidePanel
+            // Panel
             // 
             this.Panel.BackgroundImage = global::R440O.BackgroundImages.K02M_01_inside;
             this.Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Panel.Controls.Add(this.ТумблерБ5);
             this.Panel.Location = new System.Drawing.Point(0, 0);
-            this.Panel.Name = "K02M_01InsidePanel";
+            this.Panel.Name = "Panel";
             this.Panel.Size = new System.Drawing.Size(766, 696);
             this.Panel.TabIndex = 0;
             // 
-            // K02M_01InsideТумблерБ5
+            // ТумблерБ5
             // 
             this.ТумблерБ5.BackColor = System.Drawing.Color.Transparent;
             this.ТумблерБ5.BackgroundImage = global::R440O.ControlElementImages.tumblerType7Left;
@@ -53,7 +54,7 @@
             this.ТумблерБ5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.ТумблерБ5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ТумблерБ5.Location = new System.Drawing.Point(202, 561);
-            this.ТумблерБ5.Name = "K02M_01InsideТумблерБ5";
+            this.ТумблерБ5.Name = "ТумблерБ5";
             this.ТумблерБ5.Size = new System.Drawing.Size(71, 71);
             this.ТумблерБ5.TabIndex = 36;
             this.ТумблерБ5.UseVisualStyleBackColor = false;
@@ -66,6 +67,7 @@
             this.ClientSize = new System.Drawing.Size(765, 696);
             this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "K02M_01InsideForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

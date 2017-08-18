@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kontur_P3Form));
             this.Kontur_P3Panel = new System.Windows.Forms.Panel();
             this.ТаблоКП2Группа = new System.Windows.Forms.Button();
             this.ТаблоКП2Информация2 = new System.Windows.Forms.Button();
@@ -1441,6 +1442,7 @@
             this.ClientSize = new System.Drawing.Size(1106, 405);
             this.Controls.Add(this.Kontur_P3Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Kontur_P3Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

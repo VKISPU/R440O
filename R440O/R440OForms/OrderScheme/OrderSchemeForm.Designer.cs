@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderSchemeForm));
             this.OrderSchemePanel = new System.Windows.Forms.Panel();
+            this.ПриемНомерКаналаТЛГ = new System.Windows.Forms.Label();
+            this.ПриемНомерКаналаТЛФ = new System.Windows.Forms.Label();
             this.ПриемНомерГруппы1 = new System.Windows.Forms.Label();
             this.ПриемНомерПотока1 = new System.Windows.Forms.Label();
             this.ПриемУсловныйНомерВолны1 = new System.Windows.Forms.Label();
@@ -42,8 +45,6 @@
             this.ПередачаУсловныйНомерВолны3 = new System.Windows.Forms.Label();
             this.ПередачаУсловныйНомерВолны2 = new System.Windows.Forms.Label();
             this.ПередачаУсловныйНомерВолны1 = new System.Windows.Forms.Label();
-            this.ПриемНомерКаналаТЛФ = new System.Windows.Forms.Label();
-            this.ПриемНомерКаналаТЛГ = new System.Windows.Forms.Label();
             this.OrderSchemePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +72,28 @@
             this.OrderSchemePanel.Name = "OrderSchemePanel";
             this.OrderSchemePanel.Size = new System.Drawing.Size(1089, 749);
             this.OrderSchemePanel.TabIndex = 4;
+            // 
+            // ПриемНомерКаналаТЛГ
+            // 
+            this.ПриемНомерКаналаТЛГ.AutoSize = true;
+            this.ПриемНомерКаналаТЛГ.BackColor = System.Drawing.Color.Transparent;
+            this.ПриемНомерКаналаТЛГ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.ПриемНомерКаналаТЛГ.Location = new System.Drawing.Point(414, 552);
+            this.ПриемНомерКаналаТЛГ.Name = "ПриемНомерКаналаТЛГ";
+            this.ПриемНомерКаналаТЛГ.Size = new System.Drawing.Size(13, 13);
+            this.ПриемНомерКаналаТЛГ.TabIndex = 11;
+            this.ПриемНомерКаналаТЛГ.Text = "1";
+            // 
+            // ПриемНомерКаналаТЛФ
+            // 
+            this.ПриемНомерКаналаТЛФ.AutoSize = true;
+            this.ПриемНомерКаналаТЛФ.BackColor = System.Drawing.Color.Transparent;
+            this.ПриемНомерКаналаТЛФ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.ПриемНомерКаналаТЛФ.Location = new System.Drawing.Point(414, 527);
+            this.ПриемНомерКаналаТЛФ.Name = "ПриемНомерКаналаТЛФ";
+            this.ПриемНомерКаналаТЛФ.Size = new System.Drawing.Size(13, 13);
+            this.ПриемНомерКаналаТЛФ.TabIndex = 11;
+            this.ПриемНомерКаналаТЛФ.Text = "1";
             // 
             // ПриемНомерГруппы1
             // 
@@ -215,28 +238,6 @@
             this.ПередачаУсловныйНомерВолны1.TabIndex = 0;
             this.ПередачаУсловныйНомерВолны1.Text = "1";
             // 
-            // ПриемНомерКаналаТЛФ
-            // 
-            this.ПриемНомерКаналаТЛФ.AutoSize = true;
-            this.ПриемНомерКаналаТЛФ.BackColor = System.Drawing.Color.Transparent;
-            this.ПриемНомерКаналаТЛФ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.ПриемНомерКаналаТЛФ.Location = new System.Drawing.Point(414, 527);
-            this.ПриемНомерКаналаТЛФ.Name = "ПриемНомерКаналаТЛФ";
-            this.ПриемНомерКаналаТЛФ.Size = new System.Drawing.Size(13, 13);
-            this.ПриемНомерКаналаТЛФ.TabIndex = 11;
-            this.ПриемНомерКаналаТЛФ.Text = "1";
-            // 
-            // ПриемНомерКаналаТЛГ
-            // 
-            this.ПриемНомерКаналаТЛГ.AutoSize = true;
-            this.ПриемНомерКаналаТЛГ.BackColor = System.Drawing.Color.Transparent;
-            this.ПриемНомерКаналаТЛГ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.ПриемНомерКаналаТЛГ.Location = new System.Drawing.Point(414, 552);
-            this.ПриемНомерКаналаТЛГ.Name = "ПриемНомерКаналаТЛГ";
-            this.ПриемНомерКаналаТЛГ.Size = new System.Drawing.Size(13, 13);
-            this.ПриемНомерКаналаТЛГ.TabIndex = 11;
-            this.ПриемНомерКаналаТЛГ.Text = "1";
-            // 
             // OrderSchemeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,6 +245,7 @@
             this.ClientSize = new System.Drawing.Size(1092, 741);
             this.Controls.Add(this.OrderSchemePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "OrderSchemeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

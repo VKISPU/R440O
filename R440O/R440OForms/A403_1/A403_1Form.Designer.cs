@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(A403_1Form));
             this.Panel = new System.Windows.Forms.Panel();
             this.Values = new System.Windows.Forms.Button();
             this.richTextBoxValues = new System.Windows.Forms.RichTextBox();
@@ -745,6 +746,7 @@
             this.ClientSize = new System.Drawing.Size(684, 578);
             this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "A403_1Form";
             this.Text = "A403-1";

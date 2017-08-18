@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(N12SForm));
             this.Panel = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.ПотенциометрAlphaV = new System.Windows.Forms.PictureBox();
@@ -424,6 +425,7 @@
             this.ClientSize = new System.Drawing.Size(769, 463);
             this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.Name = "N12SForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PowerShieldForm));
             this.PowerShieldPanel = new System.Windows.Forms.Panel();
             this.КнопкаТЛФ_ТЧ = new System.Windows.Forms.Button();
             this.PowerShieldPanel.SuspendLayout();
@@ -64,6 +65,7 @@
             this.ClientSize = new System.Drawing.Size(969, 733);
             this.Controls.Add(this.PowerShieldPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "PowerShieldForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

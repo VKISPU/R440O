@@ -28,7 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(C1_67Form));
             this.C1_67Panel = new System.Windows.Forms.Panel();
+            this.C1_67ПереключательСинхронизация2_4 = new System.Windows.Forms.Button();
+            this.C1_67ПереключательСинхронизация2_2 = new System.Windows.Forms.Button();
+            this.C1_67ПереключательСинхронизация2_3 = new System.Windows.Forms.Button();
+            this.C1_67ПереключательСинхронизация2_1 = new System.Windows.Forms.Button();
+            this.C1_67ПереключательСинхронизация1_4 = new System.Windows.Forms.Button();
+            this.C1_67ПереключательСинхронизация1_2 = new System.Windows.Forms.Button();
+            this.C1_67ПереключательСинхронизация1_3 = new System.Windows.Forms.Button();
+            this.C1_67ПереключательСинхронизация1_1 = new System.Windows.Forms.Button();
             this.C1_67РегуляторСинхронизация = new System.Windows.Forms.Button();
             this.C1_67РегуляторУсиление = new System.Windows.Forms.Button();
             this.C1_67РегуляторСтаб = new System.Windows.Forms.Button();
@@ -50,14 +59,6 @@
             this.C1_67_N19ПереключательВыборПриемника = new System.Windows.Forms.Button();
             this.C1_67ПереключательУсиление = new System.Windows.Forms.Button();
             this.C1_67ПереключательДлительность = new System.Windows.Forms.Button();
-            this.C1_67ПереключательСинхронизация1_2 = new System.Windows.Forms.Button();
-            this.C1_67ПереключательСинхронизация1_3 = new System.Windows.Forms.Button();
-            this.C1_67ПереключательСинхронизация1_1 = new System.Windows.Forms.Button();
-            this.C1_67ПереключательСинхронизация1_4 = new System.Windows.Forms.Button();
-            this.C1_67ПереключательСинхронизация2_4 = new System.Windows.Forms.Button();
-            this.C1_67ПереключательСинхронизация2_2 = new System.Windows.Forms.Button();
-            this.C1_67ПереключательСинхронизация2_3 = new System.Windows.Forms.Button();
-            this.C1_67ПереключательСинхронизация2_1 = new System.Windows.Forms.Button();
             this.C1_67Panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,6 +99,126 @@
             this.C1_67Panel.Name = "C1_67Panel";
             this.C1_67Panel.Size = new System.Drawing.Size(721, 592);
             this.C1_67Panel.TabIndex = 0;
+            // 
+            // C1_67ПереключательСинхронизация2_4
+            // 
+            this.C1_67ПереключательСинхронизация2_4.BackColor = System.Drawing.Color.Transparent;
+            this.C1_67ПереключательСинхронизация2_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.C1_67ПереключательСинхронизация2_4.FlatAppearance.BorderSize = 0;
+            this.C1_67ПереключательСинхронизация2_4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.C1_67ПереключательСинхронизация2_4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.C1_67ПереключательСинхронизация2_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.C1_67ПереключательСинхронизация2_4.Location = new System.Drawing.Point(459, 499);
+            this.C1_67ПереключательСинхронизация2_4.Name = "C1_67ПереключательСинхронизация2_4";
+            this.C1_67ПереключательСинхронизация2_4.Size = new System.Drawing.Size(32, 21);
+            this.C1_67ПереключательСинхронизация2_4.TabIndex = 57;
+            this.C1_67ПереключательСинхронизация2_4.UseVisualStyleBackColor = false;
+            this.C1_67ПереключательСинхронизация2_4.Click += new System.EventHandler(this.C1_67ПереключательСинхронизация2_4_Click);
+            // 
+            // C1_67ПереключательСинхронизация2_2
+            // 
+            this.C1_67ПереключательСинхронизация2_2.BackColor = System.Drawing.Color.Transparent;
+            this.C1_67ПереключательСинхронизация2_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.C1_67ПереключательСинхронизация2_2.FlatAppearance.BorderSize = 0;
+            this.C1_67ПереключательСинхронизация2_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.C1_67ПереключательСинхронизация2_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.C1_67ПереключательСинхронизация2_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.C1_67ПереключательСинхронизация2_2.Location = new System.Drawing.Point(460, 459);
+            this.C1_67ПереключательСинхронизация2_2.Name = "C1_67ПереключательСинхронизация2_2";
+            this.C1_67ПереключательСинхронизация2_2.Size = new System.Drawing.Size(32, 21);
+            this.C1_67ПереключательСинхронизация2_2.TabIndex = 56;
+            this.C1_67ПереключательСинхронизация2_2.UseVisualStyleBackColor = false;
+            this.C1_67ПереключательСинхронизация2_2.Click += new System.EventHandler(this.C1_67ПереключательСинхронизация2_2_Click);
+            // 
+            // C1_67ПереключательСинхронизация2_3
+            // 
+            this.C1_67ПереключательСинхронизация2_3.BackColor = System.Drawing.Color.Transparent;
+            this.C1_67ПереключательСинхронизация2_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.C1_67ПереключательСинхронизация2_3.FlatAppearance.BorderSize = 0;
+            this.C1_67ПереключательСинхронизация2_3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.C1_67ПереключательСинхронизация2_3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.C1_67ПереключательСинхронизация2_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.C1_67ПереключательСинхронизация2_3.Location = new System.Drawing.Point(460, 480);
+            this.C1_67ПереключательСинхронизация2_3.Name = "C1_67ПереключательСинхронизация2_3";
+            this.C1_67ПереключательСинхронизация2_3.Size = new System.Drawing.Size(32, 21);
+            this.C1_67ПереключательСинхронизация2_3.TabIndex = 55;
+            this.C1_67ПереключательСинхронизация2_3.UseVisualStyleBackColor = false;
+            this.C1_67ПереключательСинхронизация2_3.Click += new System.EventHandler(this.C1_67ПереключательСинхронизация2_3_Click);
+            // 
+            // C1_67ПереключательСинхронизация2_1
+            // 
+            this.C1_67ПереключательСинхронизация2_1.BackColor = System.Drawing.Color.Transparent;
+            this.C1_67ПереключательСинхронизация2_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.C1_67ПереключательСинхронизация2_1.FlatAppearance.BorderSize = 0;
+            this.C1_67ПереключательСинхронизация2_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.C1_67ПереключательСинхронизация2_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.C1_67ПереключательСинхронизация2_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.C1_67ПереключательСинхронизация2_1.Location = new System.Drawing.Point(459, 438);
+            this.C1_67ПереключательСинхронизация2_1.Name = "C1_67ПереключательСинхронизация2_1";
+            this.C1_67ПереключательСинхронизация2_1.Size = new System.Drawing.Size(32, 21);
+            this.C1_67ПереключательСинхронизация2_1.TabIndex = 54;
+            this.C1_67ПереключательСинхронизация2_1.UseVisualStyleBackColor = false;
+            this.C1_67ПереключательСинхронизация2_1.Click += new System.EventHandler(this.C1_67ПереключательСинхронизация2_1_Click);
+            // 
+            // C1_67ПереключательСинхронизация1_4
+            // 
+            this.C1_67ПереключательСинхронизация1_4.BackColor = System.Drawing.Color.Transparent;
+            this.C1_67ПереключательСинхронизация1_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.C1_67ПереключательСинхронизация1_4.FlatAppearance.BorderSize = 0;
+            this.C1_67ПереключательСинхронизация1_4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.C1_67ПереключательСинхронизация1_4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.C1_67ПереключательСинхронизация1_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.C1_67ПереключательСинхронизация1_4.Location = new System.Drawing.Point(407, 499);
+            this.C1_67ПереключательСинхронизация1_4.Name = "C1_67ПереключательСинхронизация1_4";
+            this.C1_67ПереключательСинхронизация1_4.Size = new System.Drawing.Size(32, 21);
+            this.C1_67ПереключательСинхронизация1_4.TabIndex = 53;
+            this.C1_67ПереключательСинхронизация1_4.UseVisualStyleBackColor = false;
+            this.C1_67ПереключательСинхронизация1_4.Click += new System.EventHandler(this.C1_67ПереключательСинхронизация1_4_Click);
+            // 
+            // C1_67ПереключательСинхронизация1_2
+            // 
+            this.C1_67ПереключательСинхронизация1_2.BackColor = System.Drawing.Color.Transparent;
+            this.C1_67ПереключательСинхронизация1_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.C1_67ПереключательСинхронизация1_2.FlatAppearance.BorderSize = 0;
+            this.C1_67ПереключательСинхронизация1_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.C1_67ПереключательСинхронизация1_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.C1_67ПереключательСинхронизация1_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.C1_67ПереключательСинхронизация1_2.Location = new System.Drawing.Point(408, 459);
+            this.C1_67ПереключательСинхронизация1_2.Name = "C1_67ПереключательСинхронизация1_2";
+            this.C1_67ПереключательСинхронизация1_2.Size = new System.Drawing.Size(32, 21);
+            this.C1_67ПереключательСинхронизация1_2.TabIndex = 52;
+            this.C1_67ПереключательСинхронизация1_2.UseVisualStyleBackColor = false;
+            this.C1_67ПереключательСинхронизация1_2.Click += new System.EventHandler(this.C1_67ПереключательСинхронизация1_2_Click);
+            // 
+            // C1_67ПереключательСинхронизация1_3
+            // 
+            this.C1_67ПереключательСинхронизация1_3.BackColor = System.Drawing.Color.Transparent;
+            this.C1_67ПереключательСинхронизация1_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.C1_67ПереключательСинхронизация1_3.FlatAppearance.BorderSize = 0;
+            this.C1_67ПереключательСинхронизация1_3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.C1_67ПереключательСинхронизация1_3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.C1_67ПереключательСинхронизация1_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.C1_67ПереключательСинхронизация1_3.Location = new System.Drawing.Point(408, 480);
+            this.C1_67ПереключательСинхронизация1_3.Name = "C1_67ПереключательСинхронизация1_3";
+            this.C1_67ПереключательСинхронизация1_3.Size = new System.Drawing.Size(32, 21);
+            this.C1_67ПереключательСинхронизация1_3.TabIndex = 51;
+            this.C1_67ПереключательСинхронизация1_3.UseVisualStyleBackColor = false;
+            this.C1_67ПереключательСинхронизация1_3.Click += new System.EventHandler(this.C1_67ПереключательСинхронизация1_3_Click);
+            // 
+            // C1_67ПереключательСинхронизация1_1
+            // 
+            this.C1_67ПереключательСинхронизация1_1.BackColor = System.Drawing.Color.Transparent;
+            this.C1_67ПереключательСинхронизация1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.C1_67ПереключательСинхронизация1_1.FlatAppearance.BorderSize = 0;
+            this.C1_67ПереключательСинхронизация1_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.C1_67ПереключательСинхронизация1_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.C1_67ПереключательСинхронизация1_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.C1_67ПереключательСинхронизация1_1.Location = new System.Drawing.Point(408, 438);
+            this.C1_67ПереключательСинхронизация1_1.Name = "C1_67ПереключательСинхронизация1_1";
+            this.C1_67ПереключательСинхронизация1_1.Size = new System.Drawing.Size(32, 21);
+            this.C1_67ПереключательСинхронизация1_1.TabIndex = 50;
+            this.C1_67ПереключательСинхронизация1_1.UseVisualStyleBackColor = false;
+            this.C1_67ПереключательСинхронизация1_1.Click += new System.EventHandler(this.C1_67ПереключательСинхронизация1_1_Click);
             // 
             // C1_67РегуляторСинхронизация
             // 
@@ -452,126 +573,6 @@
             this.C1_67ПереключательДлительность.UseVisualStyleBackColor = false;
             this.C1_67ПереключательДлительность.MouseUp += new System.Windows.Forms.MouseEventHandler(this.C1_67ПереключательДлительность_MouseUp);
             // 
-            // C1_67ПереключательСинхронизация1_2
-            // 
-            this.C1_67ПереключательСинхронизация1_2.BackColor = System.Drawing.Color.Transparent;
-            this.C1_67ПереключательСинхронизация1_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.C1_67ПереключательСинхронизация1_2.FlatAppearance.BorderSize = 0;
-            this.C1_67ПереключательСинхронизация1_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.C1_67ПереключательСинхронизация1_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.C1_67ПереключательСинхронизация1_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.C1_67ПереключательСинхронизация1_2.Location = new System.Drawing.Point(408, 459);
-            this.C1_67ПереключательСинхронизация1_2.Name = "C1_67ПереключательСинхронизация1_2";
-            this.C1_67ПереключательСинхронизация1_2.Size = new System.Drawing.Size(32, 21);
-            this.C1_67ПереключательСинхронизация1_2.TabIndex = 52;
-            this.C1_67ПереключательСинхронизация1_2.UseVisualStyleBackColor = false;
-            this.C1_67ПереключательСинхронизация1_2.Click += new System.EventHandler(this.C1_67ПереключательСинхронизация1_2_Click);
-            // 
-            // C1_67ПереключательСинхронизация1_3
-            // 
-            this.C1_67ПереключательСинхронизация1_3.BackColor = System.Drawing.Color.Transparent;
-            this.C1_67ПереключательСинхронизация1_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.C1_67ПереключательСинхронизация1_3.FlatAppearance.BorderSize = 0;
-            this.C1_67ПереключательСинхронизация1_3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.C1_67ПереключательСинхронизация1_3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.C1_67ПереключательСинхронизация1_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.C1_67ПереключательСинхронизация1_3.Location = new System.Drawing.Point(408, 480);
-            this.C1_67ПереключательСинхронизация1_3.Name = "C1_67ПереключательСинхронизация1_3";
-            this.C1_67ПереключательСинхронизация1_3.Size = new System.Drawing.Size(32, 21);
-            this.C1_67ПереключательСинхронизация1_3.TabIndex = 51;
-            this.C1_67ПереключательСинхронизация1_3.UseVisualStyleBackColor = false;
-            this.C1_67ПереключательСинхронизация1_3.Click += new System.EventHandler(this.C1_67ПереключательСинхронизация1_3_Click);
-            // 
-            // C1_67ПереключательСинхронизация1_1
-            // 
-            this.C1_67ПереключательСинхронизация1_1.BackColor = System.Drawing.Color.Transparent;
-            this.C1_67ПереключательСинхронизация1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.C1_67ПереключательСинхронизация1_1.FlatAppearance.BorderSize = 0;
-            this.C1_67ПереключательСинхронизация1_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.C1_67ПереключательСинхронизация1_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.C1_67ПереключательСинхронизация1_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.C1_67ПереключательСинхронизация1_1.Location = new System.Drawing.Point(408, 438);
-            this.C1_67ПереключательСинхронизация1_1.Name = "C1_67ПереключательСинхронизация1_1";
-            this.C1_67ПереключательСинхронизация1_1.Size = new System.Drawing.Size(32, 21);
-            this.C1_67ПереключательСинхронизация1_1.TabIndex = 50;
-            this.C1_67ПереключательСинхронизация1_1.UseVisualStyleBackColor = false;
-            this.C1_67ПереключательСинхронизация1_1.Click += new System.EventHandler(this.C1_67ПереключательСинхронизация1_1_Click);
-            // 
-            // C1_67ПереключательСинхронизация1_4
-            // 
-            this.C1_67ПереключательСинхронизация1_4.BackColor = System.Drawing.Color.Transparent;
-            this.C1_67ПереключательСинхронизация1_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.C1_67ПереключательСинхронизация1_4.FlatAppearance.BorderSize = 0;
-            this.C1_67ПереключательСинхронизация1_4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.C1_67ПереключательСинхронизация1_4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.C1_67ПереключательСинхронизация1_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.C1_67ПереключательСинхронизация1_4.Location = new System.Drawing.Point(407, 499);
-            this.C1_67ПереключательСинхронизация1_4.Name = "C1_67ПереключательСинхронизация1_4";
-            this.C1_67ПереключательСинхронизация1_4.Size = new System.Drawing.Size(32, 21);
-            this.C1_67ПереключательСинхронизация1_4.TabIndex = 53;
-            this.C1_67ПереключательСинхронизация1_4.UseVisualStyleBackColor = false;
-            this.C1_67ПереключательСинхронизация1_4.Click += new System.EventHandler(this.C1_67ПереключательСинхронизация1_4_Click);
-            // 
-            // C1_67ПереключательСинхронизация2_4
-            // 
-            this.C1_67ПереключательСинхронизация2_4.BackColor = System.Drawing.Color.Transparent;
-            this.C1_67ПереключательСинхронизация2_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.C1_67ПереключательСинхронизация2_4.FlatAppearance.BorderSize = 0;
-            this.C1_67ПереключательСинхронизация2_4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.C1_67ПереключательСинхронизация2_4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.C1_67ПереключательСинхронизация2_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.C1_67ПереключательСинхронизация2_4.Location = new System.Drawing.Point(459, 499);
-            this.C1_67ПереключательСинхронизация2_4.Name = "C1_67ПереключательСинхронизация2_4";
-            this.C1_67ПереключательСинхронизация2_4.Size = new System.Drawing.Size(32, 21);
-            this.C1_67ПереключательСинхронизация2_4.TabIndex = 57;
-            this.C1_67ПереключательСинхронизация2_4.UseVisualStyleBackColor = false;
-            this.C1_67ПереключательСинхронизация2_4.Click += new System.EventHandler(this.C1_67ПереключательСинхронизация2_4_Click);
-            // 
-            // C1_67ПереключательСинхронизация2_2
-            // 
-            this.C1_67ПереключательСинхронизация2_2.BackColor = System.Drawing.Color.Transparent;
-            this.C1_67ПереключательСинхронизация2_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.C1_67ПереключательСинхронизация2_2.FlatAppearance.BorderSize = 0;
-            this.C1_67ПереключательСинхронизация2_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.C1_67ПереключательСинхронизация2_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.C1_67ПереключательСинхронизация2_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.C1_67ПереключательСинхронизация2_2.Location = new System.Drawing.Point(460, 459);
-            this.C1_67ПереключательСинхронизация2_2.Name = "C1_67ПереключательСинхронизация2_2";
-            this.C1_67ПереключательСинхронизация2_2.Size = new System.Drawing.Size(32, 21);
-            this.C1_67ПереключательСинхронизация2_2.TabIndex = 56;
-            this.C1_67ПереключательСинхронизация2_2.UseVisualStyleBackColor = false;
-            this.C1_67ПереключательСинхронизация2_2.Click += new System.EventHandler(this.C1_67ПереключательСинхронизация2_2_Click);
-            // 
-            // C1_67ПереключательСинхронизация2_3
-            // 
-            this.C1_67ПереключательСинхронизация2_3.BackColor = System.Drawing.Color.Transparent;
-            this.C1_67ПереключательСинхронизация2_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.C1_67ПереключательСинхронизация2_3.FlatAppearance.BorderSize = 0;
-            this.C1_67ПереключательСинхронизация2_3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.C1_67ПереключательСинхронизация2_3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.C1_67ПереключательСинхронизация2_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.C1_67ПереключательСинхронизация2_3.Location = new System.Drawing.Point(460, 480);
-            this.C1_67ПереключательСинхронизация2_3.Name = "C1_67ПереключательСинхронизация2_3";
-            this.C1_67ПереключательСинхронизация2_3.Size = new System.Drawing.Size(32, 21);
-            this.C1_67ПереключательСинхронизация2_3.TabIndex = 55;
-            this.C1_67ПереключательСинхронизация2_3.UseVisualStyleBackColor = false;
-            this.C1_67ПереключательСинхронизация2_3.Click += new System.EventHandler(this.C1_67ПереключательСинхронизация2_3_Click);
-            // 
-            // C1_67ПереключательСинхронизация2_1
-            // 
-            this.C1_67ПереключательСинхронизация2_1.BackColor = System.Drawing.Color.Transparent;
-            this.C1_67ПереключательСинхронизация2_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.C1_67ПереключательСинхронизация2_1.FlatAppearance.BorderSize = 0;
-            this.C1_67ПереключательСинхронизация2_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.C1_67ПереключательСинхронизация2_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.C1_67ПереключательСинхронизация2_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.C1_67ПереключательСинхронизация2_1.Location = new System.Drawing.Point(459, 438);
-            this.C1_67ПереключательСинхронизация2_1.Name = "C1_67ПереключательСинхронизация2_1";
-            this.C1_67ПереключательСинхронизация2_1.Size = new System.Drawing.Size(32, 21);
-            this.C1_67ПереключательСинхронизация2_1.TabIndex = 54;
-            this.C1_67ПереключательСинхронизация2_1.UseVisualStyleBackColor = false;
-            this.C1_67ПереключательСинхронизация2_1.Click += new System.EventHandler(this.C1_67ПереключательСинхронизация2_1_Click);
-            // 
             // C1_67Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -579,6 +580,7 @@
             this.ClientSize = new System.Drawing.Size(720, 590);
             this.Controls.Add(this.C1_67Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "C1_67Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

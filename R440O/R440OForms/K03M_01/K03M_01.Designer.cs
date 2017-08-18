@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(K03M_01Form));
             this.Panel = new System.Windows.Forms.Panel();
+            this.Крышка = new System.Windows.Forms.Button();
+            this.ButtonInside = new System.Windows.Forms.Button();
             this.ПереключательНапряжение = new System.Windows.Forms.Button();
             this.ПереключательАвтРучн = new System.Windows.Forms.Button();
             this.ПереключательНепрОднокр = new System.Windows.Forms.Button();
@@ -54,8 +57,6 @@
             this.Лампочка2 = new System.Windows.Forms.PictureBox();
             this.Лампочка1 = new System.Windows.Forms.PictureBox();
             this.Лампочка0 = new System.Windows.Forms.PictureBox();
-            this.ButtonInside = new System.Windows.Forms.Button();
-            this.Крышка = new System.Windows.Forms.Button();
             this.Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Лампочка32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Лампочка16)).BeginInit();
@@ -101,6 +102,35 @@
             this.Panel.Name = "Panel";
             this.Panel.Size = new System.Drawing.Size(496, 707);
             this.Panel.TabIndex = 0;
+            // 
+            // Крышка
+            // 
+            this.Крышка.BackColor = System.Drawing.Color.Transparent;
+            this.Крышка.BackgroundImage = global::R440O.ControlElementImages.kulonCover;
+            this.Крышка.FlatAppearance.BorderSize = 0;
+            this.Крышка.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.Крышка.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Крышка.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Крышка.Location = new System.Drawing.Point(126, 95);
+            this.Крышка.Name = "Крышка";
+            this.Крышка.Size = new System.Drawing.Size(356, 559);
+            this.Крышка.TabIndex = 10;
+            this.Крышка.UseVisualStyleBackColor = false;
+            this.Крышка.Click += new System.EventHandler(this.Крышка_Click);
+            // 
+            // ButtonInside
+            // 
+            this.ButtonInside.BackColor = System.Drawing.Color.Transparent;
+            this.ButtonInside.FlatAppearance.BorderSize = 0;
+            this.ButtonInside.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.ButtonInside.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ButtonInside.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonInside.Location = new System.Drawing.Point(37, 265);
+            this.ButtonInside.Name = "ButtonInside";
+            this.ButtonInside.Size = new System.Drawing.Size(105, 140);
+            this.ButtonInside.TabIndex = 9;
+            this.ButtonInside.UseVisualStyleBackColor = false;
+            this.ButtonInside.Click += new System.EventHandler(this.ButtonInside_Click);
             // 
             // ПереключательНапряжение
             // 
@@ -474,35 +504,6 @@
             this.Лампочка0.TabIndex = 37;
             this.Лампочка0.TabStop = false;
             // 
-            // ButtonInside
-            // 
-            this.ButtonInside.BackColor = System.Drawing.Color.Transparent;
-            this.ButtonInside.FlatAppearance.BorderSize = 0;
-            this.ButtonInside.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.ButtonInside.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ButtonInside.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonInside.Location = new System.Drawing.Point(37, 265);
-            this.ButtonInside.Name = "ButtonInside";
-            this.ButtonInside.Size = new System.Drawing.Size(105, 140);
-            this.ButtonInside.TabIndex = 9;
-            this.ButtonInside.UseVisualStyleBackColor = false;
-            this.ButtonInside.Click += new System.EventHandler(this.ButtonInside_Click);
-            // 
-            // Крышка
-            // 
-            this.Крышка.BackColor = System.Drawing.Color.Transparent;
-            this.Крышка.BackgroundImage = global::R440O.ControlElementImages.kulonCover;
-            this.Крышка.FlatAppearance.BorderSize = 0;
-            this.Крышка.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.Крышка.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Крышка.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Крышка.Location = new System.Drawing.Point(126, 95);
-            this.Крышка.Name = "Крышка";
-            this.Крышка.Size = new System.Drawing.Size(356, 559);
-            this.Крышка.TabIndex = 10;
-            this.Крышка.UseVisualStyleBackColor = false;
-            this.Крышка.Click += new System.EventHandler(this.Крышка_Click);
-            // 
             // K03M_01Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -510,6 +511,7 @@
             this.ClientSize = new System.Drawing.Size(494, 708);
             this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "K03M_01Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NKN_2Form));
             this.Panel = new System.Windows.Forms.Panel();
             this.ЛампочкиФаз = new System.Windows.Forms.Panel();
             this.ЛампочкаФаза3 = new System.Windows.Forms.PictureBox();
@@ -140,13 +141,14 @@
             this.ЛампочкаМУ.TabIndex = 0;
             this.ЛампочкаМУ.TabStop = false;
             // 
-            // NKN_1Form
+            // NKN_2Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 621);
             this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "NKN_2Form";
             this.Text = "НКН-2";

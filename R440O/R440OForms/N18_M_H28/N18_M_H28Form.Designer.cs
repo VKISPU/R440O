@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(N18_M_H28Form));
             this.КабельК11 = new System.Windows.Forms.Button();
             this.КабельК12 = new System.Windows.Forms.Button();
             this.АктивныйКабель = new System.Windows.Forms.Button();
@@ -96,6 +97,7 @@
             this.Controls.Add(this.КабельК12);
             this.Controls.Add(this.КабельК11);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "N18_M_H28Form";
             this.Text = "Ш28";
             this.ResumeLayout(false);

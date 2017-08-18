@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(B1_2Form));
             this.Panel = new System.Windows.Forms.Panel();
             this.КолодкаТЛГпр3_2 = new System.Windows.Forms.Button();
             this.ЛампочкаТЛГпр3 = new System.Windows.Forms.PictureBox();
@@ -444,15 +445,16 @@
             this.КнопкаСкоростьГР.UseVisualStyleBackColor = false;
             this.КнопкаСкоростьГР.Click += new System.EventHandler(this.КнопкаСкоростьГР_Click);
             // 
-            // Form
+            // B1_2Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 351);
             this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Form";
+            this.Name = "B1_2Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Б1-2";
             this.Panel.ResumeLayout(false);

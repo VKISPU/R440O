@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(A205M_2Form));
             this.Panel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ПереключательВолнаX1000 = new System.Windows.Forms.Button();
@@ -297,6 +298,7 @@
             this.ClientSize = new System.Drawing.Size(1094, 429);
             this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "A205M_2Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

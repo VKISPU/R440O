@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(N16Form));
             this.Panel = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ИндикаторМощностьВыхода = new System.Windows.Forms.PictureBox();
             this.ИндикаторМощностьНагрузки = new System.Windows.Forms.PictureBox();
             this.ЛампочкаЭквивалент = new System.Windows.Forms.PictureBox();
@@ -46,9 +49,9 @@
             this.КнопкаН13_12 = new System.Windows.Forms.Button();
             this.КнопкаВкл = new System.Windows.Forms.Button();
             this.ТумблерУровень1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторМощностьВыхода)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторМощностьНагрузки)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаЭквивалент)).BeginInit();
@@ -56,8 +59,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаН13_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаН13_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаН13_12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel
@@ -87,6 +88,24 @@
             this.Panel.Name = "Panel";
             this.Panel.Size = new System.Drawing.Size(1104, 435);
             this.Panel.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Location = new System.Drawing.Point(377, 127);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(121, 51);
+            this.pictureBox2.TabIndex = 83;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Location = new System.Drawing.Point(228, 127);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(114, 51);
+            this.pictureBox1.TabIndex = 82;
+            this.pictureBox1.TabStop = false;
             // 
             // ИндикаторМощностьВыхода
             // 
@@ -336,24 +355,6 @@
             this.ТумблерУровень1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ТумблерУровень1_MouseDown);
             this.ТумблерУровень1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ТумблерУровень1_MouseUp);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(228, 127);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(114, 51);
-            this.pictureBox1.TabIndex = 82;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Location = new System.Drawing.Point(377, 127);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(121, 51);
-            this.pictureBox2.TabIndex = 83;
-            this.pictureBox2.TabStop = false;
-            // 
             // N16Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -361,11 +362,14 @@
             this.ClientSize = new System.Drawing.Size(1106, 434);
             this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "N16Form";
             this.Text = "Н16";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.N16Form_FormClosed);
             this.Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторМощностьВыхода)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторМощностьНагрузки)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаЭквивалент)).EndInit();
@@ -373,8 +377,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаН13_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаН13_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаН13_12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

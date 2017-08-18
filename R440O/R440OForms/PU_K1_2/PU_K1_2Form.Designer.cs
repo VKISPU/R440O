@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PU_K1_2Form));
             this.PU_K1_2Panel = new System.Windows.Forms.Panel();
             this.PU_K1_2ТумблерВентВкл = new System.Windows.Forms.Button();
             this.PU_K1_2ПереключательНапряжение = new System.Windows.Forms.Button();
@@ -146,6 +147,7 @@
             this.ClientSize = new System.Drawing.Size(988, 186);
             this.Controls.Add(this.PU_K1_2Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "PU_K1_2Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

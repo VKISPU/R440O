@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WattmeterForm));
             this.Panel = new System.Windows.Forms.Panel();
             this.Дисплей = new System.Windows.Forms.Button();
             this.ТумблерСеть = new System.Windows.Forms.Button();
@@ -162,6 +163,7 @@
             this.ClientSize = new System.Drawing.Size(707, 542);
             this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "WattmeterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

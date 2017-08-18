@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(N13_2Form));
             this.Panel = new System.Windows.Forms.Panel();
-            this.ЛампочкаАнодВключен = new System.Windows.Forms.PictureBox();
-            this.ЛампочкаПерегрузкаИстКоллектора = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.ИндикаторТокКоллектора = new System.Windows.Forms.PictureBox();
             this.ИндикаторТокЗамедлСистемы = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаАнодВключен = new System.Windows.Forms.PictureBox();
+            this.ЛампочкаПерегрузкаИстКоллектора = new System.Windows.Forms.PictureBox();
             this.Panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаАнодВключен)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПерегрузкаИстКоллектора)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторТокКоллектора)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторТокЗамедлСистемы)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаАнодВключен)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПерегрузкаИстКоллектора)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel
@@ -58,26 +59,6 @@
             this.Panel.Name = "Panel";
             this.Panel.Size = new System.Drawing.Size(1104, 435);
             this.Panel.TabIndex = 0;
-            // 
-            // ЛампочкаАнодВключен
-            // 
-            this.ЛампочкаАнодВключен.BackColor = System.Drawing.Color.Transparent;
-            this.ЛампочкаАнодВключен.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ЛампочкаАнодВключен.Location = new System.Drawing.Point(637, 207);
-            this.ЛампочкаАнодВключен.Name = "ЛампочкаАнодВключен";
-            this.ЛампочкаАнодВключен.Size = new System.Drawing.Size(24, 23);
-            this.ЛампочкаАнодВключен.TabIndex = 72;
-            this.ЛампочкаАнодВключен.TabStop = false;
-            // 
-            // ЛампочкаПерегрузкаИстКоллектора
-            // 
-            this.ЛампочкаПерегрузкаИстКоллектора.BackColor = System.Drawing.Color.Transparent;
-            this.ЛампочкаПерегрузкаИстКоллектора.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ЛампочкаПерегрузкаИстКоллектора.Location = new System.Drawing.Point(86, 221);
-            this.ЛампочкаПерегрузкаИстКоллектора.Name = "ЛампочкаПерегрузкаИстКоллектора";
-            this.ЛампочкаПерегрузкаИстКоллектора.Size = new System.Drawing.Size(24, 23);
-            this.ЛампочкаПерегрузкаИстКоллектора.TabIndex = 70;
-            this.ЛампочкаПерегрузкаИстКоллектора.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -119,6 +100,26 @@
             this.ИндикаторТокЗамедлСистемы.TabIndex = 83;
             this.ИндикаторТокЗамедлСистемы.TabStop = false;
             // 
+            // ЛампочкаАнодВключен
+            // 
+            this.ЛампочкаАнодВключен.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаАнодВключен.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаАнодВключен.Location = new System.Drawing.Point(637, 207);
+            this.ЛампочкаАнодВключен.Name = "ЛампочкаАнодВключен";
+            this.ЛампочкаАнодВключен.Size = new System.Drawing.Size(24, 23);
+            this.ЛампочкаАнодВключен.TabIndex = 72;
+            this.ЛампочкаАнодВключен.TabStop = false;
+            // 
+            // ЛампочкаПерегрузкаИстКоллектора
+            // 
+            this.ЛампочкаПерегрузкаИстКоллектора.BackColor = System.Drawing.Color.Transparent;
+            this.ЛампочкаПерегрузкаИстКоллектора.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ЛампочкаПерегрузкаИстКоллектора.Location = new System.Drawing.Point(86, 221);
+            this.ЛампочкаПерегрузкаИстКоллектора.Name = "ЛампочкаПерегрузкаИстКоллектора";
+            this.ЛампочкаПерегрузкаИстКоллектора.Size = new System.Drawing.Size(24, 23);
+            this.ЛампочкаПерегрузкаИстКоллектора.TabIndex = 70;
+            this.ЛампочкаПерегрузкаИстКоллектора.TabStop = false;
+            // 
             // N13_2Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,17 +127,18 @@
             this.ClientSize = new System.Drawing.Size(1106, 434);
             this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "N13_2Form";
             this.Text = "Н13-2";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.N13_2Form_FormClosed);
             this.Panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаАнодВключен)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПерегрузкаИстКоллектора)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторТокКоллектора)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ИндикаторТокЗамедлСистемы)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаАнодВключен)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ЛампочкаПерегрузкаИстКоллектора)).EndInit();
             this.ResumeLayout(false);
 
         }

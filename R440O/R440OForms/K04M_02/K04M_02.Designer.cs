@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(K04M_02Form));
             this.K04M_02Panel = new System.Windows.Forms.Panel();
+            this.K04M_02Крышка = new System.Windows.Forms.Button();
             this.K04M_02ПереключательПрмКгц100 = new System.Windows.Forms.Button();
             this.K04M_02ПереключательПрмМгц = new System.Windows.Forms.Button();
             this.K04M_02ПереключательПрдКгц1 = new System.Windows.Forms.Button();
             this.K04M_02ПереключательПрдКгц10 = new System.Windows.Forms.Button();
             this.K04M_02ПереключательПрдКгц100 = new System.Windows.Forms.Button();
             this.K04M_02ПереключательПрдМгц = new System.Windows.Forms.Button();
-            this.K04M_02Крышка = new System.Windows.Forms.Button();
             this.K04M_02Panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +55,21 @@
             this.K04M_02Panel.Name = "K04M_02Panel";
             this.K04M_02Panel.Size = new System.Drawing.Size(496, 707);
             this.K04M_02Panel.TabIndex = 0;
+            // 
+            // K04M_02Крышка
+            // 
+            this.K04M_02Крышка.BackColor = System.Drawing.Color.Transparent;
+            this.K04M_02Крышка.BackgroundImage = global::R440O.ControlElementImages.kulonCover;
+            this.K04M_02Крышка.FlatAppearance.BorderSize = 0;
+            this.K04M_02Крышка.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.K04M_02Крышка.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.K04M_02Крышка.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.K04M_02Крышка.Location = new System.Drawing.Point(126, 92);
+            this.K04M_02Крышка.Name = "K04M_02Крышка";
+            this.K04M_02Крышка.Size = new System.Drawing.Size(356, 559);
+            this.K04M_02Крышка.TabIndex = 44;
+            this.K04M_02Крышка.UseVisualStyleBackColor = false;
+            this.K04M_02Крышка.Click += new System.EventHandler(this.K04M_02Крышка_Click);
             // 
             // K04M_02ПереключательПрмКгц100
             // 
@@ -151,21 +167,6 @@
             this.K04M_02ПереключательПрдМгц.UseVisualStyleBackColor = false;
             this.K04M_02ПереключательПрдМгц.MouseDown += new System.Windows.Forms.MouseEventHandler(this.K04M_02Переключатель_MouseDown);
             // 
-            // K04M_02Крышка
-            // 
-            this.K04M_02Крышка.BackColor = System.Drawing.Color.Transparent;
-            this.K04M_02Крышка.BackgroundImage = global::R440O.ControlElementImages.kulonCover;
-            this.K04M_02Крышка.FlatAppearance.BorderSize = 0;
-            this.K04M_02Крышка.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.K04M_02Крышка.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.K04M_02Крышка.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.K04M_02Крышка.Location = new System.Drawing.Point(126, 92);
-            this.K04M_02Крышка.Name = "K04M_02Крышка";
-            this.K04M_02Крышка.Size = new System.Drawing.Size(356, 559);
-            this.K04M_02Крышка.TabIndex = 44;
-            this.K04M_02Крышка.UseVisualStyleBackColor = false;
-            this.K04M_02Крышка.Click += new System.EventHandler(this.K04M_02Крышка_Click);
-            // 
             // K04M_02Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,6 +174,7 @@
             this.ClientSize = new System.Drawing.Size(494, 708);
             this.Controls.Add(this.K04M_02Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "K04M_02Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

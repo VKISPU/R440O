@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TLF_TCHForm));
             this.Panel = new System.Windows.Forms.Panel();
             this.Штырь10 = new System.Windows.Forms.Button();
             this.Штырь9 = new System.Windows.Forms.Button();
@@ -38,17 +39,17 @@
             this.Штырь4 = new System.Windows.Forms.Button();
             this.Штырь3 = new System.Windows.Forms.Button();
             this.Штырь2 = new System.Windows.Forms.Button();
-            this.Штырь1 = new System.Windows.Forms.Button();
-            this.Гнездо1 = new System.Windows.Forms.Button();
-            this.Гнездо2 = new System.Windows.Forms.Button();
-            this.Гнездо3 = new System.Windows.Forms.Button();
-            this.Гнездо4 = new System.Windows.Forms.Button();
-            this.Гнездо5 = new System.Windows.Forms.Button();
-            this.Гнездо6 = new System.Windows.Forms.Button();
-            this.Гнездо7 = new System.Windows.Forms.Button();
-            this.Гнездо8 = new System.Windows.Forms.Button();
-            this.Гнездо9 = new System.Windows.Forms.Button();
             this.Гнездо10 = new System.Windows.Forms.Button();
+            this.Гнездо9 = new System.Windows.Forms.Button();
+            this.Гнездо8 = new System.Windows.Forms.Button();
+            this.Гнездо7 = new System.Windows.Forms.Button();
+            this.Гнездо6 = new System.Windows.Forms.Button();
+            this.Гнездо5 = new System.Windows.Forms.Button();
+            this.Гнездо4 = new System.Windows.Forms.Button();
+            this.Гнездо3 = new System.Windows.Forms.Button();
+            this.Гнездо2 = new System.Windows.Forms.Button();
+            this.Гнездо1 = new System.Windows.Forms.Button();
+            this.Штырь1 = new System.Windows.Forms.Button();
             this.Panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -198,122 +199,18 @@
             this.Штырь2.UseVisualStyleBackColor = false;
             this.Штырь2.Click += new System.EventHandler(this.Штырь_Click);
             // 
-            // Штырь1
+            // Гнездо10
             // 
-            this.Штырь1.BackColor = System.Drawing.Color.Transparent;
-            this.Штырь1.FlatAppearance.BorderSize = 0;
-            this.Штырь1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Штырь1.Location = new System.Drawing.Point(259, 145);
-            this.Штырь1.Margin = new System.Windows.Forms.Padding(0);
-            this.Штырь1.Name = "Штырь1";
-            this.Штырь1.Size = new System.Drawing.Size(17, 15);
-            this.Штырь1.TabIndex = 69;
-            this.Штырь1.UseVisualStyleBackColor = false;
-            this.Штырь1.Click += new System.EventHandler(this.Штырь_Click);
-            // 
-            // Гнездо1
-            // 
-            this.Гнездо1.BackColor = System.Drawing.Color.Transparent;
-            this.Гнездо1.FlatAppearance.BorderSize = 0;
-            this.Гнездо1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Гнездо1.Location = new System.Drawing.Point(280, 165);
-            this.Гнездо1.Margin = new System.Windows.Forms.Padding(0);
-            this.Гнездо1.Name = "Гнездо1";
-            this.Гнездо1.Size = new System.Drawing.Size(17, 15);
-            this.Гнездо1.TabIndex = 69;
-            this.Гнездо1.UseVisualStyleBackColor = false;
-            this.Гнездо1.Click += new System.EventHandler(this.Гнездо_Click);
-            // 
-            // Гнездо2
-            // 
-            this.Гнездо2.BackColor = System.Drawing.Color.Transparent;
-            this.Гнездо2.FlatAppearance.BorderSize = 0;
-            this.Гнездо2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Гнездо2.Location = new System.Drawing.Point(241, 165);
-            this.Гнездо2.Margin = new System.Windows.Forms.Padding(0);
-            this.Гнездо2.Name = "Гнездо2";
-            this.Гнездо2.Size = new System.Drawing.Size(17, 15);
-            this.Гнездо2.TabIndex = 69;
-            this.Гнездо2.UseVisualStyleBackColor = false;
-            this.Гнездо2.Click += new System.EventHandler(this.Гнездо_Click);
-            // 
-            // Гнездо3
-            // 
-            this.Гнездо3.BackColor = System.Drawing.Color.Transparent;
-            this.Гнездо3.FlatAppearance.BorderSize = 0;
-            this.Гнездо3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Гнездо3.Location = new System.Drawing.Point(241, 210);
-            this.Гнездо3.Margin = new System.Windows.Forms.Padding(0);
-            this.Гнездо3.Name = "Гнездо3";
-            this.Гнездо3.Size = new System.Drawing.Size(17, 15);
-            this.Гнездо3.TabIndex = 69;
-            this.Гнездо3.UseVisualStyleBackColor = false;
-            this.Гнездо3.Click += new System.EventHandler(this.Гнездо_Click);
-            // 
-            // Гнездо4
-            // 
-            this.Гнездо4.BackColor = System.Drawing.Color.Transparent;
-            this.Гнездо4.FlatAppearance.BorderSize = 0;
-            this.Гнездо4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Гнездо4.Location = new System.Drawing.Point(200, 210);
-            this.Гнездо4.Margin = new System.Windows.Forms.Padding(0);
-            this.Гнездо4.Name = "Гнездо4";
-            this.Гнездо4.Size = new System.Drawing.Size(17, 15);
-            this.Гнездо4.TabIndex = 69;
-            this.Гнездо4.UseVisualStyleBackColor = false;
-            this.Гнездо4.Click += new System.EventHandler(this.Гнездо_Click);
-            // 
-            // Гнездо5
-            // 
-            this.Гнездо5.BackColor = System.Drawing.Color.Transparent;
-            this.Гнездо5.FlatAppearance.BorderSize = 0;
-            this.Гнездо5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Гнездо5.Location = new System.Drawing.Point(204, 255);
-            this.Гнездо5.Margin = new System.Windows.Forms.Padding(0);
-            this.Гнездо5.Name = "Гнездо5";
-            this.Гнездо5.Size = new System.Drawing.Size(17, 15);
-            this.Гнездо5.TabIndex = 69;
-            this.Гнездо5.UseVisualStyleBackColor = false;
-            this.Гнездо5.Click += new System.EventHandler(this.Гнездо_Click);
-            // 
-            // Гнездо6
-            // 
-            this.Гнездо6.BackColor = System.Drawing.Color.Transparent;
-            this.Гнездо6.FlatAppearance.BorderSize = 0;
-            this.Гнездо6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Гнездо6.Location = new System.Drawing.Point(162, 255);
-            this.Гнездо6.Margin = new System.Windows.Forms.Padding(0);
-            this.Гнездо6.Name = "Гнездо6";
-            this.Гнездо6.Size = new System.Drawing.Size(17, 15);
-            this.Гнездо6.TabIndex = 69;
-            this.Гнездо6.UseVisualStyleBackColor = false;
-            this.Гнездо6.Click += new System.EventHandler(this.Гнездо_Click);
-            // 
-            // Гнездо7
-            // 
-            this.Гнездо7.BackColor = System.Drawing.Color.Transparent;
-            this.Гнездо7.FlatAppearance.BorderSize = 0;
-            this.Гнездо7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Гнездо7.Location = new System.Drawing.Point(280, 210);
-            this.Гнездо7.Margin = new System.Windows.Forms.Padding(0);
-            this.Гнездо7.Name = "Гнездо7";
-            this.Гнездо7.Size = new System.Drawing.Size(17, 15);
-            this.Гнездо7.TabIndex = 69;
-            this.Гнездо7.UseVisualStyleBackColor = false;
-            this.Гнездо7.Click += new System.EventHandler(this.Гнездо_Click);
-            // 
-            // Гнездо8
-            // 
-            this.Гнездо8.BackColor = System.Drawing.Color.Transparent;
-            this.Гнездо8.FlatAppearance.BorderSize = 0;
-            this.Гнездо8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Гнездо8.Location = new System.Drawing.Point(200, 165);
-            this.Гнездо8.Margin = new System.Windows.Forms.Padding(0);
-            this.Гнездо8.Name = "Гнездо8";
-            this.Гнездо8.Size = new System.Drawing.Size(17, 15);
-            this.Гнездо8.TabIndex = 69;
-            this.Гнездо8.UseVisualStyleBackColor = false;
-            this.Гнездо8.Click += new System.EventHandler(this.Гнездо_Click);
+            this.Гнездо10.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо10.FlatAppearance.BorderSize = 0;
+            this.Гнездо10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Гнездо10.Location = new System.Drawing.Point(162, 213);
+            this.Гнездо10.Margin = new System.Windows.Forms.Padding(0);
+            this.Гнездо10.Name = "Гнездо10";
+            this.Гнездо10.Size = new System.Drawing.Size(17, 15);
+            this.Гнездо10.TabIndex = 69;
+            this.Гнездо10.UseVisualStyleBackColor = false;
+            this.Гнездо10.Click += new System.EventHandler(this.Гнездо_Click);
             // 
             // Гнездо9
             // 
@@ -328,18 +225,122 @@
             this.Гнездо9.UseVisualStyleBackColor = false;
             this.Гнездо9.Click += new System.EventHandler(this.Гнездо_Click);
             // 
-            // Гнездо10
+            // Гнездо8
             // 
-            this.Гнездо10.BackColor = System.Drawing.Color.Transparent;
-            this.Гнездо10.FlatAppearance.BorderSize = 0;
-            this.Гнездо10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Гнездо10.Location = new System.Drawing.Point(162, 213);
-            this.Гнездо10.Margin = new System.Windows.Forms.Padding(0);
-            this.Гнездо10.Name = "Гнездо10";
-            this.Гнездо10.Size = new System.Drawing.Size(17, 15);
-            this.Гнездо10.TabIndex = 69;
-            this.Гнездо10.UseVisualStyleBackColor = false;
-            this.Гнездо10.Click += new System.EventHandler(this.Гнездо_Click);
+            this.Гнездо8.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо8.FlatAppearance.BorderSize = 0;
+            this.Гнездо8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Гнездо8.Location = new System.Drawing.Point(200, 165);
+            this.Гнездо8.Margin = new System.Windows.Forms.Padding(0);
+            this.Гнездо8.Name = "Гнездо8";
+            this.Гнездо8.Size = new System.Drawing.Size(17, 15);
+            this.Гнездо8.TabIndex = 69;
+            this.Гнездо8.UseVisualStyleBackColor = false;
+            this.Гнездо8.Click += new System.EventHandler(this.Гнездо_Click);
+            // 
+            // Гнездо7
+            // 
+            this.Гнездо7.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо7.FlatAppearance.BorderSize = 0;
+            this.Гнездо7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Гнездо7.Location = new System.Drawing.Point(280, 210);
+            this.Гнездо7.Margin = new System.Windows.Forms.Padding(0);
+            this.Гнездо7.Name = "Гнездо7";
+            this.Гнездо7.Size = new System.Drawing.Size(17, 15);
+            this.Гнездо7.TabIndex = 69;
+            this.Гнездо7.UseVisualStyleBackColor = false;
+            this.Гнездо7.Click += new System.EventHandler(this.Гнездо_Click);
+            // 
+            // Гнездо6
+            // 
+            this.Гнездо6.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо6.FlatAppearance.BorderSize = 0;
+            this.Гнездо6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Гнездо6.Location = new System.Drawing.Point(162, 255);
+            this.Гнездо6.Margin = new System.Windows.Forms.Padding(0);
+            this.Гнездо6.Name = "Гнездо6";
+            this.Гнездо6.Size = new System.Drawing.Size(17, 15);
+            this.Гнездо6.TabIndex = 69;
+            this.Гнездо6.UseVisualStyleBackColor = false;
+            this.Гнездо6.Click += new System.EventHandler(this.Гнездо_Click);
+            // 
+            // Гнездо5
+            // 
+            this.Гнездо5.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо5.FlatAppearance.BorderSize = 0;
+            this.Гнездо5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Гнездо5.Location = new System.Drawing.Point(204, 255);
+            this.Гнездо5.Margin = new System.Windows.Forms.Padding(0);
+            this.Гнездо5.Name = "Гнездо5";
+            this.Гнездо5.Size = new System.Drawing.Size(17, 15);
+            this.Гнездо5.TabIndex = 69;
+            this.Гнездо5.UseVisualStyleBackColor = false;
+            this.Гнездо5.Click += new System.EventHandler(this.Гнездо_Click);
+            // 
+            // Гнездо4
+            // 
+            this.Гнездо4.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо4.FlatAppearance.BorderSize = 0;
+            this.Гнездо4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Гнездо4.Location = new System.Drawing.Point(200, 210);
+            this.Гнездо4.Margin = new System.Windows.Forms.Padding(0);
+            this.Гнездо4.Name = "Гнездо4";
+            this.Гнездо4.Size = new System.Drawing.Size(17, 15);
+            this.Гнездо4.TabIndex = 69;
+            this.Гнездо4.UseVisualStyleBackColor = false;
+            this.Гнездо4.Click += new System.EventHandler(this.Гнездо_Click);
+            // 
+            // Гнездо3
+            // 
+            this.Гнездо3.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо3.FlatAppearance.BorderSize = 0;
+            this.Гнездо3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Гнездо3.Location = new System.Drawing.Point(241, 210);
+            this.Гнездо3.Margin = new System.Windows.Forms.Padding(0);
+            this.Гнездо3.Name = "Гнездо3";
+            this.Гнездо3.Size = new System.Drawing.Size(17, 15);
+            this.Гнездо3.TabIndex = 69;
+            this.Гнездо3.UseVisualStyleBackColor = false;
+            this.Гнездо3.Click += new System.EventHandler(this.Гнездо_Click);
+            // 
+            // Гнездо2
+            // 
+            this.Гнездо2.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо2.FlatAppearance.BorderSize = 0;
+            this.Гнездо2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Гнездо2.Location = new System.Drawing.Point(241, 165);
+            this.Гнездо2.Margin = new System.Windows.Forms.Padding(0);
+            this.Гнездо2.Name = "Гнездо2";
+            this.Гнездо2.Size = new System.Drawing.Size(17, 15);
+            this.Гнездо2.TabIndex = 69;
+            this.Гнездо2.UseVisualStyleBackColor = false;
+            this.Гнездо2.Click += new System.EventHandler(this.Гнездо_Click);
+            // 
+            // Гнездо1
+            // 
+            this.Гнездо1.BackColor = System.Drawing.Color.Transparent;
+            this.Гнездо1.FlatAppearance.BorderSize = 0;
+            this.Гнездо1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Гнездо1.Location = new System.Drawing.Point(280, 165);
+            this.Гнездо1.Margin = new System.Windows.Forms.Padding(0);
+            this.Гнездо1.Name = "Гнездо1";
+            this.Гнездо1.Size = new System.Drawing.Size(17, 15);
+            this.Гнездо1.TabIndex = 69;
+            this.Гнездо1.UseVisualStyleBackColor = false;
+            this.Гнездо1.Click += new System.EventHandler(this.Гнездо_Click);
+            // 
+            // Штырь1
+            // 
+            this.Штырь1.BackColor = System.Drawing.Color.Transparent;
+            this.Штырь1.FlatAppearance.BorderSize = 0;
+            this.Штырь1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Штырь1.Location = new System.Drawing.Point(259, 145);
+            this.Штырь1.Margin = new System.Windows.Forms.Padding(0);
+            this.Штырь1.Name = "Штырь1";
+            this.Штырь1.Size = new System.Drawing.Size(17, 15);
+            this.Штырь1.TabIndex = 69;
+            this.Штырь1.UseVisualStyleBackColor = false;
+            this.Штырь1.Click += new System.EventHandler(this.Штырь_Click);
             // 
             // TLF_TCHForm
             // 
@@ -347,6 +348,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 421);
             this.Controls.Add(this.Panel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TLF_TCHForm";
             this.Text = "TLF_TCHForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TLF_TCHForm_FormClosed_1);

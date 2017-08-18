@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(A403_3Form));
             this.A403_3Panel = new System.Windows.Forms.Panel();
             this.Лампочка2Комплект_4 = new System.Windows.Forms.PictureBox();
             this.Лампочка2Комплект_3 = new System.Windows.Forms.PictureBox();
@@ -170,6 +171,7 @@
             this.ClientSize = new System.Drawing.Size(720, 590);
             this.Controls.Add(this.A403_3Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "A403_3Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

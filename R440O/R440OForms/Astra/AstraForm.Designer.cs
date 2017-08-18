@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AstraForm));
             this.Panel = new System.Windows.Forms.Panel();
             this.РегуляторУсилениеПЧ = new System.Windows.Forms.Button();
             this.РегуляторУсиление = new System.Windows.Forms.Button();
@@ -313,6 +314,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(715, 478);
             this.Controls.Add(this.Panel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "AstraForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

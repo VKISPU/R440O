@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BMA_M_1Form));
             this.Panel = new System.Windows.Forms.Panel();
             this.ЛампочкаНеисправно = new System.Windows.Forms.PictureBox();
             this.ЛампочкаИсправно = new System.Windows.Forms.PictureBox();
@@ -724,15 +725,16 @@
             this.ПереключательКонтроль.UseVisualStyleBackColor = false;
             this.ПереключательКонтроль.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательКонтроль_MouseUp);
             // 
-            // Form
+            // BMA_M_1Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(954, 625);
             this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Form";
+            this.Name = "BMA_M_1Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "БМА-M/1";
             this.Panel.ResumeLayout(false);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(K05M_01Form));
             this.K05M_01Panel = new System.Windows.Forms.Panel();
             this.РегуляторУровень = new System.Windows.Forms.Button();
             this.СтрелкаУровень = new System.Windows.Forms.PictureBox();
@@ -188,6 +189,7 @@
             this.ClientSize = new System.Drawing.Size(494, 708);
             this.Controls.Add(this.K05M_01Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "K05M_01Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
