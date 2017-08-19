@@ -10,7 +10,7 @@ namespace ShareTypes.OrderScheme
         private static readonly double[] Скорость = { 480, 240, 144, 96, 48, 4, 8, 2, 4, 1, 2 };
 
         public static OrderSchemeClass CreateOrderScheme(bool isTesting)
-        {                       
+        {
             return isTesting ? DefaultCorrespondent() : GenerateParameters();
         }
 
@@ -28,7 +28,10 @@ namespace ShareTypes.OrderScheme
                 ПриемНомерПотока1 = 9,
                 ПриемНомерГруппы1 = 9,
                 ПриемНомерКаналаТЛФ = 2,
-                ПриемНомерКаналаТЛГ = 4
+                ПриемНомерКаналаТЛГ = 4,
+                ЦиркулярныйПозывной = 111,
+                ЦиркулярноИндивидуальныйПозывной = 222,
+                ИндивидуальныйПозывной = 001
             };
         }
 
@@ -75,12 +78,16 @@ namespace ShareTypes.OrderScheme
             схема.ПриемНомерКаналаТЛФ = rand.Next(3);
             схема.ПриемНомерКаналаТЛГ = rand.Next(4, 5);
 
+            схема.ЦиркулярныйПозывной = rand.Next(100, 999);
+            схема.ЦиркулярноИндивидуальныйПозывной = rand.Next(100, 999);
+            схема.ИндивидуальныйПозывной = rand.Next(100, 999);
+
             return схема;
         }
 
         public static OrderSchemeClass GenerateOrderSchemeByWave(
             int номерВолныНаПередачу,
-            int номерВолныНаПередачуДругойСхемыПриказа, 
+            int номерВолныНаПередачуДругойСхемыПриказа,
             string АидиСтанции)
         {
             var схема = new OrderSchemeClass();
@@ -95,7 +102,7 @@ namespace ShareTypes.OrderScheme
             var tmp3 = номерВолныНаПередачуДругойСхемыПриказа - 1500;
             var tmp4 = tmp3 / 5000;
             схема.ПриемУсловныйНомерСтвола1 = tmp4 + 1;
-            схема.ПриемУсловныйНомерВолны1  = tmp3 - (tmp4 * 5000);
+            схема.ПриемУсловныйНомерВолны1 = tmp3 - (tmp4 * 5000);
 
             return схема;
         }

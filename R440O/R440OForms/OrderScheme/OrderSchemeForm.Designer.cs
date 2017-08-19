@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderSchemeForm));
             this.OrderSchemePanel = new System.Windows.Forms.Panel();
+            this.ЦиркулярноИндивидуальныйПозывной = new System.Windows.Forms.Label();
+            this.ЦиркулярныйПозывной = new System.Windows.Forms.Label();
             this.ПриемНомерКаналаТЛГ = new System.Windows.Forms.Label();
             this.ПриемНомерКаналаТЛФ = new System.Windows.Forms.Label();
             this.ПриемНомерГруппы1 = new System.Windows.Forms.Label();
@@ -45,6 +47,7 @@
             this.ПередачаУсловныйНомерВолны3 = new System.Windows.Forms.Label();
             this.ПередачаУсловныйНомерВолны2 = new System.Windows.Forms.Label();
             this.ПередачаУсловныйНомерВолны1 = new System.Windows.Forms.Label();
+            this.ИндивидуальныйПозывной = new System.Windows.Forms.Label();
             this.OrderSchemePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +55,9 @@
             // 
             this.OrderSchemePanel.BackgroundImage = global::R440O.BackgroundImages.OrderScheme;
             this.OrderSchemePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.OrderSchemePanel.Controls.Add(this.ИндивидуальныйПозывной);
+            this.OrderSchemePanel.Controls.Add(this.ЦиркулярноИндивидуальныйПозывной);
+            this.OrderSchemePanel.Controls.Add(this.ЦиркулярныйПозывной);
             this.OrderSchemePanel.Controls.Add(this.ПриемНомерКаналаТЛГ);
             this.OrderSchemePanel.Controls.Add(this.ПриемНомерКаналаТЛФ);
             this.OrderSchemePanel.Controls.Add(this.ПриемНомерГруппы1);
@@ -72,6 +78,28 @@
             this.OrderSchemePanel.Name = "OrderSchemePanel";
             this.OrderSchemePanel.Size = new System.Drawing.Size(1089, 749);
             this.OrderSchemePanel.TabIndex = 4;
+            // 
+            // ЦиркулярноИндивидуальныйПозывной
+            // 
+            this.ЦиркулярноИндивидуальныйПозывной.AutoSize = true;
+            this.ЦиркулярноИндивидуальныйПозывной.BackColor = System.Drawing.Color.Transparent;
+            this.ЦиркулярноИндивидуальныйПозывной.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.ЦиркулярноИндивидуальныйПозывной.Location = new System.Drawing.Point(661, 256);
+            this.ЦиркулярноИндивидуальныйПозывной.Name = "ЦиркулярноИндивидуальныйПозывной";
+            this.ЦиркулярноИндивидуальныйПозывной.Size = new System.Drawing.Size(25, 13);
+            this.ЦиркулярноИндивидуальныйПозывной.TabIndex = 13;
+            this.ЦиркулярноИндивидуальныйПозывной.Text = "456";
+            // 
+            // ЦиркулярныйПозывной
+            // 
+            this.ЦиркулярныйПозывной.AutoSize = true;
+            this.ЦиркулярныйПозывной.BackColor = System.Drawing.Color.Transparent;
+            this.ЦиркулярныйПозывной.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.ЦиркулярныйПозывной.Location = new System.Drawing.Point(661, 241);
+            this.ЦиркулярныйПозывной.Name = "ЦиркулярныйПозывной";
+            this.ЦиркулярныйПозывной.Size = new System.Drawing.Size(25, 13);
+            this.ЦиркулярныйПозывной.TabIndex = 12;
+            this.ЦиркулярныйПозывной.Text = "123";
             // 
             // ПриемНомерКаналаТЛГ
             // 
@@ -238,6 +266,17 @@
             this.ПередачаУсловныйНомерВолны1.TabIndex = 0;
             this.ПередачаУсловныйНомерВолны1.Text = "1";
             // 
+            // ИндивидуальныйПозывной
+            // 
+            this.ИндивидуальныйПозывной.AutoSize = true;
+            this.ИндивидуальныйПозывной.BackColor = System.Drawing.Color.Transparent;
+            this.ИндивидуальныйПозывной.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.ИндивидуальныйПозывной.Location = new System.Drawing.Point(661, 272);
+            this.ИндивидуальныйПозывной.Name = "ИндивидуальныйПозывной";
+            this.ИндивидуальныйПозывной.Size = new System.Drawing.Size(25, 13);
+            this.ИндивидуальныйПозывной.TabIndex = 14;
+            this.ИндивидуальныйПозывной.Text = "789";
+            // 
             // OrderSchemeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,5 +313,8 @@
         private System.Windows.Forms.Label ПриемНомерГруппы1;
         private System.Windows.Forms.Label ПриемНомерКаналаТЛФ;
         private System.Windows.Forms.Label ПриемНомерКаналаТЛГ;
+        private System.Windows.Forms.Label ЦиркулярныйПозывной;
+        private System.Windows.Forms.Label ЦиркулярноИндивидуальныйПозывной;
+        private System.Windows.Forms.Label ИндивидуальныйПозывной;
     }
 }

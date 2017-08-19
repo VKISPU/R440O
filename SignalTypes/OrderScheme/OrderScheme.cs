@@ -43,5 +43,8 @@ namespace ShareTypes.OrderScheme
         public int ПриемУсловныйНомерВолны1{ get; set; }
         public int ПриемУсловныйНомерСтвола1{ get; set; }
 
+        public int ЦиркулярныйПозывной { get; set; }
+        public int ЦиркулярноИндивидуальныйПозывной { get; set; }
+        public int ИндивидуальныйПозывной { get; set; }
     }
 }

@@ -72,6 +72,10 @@
             ПриемНомерГруппы1.Text = OrderSchemeParameters.СхемаПриказ.ПриемНомерГруппы1.ToString();
             ПриемНомерКаналаТЛФ.Text = OrderSchemeParameters.СхемаПриказ.ПриемНомерКаналаТЛФ.ToString();
             ПриемНомерКаналаТЛГ.Text = OrderSchemeParameters.СхемаПриказ.ПриемНомерКаналаТЛГ.ToString();
+
+            ЦиркулярныйПозывной.Text = OrderSchemeParameters.СхемаПриказ.ЦиркулярныйПозывной.ToString();
+            ЦиркулярноИндивидуальныйПозывной.Text = OrderSchemeParameters.СхемаПриказ.ЦиркулярноИндивидуальныйПозывной.ToString();
+            ИндивидуальныйПозывной.Text = OrderSchemeParameters.СхемаПриказ.ИндивидуальныйПозывной.ToString();
         }
     }
 }
