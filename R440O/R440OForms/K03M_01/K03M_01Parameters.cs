@@ -14,7 +14,7 @@ using ShareTypes.SignalTypes;
 
 namespace R440O.R440OForms.K03M_01
 {
-    static class K03M_01Parameters
+    public static class K03M_01Parameters
     {
         // Внимание, в OnParameterChanged добавлен вызов метода.
         #region событие
@@ -265,7 +265,7 @@ namespace R440O.R440OForms.K03M_01
                 }
             }
         }
-        #endregion        
+        #endregion
 
         #region Логика работы Поиск
 
@@ -332,7 +332,7 @@ namespace R440O.R440OForms.K03M_01
                 _статусПоиска = value;
             }
         }
-        
+
         private static bool СоотвествиеЧастотыСигнала(KulonSignal сигнал)
         {
             double dif = сигнал.Frequency + _текущееЗначениеПоиска - K04M_01Parameters.ЧастотаПрм;

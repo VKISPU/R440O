@@ -17,10 +17,15 @@ using R440O.R440OForms.A205M_1;
 using R440O.R440OForms.N15Inside;
 using R440O.R440OForms.N18_M_H28;
 using R440O.R440OForms.K05M_01;
+using R440O.R440OForms.K03M_01;
 using ShareTypes.SignalTypes;
 
 namespace R440O.Test.MainTest
 {
+    /// <summary>
+    /// В связи со статичностью классов параметров не возможно окончательно востановить контекст после
+    /// выполнения теста. Поэтому если какие-то тесты не проходят, нужно попробовать запустить их отдельно.
+    /// </summary>
     [TestFixture]
     class MainTestClass
     {
@@ -90,6 +95,15 @@ namespace R440O.Test.MainTest
             N15InsideParameters.ПереключательПУЛ480ПРМ_2 = 3;
             C300M_1Parameters.КнопкиВидРаботы[5] = true;
             BMA_M_1Parameters.ПереключательРежимы = 2;
+            N18_M_H28Parameters.АктивныйКабель = 0;
+
+            N18_MParameters.Соединения[(int)ГнездаН18.КоммутацияПрм_Канал1_Б11] = 0;
+            N18_MParameters.Соединения[(int)ГнездаН18.КоммутацияПрм_Канал2_Б11] = 0;
+            N18_MParameters.Соединения[(int)ГнездаН18.КоммутацияПрм_Канал3_Б11] = 0;
+            N18_MParameters.Соединения[(int)ГнездаН18.КоммутацияПрм_Канал1_БМА2] = 0;
+            N18_MParameters.Соединения[(int)ГнездаН18.КоммутацияПрм_Канал1_БМА1] = 0;
+            N18_MParameters.Соединения[(int)ГнездаН18.КоммутацияПрм_Канал1_К12] = 0;
+            N18_MParameters.Соединения[(int)ГнездаН18.Контроль_Прм_Тлф1] = 0;
         }
 
         private void N15StrartStation()
@@ -108,7 +122,6 @@ namespace R440O.Test.MainTest
         [Test]
         public void MainTest()
         {
-
             Application.DoEvents();
             Assert.IsTrue(C300M_1Parameters.СигналПойман);
         }
@@ -289,8 +302,10 @@ namespace R440O.Test.MainTest
             N18_M_H28Parameters.АктивныйКабель = 1;
             K05M_01Parameters.ПереключательПередачаКонтроль = 0;
 
-            BMBParameters.КнопкаПередачаВызоваДк = СостоянияЭлементов.БМБ.Кнопка.Нажата;
+            K03M_01Parameters.НачатьПоискСНачала();
 
+            BMBParameters.КнопкаПередачаВызоваДк = СостоянияЭлементов.БМБ.Кнопка.Нажата;
+            
             Application.DoEvents();
 
             Assert.IsTrue(BMBParameters.ЛампочкаДк);
