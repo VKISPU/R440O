@@ -19,10 +19,16 @@ namespace Retranslator
 
         private HttpListener httpListener = new HttpListener();
 
-        private Random Randomizer = new Random();      
+        private Random Randomizer = new Random();
+
+        private int CircularName;
+        private int CircularPrivateName;
 
         public Server()
         {
+            CircularName = Randomizer.Next(100, 999);
+            CircularPrivateName = Randomizer.Next(100, 999);
+
             System.Net.IPAddress ipAdress;
             if (!HttpListener.IsSupported)
                 throw new NotImplementedException();
@@ -147,7 +153,10 @@ namespace Retranslator
             {
                 var wave1 = GetRandomWave(0);
                 var wave2 = GetRandomWave(wave1);
-                freePair = new OrderSchemePair(wave1, wave2);
+                var privateName1 = GetRandomPrivateName(0);
+                var privateName2 = GetRandomPrivateName(privateName1);
+                freePair = new OrderSchemePair(wave1, wave2, CircularName, CircularPrivateName,
+                    privateName1, privateName2);
                 this.OrderSchemePairs.Add(freePair);
             }
 
@@ -161,9 +170,25 @@ namespace Retranslator
             {
                 var wave = this.Randomizer.Next(1500, 51499);
                 if (Math.Abs(fisrtWave - wave) < 100 || !this.OrderSchemePairs.Any(pair =>
-                    Math.Abs(pair.RandomWave1 - wave) < 100 || Math.Abs(pair.RandomWave2 - wave) < 100))
+                    Math.Abs(pair.orderScheme1.ПередачаУсловныйНомерВолны1 - wave) < 100 || 
+                    Math.Abs(pair.orderScheme2.ПередачаУсловныйНомерВолны1 - wave) < 100))
                 {
                     return wave;
+                }
+            }
+            return -1;
+        }
+
+        private int GetRandomPrivateName(int firstPrivateName)
+        {
+            for (int i = 0; i < 10000; i++)
+            {
+                var name = this.Randomizer.Next(100, 999);
+                if (firstPrivateName != name && !this.OrderSchemePairs.Any( pair => 
+                    pair.orderScheme1.ИндивидуальныйПозывной == name ||
+                    pair.orderScheme2.ИндивидуальныйПозывной == name))
+                {
+                    return name;
                 }
             }
             return -1;

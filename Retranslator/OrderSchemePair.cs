@@ -8,17 +8,20 @@ using ShareTypes.OrderScheme;
 namespace Retranslator
 {
     public class OrderSchemePair
-    {
-        public int RandomWave1;
-        public int RandomWave2;
+    {      
+        public OrderSchemeClass orderScheme1;
+        public OrderSchemeClass orderScheme2;
 
         public Stantion Station1;
         public Stantion Station2;
 
-        public OrderSchemePair(int wave1, int wave2)
+        public OrderSchemePair(int wave1, int wave2, int circleName,
+            int circalPrivateName, int privateName1, int privateName2)
         {
-            this.RandomWave1 = wave1;
-            this.RandomWave2 = wave2;
+            orderScheme1 = OrderSchemeFactory.GenerateOrderSchemeByWave(wave1,
+                wave2, this.Station1.Id, circleName, circalPrivateName, privateName1);
+            orderScheme2 = OrderSchemeFactory.GenerateOrderSchemeByWave(wave2,
+                wave1, this.Station2.Id, circleName, circalPrivateName, privateName2);
         }
 
         public bool IsEmpty
@@ -53,11 +56,11 @@ namespace Retranslator
         {
             if (this.Station1.Id == station.Id)
             {
-                return OrderSchemeFactory.GenerateOrderSchemeByWave(RandomWave1, RandomWave2, this.Station1.Id);
+                return orderScheme1;
             }
             if (this.Station2.Id == station.Id)
             {
-                return OrderSchemeFactory.GenerateOrderSchemeByWave(RandomWave2, RandomWave1, this.Station2.Id);
+                return orderScheme2;
             }
             throw new Exception("No this station in this pair!");
         }
