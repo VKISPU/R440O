@@ -24,6 +24,16 @@ namespace Retranslator
                 wave1, circleName, circalPrivateName, privateName2);
         }
 
+        public Tuple<Stantion, OrderSchemeClass> GetStationOrderScheme1()
+        {
+            return new Tuple<Stantion, OrderSchemeClass>(Station1, orderScheme1);
+        }
+
+        public Tuple<Stantion, OrderSchemeClass> GetStationOrderScheme2()
+        {
+            return new Tuple<Stantion, OrderSchemeClass>(Station2, orderScheme2);
+        }
+
         public bool IsEmpty
         {
             get

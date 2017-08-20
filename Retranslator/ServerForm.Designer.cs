@@ -34,8 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StationName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrivateName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Frequency = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Modulation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GroupSpeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,8 +68,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.StationName,
+            this.PrivateName,
             this.Frequency,
             this.Modulation,
             this.GroupSpeed});
@@ -86,17 +84,12 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // ID
+            // PrivateName
             // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // StationName
-            // 
-            this.StationName.HeaderText = "Имя";
-            this.StationName.Name = "StationName";
-            this.StationName.ReadOnly = true;
+            this.PrivateName.HeaderText = "Индивидуальный позывной";
+            this.PrivateName.Name = "PrivateName";
+            this.PrivateName.ReadOnly = true;
+            this.PrivateName.Width = 200;
             // 
             // Frequency
             // 
@@ -141,8 +134,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StationName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrivateName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Frequency;
         private System.Windows.Forms.DataGridViewTextBoxColumn Modulation;
         private System.Windows.Forms.DataGridViewTextBoxColumn GroupSpeed;

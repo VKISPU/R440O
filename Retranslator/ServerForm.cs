@@ -22,8 +22,7 @@ namespace Retranslator
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            const string stationIdColumn = "ID";
-            const string stationNameColumn = "StationName";
+            const string privateNameColumn = "PrivateName";
             const string stationFrequencyColumn = "Frequency";
             const string stationModulationColumn = "Modulation";
             const string stationGroupSpeedColumn = "GroupSpeed";
@@ -31,36 +30,38 @@ namespace Retranslator
             server.ClearStantionList();
 
             var stations = server.OrderSchemePairs.SelectMany(pair =>
-                   new[] { pair.Station1, pair.Station2 })
-                   .Where(s => s != null).ToList();
+                   new[] { pair.GetStationOrderScheme1(), pair.GetStationOrderScheme2() })
+                   .Where(s => s.Item1 != null)
+                   .ToList();
 
             foreach (var row in this.dataGridView1.Rows.Cast<DataGridViewRow>())
             {
-                if(!stations.Any(s=>s.Id == (string)row.Cells[stationIdColumn].Value)) {
+                if(!stations.Any(s=>s.Item2.ИндивидуальныйПозывной.ToString() == 
+                    (string)row.Cells[privateNameColumn].Value)) {
                     this.dataGridView1.Rows.Remove(row);
                 }
             }
 
             foreach (var station in stations)
             {
-                var row = this.dataGridView1.Rows.Cast<DataGridViewRow>().FirstOrDefault(r => r.Cells[stationIdColumn].Value == station.Id);
+                var row = this.dataGridView1.Rows.Cast<DataGridViewRow>()
+                    .FirstOrDefault(r => r.Cells[privateNameColumn].Value.ToString() == 
+                        station.Item2.ИндивидуальныйПозывной.ToString());
                 if (row == null)
                 {
                     int index = this.dataGridView1.Rows.Add();
                     row = this.dataGridView1.Rows[index];
                 }
-
-                row.Cells[stationIdColumn].Value = station.Id;
-                row.Cells[stationNameColumn].Value = "Name";
-                row.Cells[stationFrequencyColumn].Value = station.Signal == null 
+                row.Cells[privateNameColumn].Value = station.Item2.ИндивидуальныйПозывной.ToString();
+                row.Cells[stationFrequencyColumn].Value = station.Item1.Signal == null 
                     ? "no signal" 
-                    : station.Signal.Frequency.ToString();
-                row.Cells[stationModulationColumn].Value = station.Signal == null
+                    : station.Item1.Signal.Frequency.ToString();
+                row.Cells[stationModulationColumn].Value = station.Item1.Signal == null
                     ? "no signal"
-                    : station.Signal.Modulation.ToString();
-                row.Cells[stationGroupSpeedColumn].Value = station.Signal == null
+                    : station.Item1.Signal.Modulation.ToString();
+                row.Cells[stationGroupSpeedColumn].Value = station.Item1.Signal == null
                     ? "no signal"
-                    : station.Signal.GroupSpeed.ToString();
+                    : station.Item1.Signal.GroupSpeed.ToString();
             }
         }
     }
