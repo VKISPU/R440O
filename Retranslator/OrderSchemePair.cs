@@ -19,9 +19,9 @@ namespace Retranslator
             int circalPrivateName, int privateName1, int privateName2)
         {
             orderScheme1 = OrderSchemeFactory.GenerateOrderSchemeByWave(wave1,
-                wave2, this.Station1.Id, circleName, circalPrivateName, privateName1);
+                wave2, circleName, circalPrivateName, privateName1);
             orderScheme2 = OrderSchemeFactory.GenerateOrderSchemeByWave(wave2,
-                wave1, this.Station2.Id, circleName, circalPrivateName, privateName2);
+                wave1, circleName, circalPrivateName, privateName2);
         }
 
         public bool IsEmpty
@@ -45,10 +45,12 @@ namespace Retranslator
             if (Station1 == null)
             {
                 Station1 = station;
+                this.orderScheme1.УникальныйИдентификаторСтанции = station.Id;
             }
             else
             {
                 Station2 = station;
+                this.orderScheme2.УникальныйИдентификаторСтанции = station.Id;
             }
         }
 
