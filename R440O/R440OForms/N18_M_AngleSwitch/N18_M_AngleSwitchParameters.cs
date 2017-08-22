@@ -124,7 +124,6 @@ namespace R440O.R440OForms.N18_M_AngleSwitch
 
         public static void ResetParameters()
         {
-            K01M_01Parameters.ResetParameters();
             OnParameterChanged();
         }
 
