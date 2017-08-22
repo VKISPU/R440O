@@ -3,11 +3,17 @@ using R440O.R440OForms.K03M_01;
 using R440O.R440OForms.BMB;
 using R440O.R440OForms.N18_M;
 using ShareTypes.SignalTypes;
+using R440O.R440OForms.PU_K1_1;
 
 namespace R440O.R440OForms.K02M_01
 {
     public static class K02M_01Parameters
     {
+        private static bool Питание
+        {
+            get { return PU_K1_1Parameters.Включен; }
+        }
+
         #region Лампочки
 
         public static KulonSignal Сигнал
@@ -22,7 +28,7 @@ namespace R440O.R440OForms.K02M_01
         {
             get
             {
-                return (K03M_01Parameters.СтатусПоиска == 2 &&
+                return Питание && (K03M_01Parameters.СтатусПоиска == 2 &&
                       K03M_01Parameters.ВременнаяПозицияПоиска <= -100 &&
                       K03M_01Parameters.ВременнаяПозицияПоиска > -200);
             }
@@ -32,7 +38,7 @@ namespace R440O.R440OForms.K02M_01
         {
             get
             {
-                return (K03M_01Parameters.СтатусПоиска == 2 &&
+                return Питание && (K03M_01Parameters.СтатусПоиска == 2 &&
                         Math.Abs(K03M_01Parameters.ВременнаяПозицияПоиска) < 100);
             }
         }
@@ -41,7 +47,7 @@ namespace R440O.R440OForms.K02M_01
         {
             get
             {
-                return (K03M_01Parameters.СтатусПоиска == 2 &&
+                return Питание &&  (K03M_01Parameters.СтатусПоиска == 2 &&
                     K03M_01Parameters.ВременнаяПозицияПоиска >= 100 &&
                     K03M_01Parameters.ВременнаяПозицияПоиска < 200);
             }
@@ -49,17 +55,17 @@ namespace R440O.R440OForms.K02M_01
 
         public static bool ЛампочкаПоискСигналов
         {
-            get { return (K03M_01Parameters.СтатусПоиска == 1 || K03M_01Parameters.СтатусПоиска == 3); }
+            get { return Питание && (K03M_01Parameters.СтатусПоиска == 1 || K03M_01Parameters.СтатусПоиска == 3); }
         }
 
         public static bool ЛампочкаПилот
         {
-            get { return K03M_01Parameters.СтатусПоиска == 2; }
+            get { return Питание && K03M_01Parameters.СтатусПоиска == 2; }
         }
 
         public static bool ЛампочкаИнформ
         {
-            get { return K03M_01Parameters.СтатусПоиска == 2; }
+            get { return Питание && K03M_01Parameters.СтатусПоиска == 2; }
         }
 
         #endregion

@@ -1,6 +1,9 @@
 ﻿using R440O.R440OForms.A205M_1;
 using R440O.R440OForms.A205M_2;
+using R440O.R440OForms.K01M_01;
+using R440O.R440OForms.K02M_01;
 using R440O.R440OForms.K03M_01;
+using R440O.R440OForms.K04M_01;
 using R440O.R440OForms.K05M_01;
 using R440O.R440OForms.N15;
 using R440O.R440OForms.N18_M_H28;
@@ -173,7 +176,10 @@ namespace R440O.R440OForms.PU_K1_1
                 Напряжение = 0;
 
             }
+            K01M_01Parameters.ResetParameters();
+            K02M_01Parameters.ResetParameters();
             K03M_01Parameters.ResetParameters();
+            K05M_01Parameters.ResetParameters();
             A205M_1Parameters.ResetParameters();
             A205M_2Parameters.ResetParameters();
         }

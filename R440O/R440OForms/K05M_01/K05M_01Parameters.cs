@@ -7,12 +7,18 @@ using R440O.R440OForms.PU_K1_1;
 using R440O.R440OForms.N18_M;
 using R440O.R440OForms.BMA_M_1;
 using R440O.R440OForms.N18_M_H28;
+using R440O.R440OForms.PU_K1_1;
 using ShareTypes.SignalTypes;
 
 namespace R440O.R440OForms.K05M_01
 {
     public static class K05M_01Parameters
     {
+        private static bool Питание
+        {
+            get { return PU_K1_1Parameters.Включен; }
+        }
+
         #region событие
 
         public delegate void ParameterChangedHandler();
@@ -145,9 +151,9 @@ namespace R440O.R440OForms.K05M_01
 
         public static int СтрелкаУровень
         {
-            get 
+            get
             {
-                return Math.Max((РегуляторУровень * 4) - Ослабление, -36); 
+                return Питание ? Math.Max((РегуляторУровень * 4) - Ослабление, -36) : 0;
             }
         }
 
@@ -174,7 +180,7 @@ namespace R440O.R440OForms.K05M_01
         {
             get
             {
-                if (!PU_K1_1Parameters.Включен)
+                if (!Питание)
                     return null;
                 var сигнал = new KulonSignal(K04M_01Parameters.ЧастотаПрд);
                 сигнал.SynchroSequence1 = K05M_01InsideParameters.Переключатель.Синхропоследовательность1;
