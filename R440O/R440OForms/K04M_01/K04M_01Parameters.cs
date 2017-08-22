@@ -2,7 +2,7 @@
 
 namespace R440O.R440OForms.K04M_01
 {
-    static class K04M_01Parameters
+    public static class K04M_01Parameters
     {
         public static int НачальнаяЧастотаПРМ = 65000;
 

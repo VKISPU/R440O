@@ -17,6 +17,7 @@ using R440O.R440OForms.A205M_1;
 using R440O.R440OForms.N15Inside;
 using R440O.R440OForms.N18_M_H28;
 using R440O.R440OForms.K05M_01;
+using R440O.R440OForms.K04M_01;
 using R440O.R440OForms.K03M_01;
 using ShareTypes.SignalTypes;
 
@@ -303,7 +304,8 @@ namespace R440O.Test.MainTest
             N18_M_H28Parameters.АктивныйКабель = 1;
             K05M_01Parameters.ПереключательПередачаКонтроль = 0;
 
-            K03M_01Parameters.НачатьПоискСНачала();
+            // Престроим частоту приема, чтобы следующий тик таймера нашел сигнал
+            K04M_01Parameters.ПереключательПрмКгц100 = 5;
 
             BMBParameters.КнопкаПередачаВызоваДк = СостоянияЭлементов.БМБ.Кнопка.Нажата;
             
