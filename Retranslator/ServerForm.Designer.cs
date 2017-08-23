@@ -33,11 +33,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.PrivateName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Wave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Power = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Modulation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GroupSpeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -70,19 +71,14 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PrivateName,
             this.Wave,
+            this.Power,
             this.Modulation,
             this.GroupSpeed});
             this.dataGridView1.Location = new System.Drawing.Point(115, 37);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(545, 281);
+            this.dataGridView1.Size = new System.Drawing.Size(644, 281);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // PrivateName
             // 
@@ -97,6 +93,12 @@
             this.Wave.Name = "Wave";
             this.Wave.ReadOnly = true;
             // 
+            // Power
+            // 
+            this.Power.HeaderText = "Мощность";
+            this.Power.Name = "Power";
+            this.Power.ReadOnly = true;
+            // 
             // Modulation
             // 
             this.Modulation.HeaderText = "Модуляция";
@@ -109,12 +111,18 @@
             this.GroupSpeed.Name = "GroupSpeed";
             this.GroupSpeed.ReadOnly = true;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // ServerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(672, 330);
+            this.ClientSize = new System.Drawing.Size(783, 330);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -136,6 +144,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrivateName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Wave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Power;
         private System.Windows.Forms.DataGridViewTextBoxColumn Modulation;
         private System.Windows.Forms.DataGridViewTextBoxColumn GroupSpeed;
     }
