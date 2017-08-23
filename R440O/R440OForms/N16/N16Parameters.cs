@@ -482,8 +482,9 @@ namespace R440O.R440OForms.N16
                     case 3:
                         if (N13_1Parameters.ВыходнойСигнал != null && N13_2Parameters.ВыходнойСигнал != null)
                         {
-                            N13_1Parameters.ВыходнойСигнал.Power = 240;
-                            return N13_1Parameters.ВыходнойСигнал;
+                            var сигнал = N13_1Parameters.ВыходнойСигнал;
+                            сигнал.Power = 240;
+                            return сигнал;
                         }
                         return N13_1Parameters.ВыходнойСигнал ?? N13_2Parameters.ВыходнойСигнал;
                 }

@@ -85,8 +85,9 @@ namespace R440O.R440OForms.N13_2
                 {
                     return null;
                 }
-                ВходнойСигнал.Power = 130;
-                return ВходнойСигнал;
+                var сигнал = ВходнойСигнал;
+                сигнал.Power = 130;
+                return сигнал;
             }
         }
     }
