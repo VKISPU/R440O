@@ -23,7 +23,7 @@ namespace Retranslator
         private void timer1_Tick(object sender, EventArgs e)
         {
             const string privateNameColumn = "PrivateName";
-            const string stationFrequencyColumn = "Frequency";
+            const string stationWaveColumn = "Wave";
             const string stationModulationColumn = "Modulation";
             const string stationGroupSpeedColumn = "GroupSpeed";
 
@@ -53,9 +53,9 @@ namespace Retranslator
                     row = this.dataGridView1.Rows[index];
                 }
                 row.Cells[privateNameColumn].Value = station.Item2.ИндивидуальныйПозывной.ToString();
-                row.Cells[stationFrequencyColumn].Value = station.Item1.Signal == null 
+                row.Cells[stationWaveColumn].Value = station.Item1.Signal == null 
                     ? "no signal" 
-                    : station.Item1.Signal.Frequency.ToString();
+                    : (station.Item1.Signal.Wave + 1500).ToString();
                 row.Cells[stationModulationColumn].Value = station.Item1.Signal == null
                     ? "no signal"
                     : station.Item1.Signal.Modulation.ToString();

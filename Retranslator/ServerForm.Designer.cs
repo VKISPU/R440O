@@ -35,7 +35,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.PrivateName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Frequency = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Wave = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Modulation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GroupSpeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,7 +69,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PrivateName,
-            this.Frequency,
+            this.Wave,
             this.Modulation,
             this.GroupSpeed});
             this.dataGridView1.Location = new System.Drawing.Point(115, 37);
@@ -91,11 +91,11 @@
             this.PrivateName.ReadOnly = true;
             this.PrivateName.Width = 200;
             // 
-            // Frequency
+            // Wave
             // 
-            this.Frequency.HeaderText = "Частота";
-            this.Frequency.Name = "Frequency";
-            this.Frequency.ReadOnly = true;
+            this.Wave.HeaderText = "Номер волны";
+            this.Wave.Name = "Wave";
+            this.Wave.ReadOnly = true;
             // 
             // Modulation
             // 
@@ -135,7 +135,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrivateName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Frequency;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Wave;
         private System.Windows.Forms.DataGridViewTextBoxColumn Modulation;
         private System.Windows.Forms.DataGridViewTextBoxColumn GroupSpeed;
     }
