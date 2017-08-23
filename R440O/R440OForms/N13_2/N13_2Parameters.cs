@@ -81,6 +81,11 @@ namespace R440O.R440OForms.N13_2
         {
             get
             {
+                if (!Включен)
+                {
+                    return null;
+                }
+                ВходнойСигнал.Power = 130;
                 return ВходнойСигнал;
             }
         }

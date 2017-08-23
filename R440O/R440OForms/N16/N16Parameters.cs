@@ -473,7 +473,21 @@ namespace R440O.R440OForms.N16
         {
             get
             {
-                return ВходнойСигнал;
+                switch (ЩелевойМостН13)
+                {
+                    case 1:
+                        return N13_1Parameters.ВыходнойСигнал;
+                    case 2:
+                        return N13_2Parameters.ВыходнойСигнал;
+                    case 3:
+                        if (N13_1Parameters.ВыходнойСигнал != null && N13_2Parameters.ВыходнойСигнал != null)
+                        {
+                            N13_1Parameters.ВыходнойСигнал.Power = 240;
+                            return N13_1Parameters.ВыходнойСигнал;
+                        }
+                        return N13_1Parameters.ВыходнойСигнал ?? N13_2Parameters.ВыходнойСигнал;
+                }
+                return null;
             }
         }
     }

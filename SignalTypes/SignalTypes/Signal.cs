@@ -15,6 +15,11 @@ namespace ShareTypes.SignalTypes
         }
 
         /// <summary>
+        /// Мощность сигнала
+        /// </summary>
+        public int Power;
+
+        /// <summary>
         /// Частота сигнала
         /// </summary>
         public int Frequency = -1;
