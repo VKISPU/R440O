@@ -30,6 +30,7 @@ namespace ShareTypes.OrderScheme
         public int ПриемНомерГруппы1{ get; set; }
         public int ПриемНомерГруппы2{ get; set; }
 
+            
         /// <summary>
         /// От 1 до 3 канала.
         /// </summary>

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 using System.Net;
-using System.Text;
-using Newtonsoft.Json;
 using ShareTypes.SignalTypes;
 using ShareTypes;
 using System.Threading.Tasks;
 using ShareTypes.OrderScheme;
 using System.Net.Sockets;
+using Newtonsoft.Json;
+using RetranslatorWPF;
 
 namespace Retranslator
 {
