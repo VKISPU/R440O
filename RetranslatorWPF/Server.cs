@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 using ShareTypes.OrderScheme;
 using System.Net.Sockets;
 using Newtonsoft.Json;
-using RetranslatorWPF;
 
-namespace Retranslator
+
+namespace RetranslatorWPF
 {
     public class Server
     {

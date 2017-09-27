@@ -33,8 +33,6 @@
     <Reference Include="nunit.framework">
       <HintPath>..\libs\NUnit.Framework-3.7.1\nunit.framework.dll</HintPath>
     </Reference>
-    <Reference Include="NUnitForms, Version=2.0.2327.4786, Culture=neutral, PublicKeyToken=eba0990a10412e0e, processorArchitecture=MSIL" />
-    <Reference Include="NUnitForms.Test, Version=2.0.2327.4788, Culture=neutral, PublicKeyToken=eba0990a10412e0e, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />

@@ -1,17 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace RetranslatorWPF
 {
@@ -20,16 +14,27 @@ namespace RetranslatorWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Server server;
+        private DispatcherTimer dispatcherTimer;
         public MainWindow()
         {
             InitializeComponent();
+            server = new Server();
+
+            dispatcherTimer = new DispatcherTimer();
+            dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+            dispatcherTimer.Start();
+
+
+
 
             List<Tuple<Stantion, Stantion>> stations = new List<Tuple<Stantion, Stantion>>();
             Stantion st1 = new Stantion();
             Stantion st2 = new Stantion();
 
-            
-            
+           
+
 
 
             stations.Add(new Tuple<Stantion, Stantion>(st1, st2));
@@ -64,6 +69,25 @@ namespace RetranslatorWPF
 
 
 
+        }
+
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+            const string privateNameColumn = "PrivateName";
+            const string stationWaveColumn = "Wave";
+            const string stationPowerColumn = "Power";
+            const string stationModulationColumn = "Modulation";
+            const string stationGroupSpeedColumn = "GroupSpeed";
+
+            server.ClearStantionList();
+
+            var stations = server.OrderSchemePairs.SelectMany(pair =>
+                   new[] { pair.GetStationOrderScheme1(), pair.GetStationOrderScheme2() })
+                   .Where(s => s.Item1 != null)
+                   .ToList();
+
+            if(!(stations.Count()==0))
+            MessageBox.Show(stations.Count().ToString());
         }
     }
 }
