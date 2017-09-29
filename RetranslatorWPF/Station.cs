@@ -3,7 +3,7 @@ using System;
 
 namespace RetranslatorWPF
 {
-    public class Stantion
+    public class Station
     {
         const long ExpireTime = 4;
 
@@ -11,7 +11,7 @@ namespace RetranslatorWPF
         public Signal Signal;
         public DateTime LastUpdate;
 
-        public Stantion()
+        public Station()
         {
             Signal = null;
             LastUpdate = DateTime.Now;

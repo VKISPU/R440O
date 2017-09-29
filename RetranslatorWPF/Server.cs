@@ -42,7 +42,7 @@ namespace RetranslatorWPF
             if (ipAdress==null)
                 throw new Exception("Local IP Address Not Found!");
 
-            httpListener.Prefixes.Add("http://localhost:8010/");
+            httpListener.Prefixes.Add("http://localhost:8080/");
             httpListener.Start();
             Task.Run(() => { 
                 Listening(); 
@@ -146,7 +146,7 @@ namespace RetranslatorWPF
 
         private OrderSchemeClass GetOrderSheme()
         {
-            var stantion = new Stantion();
+            var stantion = new Station();
             var freePair = this.OrderSchemePairs.FirstOrDefault(s => s.IsFree);
 
             if (freePair == null)

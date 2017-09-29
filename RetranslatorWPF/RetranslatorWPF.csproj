@@ -60,7 +60,7 @@
     </ApplicationDefinition>
     <Compile Include="OrderSchemePair.cs" />
     <Compile Include="Server.cs" />
-    <Compile Include="Stantion.cs" />
+    <Compile Include="Station.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
