@@ -18,6 +18,7 @@ namespace RetranslatorWPF
     {
         private Server server;
         private DispatcherTimer dispatcherTimer;
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -54,6 +55,11 @@ namespace RetranslatorWPF
             return content;
         }
 
+        private string getConnectionCondition(OrderSchemePair pair)
+        {
+            return "Подключение активно";
+        }
+
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
             const string privateNameColumn = "PrivateName";
@@ -72,34 +78,51 @@ namespace RetranslatorWPF
             {
                 if (pair.IsEmpty)
                     continue;
-
-                StackPanel sp = new StackPanel() { Height = 100, Orientation = Orientation.Horizontal, Margin = new Thickness(10) };
-                sp.SetValue(WidthProperty, list.Width);
-                list.Items.Add(sp);
-                var stationFontSize = 10;
-                var stationWidth = 250;
-                Button station1 = new Button() { Content = getStationString(pair.Station1,pair.orderScheme1), FontSize = stationFontSize, Width = stationWidth };
-                sp.Children.Add(station1);
-                Brush br = Brushes.DarkGray;
-                if (pair.Station1 != null && pair.Station1.Signal != null && pair.Station2 != null && pair.Station2.Signal != null)
-                {
-                    br = Brushes.LightGreen;
-                }
-
-                Line line = new Line() { X1 = 0, X2 = 160, Y1 = 50, Y2 = 50, Width = 160, StrokeThickness = 10, Stroke = br, StrokeDashArray = { 0.5, 0.5 }, StrokeDashOffset = 1, StrokeMiterLimit = 1, StrokeDashCap = PenLineCap.Triangle };
-                sp.Children.Add(line);
-
-                string station2Content = "Пусто";
-                if (!pair.isStation2Empty)
-                {
-                    station2Content = pair.orderScheme2.ИндивидуальныйПозывной.ToString();
-                }
-                Button station2 = new Button() { Content = getStationString(pair.Station2, pair.orderScheme2), FontSize = stationFontSize, Width = stationWidth };
-                sp.Children.Add(station2);
-
-
-
+                DrawPair(pair);
             }
+
+            
+        }
+
+        private void DrawPair(OrderSchemePair pair)
+        {
+            StackPanel sp = new StackPanel() { Height = 100, Orientation = Orientation.Horizontal, Margin = new Thickness(10) };
+            sp.SetValue(WidthProperty, list.Width);
+            list.Items.Add(sp);
+            var stationFontSize = 10;
+            var stationWidth = 250;
+            Button station1 = new Button() { Content = getStationString(pair.Station1, pair.orderScheme1), FontSize = stationFontSize, Width = stationWidth };
+            sp.Children.Add(station1);
+            Brush br = Brushes.DarkGray;
+
+            Label connectConditionLabel = new Label() {  HorizontalAlignment = HorizontalAlignment.Center };
+            if (pair.Station1 != null && pair.Station1.Signal != null && pair.Station2 != null && pair.Station2.Signal != null)
+            {
+                connectConditionLabel.Content = getConnectionCondition(pair);
+                br = Brushes.LightGreen;
+            }
+            else connectConditionLabel.Content = "Соединение отсутствует";
+
+
+            Line line = new Line() { X1 = 0, X2 = 160, Y1 = 20, Y2 = 20, Width = 160, StrokeThickness = 10, Stroke = br, StrokeDashArray = { 0.5, 0.5 }, StrokeDashOffset = 1, StrokeMiterLimit = 1, StrokeDashCap = PenLineCap.Triangle };
+
+            StackPanel spToConnection = new StackPanel() { Height = 100, Orientation = Orientation.Vertical };
+
+            spToConnection.Children.Add(connectConditionLabel);
+            spToConnection.Children.Add(line);
+
+            sp.Children.Add(spToConnection);
+
+            string station2Content = "Пусто";
+            if (!pair.isStation2Empty)
+            {
+                station2Content = pair.orderScheme2.ИндивидуальныйПозывной.ToString();
+            }
+            Button station2 = new Button() { Content = getStationString(pair.Station2, pair.orderScheme2), FontSize = stationFontSize, Width = stationWidth };
+            sp.Children.Add(station2);
+
+            
+
         }
     }
 }
