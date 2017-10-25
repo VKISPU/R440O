@@ -55,6 +55,27 @@ namespace RetranslatorWPF
             return content;
         }
 
+        private string getStationChanelString(Station station, OrderSchemeClass orderScheme)
+        {
+            if (station == null)
+            {
+                return "Пусто";
+            }
+            var content = orderScheme.ИндивидуальныйПозывной.ToString();
+            content += "\n";
+            if (station.Signal == null)
+            {
+                return content + "Сигнала нет";
+            }
+            for(var i = 0; i < station.Signal.Elements[0].Chanels.Count; i++)
+            {
+
+                content += "Канал " + i+ ": " + station.Signal.InformationStringOfChanel(i);
+                content += "\n";
+            }
+            return content;
+        }
+
         private string getConnectionCondition(OrderSchemePair pair)
         {
             return "Подключение активно";
@@ -86,12 +107,15 @@ namespace RetranslatorWPF
 
         private void DrawPair(OrderSchemePair pair)
         {
-            StackPanel sp = new StackPanel() { Height = 100, Orientation = Orientation.Horizontal, Margin = new Thickness(10) };
-            sp.SetValue(WidthProperty, list.Width);
-            list.Items.Add(sp);
+            var panelHeight = 150;
             var stationFontSize = 10;
             var stationWidth = 250;
+            StackPanel sp = new StackPanel() { Height = panelHeight, Orientation = Orientation.Horizontal, Margin = new Thickness(10) };
+            sp.SetValue(WidthProperty, list.Width);
+            list.Items.Add(sp);
             Button station1 = new Button() { Content = getStationString(pair.Station1, pair.orderScheme1), FontSize = stationFontSize, Width = stationWidth };
+            TextBlock station1Chanel = new TextBlock() { Text = getStationChanelString(pair.Station1, pair.orderScheme1), FontSize = stationFontSize, Width = stationWidth };
+            sp.Children.Add(station1Chanel);
             sp.Children.Add(station1);
             Brush br = Brushes.DarkGray;
 
@@ -106,7 +130,7 @@ namespace RetranslatorWPF
 
             Line line = new Line() { X1 = 0, X2 = 160, Y1 = 20, Y2 = 20, Width = 160, StrokeThickness = 10, Stroke = br, StrokeDashArray = { 0.5, 0.5 }, StrokeDashOffset = 1, StrokeMiterLimit = 1, StrokeDashCap = PenLineCap.Triangle };
 
-            StackPanel spToConnection = new StackPanel() { Height = 100, Orientation = Orientation.Vertical };
+            StackPanel spToConnection = new StackPanel() { Height = panelHeight, Orientation = Orientation.Vertical };
 
             spToConnection.Children.Add(connectConditionLabel);
             spToConnection.Children.Add(line);
@@ -119,9 +143,11 @@ namespace RetranslatorWPF
                 station2Content = pair.orderScheme2.ИндивидуальныйПозывной.ToString();
             }
             Button station2 = new Button() { Content = getStationString(pair.Station2, pair.orderScheme2), FontSize = stationFontSize, Width = stationWidth };
+            TextBlock station2Chanel = new TextBlock() { Text = getStationChanelString(pair.Station2, pair.orderScheme2), FontSize = stationFontSize, Width = stationWidth };
             sp.Children.Add(station2);
+            sp.Children.Add(station2Chanel);
 
-            
+
 
         }
     }

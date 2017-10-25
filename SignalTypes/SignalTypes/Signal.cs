@@ -138,6 +138,21 @@ namespace ShareTypes.SignalTypes
         }
 
         /// <summary>
+        /// Информация в определённом информационном канале. Уровень Б1.
+        /// </summary>
+        /// <param name="chanelNumber">Номер канала.</param>
+        public string InformationStringOfChanel(int chanelNumber)
+        {
+            if (Elements == null)
+                return null;
+            var element = Elements.FirstOrDefault(elem => elem.Flow == SelectedFlow &&
+                                                          elem.Group == SelectedGroup);
+            if (element == null)
+                return null;
+            return element.Chanels[chanelNumber].InformationString;
+        }
+
+        /// <summary>
         /// Проверка, соответствуют ли друг другу скорости передачи информации.
         /// Условия выбраны таким образом, чтобы 4.8 и 5.2 соответствовали другу другу.
         /// </summary>
