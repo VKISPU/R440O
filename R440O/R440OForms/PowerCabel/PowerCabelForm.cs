@@ -3,6 +3,7 @@
 namespace R440O.R440OForms.PowerCabel
 {
     using BaseClasses;
+    using global::R440O.LearnModule;
     using System;
     using System.Windows.Forms;
 
@@ -20,6 +21,12 @@ namespace R440O.R440OForms.PowerCabel
             PowerCabelParameters.ParameterChanged += RefreshFormElements;
             PowerCabelParameters.СтанцияСгорела += ВыводСообщенияСтанцияСгорела;
             this.RefreshFormElements();
+
+            if (LearnMain.getIntent() == IntentionEnum.PowerCabelConnect)
+            {
+                LearnMain.form = this;
+                LearnMain.Action();
+            }
         }
         private void ВыводСообщенияСтанцияСгорела()
         {

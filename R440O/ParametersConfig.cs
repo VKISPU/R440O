@@ -39,7 +39,7 @@ namespace R440O
         public static void ПодключениеПитания()
         {
             //Подключаем кабели
-            PowerCabelParameters.КабельСеть = true;
+            PowerCabelParameters.КабельСеть = false;
             VoltageStabilizerParameters.КабельВход = PowerCabelParameters.Напряжение;
 
             // Сброс случайных значений Фазировка и Напряжение, Включаем Н502Б и Нагрузку

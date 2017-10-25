@@ -10,6 +10,7 @@ namespace R440O.R440OForms.R440O
     using System.Linq;
     using System.Windows.Forms;
     using InternalBlocks;
+    using global::R440O.LearnModule;
 
     /// <summary>
     /// Форма станции Р440-О
@@ -17,7 +18,6 @@ namespace R440O.R440OForms.R440O
     public partial class R440OForm : Form
     {
         public event Action FormClosedEvent;
-
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="R440OForm"/>
         /// </summary>
@@ -26,6 +26,10 @@ namespace R440O.R440OForms.R440O
             this.InitializeComponent();
             Antenna.StartServerPing();
             Antenna.ErrorEvent += ServerError;
+            LearnMain.setMainForm(this);
+
+            
+           
         }
 
         private bool serverErrorFlag = false;
@@ -49,7 +53,9 @@ namespace R440O.R440OForms.R440O
         /// <param name="e">Событие нажатия</param>
         private void R440OButtonCommon_Click(object sender, EventArgs e)
         {
+
             var button = (Button)sender;
+
             const string buttonStrings = "Button";
             var blockName =
                 button.Name.Substring(button.Name.IndexOf(buttonStrings, StringComparison.Ordinal) + buttonStrings.Length);
@@ -62,6 +68,23 @@ namespace R440O.R440OForms.R440O
                 form.Activate();
                 return;
             }
+
+     
+          
+
+
+            
+
+            if((button.Name=="R440OButtonN502B")&&(LearnMain.getIntent()==IntentionEnum.openN502BtoPower))
+            {
+                LearnMain.setIntent(IntentionEnum.N502Power);
+            }
+
+            if ((button.Name == "R440OButtonPowerCabel") && (LearnMain.getIntent() == IntentionEnum.openPowerCabeltoPower))
+            {
+                LearnMain.setIntent(IntentionEnum.PowerCabelConnect);
+            }
+
 
             // Открытие новой формы соответствующей нажатой кнопке
             try
@@ -77,6 +100,8 @@ namespace R440O.R440OForms.R440O
             {
                 throw;
             }
+
+
         }
 
         private void R440OForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -91,6 +116,13 @@ namespace R440O.R440OForms.R440O
         private void R440OForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Antenna.StopServerPing();
+        }
+
+        private void R440OForm_Activated(object sender, EventArgs e)
+        {
+            if (LearnMain.getIntent() == IntentionEnum.N502Power) LearnMain.setIntent(IntentionEnum.openN502BtoPower);
+            if (LearnMain.getIntent() == IntentionEnum.PowerCabelConnect) LearnMain.setIntent(IntentionEnum.openPowerCabeltoPower);
+            LearnMain.Action();
         }
     }
 }

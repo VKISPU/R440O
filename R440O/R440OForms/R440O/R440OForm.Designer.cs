@@ -92,6 +92,7 @@
             this.R440OButtonPU_K1_2 = new System.Windows.Forms.Button();
             this.R440OPanel = new System.Windows.Forms.Panel();
             this.R440OButtonOrderScheme = new System.Windows.Forms.Button();
+            this.HelpTextbox = new System.Windows.Forms.RichTextBox();
             this.R440OPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1070,16 +1071,28 @@
             this.R440OButtonOrderScheme.UseVisualStyleBackColor = false;
             this.R440OButtonOrderScheme.Click += new System.EventHandler(this.R440OButtonCommon_Click);
             // 
+            // HelpTextbox
+            // 
+            this.HelpTextbox.Location = new System.Drawing.Point(12, 401);
+            this.HelpTextbox.Name = "HelpTextbox";
+            this.HelpTextbox.ReadOnly = true;
+            this.HelpTextbox.Size = new System.Drawing.Size(1076, 41);
+            this.HelpTextbox.TabIndex = 1;
+            this.HelpTextbox.Text = "";
+            // 
             // R440OForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 389);
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ClientSize = new System.Drawing.Size(1100, 454);
+            this.Controls.Add(this.HelpTextbox);
             this.Controls.Add(this.R440OPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "R440OForm";
             this.Text = "P-440-O";
+            this.Activated += new System.EventHandler(this.R440OForm_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.R440OForm_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.R440OForm_FormClosed);
             this.R440OPanel.ResumeLayout(false);
@@ -1090,67 +1103,68 @@
         #endregion
 
         private System.Windows.Forms.Panel R440OPanel;
-        private System.Windows.Forms.Button R440OButtonA205M_1;
         private System.Windows.Forms.Button R440OButtonA205M_2;
-        private System.Windows.Forms.Button R440OButtonA1;
-        private System.Windows.Forms.Button R440OButtonA304;
-        private System.Windows.Forms.Button R440OButtonB1_1;
-        private System.Windows.Forms.Button R440OButtonN502B;
         private System.Windows.Forms.Button R440OButtonN15;
         private System.Windows.Forms.Button R440OButtonN12S;
-        private System.Windows.Forms.Button R440OButtonPowerCabel;
-        private System.Windows.Forms.Button R440OButtonDAB_5;
-        private System.Windows.Forms.Button R440OButtonA306;
-        private System.Windows.Forms.Button R440OButtonKontur_P3;
-        private System.Windows.Forms.Button R440OButtonC300M_1;
         private System.Windows.Forms.Button R440OButtonC300M_2;
-        private System.Windows.Forms.Button R440OButtonC300M_3;
-        private System.Windows.Forms.Button R440OButtonC300M_4;
-        private System.Windows.Forms.Button R440OButtonC300PM_1;
         private System.Windows.Forms.Button R440OButtonAstra;
-        private System.Windows.Forms.Button R440OButtonBMA_M_2;
-        private System.Windows.Forms.Button R440OButtonBMB;
-        private System.Windows.Forms.Button R440OButtonP220_27G_2;
-        private System.Windows.Forms.Button R440OButtonP220_27G_3;
-        private System.Windows.Forms.Button R440OButtonVoltageStabilizer;
-        private System.Windows.Forms.Button R440OButtonRubin_N;
-        private System.Windows.Forms.Button R440OButtonPU_K1_1;
-        private System.Windows.Forms.Button R440OButtonC300PM_2;
-        private System.Windows.Forms.Button R440OButtonC300PM_3;
-        private System.Windows.Forms.Button R440OButtonC1_67;
         private System.Windows.Forms.Button R440OButtonA403_1;
-        private System.Windows.Forms.Button R440OButtonA403_3;
-        private System.Windows.Forms.Button R440OButtonN13_2;
-        private System.Windows.Forms.Button R440OButtonN13_1;
-        private System.Windows.Forms.Button R440OButtonN16;
-        private System.Windows.Forms.Button R440OButtonN18_M;
-        private System.Windows.Forms.Button R440OButtonNKN_1;
-        private System.Windows.Forms.Button R440OButtonPowerShield;
-        private System.Windows.Forms.Button R440OButtonB1_2;
-        private System.Windows.Forms.Button R440OButtonB2_1;
-        private System.Windows.Forms.Button R440OButtonB2_2;
-        private System.Windows.Forms.Button R440OButtonB3_2;
-        private System.Windows.Forms.Button R440OButtonB3_1;
-        private System.Windows.Forms.Button R440OButtonK01M_01;
-        private System.Windows.Forms.Button R440OButtonK02M_01;
-        private System.Windows.Forms.Button R440OButtonK03M_01;
-        private System.Windows.Forms.Button R440OButtonK04M_01;
-        private System.Windows.Forms.Button R440OButtonK05M_01;
-        private System.Windows.Forms.Button R440OButtonK06M_01;
-        private System.Windows.Forms.Button R440OButtonWattmeter;
         private System.Windows.Forms.Button R440OButtonOrderScheme;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Button R440OButtonNKN_2;
-        private System.Windows.Forms.Button R440OButtonBMA_M_1;
         private System.Windows.Forms.Button R440OButtonN18_M_AngleSwitch;
-        private System.Windows.Forms.Button R440OButtonN18_M_H28;
-        private System.Windows.Forms.Button R440OButtonK06M_02;
         private System.Windows.Forms.Button R440OButtonK05M_02;
-        private System.Windows.Forms.Button R440OButtonK04M_02;
-        private System.Windows.Forms.Button R440OButtonK03M_02;
-        private System.Windows.Forms.Button R440OButtonK02M_02;
-        private System.Windows.Forms.Button R440OButtonK01M_02;
-        private System.Windows.Forms.Button R440OButtonPU_K1_2;
+        public System.Windows.Forms.Button R440OButtonA205M_1;
+        public System.Windows.Forms.Button R440OButtonA1;
+        public System.Windows.Forms.Button R440OButtonA304;
+        public System.Windows.Forms.Button R440OButtonB1_1;
+        public System.Windows.Forms.Button R440OButtonN502B;
+        public System.Windows.Forms.Button R440OButtonPowerCabel;
+        public System.Windows.Forms.Button R440OButtonDAB_5;
+        public System.Windows.Forms.Button R440OButtonA306;
+        public System.Windows.Forms.Button R440OButtonKontur_P3;
+        public System.Windows.Forms.Button R440OButtonC300M_1;
+        public System.Windows.Forms.Button R440OButtonC300M_3;
+        public System.Windows.Forms.Button R440OButtonC300M_4;
+        public System.Windows.Forms.Button R440OButtonC300PM_1;
+        public System.Windows.Forms.Button R440OButtonBMA_M_2;
+        public System.Windows.Forms.Button R440OButtonBMB;
+        public System.Windows.Forms.Button R440OButtonP220_27G_2;
+        public System.Windows.Forms.Button R440OButtonP220_27G_3;
+        public System.Windows.Forms.Button R440OButtonVoltageStabilizer;
+        public System.Windows.Forms.Button R440OButtonRubin_N;
+        public System.Windows.Forms.Button R440OButtonPU_K1_1;
+        public System.Windows.Forms.Button R440OButtonC300PM_2;
+        public System.Windows.Forms.Button R440OButtonC300PM_3;
+        public System.Windows.Forms.Button R440OButtonC1_67;
+        public System.Windows.Forms.Button R440OButtonA403_3;
+        public System.Windows.Forms.Button R440OButtonN13_2;
+        public System.Windows.Forms.Button R440OButtonN13_1;
+        public System.Windows.Forms.Button R440OButtonN16;
+        public System.Windows.Forms.Button R440OButtonN18_M;
+        public System.Windows.Forms.Button R440OButtonNKN_1;
+        public System.Windows.Forms.Button R440OButtonPowerShield;
+        public System.Windows.Forms.Button R440OButtonB1_2;
+        public System.Windows.Forms.Button R440OButtonB2_1;
+        public System.Windows.Forms.Button R440OButtonB2_2;
+        public System.Windows.Forms.Button R440OButtonB3_2;
+        public System.Windows.Forms.Button R440OButtonB3_1;
+        public System.Windows.Forms.Button R440OButtonK01M_01;
+        public System.Windows.Forms.Button R440OButtonK02M_01;
+        public System.Windows.Forms.Button R440OButtonK03M_01;
+        public System.Windows.Forms.Button R440OButtonK04M_01;
+        public System.Windows.Forms.Button R440OButtonK05M_01;
+        public System.Windows.Forms.Button R440OButtonK06M_01;
+        public System.Windows.Forms.Button R440OButtonWattmeter;
+        public System.Windows.Forms.Button R440OButtonNKN_2;
+        public System.Windows.Forms.Button R440OButtonBMA_M_1;
+        public System.Windows.Forms.Button R440OButtonN18_M_H28;
+        public System.Windows.Forms.Button R440OButtonK06M_02;
+        public System.Windows.Forms.Button R440OButtonK04M_02;
+        public System.Windows.Forms.Button R440OButtonK03M_02;
+        public System.Windows.Forms.Button R440OButtonK02M_02;
+        public System.Windows.Forms.Button R440OButtonK01M_02;
+        public System.Windows.Forms.Button R440OButtonPU_K1_2;
+        public System.Windows.Forms.RichTextBox HelpTextbox;
     }
 }
 

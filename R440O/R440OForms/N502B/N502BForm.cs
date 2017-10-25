@@ -6,6 +6,7 @@
     using System.Windows.Forms;
     using ThirdParty;
     using BaseClasses;
+    using global::R440O.LearnModule;
 
     public partial class N502BForm : Form, IRefreshableForm
     {
@@ -16,6 +17,13 @@
             N502BParameters.СтанцияСгорела += ВыводСообщенияСтанцияСгорела;
             N502BParameters.НекорректноеДействие += ВыводСообщенияНекорректноеДействие;
             RefreshFormElements();
+
+            if(LearnMain.getIntent()==IntentionEnum.N502Power)
+            {
+                LearnMain.form = this;
+                LearnMain.Action();
+            }
+
         }
 
         private void ВыводСообщенияСтанцияСгорела()
@@ -332,6 +340,13 @@
             N502BParameters.ParameterChanged -= RefreshFormElements;
             N502BParameters.СтанцияСгорела -= ВыводСообщенияСтанцияСгорела;
             N502BParameters.НекорректноеДействие -= ВыводСообщенияНекорректноеДействие;
+
+            if ((N502BParameters.ТумблерН13_2) && (N502BParameters.ТумблерН13_1) && (N502BParameters.ТумблерН15) && (N502BParameters.ТумблерВыпрямитель27В) && (LearnMain.getIntent() == IntentionEnum.N502Power))
+            {
+                LearnMain.setIntent(IntentionEnum.openPowerCabeltoPower);
+            }
+            else LearnMain.setIntent(IntentionEnum.openN502BtoPower);
+            
         }
     }
 }

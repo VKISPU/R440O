@@ -88,6 +88,9 @@
       <DependentUpon>ControlElementImages.resx</DependentUpon>
     </Compile>
     <Compile Include="InternalBlocks\Antenna.cs" />
+    <Compile Include="LearnModule\IntentionEnum.cs" />
+    <Compile Include="LearnModule\LearnMain.cs" />
+    <Compile Include="LearnModule\HighLightModule.cs" />
     <Compile Include="PropertyInfoExtensions.cs" />
     <Compile Include="R440OForms\Astra\AstraParameters.cs" />
     <Compile Include="R440OForms\K01M_01\K01M_01Parameters.cs" />
