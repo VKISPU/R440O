@@ -408,9 +408,9 @@
             this.ТумблерН13_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.ТумблерН13_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.ТумблерН13_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ТумблерН13_2.Location = new System.Drawing.Point(260, 585);
+            this.ТумблерН13_2.Location = new System.Drawing.Point(260, 587);
             this.ТумблерН13_2.Name = "ТумблерН13_2";
-            this.ТумблерН13_2.Size = new System.Drawing.Size(82, 82);
+            this.ТумблерН13_2.Size = new System.Drawing.Size(82, 80);
             this.ТумблерН13_2.TabIndex = 24;
             this.ТумблерН13_2.UseVisualStyleBackColor = false;
             this.ТумблерН13_2.Click += new System.EventHandler(this.ТумблерН132_Click);

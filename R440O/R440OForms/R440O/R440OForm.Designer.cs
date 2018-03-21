@@ -1073,6 +1073,7 @@
             // 
             // HelpTextbox
             // 
+            this.HelpTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.HelpTextbox.Location = new System.Drawing.Point(12, 401);
             this.HelpTextbox.Name = "HelpTextbox";
             this.HelpTextbox.ReadOnly = true;
@@ -1104,7 +1105,6 @@
 
         private System.Windows.Forms.Panel R440OPanel;
         private System.Windows.Forms.Button R440OButtonA205M_2;
-        private System.Windows.Forms.Button R440OButtonN15;
         private System.Windows.Forms.Button R440OButtonN12S;
         private System.Windows.Forms.Button R440OButtonC300M_2;
         private System.Windows.Forms.Button R440OButtonAstra;
@@ -1165,6 +1165,7 @@
         public System.Windows.Forms.Button R440OButtonK01M_02;
         public System.Windows.Forms.Button R440OButtonPU_K1_2;
         public System.Windows.Forms.RichTextBox HelpTextbox;
+        public System.Windows.Forms.Button R440OButtonN15;
     }
 }
 

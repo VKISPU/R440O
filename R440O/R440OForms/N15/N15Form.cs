@@ -13,6 +13,7 @@ using R440O.ThirdParty;
 namespace R440O.R440OForms.N15
 {
     using BaseClasses;
+    using global::R440O.LearnModule;
     using System;
     using System.Linq;
     using System.Windows.Forms;
@@ -31,6 +32,13 @@ namespace R440O.R440OForms.N15
             N15Parameters.ParameterChanged += RefreshFormElements;
             N15Parameters.IndicatorChanged += RefreshIndicator;
             RefreshFormElements();
+
+            if (LearnMain.getIntent() == IntentionEnum.openN15AB)
+            {
+                LearnMain.form = this;
+                LearnMain.setIntent(IntentionEnum.N15AB);
+
+            }
         }
 
         #region Инициализация элементов управления
@@ -503,6 +511,10 @@ namespace R440O.R440OForms.N15
         private void N15Form_FormClosed(object sender, FormClosedEventArgs e)
         {
             N15Parameters.ParameterChanged -= RefreshFormElements;
+            if (LearnMain.getIntent() == IntentionEnum.N15AB)
+            {
+                LearnMain.setIntent(IntentionEnum.openBMB);
+            }
         }
     }
 }

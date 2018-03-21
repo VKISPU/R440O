@@ -585,6 +585,7 @@
             this.Name = "C1_67Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "C1-67";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.C1_67Form_FormClosed);
             this.C1_67Panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -592,35 +593,35 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel C1_67Panel;
-        private System.Windows.Forms.Button C1_67ПереключательДлительность;
-        private System.Windows.Forms.Button C1_67ПереключательУсиление;
-        private System.Windows.Forms.Button C1_67_N19ПереключательВыборПриемника;
-        private System.Windows.Forms.Button C1_67_N19ТумблерВклВыкл;
-        private System.Windows.Forms.Button C1_67_N19Тумблер200_20;
-        private System.Windows.Forms.Button C1_67ТумблерX1X02;
-        private System.Windows.Forms.Button C1_67ТумблерСеть;
-        private System.Windows.Forms.Button C1_67Тумблер2kHz;
-        private System.Windows.Forms.Button С1_67ПереключательУсилительУ2;
-        private System.Windows.Forms.Button С1_67ПереключательУсилительУ3;
-        private System.Windows.Forms.Button С1_67ПереключательУсилительУ1;
-        private System.Windows.Forms.Button C1_67РегуляторЯркость;
-        private System.Windows.Forms.Button C1_67РегуляторСинхронизация;
-        private System.Windows.Forms.Button C1_67РегуляторУсиление;
-        private System.Windows.Forms.Button C1_67РегуляторСтаб;
-        private System.Windows.Forms.Button C1_67РегуляторПлавно;
-        private System.Windows.Forms.Button C1_67РегуляторГрубо;
-        private System.Windows.Forms.Button C1_67РегуляторШкала;
-        private System.Windows.Forms.Button C1_67РегуляторФокус;
-        private System.Windows.Forms.Button C1_67РегуляторУровень;
-        private System.Windows.Forms.Button C1_67РегуляторКоррекция;
-        private System.Windows.Forms.Button C1_67ПереключательСинхронизация1_4;
-        private System.Windows.Forms.Button C1_67ПереключательСинхронизация1_2;
-        private System.Windows.Forms.Button C1_67ПереключательСинхронизация1_3;
-        private System.Windows.Forms.Button C1_67ПереключательСинхронизация1_1;
-        private System.Windows.Forms.Button C1_67ПереключательСинхронизация2_4;
-        private System.Windows.Forms.Button C1_67ПереключательСинхронизация2_2;
-        private System.Windows.Forms.Button C1_67ПереключательСинхронизация2_3;
-        private System.Windows.Forms.Button C1_67ПереключательСинхронизация2_1;
+        public System.Windows.Forms.Panel C1_67Panel;
+        public System.Windows.Forms.Button C1_67ПереключательДлительность;
+        public System.Windows.Forms.Button C1_67ПереключательУсиление;
+        public System.Windows.Forms.Button C1_67_N19ПереключательВыборПриемника;
+        public System.Windows.Forms.Button C1_67_N19ТумблерВклВыкл;
+        public System.Windows.Forms.Button C1_67_N19Тумблер200_20;
+        public System.Windows.Forms.Button C1_67ТумблерX1X02;
+        public System.Windows.Forms.Button C1_67ТумблерСеть;
+        public System.Windows.Forms.Button C1_67Тумблер2kHz;
+        public System.Windows.Forms.Button С1_67ПереключательУсилительУ2;
+        public System.Windows.Forms.Button С1_67ПереключательУсилительУ3;
+        public System.Windows.Forms.Button С1_67ПереключательУсилительУ1;
+        public System.Windows.Forms.Button C1_67РегуляторЯркость;
+        public System.Windows.Forms.Button C1_67РегуляторСинхронизация;
+        public System.Windows.Forms.Button C1_67РегуляторУсиление;
+        public System.Windows.Forms.Button C1_67РегуляторСтаб;
+        public System.Windows.Forms.Button C1_67РегуляторПлавно;
+        public System.Windows.Forms.Button C1_67РегуляторГрубо;
+        public System.Windows.Forms.Button C1_67РегуляторШкала;
+        public System.Windows.Forms.Button C1_67РегуляторФокус;
+        public System.Windows.Forms.Button C1_67РегуляторУровень;
+        public System.Windows.Forms.Button C1_67РегуляторКоррекция;
+        public System.Windows.Forms.Button C1_67ПереключательСинхронизация1_4;
+        public System.Windows.Forms.Button C1_67ПереключательСинхронизация1_2;
+        public System.Windows.Forms.Button C1_67ПереключательСинхронизация1_3;
+        public System.Windows.Forms.Button C1_67ПереключательСинхронизация1_1;
+        public System.Windows.Forms.Button C1_67ПереключательСинхронизация2_4;
+        public System.Windows.Forms.Button C1_67ПереключательСинхронизация2_2;
+        public System.Windows.Forms.Button C1_67ПереключательСинхронизация2_3;
+        public System.Windows.Forms.Button C1_67ПереключательСинхронизация2_1;
     }
 }

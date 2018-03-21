@@ -8,6 +8,7 @@
     using BaseClasses;
     using ThirdParty;
     using СостоянияЭлементов.БМБ;
+    using global::R440O.LearnModule;
 
     /// <summary>
     /// Форма блока БМБ
@@ -23,6 +24,11 @@
             BMBParameters.RefreshForm += RefreshFormElements;
             N18_M.N18_MParameters.ParameterChanged += RefreshFormElements;
             RefreshFormElements();
+            if (LearnMain.getIntent() == IntentionEnum.openBMB)
+            {
+                LearnMain.form = this;
+                LearnMain.setIntent(IntentionEnum.BMB);
+            }
         }
 
         #region Переключатели
@@ -240,5 +246,13 @@
             RefreshFormElements();
         }
         #endregion
+
+        private void BMBForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (LearnMain.getIntent() == IntentionEnum.BMB)
+            {
+                LearnMain.setIntent(IntentionEnum.openC1_67);
+            }
+        }
     }
 }

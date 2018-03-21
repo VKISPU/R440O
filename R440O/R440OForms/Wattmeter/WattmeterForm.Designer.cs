@@ -176,12 +176,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel Panel;
-        private System.Windows.Forms.Button ПереключательРежимРаботы;
-        private System.Windows.Forms.Button РегуляторГрубо;
-        private System.Windows.Forms.Button РегуляторТочно;
-        private System.Windows.Forms.Button РегуляторКоррекция;
-        private System.Windows.Forms.Button ТумблерСеть;
-        private System.Windows.Forms.Button Дисплей;
+        public System.Windows.Forms.Panel Panel;
+        public System.Windows.Forms.Button ПереключательРежимРаботы;
+        public System.Windows.Forms.Button РегуляторГрубо;
+        public System.Windows.Forms.Button РегуляторТочно;
+        public System.Windows.Forms.Button РегуляторКоррекция;
+        public System.Windows.Forms.Button ТумблерСеть;
+        public System.Windows.Forms.Button Дисплей;
     }
 }

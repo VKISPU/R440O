@@ -18,10 +18,13 @@
             N502BParameters.НекорректноеДействие += ВыводСообщенияНекорректноеДействие;
             RefreshFormElements();
 
-            if(LearnMain.getIntent()==IntentionEnum.N502Power)
+            LearnMain.isMainWindow = false;
+
+            if (LearnMain.getIntent()==IntentionEnum.openN502BtoPower)
             {
                 LearnMain.form = this;
-                LearnMain.Action();
+                LearnMain.setIntent(IntentionEnum.N502Power);
+
             }
 
         }
@@ -341,11 +344,13 @@
             N502BParameters.СтанцияСгорела -= ВыводСообщенияСтанцияСгорела;
             N502BParameters.НекорректноеДействие -= ВыводСообщенияНекорректноеДействие;
 
-            if ((N502BParameters.ТумблерН13_2) && (N502BParameters.ТумблерН13_1) && (N502BParameters.ТумблерН15) && (N502BParameters.ТумблерВыпрямитель27В) && (LearnMain.getIntent() == IntentionEnum.N502Power))
+            if ((N502BParameters.ТумблерН13_2) && (N502BParameters.ТумблерН13_1) && 
+                (N502BParameters.ТумблерН15) && (N502BParameters.ТумблерВыпрямитель27В) && 
+                (N502BParameters.ТумблерЭлектрооборудование) && (N502BParameters.ПереключательКонтрольНапряжения == 1) && 
+                (LearnMain.getIntent() == IntentionEnum.N502Power))
             {
-                LearnMain.setIntent(IntentionEnum.openPowerCabeltoPower);
+                LearnMain.setIntent(IntentionEnum.openN15AB);
             }
-            else LearnMain.setIntent(IntentionEnum.openN502BtoPower);
             
         }
     }

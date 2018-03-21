@@ -12,6 +12,7 @@ namespace R440O.R440OForms.Wattmeter
     using ThirdParty;
     using System.Reflection;
     using BaseClasses;
+    using global::R440O.LearnModule;
 
     /// <summary>
     /// Форма блока ватметр
@@ -28,6 +29,11 @@ namespace R440O.R440OForms.Wattmeter
             InitializeComponent();
             WattmeterParameters.ParameterChanged += RefreshFormElements;
             RefreshFormElements();
+            if (LearnMain.getIntent() == IntentionEnum.openYA2M_66)
+            {
+                LearnMain.form = this;
+                LearnMain.setIntent(IntentionEnum.YA2M_66);
+            }
         }
 
         /// <summary>
@@ -103,6 +109,10 @@ namespace R440O.R440OForms.Wattmeter
         private void WattmeterForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             WattmeterParameters.ParameterChanged -= RefreshFormElements;
+            if (LearnMain.getIntent() == IntentionEnum.YA2M_66)
+            {
+                LearnMain.setIntent(IntentionEnum.openPowerCabeltoPower);
+            }
         }
 
 

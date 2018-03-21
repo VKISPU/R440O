@@ -11,6 +11,7 @@ using R440O.ThirdParty;
 
 namespace R440O.R440OForms.C1_67
 {
+    using global::R440O.LearnModule;
     using System.Windows.Forms;
 
     /// <summary>
@@ -27,6 +28,12 @@ namespace R440O.R440OForms.C1_67
             this.InitializeComponent();
             InitializeTogglesPosition();
             InitializeTumblersPosition();
+
+            if (LearnMain.getIntent() == IntentionEnum.openC1_67)
+            {
+                LearnMain.form = this;
+                LearnMain.setIntent(IntentionEnum.C1_67);
+            }
         }
 
 
@@ -415,7 +422,15 @@ namespace R440O.R440OForms.C1_67
                 C1_67ПереключательСинхронизация2_1.BackgroundImage = null;
                 C1_67Parameters.C1_67ПереключательСинхронизация2 = 4;
             }
-        } 
+        }
         #endregion
+
+        private void C1_67Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (LearnMain.getIntent() == IntentionEnum.C1_67)
+            {
+                LearnMain.setIntent(IntentionEnum.openYA2M_66);
+            }
+        }
     }
 }

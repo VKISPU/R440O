@@ -23,7 +23,7 @@ namespace R440O.R440OForms.PowerCabel
             this.RefreshFormElements();
 
             if (LearnMain.getIntent() == IntentionEnum.PowerCabelConnect)
-            {
+            { 
                 LearnMain.form = this;
                 LearnMain.Action();
             }
@@ -63,6 +63,12 @@ namespace R440O.R440OForms.PowerCabel
 
         private void PowerCabelForm_FormClosed(object sender, FormClosedEventArgs e)
         {
+
+            if (!PowerCabelParameters.КабельСеть)
+            { 
+                LearnMain.setIntent(IntentionEnum.openPowerCabeltoPower);
+            } else LearnMain.setIntent(IntentionEnum.openN502BtoPower);
+
             PowerCabelParameters.ParameterChanged -= RefreshFormElements;
             PowerCabelParameters.СтанцияСгорела -= ВыводСообщенияСтанцияСгорела;
         }

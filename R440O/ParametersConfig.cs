@@ -39,14 +39,13 @@ namespace R440O
         public static void ПодключениеПитания()
         {
             //Подключаем кабели
-            PowerCabelParameters.КабельСеть = false;
+            PowerCabelParameters.КабельСеть = true;
             VoltageStabilizerParameters.КабельВход = PowerCabelParameters.Напряжение;
 
             // Сброс случайных значений Фазировка и Напряжение, Включаем Н502Б и Нагрузку
             N502BParameters.ПереключательСеть = true;
             N502BParameters.ПереключательФазировка = N502BParameters.Фазировка;
             N502BParameters.КнопкаВклНагрузки = true;
-            N502BParameters.КнопкаВклНагрузки = false;
             N502BParameters.ТумблерН13_1 = true;
             N502BParameters.ТумблерН13_2 = true;
 
@@ -214,7 +213,7 @@ namespace R440O
         /// <summary>
         /// Устанавливает определённый набор параметров станции в заданное положение
         /// </summary>
-        public static void SetParameters(bool setDeveloperState = true)
+        public static void SetParameters(bool setDeveloperState = false)
         {
             #region Сборы2015
 

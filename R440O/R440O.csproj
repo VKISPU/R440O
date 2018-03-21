@@ -88,6 +88,7 @@
       <DependentUpon>ControlElementImages.resx</DependentUpon>
     </Compile>
     <Compile Include="InternalBlocks\Antenna.cs" />
+    <Compile Include="LearnModule\GlobalIntentEnum.cs" />
     <Compile Include="LearnModule\IntentionEnum.cs" />
     <Compile Include="LearnModule\LearnMain.cs" />
     <Compile Include="LearnModule\HighLightModule.cs" />
