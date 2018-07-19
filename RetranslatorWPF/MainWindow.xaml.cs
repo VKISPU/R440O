@@ -70,7 +70,7 @@ namespace RetranslatorWPF
             for(var i = 0; i < station.Signal.Elements[0].Chanels.Count; i++)
             {
 
-                content += "Канал " + i+ ": " + station.Signal.InformationStringOfChanel(i);
+                content += "Канал " + i+1+ ": " + station.Signal.InformationStringOfChanel(i);
                 content += "\n";
             }
             return content;

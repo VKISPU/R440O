@@ -472,7 +472,7 @@ namespace R440O.R440OForms.Kontur_P3.Параметры
 
         private static int ИндексГруппы = -1;
         private static string ЗначениеИндексГруппы = "0";
-        private static string[] ЗначениеГруппа = { "000", "000", "000", "000", "000", "000", "000", "000", "^00" };
+        public static string[] ЗначениеГруппа = { "000", "000", "000", "000", "000", "000", "000", "000", "^00" };
 
         private static string ЗначениеИнформация = "";
         #endregion

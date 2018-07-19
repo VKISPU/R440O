@@ -84,8 +84,12 @@ namespace R440O.R440OForms.A1
                 ПолучитьИнформациюБаслет(сигнал);
                 if (Kontur_P3Parameters.ЛампочкаПередача)
                 {
-                    сигнал.Elements[0].SetInformationInChanelByNumber((int)Kontur_P3Parameters.ПереключательПриоритет,
-                            Kontur_P3Parameters.ТаблоИнформация);
+                    foreach (var group in Kontur_P3Parameters.ЗначениеГруппа)
+                    {
+                        сигнал.Elements[0].SetInformationInChanelByNumber((int)Kontur_P3Parameters.ПереключательПриоритет,
+                                Kontur_P3Parameters.ТаблоИнформация);
+
+                    }
                 }
                 return сигнал;
             }
