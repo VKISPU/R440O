@@ -1,0 +1,15 @@
+﻿<Window x:Class="RetranslatorWPF.StartUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RetranslatorWPF"
+        mc:Ignorable="d"
+        Title="StartUp" Height="470" Width="600" Name="window">
+    <Grid Width="550">
+        <Label Content="Сопряжение станций:" HorizontalAlignment="Left" Margin="0,13,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <ListView x:Name="satationList" VirtualizingPanel.ScrollUnit="Pixel"  Margin="0,50,0,0"  Background="#FFBDBDBD" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Center" Width="550" Height="350" VerticalAlignment="Top"/>
+        <Button Name="addPair" Content="Добавить связь" Margin="10,60,0,0" Width="110" Height="25" Click="Add_Pair" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Button Content="Включить ретранслятор" HorizontalAlignment="Left" Margin="390,409,0,0" Click="StartRepeater" VerticalAlignment="Top" Width="160"/>
+    </Grid>
+</Window>

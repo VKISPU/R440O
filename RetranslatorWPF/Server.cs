@@ -15,19 +15,20 @@ namespace RetranslatorWPF
 {
     public class Server
     {
+        public List<Tuple<int, int, OrderSchemeClass>> SchemePairs = new List<Tuple<int, int, OrderSchemeClass>>();
+
         public List<OrderSchemePair> OrderSchemePairs = new List<OrderSchemePair>();
+
+        public List<Station> stations = new List<Station>();
 
         private HttpListener httpListener = new HttpListener();
 
-        private Random Randomizer = new Random();
-
-        private int CircularName;
-        private int CircularPrivateName;
-
-        public Server()
+        public Server(List<Tuple<int, int>> pairs)
         {
-            CircularName = Randomizer.Next(100, 999);
-            CircularPrivateName = Randomizer.Next(100, 999);
+            foreach (Tuple<int, int> pair in pairs)
+            {
+                SchemePairs.Add(new Tuple<int, int, OrderSchemeClass>(pair.Item1, pair.Item2, GetOrderSheme()));
+            }
 
             System.Net.IPAddress ipAdress;
             if (!HttpListener.IsSupported)
@@ -127,8 +128,15 @@ namespace RetranslatorWPF
 
         private void SendOrderScheme(HttpListenerRequest request, HttpListenerResponse response)
         {
-            var orderScheme = GetOrderSheme();
-            SendObject(response, orderScheme);
+            string computerName = request.Headers.GetValues("ComputerName").First();
+            foreach (Tuple<int, int, OrderSchemeClass> pair in SchemePairs)
+            {
+                if (pair.Item1 == int.Parse(computerName.Substring(2)) || pair.Item2 == int.Parse(computerName.Substring(2)))
+                {
+                    var orderScheme = pair.Item3;
+                    SendObject(response, orderScheme);
+                }
+            }
         }
 
         private void SendSignal(HttpListenerRequest request, HttpListenerResponse response)
@@ -146,29 +154,47 @@ namespace RetranslatorWPF
 
         private OrderSchemeClass GetOrderSheme()
         {
-            var stantion = new Station();
-            var freePair = this.OrderSchemePairs.FirstOrDefault(s => s.IsFree);
+            Random Randomizer = new Random();
 
-            if (freePair == null)
-            {
-                var wave1 = GetRandomWave(0);
-                var wave2 = GetRandomWave(wave1);
-                var privateName1 = GetRandomPrivateName(0);
-                var privateName2 = GetRandomPrivateName(privateName1);
-                freePair = new OrderSchemePair(wave1, wave2, CircularName, CircularPrivateName,
-                    privateName1, privateName2);
-                this.OrderSchemePairs.Add(freePair);
-            }
+            int CircularName = Randomizer.Next(100, 999);
+            int CircularPrivateName = Randomizer.Next(100, 999);
 
-            freePair.AddStation(stantion);
-            return freePair.GetOrderSchemeByStation(stantion);
+            var wave1 = GetRandomWave(0);
+            var wave2 = GetRandomWave(wave1);
+            var privateName = GetRandomPrivateName(0);
+            return OrderSchemeFactory.GenerateOrderSchemeByWave(wave1, wave2, CircularName, CircularPrivateName, privateName);
+
+            //var pair = new OrderSchemePair(wave1, wave2, CircularName, CircularPrivateName,
+            //privateName1, privateName2);
+            //pair.AddStation(stantion);
+            //this.OrderSchemePairs.Add(pair);
+            //return pair.GetOrderSchemeByStation(stantion);
+
+            //var stantion = new Station();
+            //var freePair = this.OrderSchemePairs.FirstOrDefault(s => s.IsFree);
+
+            //if (freePair == null)
+            //{
+            //    var wave1 = GetRandomWave(0);
+            //    var wave2 = GetRandomWave(wave1);
+            //    var privateName1 = GetRandomPrivateName(0);
+            //    var privateName2 = GetRandomPrivateName(privateName1);
+            //    freePair = new OrderSchemePair(wave1, wave2, CircularName, CircularPrivateName,
+            //        privateName1, privateName2);
+            //    this.OrderSchemePairs.Add(freePair);
+            //}
+
+            //freePair.AddStation(stantion);
+            //return freePair.GetOrderSchemeByStation(stantion);
         }
 
         private int GetRandomWave(int fisrtWave)
         {
+            Random Randomizer = new Random();
+
             for (int i = 0; i < 10000; i++)
             {
-                var wave = this.Randomizer.Next(1500, 51499);
+                var wave = Randomizer.Next(1500, 51499);
                 if (Math.Abs(fisrtWave - wave) < 100 || !this.OrderSchemePairs.Any(pair =>
                     Math.Abs(pair.orderScheme1.ПередачаУсловныйНомерВолны1 - wave) < 100 || 
                     Math.Abs(pair.orderScheme2.ПередачаУсловныйНомерВолны1 - wave) < 100))
@@ -181,9 +207,11 @@ namespace RetranslatorWPF
 
         private int GetRandomPrivateName(int firstPrivateName)
         {
+            Random Randomizer = new Random();
+
             for (int i = 0; i < 10000; i++)
             {
-                var name = this.Randomizer.Next(100, 999);
+                var name = Randomizer.Next(100, 999);
                 if (firstPrivateName != name && !this.OrderSchemePairs.Any( pair => 
                     pair.orderScheme1.ИндивидуальныйПозывной == name ||
                     pair.orderScheme2.ИндивидуальныйПозывной == name))

@@ -19,10 +19,10 @@ namespace RetranslatorWPF
         private Server server;
         private DispatcherTimer dispatcherTimer;
         
-        public MainWindow()
+        public MainWindow(List<Tuple<int, int>> pairs)
         {
             InitializeComponent();
-            server = new Server();
+            server = new Server(pairs);
 
             dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
@@ -100,9 +100,7 @@ namespace RetranslatorWPF
                 if (pair.IsEmpty)
                     continue;
                 DrawPair(pair);
-            }
-
-            
+            }        
         }
 
         private void DrawPair(OrderSchemePair pair)
@@ -126,7 +124,6 @@ namespace RetranslatorWPF
                 br = Brushes.LightGreen;
             }
             else connectConditionLabel.Content = "Соединение отсутствует";
-
 
             Line line = new Line() { X1 = 0, X2 = 160, Y1 = 20, Y2 = 20, Width = 160, StrokeThickness = 10, Stroke = br, StrokeDashArray = { 0.5, 0.5 }, StrokeDashOffset = 1, StrokeMiterLimit = 1, StrokeDashCap = PenLineCap.Triangle };
 
