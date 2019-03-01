@@ -103,7 +103,7 @@
             this.Panel.Controls.Add(this.ТумблерЭлектрооборудование);
             this.Panel.Location = new System.Drawing.Point(0, 0);
             this.Panel.Name = "Panel";
-            this.Panel.Size = new System.Drawing.Size(749, 745);
+            this.Panel.Size = new System.Drawing.Size(744, 738);
             this.Panel.TabIndex = 1;
             // 
             // ВремяРаботы
@@ -392,9 +392,9 @@
             this.ТумблерН15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.ТумблерН15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.ТумблерН15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ТумблерН15.Location = new System.Drawing.Point(432, 598);
+            this.ТумблерН15.Location = new System.Drawing.Point(406, 585);
             this.ТумблерН15.Name = "ТумблерН15";
-            this.ТумблерН15.Size = new System.Drawing.Size(36, 56);
+            this.ТумблерН15.Size = new System.Drawing.Size(82, 82);
             this.ТумблерН15.TabIndex = 25;
             this.ТумблерН15.UseVisualStyleBackColor = false;
             this.ТумблерН15.Click += new System.EventHandler(this.ТумблерН15_Click);
@@ -408,9 +408,9 @@
             this.ТумблерН13_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.ТумблерН13_2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.ТумблерН13_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ТумблерН13_2.Location = new System.Drawing.Point(284, 598);
+            this.ТумблерН13_2.Location = new System.Drawing.Point(260, 587);
             this.ТумблерН13_2.Name = "ТумблерН13_2";
-            this.ТумблерН13_2.Size = new System.Drawing.Size(36, 56);
+            this.ТумблерН13_2.Size = new System.Drawing.Size(82, 80);
             this.ТумблерН13_2.TabIndex = 24;
             this.ТумблерН13_2.UseVisualStyleBackColor = false;
             this.ТумблерН13_2.Click += new System.EventHandler(this.ТумблерН132_Click);
@@ -424,9 +424,9 @@
             this.ТумблерН13_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.ТумблерН13_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.ТумблерН13_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ТумблерН13_1.Location = new System.Drawing.Point(135, 598);
+            this.ТумблерН13_1.Location = new System.Drawing.Point(110, 587);
             this.ТумблерН13_1.Name = "ТумблерН13_1";
-            this.ТумблерН13_1.Size = new System.Drawing.Size(36, 56);
+            this.ТумблерН13_1.Size = new System.Drawing.Size(82, 82);
             this.ТумблерН13_1.TabIndex = 23;
             this.ТумблерН13_1.UseVisualStyleBackColor = false;
             this.ТумблерН13_1.Click += new System.EventHandler(this.ТумблерН131_Click);
@@ -440,9 +440,9 @@
             this.ТумблерОсвещение.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.ТумблерОсвещение.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.ТумблерОсвещение.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ТумблерОсвещение.Location = new System.Drawing.Point(432, 468);
+            this.ТумблерОсвещение.Location = new System.Drawing.Point(406, 455);
             this.ТумблерОсвещение.Name = "ТумблерОсвещение";
-            this.ТумблерОсвещение.Size = new System.Drawing.Size(36, 56);
+            this.ТумблерОсвещение.Size = new System.Drawing.Size(82, 82);
             this.ТумблерОсвещение.TabIndex = 22;
             this.ТумблерОсвещение.UseVisualStyleBackColor = false;
             this.ТумблерОсвещение.Click += new System.EventHandler(this.ТумблерОсвещение_Click);
@@ -456,9 +456,9 @@
             this.ТумблерВыпрямитель27В.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.ТумблерВыпрямитель27В.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.ТумблерВыпрямитель27В.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ТумблерВыпрямитель27В.Location = new System.Drawing.Point(285, 469);
+            this.ТумблерВыпрямитель27В.Location = new System.Drawing.Point(260, 455);
             this.ТумблерВыпрямитель27В.Name = "ТумблерВыпрямитель27В";
-            this.ТумблерВыпрямитель27В.Size = new System.Drawing.Size(36, 56);
+            this.ТумблерВыпрямитель27В.Size = new System.Drawing.Size(82, 82);
             this.ТумблерВыпрямитель27В.TabIndex = 21;
             this.ТумблерВыпрямитель27В.UseVisualStyleBackColor = false;
             this.ТумблерВыпрямитель27В.Click += new System.EventHandler(this.ТумблерВыпрямитель27В_Click);
@@ -472,9 +472,9 @@
             this.ТумблерЭлектрооборудование.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.ТумблерЭлектрооборудование.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.ТумблерЭлектрооборудование.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ТумблерЭлектрооборудование.Location = new System.Drawing.Point(136, 468);
+            this.ТумблерЭлектрооборудование.Location = new System.Drawing.Point(111, 458);
             this.ТумблерЭлектрооборудование.Name = "ТумблерЭлектрооборудование";
-            this.ТумблерЭлектрооборудование.Size = new System.Drawing.Size(36, 56);
+            this.ТумблерЭлектрооборудование.Size = new System.Drawing.Size(82, 82);
             this.ТумблерЭлектрооборудование.TabIndex = 20;
             this.ТумблерЭлектрооборудование.UseVisualStyleBackColor = false;
             this.ТумблерЭлектрооборудование.Click += new System.EventHandler(this.ТумблерЭлектрооборудование_Click);
@@ -528,15 +528,14 @@
         public System.Windows.Forms.Button ПереключательТокНагрузкиИЗаряда;
         public System.Windows.Forms.PictureBox ЛампочкаСеть;
         public System.Windows.Forms.PictureBox ЛампочкаСфазировано;
-        private System.Windows.Forms.PictureBox ИндикаторНапряжение;
-        private System.Windows.Forms.PictureBox ИндикаторКонтрольНапряжения;
-        private System.Windows.Forms.PictureBox ИндикаторТокНагрузкиИЗаряда;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox ИндикаторТокНагрузки;
-        private System.Windows.Forms.Button ВремяРаботы;
-
+        public System.Windows.Forms.PictureBox ИндикаторНапряжение;
+        public System.Windows.Forms.PictureBox ИндикаторКонтрольНапряжения;
+        public System.Windows.Forms.PictureBox ИндикаторТокНагрузкиИЗаряда;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.PictureBox pictureBox3;
+        public System.Windows.Forms.PictureBox pictureBox5;
+        public System.Windows.Forms.PictureBox ИндикаторТокНагрузки;
+        public System.Windows.Forms.Button ВремяРаботы;
     }
 }

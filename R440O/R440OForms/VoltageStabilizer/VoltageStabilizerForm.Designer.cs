@@ -56,16 +56,18 @@
             this.Panel.Controls.Add(this.КабельВход2);
             this.Panel.Controls.Add(this.КабельВход1);
             this.Panel.Location = new System.Drawing.Point(0, 0);
+            this.Panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panel.Name = "Panel";
-            this.Panel.Size = new System.Drawing.Size(1092, 773);
+            this.Panel.Size = new System.Drawing.Size(1456, 951);
             this.Panel.TabIndex = 0;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Location = new System.Drawing.Point(335, 118);
+            this.pictureBox2.Location = new System.Drawing.Point(447, 145);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(134, 51);
+            this.pictureBox2.Size = new System.Drawing.Size(179, 63);
             this.pictureBox2.TabIndex = 41;
             this.pictureBox2.TabStop = false;
             // 
@@ -73,9 +75,10 @@
             // 
             this.ИндикаторНапряжения.BackColor = System.Drawing.Color.Transparent;
             this.ИндикаторНапряжения.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ИндикаторНапряжения.Location = new System.Drawing.Point(346, 50);
+            this.ИндикаторНапряжения.Location = new System.Drawing.Point(461, 62);
+            this.ИндикаторНапряжения.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ИндикаторНапряжения.Name = "ИндикаторНапряжения";
-            this.ИндикаторНапряжения.Size = new System.Drawing.Size(111, 119);
+            this.ИндикаторНапряжения.Size = new System.Drawing.Size(148, 146);
             this.ИндикаторНапряжения.TabIndex = 37;
             this.ИндикаторНапряжения.TabStop = false;
             // 
@@ -84,9 +87,10 @@
             this.ЛампочкаАвария.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаАвария.BackgroundImage = global::R440O.ControlElementImages.lampType6OnRed;
             this.ЛампочкаАвария.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаАвария.Location = new System.Drawing.Point(651, 12);
+            this.ЛампочкаАвария.Location = new System.Drawing.Point(868, 15);
+            this.ЛампочкаАвария.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ЛампочкаАвария.Name = "ЛампочкаАвария";
-            this.ЛампочкаАвария.Size = new System.Drawing.Size(40, 40);
+            this.ЛампочкаАвария.Size = new System.Drawing.Size(53, 49);
             this.ЛампочкаАвария.TabIndex = 36;
             this.ЛампочкаАвария.TabStop = false;
             // 
@@ -95,9 +99,10 @@
             this.ЛампочкаСетьВкл.BackColor = System.Drawing.Color.Transparent;
             this.ЛампочкаСетьВкл.BackgroundImage = global::R440O.ControlElementImages.lampType13OnGreen;
             this.ЛампочкаСетьВкл.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ЛампочкаСетьВкл.Location = new System.Drawing.Point(584, 14);
+            this.ЛампочкаСетьВкл.Location = new System.Drawing.Point(779, 17);
+            this.ЛампочкаСетьВкл.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ЛампочкаСетьВкл.Name = "ЛампочкаСетьВкл";
-            this.ЛампочкаСетьВкл.Size = new System.Drawing.Size(40, 40);
+            this.ЛампочкаСетьВкл.Size = new System.Drawing.Size(53, 49);
             this.ЛампочкаСетьВкл.TabIndex = 35;
             this.ЛампочкаСетьВкл.TabStop = false;
             // 
@@ -110,9 +115,10 @@
             this.ПереключательКонтрольНапр.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.ПереключательКонтрольНапр.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.ПереключательКонтрольНапр.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ПереключательКонтрольНапр.Location = new System.Drawing.Point(796, 63);
+            this.ПереключательКонтрольНапр.Location = new System.Drawing.Point(1061, 78);
+            this.ПереключательКонтрольНапр.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ПереключательКонтрольНапр.Name = "ПереключательКонтрольНапр";
-            this.ПереключательКонтрольНапр.Size = new System.Drawing.Size(81, 82);
+            this.ПереключательКонтрольНапр.Size = new System.Drawing.Size(108, 101);
             this.ПереключательКонтрольНапр.TabIndex = 34;
             this.ПереключательКонтрольНапр.UseVisualStyleBackColor = false;
             this.ПереключательКонтрольНапр.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ПереключательКонтрольНапр_MouseUp);
@@ -125,9 +131,10 @@
             this.КабельВход2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.КабельВход2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КабельВход2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.КабельВход2.Location = new System.Drawing.Point(-12, 410);
+            this.КабельВход2.Location = new System.Drawing.Point(-16, 505);
+            this.КабельВход2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.КабельВход2.Name = "КабельВход2";
-            this.КабельВход2.Size = new System.Drawing.Size(107, 99);
+            this.КабельВход2.Size = new System.Drawing.Size(143, 122);
             this.КабельВход2.TabIndex = 33;
             this.КабельВход2.UseVisualStyleBackColor = false;
             this.КабельВход2.Click += new System.EventHandler(this.КабельВход2_Click);
@@ -141,21 +148,23 @@
             this.КабельВход1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.КабельВход1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.КабельВход1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.КабельВход1.Location = new System.Drawing.Point(-12, 306);
+            this.КабельВход1.Location = new System.Drawing.Point(-16, 377);
+            this.КабельВход1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.КабельВход1.Name = "КабельВход1";
-            this.КабельВход1.Size = new System.Drawing.Size(107, 99);
+            this.КабельВход1.Size = new System.Drawing.Size(143, 122);
             this.КабельВход1.TabIndex = 32;
             this.КабельВход1.UseVisualStyleBackColor = false;
             this.КабельВход1.Click += new System.EventHandler(this.КабельВход1_Click);
             // 
             // VoltageStabilizerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1093, 733);
+            this.ClientSize = new System.Drawing.Size(1457, 902);
             this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "VoltageStabilizerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -172,13 +181,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel Panel;
-        private System.Windows.Forms.Button КабельВход2;
-        private System.Windows.Forms.Button КабельВход1;
-        private System.Windows.Forms.Button ПереключательКонтрольНапр;
-        private System.Windows.Forms.PictureBox ЛампочкаСетьВкл;
-        private System.Windows.Forms.PictureBox ЛампочкаАвария;
-        private System.Windows.Forms.PictureBox ИндикаторНапряжения;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.Panel Panel;
+        public System.Windows.Forms.Button КабельВход2;
+        public System.Windows.Forms.Button КабельВход1;
+        public System.Windows.Forms.Button ПереключательКонтрольНапр;
+        public System.Windows.Forms.PictureBox ЛампочкаСетьВкл;
+        public System.Windows.Forms.PictureBox ЛампочкаАвария;
+        public System.Windows.Forms.PictureBox ИндикаторНапряжения;
+        public System.Windows.Forms.PictureBox pictureBox2;
     }
 }

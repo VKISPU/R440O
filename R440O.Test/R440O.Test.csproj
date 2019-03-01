@@ -47,7 +47,9 @@
     <Compile Include="MainTestClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\R440O\R440O.csproj">
       <Project>{e56e78c2-af9a-4135-a229-b62e6d120b72}</Project>

@@ -54,6 +54,7 @@ namespace R440O
 
         private void OfflineWorkButton_Click(object sender, EventArgs e)
         {
+            ParametersConfig.setIsLearning(true);
             RunR400O();
         }
 

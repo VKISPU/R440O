@@ -6,6 +6,7 @@ namespace R440O.R440OForms.A205M_1
     using System.Windows.Forms;
     using ThirdParty;
     using BaseClasses;
+    using global::R440O.LearnModule;
 
     /// <summary>
     /// Форма блока А205М-1
@@ -20,6 +21,11 @@ namespace R440O.R440OForms.A205M_1
             this.InitializeComponent();
             A205M_1Parameters.ParameterChanged += RefreshFormElements;
             RefreshFormElements();
+            if (LearnMain.getIntent() == ModulesEnum.A205_m1_Open)
+            {
+                LearnMain.form = this;
+                LearnMain.setIntent(ModulesEnum.A205_m1_Power);
+            }
         }
 
         #region Инициализация элементов управления формы
@@ -216,6 +222,17 @@ namespace R440O.R440OForms.A205M_1
         private void A205M_1Form_FormClosed(object sender, FormClosedEventArgs e)
         {
             A205M_1Parameters.ParameterChanged -= RefreshFormElements;
+            if(LearnMain.getIntent() == ModulesEnum.A205_m1_Power)
+            {
+                if(LearnMain.globalIntent == GlobalIntentEnum.OneChannel)
+                {
+                    if (A205M_1Parameters.ПереключательВидРаботы == 3 && A205M_1Parameters.ПереключательВходЧТ == 1)
+                    {
+                        LearnMain.setIntent(ModulesEnum.H15Inside_open);
+                    }
+                    else LearnMain.setIntent(ModulesEnum.A205_m1_Open);
+                }
+            }
         }
     }
 }

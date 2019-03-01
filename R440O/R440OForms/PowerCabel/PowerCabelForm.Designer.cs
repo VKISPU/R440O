@@ -97,8 +97,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel Panel;
-        private System.Windows.Forms.Button ТумблерОсвещение;
-        private System.Windows.Forms.Button КабельСеть;
+        public System.Windows.Forms.Panel Panel;
+        public System.Windows.Forms.Button ТумблерОсвещение;
+        public System.Windows.Forms.Button КабельСеть;
     }
 }

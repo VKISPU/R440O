@@ -8,6 +8,7 @@
     using BaseClasses;
     using ThirdParty;
     using СостоянияЭлементов.БМБ;
+    using global::R440O.LearnModule;
 
     /// <summary>
     /// Форма блока БМБ
@@ -23,6 +24,7 @@
             BMBParameters.RefreshForm += RefreshFormElements;
             N18_M.N18_MParameters.ParameterChanged += RefreshFormElements;
             RefreshFormElements();
+           
         }
 
         #region Переключатели
@@ -240,5 +242,10 @@
             RefreshFormElements();
         }
         #endregion
+
+        private void BMBForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
     }
 }

@@ -11,6 +11,7 @@ using R440O.ThirdParty;
 
 namespace R440O.R440OForms.C1_67
 {
+    using global::R440O.LearnModule;
     using System.Windows.Forms;
 
     /// <summary>
@@ -27,6 +28,8 @@ namespace R440O.R440OForms.C1_67
             this.InitializeComponent();
             InitializeTogglesPosition();
             InitializeTumblersPosition();
+
+           
         }
 
 
@@ -415,7 +418,12 @@ namespace R440O.R440OForms.C1_67
                 C1_67ПереключательСинхронизация2_1.BackgroundImage = null;
                 C1_67Parameters.C1_67ПереключательСинхронизация2 = 4;
             }
-        } 
+        }
         #endregion
+
+        private void C1_67Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+           
+        }
     }
 }

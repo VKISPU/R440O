@@ -69,12 +69,6 @@ namespace ShareTypes.SignalTypes
             Chanels[numberOfChanel] = new Chanel(speed, signal.InformationString);
         }
 
-        public void SetInformationInChanelByNumber(int numberOfChanel, string InformationString)
-        {
-            var speed = Chanels[numberOfChanel].Speed;
-            Chanels[numberOfChanel] = new Chanel(speed, InformationString);
-        }
-
         public SignalElement Clone()
         {
             return new SignalElement
