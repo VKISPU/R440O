@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,24 +21,20 @@ namespace R440O
         public StationForm()
         {
             InitializeComponent();
-
-            таймерПоискаСервера.Enabled = true;
-            таймерПоискаСервера.Interval = 10000;
-            таймерПоискаСервера.Tick += tick;
-            таймерПоискаСервера.Start();
+            pcNumber.Text += Dns.GetHostName().Substring(2,2);
         }
 
         public void tick(object sender, EventArgs e)
         {
             if (!HttpHelper.ПоискИдет)
             {
-                if (HttpHelper.СерверНайден)
+                HttpHelper.ПроверитьАдресс("http://" + "192.168.0." + LastByteIP.Text + ":8080/");
+            }
+            else
+            {
+                if (!HttpHelper.СерверНайден)
                 {
                     RunR400O();
-                }
-                else
-                {
-                    HttpHelper.ПоискСервера();
                 }
             }
         }
@@ -61,6 +58,36 @@ namespace R440O
         private void OnR440oFormClosed()
         {
             this.Close();
+        }
+
+        private void StartSearchButton_Click(object sender, EventArgs e)
+        {
+            label1.Visible = true;
+            таймерПоискаСервера.Enabled = true;
+            таймерПоискаСервера.Interval = 1000;
+            таймерПоискаСервера.Tick += tick;
+            таймерПоискаСервера.Start();
+        }
+
+        private void LastByteIP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if (!Char.IsDigit(number) && number != 8) // цифры и клавиша BackSpace
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void LastByteIP_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(LastByteIP.Text))
+            {
+                StartSearchButton.Enabled = false;
+            }
+            else
+            {
+                StartSearchButton.Enabled = true;
+            }
         }
     }
 }

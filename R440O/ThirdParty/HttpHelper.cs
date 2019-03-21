@@ -41,44 +41,49 @@ namespace R440O.ThirdParty
             var bodyStr = new StringContent(JsonConvert.SerializeObject(body), Encoding.UTF8, "application/json");
 
             using (HttpClient client = new HttpClient())
-            using (HttpResponseMessage response = await client.PostAsync(ServerUrl + url, bodyStr))
-            using (HttpContent content = response.Content)
             {
-                string result = await content.ReadAsStringAsync();
-                if (result != null)
+                using (HttpResponseMessage response = await client.PostAsync(ServerUrl + url, bodyStr))
+                using (HttpContent content = response.Content)
                 {
-                    try
+                    string result = await content.ReadAsStringAsync();
+                    if (result != null)
                     {
-                        return JsonConvert.DeserializeObject<T1>(result);
+                        try
+                        {
+                            return JsonConvert.DeserializeObject<T1>(result);
+                        }
+                        catch
+                        {
+                            return null;
+                        }
                     }
-                    catch
-                    {
-                        return null;
-                    }
+                    return null;
                 }
-                return null;
             }
         }
 
         private static async Task<T1> Get<T1>(string url) where T1 : class
         {
             using (HttpClient client = new HttpClient())
-            using (HttpResponseMessage response = await client.GetAsync(ServerUrl + url))
-            using (HttpContent content = response.Content)
             {
-                string result = await content.ReadAsStringAsync();
-                if (result != null)
+                client.DefaultRequestHeaders.Add("ComputerName", System.Net.Dns.GetHostName());
+                using (HttpResponseMessage response = await client.GetAsync(ServerUrl + url))
+                using (HttpContent content = response.Content)
                 {
-                    try
+                    string result = await content.ReadAsStringAsync();
+                    if (result != null)
                     {
-                        return JsonConvert.DeserializeObject<T1>(result);
+                        try
+                        {
+                            return JsonConvert.DeserializeObject<T1>(result);
+                        }
+                        catch
+                        {
+                            return null;
+                        }
                     }
-                    catch
-                    {
-                        return null;
-                    }
+                    return null;
                 }
-                return null;
             }
         }
 
@@ -123,6 +128,8 @@ namespace R440O.ThirdParty
             foreach (var addr in списокАдресовСети)
             {
                 var _serverUrl = "http://" + addr + ":8080/";
+                if (СерверНайден)
+                    break;
                 ПроверитьАдресс(_serverUrl);
             }
         }
@@ -152,5 +159,6 @@ namespace R440O.ThirdParty
             return addresses;
         }
 
+        
     }
 }
