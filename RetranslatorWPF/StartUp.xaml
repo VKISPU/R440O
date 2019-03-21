@@ -11,5 +11,7 @@
         <ListView x:Name="satationList" VirtualizingPanel.ScrollUnit="Pixel"  Margin="0,50,0,0"  Background="#FFBDBDBD" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Center" Width="550" Height="350" VerticalAlignment="Top"/>
         <Button Name="addPair" Content="Добавить связь" Margin="10,60,0,0" Width="110" Height="25" Click="Add_Pair" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Button Content="Включить ретранслятор" HorizontalAlignment="Left" Margin="390,409,0,0" Click="StartRepeater" VerticalAlignment="Top" Width="160"/>
+        <Label Content="ID ретранслятора:" HorizontalAlignment="Left" Margin="316,19,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.493,-0.548"/>
+        <TextBox Name="textBoxId" HorizontalAlignment="Left" Height="23" Margin="430,22,0,0" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>

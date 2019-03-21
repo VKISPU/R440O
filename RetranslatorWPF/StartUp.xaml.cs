@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -30,6 +33,7 @@ namespace RetranslatorWPF
             // Убрать, как только добавлю подключение станции
             stations = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
             employed = new List<int>();
+            textBoxId.Text = GetId();
         }
 
         //TODO Добавить прогрессбар без прогреса, ожидание серверов
@@ -89,6 +93,20 @@ namespace RetranslatorWPF
             this.Hide();
             mainWindow.Show();
             this.Close();
+        }
+
+        private string GetId()
+        {
+            var ips = Dns.GetHostAddresses(Dns.GetHostName());
+            foreach (IPAddress ip in ips)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    string[] bytes = ip.ToString().Split('.');
+                    return bytes[3];
+                }
+            }
+            return "";
         }
     }
 }
