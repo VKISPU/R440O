@@ -15,6 +15,7 @@ namespace RetranslatorWPF
         public OrderSchemePair(int wave1, int wave2, int circleName,
             int circalPrivateName, int privateName1, int privateName2)
         {
+            
             orderScheme1 = OrderSchemeFactory.GenerateOrderSchemeByWave(wave1,
                 wave2, circleName, circalPrivateName, privateName1);
             orderScheme2 = OrderSchemeFactory.GenerateOrderSchemeByWave(wave2,

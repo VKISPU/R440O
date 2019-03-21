@@ -22,7 +22,7 @@ namespace R440O
             InitializeComponent();
 
             таймерПоискаСервера.Enabled = true;
-            таймерПоискаСервера.Interval = 10000;
+            таймерПоискаСервера.Interval = 1000;
             таймерПоискаСервера.Tick += tick;
             таймерПоискаСервера.Start();
         }

@@ -10,9 +10,8 @@
         <Image HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="Resources/satellite.ico"/>
         <Label Content="Список активных станций:" HorizontalAlignment="Left" Margin="120,10,0,0" VerticalAlignment="Top" FontSize="20"/>
         <ListView x:Name="list" VirtualizingPanel.ScrollUnit="Pixel"  Margin="120,50,25,25"  Background="#FFBDBDBD" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-           
+
 
         </ListView>
-
     </Grid>
 </Window>
