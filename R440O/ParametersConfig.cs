@@ -36,6 +36,18 @@ namespace R440O
 { 
     public static class ParametersConfig
     {
+        private static bool isLearning = false;
+
+        public static bool getIsLearning()
+        {
+            return isLearning;
+        }
+
+        public static void setIsLearning(bool value)
+        {
+            isLearning = value;
+        }
+
         public static void ПодключениеПитания()
         {
             //Подключаем кабели
@@ -46,7 +58,6 @@ namespace R440O
             N502BParameters.ПереключательСеть = true;
             N502BParameters.ПереключательФазировка = N502BParameters.Фазировка;
             N502BParameters.КнопкаВклНагрузки = true;
-            N502BParameters.КнопкаВклНагрузки = false;
             N502BParameters.ТумблерН13_1 = true;
             N502BParameters.ТумблерН13_2 = true;
 
@@ -214,7 +225,7 @@ namespace R440O
         /// <summary>
         /// Устанавливает определённый набор параметров станции в заданное положение
         /// </summary>
-        public static void SetParameters(bool setDeveloperState = true)
+        public static void SetParameters(bool setDeveloperState = false)
         {
             #region Сборы2015
 

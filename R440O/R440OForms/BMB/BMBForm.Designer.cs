@@ -589,6 +589,7 @@
             this.Name = "BMBForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "БМБ";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BMBForm_FormClosed);
             this.BMBPanel.ResumeLayout(false);
             this.BMBPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BMBЛампочкаНаправление4)).EndInit();
@@ -605,35 +606,35 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel BMBPanel;
-        private System.Windows.Forms.Button КнопкаНаборКоманды1;
-        private System.Windows.Forms.Button КнопкаНаборКоманды4;
-        private System.Windows.Forms.Button КнопкаНаборКоманды0;
-        private System.Windows.Forms.Button КнопкаНаборКоманды9;
-        private System.Windows.Forms.Button КнопкаНаборКоманды8;
-        private System.Windows.Forms.Button КнопкаНаборКоманды7;
-        private System.Windows.Forms.Button КнопкаНаборКоманды6;
-        private System.Windows.Forms.Button КнопкаНаборКоманды5;
-        private System.Windows.Forms.Button КнопкаНаборКоманды3;
-        private System.Windows.Forms.Button КнопкаНаборКоманды2;
-        private System.Windows.Forms.Button КнопкаПередачаКоманды;
-        private System.Windows.Forms.Button КнопкаПередачаВызоваТч;
-        private System.Windows.Forms.Button КнопкаПередачаВызоваДк;
-        private System.Windows.Forms.Button КнопкаСлСвязь;
-        private System.Windows.Forms.Button КнопкаЗвСигнал;
-        private System.Windows.Forms.Button КнопкаПитание;
-        private System.Windows.Forms.Button BMBПереключательНаправление;
-        private System.Windows.Forms.Button BMBПереключательПодключениеРезерва;
-        private System.Windows.Forms.Button ПереключательРаботаКонтроль;
-        private System.Windows.Forms.PictureBox ЛампочкаДк;
-        private System.Windows.Forms.PictureBox ЛампочкаТч;
-        private System.Windows.Forms.Label ИндикаторНаборКоманды;
-        private System.Windows.Forms.PictureBox ЛампочкаПриемВызова;
-        private System.Windows.Forms.PictureBox ЛампочкаРезервВкл;
-        private System.Windows.Forms.PictureBox BMBЛампочкаНаправление4;
-        private System.Windows.Forms.PictureBox BMBЛампочкаНаправление3;
-        private System.Windows.Forms.PictureBox BMBЛампочкаНаправление2;
-        private System.Windows.Forms.PictureBox BMBЛампочкаНаправление1;
-        private System.Windows.Forms.Label ИндикаторПриемКоманды;
+        public System.Windows.Forms.Panel BMBPanel;
+        public System.Windows.Forms.Button КнопкаНаборКоманды1;
+        public System.Windows.Forms.Button КнопкаНаборКоманды4;
+        public System.Windows.Forms.Button КнопкаНаборКоманды0;
+        public System.Windows.Forms.Button КнопкаНаборКоманды9;
+        public System.Windows.Forms.Button КнопкаНаборКоманды8;
+        public System.Windows.Forms.Button КнопкаНаборКоманды7;
+        public System.Windows.Forms.Button КнопкаНаборКоманды6;
+        public System.Windows.Forms.Button КнопкаНаборКоманды5;
+        public System.Windows.Forms.Button КнопкаНаборКоманды3;
+        public System.Windows.Forms.Button КнопкаНаборКоманды2;
+        public System.Windows.Forms.Button КнопкаПередачаКоманды;
+        public System.Windows.Forms.Button КнопкаПередачаВызоваТч;
+        public System.Windows.Forms.Button КнопкаПередачаВызоваДк;
+        public System.Windows.Forms.Button КнопкаСлСвязь;
+        public System.Windows.Forms.Button КнопкаЗвСигнал;
+        public System.Windows.Forms.Button КнопкаПитание;
+        public System.Windows.Forms.Button BMBПереключательНаправление;
+        public System.Windows.Forms.Button BMBПереключательПодключениеРезерва;
+        public System.Windows.Forms.Button ПереключательРаботаКонтроль;
+        public System.Windows.Forms.PictureBox ЛампочкаДк;
+        public System.Windows.Forms.PictureBox ЛампочкаТч;
+        public System.Windows.Forms.Label ИндикаторНаборКоманды;
+        public System.Windows.Forms.PictureBox ЛампочкаПриемВызова;
+        public System.Windows.Forms.PictureBox ЛампочкаРезервВкл;
+        public System.Windows.Forms.PictureBox BMBЛампочкаНаправление4;
+        public System.Windows.Forms.PictureBox BMBЛампочкаНаправление3;
+        public System.Windows.Forms.PictureBox BMBЛампочкаНаправление2;
+        public System.Windows.Forms.PictureBox BMBЛампочкаНаправление1;
+        public System.Windows.Forms.Label ИндикаторПриемКоманды;
     }
 }

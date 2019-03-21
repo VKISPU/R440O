@@ -128,6 +128,8 @@ namespace R440O.ThirdParty
             foreach (var addr in списокАдресовСети)
             {
                 var _serverUrl = "http://" + addr + ":8080/";
+                if (СерверНайден)
+                    break;
                 ПроверитьАдресс(_serverUrl);
                 if (СерверНайден)
                     break;
@@ -159,5 +161,6 @@ namespace R440O.ThirdParty
             return addresses;
         }
 
+        
     }
 }

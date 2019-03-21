@@ -4,6 +4,7 @@
     using BaseClasses;
     using ThirdParty;
     using ShareTypes.SignalTypes;
+    using global::R440O.LearnModule;
 
     /// <summary>
     /// Форма внутренней части блока Н15
@@ -18,6 +19,17 @@
             this.InitializeComponent();
             N15InsideParameters.ParameterChanged += RefreshFormElements;
             RefreshFormElements();
+
+            LearnMain.form = this;
+            switch (LearnMain.getIntent())
+            {
+                case ModulesEnum.H15Inside_open_from_H15:
+                    if (LearnMain.globalIntent == GlobalIntentEnum.OneChannel)
+                    {
+                        LearnMain.setIntent(ModulesEnum.H15Inside_power);
+                    }
+                    break;
+            }
         }
 
         /// <summary>

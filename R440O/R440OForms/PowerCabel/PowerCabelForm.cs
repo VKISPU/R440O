@@ -3,6 +3,7 @@
 namespace R440O.R440OForms.PowerCabel
 {
     using BaseClasses;
+    using global::R440O.LearnModule;
     using System;
     using System.Windows.Forms;
 
@@ -20,6 +21,12 @@ namespace R440O.R440OForms.PowerCabel
             PowerCabelParameters.ParameterChanged += RefreshFormElements;
             PowerCabelParameters.СтанцияСгорела += ВыводСообщенияСтанцияСгорела;
             this.RefreshFormElements();
+
+            if (LearnMain.getIntent() == ModulesEnum.PowerCabelConnect)
+            { 
+                LearnMain.form = this;
+                LearnMain.Action();
+            }
         }
         private void ВыводСообщенияСтанцияСгорела()
         {
@@ -56,6 +63,13 @@ namespace R440O.R440OForms.PowerCabel
 
         private void PowerCabelForm_FormClosed(object sender, FormClosedEventArgs e)
         {
+
+            if (!PowerCabelParameters.КабельСеть)
+            {
+                LearnMain.setIntent(ModulesEnum.openPowerCabeltoPower);
+            }      
+            else   LearnMain.setIntent(ModulesEnum.openN502BtoCheck);
+            
             PowerCabelParameters.ParameterChanged -= RefreshFormElements;
             PowerCabelParameters.СтанцияСгорела -= ВыводСообщенияСтанцияСгорела;
         }

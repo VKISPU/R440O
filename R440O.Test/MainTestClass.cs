@@ -1,25 +1,18 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using System.Threading;
-using System.Threading.Tasks;
 using NUnit.Framework;
-using NUnit.Extensions.Forms;
 
 using R440O.R440OForms.R440O;
 using R440O.R440OForms.C300M_1;
-using R440O.R440OForms.N502B;
 using R440O.R440OForms.N18_M;
 using R440O.R440OForms.BMA_M_1;
 using R440O.R440OForms.BMB;
 using R440O.R440OForms.A1;
 using R440O.R440OForms.B1_1;
-using R440O.R440OForms.A205M_1;
 using R440O.R440OForms.N15Inside;
 using R440O.R440OForms.N18_M_H28;
 using R440O.R440OForms.K05M_01;
 using R440O.R440OForms.K04M_01;
-using R440O.R440OForms.K03M_01;
-using ShareTypes.SignalTypes;
 
 namespace R440O.Test.MainTest
 {

@@ -2,6 +2,7 @@
 {
     using System.Windows.Forms;
     using BaseClasses;
+    using global::R440O.LearnModule;
     using ThirdParty;
 
     /// <summary>
@@ -18,6 +19,12 @@
             VoltageStabilizerParameters.ParameterChanged += RefreshFormElements;
             VoltageStabilizerParameters.ОператорСтанцииПораженТоком += ВыводСообщенияОператорСтанцииПоражёнТоком;
             RefreshFormElements();
+
+            if(LearnMain.getIntent()==ModulesEnum.openVoltageStabilizer)
+            {
+                LearnMain.form = this;
+                LearnMain.setIntent(ModulesEnum.VoltageStabilizerSetUp);
+            }
         }
 
         private void ВыводСообщенияОператорСтанцииПоражёнТоком()
@@ -115,6 +122,13 @@
         {
             VoltageStabilizerParameters.ParameterChanged -= RefreshFormElements;
             VoltageStabilizerParameters.ОператорСтанцииПораженТоком -= ВыводСообщенияОператорСтанцииПоражёнТоком;
+
+            if((LearnMain.getIntent() == ModulesEnum.VoltageStabilizerSetUp)
+                && (VoltageStabilizerParameters.КабельВход>0))
+            { 
+                LearnMain.setIntent(ModulesEnum.openN502BtoPower);
+            } else LearnMain.setIntent(ModulesEnum.openVoltageStabilizer);
         }
+       
     }
 }

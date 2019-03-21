@@ -6,6 +6,7 @@
     using System.Windows.Forms;
     using ThirdParty;
     using BaseClasses;
+    using global::R440O.LearnModule;
 
     public partial class N502BForm : Form, IRefreshableForm
     {
@@ -16,6 +17,22 @@
             N502BParameters.СтанцияСгорела += ВыводСообщенияСтанцияСгорела;
             N502BParameters.НекорректноеДействие += ВыводСообщенияНекорректноеДействие;
             RefreshFormElements();
+
+            LearnMain.isMainWindow = false;
+
+            if (LearnMain.getIntent()==ModulesEnum.openN502BtoCheck)
+            {
+                LearnMain.form = this; 
+                LearnMain.setIntent(ModulesEnum.N502Check);
+                
+                
+            }
+            if(VoltageStabilizer.VoltageStabilizerParameters.КабельВход > 0)
+            {  
+                LearnMain.form = this; 
+                LearnMain.setIntent(ModulesEnum.N502Power);
+            }
+
         }
 
         private void ВыводСообщенияСтанцияСгорела()
@@ -332,6 +349,20 @@
             N502BParameters.ParameterChanged -= RefreshFormElements;
             N502BParameters.СтанцияСгорела -= ВыводСообщенияСтанцияСгорела;
             N502BParameters.НекорректноеДействие -= ВыводСообщенияНекорректноеДействие;
+
+            if(LearnMain.getIntent()==ModulesEnum.N502Check)
+            {
+               LearnMain.setIntent(ModulesEnum.openVoltageStabilizer);     
+            }
+
+            if ((LearnMain.getIntent() == ModulesEnum.N502Power) && (N502BParameters.ЛампочкаСфазировано)
+                && (N502BParameters.Н15Включен) && (N502BParameters.ТумблерЭлектрооборудование) 
+                && (N502BParameters.ТумблерН13_1) && (N502BParameters.ТумблерН13_2)&&(N502BParameters.ТумблерВыпрямитель27В)) 
+            {
+                if (LearnMain.globalIntent == GlobalIntentEnum.nill) LearnMain.setIntent(ModulesEnum.chooseLearnType);
+                LearnMain.setIntent(ModulesEnum.openN15);
+            }
+            
         }
     }
 }

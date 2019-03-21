@@ -8,7 +8,6 @@ namespace R440O.R440OForms.A1
     using System.Collections.Generic;
     using ShareTypes.SignalTypes;
     using N15;
-    using global::R440O.R440OForms.Kontur_P3.Параметры;
 
     public static class A1Parameters
     {
@@ -82,11 +81,6 @@ namespace R440O.R440OForms.A1
                     Level = 50
                 };
                 ПолучитьИнформациюБаслет(сигнал);
-                if (Kontur_P3Parameters.ЛампочкаПередача)
-                {
-                    сигнал.Elements[0].SetInformationInChanelByNumber((int)Kontur_P3Parameters.ПереключательПриоритет,
-                            Kontur_P3Parameters.ТаблоИнформация);
-                }
                 return сигнал;
             }
         }
