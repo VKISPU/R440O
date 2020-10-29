@@ -64,5 +64,7 @@ namespace Retranslator
                     : station.Item1.Signal.GroupSpeed.ToString();
             }
         }
+
+      
     }
 }
